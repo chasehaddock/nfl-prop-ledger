@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "date": "2026-08-23",
   "season": 2026,
-  "generatedAt": "2026-08-23T22:21:03.203Z",
+  "generatedAt": "2026-08-23T22:50:56.123Z",
   "sourceRuns": [
     {
       "source": "draftkings",
@@ -228,7 +228,7 @@
       "missingDays": 0,
       "previousLine": 3750.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     },
     {
       "source": "betmgm",
@@ -759,7 +759,7 @@
       "missingDays": 0,
       "previousLine": 2925.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     },
     {
       "source": "betmgm",
@@ -1496,7 +1496,7 @@
       "sourceName": "BetMGM",
       "sourceUrl": "https://www.az.betmgm.com/en/sports/events/2026-27-nfl-regular-season-stats-19070789",
       "season": 2026,
-      "capturedAt": "2026-08-23T20:34:25.861Z",
+      "capturedAt": "2026-08-22T14:19:15.937Z",
       "player": {
         "id": "00-0040122",
         "name": "Ashton Jeanty",
@@ -4782,7 +4782,7 @@
       "sourceName": "BetMGM",
       "sourceUrl": "https://www.az.betmgm.com/en/sports/events/2026-27-nfl-regular-season-stats-19070789",
       "season": 2026,
-      "capturedAt": "2026-08-23T20:34:25.861Z",
+      "capturedAt": "2026-08-22T14:19:15.937Z",
       "player": {
         "id": "00-0040122",
         "name": "Ashton Jeanty",
@@ -5339,7 +5339,7 @@
       "missingDays": 0,
       "previousLine": 5.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     },
     {
       "source": "betmgm",
@@ -5934,7 +5934,7 @@
       "key": "2026:betmgm:00-0041027:regular_season:rushing_touchdowns",
       "date": "2026-08-23",
       "status": "removed",
-      "missingDays": 3,
+      "missingDays": 2,
       "previousLine": 5.5,
       "lineDelta": 0,
       "changeType": "removed"
@@ -6202,7 +6202,7 @@
       "missingDays": 0,
       "previousLine": 4.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     },
     {
       "source": "betmgm",
@@ -7857,7 +7857,7 @@
       "key": "2026:draftkings:00-0041562:regular_season:passing_yards",
       "date": "2026-08-23",
       "status": "removed",
-      "missingDays": 3,
+      "missingDays": 2,
       "previousLine": 2199.5,
       "lineDelta": 0,
       "changeType": "removed"
@@ -8564,7 +8564,7 @@
       "sourceName": "DraftKings",
       "sourceUrl": "https://sportsbook.draftkings.com/leagues/football/nfl?category=futures&subcategory=player-stats-o-u&nav_1=rush-yards",
       "season": 2026,
-      "capturedAt": "2026-08-23T20:32:54.031Z",
+      "capturedAt": "2026-08-22T14:17:38.811Z",
       "player": {
         "id": "00-0040122",
         "name": "Ashton Jeanty",
@@ -10651,7 +10651,7 @@
       "key": "2026:draftkings:00-0034960:regular_season:receiving_yards",
       "date": "2026-08-23",
       "status": "removed",
-      "missingDays": 3,
+      "missingDays": 2,
       "previousLine": 649.5,
       "lineDelta": 0,
       "changeType": "removed"
@@ -10750,7 +10750,7 @@
       "key": "2026:draftkings:00-0037261:regular_season:receiving_yards",
       "date": "2026-08-23",
       "status": "removed",
-      "missingDays": 4,
+      "missingDays": 3,
       "previousLine": 624.5,
       "lineDelta": 0,
       "changeType": "removed"
@@ -10783,7 +10783,7 @@
       "key": "2026:draftkings:00-0039065:regular_season:receiving_yards",
       "date": "2026-08-23",
       "status": "removed",
-      "missingDays": 4,
+      "missingDays": 3,
       "previousLine": 624.5,
       "lineDelta": 0,
       "changeType": "removed"
@@ -10884,9 +10884,9 @@
       "date": "2026-08-23",
       "status": "open",
       "missingDays": 0,
-      "previousLine": 599.5,
-      "lineDelta": 0,
-      "changeType": "unchanged"
+      "previousLine": null,
+      "lineDelta": null,
+      "changeType": "opened"
     },
     {
       "source": "draftkings",
@@ -10949,7 +10949,7 @@
       "key": "2026:draftkings:00-0040242:regular_season:rushing_yards",
       "date": "2026-08-23",
       "status": "removed",
-      "missingDays": 5,
+      "missingDays": 4,
       "previousLine": 599.5,
       "lineDelta": 0,
       "changeType": "removed"
@@ -11414,9 +11414,9 @@
       "date": "2026-08-23",
       "status": "open",
       "missingDays": 0,
-      "previousLine": 474.5,
-      "lineDelta": 0,
-      "changeType": "unchanged"
+      "previousLine": null,
+      "lineDelta": null,
+      "changeType": "opened"
     },
     {
       "source": "draftkings",
@@ -11480,9 +11480,9 @@
       "date": "2026-08-23",
       "status": "open",
       "missingDays": 0,
-      "previousLine": 449.5,
-      "lineDelta": 0,
-      "changeType": "unchanged"
+      "previousLine": 474.5,
+      "lineDelta": -25,
+      "changeType": "line_decreased"
     },
     {
       "source": "draftkings",
@@ -12675,7 +12675,7 @@
       "key": "2026:draftkings:00-0034960:regular_season:receptions",
       "date": "2026-08-23",
       "status": "removed",
-      "missingDays": 3,
+      "missingDays": 2,
       "previousLine": 64.5,
       "lineDelta": 0,
       "changeType": "removed"
@@ -12809,7 +12809,7 @@
       "key": "2026:draftkings:00-0039065:regular_season:receptions",
       "date": "2026-08-23",
       "status": "removed",
-      "missingDays": 4,
+      "missingDays": 3,
       "previousLine": 61.5,
       "lineDelta": 0,
       "changeType": "removed"
@@ -14878,7 +14878,7 @@
       "sourceName": "DraftKings",
       "sourceUrl": "https://sportsbook.draftkings.com/leagues/football/nfl?category=futures&subcategory=player-stats-o-u&nav_1=rush-tds",
       "season": 2026,
-      "capturedAt": "2026-08-23T20:32:58.840Z",
+      "capturedAt": "2026-08-22T14:17:44.973Z",
       "player": {
         "id": "00-0040122",
         "name": "Ashton Jeanty",
@@ -16928,7 +16928,7 @@
       "key": "2026:draftkings:00-0039065:regular_season:receiving_touchdowns",
       "date": "2026-08-23",
       "status": "removed",
-      "missingDays": 4,
+      "missingDays": 3,
       "previousLine": 4.5,
       "lineDelta": 0,
       "changeType": "removed"
@@ -17858,9 +17858,9 @@
       "date": "2026-08-23",
       "status": "open",
       "missingDays": 0,
-      "previousLine": 2000.5,
-      "lineDelta": 0,
-      "changeType": "unchanged"
+      "previousLine": 2100.5,
+      "lineDelta": -100,
+      "changeType": "line_decreased"
     },
     {
       "source": "fanduel",
@@ -18498,7 +18498,7 @@
       "sourceName": "FanDuel",
       "sourceUrl": "https://sportsbook.fanduel.com/navigation/nfl?tab=player-props",
       "season": 2026,
-      "capturedAt": "2026-08-23T20:33:50.412Z",
+      "capturedAt": "2026-08-22T14:18:40.609Z",
       "player": {
         "id": "00-0040122",
         "name": "Ashton Jeanty",
@@ -19020,9 +19020,9 @@
       "date": "2026-08-23",
       "status": "open",
       "missingDays": 0,
-      "previousLine": 850.5,
-      "lineDelta": 0,
-      "changeType": "unchanged"
+      "previousLine": 875.5,
+      "lineDelta": -25,
+      "changeType": "line_decreased"
     },
     {
       "source": "fanduel",
@@ -19748,7 +19748,7 @@
       "key": "2026:fanduel:00-0039065:regular_season:receiving_yards",
       "date": "2026-08-23",
       "status": "removed",
-      "missingDays": 4,
+      "missingDays": 3,
       "previousLine": 650.5,
       "lineDelta": 0,
       "changeType": "removed"
@@ -21417,7 +21417,7 @@
       "sourceName": "FanDuel",
       "sourceUrl": "https://sportsbook.fanduel.com/navigation/nfl?tab=player-props",
       "season": 2026,
-      "capturedAt": "2026-08-23T20:33:50.412Z",
+      "capturedAt": "2026-08-22T14:18:40.609Z",
       "player": {
         "id": "00-0040122",
         "name": "Ashton Jeanty",
@@ -35619,6 +35619,69 @@
       "line": 649.5,
       "lineDelta": 50,
       "changeType": "line_increased"
+    },
+    {
+      "date": "2026-08-23",
+      "key": "2026:draftkings:00-0033881:regular_season:receiving_yards",
+      "source": "draftkings",
+      "sourceName": "DraftKings",
+      "sourceUrl": "https://sportsbook.draftkings.com/leagues/football/nfl?category=futures&subcategory=player-stats-o-u&nav_1=rec-yards",
+      "player": {
+        "id": "00-0033881",
+        "name": "Evan Engram",
+        "team": "DEN",
+        "position": "TE",
+        "rosterSeason": 2026,
+        "aliases": [
+          "Evan Engram"
+        ]
+      },
+      "statType": "receiving_yards",
+      "line": 449.5,
+      "lineDelta": -25,
+      "changeType": "line_decreased"
+    },
+    {
+      "date": "2026-08-23",
+      "key": "2026:fanduel:00-0041562:regular_season:passing_yards",
+      "source": "fanduel",
+      "sourceName": "FanDuel",
+      "sourceUrl": "https://sportsbook.fanduel.com/navigation/nfl?tab=player-props",
+      "player": {
+        "id": "00-0041562",
+        "name": "Fernando Mendoza",
+        "team": "LV",
+        "position": "QB",
+        "rosterSeason": 2026,
+        "aliases": [
+          "Fernando Mendoza"
+        ]
+      },
+      "statType": "passing_yards",
+      "line": 2000.5,
+      "lineDelta": -100,
+      "changeType": "line_decreased"
+    },
+    {
+      "date": "2026-08-23",
+      "key": "2026:fanduel:00-0040784:regular_season:rushing_yards",
+      "source": "fanduel",
+      "sourceName": "FanDuel",
+      "sourceUrl": "https://sportsbook.fanduel.com/navigation/nfl?tab=player-props",
+      "player": {
+        "id": "00-0040784",
+        "name": "Quinshon Judkins",
+        "team": "CLE",
+        "position": "RB",
+        "rosterSeason": 2026,
+        "aliases": [
+          "Quinshon Judkins"
+        ]
+      },
+      "statType": "rushing_yards",
+      "line": 850.5,
+      "lineDelta": -25,
+      "changeType": "line_decreased"
     }
   ],
   "demo": false

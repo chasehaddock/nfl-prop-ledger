@@ -12758,7 +12758,7 @@
       "overOdds": -110,
       "underOdds": -110,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:betmgm:00-0036971:regular_season:passing_yards": [
@@ -13302,7 +13302,7 @@
       "overOdds": 105,
       "underOdds": -130,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:betmgm:00-0039150:regular_season:passing_yards": [
@@ -18028,7 +18028,7 @@
       "overOdds": -155,
       "underOdds": 130,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:betmgm:00-0035261:regular_season:rushing_touchdowns": [
@@ -18878,7 +18878,7 @@
       "overOdds": -145,
       "underOdds": 120,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:betmgm:00-0033090:regular_season:receiving_touchdowns": [
@@ -20510,7 +20510,7 @@
       "overOdds": -114,
       "underOdds": -114,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_decreased"
     }
   ],
   "2026:fanduel:00-0038543:regular_season:receiving_yards": [
@@ -21632,7 +21632,7 @@
       "overOdds": -114,
       "underOdds": -114,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_decreased"
     }
   ],
   "2026:fanduel:00-0039915:regular_season:receiving_yards": [
@@ -24558,7 +24558,7 @@
       "overOdds": -110,
       "underOdds": -110,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_decreased"
     }
   ],
   "2026:draftkings:00-0038393:regular_season:receiving_yards": [
@@ -24568,7 +24568,7 @@
       "overOdds": -110,
       "underOdds": -110,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "opened"
     }
   ],
   "2026:draftkings:00-0035229:regular_season:receiving_yards": [
@@ -24578,7 +24578,7 @@
       "overOdds": -110,
       "underOdds": -110,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "opened"
     }
   ],
   "2026:prizepicks:00-0033106:regular_season:passing_yards": [
