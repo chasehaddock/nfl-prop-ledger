@@ -4945,8 +4945,8 @@
       "line": 699.5,
       "overOdds": -110,
       "underOdds": -110,
-      "status": "open",
-      "changeType": "unchanged"
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:draftkings:00-0039146:regular_season:receiving_yards": [
@@ -12345,8 +12345,8 @@
       "line": 6.5,
       "overOdds": 125,
       "underOdds": -150,
-      "status": "open",
-      "changeType": "unchanged"
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:draftkings:00-0040715:regular_season:rushing_touchdowns": [
@@ -16329,10 +16329,10 @@
     {
       "date": "2026-08-24",
       "line": 1150.5,
-      "overOdds": -110,
-      "underOdds": -110,
+      "overOdds": -120,
+      "underOdds": 100,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:betmgm:00-0037238:regular_season:receiving_yards": [
@@ -17336,11 +17336,11 @@
     },
     {
       "date": "2026-08-24",
-      "line": 875.5,
-      "overOdds": -120,
-      "underOdds": 100,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "line": 900.5,
+      "overOdds": -110,
+      "underOdds": -110,
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:betmgm:00-0036410:regular_season:receiving_yards": [
@@ -17882,11 +17882,11 @@
     },
     {
       "date": "2026-08-24",
-      "line": 799.5,
-      "overOdds": -125,
-      "underOdds": -105,
+      "line": 825.5,
+      "overOdds": -110,
+      "underOdds": -110,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_increased"
     }
   ],
   "2026:betmgm:00-0041438:regular_season:receiving_yards": [
@@ -18176,11 +18176,11 @@
     },
     {
       "date": "2026-08-24",
-      "line": 724.5,
-      "overOdds": -110,
-      "underOdds": -110,
+      "line": 750.5,
+      "overOdds": -105,
+      "underOdds": -115,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_increased"
     }
   ],
   "2026:betmgm:00-0041512:regular_season:rushing_yards": [
@@ -21999,10 +21999,10 @@
     {
       "date": "2026-08-24",
       "line": 5.5,
-      "overOdds": -145,
-      "underOdds": 120,
+      "overOdds": -150,
+      "underOdds": 125,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:betmgm:00-0036912:regular_season:receiving_touchdowns": [
@@ -22125,10 +22125,10 @@
     {
       "date": "2026-08-24",
       "line": 5.5,
-      "overOdds": -110,
-      "underOdds": -110,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "overOdds": -115,
+      "underOdds": -105,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:betmgm:00-0039915:regular_season:receiving_touchdowns": [
@@ -23090,11 +23090,11 @@
     },
     {
       "date": "2026-08-24",
-      "line": 4.5,
-      "overOdds": -160,
-      "underOdds": 135,
+      "line": 5.5,
+      "overOdds": 105,
+      "underOdds": -125,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_increased"
     }
   ],
   "2026:betmgm:00-0040128:regular_season:receiving_touchdowns": [
@@ -25148,11 +25148,11 @@
     },
     {
       "date": "2026-08-24",
-      "line": 1175.5,
+      "line": 1150.5,
       "overOdds": -114,
       "underOdds": -114,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_decreased"
     }
   ],
   "2026:fanduel:00-0038542:regular_season:rushing_yards": [
@@ -26030,11 +26030,11 @@
     },
     {
       "date": "2026-08-24",
-      "line": 900.5,
+      "line": 925.5,
       "overOdds": -114,
       "underOdds": -114,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_increased"
     }
   ],
   "2026:fanduel:00-0037240:regular_season:receiving_yards": [
@@ -26282,11 +26282,11 @@
     },
     {
       "date": "2026-08-24",
-      "line": 850.5,
+      "line": 875.5,
       "overOdds": -114,
       "underOdds": -114,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_increased"
     }
   ],
   "2026:fanduel:00-0040735:regular_season:receiving_yards": [
@@ -26912,11 +26912,11 @@
     },
     {
       "date": "2026-08-24",
-      "line": 725.5,
+      "line": 750.5,
       "overOdds": -114,
       "underOdds": -114,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_increased"
     }
   ],
   "2026:fanduel:00-0036158:regular_season:rushing_yards": [
@@ -26999,8 +26999,8 @@
       "line": 700.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "open",
-      "changeType": "unchanged"
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:fanduel:00-0033288:regular_season:receiving_yards": [
@@ -27209,8 +27209,8 @@
       "line": 600.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "open",
-      "changeType": "unchanged"
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:fanduel:00-0041547:regular_season:receiving_yards": [
@@ -28719,10 +28719,10 @@
     {
       "date": "2026-08-24",
       "line": 12.5,
-      "overOdds": -130,
-      "underOdds": -102,
+      "overOdds": -122,
+      "underOdds": -108,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:fanduel:00-0039139:regular_season:rushing_touchdowns": [
@@ -29477,8 +29477,8 @@
       "line": 5.5,
       "overOdds": -128,
       "underOdds": -104,
-      "status": "open",
-      "changeType": "unchanged"
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:fanduel:00-0035261:regular_season:rushing_touchdowns": [
@@ -29603,8 +29603,8 @@
       "line": 5.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "open",
-      "changeType": "unchanged"
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:fanduel:00-0039851:regular_season:rushing_touchdowns": [
@@ -29781,8 +29781,8 @@
       "line": 449.5,
       "overOdds": -110,
       "underOdds": -110,
-      "status": "open",
-      "changeType": "unchanged"
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:draftkings:00-0038393:regular_season:receiving_yards": [
@@ -38009,6 +38009,56 @@
       "underOdds": null,
       "status": "open",
       "changeType": "unchanged"
+    }
+  ],
+  "2026:betmgm:00-0036264:regular_season:passing_yards": [
+    {
+      "date": "2026-08-24",
+      "line": 3525.5,
+      "overOdds": 100,
+      "underOdds": -120,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:betmgm:00-0041027:regular_season:rushing_yards": [
+    {
+      "date": "2026-08-24",
+      "line": 750.5,
+      "overOdds": -110,
+      "underOdds": -110,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:draftkings:00-0033537:regular_season:passing_yards": [
+    {
+      "date": "2026-08-24",
+      "line": 1749.5,
+      "overOdds": -110,
+      "underOdds": -110,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:draftkings:00-0033537:regular_season:passing_touchdowns": [
+    {
+      "date": "2026-08-24",
+      "line": 12.5,
+      "overOdds": 100,
+      "underOdds": -125,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:fanduel:00-0039337:regular_season:receiving_yards": [
+    {
+      "date": "2026-08-24",
+      "line": 975.5,
+      "overOdds": -114,
+      "underOdds": -114,
+      "status": "open",
+      "changeType": "opened"
     }
   ]
 }
