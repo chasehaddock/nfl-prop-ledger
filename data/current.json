@@ -35464,6 +35464,7 @@
           "Jeremiyah Love"
         ]
       },
+      "marketScope": "regular_season",
       "statType": "rushing_yards",
       "line": 725.5,
       "lineDelta": -50,
@@ -35485,6 +35486,7 @@
           "Bryce Young"
         ]
       },
+      "marketScope": "regular_season",
       "statType": "passing_yards",
       "line": 2875.5,
       "lineDelta": -50,
@@ -35507,6 +35509,7 @@
           "De'Zhaun-Ryan Stribling"
         ]
       },
+      "marketScope": "regular_season",
       "statType": "receiving_yards",
       "line": 599.5,
       "lineDelta": 25,
@@ -35529,6 +35532,7 @@
           "Andrew McConkey"
         ]
       },
+      "marketScope": "regular_season",
       "statType": "receiving_yards",
       "line": 900.5,
       "lineDelta": 25,
@@ -35550,6 +35554,7 @@
           "Lamar Jackson"
         ]
       },
+      "marketScope": "regular_season",
       "statType": "rushing_yards",
       "line": 550.5,
       "lineDelta": 25,
@@ -35571,6 +35576,7 @@
           "Quinshon Judkins"
         ]
       },
+      "marketScope": "regular_season",
       "statType": "rushing_yards",
       "line": 874.5,
       "lineDelta": -25,
@@ -35593,6 +35599,7 @@
           "Joshua Downs"
         ]
       },
+      "marketScope": "regular_season",
       "statType": "receiving_yards",
       "line": 774.5,
       "lineDelta": -50,
@@ -35615,6 +35622,7 @@
           "De'Zhaun-Ryan Stribling"
         ]
       },
+      "marketScope": "regular_season",
       "statType": "receiving_yards",
       "line": 649.5,
       "lineDelta": 50,
@@ -35636,6 +35644,7 @@
           "Evan Engram"
         ]
       },
+      "marketScope": "regular_season",
       "statType": "receiving_yards",
       "line": 449.5,
       "lineDelta": -25,
@@ -35657,6 +35666,7 @@
           "Fernando Mendoza"
         ]
       },
+      "marketScope": "regular_season",
       "statType": "passing_yards",
       "line": 2000.5,
       "lineDelta": -100,
@@ -35678,6 +35688,7 @@
           "Quinshon Judkins"
         ]
       },
+      "marketScope": "regular_season",
       "statType": "rushing_yards",
       "line": 850.5,
       "lineDelta": -25,
