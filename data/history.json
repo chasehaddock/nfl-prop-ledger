@@ -17339,8 +17339,8 @@
       "line": 875.5,
       "overOdds": -120,
       "underOdds": 100,
-      "status": "open",
-      "changeType": "unchanged"
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:betmgm:00-0036410:regular_season:receiving_yards": [
@@ -19395,10 +19395,10 @@
     {
       "date": "2026-08-24",
       "line": 24.5,
-      "overOdds": -102,
-      "underOdds": -118,
+      "overOdds": -115,
+      "underOdds": -115,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:betmgm:00-0034857:regular_season:passing_touchdowns": [
@@ -22127,8 +22127,8 @@
       "line": 5.5,
       "overOdds": -110,
       "underOdds": -110,
-      "status": "open",
-      "changeType": "unchanged"
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:betmgm:00-0039915:regular_season:receiving_touchdowns": [
@@ -23849,8 +23849,8 @@
       "line": 4050.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0033077:regular_season:passing_yards": [
@@ -23891,8 +23891,8 @@
       "line": 4000.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0026498:regular_season:passing_yards": [
@@ -23933,8 +23933,8 @@
       "line": 3825.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0037834:regular_season:passing_yards": [
@@ -23972,11 +23972,11 @@
     },
     {
       "date": "2026-08-24",
-      "line": 3775.5,
+      "line": 3700.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:fanduel:00-0039851:regular_season:passing_yards": [
@@ -24017,8 +24017,8 @@
       "line": 3750.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036971:regular_season:passing_yards": [
@@ -24059,8 +24059,8 @@
       "line": 3750.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0034857:regular_season:passing_yards": [
@@ -24101,8 +24101,8 @@
       "line": 3600.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0034869:regular_season:passing_yards": [
@@ -24143,8 +24143,8 @@
       "line": 3600.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039918:regular_season:passing_yards": [
@@ -24185,8 +24185,8 @@
       "line": 3575.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039163:regular_season:passing_yards": [
@@ -24227,8 +24227,8 @@
       "line": 3550.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0034855:regular_season:passing_yards": [
@@ -24269,8 +24269,8 @@
       "line": 3500.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036264:regular_season:passing_yards": [
@@ -24311,8 +24311,8 @@
       "line": 3500.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036355:regular_season:passing_yards": [
@@ -24353,8 +24353,8 @@
       "line": 3500.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0040743:regular_season:passing_yards": [
@@ -24395,8 +24395,8 @@
       "line": 3400.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0035710:regular_season:passing_yards": [
@@ -24437,8 +24437,8 @@
       "line": 3300.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0040676:regular_season:passing_yards": [
@@ -24479,8 +24479,8 @@
       "line": 3250.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039910:regular_season:passing_yards": [
@@ -24521,8 +24521,8 @@
       "line": 3200.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0034796:regular_season:passing_yards": [
@@ -24563,8 +24563,8 @@
       "line": 3200.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036389:regular_season:passing_yards": [
@@ -24605,8 +24605,8 @@
       "line": 3150.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0040691:regular_season:passing_yards": [
@@ -24647,8 +24647,8 @@
       "line": 3100.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0023459:regular_season:passing_yards": [
@@ -24689,8 +24689,8 @@
       "line": 3050.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039150:regular_season:passing_yards": [
@@ -24731,8 +24731,8 @@
       "line": 2875.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0041562:regular_season:passing_yards": [
@@ -24773,8 +24773,8 @@
       "line": 2000.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0038543:regular_season:receiving_yards": [
@@ -24812,11 +24812,11 @@
     },
     {
       "date": "2026-08-24",
-      "line": 1350.5,
+      "line": 1325.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:fanduel:00-0036900:regular_season:receiving_yards": [
@@ -24857,8 +24857,8 @@
       "line": 1325.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0032764:regular_season:rushing_yards": [
@@ -24899,8 +24899,8 @@
       "line": 1225.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036223:regular_season:rushing_yards": [
@@ -24941,8 +24941,8 @@
       "line": 1225.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036963:regular_season:receiving_yards": [
@@ -24983,8 +24983,8 @@
       "line": 1225.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039139:regular_season:rushing_yards": [
@@ -25025,8 +25025,8 @@
       "line": 1200.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036358:regular_season:receiving_yards": [
@@ -25067,8 +25067,8 @@
       "line": 1200.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0037248:regular_season:rushing_yards": [
@@ -25109,8 +25109,8 @@
       "line": 1175.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036554:regular_season:receiving_yards": [
@@ -25151,8 +25151,8 @@
       "line": 1175.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0038542:regular_season:rushing_yards": [
@@ -25193,8 +25193,8 @@
       "line": 1150.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036322:regular_season:receiving_yards": [
@@ -25235,8 +25235,8 @@
       "line": 1150.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0035676:regular_season:receiving_yards": [
@@ -25277,8 +25277,8 @@
       "line": 1100.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0037238:regular_season:receiving_yards": [
@@ -25319,8 +25319,8 @@
       "line": 1100.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0034844:regular_season:rushing_yards": [
@@ -25361,8 +25361,8 @@
       "line": 1050.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0037247:regular_season:receiving_yards": [
@@ -25403,8 +25403,8 @@
       "line": 1050.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0037239:regular_season:receiving_yards": [
@@ -25445,8 +25445,8 @@
       "line": 1025.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039064:regular_season:receiving_yards": [
@@ -25484,11 +25484,11 @@
     },
     {
       "date": "2026-08-24",
-      "line": 1000.5,
+      "line": 975.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:fanduel:00-0040122:regular_season:rushing_yards": [
@@ -25529,8 +25529,8 @@
       "line": 975.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:fanduel:00-0039040:regular_season:rushing_yards": [
@@ -25571,8 +25571,8 @@
       "line": 975.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0037740:regular_season:receiving_yards": [
@@ -25613,8 +25613,8 @@
       "line": 975.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0040124:regular_season:receiving_yards": [
@@ -25655,8 +25655,8 @@
       "line": 950.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0037744:regular_season:receiving_yards": [
@@ -25697,8 +25697,8 @@
       "line": 950.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036997:regular_season:rushing_yards": [
@@ -25739,8 +25739,8 @@
       "line": 925.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0038134:regular_season:rushing_yards": [
@@ -25781,8 +25781,8 @@
       "line": 925.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0037840:regular_season:rushing_yards": [
@@ -25823,8 +25823,8 @@
       "line": 925.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0040666:regular_season:rushing_yards": [
@@ -25865,8 +25865,8 @@
       "line": 925.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036613:regular_season:receiving_yards": [
@@ -25904,11 +25904,11 @@
     },
     {
       "date": "2026-08-24",
-      "line": 925.5,
+      "line": 875.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:fanduel:00-0038120:regular_season:rushing_yards": [
@@ -25949,8 +25949,8 @@
       "line": 900.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0033280:regular_season:rushing_yards": [
@@ -25991,8 +25991,8 @@
       "line": 900.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039338:regular_season:receiving_yards": [
@@ -26033,8 +26033,8 @@
       "line": 900.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0037240:regular_season:receiving_yards": [
@@ -26075,8 +26075,8 @@
       "line": 900.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0035659:regular_season:receiving_yards": [
@@ -26117,8 +26117,8 @@
       "line": 900.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0040784:regular_season:rushing_yards": [
@@ -26159,8 +26159,8 @@
       "line": 850.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039915:regular_season:receiving_yards": [
@@ -26201,8 +26201,8 @@
       "line": 900.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036410:regular_season:receiving_yards": [
@@ -26243,8 +26243,8 @@
       "line": 875.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036973:regular_season:rushing_yards": [
@@ -26285,8 +26285,8 @@
       "line": 850.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0040735:regular_season:receiving_yards": [
@@ -26327,8 +26327,8 @@
       "line": 850.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0038597:regular_season:rushing_yards": [
@@ -26369,8 +26369,8 @@
       "line": 825.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0035685:regular_season:rushing_yards": [
@@ -26411,8 +26411,8 @@
       "line": 800.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039849:regular_season:receiving_yards": [
@@ -26450,11 +26450,11 @@
     },
     {
       "date": "2026-08-24",
-      "line": 825.5,
+      "line": 800.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:fanduel:00-0040126:regular_season:receiving_yards": [
@@ -26495,8 +26495,8 @@
       "line": 800.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0031408:regular_season:receiving_yards": [
@@ -26537,8 +26537,8 @@
       "line": 800.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039919:regular_season:receiving_yards": [
@@ -26579,8 +26579,8 @@
       "line": 800.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0035261:regular_season:rushing_yards": [
@@ -26621,8 +26621,8 @@
       "line": 775.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0041438:regular_season:receiving_yards": [
@@ -26663,8 +26663,8 @@
       "line": 775.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0038124:regular_season:receiving_yards": [
@@ -26705,8 +26705,8 @@
       "line": 775.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0031381:regular_season:receiving_yards": [
@@ -26747,8 +26747,8 @@
       "line": 775.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0041027:regular_season:rushing_yards": [
@@ -26789,8 +26789,8 @@
       "line": 725.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0034348:regular_season:receiving_yards": [
@@ -26831,8 +26831,8 @@
       "line": 725.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036970:regular_season:receiving_yards": [
@@ -26873,8 +26873,8 @@
       "line": 725.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036252:regular_season:receiving_yards": [
@@ -26915,8 +26915,8 @@
       "line": 725.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036158:regular_season:rushing_yards": [
@@ -26957,8 +26957,8 @@
       "line": 700.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0040734:regular_season:rushing_yards": [
@@ -26999,8 +26999,8 @@
       "line": 700.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0033288:regular_season:receiving_yards": [
@@ -27041,8 +27041,8 @@
       "line": 700.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0030506:regular_season:receiving_yards": [
@@ -27083,8 +27083,8 @@
       "line": 675.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039065:regular_season:receiving_yards": [
@@ -27125,8 +27125,8 @@
       "line": 650.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:fanduel:00-0037228:regular_season:rushing_yards": [
@@ -27167,8 +27167,8 @@
       "line": 625.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036875:regular_season:rushing_yards": [
@@ -27209,8 +27209,8 @@
       "line": 600.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0041547:regular_season:receiving_yards": [
@@ -27251,8 +27251,8 @@
       "line": 600.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0040867:regular_season:receiving_yards": [
@@ -27293,8 +27293,8 @@
       "line": 575.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0033280:regular_season:receiving_yards": [
@@ -27335,8 +27335,8 @@
       "line": 550.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0034796:regular_season:rushing_yards": [
@@ -27377,8 +27377,8 @@
       "line": 550.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0034857:regular_season:rushing_yards": [
@@ -27419,8 +27419,8 @@
       "line": 500.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0034753:regular_season:receiving_yards": [
@@ -27461,8 +27461,8 @@
       "line": 500.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0037545:regular_season:receiving_yards": [
@@ -27503,8 +27503,8 @@
       "line": 500.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0040691:regular_season:rushing_yards": [
@@ -27545,8 +27545,8 @@
       "line": 475.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039139:regular_season:receiving_yards": [
@@ -27587,8 +27587,8 @@
       "line": 475.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0041511:regular_season:receiving_yards": [
@@ -27629,8 +27629,8 @@
       "line": 425.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039851:regular_season:rushing_yards": [
@@ -27671,8 +27671,8 @@
       "line": 400.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036389:regular_season:rushing_yards": [
@@ -27713,8 +27713,8 @@
       "line": 400.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036442:regular_season:passing_touchdowns": [
@@ -27755,8 +27755,8 @@
       "line": 32.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0033106:regular_season:passing_touchdowns": [
@@ -27797,8 +27797,8 @@
       "line": 29.5,
       "overOdds": -108,
       "underOdds": -122,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0026498:regular_season:passing_touchdowns": [
@@ -27839,8 +27839,8 @@
       "line": 29.5,
       "overOdds": -132,
       "underOdds": 100,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0037834:regular_season:passing_touchdowns": [
@@ -27881,8 +27881,8 @@
       "line": 27.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0033077:regular_season:passing_touchdowns": [
@@ -27923,8 +27923,8 @@
       "line": 27.5,
       "overOdds": -108,
       "underOdds": -122,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0034855:regular_season:passing_touchdowns": [
@@ -27965,8 +27965,8 @@
       "line": 25.5,
       "overOdds": -102,
       "underOdds": -130,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039851:regular_season:passing_touchdowns": [
@@ -28007,8 +28007,8 @@
       "line": 25.5,
       "overOdds": -144,
       "underOdds": 108,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036355:regular_season:passing_touchdowns": [
@@ -28049,8 +28049,8 @@
       "line": 25.5,
       "overOdds": -108,
       "underOdds": -122,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036971:regular_season:passing_touchdowns": [
@@ -28091,8 +28091,8 @@
       "line": 25.5,
       "overOdds": -102,
       "underOdds": -130,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039918:regular_season:passing_touchdowns": [
@@ -28133,8 +28133,8 @@
       "line": 24.5,
       "overOdds": 100,
       "underOdds": -132,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036264:regular_season:passing_touchdowns": [
@@ -28175,8 +28175,8 @@
       "line": 24.5,
       "overOdds": -102,
       "underOdds": -130,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0034857:regular_season:passing_touchdowns": [
@@ -28217,8 +28217,8 @@
       "line": 24.5,
       "overOdds": -120,
       "underOdds": -110,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0034796:regular_season:passing_touchdowns": [
@@ -28259,8 +28259,8 @@
       "line": 24.5,
       "overOdds": 104,
       "underOdds": -138,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0034869:regular_season:passing_touchdowns": [
@@ -28301,8 +28301,8 @@
       "line": 23.5,
       "overOdds": -102,
       "underOdds": -130,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039163:regular_season:passing_touchdowns": [
@@ -28343,8 +28343,8 @@
       "line": 22.5,
       "overOdds": -122,
       "underOdds": -108,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036389:regular_season:passing_touchdowns": [
@@ -28385,8 +28385,8 @@
       "line": 21.5,
       "overOdds": -122,
       "underOdds": -108,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039910:regular_season:passing_touchdowns": [
@@ -28427,8 +28427,8 @@
       "line": 21.5,
       "overOdds": -102,
       "underOdds": -130,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039150:regular_season:passing_touchdowns": [
@@ -28469,8 +28469,8 @@
       "line": 20.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0040676:regular_season:passing_touchdowns": [
@@ -28511,8 +28511,8 @@
       "line": 19.5,
       "overOdds": 102,
       "underOdds": -136,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0040691:regular_season:passing_touchdowns": [
@@ -28553,8 +28553,8 @@
       "line": 19.5,
       "overOdds": -108,
       "underOdds": -122,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0040743:regular_season:passing_touchdowns": [
@@ -28595,8 +28595,8 @@
       "line": 19.5,
       "overOdds": -148,
       "underOdds": 112,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0035710:regular_season:passing_touchdowns": [
@@ -28637,8 +28637,8 @@
       "line": 18.5,
       "overOdds": 102,
       "underOdds": -136,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0041562:regular_season:passing_touchdowns": [
@@ -28679,8 +28679,8 @@
       "line": 12.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0032764:regular_season:rushing_touchdowns": [
@@ -28721,8 +28721,8 @@
       "line": 12.5,
       "overOdds": -130,
       "underOdds": -102,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039139:regular_season:rushing_touchdowns": [
@@ -28763,8 +28763,8 @@
       "line": 11.5,
       "overOdds": -136,
       "underOdds": 102,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036223:regular_season:rushing_touchdowns": [
@@ -28805,8 +28805,8 @@
       "line": 11.5,
       "overOdds": -122,
       "underOdds": -108,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0037248:regular_season:rushing_touchdowns": [
@@ -28847,8 +28847,8 @@
       "line": 10.5,
       "overOdds": 106,
       "underOdds": -140,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0034857:regular_season:rushing_touchdowns": [
@@ -28889,8 +28889,8 @@
       "line": 10.5,
       "overOdds": -128,
       "underOdds": -104,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0038542:regular_season:rushing_touchdowns": [
@@ -28931,8 +28931,8 @@
       "line": 9.5,
       "overOdds": -108,
       "underOdds": -122,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036997:regular_season:rushing_touchdowns": [
@@ -28973,8 +28973,8 @@
       "line": 9.5,
       "overOdds": -128,
       "underOdds": -104,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0033280:regular_season:rushing_touchdowns": [
@@ -29015,8 +29015,8 @@
       "line": 8.5,
       "overOdds": 106,
       "underOdds": -140,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0040122:regular_season:rushing_touchdowns": [
@@ -29057,8 +29057,8 @@
       "line": 7.5,
       "overOdds": -108,
       "underOdds": -122,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:fanduel:00-0035685:regular_season:rushing_touchdowns": [
@@ -29099,8 +29099,8 @@
       "line": 7.5,
       "overOdds": 112,
       "underOdds": -148,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036389:regular_season:rushing_touchdowns": [
@@ -29141,8 +29141,8 @@
       "line": 7.5,
       "overOdds": -148,
       "underOdds": 112,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0038134:regular_season:rushing_touchdowns": [
@@ -29183,8 +29183,8 @@
       "line": 7.5,
       "overOdds": -102,
       "underOdds": -130,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0040666:regular_season:rushing_touchdowns": [
@@ -29225,8 +29225,8 @@
       "line": 7.5,
       "overOdds": -148,
       "underOdds": 112,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0034844:regular_season:rushing_touchdowns": [
@@ -29267,8 +29267,8 @@
       "line": 7.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0038120:regular_season:rushing_touchdowns": [
@@ -29309,8 +29309,8 @@
       "line": 5.5,
       "overOdds": 116,
       "underOdds": -154,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0038597:regular_season:rushing_touchdowns": [
@@ -29351,8 +29351,8 @@
       "line": 5.5,
       "overOdds": -144,
       "underOdds": 108,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0040691:regular_season:rushing_touchdowns": [
@@ -29393,8 +29393,8 @@
       "line": 5.5,
       "overOdds": -118,
       "underOdds": -112,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0041027:regular_season:rushing_touchdowns": [
@@ -29435,8 +29435,8 @@
       "line": 5.5,
       "overOdds": -122,
       "underOdds": -108,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036875:regular_season:rushing_touchdowns": [
@@ -29477,8 +29477,8 @@
       "line": 5.5,
       "overOdds": -128,
       "underOdds": -104,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0035261:regular_season:rushing_touchdowns": [
@@ -29519,8 +29519,8 @@
       "line": 5.5,
       "overOdds": 112,
       "underOdds": -148,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0036973:regular_season:rushing_touchdowns": [
@@ -29561,8 +29561,8 @@
       "line": 5.5,
       "overOdds": 130,
       "underOdds": -182,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0040734:regular_season:rushing_touchdowns": [
@@ -29603,8 +29603,8 @@
       "line": 5.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0039851:regular_season:rushing_touchdowns": [
@@ -29645,8 +29645,8 @@
       "line": 3.5,
       "overOdds": -108,
       "underOdds": -122,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:fanduel:00-0034796:regular_season:rushing_touchdowns": [
@@ -29687,8 +29687,8 @@
       "line": 3.5,
       "overOdds": -130,
       "underOdds": -102,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:draftkings:00-0033090:regular_season:receiving_touchdowns": [
@@ -29755,8 +29755,8 @@
       "line": 750.5,
       "overOdds": -114,
       "underOdds": -114,
-      "status": "stale",
-      "changeType": "stale"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:draftkings:00-0033881:regular_season:receiving_yards": [
@@ -30321,8 +30321,8 @@
       "line": 2699.5,
       "overOdds": null,
       "underOdds": null,
-      "status": "open",
-      "changeType": "unchanged"
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:prizepicks:00-0030565:regular_season:passing_yards": [
@@ -34764,11 +34764,11 @@
     },
     {
       "date": "2026-08-24",
-      "line": 22.5,
+      "line": 21.5,
       "overOdds": null,
       "underOdds": null,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0023459:regular_season:passing_touchdowns": [

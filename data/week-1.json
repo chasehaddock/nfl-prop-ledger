@@ -2,32 +2,31 @@
   "schemaVersion": 1,
   "date": "2026-08-24",
   "season": 2026,
-  "generatedAt": "2026-08-24T14:06:37.064Z",
+  "generatedAt": "2026-08-24T16:09:55.398Z",
   "sourceRuns": [
     {
       "source": "draftkings",
       "status": "accepted",
-      "capturedAt": "2026-08-24T13:18:09.509Z",
+      "capturedAt": "2026-08-24T16:06:21.131Z",
       "observationCount": 296
+    },
+    {
+      "source": "fanduel",
+      "status": "accepted",
+      "capturedAt": "2026-08-24T16:06:57.869Z",
+      "observationCount": 138
     },
     {
       "source": "betmgm",
       "status": "accepted",
-      "capturedAt": "2026-08-24T14:01:49.458Z",
-      "observationCount": 205
+      "capturedAt": "2026-08-24T16:07:35.570Z",
+      "observationCount": 203
     },
     {
       "source": "prizepicks",
       "status": "accepted",
-      "capturedAt": "2026-08-24T14:02:54.210Z",
-      "observationCount": 651
-    },
-    {
-      "source": "fanduel",
-      "status": "not_run",
-      "issues": [
-        "no capture supplied"
-      ]
+      "capturedAt": "2026-08-24T16:08:23.659Z",
+      "observationCount": 647
     }
   ],
   "observations": [
@@ -36,7 +35,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0033106",
         "name": "Jared Goff",
@@ -67,7 +66,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036442",
         "name": "Joe Burrow",
@@ -98,7 +97,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0026498",
         "name": "Matthew Stafford",
@@ -130,7 +129,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0033077",
         "name": "Dak Prescott",
@@ -162,7 +161,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0040743",
         "name": "Tyler Shough",
@@ -193,7 +192,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0034855",
         "name": "Baker Mayfield",
@@ -224,7 +223,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036355",
         "name": "Justin Herbert",
@@ -255,7 +254,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037834",
         "name": "Brock Purdy",
@@ -286,7 +285,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0033873",
         "name": "Patrick Mahomes",
@@ -317,7 +316,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039918",
         "name": "Caleb Williams",
@@ -348,7 +347,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036971",
         "name": "Trevor Lawrence",
@@ -379,7 +378,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0035710",
         "name": "Daniel Jones",
@@ -410,7 +409,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036264",
         "name": "Jordan Love",
@@ -441,7 +440,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039851",
         "name": "Drake Maye",
@@ -472,7 +471,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0034869",
         "name": "Sam Darnold",
@@ -503,7 +502,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039163",
         "name": "C.J. Stroud",
@@ -535,7 +534,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039732",
         "name": "Bo Nix",
@@ -566,7 +565,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0029604",
         "name": "Kirk Cousins",
@@ -579,9 +578,9 @@
       },
       "marketScope": "week_1",
       "statType": "passing_yards",
-      "line": 224.5,
+      "line": 225.5,
       "isMain": true,
-      "evidenceHash": "99cb1de911b9502a8d83fd4821bad2bc00559b7ee073b400dca56732232a02c8",
+      "evidenceHash": "bd6e181d7ba585e1af2ccdbaa858c0056a911afde4103b29673b402f2750a2d9",
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0029604:week_1:passing_yards",
@@ -589,15 +588,15 @@
       "status": "open",
       "missingDays": 0,
       "previousLine": 224.5,
-      "lineDelta": 0,
-      "changeType": "unchanged"
+      "lineDelta": 1,
+      "changeType": "line_increased"
     },
     {
       "source": "prizepicks",
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0034857",
         "name": "Josh Allen",
@@ -629,7 +628,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039910",
         "name": "Jayden Daniels",
@@ -660,7 +659,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0033119",
         "name": "Jacoby Brissett",
@@ -691,7 +690,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0040691",
         "name": "Jaxson Dart",
@@ -722,7 +721,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0034796",
         "name": "Lamar Jackson",
@@ -753,7 +752,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0023459",
         "name": "Aaron Rodgers",
@@ -784,7 +783,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036389",
         "name": "Jalen Hurts",
@@ -815,7 +814,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039150",
         "name": "Bryce Young",
@@ -846,7 +845,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0030565",
         "name": "Geno Smith",
@@ -878,7 +877,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0040676",
         "name": "Cam Ward",
@@ -910,7 +909,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0033537",
         "name": "Deshaun Watson",
@@ -924,9 +923,9 @@
       },
       "marketScope": "week_1",
       "statType": "passing_yards",
-      "line": 183.5,
+      "line": 184.5,
       "isMain": true,
-      "evidenceHash": "0516f60d9078aceed7b05f39cd0a9594ab4b9f8d5a3ae9ba78d8f084ea68a96e",
+      "evidenceHash": "e142f0a6350f99eeaff6ff82d1bb2baff65f932de354cfaf29cdae50cc69a318",
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0033537:week_1:passing_yards",
@@ -942,7 +941,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0038128",
         "name": "Malik Willis",
@@ -973,7 +972,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039075",
         "name": "Puka Nacua",
@@ -988,7 +987,7 @@
       "statType": "receiving_yards",
       "line": 90.5,
       "isMain": true,
-      "evidenceHash": "357a5432985dfcb386b807fb4ff244d66d12011b7c92d43676736f86f3e77d1a",
+      "evidenceHash": "1c694be65caab3efcb1e08bda6fb42474f5a0f07715b93beca349321133b36f8",
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039075:week_1:receiving_yards",
@@ -1004,7 +1003,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036900",
         "name": "Ja'Marr Chase",
@@ -1035,7 +1034,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0032764",
         "name": "Derrick Henry",
@@ -1066,7 +1065,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0038543",
         "name": "Jaxon Smith-Njigba",
@@ -1097,7 +1096,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0038542",
         "name": "Bijan Robinson",
@@ -1128,7 +1127,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036963",
         "name": "Amon-Ra St. Brown",
@@ -1159,7 +1158,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0034844",
         "name": "Saquon Barkley",
@@ -1190,7 +1189,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036322",
         "name": "Justin Jefferson",
@@ -1221,7 +1220,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039139",
         "name": "Jahmyr Gibbs",
@@ -1252,7 +1251,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037248",
         "name": "James Cook",
@@ -1283,7 +1282,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039040",
         "name": "De'Von Achane",
@@ -1315,7 +1314,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037239",
         "name": "Chris Olave",
@@ -1346,7 +1345,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036358",
         "name": "CeeDee Lamb",
@@ -1378,7 +1377,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036223",
         "name": "Jonathan Taylor",
@@ -1409,7 +1408,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037238",
         "name": "Drake London",
@@ -1440,7 +1439,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036554",
         "name": "Nico Collins",
@@ -1471,7 +1470,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039064",
         "name": "Zay Flowers",
@@ -1503,7 +1502,38 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
+      "player": {
+        "id": "00-0039337",
+        "name": "Malik Nabers",
+        "team": "NYG",
+        "position": "WR",
+        "rosterSeason": 2026,
+        "aliases": [
+          "Malik Nabers"
+        ]
+      },
+      "marketScope": "week_1",
+      "statType": "receiving_yards",
+      "line": 66.5,
+      "isMain": true,
+      "evidenceHash": "08b14bcd076196047d3c052521de98b6853ab0e3a1a89a8854883c3680246daf",
+      "selectionMethod": "book_marker",
+      "confirmed": true,
+      "key": "2026:prizepicks:00-0039337:week_1:receiving_yards",
+      "date": "2026-08-24",
+      "status": "open",
+      "missingDays": 0,
+      "previousLine": 65.5,
+      "lineDelta": 1,
+      "changeType": "line_increased"
+    },
+    {
+      "source": "prizepicks",
+      "sourceName": "PrizePicks",
+      "sourceUrl": "https://app.prizepicks.com/",
+      "season": 2026,
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037247",
         "name": "George Pickens",
@@ -1534,7 +1564,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036997",
         "name": "Javonte Williams",
@@ -1565,7 +1595,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037740",
         "name": "Garrett Wilson",
@@ -1596,7 +1626,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037240",
         "name": "Jameson Williams",
@@ -1627,7 +1657,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036912",
         "name": "DeVonta Smith",
@@ -1658,7 +1688,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0040666",
         "name": "Omarion Hampton",
@@ -1689,7 +1719,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039067",
         "name": "Rashee Rice",
@@ -1720,7 +1750,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0038120",
         "name": "Breece Hall",
@@ -1751,7 +1781,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0038134",
         "name": "Kenneth Walker III",
@@ -1783,7 +1813,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037744",
         "name": "Trey McBride",
@@ -1814,7 +1844,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039338",
         "name": "Brock Bowers",
@@ -1845,38 +1875,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
-      "player": {
-        "id": "00-0039337",
-        "name": "Malik Nabers",
-        "team": "NYG",
-        "position": "WR",
-        "rosterSeason": 2026,
-        "aliases": [
-          "Malik Nabers"
-        ]
-      },
-      "marketScope": "week_1",
-      "statType": "receiving_yards",
-      "line": 63.5,
-      "isMain": true,
-      "evidenceHash": "df4b23ceae7c4253a8beb8e18d2fc60cf046c5db57c7ed6b49ba9fcfdec58051",
-      "selectionMethod": "book_marker",
-      "confirmed": true,
-      "key": "2026:prizepicks:00-0039337:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
-      "missingDays": 0,
-      "previousLine": 65.5,
-      "lineDelta": -2,
-      "changeType": "line_decreased"
-    },
-    {
-      "source": "prizepicks",
-      "sourceName": "PrizePicks",
-      "sourceUrl": "https://app.prizepicks.com/",
-      "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0040784",
         "name": "Quinshon Judkins",
@@ -1907,7 +1906,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036410",
         "name": "Tee Higgins",
@@ -1939,7 +1938,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0040124",
         "name": "Tetairoa McMillan",
@@ -1970,7 +1969,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0040129",
         "name": "Emeka Egbuka",
@@ -2001,7 +2000,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0035659",
         "name": "Terry McLaurin",
@@ -2032,7 +2031,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0033280",
         "name": "Christian McCaffrey",
@@ -2063,7 +2062,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037840",
         "name": "Kyren Williams",
@@ -2094,7 +2093,39 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
+      "player": {
+        "id": "00-0035676",
+        "name": "A.J. Brown",
+        "team": "NE",
+        "position": "WR",
+        "rosterSeason": 2026,
+        "aliases": [
+          "A.J. Brown",
+          "Arthur Brown"
+        ]
+      },
+      "marketScope": "week_1",
+      "statType": "receiving_yards",
+      "line": 58.5,
+      "isMain": true,
+      "evidenceHash": "9338ea75ecfe131cceacb24c9ea0af2a210fa859c41bc9d249f5deb9917ee25b",
+      "selectionMethod": "book_marker",
+      "confirmed": true,
+      "key": "2026:prizepicks:00-0035676:week_1:receiving_yards",
+      "date": "2026-08-24",
+      "status": "open",
+      "missingDays": 0,
+      "previousLine": 57.5,
+      "lineDelta": 1,
+      "changeType": "line_increased"
+    },
+    {
+      "source": "prizepicks",
+      "sourceName": "PrizePicks",
+      "sourceUrl": "https://app.prizepicks.com/",
+      "season": 2026,
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039915",
         "name": "Ladd McConkey",
@@ -2126,39 +2157,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
-      "player": {
-        "id": "00-0035676",
-        "name": "A.J. Brown",
-        "team": "NE",
-        "position": "WR",
-        "rosterSeason": 2026,
-        "aliases": [
-          "A.J. Brown",
-          "Arthur Brown"
-        ]
-      },
-      "marketScope": "week_1",
-      "statType": "receiving_yards",
-      "line": 57.5,
-      "isMain": true,
-      "evidenceHash": "2f2ccc5ad5251cf0f90076c7de40fb9e1eba6b5557e05b78b8d996795e3052ca",
-      "selectionMethod": "book_marker",
-      "confirmed": true,
-      "key": "2026:prizepicks:00-0035676:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
-      "missingDays": 0,
-      "previousLine": 57.5,
-      "lineDelta": 0,
-      "changeType": "unchanged"
-    },
-    {
-      "source": "prizepicks",
-      "sourceName": "PrizePicks",
-      "sourceUrl": "https://app.prizepicks.com/",
-      "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0041027",
         "name": "Jeremiyah Love",
@@ -2189,7 +2188,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0040715",
         "name": "Cam Skattebo",
@@ -2221,7 +2220,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0040126",
         "name": "Colston Loveland",
@@ -2252,7 +2251,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037664",
         "name": "Alec Pierce",
@@ -2283,7 +2282,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0038597",
         "name": "Chase Brown",
@@ -2314,7 +2313,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0040735",
         "name": "Luther Burden III",
@@ -2346,7 +2345,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0038124",
         "name": "Christian Watson",
@@ -2377,7 +2376,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0035685",
         "name": "David Montgomery",
@@ -2408,7 +2407,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036613",
         "name": "Jaylen Waddle",
@@ -2439,7 +2438,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0031381",
         "name": "Davante Adams",
@@ -2470,7 +2469,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036970",
         "name": "Kyle Pitts",
@@ -2501,7 +2500,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0034827",
         "name": "DJ Moore",
@@ -2533,7 +2532,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0038559",
         "name": "Michael Wilson",
@@ -2564,7 +2563,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0038996",
         "name": "Tucker Kraft",
@@ -2595,7 +2594,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0041438",
         "name": "Carnell Tate",
@@ -2626,7 +2625,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0035261",
         "name": "Tony Pollard",
@@ -2657,7 +2656,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039919",
         "name": "Rome Odunze",
@@ -2688,7 +2687,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039849",
         "name": "Marvin Harrison Jr.",
@@ -2720,7 +2719,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0035640",
         "name": "DK Metcalf",
@@ -2752,7 +2751,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0041512",
         "name": "Jadarian Price",
@@ -2783,7 +2782,38 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
+      "player": {
+        "id": "00-0031408",
+        "name": "Mike Evans",
+        "team": "SF",
+        "position": "WR",
+        "rosterSeason": 2026,
+        "aliases": [
+          "Mike Evans"
+        ]
+      },
+      "marketScope": "week_1",
+      "statType": "receiving_yards",
+      "line": 48.5,
+      "isMain": true,
+      "evidenceHash": "4f5474169d815925c7ba90b5755663772198a78d2c56c0f87f13135dee0c2bdf",
+      "selectionMethod": "book_marker",
+      "confirmed": true,
+      "key": "2026:prizepicks:00-0031408:week_1:receiving_yards",
+      "date": "2026-08-24",
+      "status": "open",
+      "missingDays": 0,
+      "previousLine": 47.5,
+      "lineDelta": 1,
+      "changeType": "line_increased"
+    },
+    {
+      "source": "prizepicks",
+      "sourceName": "PrizePicks",
+      "sourceUrl": "https://app.prizepicks.com/",
+      "season": 2026,
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039893",
         "name": "Brian Thomas Jr.",
@@ -2815,7 +2845,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0034348",
         "name": "Courtland Sutton",
@@ -2846,38 +2876,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
-      "player": {
-        "id": "00-0031408",
-        "name": "Mike Evans",
-        "team": "SF",
-        "position": "WR",
-        "rosterSeason": 2026,
-        "aliases": [
-          "Mike Evans"
-        ]
-      },
-      "marketScope": "week_1",
-      "statType": "receiving_yards",
-      "line": 47.5,
-      "isMain": true,
-      "evidenceHash": "a9b5428853271501601808f1c5e236952fe469b12b09aff61a62cf8d12b78d99",
-      "selectionMethod": "book_marker",
-      "confirmed": true,
-      "key": "2026:prizepicks:00-0031408:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
-      "missingDays": 0,
-      "previousLine": 47.5,
-      "lineDelta": 0,
-      "changeType": "unchanged"
-    },
-    {
-      "source": "prizepicks",
-      "sourceName": "PrizePicks",
-      "sourceUrl": "https://app.prizepicks.com/",
-      "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0040128",
         "name": "Tyler Warren",
@@ -2908,7 +2907,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0038117",
         "name": "Wan'Dale Robinson",
@@ -2940,7 +2939,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0040663",
         "name": "Harold Fannin Jr.",
@@ -2972,7 +2971,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0030506",
         "name": "Travis Kelce",
@@ -3003,7 +3002,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036252",
         "name": "Michael Pittman",
@@ -3034,7 +3033,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0041547",
         "name": "K.C. Concepcion",
@@ -3066,7 +3065,38 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
+      "player": {
+        "id": "00-0036875",
+        "name": "Rhamondre Stevenson",
+        "team": "NE",
+        "position": "RB",
+        "rosterSeason": 2026,
+        "aliases": [
+          "Rhamondre Stevenson"
+        ]
+      },
+      "marketScope": "week_1",
+      "statType": "rushing_yards",
+      "line": 40.5,
+      "isMain": true,
+      "evidenceHash": "4268a554aed34a49ddc79a3a723ea3fe8063ccc62eff8127b2a36aabe4385179",
+      "selectionMethod": "book_marker",
+      "confirmed": true,
+      "key": "2026:prizepicks:00-0036875:week_1:rushing_yards",
+      "date": "2026-08-24",
+      "status": "open",
+      "missingDays": 0,
+      "previousLine": 39.5,
+      "lineDelta": 1,
+      "changeType": "line_increased"
+    },
+    {
+      "source": "prizepicks",
+      "sourceName": "PrizePicks",
+      "sourceUrl": "https://app.prizepicks.com/",
+      "season": 2026,
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0038128",
         "name": "Malik Willis",
@@ -3097,38 +3127,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
-      "player": {
-        "id": "00-0036875",
-        "name": "Rhamondre Stevenson",
-        "team": "NE",
-        "position": "RB",
-        "rosterSeason": 2026,
-        "aliases": [
-          "Rhamondre Stevenson"
-        ]
-      },
-      "marketScope": "week_1",
-      "statType": "rushing_yards",
-      "line": 39.5,
-      "isMain": true,
-      "evidenceHash": "909db7826f7503b5a8ae06469886ae1021a9b7147415a0ea5601c0654e163cfa",
-      "selectionMethod": "book_marker",
-      "confirmed": true,
-      "key": "2026:prizepicks:00-0036875:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
-      "missingDays": 0,
-      "previousLine": 39.5,
-      "lineDelta": 0,
-      "changeType": "unchanged"
-    },
-    {
-      "source": "prizepicks",
-      "sourceName": "PrizePicks",
-      "sourceUrl": "https://app.prizepicks.com/",
-      "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039910",
         "name": "Jayden Daniels",
@@ -3159,7 +3158,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0041035",
         "name": "De'Zhaun Stribling",
@@ -3191,7 +3190,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0038542",
         "name": "Bijan Robinson",
@@ -3222,7 +3221,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0033280",
         "name": "Christian McCaffrey",
@@ -3253,7 +3252,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0040734",
         "name": "TreVeyon Henderson",
@@ -3284,7 +3283,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039738",
         "name": "Blake Corum",
@@ -3315,7 +3314,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037816",
         "name": "Romeo Doubs",
@@ -3346,7 +3345,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039139",
         "name": "Jahmyr Gibbs",
@@ -3377,7 +3376,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0038041",
         "name": "Jake Ferguson",
@@ -3408,7 +3407,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0034857",
         "name": "Josh Allen",
@@ -3440,7 +3439,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0041037",
         "name": "Denzel Boston",
@@ -3471,7 +3470,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0034796",
         "name": "Lamar Jackson",
@@ -3502,7 +3501,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0033090",
         "name": "Hunter Henry",
@@ -3533,7 +3532,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0040691",
         "name": "Jaxson Dart",
@@ -3564,7 +3563,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0035719",
         "name": "Deebo Samuel Sr.",
@@ -3596,7 +3595,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039040",
         "name": "De'Von Achane",
@@ -3628,7 +3627,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037197",
         "name": "Isiah Pacheco",
@@ -3659,7 +3658,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036389",
         "name": "Jalen Hurts",
@@ -3690,7 +3689,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037545",
         "name": "Rashid Shaheed",
@@ -3721,7 +3720,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0033908",
         "name": "Cooper Kupp",
@@ -3752,7 +3751,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039793",
         "name": "AJ Barner",
@@ -3784,7 +3783,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039851",
         "name": "Drake Maye",
@@ -3815,7 +3814,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036355",
         "name": "Justin Herbert",
@@ -3846,7 +3845,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039299",
         "name": "George Holani",
@@ -3877,7 +3876,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0038621",
         "name": "DeMario Douglas",
@@ -3909,7 +3908,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0040715",
         "name": "Cam Skattebo",
@@ -3941,7 +3940,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039918",
         "name": "Caleb Williams",
@@ -3972,7 +3971,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036971",
         "name": "Trevor Lawrence",
@@ -4003,7 +4002,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0033280",
         "name": "Christian McCaffrey",
@@ -4034,7 +4033,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039075",
         "name": "Puka Nacua",
@@ -4065,7 +4064,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0038120",
         "name": "Breece Hall",
@@ -4096,7 +4095,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0040743",
         "name": "Tyler Shough",
@@ -4127,7 +4126,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0038543",
         "name": "Jaxon Smith-Njigba",
@@ -4158,7 +4157,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0026498",
         "name": "Matthew Stafford",
@@ -4190,7 +4189,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037834",
         "name": "Brock Purdy",
@@ -4221,7 +4220,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0034855",
         "name": "Baker Mayfield",
@@ -4252,7 +4251,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039851",
         "name": "Drake Maye",
@@ -4283,7 +4282,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037248",
         "name": "James Cook",
@@ -4314,7 +4313,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037834",
         "name": "Brock Purdy",
@@ -4345,7 +4344,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039150",
         "name": "Bryce Young",
@@ -4376,7 +4375,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0034869",
         "name": "Sam Darnold",
@@ -4407,7 +4406,38 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
+      "player": {
+        "id": "00-0036875",
+        "name": "Rhamondre Stevenson",
+        "team": "NE",
+        "position": "RB",
+        "rosterSeason": 2026,
+        "aliases": [
+          "Rhamondre Stevenson"
+        ]
+      },
+      "marketScope": "week_1",
+      "statType": "receiving_yards",
+      "line": 13.5,
+      "isMain": true,
+      "evidenceHash": "4592b8fc5c32e89e2c2e059d9e228d0589e14154fd1d50a9e6d801ff1ddc679e",
+      "selectionMethod": "book_marker",
+      "confirmed": true,
+      "key": "2026:prizepicks:00-0036875:week_1:receiving_yards",
+      "date": "2026-08-24",
+      "status": "open",
+      "missingDays": 0,
+      "previousLine": 12.5,
+      "lineDelta": 1,
+      "changeType": "line_increased"
+    },
+    {
+      "source": "prizepicks",
+      "sourceName": "PrizePicks",
+      "sourceUrl": "https://app.prizepicks.com/",
+      "season": 2026,
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036223",
         "name": "Jonathan Taylor",
@@ -4438,7 +4468,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0034844",
         "name": "Saquon Barkley",
@@ -4469,38 +4499,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
-      "player": {
-        "id": "00-0036875",
-        "name": "Rhamondre Stevenson",
-        "team": "NE",
-        "position": "RB",
-        "rosterSeason": 2026,
-        "aliases": [
-          "Rhamondre Stevenson"
-        ]
-      },
-      "marketScope": "week_1",
-      "statType": "receiving_yards",
-      "line": 12.5,
-      "isMain": true,
-      "evidenceHash": "1f2448f089fe2db54a4537ebebd38f00dd0c2c7d978235808335c09b7952917b",
-      "selectionMethod": "book_marker",
-      "confirmed": true,
-      "key": "2026:prizepicks:00-0036875:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
-      "missingDays": 0,
-      "previousLine": 12.5,
-      "lineDelta": 0,
-      "changeType": "unchanged"
-    },
-    {
-      "source": "prizepicks",
-      "sourceName": "PrizePicks",
-      "sourceUrl": "https://app.prizepicks.com/",
-      "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0035676",
         "name": "A.J. Brown",
@@ -4532,7 +4531,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037840",
         "name": "Kyren Williams",
@@ -4563,7 +4562,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036997",
         "name": "Javonte Williams",
@@ -4594,7 +4593,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0031408",
         "name": "Mike Evans",
@@ -4625,7 +4624,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0040784",
         "name": "Quinshon Judkins",
@@ -4656,7 +4655,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036264",
         "name": "Jordan Love",
@@ -4687,7 +4686,39 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
+      "player": {
+        "id": "00-0041035",
+        "name": "De'Zhaun Stribling",
+        "team": "SF",
+        "position": "WR",
+        "rosterSeason": 2026,
+        "aliases": [
+          "De'Zhaun Stribling",
+          "De'Zhaun-Ryan Stribling"
+        ]
+      },
+      "marketScope": "week_1",
+      "statType": "fantasy_score",
+      "line": 8.5,
+      "isMain": true,
+      "evidenceHash": "5996bd7f84bb66c90c3977900bd02bf091a11a1fdb322885dec695fcb437a57f",
+      "selectionMethod": "book_marker",
+      "confirmed": true,
+      "key": "2026:prizepicks:00-0041035:week_1:fantasy_score",
+      "date": "2026-08-24",
+      "status": "open",
+      "missingDays": 0,
+      "previousLine": 7,
+      "lineDelta": 1.5,
+      "changeType": "line_increased"
+    },
+    {
+      "source": "prizepicks",
+      "sourceName": "PrizePicks",
+      "sourceUrl": "https://app.prizepicks.com/",
+      "season": 2026,
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0040676",
         "name": "Cam Ward",
@@ -4719,7 +4750,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039163",
         "name": "C.J. Stroud",
@@ -4751,7 +4782,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036963",
         "name": "Amon-Ra St. Brown",
@@ -4782,7 +4813,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036900",
         "name": "Ja'Marr Chase",
@@ -4813,7 +4844,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039075",
         "name": "Puka Nacua",
@@ -4844,39 +4875,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
-      "player": {
-        "id": "00-0041035",
-        "name": "De'Zhaun Stribling",
-        "team": "SF",
-        "position": "WR",
-        "rosterSeason": 2026,
-        "aliases": [
-          "De'Zhaun Stribling",
-          "De'Zhaun-Ryan Stribling"
-        ]
-      },
-      "marketScope": "week_1",
-      "statType": "fantasy_score",
-      "line": 7,
-      "isMain": true,
-      "evidenceHash": "d9f8f4d79b34b2c6ff752f26b5c3ec26a4b740521901e61c01e8d187b17853a2",
-      "selectionMethod": "book_marker",
-      "confirmed": true,
-      "key": "2026:prizepicks:00-0041035:week_1:fantasy_score",
-      "date": "2026-08-24",
-      "status": "open",
-      "missingDays": 0,
-      "previousLine": 7,
-      "lineDelta": 0,
-      "changeType": "unchanged"
-    },
-    {
-      "source": "prizepicks",
-      "sourceName": "PrizePicks",
-      "sourceUrl": "https://app.prizepicks.com/",
-      "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0030565",
         "name": "Geno Smith",
@@ -4908,7 +4907,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0033077",
         "name": "Dak Prescott",
@@ -4940,7 +4939,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0038543",
         "name": "Jaxon Smith-Njigba",
@@ -4971,7 +4970,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037744",
         "name": "Trey McBride",
@@ -5002,7 +5001,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036358",
         "name": "CeeDee Lamb",
@@ -5034,7 +5033,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0034869",
         "name": "Sam Darnold",
@@ -5065,7 +5064,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036442",
         "name": "Joe Burrow",
@@ -5096,7 +5095,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037238",
         "name": "Drake London",
@@ -5127,7 +5126,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036322",
         "name": "Justin Jefferson",
@@ -5158,7 +5157,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039338",
         "name": "Brock Bowers",
@@ -5189,7 +5188,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037247",
         "name": "George Pickens",
@@ -5220,7 +5219,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0032764",
         "name": "Derrick Henry",
@@ -5251,7 +5250,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0033280",
         "name": "Christian McCaffrey",
@@ -5282,7 +5281,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0031381",
         "name": "Davante Adams",
@@ -5313,7 +5312,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0038542",
         "name": "Bijan Robinson",
@@ -5344,7 +5343,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039064",
         "name": "Zay Flowers",
@@ -5376,7 +5375,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036554",
         "name": "Nico Collins",
@@ -5407,7 +5406,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0030506",
         "name": "Travis Kelce",
@@ -5438,7 +5437,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037545",
         "name": "Rashid Shaheed",
@@ -5469,7 +5468,38 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
+      "player": {
+        "id": "00-0039738",
+        "name": "Blake Corum",
+        "team": "LA",
+        "position": "RB",
+        "rosterSeason": 2026,
+        "aliases": [
+          "Blake Corum"
+        ]
+      },
+      "marketScope": "week_1",
+      "statType": "receiving_yards",
+      "line": 1.5,
+      "isMain": true,
+      "evidenceHash": "0d5a40ee6d32254b0fbe7a88d93b2d98849e19ebf10ebe10203b0902418208c0",
+      "selectionMethod": "book_marker",
+      "confirmed": true,
+      "key": "2026:prizepicks:00-0039738:week_1:receiving_yards",
+      "date": "2026-08-24",
+      "status": "open",
+      "missingDays": 0,
+      "previousLine": 0.5,
+      "lineDelta": 1,
+      "changeType": "line_increased"
+    },
+    {
+      "source": "prizepicks",
+      "sourceName": "PrizePicks",
+      "sourceUrl": "https://app.prizepicks.com/",
+      "season": 2026,
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037834",
         "name": "Brock Purdy",
@@ -5500,7 +5530,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039918",
         "name": "Caleb Williams",
@@ -5531,7 +5561,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0034855",
         "name": "Baker Mayfield",
@@ -5562,7 +5592,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0034857",
         "name": "Josh Allen",
@@ -5594,7 +5624,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036355",
         "name": "Justin Herbert",
@@ -5625,7 +5655,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0033077",
         "name": "Dak Prescott",
@@ -5657,7 +5687,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0033873",
         "name": "Patrick Mahomes",
@@ -5688,38 +5718,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
-      "player": {
-        "id": "00-0039738",
-        "name": "Blake Corum",
-        "team": "LA",
-        "position": "RB",
-        "rosterSeason": 2026,
-        "aliases": [
-          "Blake Corum"
-        ]
-      },
-      "marketScope": "week_1",
-      "statType": "receiving_yards",
-      "line": 0.5,
-      "isMain": true,
-      "evidenceHash": "8b87b0cca475531520e4d6fe85aab29eec8475e6ff181aea01e8ef0180bb561c",
-      "selectionMethod": "book_marker",
-      "confirmed": true,
-      "key": "2026:prizepicks:00-0039738:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
-      "missingDays": 0,
-      "previousLine": 0.5,
-      "lineDelta": 0,
-      "changeType": "unchanged"
-    },
-    {
-      "source": "prizepicks",
-      "sourceName": "PrizePicks",
-      "sourceUrl": "https://app.prizepicks.com/",
-      "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037545",
         "name": "Rashid Shaheed",
@@ -5750,7 +5749,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039075",
         "name": "Puka Nacua",
@@ -5765,7 +5764,7 @@
       "statType": "rushing_yards",
       "line": 0.5,
       "isMain": true,
-      "evidenceHash": "6ef788aa4802abd4274099deab4c10a953e58a5e3687d1e1be2dbeb40b4797e4",
+      "evidenceHash": "2be52a694517a68383b83448dd1da8e8ed5393bd5a2d26159c45b63427cb4b11",
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039075:week_1:rushing_yards",
@@ -5781,7 +5780,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0040735",
         "name": "Luther Burden III",
@@ -5813,7 +5812,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0023459",
         "name": "Aaron Rodgers",
@@ -5844,7 +5843,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0039064",
         "name": "Zay Flowers",
@@ -5876,7 +5875,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0037840",
         "name": "Kyren Williams",
@@ -5907,7 +5906,7 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
       "player": {
         "id": "00-0036900",
         "name": "Ja'Marr Chase",
@@ -5938,7 +5937,131 @@
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T16:08:00.874Z",
+      "player": {
+        "id": "00-0033280",
+        "name": "Christian McCaffrey",
+        "team": "SF",
+        "position": "RB",
+        "rosterSeason": 2026,
+        "aliases": [
+          "Christian McCaffrey"
+        ]
+      },
+      "marketScope": "week_1",
+      "statType": "rushing_touchdowns",
+      "line": 0.5,
+      "isMain": true,
+      "evidenceHash": "68f291702dd6a3f79db87b5930c9c9c3ba0d651937f2ef218665679687069655",
+      "selectionMethod": "book_marker",
+      "confirmed": true,
+      "key": "2026:prizepicks:00-0033280:week_1:rushing_touchdowns",
+      "date": "2026-08-24",
+      "status": "open",
+      "missingDays": 0,
+      "previousLine": null,
+      "lineDelta": null,
+      "changeType": "opened"
+    },
+    {
+      "source": "prizepicks",
+      "sourceName": "PrizePicks",
+      "sourceUrl": "https://app.prizepicks.com/",
+      "season": 2026,
+      "capturedAt": "2026-08-24T16:08:00.874Z",
+      "player": {
+        "id": "00-0037840",
+        "name": "Kyren Williams",
+        "team": "LA",
+        "position": "RB",
+        "rosterSeason": 2026,
+        "aliases": [
+          "Kyren Williams"
+        ]
+      },
+      "marketScope": "week_1",
+      "statType": "rushing_touchdowns",
+      "line": 0.5,
+      "isMain": true,
+      "evidenceHash": "840b6f103d62bcb5b9f8f58b87786ed4b9d47942eabbca389cd6aaa4f81a3f36",
+      "selectionMethod": "book_marker",
+      "confirmed": true,
+      "key": "2026:prizepicks:00-0037840:week_1:rushing_touchdowns",
+      "date": "2026-08-24",
+      "status": "open",
+      "missingDays": 0,
+      "previousLine": null,
+      "lineDelta": null,
+      "changeType": "opened"
+    },
+    {
+      "source": "prizepicks",
+      "sourceName": "PrizePicks",
+      "sourceUrl": "https://app.prizepicks.com/",
+      "season": 2026,
+      "capturedAt": "2026-08-24T16:08:00.874Z",
+      "player": {
+        "id": "00-0040666",
+        "name": "Omarion Hampton",
+        "team": "LAC",
+        "position": "RB",
+        "rosterSeason": 2026,
+        "aliases": [
+          "Omarion Hampton"
+        ]
+      },
+      "marketScope": "week_1",
+      "statType": "rushing_touchdowns",
+      "line": 0.5,
+      "isMain": true,
+      "evidenceHash": "ea2ca48198c71c7d3f3bc259da77a9288128aa2f150f49e1a93c55c94cf1a31c",
+      "selectionMethod": "book_marker",
+      "confirmed": true,
+      "key": "2026:prizepicks:00-0040666:week_1:rushing_touchdowns",
+      "date": "2026-08-24",
+      "status": "open",
+      "missingDays": 0,
+      "previousLine": null,
+      "lineDelta": null,
+      "changeType": "opened"
+    },
+    {
+      "source": "prizepicks",
+      "sourceName": "PrizePicks",
+      "sourceUrl": "https://app.prizepicks.com/",
+      "season": 2026,
+      "capturedAt": "2026-08-24T16:08:00.874Z",
+      "player": {
+        "id": "00-0034844",
+        "name": "Saquon Barkley",
+        "team": "PHI",
+        "position": "RB",
+        "rosterSeason": 2026,
+        "aliases": [
+          "Saquon Barkley"
+        ]
+      },
+      "marketScope": "week_1",
+      "statType": "rushing_touchdowns",
+      "line": 0.5,
+      "isMain": true,
+      "evidenceHash": "816c50fa47cd8aeac796ae5e54fe4dabce09713868b99ca7bb0622ee43c1567a",
+      "selectionMethod": "book_marker",
+      "confirmed": true,
+      "key": "2026:prizepicks:00-0034844:week_1:rushing_touchdowns",
+      "date": "2026-08-24",
+      "status": "open",
+      "missingDays": 0,
+      "previousLine": null,
+      "lineDelta": null,
+      "changeType": "opened"
+    },
+    {
+      "source": "prizepicks",
+      "sourceName": "PrizePicks",
+      "sourceUrl": "https://app.prizepicks.com/",
+      "season": 2026,
+      "capturedAt": "2026-08-24T02:38:35.518Z",
       "player": {
         "id": "00-0037248",
         "name": "James Cook",
@@ -5958,18 +6081,18 @@
       "confirmed": true,
       "key": "2026:prizepicks:00-0037248:week_1:offensive_touchdowns",
       "date": "2026-08-24",
-      "status": "open",
-      "missingDays": 0,
-      "previousLine": 0.5,
+      "status": "not_seen",
+      "missingDays": 1,
+      "previousLine": null,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "not_seen"
     },
     {
       "source": "prizepicks",
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T02:38:35.518Z",
       "player": {
         "id": "00-0034857",
         "name": "Josh Allen",
@@ -5990,18 +6113,18 @@
       "confirmed": true,
       "key": "2026:prizepicks:00-0034857:week_1:offensive_touchdowns",
       "date": "2026-08-24",
-      "status": "open",
-      "missingDays": 0,
-      "previousLine": 0.5,
+      "status": "not_seen",
+      "missingDays": 1,
+      "previousLine": null,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "not_seen"
     },
     {
       "source": "prizepicks",
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T02:38:35.518Z",
       "player": {
         "id": "00-0039040",
         "name": "De'Von Achane",
@@ -6022,18 +6145,18 @@
       "confirmed": true,
       "key": "2026:prizepicks:00-0039040:week_1:offensive_touchdowns",
       "date": "2026-08-24",
-      "status": "open",
-      "missingDays": 0,
-      "previousLine": 0.5,
+      "status": "not_seen",
+      "missingDays": 1,
+      "previousLine": null,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "not_seen"
     },
     {
       "source": "prizepicks",
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T02:38:35.518Z",
       "player": {
         "id": "00-0036389",
         "name": "Jalen Hurts",
@@ -6053,18 +6176,18 @@
       "confirmed": true,
       "key": "2026:prizepicks:00-0036389:week_1:offensive_touchdowns",
       "date": "2026-08-24",
-      "status": "open",
-      "missingDays": 0,
-      "previousLine": 0.5,
+      "status": "not_seen",
+      "missingDays": 1,
+      "previousLine": null,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "not_seen"
     },
     {
       "source": "prizepicks",
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T02:38:35.518Z",
       "player": {
         "id": "00-0034844",
         "name": "Saquon Barkley",
@@ -6084,18 +6207,18 @@
       "confirmed": true,
       "key": "2026:prizepicks:00-0034844:week_1:offensive_touchdowns",
       "date": "2026-08-24",
-      "status": "open",
-      "missingDays": 0,
-      "previousLine": 0.5,
+      "status": "not_seen",
+      "missingDays": 1,
+      "previousLine": null,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "not_seen"
     },
     {
       "source": "prizepicks",
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T02:38:35.518Z",
       "player": {
         "id": "00-0040715",
         "name": "Cam Skattebo",
@@ -6116,18 +6239,18 @@
       "confirmed": true,
       "key": "2026:prizepicks:00-0040715:week_1:offensive_touchdowns",
       "date": "2026-08-24",
-      "status": "open",
-      "missingDays": 0,
-      "previousLine": 0.5,
+      "status": "not_seen",
+      "missingDays": 1,
+      "previousLine": null,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "not_seen"
     },
     {
       "source": "prizepicks",
       "sourceName": "PrizePicks",
       "sourceUrl": "https://app.prizepicks.com/",
       "season": 2026,
-      "capturedAt": "2026-08-24T14:02:25.299Z",
+      "capturedAt": "2026-08-24T02:38:35.518Z",
       "player": {
         "id": "00-0038134",
         "name": "Kenneth Walker III",
@@ -6148,16 +6271,38 @@
       "confirmed": true,
       "key": "2026:prizepicks:00-0038134:week_1:offensive_touchdowns",
       "date": "2026-08-24",
-      "status": "open",
-      "missingDays": 0,
-      "previousLine": 0.5,
+      "status": "not_seen",
+      "missingDays": 1,
+      "previousLine": null,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "not_seen"
     }
   ],
   "issues": [],
   "week": 1,
   "movements": [
+    {
+      "date": "2026-08-24",
+      "key": "2026:prizepicks:00-0029604:week_1:passing_yards",
+      "source": "prizepicks",
+      "sourceName": "PrizePicks",
+      "sourceUrl": "https://app.prizepicks.com/",
+      "player": {
+        "id": "00-0029604",
+        "name": "Kirk Cousins",
+        "team": "LV",
+        "position": "QB",
+        "rosterSeason": 2026,
+        "aliases": [
+          "Kirk Cousins"
+        ]
+      },
+      "marketScope": "week_1",
+      "statType": "passing_yards",
+      "line": 225.5,
+      "lineDelta": 1,
+      "changeType": "line_increased"
+    },
     {
       "date": "2026-08-24",
       "key": "2026:prizepicks:00-0039337:week_1:receiving_yards",
@@ -6176,9 +6321,32 @@
       },
       "marketScope": "week_1",
       "statType": "receiving_yards",
-      "line": 63.5,
-      "lineDelta": -2,
-      "changeType": "line_decreased"
+      "line": 66.5,
+      "lineDelta": 1,
+      "changeType": "line_increased"
+    },
+    {
+      "date": "2026-08-24",
+      "key": "2026:prizepicks:00-0035676:week_1:receiving_yards",
+      "source": "prizepicks",
+      "sourceName": "PrizePicks",
+      "sourceUrl": "https://app.prizepicks.com/",
+      "player": {
+        "id": "00-0035676",
+        "name": "A.J. Brown",
+        "team": "NE",
+        "position": "WR",
+        "rosterSeason": 2026,
+        "aliases": [
+          "A.J. Brown",
+          "Arthur Brown"
+        ]
+      },
+      "marketScope": "week_1",
+      "statType": "receiving_yards",
+      "line": 58.5,
+      "lineDelta": 1,
+      "changeType": "line_increased"
     },
     {
       "date": "2026-08-24",
@@ -6204,6 +6372,50 @@
     },
     {
       "date": "2026-08-24",
+      "key": "2026:prizepicks:00-0031408:week_1:receiving_yards",
+      "source": "prizepicks",
+      "sourceName": "PrizePicks",
+      "sourceUrl": "https://app.prizepicks.com/",
+      "player": {
+        "id": "00-0031408",
+        "name": "Mike Evans",
+        "team": "SF",
+        "position": "WR",
+        "rosterSeason": 2026,
+        "aliases": [
+          "Mike Evans"
+        ]
+      },
+      "marketScope": "week_1",
+      "statType": "receiving_yards",
+      "line": 48.5,
+      "lineDelta": 1,
+      "changeType": "line_increased"
+    },
+    {
+      "date": "2026-08-24",
+      "key": "2026:prizepicks:00-0036875:week_1:rushing_yards",
+      "source": "prizepicks",
+      "sourceName": "PrizePicks",
+      "sourceUrl": "https://app.prizepicks.com/",
+      "player": {
+        "id": "00-0036875",
+        "name": "Rhamondre Stevenson",
+        "team": "NE",
+        "position": "RB",
+        "rosterSeason": 2026,
+        "aliases": [
+          "Rhamondre Stevenson"
+        ]
+      },
+      "marketScope": "week_1",
+      "statType": "rushing_yards",
+      "line": 40.5,
+      "lineDelta": 1,
+      "changeType": "line_increased"
+    },
+    {
+      "date": "2026-08-24",
       "key": "2026:prizepicks:00-0041035:week_1:receiving_yards",
       "source": "prizepicks",
       "sourceName": "PrizePicks",
@@ -6223,6 +6435,73 @@
       "statType": "receiving_yards",
       "line": 38.5,
       "lineDelta": 5,
+      "changeType": "line_increased"
+    },
+    {
+      "date": "2026-08-24",
+      "key": "2026:prizepicks:00-0036875:week_1:receiving_yards",
+      "source": "prizepicks",
+      "sourceName": "PrizePicks",
+      "sourceUrl": "https://app.prizepicks.com/",
+      "player": {
+        "id": "00-0036875",
+        "name": "Rhamondre Stevenson",
+        "team": "NE",
+        "position": "RB",
+        "rosterSeason": 2026,
+        "aliases": [
+          "Rhamondre Stevenson"
+        ]
+      },
+      "marketScope": "week_1",
+      "statType": "receiving_yards",
+      "line": 13.5,
+      "lineDelta": 1,
+      "changeType": "line_increased"
+    },
+    {
+      "date": "2026-08-24",
+      "key": "2026:prizepicks:00-0041035:week_1:fantasy_score",
+      "source": "prizepicks",
+      "sourceName": "PrizePicks",
+      "sourceUrl": "https://app.prizepicks.com/",
+      "player": {
+        "id": "00-0041035",
+        "name": "De'Zhaun Stribling",
+        "team": "SF",
+        "position": "WR",
+        "rosterSeason": 2026,
+        "aliases": [
+          "De'Zhaun Stribling",
+          "De'Zhaun-Ryan Stribling"
+        ]
+      },
+      "marketScope": "week_1",
+      "statType": "fantasy_score",
+      "line": 8.5,
+      "lineDelta": 1.5,
+      "changeType": "line_increased"
+    },
+    {
+      "date": "2026-08-24",
+      "key": "2026:prizepicks:00-0039738:week_1:receiving_yards",
+      "source": "prizepicks",
+      "sourceName": "PrizePicks",
+      "sourceUrl": "https://app.prizepicks.com/",
+      "player": {
+        "id": "00-0039738",
+        "name": "Blake Corum",
+        "team": "LA",
+        "position": "RB",
+        "rosterSeason": 2026,
+        "aliases": [
+          "Blake Corum"
+        ]
+      },
+      "marketScope": "week_1",
+      "statType": "receiving_yards",
+      "line": 1.5,
+      "lineDelta": 1,
       "changeType": "line_increased"
     }
   ],
