@@ -14386,11 +14386,11 @@
     },
     {
       "date": "2026-08-23",
-      "line": 900.5,
-      "overOdds": -120,
-      "underOdds": 100,
+      "line": 950.5,
+      "overOdds": -110,
+      "underOdds": -110,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_increased"
     }
   ],
   "2026:betmgm:00-0037240:regular_season:receiving_yards": [
@@ -15440,11 +15440,11 @@
     },
     {
       "date": "2026-08-23",
-      "line": 600.5,
-      "overOdds": -120,
-      "underOdds": 100,
+      "line": 575.5,
+      "overOdds": -115,
+      "underOdds": -115,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_decreased"
     }
   ],
   "2026:betmgm:00-0041547:regular_season:receiving_yards": [
@@ -17311,10 +17311,10 @@
     {
       "date": "2026-08-23",
       "line": 7.5,
-      "overOdds": 115,
-      "underOdds": -140,
+      "overOdds": 100,
+      "underOdds": -120,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:betmgm:00-0037238:regular_season:receiving_touchdowns": [
@@ -21832,11 +21832,11 @@
     },
     {
       "date": "2026-08-23",
-      "line": 825.5,
+      "line": 800.5,
       "overOdds": -114,
       "underOdds": -114,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_decreased"
     }
   ],
   "2026:fanduel:00-0039849:regular_season:receiving_yards": [
@@ -24009,10 +24009,10 @@
     {
       "date": "2026-08-23",
       "line": 7.5,
-      "overOdds": -102,
-      "underOdds": -130,
+      "overOdds": 112,
+      "underOdds": -148,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:fanduel:00-0036389:regular_season:rushing_touchdowns": [
@@ -24564,7 +24564,7 @@
   "2026:draftkings:00-0038393:regular_season:receiving_yards": [
     {
       "date": "2026-08-23",
-      "line": 599.5,
+      "line": 574.5,
       "overOdds": -110,
       "underOdds": -110,
       "status": "open",
@@ -24584,7 +24584,7 @@
   "2026:prizepicks:00-0033106:regular_season:passing_yards": [
     {
       "date": "2026-08-23",
-      "line": 4080.5,
+      "line": 4074.5,
       "overOdds": null,
       "underOdds": null,
       "status": "open",
@@ -24594,17 +24594,7 @@
   "2026:prizepicks:00-0033077:regular_season:passing_yards": [
     {
       "date": "2026-08-23",
-      "line": 4024.5,
-      "overOdds": null,
-      "underOdds": null,
-      "status": "open",
-      "changeType": "opened"
-    }
-  ],
-  "2026:prizepicks:00-0026498:regular_season:passing_yards": [
-    {
-      "date": "2026-08-23",
-      "line": 3925.5,
+      "line": 3999.5,
       "overOdds": null,
       "underOdds": null,
       "status": "open",
@@ -24615,6 +24605,16 @@
     {
       "date": "2026-08-23",
       "line": 3924.5,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0026498:regular_season:passing_yards": [
+    {
+      "date": "2026-08-23",
+      "line": 3874.5,
       "overOdds": null,
       "underOdds": null,
       "status": "open",
@@ -24634,7 +24634,7 @@
   "2026:prizepicks:00-0039851:regular_season:passing_yards": [
     {
       "date": "2026-08-23",
-      "line": 3799.5,
+      "line": 3774.5,
       "overOdds": null,
       "underOdds": null,
       "status": "open",
@@ -24651,16 +24651,6 @@
       "changeType": "opened"
     }
   ],
-  "2026:prizepicks:00-0034869:regular_season:passing_yards": [
-    {
-      "date": "2026-08-23",
-      "line": 3699.5,
-      "overOdds": null,
-      "underOdds": null,
-      "status": "open",
-      "changeType": "opened"
-    }
-  ],
   "2026:prizepicks:00-0033873:regular_season:passing_yards": [
     {
       "date": "2026-08-23",
@@ -24671,7 +24661,7 @@
       "changeType": "opened"
     }
   ],
-  "2026:prizepicks:00-0036355:regular_season:passing_yards": [
+  "2026:prizepicks:00-0034869:regular_season:passing_yards": [
     {
       "date": "2026-08-23",
       "line": 3649.5,
@@ -24682,6 +24672,16 @@
     }
   ],
   "2026:prizepicks:00-0039918:regular_season:passing_yards": [
+    {
+      "date": "2026-08-23",
+      "line": 3599.5,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0036355:regular_season:passing_yards": [
     {
       "date": "2026-08-23",
       "line": 3599.5,
@@ -24704,7 +24704,7 @@
   "2026:prizepicks:00-0039163:regular_season:passing_yards": [
     {
       "date": "2026-08-23",
-      "line": 3575.5,
+      "line": 3574.5,
       "overOdds": null,
       "underOdds": null,
       "status": "open",
@@ -24731,20 +24731,20 @@
       "changeType": "opened"
     }
   ],
-  "2026:prizepicks:00-0040743:regular_season:passing_yards": [
+  "2026:prizepicks:00-0039732:regular_season:passing_yards": [
     {
       "date": "2026-08-23",
-      "line": 3475.5,
+      "line": 3474.5,
       "overOdds": null,
       "underOdds": null,
       "status": "open",
       "changeType": "opened"
     }
   ],
-  "2026:prizepicks:00-0039732:regular_season:passing_yards": [
+  "2026:prizepicks:00-0040743:regular_season:passing_yards": [
     {
       "date": "2026-08-23",
-      "line": 3474.5,
+      "line": 3449.5,
       "overOdds": null,
       "underOdds": null,
       "status": "open",
@@ -24781,16 +24781,6 @@
       "changeType": "opened"
     }
   ],
-  "2026:prizepicks:00-0036389:regular_season:passing_yards": [
-    {
-      "date": "2026-08-23",
-      "line": 3225.5,
-      "overOdds": null,
-      "underOdds": null,
-      "status": "open",
-      "changeType": "opened"
-    }
-  ],
   "2026:prizepicks:00-0034796:regular_season:passing_yards": [
     {
       "date": "2026-08-23",
@@ -24801,10 +24791,20 @@
       "changeType": "opened"
     }
   ],
+  "2026:prizepicks:00-0036389:regular_season:passing_yards": [
+    {
+      "date": "2026-08-23",
+      "line": 3199.5,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
   "2026:prizepicks:00-0040691:regular_season:passing_yards": [
     {
       "date": "2026-08-23",
-      "line": 3149.5,
+      "line": 3124.5,
       "overOdds": null,
       "underOdds": null,
       "status": "open",
@@ -24814,7 +24814,7 @@
   "2026:prizepicks:00-0023459:regular_season:passing_yards": [
     {
       "date": "2026-08-23",
-      "line": 3099.5,
+      "line": 3074.5,
       "overOdds": null,
       "underOdds": null,
       "status": "open",
@@ -24824,7 +24824,7 @@
   "2026:prizepicks:00-0035228:regular_season:passing_yards": [
     {
       "date": "2026-08-23",
-      "line": 3025.5,
+      "line": 3049.5,
       "overOdds": null,
       "underOdds": null,
       "status": "open",
@@ -24874,7 +24874,7 @@
   "2026:prizepicks:00-0041562:regular_season:passing_yards": [
     {
       "date": "2026-08-23",
-      "line": 2199.5,
+      "line": 2124.5,
       "overOdds": null,
       "underOdds": null,
       "status": "open",
@@ -26101,6 +26101,16 @@
       "changeType": "opened"
     }
   ],
+  "2026:prizepicks:00-0040691:regular_season:rushing_yards": [
+    {
+      "date": "2026-08-23",
+      "line": 474.5,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
   "2026:prizepicks:00-0041511:regular_season:receiving_yards": [
     {
       "date": "2026-08-23",
@@ -26142,16 +26152,6 @@
     }
   ],
   "2026:prizepicks:00-0036894:regular_season:receiving_yards": [
-    {
-      "date": "2026-08-23",
-      "line": 449.5,
-      "overOdds": null,
-      "underOdds": null,
-      "status": "open",
-      "changeType": "opened"
-    }
-  ],
-  "2026:prizepicks:00-0040691:regular_season:rushing_yards": [
     {
       "date": "2026-08-23",
       "line": 449.5,
@@ -27321,6 +27321,16 @@
       "changeType": "opened"
     }
   ],
+  "2026:prizepicks:00-0036389:regular_season:passing_touchdowns": [
+    {
+      "date": "2026-08-23",
+      "line": 22.5,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
   "2026:prizepicks:00-0023459:regular_season:passing_touchdowns": [
     {
       "date": "2026-08-23",
@@ -27341,17 +27351,17 @@
       "changeType": "opened"
     }
   ],
-  "2026:prizepicks:00-0036389:regular_season:passing_touchdowns": [
+  "2026:prizepicks:00-0040743:regular_season:passing_touchdowns": [
     {
       "date": "2026-08-23",
-      "line": 21.5,
+      "line": 20.5,
       "overOdds": null,
       "underOdds": null,
       "status": "open",
       "changeType": "opened"
     }
   ],
-  "2026:prizepicks:00-0040743:regular_season:passing_touchdowns": [
+  "2026:prizepicks:00-0040676:regular_season:passing_touchdowns": [
     {
       "date": "2026-08-23",
       "line": 20.5,
@@ -27371,7 +27381,7 @@
       "changeType": "opened"
     }
   ],
-  "2026:prizepicks:00-0040676:regular_season:passing_touchdowns": [
+  "2026:prizepicks:00-0040691:regular_season:passing_touchdowns": [
     {
       "date": "2026-08-23",
       "line": 19.5,
@@ -27381,10 +27391,10 @@
       "changeType": "opened"
     }
   ],
-  "2026:prizepicks:00-0040691:regular_season:passing_touchdowns": [
+  "2026:prizepicks:00-0035228:regular_season:passing_touchdowns": [
     {
       "date": "2026-08-23",
-      "line": 19.5,
+      "line": 18.5,
       "overOdds": null,
       "underOdds": null,
       "status": "open",
@@ -27401,7 +27411,7 @@
       "changeType": "opened"
     }
   ],
-  "2026:prizepicks:00-0035228:regular_season:passing_touchdowns": [
+  "2026:prizepicks:00-0032764:regular_season:receptions": [
     {
       "date": "2026-08-23",
       "line": 17.5,
@@ -27411,10 +27421,10 @@
       "changeType": "opened"
     }
   ],
-  "2026:prizepicks:00-0032764:regular_season:receptions": [
+  "2026:prizepicks:00-0039139:regular_season:offensive_touchdowns": [
     {
       "date": "2026-08-23",
-      "line": 17.5,
+      "line": 15.5,
       "overOdds": null,
       "underOdds": null,
       "status": "open",
@@ -27441,7 +27451,57 @@
       "changeType": "opened"
     }
   ],
+  "2026:prizepicks:00-0032764:regular_season:offensive_touchdowns": [
+    {
+      "date": "2026-08-23",
+      "line": 13.5,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0036223:regular_season:offensive_touchdowns": [
+    {
+      "date": "2026-08-23",
+      "line": 13.5,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
   "2026:prizepicks:00-0036963:regular_season:rushing_yards": [
+    {
+      "date": "2026-08-23",
+      "line": 12.5,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0033280:regular_season:offensive_touchdowns": [
+    {
+      "date": "2026-08-23",
+      "line": 12.5,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0037248:regular_season:offensive_touchdowns": [
+    {
+      "date": "2026-08-23",
+      "line": 12.5,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0037840:regular_season:offensive_touchdowns": [
     {
       "date": "2026-08-23",
       "line": 12.5,
@@ -27491,10 +27551,40 @@
       "changeType": "opened"
     }
   ],
+  "2026:prizepicks:00-0038542:regular_season:offensive_touchdowns": [
+    {
+      "date": "2026-08-23",
+      "line": 11.5,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
   "2026:prizepicks:00-0036223:regular_season:rushing_touchdowns": [
     {
       "date": "2026-08-23",
       "line": 11.5,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0036997:regular_season:offensive_touchdowns": [
+    {
+      "date": "2026-08-23",
+      "line": 10.5,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0034844:regular_season:offensive_touchdowns": [
+    {
+      "date": "2026-08-23",
+      "line": 10.5,
       "overOdds": null,
       "underOdds": null,
       "status": "open",
@@ -27521,10 +27611,40 @@
       "changeType": "opened"
     }
   ],
+  "2026:prizepicks:00-0038597:regular_season:offensive_touchdowns": [
+    {
+      "date": "2026-08-23",
+      "line": 10,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
   "2026:prizepicks:00-0036900:regular_season:receiving_touchdowns": [
     {
       "date": "2026-08-23",
       "line": 10,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0039040:regular_season:offensive_touchdowns": [
+    {
+      "date": "2026-08-23",
+      "line": 9.5,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0038134:regular_season:offensive_touchdowns": [
+    {
+      "date": "2026-08-23",
+      "line": 9.5,
       "overOdds": null,
       "underOdds": null,
       "status": "open",
@@ -27565,6 +27685,26 @@
     {
       "date": "2026-08-23",
       "line": 9,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0041027:regular_season:offensive_touchdowns": [
+    {
+      "date": "2026-08-23",
+      "line": 8.5,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0040715:regular_season:offensive_touchdowns": [
+    {
+      "date": "2026-08-23",
+      "line": 8.5,
       "overOdds": null,
       "underOdds": null,
       "status": "open",
@@ -27615,6 +27755,36 @@
     {
       "date": "2026-08-23",
       "line": 8,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0038120:regular_season:offensive_touchdowns": [
+    {
+      "date": "2026-08-23",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0039361:regular_season:offensive_touchdowns": [
+    {
+      "date": "2026-08-23",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0036875:regular_season:offensive_touchdowns": [
+    {
+      "date": "2026-08-23",
+      "line": 7.5,
       "overOdds": null,
       "underOdds": null,
       "status": "open",
