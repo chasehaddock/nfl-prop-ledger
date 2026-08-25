@@ -297,7 +297,7 @@ test("line movement toggles between today, week, and all history", async () => {
   try {
     const page = await browser.newPage();
     await page.goto(process.env.TEST_URL || "http://127.0.0.1:4173", { waitUntil: "networkidle" });
-    const card = page.locator(".trend-card");
+    const card = page.locator(".trend-card:not(.new-props-card)");
     for (const range of ["Today", "Week", "All history"]) {
       await card.getByRole("button", { name: range, exact: true }).click();
       await page.waitForTimeout(100);
@@ -327,6 +327,33 @@ test("line movement toggles between today, week, and all history", async () => {
   }
 });
 
+test("newly opened props have a separate scrollable Today, Week, and All History panel", async () => {
+  const browser = await chromium.launch({ channel: "chrome", headless: true });
+  try {
+    const page = await browser.newPage({ viewport: { width: 1800, height: 820 } });
+    await page.goto(process.env.TEST_URL || "http://127.0.0.1:4173", { waitUntil: "networkidle" });
+    const card = page.locator(".new-props-card");
+    await card.getByRole("heading", { name: "New props" }).waitFor();
+    const todayCount = Number(await card.locator(".new-props-count strong").innerText());
+    assert.ok(todayCount > 0);
+    assert.equal(await card.locator(".new-props-list li").count(), todayCount);
+
+    await card.getByRole("button", { name: "All history", exact: true }).click();
+    const allCount = Number(await card.locator(".new-props-count strong").innerText());
+    assert.ok(allCount > todayCount);
+    assert.equal(await card.locator(".new-props-list li").count(), allCount);
+    assert.equal(await card.locator(".new-props-list").evaluate((element) => getComputedStyle(element).overflowY), "auto");
+    const metrics = await card.locator(".new-props-list").evaluate((element) => ({ clientHeight: element.clientHeight, scrollHeight: element.scrollHeight }));
+    assert.ok(metrics.scrollHeight > metrics.clientHeight);
+
+    await card.locator(".new-props-list button").first().click();
+    await page.getByRole("dialog").waitFor();
+    assert.notEqual(await page.getByPlaceholder("Search player or team").inputValue(), "");
+  } finally {
+    await browser.close();
+  }
+});
+
 test("desktop keeps line movement beside the player board and scrolls it independently", async () => {
   const browser = await chromium.launch({ channel: "chrome", headless: true });
   try {
@@ -339,7 +366,7 @@ test("desktop keeps line movement beside the player board and scrolls it indepen
     assert.ok(trendBox.x + trendBox.width < ledgerBox.x);
     assert.ok(Math.abs(trendBox.y - ledgerBox.y) < 3);
 
-    const card = trend.locator(".trend-card");
+    const card = trend.locator(".trend-card:not(.new-props-card)");
     await card.getByRole("button", { name: "All history", exact: true }).click();
     const list = card.locator(".trend-list");
     assert.equal(await list.evaluate((element) => getComputedStyle(element).overflowY), "auto");
@@ -408,7 +435,7 @@ test("Week 1 has a separate data-ready board and movement history", async () => 
     assert.doesNotMatch(await darnoldTdCell.innerText(), /Pass TD · 4 pts|O 1\.5|U 1\.5/i);
     await page.getByPlaceholder("Search player or team").fill("");
     assert.ok(await page.locator("tbody tr.data-row td:nth-child(7) .number-cell").count() > 0);
-    const weeklyTrend = page.locator(".trend-card");
+    const weeklyTrend = page.locator(".trend-card:not(.new-props-card)");
     await weeklyTrend.getByRole("button", { name: "All history", exact: true }).click();
     const counts = await weeklyTrend.locator(".trend-counts").innerText();
     const countMatch = counts.match(/(\d+) UP[\s\S]*?(\d+) DOWN/i);

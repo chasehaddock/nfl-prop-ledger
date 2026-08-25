@@ -8,7 +8,7 @@ import { priorSeasonRbReceiving, projectEighteenGamePace } from "../src/prior-se
 
 type Position = "QB" | "RB" | "WR" | "TE";
 type StatType = "passing_yards" | "rushing_yards" | "receiving_yards" | "receptions" | "passing_touchdowns" | "rushing_touchdowns" | "receiving_touchdowns" | "offensive_touchdowns" | "fantasy_score";
-type Observation = { key: string; source: string; sourceName?: string; sourceUrl: string; capturedAt?: string; player: { id: string; name: string; team: string; position: Position }; statType: StatType; line: number; lineDelta: number | null; overOdds?: number; underOdds?: number; status: "open" | "stale" | "not_seen" | "removed" };
+type Observation = { key: string; source: string; sourceName?: string; sourceUrl: string; capturedAt?: string; player: { id: string; name: string; team: string; position: Position }; statType: StatType; line: number; lineDelta: number | null; overOdds?: number; underOdds?: number; status: "open" | "stale" | "not_seen" | "removed"; changeType?: string };
 type Snapshot = { demo: boolean; date?: string; season?: number; week?: number; observations: Observation[]; movements?: TrendMove[]; sourceRuns: Array<{ source: string; status: string; observationCount?: number }>; issues?: string[] };
 type HistoryPoint = { date: string; line: number; overOdds: number | null; underOdds: number | null; status: string; changeType: string };
 type History = Record<string, HistoryPoint[]>;
@@ -19,6 +19,7 @@ type ConfidenceLevel = "strong" | "partial" | "thin";
 type PlayerLine = { id: string; player: string; team: string; position: Position; source: string; book: string; availableBooks: string[]; sourcesByStat: SourcesByStat; yardLabel: string; yards: Cell | null; receptions: Cell | null; touchdowns: Cell | null; rushingYards: Cell | null; rushingTouchdowns: Cell | null; receivingYards: Cell | null; receivingTouchdowns: Cell | null; offensiveTouchdowns: Cell | null; passingTouchdownExpectation: number | null; passingTouchdownExpectationNote: string | null; touchdownProbability: number | null; touchdownProbabilityNote: string | null; fantasyPoints: number | null; fantasyUsesInference: boolean; prizePicksFantasyScore: Cell | null; fantasyBooks: string[]; fantasyUsesReceptionFallback: boolean; fantasyUsesReceivingYardsFallback: boolean; fantasyUsesQbRushingYardsFallback: boolean; fantasyUsesQbRushingTouchdownsFallback: boolean; fantasyAdditionalInferences: string[]; fantasyTdOddsBooks: string[]; confidence: ConfidenceLevel; confidenceNote: string; verifiedAt: string; status: "verified" | "review" };
 type TrendRange = "today" | "week" | "all";
 type TrendMove = Pick<Observation, "key" | "source" | "sourceUrl" | "player" | "statType" | "line"> & { date: string; lineDelta: number; changeType: "line_increased" | "line_decreased"; sourceName?: string };
+type NewProp = Pick<Observation, "key" | "source" | "sourceUrl" | "player" | "statType" | "line"> & { date: string; sourceName: string };
 type SortKey = "player" | "book" | "yards" | "secondary" | "touchdowns" | "fantasyPoints" | "prizePicksFantasyScore" | "status";
 type SortState = { key: SortKey; direction: "asc" | "desc" };
 type BoardMode = "season" | "week1" | "sleeper";
@@ -471,6 +472,55 @@ function TrendCard({ moves, isDemo, waitingForWeekly, range, onRange, onSelect }
   </section>;
 }
 
+function newPropsInRange(snapshot: Snapshot, history: History, range: TrendRange): NewProp[] {
+  const observations = new Map(snapshot.observations.map((observation) => [observation.key, observation]));
+  const openings: NewProp[] = [];
+  Object.entries(history).forEach(([key, points]) => {
+    const observation = observations.get(key);
+    if (!observation) return;
+    points.filter((point) => point.changeType === "opened").forEach((point) => openings.push({
+      key,
+      source: observation.source,
+      sourceName: observation.sourceName || SOURCE_NAMES[observation.source] || observation.source,
+      sourceUrl: observation.sourceUrl,
+      player: observation.player,
+      statType: observation.statType,
+      line: point.line,
+      date: point.date,
+    }));
+  });
+  const knownKeys = new Set(openings.map((opening) => `${opening.date}:${opening.key}`));
+  snapshot.observations.filter((observation) => observation.changeType === "opened").forEach((observation) => {
+    const date = snapshot.date || observation.capturedAt?.slice(0, 10) || "";
+    if (!knownKeys.has(`${date}:${observation.key}`)) openings.push({
+      key: observation.key,
+      source: observation.source,
+      sourceName: observation.sourceName || SOURCE_NAMES[observation.source] || observation.source,
+      sourceUrl: observation.sourceUrl,
+      player: observation.player,
+      statType: observation.statType,
+      line: observation.line,
+      date,
+    });
+  });
+  const baselineDate = openings.map((opening) => opening.date).filter(Boolean).sort()[0];
+  const currentDate = snapshot.date || "";
+  const weekStart = currentDate ? new Date(Date.parse(`${currentDate}T12:00:00Z`) - 6 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10) : "";
+  return openings
+    .filter((opening) => opening.date !== baselineDate)
+    .filter((opening) => range === "all" || (range === "today" ? opening.date === currentDate : opening.date >= weekStart && opening.date <= currentDate))
+    .sort((left, right) => right.date.localeCompare(left.date) || left.player.name.localeCompare(right.player.name) || left.sourceName.localeCompare(right.sourceName));
+}
+
+function NewPropsCard({ props: newProps, range, onRange, onSelect }: { props: NewProp[]; range: TrendRange; onRange: (range: TrendRange) => void; onSelect: (prop: NewProp) => void }) {
+  return <section className="trend-card new-props-card" aria-labelledby="new-props-title">
+    <div className="trend-heading"><div><p className="eyebrow">Fresh markets</p><h2 id="new-props-title">New props</h2></div><span className="trend-live"><i aria-hidden="true" />Opened</span></div>
+    <div className="trend-range" role="group" aria-label="New props time range">{(["today", "week", "all"] as TrendRange[]).map((item) => <button key={item} className={range === item ? "active" : ""} aria-pressed={range === item} onClick={() => onRange(item)}>{item === "all" ? "All history" : item[0].toUpperCase() + item.slice(1)}</button>)}</div>
+    <div className="new-props-count"><strong>{newProps.length}</strong><span>new prop{newProps.length === 1 ? "" : "s"} added</span></div>
+    {newProps.length ? <ol className="new-props-list">{newProps.map((prop) => <li key={`${prop.date}:${prop.key}`}><button onClick={() => onSelect(prop)} aria-label={`Open new ${STAT_LABELS[prop.statType]} prop for ${prop.player.name} from ${prop.sourceName}`}><span className={`new-prop-source source-${prop.source}`} aria-hidden="true" /><span className="trend-player"><strong>{prop.player.name}</strong><small>{prop.player.position} · {STAT_LABELS[prop.statType]} · {prop.sourceName}{range !== "today" ? ` · ${prop.date.slice(5)}` : ""}</small></span><span className="trend-value"><strong>{prop.line.toLocaleString()}</strong><small>new</small></span></button></li>)}</ol> : <p className="trend-empty">No newly opened props in this view. The original first-day board is treated as the baseline.</p>}
+  </section>;
+}
+
 function displayedFantasyPoints(line: PlayerLine, qbPassTdPoints: 4 | 6, tePremium: TePremium, pprScoring: PprScoring): number | null {
   if (line.fantasyPoints === null) return null;
   let points = line.fantasyPoints;
@@ -905,6 +955,7 @@ export default function Home() {
   const [selected, setSelected] = useState<{ playerId: string; statType: StatType | null; source?: string } | null>(null);
   const [sort, setSort] = useState<SortState>({ key: "yards", direction: "desc" });
   const [trendRange, setTrendRange] = useState<TrendRange>("today");
+  const [newPropRange, setNewPropRange] = useState<TrendRange>("today");
   const [qbPassTdPoints, setQbPassTdPoints] = useState<4 | 6>(4);
   const [tePremium, setTePremium] = useState<TePremium>(0);
   const [pprScoring, setPprScoring] = useState<PprScoring>(1);
@@ -960,6 +1011,7 @@ export default function Home() {
       .filter((move) => trendRange === "all" || (trendRange === "today" ? move.date === snapshot.date : move.date >= weekStart && move.date <= (snapshot.date || "")))
       .sort((a, b) => b.date.localeCompare(a.date) || Math.abs(b.lineDelta) - Math.abs(a.lineDelta) || a.player.name.localeCompare(b.player.name));
   }, [snapshot, allLines, history, trendRange, boardMode]);
+  const newProps = useMemo(() => newPropsInRange(snapshot, history, newPropRange), [snapshot, history, newPropRange]);
   const books = useMemo(() => ["All sources", ...new Set(allLines.flatMap((line) => line.availableBooks))], [allLines]);
   const positionRanks = useMemo(() => projectedPositionRanks(allLines, qbPassTdPoints, tePremium, pprScoring), [allLines, qbPassTdPoints, tePremium, pprScoring]);
   const lines = useMemo(() => allLines.filter((line) => position === "ALL" || line.position === position).filter((line) => book === "All sources" || line.availableBooks.includes(book)).filter((line) => `${line.player} ${line.team}`.toLowerCase().includes(query.toLowerCase())).sort((a, b) => compareLines(a, b, sort, qbPassTdPoints, tePremium, pprScoring)), [allLines, position, book, query, sort, qbPassTdPoints, tePremium, pprScoring]);
@@ -976,6 +1028,7 @@ export default function Home() {
     setQuery("");
     setSelected(null);
     setTrendRange("today");
+    setNewPropRange("today");
     setSort({ key: "yards", direction: "desc" });
   };
   const resetAllPlayers = () => {
@@ -992,6 +1045,14 @@ export default function Home() {
     setSelected({ playerId: move.player.id, statType: move.statType, source: move.source });
     window.setTimeout(() => document.getElementById(`ledger-${move.player.id}`)?.scrollIntoView({ behavior: "smooth", block: "center" }), 50);
   };
+  const focusNewProp = (prop: NewProp) => {
+    const currentLine = allLines.find((line) => line.id === prop.player.id);
+    setPosition("ALL");
+    setBook("All sources");
+    setQuery(prop.player.name);
+    setSelected(currentLine ? { playerId: prop.player.id, statType: prop.statType, source: prop.source } : null);
+    window.setTimeout(() => document.getElementById(`ledger-${prop.player.id}`)?.scrollIntoView({ behavior: "smooth", block: "center" }), 50);
+  };
 
   const siteHeader = <header className="site-header"><a className="brand" href="#top" aria-label="Prop Ledger home"><span className="brand-mark" aria-hidden="true"><i /><i /><i /></span><span>PROP LEDGER</span></a><div className="header-meta"><span className="live-dot" aria-hidden="true" /><span>{boardMode === "sleeper" ? "Sleeper · redraft ADP" : `${snapshot.season || 2026} NFL · ${boardMode === "season" ? "regular season" : "Week 1"}`}</span></div></header>;
   const boardSwitch = <nav className="board-switch" aria-label="Projection board"><button className={boardMode === "season" ? "active" : ""} aria-pressed={boardMode === "season"} onClick={() => changeBoard("season")}><span>Season</span><strong>Season totals</strong></button><button className={boardMode === "week1" ? "active" : ""} aria-pressed={boardMode === "week1"} onClick={() => changeBoard("week1")}><span>Weekly</span><strong>Week 1 projections</strong></button><button className={boardMode === "sleeper" ? "active" : ""} aria-pressed={boardMode === "sleeper"} onClick={() => changeBoard("sleeper")}><span>Draft</span><strong>Sleeper redraft</strong></button></nav>;
@@ -1005,7 +1066,7 @@ export default function Home() {
       <div className="hero-sidebar"><div className="capture-card" aria-label="Latest capture status"><div className="capture-topline"><span>{boardMode === "season" ? "Latest capture" : "Week 1 capture"}</span><span className="status-pill">{waitingForWeekly ? "Waiting for markets" : isDemo ? "Setup required" : "Double-checked"}</span></div><strong>{waitingForWeekly ? "Board ready" : snapshot.date ? new Intl.DateTimeFormat("en-US", { dateStyle: "medium", timeZone: "UTC" }).format(new Date(`${snapshot.date}T12:00:00Z`)) : "No verified run yet"}</strong><div className="capture-stats"><div><b>{acceptedRuns.length}</b><span>sources accepted</span></div><div><b>{isDemo || waitingForWeekly ? 0 : allLines.length}</b><span>player lines</span></div><div><b>{reviewCount}</b><span>review flags</span></div></div><p>{waitingForWeekly ? "Confirmed Week 1 lines from the existing four sources will appear here; season averages are never substituted." : isDemo ? "The sample rows below demonstrate the layout; they are not current betting lines." : "Only complete, roster-matched, repeat-confirmed sportsbook and projection rows are published."}</p></div></div>
     </section>
     <div className="dashboard-layout">
-    <aside className="trend-column" aria-label="Line movement panel"><TrendCard moves={trendMoves} isDemo={isDemo} waitingForWeekly={waitingForWeekly} range={trendRange} onRange={setTrendRange} onSelect={focusTrend} /></aside>
+    <aside className="trend-column" aria-label="Market updates"><NewPropsCard props={newProps} range={newPropRange} onRange={setNewPropRange} onSelect={focusNewProp} /><TrendCard moves={trendMoves} isDemo={isDemo} waitingForWeekly={waitingForWeekly} range={trendRange} onRange={setTrendRange} onSelect={focusTrend} /></aside>
     <section className="ledger" aria-labelledby="ledger-title">
       <div className="ledger-heading"><div><p className="eyebrow">{waitingForWeekly ? "Data-ready board" : isDemo ? "Preview board" : "Verified board"}</p><h2 id="ledger-title">{boardMode === "season" ? "Season totals" : "Week 1 projections"}</h2></div><div className="ledger-tools">{(query || position !== "ALL" || book !== "All sources") && <button className="back-to-all" onClick={resetAllPlayers}>← Back to all players</button>}<label className="search"><span className="sr-only">Search players or teams</span><span aria-hidden="true">⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search player or team" /></label></div></div>
       <div className="filters" aria-label={`Filter ${boardMode === "season" ? "season totals" : "Week 1 projections"}`}><div className="position-tabs" role="group" aria-label="Position">{positions.map((item) => <button key={item} className={position === item ? "active" : ""} onClick={() => setPosition(item)}>{item}</button>)}</div><div className="filter-actions"><button className={`qb-scoring-toggle ${qbPassTdPoints === 6 ? "active" : ""}`} aria-pressed={qbPassTdPoints === 6} onClick={() => setQbPassTdPoints((points) => points === 4 ? 6 : 4)}><span>QB pass TDs</span><strong>{qbPassTdPoints} pts</strong></button><div className="ppr-toggle" role="group" aria-label="Points per reception"><span>PPR</span>{([1, 0.5, 0] as PprScoring[]).map((points) => <button key={points} className={pprScoring === points ? "active" : ""} aria-pressed={pprScoring === points} onClick={() => setPprScoring(points)}>{points.toFixed(1)}</button>)}</div><div className="tep-toggle" role="group" aria-label="Tight end premium"><span>TEP</span>{([0, 0.5, 1] as TePremium[]).map((premium) => <button key={premium} className={tePremium === premium ? "active" : ""} aria-pressed={tePremium === premium} onClick={() => setTePremium(premium)}>{premium.toFixed(1)}</button>)}</div><label className="book-filter"><span>Source</span><select value={book} onChange={(event) => setBook(event.target.value)}>{books.map((item) => <option key={item}>{item}</option>)}</select></label></div></div>
