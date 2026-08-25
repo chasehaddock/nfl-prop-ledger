@@ -1,32 +1,35 @@
 {
   "schemaVersion": 1,
-  "date": "2026-08-24",
+  "date": "2026-08-25",
   "season": 2026,
-  "generatedAt": "2026-08-24T21:09:30.812Z",
+  "generatedAt": "2026-08-25T13:43:35.308Z",
   "sourceRuns": [
     {
       "source": "draftkings",
       "status": "accepted",
-      "capturedAt": "2026-08-24T20:54:50.280Z",
-      "observationCount": 295
-    },
-    {
-      "source": "fanduel",
-      "status": "accepted",
-      "capturedAt": "2026-08-24T21:04:30.729Z",
-      "observationCount": 139
+      "capturedAt": "2026-08-25T13:32:56.564Z",
+      "observationCount": 294
     },
     {
       "source": "betmgm",
-      "status": "accepted",
-      "capturedAt": "2026-08-24T21:05:06.974Z",
-      "observationCount": 207
+      "status": "not_run",
+      "issues": [
+        "no capture supplied"
+      ]
+    },
+    {
+      "source": "fanduel",
+      "status": "not_run",
+      "issues": [
+        "no capture supplied"
+      ]
     },
     {
       "source": "prizepicks",
-      "status": "accepted",
-      "capturedAt": "2026-08-24T21:05:51.111Z",
-      "observationCount": 658
+      "status": "not_run",
+      "issues": [
+        "no capture supplied"
+      ]
     }
   ],
   "observations": [
@@ -56,12 +59,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:fanduel:00-0039851:week_1:passing_touchdowns",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "fanduel",
@@ -89,12 +92,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:fanduel:00-0034869:week_1:passing_touchdowns",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "fanduel",
@@ -122,12 +125,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:fanduel:00-0037834:week_1:passing_touchdowns",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "fanduel",
@@ -156,12 +159,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:fanduel:00-0026498:week_1:passing_touchdowns",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -187,12 +190,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036442:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 265.5,
-      "lineDelta": 5,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -218,12 +221,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0033106:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 271.5,
-      "lineDelta": -6,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -250,12 +253,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0026498:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 263.5,
-      "lineDelta": 1,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -282,12 +285,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0033077:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 257.5,
-      "lineDelta": -3,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -313,12 +316,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0034855:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 248.5,
-      "lineDelta": 5,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -344,12 +347,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037834:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 242.5,
-      "lineDelta": 3,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -375,12 +378,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040743:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 249.5,
-      "lineDelta": -7,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -406,12 +409,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036355:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 246.5,
-      "lineDelta": -6,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -437,12 +440,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036264:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 231.5,
-      "lineDelta": 8,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -468,12 +471,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0033873:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 242.5,
-      "lineDelta": -5,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -499,12 +502,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0035228:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -530,12 +533,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039918:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 238.5,
-      "lineDelta": -4,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -561,12 +564,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036971:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 234.5,
-      "lineDelta": -2,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -592,12 +595,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0035710:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 231.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -623,12 +626,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0034869:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 229.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -654,12 +657,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039851:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 229.5,
-      "lineDelta": -1,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -685,12 +688,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0029604:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 224.5,
-      "lineDelta": 1,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -717,12 +720,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039163:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 228.5,
-      "lineDelta": -4,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -748,12 +751,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0023459:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 216.5,
-      "lineDelta": 6,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -779,12 +782,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0034796:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 219.5,
-      "lineDelta": 3,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -810,12 +813,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039732:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 226.5,
-      "lineDelta": -4,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -841,12 +844,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0033119:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 221.5,
-      "lineDelta": -1,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -873,12 +876,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0034857:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 223.5,
-      "lineDelta": -5,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -904,12 +907,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036389:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 215.5,
-      "lineDelta": 3,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -935,12 +938,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040691:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 220.5,
-      "lineDelta": -5,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -966,12 +969,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039910:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 223.5,
-      "lineDelta": -11,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -997,12 +1000,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039150:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 199.5,
-      "lineDelta": 9,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1029,12 +1032,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040676:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 190.5,
-      "lineDelta": 14,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1061,12 +1064,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0030565:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 199.5,
-      "lineDelta": -4,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1093,12 +1096,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0033537:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1124,12 +1127,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038128:week_1:passing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 178.5,
-      "lineDelta": 3,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1155,12 +1158,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039075:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 90.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1186,12 +1189,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036900:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 89.5,
-      "lineDelta": -2,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1217,12 +1220,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0032764:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 86.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1248,12 +1251,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038543:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 84.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1279,12 +1282,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038542:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 83.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1310,12 +1313,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036963:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 78.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1341,12 +1344,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0034844:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 78.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1372,12 +1375,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036322:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 76.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1403,12 +1406,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039139:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 76.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1434,12 +1437,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037248:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 76.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1466,12 +1469,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039040:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 76.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1497,12 +1500,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037239:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 74.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1528,12 +1531,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036223:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 74.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1560,12 +1563,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036358:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 74.5,
-      "lineDelta": -1,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1591,12 +1594,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037238:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 72.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1622,12 +1625,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036554:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 70.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1654,12 +1657,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038134:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 64.5,
-      "lineDelta": 3,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1686,12 +1689,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039064:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 66.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1717,12 +1720,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037240:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 65.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1748,12 +1751,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036912:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 65.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1779,12 +1782,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037247:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 66.5,
-      "lineDelta": -1,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1810,12 +1813,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039337:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 65.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1841,12 +1844,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040666:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 65.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1872,12 +1875,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038120:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 64.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1903,12 +1906,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039338:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 63.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1934,12 +1937,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039067:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 64.5,
-      "lineDelta": -1,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1965,12 +1968,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040784:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 63.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -1996,12 +1999,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037740:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 65.5,
-      "lineDelta": -3,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2027,12 +2030,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036997:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 66.5,
-      "lineDelta": -4,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2058,12 +2061,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037744:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 63.5,
-      "lineDelta": -3,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2089,12 +2092,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040124:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 59.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2120,12 +2123,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040129:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 59.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2151,12 +2154,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0035659:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 59.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2182,12 +2185,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0033280:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 59.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2214,12 +2217,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039915:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 58.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2246,12 +2249,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0035676:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 57.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2278,12 +2281,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036410:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 60.5,
-      "lineDelta": -3,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2309,12 +2312,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037840:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 59.5,
-      "lineDelta": -2,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2340,12 +2343,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0041027:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 57.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2371,12 +2374,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040126:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 56.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2402,12 +2405,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037664:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 56.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2433,12 +2436,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038597:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 56.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2465,12 +2468,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040735:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 54.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2496,12 +2499,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038124:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 54.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2527,12 +2530,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0035685:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 54.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2558,12 +2561,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036613:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 53.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2589,12 +2592,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036970:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 52.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2621,12 +2624,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0034827:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 52.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2652,12 +2655,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038559:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 52.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2683,12 +2686,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038996:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 52.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2714,12 +2717,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039919:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 50.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2746,12 +2749,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039849:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 50.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2778,12 +2781,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0035640:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 49.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2809,12 +2812,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0041512:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 49.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2840,12 +2843,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0031381:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 52.5,
-      "lineDelta": -4,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2871,12 +2874,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0031408:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 47.5,
-      "lineDelta": 1,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2903,12 +2906,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039893:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 48.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2934,12 +2937,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0035261:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 54.5,
-      "lineDelta": -6,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2966,12 +2969,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040715:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 57.5,
-      "lineDelta": -9,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -2997,12 +3000,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040128:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 47.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3028,12 +3031,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0041438:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 51.5,
-      "lineDelta": -4,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3060,12 +3063,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038117:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 47.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3091,12 +3094,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036875:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 39.5,
-      "lineDelta": 7,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3122,12 +3125,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036252:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 42.5,
-      "lineDelta": 3,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3154,12 +3157,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040663:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 45.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3185,12 +3188,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0034348:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 48.5,
-      "lineDelta": -5,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3216,12 +3219,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0030506:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 43.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3248,12 +3251,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0041547:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 42.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3279,12 +3282,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038128:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 40.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3310,12 +3313,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039910:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 39.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3342,12 +3345,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0041035:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 33.5,
-      "lineDelta": 5,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3373,12 +3376,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038542:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 38.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3404,12 +3407,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0033280:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 36.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3435,12 +3438,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039894:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3466,12 +3469,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039738:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 35.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3497,12 +3500,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037838:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3528,12 +3531,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040691:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 30.5,
-      "lineDelta": 3,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3559,12 +3562,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037816:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 33.5,
-      "lineDelta": -1,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3590,12 +3593,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039139:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 32.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3621,12 +3624,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040734:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 36.5,
-      "lineDelta": -4,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3652,12 +3655,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037545:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 28.5,
-      "lineDelta": 3,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3683,12 +3686,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0041037:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 31.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3714,12 +3717,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0034796:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 31.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3746,12 +3749,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0034857:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 32.5,
-      "lineDelta": -1,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3777,12 +3780,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0033090:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 30.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3808,12 +3811,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0033908:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 28.5,
-      "lineDelta": 1,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3840,12 +3843,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0035719:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 29.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3872,12 +3875,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039040:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 29.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3903,12 +3906,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038041:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 32.5,
-      "lineDelta": -3,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3934,12 +3937,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037197:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 29.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3965,12 +3968,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036389:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 29.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -3997,12 +4000,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039793:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 24.5,
-      "lineDelta": 1,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4028,12 +4031,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039851:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 23.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4059,12 +4062,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036355:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 22.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4090,12 +4093,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039299:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 21.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4122,12 +4125,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038621:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 19.5,
-      "lineDelta": 1,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4153,12 +4156,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038104:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4184,12 +4187,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039918:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 19.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4215,12 +4218,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036971:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 19.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4246,12 +4249,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0033280:week_1:fantasy_score",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 18.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4277,12 +4280,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039075:week_1:fantasy_score",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 18.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4308,12 +4311,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038120:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 17.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4339,12 +4342,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0041042:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4370,12 +4373,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040743:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 17.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4401,12 +4404,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038543:week_1:fantasy_score",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 17.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4433,12 +4436,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0026498:week_1:fantasy_score",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 17.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4464,12 +4467,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037834:week_1:fantasy_score",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 17,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4495,12 +4498,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0034855:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 16.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4526,12 +4529,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039851:week_1:fantasy_score",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 16.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4557,12 +4560,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036875:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 12.5,
-      "lineDelta": 3,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4588,12 +4591,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037248:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 15.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4620,12 +4623,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038134:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4651,12 +4654,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037834:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 14.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4682,12 +4685,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039150:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 14.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4713,12 +4716,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0034869:week_1:fantasy_score",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 14.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4744,12 +4747,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036223:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 13.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4775,12 +4778,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0034844:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 13.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4807,12 +4810,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0035676:week_1:fantasy_score",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 12.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4838,12 +4841,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037840:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 11.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4870,12 +4873,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040715:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 19.5,
-      "lineDelta": -8,
-      "changeType": "line_decreased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4901,12 +4904,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036997:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 10.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4932,12 +4935,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0031408:week_1:fantasy_score",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 10.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4963,12 +4966,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040784:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 9.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -4994,12 +4997,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036264:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 8.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5026,12 +5029,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0041035:week_1:fantasy_score",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 7,
-      "lineDelta": 1.5,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5058,12 +5061,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040676:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 7.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5090,12 +5093,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039163:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 7.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5121,12 +5124,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036963:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 7.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5152,12 +5155,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036900:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 7.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5183,12 +5186,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037816:week_1:fantasy_score",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5214,12 +5217,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0033908:week_1:fantasy_score",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5245,12 +5248,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039075:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 7,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5276,12 +5279,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037545:week_1:fantasy_score",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5307,12 +5310,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036637:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5339,12 +5342,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0030565:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 6.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5371,12 +5374,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0033077:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 6.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5402,12 +5405,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038543:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 6.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5433,12 +5436,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037744:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 6.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5465,12 +5468,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039793:week_1:fantasy_score",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5497,12 +5500,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036358:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 6,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5528,12 +5531,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0034869:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 5.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5559,12 +5562,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036442:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 5.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5590,12 +5593,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037238:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 5.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5621,12 +5624,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036322:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 5.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5652,12 +5655,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039338:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 5.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5683,12 +5686,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039067:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5714,12 +5717,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037247:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5745,12 +5748,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0032764:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 4.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5776,12 +5779,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0033280:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 4.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5807,12 +5810,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0031381:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 4.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5838,12 +5841,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038542:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 4.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5870,12 +5873,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039064:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 4.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5901,12 +5904,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036554:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 4.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5932,12 +5935,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0030506:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 4.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5963,12 +5966,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037545:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 2.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -5994,12 +5997,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039738:week_1:receiving_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 0.5,
-      "lineDelta": 1,
-      "changeType": "line_increased"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6025,12 +6028,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037834:week_1:passing_touchdowns",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 1.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6056,12 +6059,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039918:week_1:passing_touchdowns",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 1.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6088,12 +6091,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0033077:week_1:passing_touchdowns",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 1.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6119,12 +6122,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0041042:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6150,12 +6153,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038104:week_1:receptions",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6181,12 +6184,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0034855:week_1:passing_touchdowns",
-      "date": "2026-08-24",
-      "status": "not_seen",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 1,
       "previousLine": null,
       "lineDelta": 0,
-      "changeType": "not_seen"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6213,12 +6216,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0034857:week_1:passing_touchdowns",
-      "date": "2026-08-24",
-      "status": "not_seen",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 1,
       "previousLine": null,
       "lineDelta": 0,
-      "changeType": "not_seen"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6244,12 +6247,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036355:week_1:passing_touchdowns",
-      "date": "2026-08-24",
-      "status": "not_seen",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 1,
       "previousLine": null,
       "lineDelta": 0,
-      "changeType": "not_seen"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6275,12 +6278,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0033873:week_1:passing_touchdowns",
-      "date": "2026-08-24",
-      "status": "not_seen",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 1,
       "previousLine": null,
       "lineDelta": 0,
-      "changeType": "not_seen"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6306,12 +6309,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037545:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 0.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6337,12 +6340,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039075:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 0.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6369,12 +6372,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040735:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 0.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6400,12 +6403,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0023459:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 0.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6432,12 +6435,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039064:week_1:rushing_yards",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 0.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6463,12 +6466,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037840:week_1:offensive_touchdowns",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 0.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6494,12 +6497,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038597:week_1:offensive_touchdowns",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6525,12 +6528,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036900:week_1:offensive_touchdowns",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": 0.5,
       "lineDelta": 0,
-      "changeType": "unchanged"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6556,12 +6559,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0033280:week_1:rushing_touchdowns",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6587,12 +6590,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037840:week_1:rushing_touchdowns",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6618,12 +6621,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040666:week_1:rushing_touchdowns",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6649,12 +6652,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0034844:week_1:rushing_touchdowns",
-      "date": "2026-08-24",
-      "status": "open",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 0,
       "previousLine": null,
-      "lineDelta": null,
-      "changeType": "opened"
+      "lineDelta": 0,
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6680,12 +6683,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0037248:week_1:offensive_touchdowns",
-      "date": "2026-08-24",
-      "status": "not_seen",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 1,
       "previousLine": null,
       "lineDelta": 0,
-      "changeType": "not_seen"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6712,12 +6715,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0034857:week_1:offensive_touchdowns",
-      "date": "2026-08-24",
-      "status": "not_seen",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 1,
       "previousLine": null,
       "lineDelta": 0,
-      "changeType": "not_seen"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6744,12 +6747,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0039040:week_1:offensive_touchdowns",
-      "date": "2026-08-24",
-      "status": "not_seen",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 1,
       "previousLine": null,
       "lineDelta": 0,
-      "changeType": "not_seen"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6775,12 +6778,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0036389:week_1:offensive_touchdowns",
-      "date": "2026-08-24",
-      "status": "not_seen",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 1,
       "previousLine": null,
       "lineDelta": 0,
-      "changeType": "not_seen"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6806,12 +6809,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0034844:week_1:offensive_touchdowns",
-      "date": "2026-08-24",
-      "status": "not_seen",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 1,
       "previousLine": null,
       "lineDelta": 0,
-      "changeType": "not_seen"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6838,12 +6841,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0040715:week_1:offensive_touchdowns",
-      "date": "2026-08-24",
-      "status": "not_seen",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 1,
       "previousLine": null,
       "lineDelta": 0,
-      "changeType": "not_seen"
+      "changeType": "stale"
     },
     {
       "source": "prizepicks",
@@ -6870,12 +6873,12 @@
       "selectionMethod": "book_marker",
       "confirmed": true,
       "key": "2026:prizepicks:00-0038134:week_1:offensive_touchdowns",
-      "date": "2026-08-24",
-      "status": "not_seen",
+      "date": "2026-08-25",
+      "status": "stale",
       "missingDays": 1,
       "previousLine": null,
       "lineDelta": 0,
-      "changeType": "not_seen"
+      "changeType": "stale"
     }
   ],
   "issues": [],
