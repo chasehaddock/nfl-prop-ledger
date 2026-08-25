@@ -1,0 +1,22 @@
+{
+  "demo": false,
+  "source": "sleeper",
+  "format": {
+    "teams": 12,
+    "rounds": 13,
+    "receptionPpr": 1,
+    "passingTdPoints": 4,
+    "slots": {
+      "QB": 1,
+      "RB": 2,
+      "WR": 2,
+      "TE": 1,
+      "FLEX": 2,
+      "BENCH": 5,
+      "K": 0,
+      "DEF": 0
+    }
+  },
+  "players": [],
+  "movements": []
+}
