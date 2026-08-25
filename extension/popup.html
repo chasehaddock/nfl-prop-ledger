@@ -1,5 +1,5 @@
 <!doctype html>
 <html lang="en">
   <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="popup.css"><title>Prop Ledger</title></head>
-  <body><main><p class="eyebrow">NFL Prop Ledger</p><h1>Daily collector</h1><p id="status">Checking status…</p><p id="error" role="alert"></p><button id="capture">Capture now</button><small>Automatic capture: 8:17 AM local time. Keep Chrome open.</small></main><script type="module" src="popup.js"></script></body>
+  <body><main><p class="eyebrow">NFL Prop Ledger</p><h1>Daily collector</h1><p id="status">Checking status…</p><section id="progress-wrap" aria-label="Capture progress" hidden><div class="progress-copy"><span id="progress-label">Preparing…</span><strong id="progress-percent">0%</strong></div><progress id="progress" max="100" value="0">0%</progress><small id="progress-detail"></small></section><p id="error" role="alert"></p><button id="capture">Capture now</button><small>Automatic capture: 8:17 AM local time. Keep Chrome open.</small></main><script type="module" src="popup.js"></script></body>
 </html>

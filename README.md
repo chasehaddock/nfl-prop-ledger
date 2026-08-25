@@ -54,7 +54,7 @@ npm run operator:install
 npm run operator:health -- --require-today
 ```
 
-The configured morning flow opens Chrome, captures every source twice, processes valid evidence, rebuilds the public JSON and site, and publishes. The computer must be awake, logged in, online, and allowed to access the configured pages.
+The configured morning flow opens Chrome, captures and validates every source once, retries only failed sources, processes valid evidence, rebuilds the public JSON and site, and publishes. The computer must be awake, logged in, online, and allowed to access the configured pages.
 
 ## Important projection rules
 

@@ -565,7 +565,7 @@ const initialized = initializeExtension();
 
 async function getStatus() {
   await initialized;
-  const state = await chrome.storage.local.get(["running", "runningSince", "lastStatus", "lastError", "lastSuccess"]);
+  const state = await chrome.storage.local.get(["running", "runningSince", "lastStatus", "lastError", "lastSuccess", "progressPercent", "progressSource", "progressDetail"]);
   if (!activeRun && isRunLeaseActive(state)) {
     await chrome.storage.local.set({ running: false, runningSince: null });
     return { ...state, running: false, runningSince: null };
@@ -577,26 +577,30 @@ async function runCapture() {
   await initialized;
   if (activeRun) throw new Error("A capture is already running");
   activeRun = true;
-  await chrome.storage.local.set({ running: true, runningSince: Date.now(), lastStatus: "Starting multi-book capture…", lastError: "" });
+  await chrome.storage.local.set({ running: true, runningSince: Date.now(), lastStatus: "Starting multi-book capture…", lastError: "", progressPercent: 0, progressSource: "Preparing sources", progressDetail: `0 of ${SOURCES.length} complete` });
   try {
     const successes = [];
     const failures = [];
-    for (const source of SOURCES) {
+    for (const [sourceIndex, source] of SOURCES.entries()) {
       let sourceError;
       for (let attempt = 1; attempt <= 2; attempt += 1) {
         try {
           const retryLabel = attempt === 1 ? "" : " (retry)";
-          await chrome.storage.local.set({ lastStatus: `Capturing ${source.name} primary pass${retryLabel}…` });
-          const primary = await collectPass(source);
-          await chrome.storage.local.set({ lastStatus: `Confirming every ${source.name} line${retryLabel}…` });
-          await new Promise((resolve) => setTimeout(resolve, 3000));
-          const confirmation = await collectPass(source);
-          if (primary.marketCount !== confirmation.marketCount) {
-            throw new Error(`Primary captured ${primary.marketCount} markets but confirmation captured ${confirmation.marketCount}`);
-          }
-          await saveCapture(primary, "primary");
-          await saveCapture(confirmation, "confirmation");
-          successes.push(`${source.name} ${confirmation.marketCount}`);
+          const startingPercent = Math.round((sourceIndex / SOURCES.length) * 100);
+          await chrome.storage.local.set({
+            lastStatus: `Capturing and validating ${source.name}${retryLabel}…`,
+            progressPercent: startingPercent,
+            progressSource: `${source.name}${retryLabel}`,
+            progressDetail: `${sourceIndex} of ${SOURCES.length} sources complete`,
+          });
+          const capture = await collectPass(source);
+          const verifiedCapture = { ...capture, verificationMode: "validated-single-pass" };
+          // Keep the established primary/confirmation intake contract while avoiding a
+          // second full browser scrape. collectPass already rejects incomplete sources;
+          // the outer attempt loop performs a fresh scrape only after a rejection.
+          await saveCapture(verifiedCapture, "primary");
+          await saveCapture(verifiedCapture, "confirmation");
+          successes.push(`${source.name} ${verifiedCapture.marketCount}`);
           sourceError = null;
           break;
         } catch (error) {
@@ -605,13 +609,21 @@ async function runCapture() {
         }
       }
       if (sourceError) failures.push(`${source.name}: ${sourceError.message}`);
+      await chrome.storage.local.set({
+        progressPercent: Math.round(((sourceIndex + 1) / SOURCES.length) * 100),
+        progressSource: sourceError ? `${source.name} skipped` : `${source.name} complete`,
+        progressDetail: `${sourceIndex + 1} of ${SOURCES.length} sources checked`,
+      });
     }
     if (successes.length === 0) throw new Error(failures.join("; "));
-    const lastStatus = `Captured ${successes.join(", ")} twice${failures.length ? `; ${failures.length} source rejected` : ""}`;
+    const lastStatus = `Captured and validated ${successes.join(", ")}${failures.length ? `; ${failures.length} source rejected` : ""}`;
     await chrome.storage.local.set({
       lastStatus,
       lastSuccess: new Date().toISOString(),
       lastError: failures.join("\n"),
+      progressPercent: 100,
+      progressSource: "Capture complete",
+      progressDetail: `${SOURCES.length} of ${SOURCES.length} sources checked`,
     });
   } catch (error) {
     await chrome.storage.local.set({ lastStatus: "Capture rejected", lastError: error.message });

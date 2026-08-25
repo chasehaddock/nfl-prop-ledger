@@ -76,7 +76,7 @@ Chrome sessions and sportsbook logins cannot be transferred through GitHub. The 
 ## Daily operation
 
 - Automatic browser capture is scheduled for 8:17 AM local time.
-- The processor waits for fresh verified pairs, rebuilds the ledger, and publishes.
+- The collector performs one complete validated pass per source and retries only failed sources. It writes a compatible primary/confirmation pair for the processor, which rebuilds the ledger and publishes.
 - The computer must be awake, logged in, online, and able to open Chrome.
 - Run `npm run operator:health -- --require-today` to diagnose a missed day.
 
