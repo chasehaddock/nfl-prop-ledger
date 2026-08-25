@@ -32,6 +32,9 @@ type SleeperAdpHistory = Record<string, Array<{ date: string; adp: number; rank:
 type SleeperValueRow = SleeperAdpPlayer & { sleeperPositionRank: number; comparableSleeperPositionRank: number | null; projectedPoints: number | null; inferredProjectedPoints: number | null; projectedPositionRank: number | null; valueGap: number | null; missingInputs: string[]; confidence: ConfidenceLevel | null; confidenceNote: string | null };
 type SleeperSortKey = "player" | "adp" | "sleeperPositionRank" | "comparableSleeperPositionRank" | "projectedPoints" | "projectedPositionRank" | "valueGap" | "trend";
 type SleeperCoverageFilter = "all" | "comparable" | "needs-data";
+type ProjectionColumnKey = "source" | "yards" | "secondary" | "touchdowns" | "fantasyPoints" | "prizePicksFantasyScore" | "status";
+type SleeperColumnKey = Exclude<SleeperSortKey, "player"> | "coverage";
+type ColumnChoice = { key: string; label: string };
 
 const SOURCE_NAMES: Record<string, string> = { draftkings: "DraftKings", fanduel: "FanDuel", betmgm: "BetMGM", prizepicks: "PrizePicks" };
 const STAT_LABELS: Record<StatType, string> = {
@@ -47,6 +50,23 @@ const STAT_LABELS: Record<StatType, string> = {
 };
 const positions: Array<"ALL" | Position> = ["ALL", "QB", "RB", "WR", "TE"];
 const ALL_STATS: StatType[] = ["passing_yards", "rushing_yards", "receiving_yards", "receptions", "passing_touchdowns", "rushing_touchdowns", "receiving_touchdowns", "offensive_touchdowns", "fantasy_score"];
+
+function ColumnChooser({ choices, isVisible, onToggle, onShowAll }: { choices: ColumnChoice[]; isVisible: (key: string) => boolean; onToggle: (key: string) => void; onShowAll: () => void }) {
+  const [open, setOpen] = useState(false);
+  const visibleCount = choices.filter((choice) => isVisible(choice.key)).length;
+  return <div className="column-chooser">
+    {open && <section className="column-chooser-panel" role="dialog" aria-label="Choose visible columns">
+      <div className="column-chooser-heading"><div><span>Table display</span><strong>Choose columns</strong></div><button onClick={() => setOpen(false)} aria-label="Close column chooser">×</button></div>
+      <p>The Player column stays pinned. Turn off anything else to shorten the table.</p>
+      <div className="column-choice-list">{choices.map((choice) => {
+        const visible = isVisible(choice.key);
+        return <button key={choice.key} role="switch" aria-checked={visible} onClick={() => onToggle(choice.key)}><span>{choice.label}</span><i className={visible ? "on" : ""} aria-hidden="true"><b /></i></button>;
+      })}</div>
+      <button className="show-all-columns" onClick={onShowAll}>Show all columns</button>
+    </section>}
+    <button className="column-chooser-trigger" aria-expanded={open} onClick={() => setOpen((current) => !current)}><span aria-hidden="true">▥</span><strong>Columns</strong><small>{visibleCount}/{choices.length}</small></button>
+  </div>;
+}
 
 function demo(player: string, team: string, position: Position, book: string, yards: number, secondary: number, touchdowns: number): PlayerLine {
   const cell = (statType: StatType, line: number): Cell => ({ key: `demo-${player}-${statType}`, statType, line, delta: null, sourceUrl: "#", source: "demo", sourceName: book, status: "open", consensusMethod: "single", sourceCount: 1, supportCount: 1 });
@@ -867,6 +887,7 @@ function SleeperRedraftBoardV2({ snapshot, history, seasonLines }: { snapshot: S
   const [sort, setSort] = useState<{ key: SleeperSortKey; direction: "asc" | "desc" }>({ key: "valueGap", direction: "desc" });
   const [range, setRange] = useState<TrendRange>("today");
   const [chartPlayer, setChartPlayer] = useState<SleeperAdpPlayer | null>(null);
+  const [hiddenColumns, setHiddenColumns] = useState<Set<SleeperColumnKey>>(() => new Set());
   const valueRows = useMemo(() => sleeperValueRows(snapshot.players || [], seasonLines), [snapshot.players, seasonLines]);
   const currentAdpDelta = useMemo(() => new Map((snapshot.movements || []).filter((move) => move.date === snapshot.date).map((move) => [move.player.id, move.adpDelta])), [snapshot.movements, snapshot.date]);
   const filtered = useMemo(() => valueRows
@@ -898,6 +919,24 @@ function SleeperRedraftBoardV2({ snapshot, history, seasonLines }: { snapshot: S
   const coverageLabel = position === "ALL" ? `${coverageMatched} of ${coverageRows.length} players comparable` : `${coverageMatched} of ${coverageRows.length} ${position}s comparable`;
   const format = snapshot.format;
   const header = (key: SleeperSortKey, label: string, hint: string) => <th><button className={`sort-button ${sort.key === key ? "active" : ""}`} onClick={() => sortBy(key)}><span className="column-label">{label}<small>{hint}</small></span><span>↕</span></button></th>;
+  const columnChoices: Array<{ key: SleeperColumnKey; label: string }> = [
+    { key: "adp", label: "Sleeper ADP" },
+    { key: "sleeperPositionRank", label: "Sleeper position rank" },
+    { key: "comparableSleeperPositionRank", label: "Comparable ADP rank" },
+    { key: "projectedPoints", label: "Our fantasy points" },
+    { key: "projectedPositionRank", label: "Our comparable rank" },
+    { key: "valueGap", label: "Value gap" },
+    { key: "trend", label: "ADP trend" },
+    { key: "coverage", label: "Coverage" },
+  ];
+  const columnVisible = (key: string) => !hiddenColumns.has(key as SleeperColumnKey);
+  const toggleColumn = (key: string) => {
+    const column = key as SleeperColumnKey;
+    const hiding = !hiddenColumns.has(column);
+    setHiddenColumns((current) => { const next = new Set(current); if (next.has(column)) next.delete(column); else next.add(column); return next; });
+    if (hiding && column !== "coverage" && sort.key === column) setSort({ key: "player", direction: "asc" });
+  };
+  const visibleColumnCount = 1 + columnChoices.filter((choice) => columnVisible(choice.key)).length;
 
   return <>
     <section className="hero sleeper-hero" id="top">
@@ -910,34 +949,35 @@ function SleeperRedraftBoardV2({ snapshot, history, seasonLines }: { snapshot: S
         <div className="ledger-heading"><div><p className="eyebrow">Coverage-adjusted value board</p><h2 id="sleeper-ledger-title">Sleeper redraft</h2></div><div className="ledger-tools">{(query || position !== "ALL" || coverageFilter !== "all") && <button className="back-to-all" onClick={reset}>← Back to all players</button>}<label className="search"><span className="sr-only">Search Sleeper players</span><span aria-hidden="true">⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search player or team" /></label></div></div>
         <div className="filters sleeper-filters"><div className="position-tabs" role="group" aria-label="Position">{positions.map((item) => <button key={item} className={position === item ? "active" : ""} onClick={() => setPosition(item)}>{item}</button>)}</div><div className="sleeper-coverage-controls"><div className="coverage-tabs" role="group" aria-label="Projection coverage">{(["all", "comparable", "needs-data"] as SleeperCoverageFilter[]).map((item) => <button key={item} className={coverageFilter === item ? "active" : ""} aria-pressed={coverageFilter === item} onClick={() => setCoverageFilter(item)}>{item === "all" ? "All players" : item === "comparable" ? "Comparable only" : "Needs data"}</button>)}</div><div className="sleeper-format-chip">12-team · PPR · 4PT pass TD · no K/DST</div><div className="coverage-summary">{coverageLabel}</div></div></div>
         <div className="coverage-explainer"><strong>Fair comparison:</strong> comparable ADP rank and our projection rank use the same complete-player pool within each position.</div>
-        <div className="table-wrap"><table className="sleeper-table"><thead><tr>
+        <div className="table-wrap"><table className="sleeper-table" style={{ minWidth: `${Math.max(620, 240 + (visibleColumnCount - 1) * 175)}px` }}><thead><tr>
           {header("player", "Player", "Sleeper draft board")}
-          {header("adp", "Sleeper ADP", "Overall draft cost")}
-          {header("sleeperPositionRank", "Sleeper pos rank", "Full positional pool")}
-          {header("comparableSleeperPositionRank", "Comparable ADP rank", "Complete players only")}
-          {header("projectedPoints", "Our fantasy points", "Full PPR · 4PT pass TD")}
-          {header("projectedPositionRank", "Our comparable rank", "Same complete-player pool")}
-          {header("valueGap", "Value gap", "Comparable ADP rank − our rank")}
-          {header("trend", "ADP trend", "Daily movement")}
-          <th>Coverage</th>
+          {columnVisible("adp") && header("adp", "Sleeper ADP", "Overall draft cost")}
+          {columnVisible("sleeperPositionRank") && header("sleeperPositionRank", "Sleeper pos rank", "Full positional pool")}
+          {columnVisible("comparableSleeperPositionRank") && header("comparableSleeperPositionRank", "Comparable ADP rank", "Complete players only")}
+          {columnVisible("projectedPoints") && header("projectedPoints", "Our fantasy points", "Full PPR · 4PT pass TD")}
+          {columnVisible("projectedPositionRank") && header("projectedPositionRank", "Our comparable rank", "Same complete-player pool")}
+          {columnVisible("valueGap") && header("valueGap", "Value gap", "Comparable ADP rank − our rank")}
+          {columnVisible("trend") && header("trend", "ADP trend", "Daily movement")}
+          {columnVisible("coverage") && <th>Coverage</th>}
         </tr></thead><tbody>{filtered.map((row) => {
           const delta = currentAdpDelta.get(row.id);
           const rising = delta !== undefined && delta < 0;
           return <tr className="data-row" key={row.id}>
             <td><div className="player-cell"><span className={`position position-${row.position.toLowerCase()}`}>{row.position}</span><div><strong>{row.name}</strong><span>{row.team || "FA"}{row.bye ? ` · Bye ${row.bye}` : ""}</span><button className="ledger-link" onClick={() => setChartPlayer(row)}>View ADP graph</button></div></div></td>
-            <td><strong className="adp-number">{row.adp.toFixed(1)}</strong><small>Overall</small></td>
-            <td><strong>{row.position}{row.sleeperPositionRank}</strong><small>All Sleeper {row.position}s</small></td>
-            <td>{row.comparableSleeperPositionRank === null ? <span className="empty">—</span> : <><strong>{row.position}{row.comparableSleeperPositionRank}</strong><small>Complete pool</small></>}</td>
-            <td>{row.projectedPoints === null ? <><span className="empty">Not projected</span>{row.inferredProjectedPoints !== null && <strong className="fantasy-points inferred">Est. {row.inferredProjectedPoints.toFixed(2)}</strong>}<small className={row.inferredProjectedPoints !== null ? "historical-fallback" : ""}>{row.missingInputs.join(" + ")}</small></> : <><strong className="fantasy-points">{row.projectedPoints.toFixed(2)}</strong><small>Our ledger</small></>}</td>
-            <td>{row.projectedPositionRank === null ? <span className="empty">—</span> : <><strong>{row.position}{row.projectedPositionRank}</strong><small>Complete pool</small></>}</td>
-            <td>{row.valueGap === null ? <span className="needs-data-badge">Needs data</span> : <span className={`value-gap ${row.valueGap > 0 ? "positive" : row.valueGap < 0 ? "negative" : "even"}`}><strong>{row.valueGap > 0 ? "+" : ""}{row.valueGap}</strong><small>{row.valueGap > 0 ? "Our projection higher" : row.valueGap < 0 ? "Sleeper higher" : "Same rank"}</small></span>}</td>
-            <td>{delta === undefined ? <span className="delta muted">—</span> : <button className="adp-trend-button" onClick={() => setChartPlayer(row)}><span className={`delta ${rising ? "up" : "down"}`}>{rising ? "↑" : "↓"} {Math.abs(delta).toFixed(1)}</span><small>{rising ? "Earlier" : "Later"}</small></button>}</td>
-            <td>{row.projectedPositionRank !== null ? <><span className={`confidence ${row.confidence || "partial"}`}><i />Comparable</span><small>{row.confidenceNote}</small></> : <><span className="confidence thin"><i />Needs data</span><small>{row.missingInputs.join(" + ")}</small></>}</td>
+            {columnVisible("adp") && <td><strong className="adp-number">{row.adp.toFixed(1)}</strong><small>Overall</small></td>}
+            {columnVisible("sleeperPositionRank") && <td><strong>{row.position}{row.sleeperPositionRank}</strong><small>All Sleeper {row.position}s</small></td>}
+            {columnVisible("comparableSleeperPositionRank") && <td>{row.comparableSleeperPositionRank === null ? <span className="empty">—</span> : <><strong>{row.position}{row.comparableSleeperPositionRank}</strong><small>Complete pool</small></>}</td>}
+            {columnVisible("projectedPoints") && <td>{row.projectedPoints === null ? <><span className="empty">Not projected</span>{row.inferredProjectedPoints !== null && <strong className="fantasy-points inferred">Est. {row.inferredProjectedPoints.toFixed(2)}</strong>}<small className={row.inferredProjectedPoints !== null ? "historical-fallback" : ""}>{row.missingInputs.join(" + ")}</small></> : <><strong className="fantasy-points">{row.projectedPoints.toFixed(2)}</strong><small>Our ledger</small></>}</td>}
+            {columnVisible("projectedPositionRank") && <td>{row.projectedPositionRank === null ? <span className="empty">—</span> : <><strong>{row.position}{row.projectedPositionRank}</strong><small>Complete pool</small></>}</td>}
+            {columnVisible("valueGap") && <td>{row.valueGap === null ? <span className="needs-data-badge">Needs data</span> : <span className={`value-gap ${row.valueGap > 0 ? "positive" : row.valueGap < 0 ? "negative" : "even"}`}><strong>{row.valueGap > 0 ? "+" : ""}{row.valueGap}</strong><small>{row.valueGap > 0 ? "Our projection higher" : row.valueGap < 0 ? "Sleeper higher" : "Same rank"}</small></span>}</td>}
+            {columnVisible("trend") && <td>{delta === undefined ? <span className="delta muted">—</span> : <button className="adp-trend-button" onClick={() => setChartPlayer(row)}><span className={`delta ${rising ? "up" : "down"}`}>{rising ? "↑" : "↓"} {Math.abs(delta).toFixed(1)}</span><small>{rising ? "Earlier" : "Later"}</small></button>}</td>}
+            {columnVisible("coverage") && <td>{row.projectedPositionRank !== null ? <><span className={`confidence ${row.confidence || "partial"}`}><i />Comparable</span><small>{row.confidenceNote}</small></> : <><span className="confidence thin"><i />Needs data</span><small>{row.missingInputs.join(" + ")}</small></>}</td>}
           </tr>;
-        })}{!filtered.length && <tr><td colSpan={9} className="empty-state">{snapshot.players.length ? coverageFilter === "needs-data" ? "Every player in this view has a complete projection." : "No players match these filters." : "Run the first verified Sleeper ADP capture to populate this board."}</td></tr>}</tbody></table></div>
+        })}{!filtered.length && <tr><td colSpan={visibleColumnCount} className="empty-state">{snapshot.players.length ? coverageFilter === "needs-data" ? "Every player in this view has a complete projection." : "No players match these filters." : "Run the first verified Sleeper ADP capture to populate this board."}</td></tr>}</tbody></table></div>
       </section>
     </div>
     {chartPlayer && <SleeperAdpChart player={chartPlayer} history={history} onClose={() => setChartPlayer(null)} />}
+    <ColumnChooser choices={columnChoices} isVisible={columnVisible} onToggle={toggleColumn} onShowAll={() => setHiddenColumns(new Set())} />
   </>;
 }
 
@@ -959,6 +999,7 @@ export default function Home() {
   const [qbPassTdPoints, setQbPassTdPoints] = useState<4 | 6>(4);
   const [tePremium, setTePremium] = useState<TePremium>(0);
   const [pprScoring, setPprScoring] = useState<PprScoring>(1);
+  const [hiddenColumns, setHiddenColumns] = useState<Set<ProjectionColumnKey>>(() => new Set());
 
   useEffect(() => {
     const dataRoot = import.meta.env.BASE_URL;
@@ -1018,6 +1059,24 @@ export default function Home() {
   const changeSort = (key: SortKey) => setSort((current) => current.key === key
     ? { key, direction: current.direction === "asc" ? "desc" : "asc" }
     : { key, direction: ["yards", "secondary", "touchdowns", "fantasyPoints", "prizePicksFantasyScore"].includes(key) ? "desc" : "asc" });
+  const columnChoices: Array<{ key: ProjectionColumnKey; label: string }> = [
+    { key: "source", label: "Source" },
+    { key: "yards", label: "Yards" },
+    { key: "secondary", label: position === "QB" ? "Rushing yards" : position === "ALL" ? "Receptions / QB rush yards" : "Receptions" },
+    { key: "touchdowns", label: boardMode === "week1" ? "TD chance" : "Touchdowns" },
+    { key: "fantasyPoints", label: "Calculated fantasy" },
+    ...(boardMode === "week1" ? [{ key: "prizePicksFantasyScore" as ProjectionColumnKey, label: "PrizePicks fantasy score" }] : []),
+    { key: "status", label: "Confidence" },
+  ];
+  const columnVisible = (key: string) => !hiddenColumns.has(key as ProjectionColumnKey);
+  const toggleColumn = (key: string) => {
+    const column = key as ProjectionColumnKey;
+    const hiding = !hiddenColumns.has(column);
+    setHiddenColumns((current) => { const next = new Set(current); if (next.has(column)) next.delete(column); else next.add(column); return next; });
+    const sortKey: SortKey = column === "source" ? "book" : column;
+    if (hiding && sort.key === sortKey) setSort({ key: "player", direction: "asc" });
+  };
+  const visibleColumnCount = 1 + columnChoices.filter((choice) => columnVisible(choice.key)).length;
   const acceptedRuns = snapshot.sourceRuns.filter((run) => run.status === "accepted");
   const reviewCount = snapshot.sourceRuns.filter((run) => run.status !== "accepted").length + (snapshot.issues?.length || 0);
   const isDemo = boardMode === "season" && (snapshot.demo || snapshot.observations.length === 0);
@@ -1071,16 +1130,16 @@ export default function Home() {
       <div className="ledger-heading"><div><p className="eyebrow">{waitingForWeekly ? "Data-ready board" : isDemo ? "Preview board" : "Verified board"}</p><h2 id="ledger-title">{boardMode === "season" ? "Season totals" : "Week 1 projections"}</h2></div><div className="ledger-tools">{(query || position !== "ALL" || book !== "All sources") && <button className="back-to-all" onClick={resetAllPlayers}>← Back to all players</button>}<label className="search"><span className="sr-only">Search players or teams</span><span aria-hidden="true">⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search player or team" /></label></div></div>
       <div className="filters" aria-label={`Filter ${boardMode === "season" ? "season totals" : "Week 1 projections"}`}><div className="position-tabs" role="group" aria-label="Position">{positions.map((item) => <button key={item} className={position === item ? "active" : ""} onClick={() => setPosition(item)}>{item}</button>)}</div><div className="filter-actions"><button className={`qb-scoring-toggle ${qbPassTdPoints === 6 ? "active" : ""}`} aria-pressed={qbPassTdPoints === 6} onClick={() => setQbPassTdPoints((points) => points === 4 ? 6 : 4)}><span>QB pass TDs</span><strong>{qbPassTdPoints} pts</strong></button><div className="ppr-toggle" role="group" aria-label="Points per reception"><span>PPR</span>{([1, 0.5, 0] as PprScoring[]).map((points) => <button key={points} className={pprScoring === points ? "active" : ""} aria-pressed={pprScoring === points} onClick={() => setPprScoring(points)}>{points.toFixed(1)}</button>)}</div><div className="tep-toggle" role="group" aria-label="Tight end premium"><span>TEP</span>{([0, 0.5, 1] as TePremium[]).map((premium) => <button key={premium} className={tePremium === premium ? "active" : ""} aria-pressed={tePremium === premium} onClick={() => setTePremium(premium)}>{premium.toFixed(1)}</button>)}</div><label className="book-filter"><span>Source</span><select value={book} onChange={(event) => setBook(event.target.value)}>{books.map((item) => <option key={item}>{item}</option>)}</select></label></div></div>
       <div className="table-wrap">
-        <table>
+        <table className="projection-table" style={{ minWidth: `${Math.max(620, 240 + (visibleColumnCount - 1) * 190)}px` }}>
           <thead><tr>
             <SortHeader sortKey="player" label="Player" sort={sort} onSort={changeSort} />
-            <SortHeader sortKey="book" label="Source" sort={sort} onSort={changeSort} />
-            <SortHeader sortKey="yards" label="Yards" hint="Passing + rushing + receiving" sort={sort} onSort={changeSort} />
-            <SortHeader sortKey="secondary" label={position === "QB" ? "Rushing yards" : position === "ALL" ? "Receptions / QB rush yards" : "Receptions"} hint="When offered" sort={sort} onSort={changeSort} />
-            <SortHeader sortKey="touchdowns" label={boardMode === "week1" ? "TD chance" : "Touchdowns"} hint={boardMode === "week1" ? "Any rushing or receiving TD" : "Passing + rushing + receiving"} sort={sort} onSort={changeSort} />
-            <SortHeader sortKey="fantasyPoints" label="Calculated fantasy" hint={`${pprScoring.toFixed(1)} PPR · TEP ${tePremium.toFixed(1)} · ${boardMode === "season" ? "season" : "Week 1"}`} sort={sort} onSort={changeSort} />
-            {boardMode === "week1" && <SortHeader sortKey="prizePicksFantasyScore" label="PrizePicks fantasy score" hint="Posted projection" sort={sort} onSort={changeSort} />}
-            <SortHeader sortKey="status" label="Confidence" hint="Coverage + completeness" sort={sort} onSort={changeSort} />
+            {columnVisible("source") && <SortHeader sortKey="book" label="Source" sort={sort} onSort={changeSort} />}
+            {columnVisible("yards") && <SortHeader sortKey="yards" label="Yards" hint="Passing + rushing + receiving" sort={sort} onSort={changeSort} />}
+            {columnVisible("secondary") && <SortHeader sortKey="secondary" label={position === "QB" ? "Rushing yards" : position === "ALL" ? "Receptions / QB rush yards" : "Receptions"} hint="When offered" sort={sort} onSort={changeSort} />}
+            {columnVisible("touchdowns") && <SortHeader sortKey="touchdowns" label={boardMode === "week1" ? "TD chance" : "Touchdowns"} hint={boardMode === "week1" ? "Any rushing or receiving TD" : "Passing + rushing + receiving"} sort={sort} onSort={changeSort} />}
+            {columnVisible("fantasyPoints") && <SortHeader sortKey="fantasyPoints" label="Calculated fantasy" hint={`${pprScoring.toFixed(1)} PPR · TEP ${tePremium.toFixed(1)} · ${boardMode === "season" ? "season" : "Week 1"}`} sort={sort} onSort={changeSort} />}
+            {boardMode === "week1" && columnVisible("prizePicksFantasyScore") && <SortHeader sortKey="prizePicksFantasyScore" label="PrizePicks fantasy score" hint="Posted projection" sort={sort} onSort={changeSort} />}
+            {columnVisible("status") && <SortHeader sortKey="status" label="Confidence" hint="Coverage + completeness" sort={sort} onSort={changeSort} />}
           </tr></thead>
           <tbody>{lines.map((line) => {
             const expanded = selected?.playerId === line.id;
@@ -1091,15 +1150,15 @@ export default function Home() {
             return <Fragment key={line.id}>
               <tr className={`data-row ${expanded ? "expanded" : ""}`}>
                 <td><div className="player-cell"><span className={`position position-${line.position.toLowerCase()}`}>{line.position}</span><div><span className="player-name-row"><strong>{line.player}</strong>{hasCompleteProjection && positionRank ? <span className="projection-rank ranked" title={`${line.position}${positionRank} in ${boardMode === "season" ? "season" : "Week 1"} projection order by verified calculated fantasy points`}>{line.position}{positionRank}</span> : <span className="projection-rank incomplete" title="Not ranked; verified fantasy inputs are incomplete">NR</span>}</span><span>{line.team}</span><button className="ledger-link" aria-expanded={expanded && selected?.statType === null} aria-controls={`ledger-${line.id}`} onClick={() => setSelected(expanded && selected?.statType === null ? null : { playerId: line.id, statType: null })}>{expanded && selected?.statType === null ? "Hide ledger" : "View ledger"}</button></div></div></td>
-                <td><span className="book-name">{line.book}</span><small>{line.availableBooks.length} source{line.availableBooks.length === 1 ? "" : "s"}</small></td>
-                <td><StatStack entries={[{ cell: line.yards, label: line.yardLabel }, ...extraYards]} preferredSource={line.source} player={line.player} onInspect={inspect} /></td>
-                <td><LineCell cell={line.position === "QB" ? line.rushingYards : line.receptions} label={line.position === "QB" ? "Rush yds" : "Receptions"} preferredSource={line.source} player={line.player} onInspect={inspect} /></td>
-                <td>{boardMode === "week1" ? <TouchdownChanceCell line={line} onInspect={inspect} /> : <SeasonTouchdownCell line={line} onInspect={inspect} />}</td>
-                <td><FantasyCell line={line} qbPassTdPoints={qbPassTdPoints} tePremium={tePremium} pprScoring={pprScoring} /></td>
-                {boardMode === "week1" && <td><LineCell cell={line.prizePicksFantasyScore} label="PrizePicks" preferredSource="prizepicks" player={line.player} onInspect={inspect} /></td>}
-                <td><span className={`confidence ${line.confidence}`}><i aria-hidden="true" />{line.confidence[0].toUpperCase() + line.confidence.slice(1)}</span><small>{line.confidenceNote}</small><small className={`verification-note ${line.status}`}>{line.status === "verified" ? "Verified" : "Review"} · {line.verifiedAt}</small></td>
+                {columnVisible("source") && <td><span className="book-name">{line.book}</span><small>{line.availableBooks.length} source{line.availableBooks.length === 1 ? "" : "s"}</small></td>}
+                {columnVisible("yards") && <td><StatStack entries={[{ cell: line.yards, label: line.yardLabel }, ...extraYards]} preferredSource={line.source} player={line.player} onInspect={inspect} /></td>}
+                {columnVisible("secondary") && <td><LineCell cell={line.position === "QB" ? line.rushingYards : line.receptions} label={line.position === "QB" ? "Rush yds" : "Receptions"} preferredSource={line.source} player={line.player} onInspect={inspect} /></td>}
+                {columnVisible("touchdowns") && <td>{boardMode === "week1" ? <TouchdownChanceCell line={line} onInspect={inspect} /> : <SeasonTouchdownCell line={line} onInspect={inspect} />}</td>}
+                {columnVisible("fantasyPoints") && <td><FantasyCell line={line} qbPassTdPoints={qbPassTdPoints} tePremium={tePremium} pprScoring={pprScoring} /></td>}
+                {boardMode === "week1" && columnVisible("prizePicksFantasyScore") && <td><LineCell cell={line.prizePicksFantasyScore} label="PrizePicks" preferredSource="prizepicks" player={line.player} onInspect={inspect} /></td>}
+                {columnVisible("status") && <td><span className={`confidence ${line.confidence}`}><i aria-hidden="true" />{line.confidence[0].toUpperCase() + line.confidence.slice(1)}</span><small>{line.confidenceNote}</small><small className={`verification-note ${line.status}`}>{line.status === "verified" ? "Verified" : "Review"} · {line.verifiedAt}</small></td>}
               </tr>
-              {expanded && selected?.statType === null && <tr className="history-row"><td colSpan={boardMode === "week1" ? 8 : 7}><PlayerLedger line={line} history={history} onClose={() => setSelected(null)} /></td></tr>}
+              {expanded && selected?.statType === null && <tr className="history-row"><td colSpan={visibleColumnCount}><PlayerLedger line={line} history={history} onClose={() => setSelected(null)} /></td></tr>}
             </Fragment>;
           })}</tbody>
         </table>
@@ -1108,6 +1167,7 @@ export default function Home() {
     </section>
     </div>
     {activePropLine && selected?.statType && <div className="graph-drawer-layer"><button className="graph-drawer-scrim" aria-label="Close line trend drawer" onClick={() => setSelected(null)} /><aside className="graph-drawer" role="dialog" aria-modal="true" aria-label={`${activePropLine.player} ${STAT_LABELS[selected.statType]} line trend`}><PropComparison line={activePropLine} statType={selected.statType} history={history} movements={snapshot.movements || []} highlightedSource={selected.source} onBackAll={resetAllPlayers} onClose={() => setSelected(null)} /></aside></div>}
+    <ColumnChooser choices={columnChoices} isVisible={columnVisible} onToggle={toggleColumn} onShowAll={() => setHiddenColumns(new Set())} />
     <footer><span>PROP LEDGER / PERSONAL RESEARCH</span><a href="https://github.com/nflverse/nflverse-data/releases/tag/stats_player" target="_blank" rel="noreferrer">Prior-season stats: FTN Data via nflverse ↗</a><span>Lines are observations, not betting advice.</span></footer>
   </main>;
 }

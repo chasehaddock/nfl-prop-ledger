@@ -416,6 +416,53 @@ test("filters and table headers stay visible while the ledger scrolls and confid
   }
 });
 
+test("the floating column chooser hides columns, shrinks the table, and works on every board", async () => {
+  const browser = await chromium.launch({ channel: "chrome", headless: true });
+  try {
+    const page = await browser.newPage({ viewport: { width: 1280, height: 760 } });
+    await page.goto(process.env.TEST_URL || "http://127.0.0.1:4173", { waitUntil: "networkidle" });
+    const trigger = page.getByRole("button", { name: /^Columns/i });
+    await trigger.click();
+    const chooser = page.getByRole("dialog", { name: "Choose visible columns" });
+    await chooser.waitFor();
+    assert.match(await trigger.innerText(), /6\/6/);
+    const initialWidth = await page.locator(".projection-table").evaluate((table) => table.scrollWidth);
+
+    await chooser.getByRole("switch", { name: "Receptions / QB rush yards", exact: true }).click();
+    assert.equal(await page.getByRole("columnheader", { name: /Receptions \/ QB rush yards/i }).count(), 0);
+    assert.match(await trigger.innerText(), /5\/6/);
+    const shorterWidth = await page.locator(".projection-table").evaluate((table) => table.scrollWidth);
+    assert.ok(shorterWidth < initialWidth);
+
+    await chooser.getByRole("switch", { name: "Yards", exact: true }).click();
+    assert.equal(await page.getByRole("columnheader", { name: /^Yards/i }).count(), 0);
+    assert.equal(await page.getByRole("columnheader", { name: /^Player/i }).getAttribute("aria-sort"), "ascending");
+    await chooser.getByRole("button", { name: "Show all columns", exact: true }).click();
+    assert.equal(await page.getByRole("columnheader", { name: /Receptions \/ QB rush yards/i }).count(), 1);
+
+    await chooser.getByRole("button", { name: "Close column chooser" }).click();
+    await page.getByRole("button", { name: /Weekly Week 1 projections/i }).click();
+    await trigger.click();
+    assert.equal(await page.getByRole("dialog", { name: "Choose visible columns" }).getByRole("switch", { name: "PrizePicks fantasy score", exact: true }).count(), 1);
+    await page.getByRole("dialog", { name: "Choose visible columns" }).getByRole("button", { name: "Close column chooser" }).click();
+
+    await page.getByRole("button", { name: /Sleeper redraft/i }).click();
+    const sleeperTrigger = page.getByRole("button", { name: /^Columns/i });
+    await sleeperTrigger.click();
+    const sleeperChooser = page.getByRole("dialog", { name: "Choose visible columns" });
+    await sleeperChooser.getByRole("switch", { name: "Value gap", exact: true }).click();
+    assert.equal(await page.getByRole("columnheader", { name: /Value gap/i }).count(), 0);
+
+    const mobile = await browser.newPage({ viewport: { width: 390, height: 844 } });
+    await mobile.goto(process.env.TEST_URL || "http://127.0.0.1:4173", { waitUntil: "networkidle" });
+    const buttonBox = await mobile.getByRole("button", { name: /^Columns/i }).boundingBox();
+    assert.ok(buttonBox && buttonBox.x >= 0 && buttonBox.x + buttonBox.width <= 390 && buttonBox.y + buttonBox.height <= 844);
+    await mobile.close();
+  } finally {
+    await browser.close();
+  }
+});
+
 test("Week 1 has a separate data-ready board and movement history", async () => {
   const browser = await chromium.launch({ channel: "chrome", headless: true });
   try {
