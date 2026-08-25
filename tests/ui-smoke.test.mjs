@@ -107,11 +107,11 @@ test("quarterback rows replace receptions with rushing yards and expose rushing 
     assert.equal(await page.locator("tbody tr.data-row td:nth-child(4)").filter({ hasText: "Receptions" }).count(), 0);
     assert.ok(await page.locator("tbody tr.data-row td:nth-child(5)").filter({ hasText: "Rush TD" }).count() > 0);
     const shough = page.locator("tbody tr.data-row").filter({ hasText: "Tyler Shough" }).first();
-    assert.match(await shough.locator("td:nth-child(4)").innerText(), /Not offered[\s\S]*Estimated 309\.7[\s\S]*50\/50 blend[\s\S]*W1 avg 17\.5\/G × 18 = 315[\s\S]*2025 NFL 16\.9\/G × 18 = 304\.4[\s\S]*sample: 11 games[\s\S]*final 309\.7/i);
-    assert.match(await shough.locator("td:nth-child(6)").innerText(), /Not enough verified data[\s\S]*Est\.[\s\S]*excluded from fantasy rankings and sorting/i);
+    assert.match(await shough.locator("td:nth-child(4)").innerText(), /Not offered[\s\S]*Estimated 309\.7 rush yds · based on last year \+ Week 1/i);
+    assert.match(await shough.locator("td:nth-child(6)").innerText(), /Not enough verified data[\s\S]*Estimated [\d.]+ fantasy pts/i);
     assert.equal(await shough.locator(".projection-rank.incomplete").innerText(), "NR");
     const rodgers = page.locator("tbody tr.data-row").filter({ hasText: "Aaron Rodgers" }).first();
-    assert.match(await rodgers.locator("td:nth-child(5)").innerText(), /Not offered[\s\S]*Rush TD[\s\S]*Estimated 1\.1[\s\S]*0\.1 rush TD\/G × 18 = 1\.1[\s\S]*sample: 16 games/i);
+    assert.match(await rodgers.locator("td:nth-child(5)").innerText(), /Not offered[\s\S]*Estimated 1\.1 rush td · based on last year/i);
     const verifiedFantasyRow = page.locator("tbody tr.data-row:has(.fantasy-points:not(.inferred))").first();
     await verifiedFantasyRow.waitFor();
     const before = Number((await verifiedFantasyRow.locator(".fantasy-points").innerText()).replaceAll(",", ""));
@@ -247,9 +247,9 @@ test("skill players show total touchdowns with the rushing and receiving split",
     assert.ok(await page.locator("tbody tr.data-row td:nth-child(5) .total-touchdowns").count() > 0);
     assert.ok(await page.locator("tbody tr.data-row td:nth-child(5)").filter({ hasText: "Total TDs" }).count() > 0);
     const inferred = page.locator("tbody tr.data-row").filter({ hasText: "Kyren Williams" }).first().locator("td:nth-child(5)");
-    assert.match(await inferred.innerText(), /12\.5[\s\S]*Total TDs[\s\S]*Rush 9\.5 · Rec —[\s\S]*Inferred from PrizePicks: 12.5 total − 9.5 rushing TDs = 3/i);
+    assert.match(await inferred.innerText(), /12\.5[\s\S]*Total TDs[\s\S]*Rush 9\.5 · Rec —[\s\S]*Estimated 3 Rec TDs · based on PrizePicks total TD line/i);
     const kyrenRow = page.locator("tbody tr.data-row").filter({ hasText: "Kyren Williams" }).first();
-    assert.match(await kyrenRow.locator("td:nth-child(6)").innerText(), /Not enough verified data[\s\S]*Est\.[\s\S]*excluded from fantasy rankings and sorting/i);
+    assert.match(await kyrenRow.locator("td:nth-child(6)").innerText(), /Not enough verified data[\s\S]*Estimated [\d.]+ fantasy pts/i);
     assert.equal(await kyrenRow.locator(".projection-rank.incomplete").innerText(), "NR");
 
     const etienne = page.locator("tbody tr.data-row").filter({ hasText: "Travis Etienne" }).first().locator("td:nth-child(5)");
@@ -272,16 +272,16 @@ test("skill players show total touchdowns with the rushing and receiving split",
   }
 });
 
-test("running backs use labeled 18-game NFL receiving pace only when no market line exists", async () => {
+test("running back prior-season estimates stay compact and orange", async () => {
   const browser = await chromium.launch({ channel: "chrome", headless: true });
   try {
     const page = await browser.newPage();
     await page.goto(process.env.TEST_URL || "http://127.0.0.1:4173", { waitUntil: "networkidle" });
     await page.getByRole("button", { name: "RB", exact: true }).click();
     const veteran = page.locator("tbody tr.data-row").filter({ hasText: "Jaylen Warren" }).first();
-    assert.match(await veteran.locator("td:nth-child(3)").innerText(), /374\.6[\s\S]*2025 NFL · 333 yds \/ 16 G × 18 = 374\.6/i);
-    assert.match(await veteran.locator("td:nth-child(4)").innerText(), /45[\s\S]*2025 NFL · 40 rec \/ 16 G × 18 = 45/i);
-    assert.match(await veteran.locator("td:nth-child(6)").innerText(), /Uses 18-game 2025 NFL pace: receptions \+ receiving yards/i);
+    assert.match(await veteran.locator("td:nth-child(3)").innerText(), /Not offered[\s\S]*Estimated 374\.6 rec yds · based on last year/i);
+    assert.match(await veteran.locator("td:nth-child(4)").innerText(), /Not offered[\s\S]*Estimated 45 receptions · based on last year/i);
+    assert.match(await veteran.locator("td:nth-child(6)").innerText(), /Not enough verified data[\s\S]*Estimated [\d.]+ fantasy pts/i);
     const sportsbook = page.locator("tbody tr.data-row").filter({ hasText: "Bijan Robinson" }).first();
     assert.doesNotMatch(await sportsbook.locator("td:nth-child(3)").innerText(), /2025 NFL/i);
     assert.doesNotMatch(await sportsbook.locator("td:nth-child(4)").innerText(), /2025 NFL/i);

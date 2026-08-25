@@ -143,14 +143,14 @@ function priorSeasonReceptionCell(playerId: string): Cell | null {
   const prior = priorSeasonRbReceiving(playerId);
   if (!prior) return null;
   const line = projectEighteenGamePace(prior.receptions, prior.gamesPlayed);
-  return { key: `prior:${prior.season}:${playerId}:receptions`, statType: "receptions", line, delta: null, sourceUrl: prior.sourceUrl, source: "prior-season", sourceName: `${prior.season} NFL pace`, status: "open", fallbackLabel: `${prior.season} NFL · ${prior.receptions} rec / ${prior.gamesPlayed} G × 18 = ${line}` };
+  return { key: `prior:${prior.season}:${playerId}:receptions`, statType: "receptions", line, delta: null, sourceUrl: prior.sourceUrl, source: "prior-season", sourceName: `${prior.season} NFL pace`, status: "open", fallbackLabel: "based on last year" };
 }
 
 function priorSeasonReceivingYardsCell(playerId: string): Cell | null {
   const prior = priorSeasonRbReceiving(playerId);
   if (!prior) return null;
   const line = projectEighteenGamePace(prior.receivingYards, prior.gamesPlayed);
-  return { key: `prior:${prior.season}:${playerId}:receiving_yards`, statType: "receiving_yards", line, delta: null, sourceUrl: prior.sourceUrl, source: "prior-season", sourceName: `${prior.season} NFL pace`, status: "open", fallbackLabel: `${prior.season} NFL · ${prior.receivingYards} yds / ${prior.gamesPlayed} G × 18 = ${line}` };
+  return { key: `prior:${prior.season}:${playerId}:receiving_yards`, statType: "receiving_yards", line, delta: null, sourceUrl: prior.sourceUrl, source: "prior-season", sourceName: `${prior.season} NFL pace`, status: "open", fallbackLabel: "based on last year" };
 }
 
 function priorSeasonQbRushingCell(playerId: string, statType: "rushing_yards" | "rushing_touchdowns"): Cell | null {
@@ -158,10 +158,8 @@ function priorSeasonQbRushingCell(playerId: string, statType: "rushing_yards" | 
   if (!prior) return null;
   const total = statType === "rushing_yards" ? prior.rushingYards : prior.rushingTouchdowns;
   const line = projectEighteenGamePace(total, prior.gamesPlayed);
-  if (statType === "rushing_yards" && line <= 0) return null;
-  const rate = Number((total / prior.gamesPlayed).toFixed(1));
-  const unit = statType === "rushing_yards" ? "rush yds/G" : "rush TD/G";
-  return { key: `prior:${prior.season}:${playerId}:${statType}`, statType, line, delta: null, sourceUrl: prior.sourceUrl, source: "prior-season", sourceName: `${prior.season} NFL pace`, status: "open", fallbackLabel: `${prior.season} NFL · ${rate} ${unit} × 18 = ${line} · sample: ${prior.gamesPlayed} games` };
+  if (line <= 0) return null;
+  return { key: `prior:${prior.season}:${playerId}:${statType}`, statType, line, delta: null, sourceUrl: prior.sourceUrl, source: "prior-season", sourceName: `${prior.season} NFL pace`, status: "open", fallbackLabel: "based on last year" };
 }
 
 function blendedQbRushingYardsCell(playerId: string, weeklySelection: ConsensusSelection<Observation> | undefined): Cell | null {
@@ -177,9 +175,7 @@ function blendedQbRushingYardsCell(playerId: string, weeklySelection: ConsensusS
     ? Number(((weeklySeason + priorSeason) / 2).toFixed(1))
     : weeklySeason ?? priorSeason!;
   if (line <= 0) return null;
-  const weeklyLabel = weeklySeason === null ? null : `W1 avg ${weeklyRate}/G × 18 = ${weeklySeason}`;
-  const priorLabel = priorSeason === null ? null : `2025 NFL ${priorRate}/G × 18 = ${priorSeason} · sample: ${prior!.gamesPlayed} games`;
-  const method = weeklyLabel && priorLabel ? "50/50 blend" : weeklyLabel ? "Week 1 pace" : "2025 NFL pace";
+  const method = weeklySeason !== null && priorSeason !== null ? "last year + Week 1" : weeklySeason !== null ? "Week 1 projection" : "last year";
   return {
     key: `inferred-season:${playerId}:rushing_yards`,
     statType: "rushing_yards",
@@ -187,9 +183,9 @@ function blendedQbRushingYardsCell(playerId: string, weeklySelection: ConsensusS
     delta: null,
     sourceUrl: weeklySelection?.candidates[0]?.sourceUrl || prior?.sourceUrl || "#",
     source: "season-inference",
-    sourceName: method,
+    sourceName: `Estimate · ${method}`,
     status: "open",
-    fallbackLabel: `${method} · ${[weeklyLabel, priorLabel].filter(Boolean).join(" · ")} · final ${line}`,
+    fallbackLabel: `based on ${method}`,
   };
 }
 
@@ -267,7 +263,6 @@ function inferredTouchdownCell(
   statType: "rushing_touchdowns" | "receiving_touchdowns",
   totalSelection: ConsensusSelection<Observation> | undefined,
   knownSelection: ConsensusSelection<Observation> | undefined,
-  knownLabel: string,
 ): Cell | null {
   for (const total of totalSelection?.candidates || []) {
     if (total.status !== "open") continue;
@@ -289,7 +284,7 @@ function inferredTouchdownCell(
       sourceName,
       capturedAt: [total.capturedAt, known.capturedAt].filter(Boolean).sort().at(-1),
       status: "open",
-      fallbackLabel: `Inferred from ${sourceName}: ${total.line} total − ${known.line} ${knownLabel} = ${line}`,
+      fallbackLabel: `based on ${sourceName} total TD line`,
     };
   }
   return null;
@@ -335,12 +330,12 @@ function aggregate(snapshot: Snapshot, weeklyContext?: Snapshot): PlayerLine[] {
     const rushingTouchdowns = marketRushingTouchdowns
       ? marketRushingTouchdowns
       : canInferComponents
-        ? inferredTouchdownCell(playerId, "rushing_touchdowns", byStat.offensive_touchdowns, byStat.receiving_touchdowns, "receiving TDs")
+        ? inferredTouchdownCell(playerId, "rushing_touchdowns", byStat.offensive_touchdowns, byStat.receiving_touchdowns)
         : qbRushingTouchdownsFallback;
     const receivingTouchdowns = marketReceivingTouchdowns
       ? marketReceivingTouchdowns
       : canInferComponents
-        ? inferredTouchdownCell(playerId, "receiving_touchdowns", byStat.offensive_touchdowns, byStat.rushing_touchdowns, "rushing TDs")
+        ? inferredTouchdownCell(playerId, "receiving_touchdowns", byStat.offensive_touchdowns, byStat.rushing_touchdowns)
         : null;
     const marketPassingTouchdowns = currentCell("passing_touchdowns");
     const passingTouchdownExpectation = first.player.position === "QB" && snapshot.week === 1
@@ -435,7 +430,10 @@ function consensusDescription(cell: Cell): string {
 
 function LineCell({ cell, label, preferredSource, player, onInspect }: { cell: Cell | null; label?: string; preferredSource: string; player?: string; onInspect?: (statType: StatType) => void }) {
   if (!cell) return <span className="empty">Not offered</span>;
-  if (cell.fallbackLabel) return <><span className="empty">Not offered</span>{label && <small>{label}</small>}<small className="historical-fallback">Estimated {cell.line.toLocaleString()} · {cell.fallbackLabel}</small></>;
+  if (cell.fallbackLabel) {
+    const estimateLabel = (label || STAT_LABELS[cell.statType]).toLowerCase();
+    return <><span className="empty">Not offered</span><small className="historical-fallback">Estimated {cell.line.toLocaleString()} {estimateLabel} · {cell.fallbackLabel}</small></>;
+  }
   const content = <><div className="number-cell"><strong>{cell.line.toLocaleString()}</strong>{!cell.fallbackLabel && cell.sourceCount === 1 && <Delta value={cell.delta} />}{!cell.fallbackLabel && (cell.sourceCount || 0) > 1 && <span className="consensus-badge">{cell.consensusMethod === "average" ? "AVG" : "MODE"}</span>}</div>{label && <small>{label}</small>}{cell.overOdds && cell.underOdds && <small>O {cell.overOdds > 0 ? "+" : ""}{cell.overOdds} / U {cell.underOdds > 0 ? "+" : ""}{cell.underOdds}</small>}{cell.fallbackLabel ? <small className="historical-fallback">{cell.fallbackLabel}</small> : (cell.sourceCount || 0) > 1 ? <small className="consensus-note">{consensusDescription(cell)} · click to compare</small> : cell.source !== preferredSource && <small className="fallback-source">Filled from {cell.sourceName}</small>}</>;
   if (!onInspect || cell.fallbackLabel) return content;
   return <button className="prop-trigger" onClick={() => onInspect(cell.statType)} aria-label={`Compare ${player || "player"} ${STAT_LABELS[cell.statType]} across sources`}>{content}</button>;
@@ -465,16 +463,15 @@ function SeasonTouchdownCell({ line, onInspect }: { line: PlayerLine; onInspect:
 
   const total = skillTouchdownTotal(line);
   if (total === null) return <span className="empty">Not offered</span>;
-  const inferredNotes = [line.rushingTouchdowns, line.receivingTouchdowns]
-    .filter((cell): cell is Cell => Boolean(cell?.fallbackLabel))
-    .map((cell) => cell.fallbackLabel!);
+  const inferredCells = [line.rushingTouchdowns, line.receivingTouchdowns]
+    .filter((cell): cell is Cell => Boolean(cell?.fallbackLabel));
 
   return <div className="total-touchdowns">
     {line.offensiveTouchdowns
       ? <LineCell cell={line.offensiveTouchdowns} label="Total TDs" preferredSource={line.source} player={line.player} onInspect={onInspect} />
       : <><div className="number-cell"><strong>{total.toLocaleString()}</strong></div><small>Total TDs · calculated</small></>}
     <small className="td-breakdown">Rush {touchdownBreakdownValue(line.rushingTouchdowns)} · Rec {touchdownBreakdownValue(line.receivingTouchdowns)}</small>
-    {inferredNotes.map((note) => <small className="td-inference" key={note}>{note}</small>)}
+    {inferredCells.map((cell) => <small className="td-inference" key={cell.key}>Estimated {cell.line.toLocaleString()} {STAT_LABELS[cell.statType]} · {cell.fallbackLabel}</small>)}
   </div>;
 }
 
@@ -579,11 +576,8 @@ function visibleOptionalRushingYards(line: PlayerLine): Cell | null {
 function FantasyCell({ line, qbPassTdPoints, tePremium, pprScoring }: { line: PlayerLine; qbPassTdPoints: 4 | 6; tePremium: TePremium; pprScoring: PprScoring }) {
   const points = displayedFantasyPoints(line, qbPassTdPoints, tePremium, pprScoring);
   if (points === null) return <><span className="empty">Not assigned</span><small>Missing a verified prop</small></>;
-  const priorReceivingFallbacks = [line.fantasyUsesReceptionFallback && "receptions", line.fantasyUsesReceivingYardsFallback && "receiving yards"].filter(Boolean).join(" + ");
-  const priorQbFallbacks = [line.fantasyUsesQbRushingYardsFallback && "rushing yards", line.fantasyUsesQbRushingTouchdownsFallback && "rushing TDs"].filter(Boolean).join(" + ");
-  const visibleAdditionalInferences = line.fantasyAdditionalInferences.filter((label) => !(label === "Rush yards" && visibleOptionalRushingYards(line) === null));
-  if (line.fantasyUsesInference) return <><span className="empty">Not enough verified data</span><strong className="fantasy-points inferred">Est. {points.toFixed(2)}</strong><small className="historical-fallback">Display only · excluded from fantasy rankings and sorting</small>{priorReceivingFallbacks && <small className="historical-fallback">Uses 18-game 2025 NFL pace: {priorReceivingFallbacks}</small>}{priorQbFallbacks && <small className="historical-fallback">Uses inferred season values: {priorQbFallbacks}</small>}{visibleAdditionalInferences.length > 0 && <small className="historical-fallback">Other inferred values: {visibleAdditionalInferences.join(" + ")}</small>}</>;
-  return <><strong className="fantasy-points">{points.toFixed(2)}</strong><small>{line.fantasyBooks.join(" + ")}</small>{line.position === "QB" && <small className="qb-scoring-note">Pass TDs · {qbPassTdPoints} pts</small>}{line.position !== "QB" && <small className="ppr-scoring-note">PPR {pprScoring.toFixed(1)} · {pprScoring.toFixed(1)} pts/reception</small>}{line.position === "TE" && <small className="tep-scoring-note">TEP {tePremium.toFixed(1)} · {(pprScoring + tePremium).toFixed(1)} total pts/reception</small>}{line.passingTouchdownExpectationNote && <small className="vig-free-note">Uses {line.passingTouchdownExpectationNote}</small>}{priorReceivingFallbacks && <small className="historical-fallback">Includes 18-game 2025 NFL pace: {priorReceivingFallbacks}</small>}{priorQbFallbacks && <small className="historical-fallback">Includes inferred season values: {priorQbFallbacks}</small>}{visibleAdditionalInferences.length > 0 && <small className="historical-fallback">Other inferred season values: {visibleAdditionalInferences.join(" + ")}</small>}{line.touchdownProbabilityNote && <small className="vig-free-note">{line.touchdownProbabilityNote}</small>}</>;
+  if (line.fantasyUsesInference) return <><span className="empty">Not enough verified data</span><strong className="fantasy-points inferred">Estimated {points.toFixed(2)} fantasy pts</strong></>;
+  return <><strong className="fantasy-points">{points.toFixed(2)}</strong><small>{line.fantasyBooks.join(" + ")}</small>{line.position === "QB" && <small className="qb-scoring-note">Pass TDs · {qbPassTdPoints} pts</small>}{line.position !== "QB" && <small className="ppr-scoring-note">PPR {pprScoring.toFixed(1)} · {pprScoring.toFixed(1)} pts/reception</small>}{line.position === "TE" && <small className="tep-scoring-note">TEP {tePremium.toFixed(1)} · {(pprScoring + tePremium).toFixed(1)} total pts/reception</small>}{line.passingTouchdownExpectationNote && <small className="vig-free-note">Uses {line.passingTouchdownExpectationNote}</small>}{line.touchdownProbabilityNote && <small className="vig-free-note">{line.touchdownProbabilityNote}</small>}</>;
 }
 
 function TouchdownChanceCell({ line, onInspect }: { line: PlayerLine; onInspect: (statType: StatType) => void }) {
@@ -967,7 +961,7 @@ function SleeperRedraftBoardV2({ snapshot, history, seasonLines }: { snapshot: S
             {columnVisible("adp") && <td><strong className="adp-number">{row.adp.toFixed(1)}</strong><small>Overall</small></td>}
             {columnVisible("sleeperPositionRank") && <td><strong>{row.position}{row.sleeperPositionRank}</strong><small>All Sleeper {row.position}s</small></td>}
             {columnVisible("comparableSleeperPositionRank") && <td>{row.comparableSleeperPositionRank === null ? <span className="empty">—</span> : <><strong>{row.position}{row.comparableSleeperPositionRank}</strong><small>Complete pool</small></>}</td>}
-            {columnVisible("projectedPoints") && <td>{row.projectedPoints === null ? <><span className="empty">Not projected</span>{row.inferredProjectedPoints !== null && <strong className="fantasy-points inferred">Est. {row.inferredProjectedPoints.toFixed(2)}</strong>}<small className={row.inferredProjectedPoints !== null ? "historical-fallback" : ""}>{row.missingInputs.join(" + ")}</small></> : <><strong className="fantasy-points">{row.projectedPoints.toFixed(2)}</strong><small>Our ledger</small></>}</td>}
+            {columnVisible("projectedPoints") && <td>{row.projectedPoints === null ? <><span className="empty">Not projected</span>{row.inferredProjectedPoints !== null ? <strong className="fantasy-points inferred">Estimated {row.inferredProjectedPoints.toFixed(2)} fantasy pts</strong> : <small>{row.missingInputs.join(" + ")}</small>}</> : <><strong className="fantasy-points">{row.projectedPoints.toFixed(2)}</strong><small>Our ledger</small></>}</td>}
             {columnVisible("projectedPositionRank") && <td>{row.projectedPositionRank === null ? <span className="empty">—</span> : <><strong>{row.position}{row.projectedPositionRank}</strong><small>Complete pool</small></>}</td>}
             {columnVisible("valueGap") && <td>{row.valueGap === null ? <span className="needs-data-badge">Needs data</span> : <span className={`value-gap ${row.valueGap > 0 ? "positive" : row.valueGap < 0 ? "negative" : "even"}`}><strong>{row.valueGap > 0 ? "+" : ""}{row.valueGap}</strong><small>{row.valueGap > 0 ? "Our projection higher" : row.valueGap < 0 ? "Sleeper higher" : "Same rank"}</small></span>}</td>}
             {columnVisible("trend") && <td>{delta === undefined ? <span className="delta muted">—</span> : <button className="adp-trend-button" onClick={() => setChartPlayer(row)}><span className={`delta ${rising ? "up" : "down"}`}>{rising ? "↑" : "↓"} {Math.abs(delta).toFixed(1)}</span><small>{rising ? "Earlier" : "Later"}</small></button>}</td>}
