@@ -56,8 +56,9 @@ test("every visible category sorts and reverses without lifting missing values",
     const fantasyHeader = page.getByRole("columnheader", { name: /Calculated fantasy/i });
     await fantasyHeader.getByRole("button").click();
     const fantasyCells = await page.locator("tbody tr.data-row td:nth-child(6)").allTextContents();
-    const firstMissing = fantasyCells.findIndex((value) => value.includes("Not assigned"));
-    assert.ok(firstMissing === -1 || fantasyCells.slice(firstMissing).every((value) => value.includes("Not assigned")));
+    const isUnrankable = (value) => /Not assigned|Not enough verified data/i.test(value);
+    const firstMissing = fantasyCells.findIndex(isUnrankable);
+    assert.ok(firstMissing === -1 || fantasyCells.slice(firstMissing).every(isUnrankable));
     const statusHeader = page.getByRole("columnheader", { name: /Confidence/i });
     await statusHeader.getByRole("button").click();
     assert.notEqual(await statusHeader.getAttribute("aria-sort"), "none");
@@ -106,22 +107,21 @@ test("quarterback rows replace receptions with rushing yards and expose rushing 
     assert.equal(await page.locator("tbody tr.data-row td:nth-child(4)").filter({ hasText: "Receptions" }).count(), 0);
     assert.ok(await page.locator("tbody tr.data-row td:nth-child(5)").filter({ hasText: "Rush TD" }).count() > 0);
     const shough = page.locator("tbody tr.data-row").filter({ hasText: "Tyler Shough" }).first();
-    assert.match(await shough.locator("td:nth-child(4)").innerText(), /309\.7[\s\S]*50\/50 blend[\s\S]*W1 avg 17\.5\/G × 18 = 315[\s\S]*2025 NFL 16\.9\/G × 18 = 304\.4[\s\S]*sample: 11 games[\s\S]*final 309\.7/i);
+    assert.match(await shough.locator("td:nth-child(4)").innerText(), /Not offered[\s\S]*Estimated 309\.7[\s\S]*50\/50 blend[\s\S]*W1 avg 17\.5\/G × 18 = 315[\s\S]*2025 NFL 16\.9\/G × 18 = 304\.4[\s\S]*sample: 11 games[\s\S]*final 309\.7/i);
+    assert.match(await shough.locator("td:nth-child(6)").innerText(), /Not enough verified data[\s\S]*Est\.[\s\S]*excluded from fantasy rankings and sorting/i);
+    assert.equal(await shough.locator(".projection-rank.incomplete").innerText(), "NR");
     const rodgers = page.locator("tbody tr.data-row").filter({ hasText: "Aaron Rodgers" }).first();
-    assert.match(await rodgers.locator("td:nth-child(5)").innerText(), /1\.1[\s\S]*Rush TD[\s\S]*0\.1 rush TD\/G × 18 = 1\.1[\s\S]*sample: 16 games/i);
-    const brissett = page.locator("tbody tr.data-row").filter({ hasText: "Jacoby Brissett" }).first();
-    assert.match(await brissett.locator("td:nth-child(3)").innerText(), /Not offered/i);
-    assert.doesNotMatch(await brissett.locator("td:nth-child(5)").innerText(), /Pass TD/i);
-    assert.match(await brissett.locator("td:nth-child(5)").innerText(), /Rush TD/i);
-    assert.match(await brissett.locator("td:nth-child(6)").innerText(), /Not assigned/i);
-    const before = Number((await page.locator("tbody tr.data-row .fantasy-points").first().innerText()).replaceAll(",", ""));
+    assert.match(await rodgers.locator("td:nth-child(5)").innerText(), /Not offered[\s\S]*Rush TD[\s\S]*Estimated 1\.1[\s\S]*0\.1 rush TD\/G × 18 = 1\.1[\s\S]*sample: 16 games/i);
+    const verifiedFantasyRow = page.locator("tbody tr.data-row:has(.fantasy-points:not(.inferred))").first();
+    await verifiedFantasyRow.waitFor();
+    const before = Number((await verifiedFantasyRow.locator(".fantasy-points").innerText()).replaceAll(",", ""));
     const scoringToggle = page.locator(".qb-scoring-toggle");
     assert.match(await scoringToggle.innerText(), /QB pass TDs[\s\S]*4 pts/i);
     await scoringToggle.click();
     assert.equal(await scoringToggle.getAttribute("aria-pressed"), "true");
-    const after = Number((await page.locator("tbody tr.data-row .fantasy-points").first().innerText()).replaceAll(",", ""));
+    const after = Number((await verifiedFantasyRow.locator(".fantasy-points").innerText()).replaceAll(",", ""));
     assert.ok(after > before);
-    assert.match(await page.locator("tbody tr.data-row td:nth-child(6)").first().innerText(), /Pass TDs · 6 pts/i);
+    assert.match(await verifiedFantasyRow.locator("td:nth-child(6)").innerText(), /Pass TDs · 6 pts/i);
   } finally {
     await browser.close();
   }
@@ -156,7 +156,7 @@ test("tight end premium recalculates TE fantasy points and is available on both 
   }
 });
 
-test("season and Week 1 player names show position-specific projection ranks", async () => {
+test("verified fantasy projections receive position ranks while incomplete or inferred rows are NR", async () => {
   const browser = await chromium.launch({ channel: "chrome", headless: true });
   try {
     const page = await browser.newPage();
@@ -171,8 +171,13 @@ test("season and Week 1 player names show position-specific projection ranks", a
     await page.getByRole("button", { name: "WR", exact: true }).click();
     await page.getByRole("columnheader", { name: /Calculated fantasy/i }).getByRole("button").click();
     const weeklyRanks = await page.locator("tbody tr.data-row .projection-rank.ranked").allTextContents();
-    assert.ok(weeklyRanks.length > 1);
+    assert.ok(weeklyRanks.length > 0);
     assert.deepEqual(weeklyRanks.slice(0, 5), weeklyRanks.slice(0, 5).map((_, index) => `WR${index + 1}`));
+    assert.equal(
+      await page.locator("tbody tr.data-row .projection-rank").count(),
+      await page.locator("tbody tr.data-row").count(),
+    );
+    assert.ok(await page.locator("tbody tr.data-row .projection-rank.incomplete").count() > 0);
   } finally {
     await browser.close();
   }
@@ -210,7 +215,10 @@ test("skill players show total touchdowns with the rushing and receiving split",
     assert.ok(await page.locator("tbody tr.data-row td:nth-child(5) .total-touchdowns").count() > 0);
     assert.ok(await page.locator("tbody tr.data-row td:nth-child(5)").filter({ hasText: "Total TDs" }).count() > 0);
     const inferred = page.locator("tbody tr.data-row").filter({ hasText: "Kyren Williams" }).first().locator("td:nth-child(5)");
-    assert.match(await inferred.innerText(), /12\.5[\s\S]*Total TDs[\s\S]*Rush 9\.5 · Rec 3[\s\S]*Inferred from PrizePicks: 12.5 total − 9.5 rushing TDs/i);
+    assert.match(await inferred.innerText(), /12\.5[\s\S]*Total TDs[\s\S]*Rush 9\.5 · Rec —[\s\S]*Inferred from PrizePicks: 12.5 total − 9.5 rushing TDs = 3/i);
+    const kyrenRow = page.locator("tbody tr.data-row").filter({ hasText: "Kyren Williams" }).first();
+    assert.match(await kyrenRow.locator("td:nth-child(6)").innerText(), /Not enough verified data[\s\S]*Est\.[\s\S]*excluded from fantasy rankings and sorting/i);
+    assert.equal(await kyrenRow.locator(".projection-rank.incomplete").innerText(), "NR");
 
     const etienne = page.locator("tbody tr.data-row").filter({ hasText: "Travis Etienne" }).first().locator("td:nth-child(5)");
     assert.match(await etienne.innerText(), /5\.38[\s\S]*Total TDs[\s\S]*Rush 5\.38 · Rec —/i);
@@ -241,7 +249,7 @@ test("running backs use labeled 18-game NFL receiving pace only when no market l
     const veteran = page.locator("tbody tr.data-row").filter({ hasText: "Jaylen Warren" }).first();
     assert.match(await veteran.locator("td:nth-child(3)").innerText(), /374\.6[\s\S]*2025 NFL · 333 yds \/ 16 G × 18 = 374\.6/i);
     assert.match(await veteran.locator("td:nth-child(4)").innerText(), /45[\s\S]*2025 NFL · 40 rec \/ 16 G × 18 = 45/i);
-    assert.match(await veteran.locator("td:nth-child(6)").innerText(), /Includes 18-game 2025 NFL pace: receptions \+ receiving yards/i);
+    assert.match(await veteran.locator("td:nth-child(6)").innerText(), /Uses 18-game 2025 NFL pace: receptions \+ receiving yards/i);
     const sportsbook = page.locator("tbody tr.data-row").filter({ hasText: "Bijan Robinson" }).first();
     assert.doesNotMatch(await sportsbook.locator("td:nth-child(3)").innerText(), /2025 NFL/i);
     assert.doesNotMatch(await sportsbook.locator("td:nth-child(4)").innerText(), /2025 NFL/i);
@@ -403,7 +411,8 @@ test("Sleeper redraft is a separate 12-team positional value board", async () =>
     await page.getByRole("button", { name: "Needs data", exact: true }).click();
     assert.ok(await page.locator("tbody tr.data-row").count() > 0);
     assert.equal(await page.locator("tbody tr.data-row .needs-data-badge").count(), await page.locator("tbody tr.data-row").count());
-    assert.match(await page.locator("tbody tr.data-row").first().innerText(), /receptions|yards|TDs|No ledger match/i);
+    assert.match(await page.locator("tbody tr.data-row").first().innerText(), /receptions|yards|TDs|inferred inputs|No ledger match/i);
+    assert.ok(await page.locator("tbody tr.data-row .fantasy-points.inferred").count() > 0);
     await page.getByRole("button", { name: "Comparable only", exact: true }).click();
     const comparable = page.locator("tbody tr.data-row").first();
     assert.match(await comparable.locator("td:nth-child(4)").innerText(), /(QB|RB|WR|TE)\d+/i);

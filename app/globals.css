@@ -214,6 +214,7 @@ td > small { display: block; margin-top: 5px; }
 .passing-td-expectation strong { color: var(--lime); font-size: 1.08rem; font-variant-numeric: tabular-nums; }
 .passing-td-expectation small:last-child { color: var(--muted); max-width: 240px; }
 .fantasy-points { display: block; color: var(--green); font-size: 1.1rem; font-variant-numeric: tabular-nums; }
+.fantasy-points.inferred { margin-top: 5px; color: var(--amber); font-size: .76rem; font-weight: 800; }
 .adp-number { color: var(--lime); font-size: 1.08rem; font-variant-numeric: tabular-nums; }
 .value-gap { display: grid; gap: 4px; }
 .value-gap strong { font-size: 1.08rem; font-variant-numeric: tabular-nums; }
