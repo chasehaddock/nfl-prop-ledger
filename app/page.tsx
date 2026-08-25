@@ -23,6 +23,7 @@ type SortKey = "player" | "book" | "yards" | "secondary" | "touchdowns" | "fanta
 type SortState = { key: SortKey; direction: "asc" | "desc" };
 type BoardMode = "season" | "week1" | "sleeper";
 type TePremium = 0 | 0.5 | 1;
+type PprScoring = 0 | 0.5 | 1;
 type SleeperAdpPlayer = { id: string; name: string; team: string; position: Position; rank: number | null; adp: number; bye: number | null; sleeperPoints: number | null };
 type SleeperAdpMove = { date: string; player: { id: string; name: string; team: string; position: Position }; adp: number; adpDelta: number; changeType: "adp_risen" | "adp_fallen" };
 type SleeperAdpSnapshot = { demo: boolean; date?: string; capturedAt?: string; source: string; format?: { teams: number; rounds: number; receptionPpr: number; passingTdPoints: number; slots: Record<string, number> }; players: SleeperAdpPlayer[]; movements?: SleeperAdpMove[] };
@@ -470,28 +471,29 @@ function TrendCard({ moves, isDemo, waitingForWeekly, range, onRange, onSelect }
   </section>;
 }
 
-function displayedFantasyPoints(line: PlayerLine, qbPassTdPoints: 4 | 6, tePremium: TePremium): number | null {
+function displayedFantasyPoints(line: PlayerLine, qbPassTdPoints: 4 | 6, tePremium: TePremium, pprScoring: PprScoring): number | null {
   if (line.fantasyPoints === null) return null;
   let points = line.fantasyPoints;
   const passingTouchdowns = line.passingTouchdownExpectation ?? line.touchdowns?.line;
   if (line.position === "QB" && qbPassTdPoints === 6 && passingTouchdowns !== undefined && passingTouchdowns !== null) points += passingTouchdowns * 2;
+  if (line.position !== "QB" && line.receptions) points -= line.receptions.line * (1 - pprScoring);
   if (line.position === "TE" && tePremium > 0 && line.receptions) points += line.receptions.line * tePremium;
   return points;
 }
 
-function rankableFantasyPoints(line: PlayerLine, qbPassTdPoints: 4 | 6, tePremium: TePremium): number | null {
-  return line.fantasyUsesInference ? null : displayedFantasyPoints(line, qbPassTdPoints, tePremium);
+function rankableFantasyPoints(line: PlayerLine, qbPassTdPoints: 4 | 6, tePremium: TePremium, pprScoring: PprScoring): number | null {
+  return line.fantasyUsesInference ? null : displayedFantasyPoints(line, qbPassTdPoints, tePremium, pprScoring);
 }
 
-function projectedPositionRanks(lines: PlayerLine[], qbPassTdPoints: 4 | 6, tePremium: TePremium): Map<string, number> {
+function projectedPositionRanks(lines: PlayerLine[], qbPassTdPoints: 4 | 6, tePremium: TePremium, pprScoring: PprScoring): Map<string, number> {
   const ranks = new Map<string, number>();
   positions.filter((item): item is Position => item !== "ALL").forEach((position) => {
     lines
       .filter((line) => line.position === position)
-      .filter((line) => rankableFantasyPoints(line, qbPassTdPoints, tePremium) !== null)
+      .filter((line) => rankableFantasyPoints(line, qbPassTdPoints, tePremium, pprScoring) !== null)
       .sort((left, right) => {
-        const leftPoints = rankableFantasyPoints(left, qbPassTdPoints, tePremium)!;
-        const rightPoints = rankableFantasyPoints(right, qbPassTdPoints, tePremium)!;
+        const leftPoints = rankableFantasyPoints(left, qbPassTdPoints, tePremium, pprScoring)!;
+        const rightPoints = rankableFantasyPoints(right, qbPassTdPoints, tePremium, pprScoring)!;
         return rightPoints - leftPoints || left.player.localeCompare(right.player);
       })
       .forEach((line, index) => ranks.set(line.id, index + 1));
@@ -504,14 +506,14 @@ function visibleOptionalRushingYards(line: PlayerLine): Cell | null {
   return cell?.line === 0 && cell.fallbackLabel ? null : cell;
 }
 
-function FantasyCell({ line, qbPassTdPoints, tePremium }: { line: PlayerLine; qbPassTdPoints: 4 | 6; tePremium: TePremium }) {
-  const points = displayedFantasyPoints(line, qbPassTdPoints, tePremium);
+function FantasyCell({ line, qbPassTdPoints, tePremium, pprScoring }: { line: PlayerLine; qbPassTdPoints: 4 | 6; tePremium: TePremium; pprScoring: PprScoring }) {
+  const points = displayedFantasyPoints(line, qbPassTdPoints, tePremium, pprScoring);
   if (points === null) return <><span className="empty">Not assigned</span><small>Missing a verified prop</small></>;
   const priorReceivingFallbacks = [line.fantasyUsesReceptionFallback && "receptions", line.fantasyUsesReceivingYardsFallback && "receiving yards"].filter(Boolean).join(" + ");
   const priorQbFallbacks = [line.fantasyUsesQbRushingYardsFallback && "rushing yards", line.fantasyUsesQbRushingTouchdownsFallback && "rushing TDs"].filter(Boolean).join(" + ");
   const visibleAdditionalInferences = line.fantasyAdditionalInferences.filter((label) => !(label === "Rush yards" && visibleOptionalRushingYards(line) === null));
   if (line.fantasyUsesInference) return <><span className="empty">Not enough verified data</span><strong className="fantasy-points inferred">Est. {points.toFixed(2)}</strong><small className="historical-fallback">Display only · excluded from fantasy rankings and sorting</small>{priorReceivingFallbacks && <small className="historical-fallback">Uses 18-game 2025 NFL pace: {priorReceivingFallbacks}</small>}{priorQbFallbacks && <small className="historical-fallback">Uses inferred season values: {priorQbFallbacks}</small>}{visibleAdditionalInferences.length > 0 && <small className="historical-fallback">Other inferred values: {visibleAdditionalInferences.join(" + ")}</small>}</>;
-  return <><strong className="fantasy-points">{points.toFixed(2)}</strong><small>{line.fantasyBooks.join(" + ")}</small>{line.position === "QB" && <small className="qb-scoring-note">Pass TDs · {qbPassTdPoints} pts</small>}{line.position === "TE" && <small className="tep-scoring-note">TEP {tePremium.toFixed(1)} · {(1 + tePremium).toFixed(1)} pts/reception</small>}{line.passingTouchdownExpectationNote && <small className="vig-free-note">Uses {line.passingTouchdownExpectationNote}</small>}{priorReceivingFallbacks && <small className="historical-fallback">Includes 18-game 2025 NFL pace: {priorReceivingFallbacks}</small>}{priorQbFallbacks && <small className="historical-fallback">Includes inferred season values: {priorQbFallbacks}</small>}{visibleAdditionalInferences.length > 0 && <small className="historical-fallback">Other inferred season values: {visibleAdditionalInferences.join(" + ")}</small>}{line.touchdownProbabilityNote && <small className="vig-free-note">{line.touchdownProbabilityNote}</small>}</>;
+  return <><strong className="fantasy-points">{points.toFixed(2)}</strong><small>{line.fantasyBooks.join(" + ")}</small>{line.position === "QB" && <small className="qb-scoring-note">Pass TDs · {qbPassTdPoints} pts</small>}{line.position !== "QB" && <small className="ppr-scoring-note">PPR {pprScoring.toFixed(1)} · {pprScoring.toFixed(1)} pts/reception</small>}{line.position === "TE" && <small className="tep-scoring-note">TEP {tePremium.toFixed(1)} · {(pprScoring + tePremium).toFixed(1)} total pts/reception</small>}{line.passingTouchdownExpectationNote && <small className="vig-free-note">Uses {line.passingTouchdownExpectationNote}</small>}{priorReceivingFallbacks && <small className="historical-fallback">Includes 18-game 2025 NFL pace: {priorReceivingFallbacks}</small>}{priorQbFallbacks && <small className="historical-fallback">Includes inferred season values: {priorQbFallbacks}</small>}{visibleAdditionalInferences.length > 0 && <small className="historical-fallback">Other inferred season values: {visibleAdditionalInferences.join(" + ")}</small>}{line.touchdownProbabilityNote && <small className="vig-free-note">{line.touchdownProbabilityNote}</small>}</>;
 }
 
 function TouchdownChanceCell({ line, onInspect }: { line: PlayerLine; onInspect: (statType: StatType) => void }) {
@@ -526,20 +528,20 @@ function TouchdownChanceCell({ line, onInspect }: { line: PlayerLine; onInspect:
   return chance;
 }
 
-function sortValue(line: PlayerLine, key: SortKey, qbPassTdPoints: 4 | 6, tePremium: TePremium): string | number | null {
+function sortValue(line: PlayerLine, key: SortKey, qbPassTdPoints: 4 | 6, tePremium: TePremium, pprScoring: PprScoring): string | number | null {
   if (key === "player") return line.player;
   if (key === "book") return line.book;
   if (key === "yards") return line.yards?.line ?? null;
   if (key === "secondary") return line.position === "QB" ? line.rushingYards?.line ?? null : line.receptions?.line ?? null;
   if (key === "touchdowns") return line.touchdownProbability ?? (line.position === "QB" ? line.touchdowns?.line ?? null : skillTouchdownTotal(line));
-  if (key === "fantasyPoints") return rankableFantasyPoints(line, qbPassTdPoints, tePremium);
+  if (key === "fantasyPoints") return rankableFantasyPoints(line, qbPassTdPoints, tePremium, pprScoring);
   if (key === "prizePicksFantasyScore") return line.prizePicksFantasyScore?.line ?? null;
   return { strong: 3, partial: 2, thin: 1 }[line.confidence];
 }
 
-function compareLines(a: PlayerLine, b: PlayerLine, sort: SortState, qbPassTdPoints: 4 | 6, tePremium: TePremium): number {
-  const aValue = sortValue(a, sort.key, qbPassTdPoints, tePremium);
-  const bValue = sortValue(b, sort.key, qbPassTdPoints, tePremium);
+function compareLines(a: PlayerLine, b: PlayerLine, sort: SortState, qbPassTdPoints: 4 | 6, tePremium: TePremium, pprScoring: PprScoring): number {
+  const aValue = sortValue(a, sort.key, qbPassTdPoints, tePremium, pprScoring);
+  const bValue = sortValue(b, sort.key, qbPassTdPoints, tePremium, pprScoring);
   if (aValue === null && bValue !== null) return 1;
   if (aValue !== null && bValue === null) return -1;
   if (aValue === null || bValue === null) return a.player.localeCompare(b.player);
@@ -905,6 +907,7 @@ export default function Home() {
   const [trendRange, setTrendRange] = useState<TrendRange>("today");
   const [qbPassTdPoints, setQbPassTdPoints] = useState<4 | 6>(4);
   const [tePremium, setTePremium] = useState<TePremium>(0);
+  const [pprScoring, setPprScoring] = useState<PprScoring>(1);
 
   useEffect(() => {
     const dataRoot = import.meta.env.BASE_URL;
@@ -958,8 +961,8 @@ export default function Home() {
       .sort((a, b) => b.date.localeCompare(a.date) || Math.abs(b.lineDelta) - Math.abs(a.lineDelta) || a.player.name.localeCompare(b.player.name));
   }, [snapshot, allLines, history, trendRange, boardMode]);
   const books = useMemo(() => ["All sources", ...new Set(allLines.flatMap((line) => line.availableBooks))], [allLines]);
-  const positionRanks = useMemo(() => projectedPositionRanks(allLines, qbPassTdPoints, tePremium), [allLines, qbPassTdPoints, tePremium]);
-  const lines = useMemo(() => allLines.filter((line) => position === "ALL" || line.position === position).filter((line) => book === "All sources" || line.availableBooks.includes(book)).filter((line) => `${line.player} ${line.team}`.toLowerCase().includes(query.toLowerCase())).sort((a, b) => compareLines(a, b, sort, qbPassTdPoints, tePremium)), [allLines, position, book, query, sort, qbPassTdPoints, tePremium]);
+  const positionRanks = useMemo(() => projectedPositionRanks(allLines, qbPassTdPoints, tePremium, pprScoring), [allLines, qbPassTdPoints, tePremium, pprScoring]);
+  const lines = useMemo(() => allLines.filter((line) => position === "ALL" || line.position === position).filter((line) => book === "All sources" || line.availableBooks.includes(book)).filter((line) => `${line.player} ${line.team}`.toLowerCase().includes(query.toLowerCase())).sort((a, b) => compareLines(a, b, sort, qbPassTdPoints, tePremium, pprScoring)), [allLines, position, book, query, sort, qbPassTdPoints, tePremium, pprScoring]);
   const changeSort = (key: SortKey) => setSort((current) => current.key === key
     ? { key, direction: current.direction === "asc" ? "desc" : "asc" }
     : { key, direction: ["yards", "secondary", "touchdowns", "fantasyPoints", "prizePicksFantasyScore"].includes(key) ? "desc" : "asc" });
@@ -1005,7 +1008,7 @@ export default function Home() {
     <aside className="trend-column" aria-label="Line movement panel"><TrendCard moves={trendMoves} isDemo={isDemo} waitingForWeekly={waitingForWeekly} range={trendRange} onRange={setTrendRange} onSelect={focusTrend} /></aside>
     <section className="ledger" aria-labelledby="ledger-title">
       <div className="ledger-heading"><div><p className="eyebrow">{waitingForWeekly ? "Data-ready board" : isDemo ? "Preview board" : "Verified board"}</p><h2 id="ledger-title">{boardMode === "season" ? "Season totals" : "Week 1 projections"}</h2></div><div className="ledger-tools">{(query || position !== "ALL" || book !== "All sources") && <button className="back-to-all" onClick={resetAllPlayers}>← Back to all players</button>}<label className="search"><span className="sr-only">Search players or teams</span><span aria-hidden="true">⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search player or team" /></label></div></div>
-      <div className="filters" aria-label={`Filter ${boardMode === "season" ? "season totals" : "Week 1 projections"}`}><div className="position-tabs" role="group" aria-label="Position">{positions.map((item) => <button key={item} className={position === item ? "active" : ""} onClick={() => setPosition(item)}>{item}</button>)}</div><div className="filter-actions"><button className={`qb-scoring-toggle ${qbPassTdPoints === 6 ? "active" : ""}`} aria-pressed={qbPassTdPoints === 6} onClick={() => setQbPassTdPoints((points) => points === 4 ? 6 : 4)}><span>QB pass TDs</span><strong>{qbPassTdPoints} pts</strong></button><div className="tep-toggle" role="group" aria-label="Tight end premium"><span>TEP</span>{([0, 0.5, 1] as TePremium[]).map((premium) => <button key={premium} className={tePremium === premium ? "active" : ""} aria-pressed={tePremium === premium} onClick={() => setTePremium(premium)}>{premium.toFixed(1)}</button>)}</div><label className="book-filter"><span>Source</span><select value={book} onChange={(event) => setBook(event.target.value)}>{books.map((item) => <option key={item}>{item}</option>)}</select></label></div></div>
+      <div className="filters" aria-label={`Filter ${boardMode === "season" ? "season totals" : "Week 1 projections"}`}><div className="position-tabs" role="group" aria-label="Position">{positions.map((item) => <button key={item} className={position === item ? "active" : ""} onClick={() => setPosition(item)}>{item}</button>)}</div><div className="filter-actions"><button className={`qb-scoring-toggle ${qbPassTdPoints === 6 ? "active" : ""}`} aria-pressed={qbPassTdPoints === 6} onClick={() => setQbPassTdPoints((points) => points === 4 ? 6 : 4)}><span>QB pass TDs</span><strong>{qbPassTdPoints} pts</strong></button><div className="ppr-toggle" role="group" aria-label="Points per reception"><span>PPR</span>{([1, 0.5, 0] as PprScoring[]).map((points) => <button key={points} className={pprScoring === points ? "active" : ""} aria-pressed={pprScoring === points} onClick={() => setPprScoring(points)}>{points.toFixed(1)}</button>)}</div><div className="tep-toggle" role="group" aria-label="Tight end premium"><span>TEP</span>{([0, 0.5, 1] as TePremium[]).map((premium) => <button key={premium} className={tePremium === premium ? "active" : ""} aria-pressed={tePremium === premium} onClick={() => setTePremium(premium)}>{premium.toFixed(1)}</button>)}</div><label className="book-filter"><span>Source</span><select value={book} onChange={(event) => setBook(event.target.value)}>{books.map((item) => <option key={item}>{item}</option>)}</select></label></div></div>
       <div className="table-wrap">
         <table>
           <thead><tr>
@@ -1014,14 +1017,14 @@ export default function Home() {
             <SortHeader sortKey="yards" label="Yards" hint="Passing + rushing + receiving" sort={sort} onSort={changeSort} />
             <SortHeader sortKey="secondary" label={position === "QB" ? "Rushing yards" : position === "ALL" ? "Receptions / QB rush yards" : "Receptions"} hint="When offered" sort={sort} onSort={changeSort} />
             <SortHeader sortKey="touchdowns" label={boardMode === "week1" ? "TD chance" : "Touchdowns"} hint={boardMode === "week1" ? "Any rushing or receiving TD" : "Passing + rushing + receiving"} sort={sort} onSort={changeSort} />
-            <SortHeader sortKey="fantasyPoints" label="Calculated fantasy" hint={`Full PPR · TEP ${tePremium.toFixed(1)} · ${boardMode === "season" ? "season" : "Week 1"}`} sort={sort} onSort={changeSort} />
+            <SortHeader sortKey="fantasyPoints" label="Calculated fantasy" hint={`${pprScoring.toFixed(1)} PPR · TEP ${tePremium.toFixed(1)} · ${boardMode === "season" ? "season" : "Week 1"}`} sort={sort} onSort={changeSort} />
             {boardMode === "week1" && <SortHeader sortKey="prizePicksFantasyScore" label="PrizePicks fantasy score" hint="Posted projection" sort={sort} onSort={changeSort} />}
             <SortHeader sortKey="status" label="Confidence" hint="Coverage + completeness" sort={sort} onSort={changeSort} />
           </tr></thead>
           <tbody>{lines.map((line) => {
             const expanded = selected?.playerId === line.id;
             const positionRank = positionRanks.get(line.id);
-            const hasCompleteProjection = rankableFantasyPoints(line, qbPassTdPoints, tePremium) !== null;
+            const hasCompleteProjection = rankableFantasyPoints(line, qbPassTdPoints, tePremium, pprScoring) !== null;
             const extraYards = line.position === "QB" ? [] : line.position === "RB" ? [{ cell: line.receivingYards, label: "Rec yds" }] : [{ cell: visibleOptionalRushingYards(line), label: "Rush yds" }];
             const inspect = (statType: StatType) => setSelected({ playerId: line.id, statType });
             return <Fragment key={line.id}>
@@ -1031,7 +1034,7 @@ export default function Home() {
                 <td><StatStack entries={[{ cell: line.yards, label: line.yardLabel }, ...extraYards]} preferredSource={line.source} player={line.player} onInspect={inspect} /></td>
                 <td><LineCell cell={line.position === "QB" ? line.rushingYards : line.receptions} label={line.position === "QB" ? "Rush yds" : "Receptions"} preferredSource={line.source} player={line.player} onInspect={inspect} /></td>
                 <td>{boardMode === "week1" ? <TouchdownChanceCell line={line} onInspect={inspect} /> : <SeasonTouchdownCell line={line} onInspect={inspect} />}</td>
-                <td><FantasyCell line={line} qbPassTdPoints={qbPassTdPoints} tePremium={tePremium} /></td>
+                <td><FantasyCell line={line} qbPassTdPoints={qbPassTdPoints} tePremium={tePremium} pprScoring={pprScoring} /></td>
                 {boardMode === "week1" && <td><LineCell cell={line.prizePicksFantasyScore} label="PrizePicks" preferredSource="prizepicks" player={line.player} onInspect={inspect} /></td>}
                 <td><span className={`confidence ${line.confidence}`}><i aria-hidden="true" />{line.confidence[0].toUpperCase() + line.confidence.slice(1)}</span><small>{line.confidenceNote}</small><small className={`verification-note ${line.status}`}>{line.status === "verified" ? "Verified" : "Review"} · {line.verifiedAt}</small></td>
               </tr>

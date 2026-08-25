@@ -144,13 +144,45 @@ test("tight end premium recalculates TE fantasy points and is available on both 
     await page.locator(".tep-toggle").getByRole("button", { name: "1.0", exact: true }).click();
     const full = Number(await row.locator(".fantasy-points").innerText());
     assert.ok(Math.abs(full - (base + receptions)) < 0.02);
-    assert.match(await row.locator("td:nth-child(6)").innerText(), /TEP 1\.0 · 2\.0 pts\/reception/i);
+    assert.match(await row.locator("td:nth-child(6)").innerText(), /TEP 1\.0 · 2\.0 total pts\/reception/i);
     assert.equal(await page.locator(".tep-toggle").getByRole("button", { name: "1.0", exact: true }).getAttribute("aria-pressed"), "true");
     assert.match(await page.getByRole("columnheader", { name: /Calculated fantasy/i }).innerText(), /TEP 1\.0 · season/i);
     await page.getByRole("button", { name: /Weekly Week 1 projections/i }).click();
     assert.equal(await page.locator(".tep-toggle").count(), 1);
     assert.equal(await page.locator(".tep-toggle").getByRole("button", { name: "1.0", exact: true }).getAttribute("aria-pressed"), "true");
     assert.match(await page.getByRole("columnheader", { name: /Calculated fantasy/i }).innerText(), /TEP 1\.0 · Week 1/i);
+  } finally {
+    await browser.close();
+  }
+});
+
+test("base PPR recalculates RB, WR, and TE fantasy points and persists across projection boards", async () => {
+  const browser = await chromium.launch({ channel: "chrome", headless: true });
+  try {
+    const page = await browser.newPage();
+    await page.goto(process.env.TEST_URL || "http://127.0.0.1:4173", { waitUntil: "networkidle" });
+    const pprToggle = page.locator(".ppr-toggle");
+    assert.equal(await pprToggle.getByRole("button", { name: "1.0", exact: true }).getAttribute("aria-pressed"), "true");
+
+    await page.getByRole("button", { name: "RB", exact: true }).click();
+    const row = page.locator("tbody tr.data-row:has(td:nth-child(4) .number-cell strong):has(.fantasy-points:not(.inferred))").first();
+    await row.waitFor();
+    const receptions = Number((await row.locator("td:nth-child(4) .number-cell strong").innerText()).replaceAll(",", ""));
+    const full = Number(await row.locator(".fantasy-points").innerText());
+
+    await pprToggle.getByRole("button", { name: "0.5", exact: true }).click();
+    const half = Number(await row.locator(".fantasy-points").innerText());
+    assert.ok(Math.abs(half - (full - receptions * 0.5)) < 0.02);
+
+    await pprToggle.getByRole("button", { name: "0.0", exact: true }).click();
+    const standard = Number(await row.locator(".fantasy-points").innerText());
+    assert.ok(Math.abs(standard - (full - receptions)) < 0.02);
+    assert.match(await row.locator("td:nth-child(6)").innerText(), /PPR 0\.0 · 0\.0 pts\/reception/i);
+    assert.match(await page.getByRole("columnheader", { name: /Calculated fantasy/i }).innerText(), /0\.0 PPR/i);
+
+    await page.getByRole("button", { name: /Weekly Week 1 projections/i }).click();
+    assert.equal(await page.locator(".ppr-toggle").getByRole("button", { name: "0.0", exact: true }).getAttribute("aria-pressed"), "true");
+    assert.match(await page.getByRole("columnheader", { name: /Calculated fantasy/i }).innerText(), /0\.0 PPR[\s\S]*Week 1/i);
   } finally {
     await browser.close();
   }
