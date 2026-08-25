@@ -6,6 +6,8 @@ test("builds a deployable Prop Ledger site with its data files", async () => {
   const html = await readFile(new URL("../dist/index.html", import.meta.url), "utf8");
   assert.match(html, /Prop Ledger — NFL Season Totals/);
   assert.match(html, /<div id="root"><\/div>/);
+  assert.match(html, /(?:src|href)="\.\/assets\//);
+  assert.doesNotMatch(html, /(?:src|href)="\/assets\//);
   const assets = await readdir(new URL("../dist/assets/", import.meta.url));
   assert.ok(assets.some((file) => file.endsWith(".js")));
   assert.ok(assets.some((file) => file.endsWith(".css")));
