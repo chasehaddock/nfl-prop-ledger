@@ -479,7 +479,14 @@ test("Week 1 has a separate data-ready board and movement history", async () => 
     const darnoldTdCell = page.locator("tbody tr.data-row").filter({ hasText: "Sam Darnold" }).first().locator("td:nth-child(5)");
     assert.equal(await darnoldTdCell.locator(".passing-td-expectation").count(), 1);
     assert.match(await darnoldTdCell.innerText(), /1\.45[\s\S]*Expected pass TDs · FanDuel no-vig/i);
-    assert.doesNotMatch(await darnoldTdCell.innerText(), /Pass TD · 4 pts|O 1\.5|U 1\.5/i);
+    assert.match(await darnoldTdCell.innerText(), /FanDuel Pass TDs · O 1\.5 \+106 \/ U 1\.5 -140/i);
+    assert.doesNotMatch(await darnoldTdCell.innerText(), /Pass TD · 4 pts/i);
+    const darnoldFantasyCell = page.locator("tbody tr.data-row").filter({ hasText: "Sam Darnold" }).first().locator("td:nth-child(6)");
+    assert.match(await darnoldFantasyCell.innerText(), /Pass TDs · 4 pts/i);
+    assert.doesNotMatch(await darnoldFantasyCell.innerText(), /vig removed|O 1\.5|U 1\.5/i);
+    await page.getByPlaceholder("Search player or team").fill("Ja'Marr Chase");
+    const chaseTdCell = page.locator("tbody tr.data-row").filter({ hasText: "Ja'Marr Chase" }).first().locator("td:nth-child(5)");
+    assert.match(await chaseTdCell.innerText(), /O\/U odds unavailable · PrizePicks/i);
     await page.getByPlaceholder("Search player or team").fill("");
     assert.ok(await page.locator("tbody tr.data-row td:nth-child(7) .number-cell").count() > 0);
     const weeklyTrend = page.locator(".trend-card:not(.new-props-card)");

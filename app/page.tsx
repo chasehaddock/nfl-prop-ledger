@@ -577,16 +577,39 @@ function FantasyCell({ line, qbPassTdPoints, tePremium, pprScoring }: { line: Pl
   const points = displayedFantasyPoints(line, qbPassTdPoints, tePremium, pprScoring);
   if (points === null) return <><span className="empty">Not assigned</span><small>Missing a verified prop</small></>;
   if (line.fantasyUsesInference) return <><span className="empty">Not enough verified data</span><strong className="fantasy-points inferred">Estimated {points.toFixed(2)} fantasy pts</strong></>;
-  return <><strong className="fantasy-points">{points.toFixed(2)}</strong><small>{line.fantasyBooks.join(" + ")}</small>{line.position === "QB" && <small className="qb-scoring-note">Pass TDs · {qbPassTdPoints} pts</small>}{line.position !== "QB" && <small className="ppr-scoring-note">PPR {pprScoring.toFixed(1)} · {pprScoring.toFixed(1)} pts/reception</small>}{line.position === "TE" && <small className="tep-scoring-note">TEP {tePremium.toFixed(1)} · {(pprScoring + tePremium).toFixed(1)} total pts/reception</small>}{line.passingTouchdownExpectationNote && <small className="vig-free-note">Uses {line.passingTouchdownExpectationNote}</small>}{line.touchdownProbabilityNote && <small className="vig-free-note">{line.touchdownProbabilityNote}</small>}</>;
+  return <><strong className="fantasy-points">{points.toFixed(2)}</strong><small>{line.fantasyBooks.join(" + ")}</small>{line.position === "QB" && <small className="qb-scoring-note">Pass TDs · {qbPassTdPoints} pts</small>}{line.position !== "QB" && <small className="ppr-scoring-note">PPR {pprScoring.toFixed(1)} · {pprScoring.toFixed(1)} pts/reception</small>}{line.position === "TE" && <small className="tep-scoring-note">TEP {tePremium.toFixed(1)} · {(pprScoring + tePremium).toFixed(1)} total pts/reception</small>}</>;
+}
+
+function americanOddsLabel(value: number | undefined): string {
+  if (!Number.isFinite(value)) return "—";
+  return `${value! > 0 ? "+" : ""}${value}`;
+}
+
+function touchdownOddsLines(line: PlayerLine): string[] {
+  const statTypes: StatType[] = line.position === "QB"
+    ? ["passing_touchdowns"]
+    : (line.sourcesByStat.offensive_touchdowns || []).some((cell) => Number.isFinite(cell.overOdds))
+      ? ["offensive_touchdowns"]
+      : ["rushing_touchdowns", "receiving_touchdowns"];
+  return statTypes.flatMap((statType) => (line.sourcesByStat[statType] || [])
+    .filter((cell) => cell.status === "open" && Number.isFinite(cell.overOdds))
+    .map((cell) => {
+      const statLabel = statType === "offensive_touchdowns" ? "Any TD" : STAT_LABELS[statType];
+      return `${cell.sourceName} ${statLabel} · O ${cell.line} ${americanOddsLabel(cell.overOdds)} / U ${cell.line} ${americanOddsLabel(cell.underOdds)}`;
+    }));
 }
 
 function TouchdownChanceCell({ line, onInspect }: { line: PlayerLine; onInspect: (statType: StatType) => void }) {
+  const oddsLines = touchdownOddsLines(line);
+  const oddsDetails = oddsLines.length
+    ? oddsLines.map((odds) => <small className="touchdown-odds" key={odds}>{odds}</small>)
+    : <small className="touchdown-odds unavailable">O/U odds unavailable{line.fantasyTdOddsBooks.length ? ` · ${line.fantasyTdOddsBooks.join(" + ")}` : ""}</small>;
   const chance = line.touchdownProbability === null
     ? <span className="empty">Not offered</span>
-    : <div className="touchdown-chance"><strong>{(line.touchdownProbability * 100).toFixed(1)}%</strong><small>Scores any rush/rec TD</small>{line.touchdownProbabilityNote && <small>{line.touchdownProbabilityNote}</small>}</div>;
+    : <div className="touchdown-chance"><strong>{(line.touchdownProbability * 100).toFixed(1)}%</strong><small>Scores any rush/rec TD</small>{oddsDetails}{line.touchdownProbabilityNote && <small>{line.touchdownProbabilityNote}</small>}</div>;
   if (line.position !== "QB") return chance;
   if (line.passingTouchdownExpectation !== null) {
-    return <button className="prop-trigger passing-td-expectation" onClick={() => onInspect("passing_touchdowns")} aria-label={`Compare ${line.player} Passing TDs across sources`}><strong>{line.passingTouchdownExpectation.toFixed(2)}</strong><small>Expected pass TDs · FanDuel no-vig</small></button>;
+    return <button className="prop-trigger passing-td-expectation" onClick={() => onInspect("passing_touchdowns")} aria-label={`Compare ${line.player} Passing TDs across sources`}><strong>{line.passingTouchdownExpectation.toFixed(2)}</strong><small>Expected pass TDs · FanDuel no-vig</small>{oddsDetails}</button>;
   }
   if (line.touchdowns) return <LineCell cell={line.touchdowns} label="Pass TD · 4 pts" preferredSource={line.source} player={line.player} onInspect={onInspect} />;
   return chance;
