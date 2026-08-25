@@ -1,0 +1,49 @@
+{
+  "name": "nfl-prop-ledger",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "start": "vite preview --host 0.0.0.0",
+    "test": "node --test tests/draftkings-adapter.test.mjs tests/fanduel-adapter.test.mjs tests/betmgm-adapter.test.mjs tests/prizepicks-adapter.test.mjs tests/capture-processor.test.mjs tests/daily-run.test.mjs tests/extension-run-state.test.mjs tests/fantasy.test.mjs tests/ledger-validation.test.mjs tests/ledger-transitions.test.mjs tests/local-site.test.mjs tests/operator-automation.test.mjs tests/player-selection.test.mjs tests/prior-season-player-stats.test.mjs tests/prior-season-qb-rushing.test.mjs tests/prior-season-receptions.test.mjs tests/roster.test.mjs tests/sleeper-adp.test.mjs && npm run build && node --test tests/rendered-html.test.mjs",
+    "test:ui": "node --test tests/ui-smoke.test.mjs",
+    "lint": "eslint app collector extension lib scripts src tests vite.config.ts",
+    "collect:dk": "node collector/run-draftkings.mjs",
+    "collect:setup": "COLLECTOR_HEADFUL=1 node collector/setup-browser.mjs",
+    "ledger:ingest": "node scripts/ingest-captures.mjs",
+    "ledger:publish": "node scripts/build-public-data.mjs",
+    "ledger:daily": "node scripts/run-daily.mjs",
+    "operator:install": "node scripts/install-operator.mjs",
+    "operator:health": "node scripts/operator-health.mjs",
+    "operator:run": "node scripts/run-automatic.mjs",
+    "site:local": "node scripts/serve-local.mjs",
+    "source:publish": "node scripts/publish-source-branch.mjs"
+  },
+  "dependencies": {
+    "csv-parse": "^7.0.2",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.4",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "eslint": "9.39.4",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "16.4.0",
+    "playwright": "^1.62.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.59.3",
+    "vite": "8.0.13"
+  },
+  "type": "module"
+}

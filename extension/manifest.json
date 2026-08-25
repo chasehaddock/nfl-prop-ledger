@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "NFL Prop Ledger Collector",
+  "version": "0.2.15",
+  "description": "Captures verified NFL prop boards and Sleeper redraft ADP twice for the local ledger.",
+  "permissions": ["alarms", "downloads", "scripting", "storage", "tabs"],
+  "host_permissions": [
+    "https://sportsbook.draftkings.com/*",
+    "https://sportsbook.fanduel.com/*",
+    "https://www.az.betmgm.com/*",
+    "https://app.prizepicks.com/*",
+    "https://sleeper.com/*",
+    "http://127.0.0.1:4173/*"
+  ],
+  "background": { "service_worker": "service.js", "type": "module" },
+  "action": { "default_popup": "popup.html", "default_title": "Prop Ledger" }
+}

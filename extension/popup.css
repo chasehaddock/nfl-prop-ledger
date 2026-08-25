@@ -1,0 +1,10 @@
+:root { color-scheme: light; font-family: Arial, sans-serif; }
+body { width: 280px; margin: 0; color: #101513; background: #f3f0e8; }
+main { padding: 20px; }
+.eyebrow { margin: 0 0 6px; color: #12745c; font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+h1 { margin: 0 0 16px; font-size: 24px; letter-spacing: -.04em; }
+#status { min-height: 36px; font-size: 13px; line-height: 1.4; }
+#error { color: #9b551c; font-size: 12px; }
+button { width: 100%; padding: 11px; border: 0; color: white; background: #101513; font: inherit; font-weight: 800; cursor: pointer; }
+button:disabled { opacity: .55; cursor: wait; }
+small { display: block; margin-top: 12px; color: #68716c; font-size: 10px; line-height: 1.45; }
