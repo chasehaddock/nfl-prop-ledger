@@ -330,7 +330,7 @@ async function scrapeUnderdogPage() {
     .filter((button) => button.getClientRects().length > 0);
   const findExactButton = (label) => visibleButtons().find((button) => text(button) === label);
   const modifier = (side) => {
-    const match = text(side).match(/(?:Higher|Lower)\s+(\d+(?:\.\d+)?)x/i);
+    const match = text(side).match(/(?:Higher|Lower)\s*(\d+(?:\.\d+)?)x/i);
     return match ? Number(match[1]) : Number.NaN;
   };
   const cardForHigher = (higher, statLabel) => {
@@ -338,22 +338,23 @@ async function scrapeUnderdogPage() {
     for (let depth = 0; depth < 9 && card?.parentElement; depth += 1) {
       card = card.parentElement;
       const cardText = text(card);
-      const higherCount = (cardText.match(/Higher\s+\d+(?:\.\d+)?x/gi) || []).length;
-      const lowerCount = (cardText.match(/Lower\s+\d+(?:\.\d+)?x/gi) || []).length;
-      if (higherCount === 1 && lowerCount === 1 && cardText.toLowerCase().includes(statLabel.toLowerCase())) return card;
+      const higherCount = (cardText.match(/Higher\s*\d+(?:\.\d+)?x/gi) || []).length;
+      const lowerCount = (cardText.match(/Lower\s*\d+(?:\.\d+)?x/gi) || []).length;
+      const hasMatchup = /(?:\s@\s|\svs\s).*(?:\d{1,2}\/\d{1,2}|\d{1,2}:\d{2})/i.test(card.innerText || "");
+      if (higherCount === 1 && lowerCount === 1 && hasMatchup && cardText.toLowerCase().includes(statLabel.toLowerCase())) return card;
     }
     return null;
   };
   const readVisibleCards = (statLabel) => {
-    const higherButtons = visibleButtons().filter((button) => /^Higher\s+\d+(?:\.\d+)?x$/i.test(text(button)));
+    const higherButtons = visibleButtons().filter((button) => /^Higher\s*\d+(?:\.\d+)?x$/i.test(text(button)));
     for (const higherButton of higherButtons) {
       const card = cardForHigher(higherButton, statLabel);
       if (!card) continue;
       const lowerButton = [...card.querySelectorAll('button, [role="button"]')]
-        .find((button) => /^Lower\s+\d+(?:\.\d+)?x$/i.test(text(button)));
+        .find((button) => /^Lower\s*\d+(?:\.\d+)?x$/i.test(text(button)));
       if (!lowerButton) continue;
       const cardText = text(card);
-      const lineMatch = cardText.match(new RegExp(`(\\d+(?:\\.\\d+)?)\\s+${statLabel.replace(/[+]/g, "\\+")}`, "i"));
+      const lineMatch = cardText.match(new RegExp(`(\\d+(?:\\.\\d+)?)\\s*${statLabel.replace(/[+]/g, "\\+")}`, "i"));
       const lines = (card.innerText || "").split("\n").map((line) => line.replace(/\s+/g, " ").trim()).filter(Boolean);
       const matchupIndex = lines.findIndex((line) => /(?:\s@\s|\svs\s).*(?:\d{1,2}\/\d{1,2}|\d{1,2}:\d{2})/i.test(line));
       const playerName = matchupIndex > 0 ? lines[matchupIndex - 1] : "";
@@ -537,6 +538,16 @@ async function saveCapture(capture, pass) {
 
 let activeRun = false;
 
+function currentLedgerDate(value = new Date()) {
+  const parts = Object.fromEntries(new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Chicago",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(value).filter((part) => part.type !== "literal").map((part) => [part.type, part.value]));
+  return `${parts.year}-${parts.month}-${parts.day}`;
+}
+
 async function initializeExtension() {
   await ensureAlarm();
   const state = await chrome.storage.local.get(["running", "runningSince"]);
@@ -565,21 +576,29 @@ async function runCapture() {
   await initialized;
   if (activeRun) throw new Error("A capture is already running");
   activeRun = true;
-  await chrome.storage.local.set({ running: true, runningSince: Date.now(), lastStatus: "Starting multi-book capture…", lastError: "", progressPercent: 0, progressSource: "Preparing sources", progressDetail: `0 of ${SOURCES.length} complete` });
+  const retryState = await chrome.storage.local.get(["lastFailedSourceIds", "lastRunLedgerDate", "lastError", "lastSuccess"]);
+  const storedFailedSourceIds = Array.isArray(retryState.lastFailedSourceIds) ? retryState.lastFailedSourceIds : [];
+  const inferredFailedSourceIds = SOURCES.filter((source) => String(retryState.lastError || "").includes(`${source.name}:`)).map((source) => source.id);
+  const failedSourceIds = storedFailedSourceIds.length ? storedFailedSourceIds : inferredFailedSourceIds;
+  const previousRunDate = retryState.lastRunLedgerDate || (retryState.lastSuccess ? currentLedgerDate(new Date(retryState.lastSuccess)) : "");
+  const retryingToday = previousRunDate === currentLedgerDate() && failedSourceIds.length > 0;
+  const runSources = retryingToday ? SOURCES.filter((source) => failedSourceIds.includes(source.id)) : SOURCES;
+  await chrome.storage.local.set({ running: true, runningSince: Date.now(), lastStatus: retryingToday ? "Retrying rejected sources…" : "Starting multi-book capture…", lastError: "", progressPercent: 0, progressSource: retryingToday ? "Preparing retry" : "Preparing sources", progressDetail: `0 of ${runSources.length} complete` });
   try {
     const successes = [];
     const failures = [];
-    for (const [sourceIndex, source] of SOURCES.entries()) {
+    const rejectedSourceIds = [];
+    for (const [sourceIndex, source] of runSources.entries()) {
       let sourceError;
       for (let attempt = 1; attempt <= 2; attempt += 1) {
         try {
           const retryLabel = attempt === 1 ? "" : " (retry)";
-          const startingPercent = Math.round((sourceIndex / SOURCES.length) * 100);
+          const startingPercent = Math.round((sourceIndex / runSources.length) * 100);
           await chrome.storage.local.set({
             lastStatus: `Capturing and validating ${source.name}${retryLabel}…`,
             progressPercent: startingPercent,
             progressSource: `${source.name}${retryLabel}`,
-            progressDetail: `${sourceIndex} of ${SOURCES.length} sources complete`,
+            progressDetail: `${sourceIndex} of ${runSources.length} sources complete`,
           });
           const capture = await collectPass(source);
           const verifiedCapture = { ...capture, verificationMode: "validated-single-pass" };
@@ -596,11 +615,14 @@ async function runCapture() {
           if (attempt < 2) await new Promise((resolve) => setTimeout(resolve, 10_000));
         }
       }
-      if (sourceError) failures.push(`${source.name}: ${sourceError.message}`);
+      if (sourceError) {
+        failures.push(`${source.name}: ${sourceError.message}`);
+        rejectedSourceIds.push(source.id);
+      }
       await chrome.storage.local.set({
-        progressPercent: Math.round(((sourceIndex + 1) / SOURCES.length) * 100),
+        progressPercent: Math.round(((sourceIndex + 1) / runSources.length) * 100),
         progressSource: sourceError ? `${source.name} skipped` : `${source.name} complete`,
-        progressDetail: `${sourceIndex + 1} of ${SOURCES.length} sources checked`,
+        progressDetail: `${sourceIndex + 1} of ${runSources.length} sources checked`,
       });
     }
     if (successes.length === 0) throw new Error(failures.join("; "));
@@ -609,9 +631,11 @@ async function runCapture() {
       lastStatus,
       lastSuccess: new Date().toISOString(),
       lastError: failures.join("\n"),
+      lastFailedSourceIds: rejectedSourceIds,
+      lastRunLedgerDate: currentLedgerDate(),
       progressPercent: 100,
       progressSource: "Capture complete",
-      progressDetail: `${SOURCES.length} of ${SOURCES.length} sources checked`,
+      progressDetail: `${runSources.length} of ${runSources.length} sources checked`,
     });
   } catch (error) {
     await chrome.storage.local.set({ lastStatus: "Capture rejected", lastError: error.message });
