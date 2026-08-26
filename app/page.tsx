@@ -48,8 +48,15 @@ const STAT_LABELS: Record<StatType, string> = {
   offensive_touchdowns: "Rush + Rec TDs",
   fantasy_score: "Fantasy score",
 };
-const positions: Array<"ALL" | Position> = ["ALL", "QB", "RB", "WR", "TE"];
+type PositionFilter = "ALL" | "FLEX" | Position;
+const positions: PositionFilter[] = ["ALL", "QB", "RB", "WR", "TE", "FLEX"];
 const ALL_STATS: StatType[] = ["passing_yards", "rushing_yards", "receiving_yards", "receptions", "passing_touchdowns", "rushing_touchdowns", "receiving_touchdowns", "offensive_touchdowns", "fantasy_score"];
+
+function matchesPositionFilter(position: Position, filter: PositionFilter) {
+  if (filter === "ALL") return true;
+  if (filter === "FLEX") return position !== "QB";
+  return position === filter;
+}
 
 function ColumnChooser({ choices, isVisible, onToggle, onShowAll }: { choices: ColumnChoice[]; isVisible: (key: string) => boolean; onToggle: (key: string) => void; onShowAll: () => void }) {
   const [open, setOpen] = useState(false);
@@ -908,7 +915,7 @@ function SleeperRedraftBoardV2({ snapshot, history, seasonLines }: { snapshot: S
   const valueRows = useMemo(() => sleeperValueRows(snapshot.players || [], seasonLines), [snapshot.players, seasonLines]);
   const currentAdpDelta = useMemo(() => new Map((snapshot.movements || []).filter((move) => move.date === snapshot.date).map((move) => [move.player.id, move.adpDelta])), [snapshot.movements, snapshot.date]);
   const filtered = useMemo(() => valueRows
-    .filter((row) => position === "ALL" || row.position === position)
+    .filter((row) => matchesPositionFilter(row.position, position))
     .filter((row) => coverageFilter === "all" || (coverageFilter === "comparable" ? row.projectedPositionRank !== null : row.projectedPositionRank === null))
     .filter((row) => `${row.name} ${row.team}`.toLowerCase().includes(query.toLowerCase()))
     .sort((left, right) => {
@@ -931,9 +938,11 @@ function SleeperRedraftBoardV2({ snapshot, history, seasonLines }: { snapshot: S
   };
   const reset = () => { setPosition("ALL"); setCoverageFilter("all"); setQuery(""); setChartPlayer(null); };
   const matched = valueRows.filter((row) => row.projectedPositionRank !== null).length;
-  const coverageRows = valueRows.filter((row) => position === "ALL" || row.position === position);
+  const coverageRows = valueRows.filter((row) => matchesPositionFilter(row.position, position));
   const coverageMatched = coverageRows.filter((row) => row.projectedPositionRank !== null).length;
-  const coverageLabel = position === "ALL" ? `${coverageMatched} of ${coverageRows.length} players comparable` : `${coverageMatched} of ${coverageRows.length} ${position}s comparable`;
+  const coverageLabel = position === "ALL"
+    ? `${coverageMatched} of ${coverageRows.length} players comparable`
+    : `${coverageMatched} of ${coverageRows.length} ${position === "FLEX" ? "FLEX players" : `${position}s`} comparable`;
   const format = snapshot.format;
   const header = (key: SleeperSortKey, label: string, hint: string) => <th><button className={`sort-button ${sort.key === key ? "active" : ""}`} onClick={() => sortBy(key)}><span className="column-label">{label}<small>{hint}</small></span><span>↕</span></button></th>;
   const columnChoices: Array<{ key: SleeperColumnKey; label: string }> = [
@@ -1072,7 +1081,7 @@ export default function Home() {
   const newProps = useMemo(() => newPropsInRange(snapshot, history, newPropRange), [snapshot, history, newPropRange]);
   const books = useMemo(() => ["All sources", ...new Set(allLines.flatMap((line) => line.availableBooks))], [allLines]);
   const positionRanks = useMemo(() => projectedPositionRanks(allLines, qbPassTdPoints, tePremium, pprScoring), [allLines, qbPassTdPoints, tePremium, pprScoring]);
-  const lines = useMemo(() => allLines.filter((line) => position === "ALL" || line.position === position).filter((line) => book === "All sources" || line.availableBooks.includes(book)).filter((line) => `${line.player} ${line.team}`.toLowerCase().includes(query.toLowerCase())).sort((a, b) => compareLines(a, b, sort, qbPassTdPoints, tePremium, pprScoring)), [allLines, position, book, query, sort, qbPassTdPoints, tePremium, pprScoring]);
+  const lines = useMemo(() => allLines.filter((line) => matchesPositionFilter(line.position, position)).filter((line) => book === "All sources" || line.availableBooks.includes(book)).filter((line) => `${line.player} ${line.team}`.toLowerCase().includes(query.toLowerCase())).sort((a, b) => compareLines(a, b, sort, qbPassTdPoints, tePremium, pprScoring)), [allLines, position, book, query, sort, qbPassTdPoints, tePremium, pprScoring]);
   const changeSort = (key: SortKey) => setSort((current) => current.key === key
     ? { key, direction: current.direction === "asc" ? "desc" : "asc" }
     : { key, direction: ["yards", "secondary", "touchdowns", "fantasyPoints", "prizePicksFantasyScore"].includes(key) ? "desc" : "asc" });
