@@ -32,7 +32,7 @@ type SleeperAdpHistory = Record<string, Array<{ date: string; adp: number; rank:
 type SleeperValueRow = SleeperAdpPlayer & { sleeperPositionRank: number; comparableSleeperPositionRank: number | null; projectedPoints: number | null; inferredProjectedPoints: number | null; projectedPositionRank: number | null; valueGap: number | null; missingInputs: string[]; confidence: ConfidenceLevel | null; confidenceNote: string | null };
 type SleeperSortKey = "player" | "adp" | "sleeperPositionRank" | "comparableSleeperPositionRank" | "projectedPoints" | "projectedPositionRank" | "valueGap" | "trend";
 type SleeperCoverageFilter = "all" | "comparable" | "needs-data";
-type ProjectionColumnKey = "source" | "yards" | "secondary" | "touchdowns" | "fantasyPoints" | "prizePicksFantasyScore" | "status";
+type ProjectionColumnKey = "yards" | "secondary" | "touchdowns" | "fantasyPoints" | "prizePicksFantasyScore" | "status";
 type SleeperColumnKey = Exclude<SleeperSortKey, "player"> | "coverage";
 type ColumnChoice = { key: string; label: string };
 
@@ -1077,7 +1077,6 @@ export default function Home() {
     ? { key, direction: current.direction === "asc" ? "desc" : "asc" }
     : { key, direction: ["yards", "secondary", "touchdowns", "fantasyPoints", "prizePicksFantasyScore"].includes(key) ? "desc" : "asc" });
   const columnChoices: Array<{ key: ProjectionColumnKey; label: string }> = [
-    { key: "source", label: "Source" },
     { key: "yards", label: "Yards" },
     { key: "secondary", label: position === "QB" ? "Rushing yards" : position === "ALL" ? "Receptions / QB rush yards" : "Receptions" },
     { key: "touchdowns", label: boardMode === "week1" ? "TD chance" : "Touchdowns" },
@@ -1090,7 +1089,7 @@ export default function Home() {
     const column = key as ProjectionColumnKey;
     const hiding = !hiddenColumns.has(column);
     setHiddenColumns((current) => { const next = new Set(current); if (next.has(column)) next.delete(column); else next.add(column); return next; });
-    const sortKey: SortKey = column === "source" ? "book" : column;
+    const sortKey: SortKey = column;
     if (hiding && sort.key === sortKey) setSort({ key: "player", direction: "asc" });
   };
   const visibleColumnCount = 1 + columnChoices.filter((choice) => columnVisible(choice.key)).length;
@@ -1150,7 +1149,6 @@ export default function Home() {
         <table className="projection-table" style={{ minWidth: `${Math.max(620, 240 + (visibleColumnCount - 1) * 190)}px` }}>
           <thead><tr>
             <SortHeader sortKey="player" label="Player" sort={sort} onSort={changeSort} />
-            {columnVisible("source") && <SortHeader sortKey="book" label="Source" sort={sort} onSort={changeSort} />}
             {columnVisible("yards") && <SortHeader sortKey="yards" label="Yards" hint="Passing + rushing + receiving" sort={sort} onSort={changeSort} />}
             {columnVisible("secondary") && <SortHeader sortKey="secondary" label={position === "QB" ? "Rushing yards" : position === "ALL" ? "Receptions / QB rush yards" : "Receptions"} hint="When offered" sort={sort} onSort={changeSort} />}
             {columnVisible("touchdowns") && <SortHeader sortKey="touchdowns" label={boardMode === "week1" ? "TD chance" : "Touchdowns"} hint={boardMode === "week1" ? "Any rushing or receiving TD" : "Passing + rushing + receiving"} sort={sort} onSort={changeSort} />}
@@ -1167,7 +1165,6 @@ export default function Home() {
             return <Fragment key={line.id}>
               <tr className={`data-row ${expanded ? "expanded" : ""}`}>
                 <td><div className="player-cell"><span className={`position position-${line.position.toLowerCase()}`}>{line.position}</span><div><span className="player-name-row"><strong>{line.player}</strong>{hasCompleteProjection && positionRank ? <span className="projection-rank ranked" title={`${line.position}${positionRank} in ${boardMode === "season" ? "season" : "Week 1"} projection order by verified calculated fantasy points`}>{line.position}{positionRank}</span> : <span className="projection-rank incomplete" title="Not ranked; verified fantasy inputs are incomplete">NR</span>}</span><span>{line.team}</span><button className="ledger-link" aria-expanded={expanded && selected?.statType === null} aria-controls={`ledger-${line.id}`} onClick={() => setSelected(expanded && selected?.statType === null ? null : { playerId: line.id, statType: null })}>{expanded && selected?.statType === null ? "Hide ledger" : "View ledger"}</button></div></div></td>
-                {columnVisible("source") && <td><span className="book-name">{line.book}</span><small>{line.availableBooks.length} source{line.availableBooks.length === 1 ? "" : "s"}</small></td>}
                 {columnVisible("yards") && <td><StatStack entries={[{ cell: line.yards, label: line.yardLabel }, ...extraYards]} preferredSource={line.source} player={line.player} onInspect={inspect} /></td>}
                 {columnVisible("secondary") && <td><LineCell cell={line.position === "QB" ? line.rushingYards : line.receptions} label={line.position === "QB" ? "Rush yds" : "Receptions"} preferredSource={line.source} player={line.player} onInspect={inspect} /></td>}
                 {columnVisible("touchdowns") && <td>{boardMode === "week1" ? <TouchdownChanceCell line={line} onInspect={inspect} /> : <SeasonTouchdownCell line={line} onInspect={inspect} />}</td>}
