@@ -50,6 +50,20 @@ test("validates a projection observation without sportsbook prices", () => {
   }), "projection"), []);
 });
 
+test("validates two-sided Week 1 multiplier observations", () => {
+  assert.deepEqual(validateObservation(observation({
+    source: "underdog",
+    sourceUrl: "https://app.underdogsports.com/pick-em/higher-lower/all/NFL",
+    marketScope: "week_1",
+    statType: "offensive_touchdowns",
+    line: 0.5,
+    overOdds: undefined,
+    underOdds: undefined,
+    higherMultiplier: 1.13,
+    lowerMultiplier: 0.83,
+  }), "multiplier"), []);
+});
+
 test("validates Week 1 lines against weekly safety ranges", () => {
   assert.deepEqual(validateObservation(observation({ marketScope: "week_1", line: 74.5 })), []);
   assert.ok(validateObservation(observation({ marketScope: "week_1", line: 999.5 })).some((error) => error.includes("safety range")));

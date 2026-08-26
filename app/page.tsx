@@ -8,15 +8,15 @@ import { priorSeasonRbReceiving, projectEighteenGamePace } from "../src/prior-se
 
 type Position = "QB" | "RB" | "WR" | "TE";
 type StatType = "passing_yards" | "rushing_yards" | "receiving_yards" | "receptions" | "passing_touchdowns" | "rushing_touchdowns" | "receiving_touchdowns" | "offensive_touchdowns" | "fantasy_score";
-type Observation = { key: string; source: string; sourceName?: string; sourceUrl: string; capturedAt?: string; player: { id: string; name: string; team: string; position: Position }; statType: StatType; line: number; lineDelta: number | null; overOdds?: number; underOdds?: number; status: "open" | "stale" | "not_seen" | "removed"; changeType?: string };
+type Observation = { key: string; source: string; sourceName?: string; sourceUrl: string; capturedAt?: string; player: { id: string; name: string; team: string; position: Position }; statType: StatType; line: number; lineDelta: number | null; overOdds?: number; underOdds?: number; higherMultiplier?: number; lowerMultiplier?: number; normalizedProbability?: number; status: "open" | "stale" | "not_seen" | "removed"; changeType?: string };
 type Snapshot = { demo: boolean; date?: string; season?: number; week?: number; observations: Observation[]; movements?: TrendMove[]; sourceRuns: Array<{ source: string; status: string; observationCount?: number }>; issues?: string[] };
 type HistoryPoint = { date: string; line: number; overOdds: number | null; underOdds: number | null; status: string; changeType: string };
 type History = Record<string, HistoryPoint[]>;
 type ChartPoint = { key: string; label: string; order: number; line: number; reconstructed?: boolean };
-type Cell = { key: string; statType: StatType; line: number; delta: number | null; overOdds?: number; underOdds?: number; sourceUrl: string; source: string; sourceName: string; capturedAt?: string; status: Observation["status"]; fallbackLabel?: string; consensusMethod?: ConsensusMethod; sourceCount?: number; supportCount?: number };
+type Cell = { key: string; statType: StatType; line: number; delta: number | null; overOdds?: number; underOdds?: number; higherMultiplier?: number; lowerMultiplier?: number; normalizedProbability?: number; sourceUrl: string; source: string; sourceName: string; capturedAt?: string; status: Observation["status"]; fallbackLabel?: string; consensusMethod?: ConsensusMethod; sourceCount?: number; supportCount?: number };
 type SourcesByStat = Partial<Record<StatType, Cell[]>>;
 type ConfidenceLevel = "strong" | "partial" | "thin";
-type PlayerLine = { id: string; player: string; team: string; position: Position; source: string; book: string; availableBooks: string[]; sourcesByStat: SourcesByStat; yardLabel: string; yards: Cell | null; receptions: Cell | null; touchdowns: Cell | null; rushingYards: Cell | null; rushingTouchdowns: Cell | null; receivingYards: Cell | null; receivingTouchdowns: Cell | null; offensiveTouchdowns: Cell | null; passingTouchdownExpectation: number | null; passingTouchdownExpectationNote: string | null; touchdownProbability: number | null; touchdownProbabilityNote: string | null; fantasyPoints: number | null; fantasyUsesInference: boolean; prizePicksFantasyScore: Cell | null; fantasyBooks: string[]; fantasyUsesReceptionFallback: boolean; fantasyUsesReceivingYardsFallback: boolean; fantasyUsesQbRushingYardsFallback: boolean; fantasyUsesQbRushingTouchdownsFallback: boolean; fantasyAdditionalInferences: string[]; fantasyTdOddsBooks: string[]; confidence: ConfidenceLevel; confidenceNote: string; verifiedAt: string; status: "verified" | "review" };
+type PlayerLine = { id: string; player: string; team: string; position: Position; source: string; book: string; availableBooks: string[]; sourcesByStat: SourcesByStat; yardLabel: string; yards: Cell | null; receptions: Cell | null; touchdowns: Cell | null; rushingYards: Cell | null; rushingTouchdowns: Cell | null; receivingYards: Cell | null; receivingTouchdowns: Cell | null; offensiveTouchdowns: Cell | null; passingTouchdownExpectation: number | null; passingTouchdownExpectationLabel: string | null; passingTouchdownExpectationNote: string | null; touchdownProbability: number | null; touchdownProbabilityNote: string | null; fantasyPoints: number | null; fantasyUsesInference: boolean; prizePicksFantasyScore: Cell | null; fantasyBooks: string[]; fantasyUsesReceptionFallback: boolean; fantasyUsesReceivingYardsFallback: boolean; fantasyUsesQbRushingYardsFallback: boolean; fantasyUsesQbRushingTouchdownsFallback: boolean; fantasyAdditionalInferences: string[]; fantasyTdOddsBooks: string[]; confidence: ConfidenceLevel; confidenceNote: string; verifiedAt: string; status: "verified" | "review" };
 type TrendRange = "today" | "week" | "all";
 type TrendMove = Pick<Observation, "key" | "source" | "sourceUrl" | "player" | "statType" | "line"> & { date: string; lineDelta: number; changeType: "line_increased" | "line_decreased"; sourceName?: string };
 type NewProp = Pick<Observation, "key" | "source" | "sourceUrl" | "player" | "statType" | "line"> & { date: string; sourceName: string };
@@ -36,7 +36,7 @@ type ProjectionColumnKey = "yards" | "secondary" | "touchdowns" | "fantasyPoints
 type SleeperColumnKey = Exclude<SleeperSortKey, "player"> | "coverage";
 type ColumnChoice = { key: string; label: string };
 
-const SOURCE_NAMES: Record<string, string> = { draftkings: "DraftKings", fanduel: "FanDuel", betmgm: "BetMGM", prizepicks: "PrizePicks" };
+const SOURCE_NAMES: Record<string, string> = { draftkings: "DraftKings", fanduel: "FanDuel", betmgm: "BetMGM", prizepicks: "PrizePicks", underdog: "Underdog" };
 const STAT_LABELS: Record<StatType, string> = {
   passing_yards: "Pass yards",
   rushing_yards: "Rush yards",
@@ -91,7 +91,7 @@ function demo(player: string, team: string, position: Position, book: string, ya
       : { receiving_yards: yards, receptions: secondary, receiving_touchdowns: touchdowns };
   const cells = [yardCell, receptions, touchdownCell, rushingYards, rushingTouchdowns, receivingYards, receivingTouchdowns].filter((item): item is Cell => Boolean(item));
   const sourcesByStat = Object.fromEntries(cells.map((item) => [item.statType, [item]])) as SourcesByStat;
-  return { id: `demo-${player}`, player, team, position, source: "demo", book, availableBooks: [book], sourcesByStat, yardLabel: position === "QB" ? "Pass yds" : position === "RB" ? "Rush yds" : "Rec yds", yards: yardCell, receptions, touchdowns: touchdownCell, rushingYards, rushingTouchdowns, receivingYards, receivingTouchdowns, offensiveTouchdowns: null, passingTouchdownExpectation: null, passingTouchdownExpectationNote: null, touchdownProbability: null, touchdownProbabilityNote: null, fantasyPoints: calculateFantasyPoints(position, fantasyLines), fantasyUsesInference: false, prizePicksFantasyScore: null, fantasyBooks: [book], fantasyUsesReceptionFallback: false, fantasyUsesReceivingYardsFallback: false, fantasyUsesQbRushingYardsFallback: false, fantasyUsesQbRushingTouchdownsFallback: false, fantasyAdditionalInferences: [], fantasyTdOddsBooks: [], confidence: "thin", confidenceNote: "Preview source only", verifiedAt: "Preview only", status: "review" };
+  return { id: `demo-${player}`, player, team, position, source: "demo", book, availableBooks: [book], sourcesByStat, yardLabel: position === "QB" ? "Pass yds" : position === "RB" ? "Rush yds" : "Rec yds", yards: yardCell, receptions, touchdowns: touchdownCell, rushingYards, rushingTouchdowns, receivingYards, receivingTouchdowns, offensiveTouchdowns: null, passingTouchdownExpectation: null, passingTouchdownExpectationLabel: null, passingTouchdownExpectationNote: null, touchdownProbability: null, touchdownProbabilityNote: null, fantasyPoints: calculateFantasyPoints(position, fantasyLines), fantasyUsesInference: false, prizePicksFantasyScore: null, fantasyBooks: [book], fantasyUsesReceptionFallback: false, fantasyUsesReceivingYardsFallback: false, fantasyUsesQbRushingYardsFallback: false, fantasyUsesQbRushingTouchdownsFallback: false, fantasyAdditionalInferences: [], fantasyTdOddsBooks: [], confidence: "thin", confidenceNote: "Preview source only", verifiedAt: "Preview only", status: "review" };
 }
 
 function confidenceFor(sourceCount: number, complete: boolean, inferredCount: number): { level: ConfidenceLevel; note: string } {
@@ -122,7 +122,7 @@ function touchdownStat(position: Position): StatType {
 
 function asCell(observation: Observation | undefined): Cell | null {
   if (!observation) return null;
-  return { key: observation.key, statType: observation.statType, line: observation.line, delta: observation.lineDelta, overOdds: observation.overOdds, underOdds: observation.underOdds, sourceUrl: observation.sourceUrl, source: observation.source, sourceName: observation.sourceName || SOURCE_NAMES[observation.source] || observation.source, capturedAt: observation.capturedAt, status: observation.status };
+  return { key: observation.key, statType: observation.statType, line: observation.line, delta: observation.lineDelta, overOdds: observation.overOdds, underOdds: observation.underOdds, higherMultiplier: observation.higherMultiplier, lowerMultiplier: observation.lowerMultiplier, normalizedProbability: observation.normalizedProbability, sourceUrl: observation.sourceUrl, source: observation.source, sourceName: observation.sourceName || SOURCE_NAMES[observation.source] || observation.source, capturedAt: observation.capturedAt, status: observation.status };
 }
 
 function consensusCell(playerId: string, statType: StatType, selection: ConsensusSelection<Observation> | undefined): Cell | null {
@@ -135,6 +135,9 @@ function consensusCell(playerId: string, statType: StatType, selection: Consensu
     delta: only?.lineDelta ?? null,
     overOdds: only?.overOdds,
     underOdds: only?.underOdds,
+    higherMultiplier: only?.higherMultiplier,
+    lowerMultiplier: only?.lowerMultiplier,
+    normalizedProbability: only?.normalizedProbability,
     sourceUrl: only?.sourceUrl || selection.candidates[0].sourceUrl,
     source: only?.source || "consensus",
     sourceName: only ? only.sourceName || SOURCE_NAMES[only.source] || only.source : "Consensus",
@@ -196,10 +199,33 @@ function blendedQbRushingYardsCell(playerId: string, weeklySelection: ConsensusS
   };
 }
 
-type TouchdownProjection = { probability: number; books: string[]; pricing: "de-vigged" | "one-sided" | "mixed" };
-type PassingTouchdownExpectation = { value: number; books: string[]; note: string };
+type TouchdownProjection = { probability: number; books: string[]; pricing: "normalized-multiplier" | "de-vigged" | "one-sided" | "mixed" };
+type PassingTouchdownExpectation = { value: number; books: string[]; label: string; note: string };
+
+function normalizedMultiplierProbability(higherMultiplier: number, lowerMultiplier: number): number {
+  if (!Number.isFinite(higherMultiplier) || higherMultiplier <= 0 || !Number.isFinite(lowerMultiplier) || lowerMultiplier <= 0) return Number.NaN;
+  const higherWeight = 1 / higherMultiplier;
+  const lowerWeight = 1 / lowerMultiplier;
+  return higherWeight / (higherWeight + lowerWeight);
+}
 
 function weeklyPassingTouchdownExpectation(selection: ConsensusSelection<Observation> | undefined): PassingTouchdownExpectation | null {
+  const multiplierPriced = (selection?.candidates || []).filter((item) => item.status === "open"
+    && item.source === "underdog"
+    && Number.isFinite(item.line)
+    && Number.isFinite(item.higherMultiplier)
+    && Number.isFinite(item.lowerMultiplier));
+  if (multiplierPriced.length) {
+    const estimates = multiplierPriced.map((item) => ({
+      item,
+      expected: lineCenteredExpectation(item.line, normalizedMultiplierProbability(item.higherMultiplier!, item.lowerMultiplier!)),
+    })).filter(({ expected }) => Number.isFinite(expected));
+    if (!estimates.length) return null;
+    const value = Number((estimates.reduce((total, estimate) => total + estimate.expected, 0) / estimates.length).toFixed(2));
+    const books = ["Underdog"];
+    const details = estimates.map(({ item, expected }) => `Underdog H ${item.line} ${item.higherMultiplier!.toFixed(2)}x / L ${item.line} ${item.lowerMultiplier!.toFixed(2)}x → ${expected.toFixed(2)}`).join(" · ");
+    return { value, books, label: "Underdog normalized", note: `${value.toFixed(2)} expected pass TDs · normalized Higher/Lower modifiers + line-centered adjustment · ${details}` };
+  }
   const allPriced = (selection?.candidates || []).filter((item) => item.status === "open"
     && item.source !== "prizepicks"
     && Number.isFinite(item.line)
@@ -221,10 +247,26 @@ function weeklyPassingTouchdownExpectation(selection: ConsensusSelection<Observa
     const underOdds = item.underOdds! > 0 ? `+${item.underOdds}` : `${item.underOdds}`;
     return `${sourceName} O ${item.line} ${overOdds} / U ${item.line} ${underOdds} → ${expected.toFixed(2)}`;
   }).join(" · ");
-  return { value, books, note: `${value.toFixed(2)} expected pass TDs · vig removed + line-centered adjustment · ${details}` };
+  return { value, books, label: "sportsbook no-vig", note: `${value.toFixed(2)} expected pass TDs · vig removed + line-centered adjustment · ${details}` };
 }
 
 function weeklyTouchdownProjection(selection: ConsensusSelection<Observation> | undefined): TouchdownProjection | null {
+  const multiplierPriced = (selection?.candidates || []).filter((item) => item.status === "open"
+    && item.source === "underdog"
+    && item.line === 0.5
+    && Number.isFinite(item.higherMultiplier)
+    && Number.isFinite(item.lowerMultiplier));
+  if (multiplierPriced.length) {
+    const probabilities = multiplierPriced
+      .map((item) => normalizedMultiplierProbability(item.higherMultiplier!, item.lowerMultiplier!))
+      .filter((probability) => Number.isFinite(probability));
+    if (!probabilities.length) return null;
+    return {
+      probability: probabilities.reduce((total, probability) => total + probability, 0) / probabilities.length,
+      books: ["Underdog"],
+      pricing: "normalized-multiplier",
+    };
+  }
   const priced = (selection?.candidates || []).filter((item) => item.status === "open"
     && item.line === 0.5
     && Number.isFinite(item.overOdds));
@@ -240,6 +282,7 @@ function weeklyTouchdownProjection(selection: ConsensusSelection<Observation> | 
 }
 
 function oddsMethodLabel(...projections: TouchdownProjection[]): string {
+  if (projections.every((projection) => projection.pricing === "normalized-multiplier")) return "Underdog Higher/Lower normalized";
   if (projections.every((projection) => projection.pricing === "de-vigged")) return "vig removed";
   if (projections.every((projection) => projection.pricing === "one-sided")) return "one-sided price includes vig";
   return "includes one-sided price with vig";
@@ -400,6 +443,7 @@ function aggregate(snapshot: Snapshot, weeklyContext?: Snapshot): PlayerLine[] {
       receivingTouchdowns,
       offensiveTouchdowns,
       passingTouchdownExpectation: passingTouchdownExpectation?.value ?? null,
+      passingTouchdownExpectationLabel: passingTouchdownExpectation?.label ?? null,
       passingTouchdownExpectationNote: passingTouchdownExpectation?.note ?? null,
       touchdownProbability: touchdownProbability?.probability ?? null,
       touchdownProbabilityNote: touchdownProbability?.note ?? null,
@@ -561,7 +605,7 @@ function rankableFantasyPoints(line: PlayerLine, qbPassTdPoints: 4 | 6, tePremiu
 
 function projectedPositionRanks(lines: PlayerLine[], qbPassTdPoints: 4 | 6, tePremium: TePremium, pprScoring: PprScoring): Map<string, number> {
   const ranks = new Map<string, number>();
-  positions.filter((item): item is Position => item !== "ALL").forEach((position) => {
+  positions.filter((item): item is Position => item !== "ALL" && item !== "FLEX").forEach((position) => {
     lines
       .filter((line) => line.position === position)
       .filter((line) => rankableFantasyPoints(line, qbPassTdPoints, tePremium, pprScoring) !== null)
@@ -594,14 +638,17 @@ function americanOddsLabel(value: number | undefined): string {
 
 function touchdownOddsLines(line: PlayerLine): string[] {
   const statTypes: StatType[] = line.position === "QB"
-    ? ["passing_touchdowns"]
-    : (line.sourcesByStat.offensive_touchdowns || []).some((cell) => Number.isFinite(cell.overOdds))
+    ? ["passing_touchdowns", "offensive_touchdowns"]
+    : (line.sourcesByStat.offensive_touchdowns || []).some((cell) => Number.isFinite(cell.overOdds) || Number.isFinite(cell.higherMultiplier))
       ? ["offensive_touchdowns"]
       : ["rushing_touchdowns", "receiving_touchdowns"];
   return statTypes.flatMap((statType) => (line.sourcesByStat[statType] || [])
-    .filter((cell) => cell.status === "open" && Number.isFinite(cell.overOdds))
+    .filter((cell) => cell.status === "open" && (Number.isFinite(cell.overOdds) || Number.isFinite(cell.higherMultiplier)))
     .map((cell) => {
       const statLabel = statType === "offensive_touchdowns" ? "Any TD" : STAT_LABELS[statType];
+      if (Number.isFinite(cell.higherMultiplier) && Number.isFinite(cell.lowerMultiplier)) {
+        return `${cell.sourceName} ${statLabel} · H ${cell.line} ${cell.higherMultiplier!.toFixed(2)}x / L ${cell.line} ${cell.lowerMultiplier!.toFixed(2)}x`;
+      }
       return `${cell.sourceName} ${statLabel} · O ${cell.line} ${americanOddsLabel(cell.overOdds)} / U ${cell.line} ${americanOddsLabel(cell.underOdds)}`;
     }));
 }
@@ -616,7 +663,7 @@ function TouchdownChanceCell({ line, onInspect }: { line: PlayerLine; onInspect:
     : <div className="touchdown-chance"><strong>{(line.touchdownProbability * 100).toFixed(1)}%</strong><small>Scores any rush/rec TD</small>{oddsDetails}{line.touchdownProbabilityNote && <small>{line.touchdownProbabilityNote}</small>}</div>;
   if (line.position !== "QB") return chance;
   if (line.passingTouchdownExpectation !== null) {
-    return <button className="prop-trigger passing-td-expectation" onClick={() => onInspect("passing_touchdowns")} aria-label={`Compare ${line.player} Passing TDs across sources`}><strong>{line.passingTouchdownExpectation.toFixed(2)}</strong><small>Expected pass TDs · FanDuel no-vig</small>{oddsDetails}</button>;
+    return <button className="prop-trigger passing-td-expectation" onClick={() => onInspect("passing_touchdowns")} aria-label={`Compare ${line.player} Passing TDs across sources`}><strong>{line.passingTouchdownExpectation.toFixed(2)}</strong><small>Expected pass TDs · {line.passingTouchdownExpectationLabel}</small>{oddsDetails}</button>;
   }
   if (line.touchdowns) return <LineCell cell={line.touchdowns} label="Pass TD · 4 pts" preferredSource={line.source} player={line.player} onInspect={onInspect} />;
   return chance;
@@ -781,7 +828,7 @@ function LineHistoryChart({ line, statType, history, movements, highlightedSourc
     <div className="line-chart-heading"><div><p className="eyebrow">Visual history</p><h3 id={`chart-title-${line.id}-${statType}`}>Line trend</h3></div><div className="line-chart-key" aria-label="Chart key">{averagePoints.length > 0 && <span className="average"><i />Sportsbook average · primary trend</span>}</div></div>
     <div className="line-chart-series" aria-label="Sources">{averagePoints.length > 0 && <span className="average"><i className="series-marker" />Average of all sportsbooks · monitored trend</span>}{series.map((item) => <span className={item.cell.source === highlightedSource ? "highlighted" : ""} key={item.cell.key}><i className={`series-marker source-${item.cell.source}`} />{item.cell.sourceName}{item.cell.source === highlightedSource ? " · selected move" : ""}</span>)}</div>
     <div className="line-chart-scroll"><svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label={summary}>
-      <title>{line.player} · {STAT_LABELS[statType]} line history</title><desc>{summary} DraftKings is green, FanDuel is blue, BetMGM is gold, and PrizePicks is purple.</desc>
+      <title>{line.player} · {STAT_LABELS[statType]} line history</title><desc>{summary} DraftKings is green, FanDuel is blue, BetMGM is gold, PrizePicks is purple, and Underdog is yellow.</desc>
       <rect className="chart-frame" x={left} y={top} width={plotWidth} height={plotHeight} />
       {yTicks.map((tick) => <g key={tick}><line className="chart-grid" x1={left} x2={width - right} y1={y(tick)} y2={y(tick)} /><text className="chart-axis-label" x={left - 10} y={y(tick) + 4} textAnchor="end">{formatLine(tick)}</text></g>)}
       {xTickSlots.map((slot) => <g key={`${slot.order}:${slot.label}`}><line className="chart-tick" x1={x(slot.order)} x2={x(slot.order)} y1={height - bottom} y2={height - bottom + 6} /><text className="chart-axis-label" x={x(slot.order)} y={height - bottom + 24} textAnchor="middle">{slot.label}</text></g>)}
@@ -814,7 +861,7 @@ function PropComparison({ line, statType, history, movements, highlightedSource,
     <div className="comparison-heading"><div><p className="eyebrow">All source lines</p><h2 id={titleId}>{line.player} · {STAT_LABELS[statType]}</h2></div><div className="comparison-actions"><button className="back-all" onClick={onBackAll}>← Back to all players</button><button onClick={onClose} aria-label={`Close ${line.player} ${STAT_LABELS[statType]} comparison`}>Close</button></div></div>
     <div className="consensus-summary"><span>Main line</span><strong>{consensus?.line.toLocaleString() || "—"}</strong><p>{explanation}</p></div>
     <LineHistoryChart line={line} statType={statType} history={history} movements={movements} highlightedSource={highlightedSource} />
-    <div className="source-comparison" role="list" aria-label={`${line.player} ${STAT_LABELS[statType]} source lines`}>{sources.map((source) => <article className={source.source === highlightedSource ? "highlighted" : ""} key={source.key} role="listitem"><div><strong>{source.sourceName}</strong><small>{source.source === "prizepicks" ? "Projection line" : "Sportsbook line"}</small></div><b>{source.line.toLocaleString()}</b><div className="source-odds">{source.overOdds !== undefined && source.underOdds !== undefined ? <><span>O {source.overOdds > 0 ? "+" : ""}{source.overOdds}</span><span>U {source.underOdds > 0 ? "+" : ""}{source.underOdds}</span></> : <span>No odds posted</span>}</div>{source.sourceUrl && source.sourceUrl !== "#" && <a href={source.sourceUrl} target="_blank" rel="noreferrer">Open source ↗</a>}</article>)}</div>
+    <div className="source-comparison" role="list" aria-label={`${line.player} ${STAT_LABELS[statType]} source lines`}>{sources.map((source) => <article className={source.source === highlightedSource ? "highlighted" : ""} key={source.key} role="listitem"><div><strong>{source.sourceName}</strong><small>{source.source === "prizepicks" ? "Projection line" : source.source === "underdog" ? "Pick’em modifiers" : "Sportsbook line"}</small></div><b>{source.line.toLocaleString()}</b><div className="source-odds">{source.higherMultiplier !== undefined && source.lowerMultiplier !== undefined ? <><span>H {source.higherMultiplier.toFixed(2)}x</span><span>L {source.lowerMultiplier.toFixed(2)}x</span></> : source.overOdds !== undefined && source.underOdds !== undefined ? <><span>O {source.overOdds > 0 ? "+" : ""}{source.overOdds}</span><span>U {source.underOdds > 0 ? "+" : ""}{source.underOdds}</span></> : <span>No odds posted</span>}</div>{source.sourceUrl && source.sourceUrl !== "#" && <a href={source.sourceUrl} target="_blank" rel="noreferrer">Open source ↗</a>}</article>)}</div>
   </section>;
 }
 
@@ -1147,7 +1194,7 @@ export default function Home() {
     {boardSwitch}
     <section className="hero" id="top">
       <div><p className="eyebrow">{boardMode === "season" ? "Daily season-long market monitor" : "Weekly matchup projection board"}</p><h1>{boardMode === "season" ? <>Every move.<br /><span>Kept on record.</span></> : <>Week 1.<br /><span>Every source.</span></>}</h1><p className="lede">{boardMode === "season" ? "One clean ledger for QB, RB, WR, and TE season props—validated before each daily change is accepted." : "A separate full-PPR board for QB, RB, WR, and TE Week 1 props—kept completely separate from season-long projections."}</p></div>
-      <div className="hero-sidebar"><div className="capture-card" aria-label="Latest capture status"><div className="capture-topline"><span>{boardMode === "season" ? "Latest capture" : "Week 1 capture"}</span><span className="status-pill">{waitingForWeekly ? "Waiting for markets" : isDemo ? "Setup required" : "Double-checked"}</span></div><strong>{waitingForWeekly ? "Board ready" : snapshot.date ? new Intl.DateTimeFormat("en-US", { dateStyle: "medium", timeZone: "UTC" }).format(new Date(`${snapshot.date}T12:00:00Z`)) : "No verified run yet"}</strong><div className="capture-stats"><div><b>{acceptedRuns.length}</b><span>sources accepted</span></div><div><b>{isDemo || waitingForWeekly ? 0 : allLines.length}</b><span>player lines</span></div><div><b>{reviewCount}</b><span>review flags</span></div></div><p>{waitingForWeekly ? "Confirmed Week 1 lines from the existing four sources will appear here; season averages are never substituted." : isDemo ? "The sample rows below demonstrate the layout; they are not current betting lines." : "Only complete, roster-matched, repeat-confirmed sportsbook and projection rows are published."}</p></div></div>
+      <div className="hero-sidebar"><div className="capture-card" aria-label="Latest capture status"><div className="capture-topline"><span>{boardMode === "season" ? "Latest capture" : "Week 1 capture"}</span><span className="status-pill">{waitingForWeekly ? "Waiting for markets" : isDemo ? "Setup required" : "Double-checked"}</span></div><strong>{waitingForWeekly ? "Board ready" : snapshot.date ? new Intl.DateTimeFormat("en-US", { dateStyle: "medium", timeZone: "UTC" }).format(new Date(`${snapshot.date}T12:00:00Z`)) : "No verified run yet"}</strong><div className="capture-stats"><div><b>{acceptedRuns.length}</b><span>sources accepted</span></div><div><b>{isDemo || waitingForWeekly ? 0 : allLines.length}</b><span>player lines</span></div><div><b>{reviewCount}</b><span>review flags</span></div></div><p>{waitingForWeekly ? "Confirmed Week 1 lines from DraftKings, FanDuel, BetMGM, PrizePicks, and Underdog will appear here; season averages are never substituted." : isDemo ? "The sample rows below demonstrate the layout; they are not current betting lines." : "Only complete, roster-matched, repeat-confirmed sportsbook and projection rows are published."}</p></div></div>
     </section>
     <div className="dashboard-layout">
     <aside className="trend-column" aria-label="Market updates"><NewPropsCard props={newProps} range={newPropRange} onRange={setNewPropRange} onSelect={focusNewProp} /><TrendCard moves={trendMoves} isDemo={isDemo} waitingForWeekly={waitingForWeekly} range={trendRange} onRange={setTrendRange} onSelect={focusTrend} /></aside>
@@ -1185,7 +1232,7 @@ export default function Home() {
             </Fragment>;
           })}</tbody>
         </table>
-        {lines.length === 0 && <div className={`empty-state ${waitingForWeekly ? "weekly-waiting" : ""}`}>{waitingForWeekly ? <><strong>Week 1 board is ready.</strong><span>Player projections will appear after the first confirmed Week 1 markets are captured from DraftKings, FanDuel, BetMGM, or PrizePicks.</span></> : "No players match these filters."}</div>}
+        {lines.length === 0 && <div className={`empty-state ${waitingForWeekly ? "weekly-waiting" : ""}`}>{waitingForWeekly ? <><strong>Week 1 board is ready.</strong><span>Player projections will appear after the first confirmed Week 1 markets are captured from DraftKings, FanDuel, BetMGM, PrizePicks, or Underdog.</span></> : "No players match these filters."}</div>}
       </div>
     </section>
     </div>

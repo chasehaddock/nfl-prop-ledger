@@ -42,6 +42,14 @@ const SOURCES = [
     pages: [{ id: "nfl-season", url: "https://app.prizepicks.com/" }],
   },
   {
+    id: "underdog",
+    name: "Underdog TDs",
+    scraper: "underdog",
+    season: () => new Date().getFullYear(),
+    requiredStatLabels: ["Rush + Rec TDs", "Pass TDs"],
+    pages: [{ id: "nfl-week-1-touchdowns", url: "https://app.underdogsports.com/pick-em/higher-lower/all/NFL" }],
+  },
+  {
     id: "sleeper",
     name: "Sleeper ADP",
     scraper: "sleeper",
@@ -144,109 +152,6 @@ async function scrapeFanDuelPage() {
     statLabels,
     unavailable: /unable to display|not available in your location/i.test(document.body.innerText),
   };
-}
-
-function discoverFanDuelWeekOneGames() {
-  const links = [...document.querySelectorAll('main a[href*="/football/nfl/"]')]
-    .map((anchor) => {
-      try {
-        return new URL(anchor.getAttribute("href"), location.origin);
-      } catch {
-        return null;
-      }
-    })
-    .filter((url) => url
-      && url.hostname === "sportsbook.fanduel.com"
-      && /^\/football\/nfl\/[^/]+-\d+$/.test(url.pathname));
-  return [...new Set(links.map((url) => `${url.origin}${url.pathname}`))];
-}
-
-async function scrapeFanDuelWeekOnePassingTouchdowns() {
-  const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
-  const labelPattern = /^(.+?) - Passing TDs, (.+?) (Over|Under), (\d+(?:\.\d+)?), ([+−–—-]?\d+)$/i;
-  const marketPattern = /^.+ - Passing TDs$/i;
-  const readRows = () => [...document.querySelectorAll('[role="button"][aria-label]')]
-    .map((element) => element.getAttribute("aria-label")?.trim() || "")
-    .filter((label) => {
-      const match = label.match(labelPattern);
-      return match && match[1].trim().toLowerCase() === match[2].trim().toLowerCase();
-    });
-
-  const marketLabels = [...new Set([...document.querySelectorAll('[role="button"][aria-label]')]
-    .map((element) => element.getAttribute("aria-label")?.trim() || "")
-    .filter((label) => marketPattern.test(label)))];
-  for (const marketLabel of marketLabels) {
-    let outcomes = readRows().filter((label) => label.startsWith(`${marketLabel}, `));
-    if (outcomes.length === 2) continue;
-    const header = [...document.querySelectorAll('[role="button"][aria-label]')]
-      .find((element) => element.getAttribute("aria-label")?.trim() === marketLabel);
-    if (!header) continue;
-    header.click();
-    for (let attempt = 0; attempt < 20 && outcomes.length !== 2; attempt += 1) {
-      await sleep(75);
-      outcomes = readRows().filter((label) => label.startsWith(`${marketLabel}, `));
-    }
-  }
-
-  let labels = [];
-  for (let attempt = 0; attempt < 40 && labels.length === 0; attempt += 1) {
-    labels = readRows();
-    if (!labels.length) await sleep(150);
-  }
-  const groups = new Map();
-  for (const ariaLabel of labels) {
-    const match = ariaLabel.match(labelPattern);
-    const key = match[1].trim().toLowerCase();
-    groups.set(key, [...(groups.get(key) || []), ariaLabel]);
-  }
-  const complete = [...groups.values()].filter((outcomes) => outcomes.length === 2);
-  return {
-    rows: complete.flat().map((ariaLabel) => ({
-      ariaLabel,
-      marketScope: "week_1",
-      sourceUrl: location.href,
-    })),
-    marketCount: complete.length,
-  };
-}
-
-async function collectFanDuelWeekOnePassingTouchdowns() {
-  const navigationUrl = "https://sportsbook.fanduel.com/navigation/nfl?tab=week-1";
-  const navigationTab = await chrome.tabs.create({ url: navigationUrl, active: true });
-  let gameUrls = [];
-  try {
-    await waitForTab(navigationTab.id);
-    for (let attempt = 0; attempt < 2 && gameUrls.length === 0; attempt += 1) {
-      await new Promise((resolve) => setTimeout(resolve, attempt === 0 ? 3000 : 5000));
-      const results = await chrome.scripting.executeScript({ target: { tabId: navigationTab.id }, func: discoverFanDuelWeekOneGames });
-      gameUrls = results[0]?.result || [];
-    }
-  } finally {
-    await chrome.tabs.remove(navigationTab.id).catch(() => {});
-  }
-  if (!gameUrls.length) throw new Error("FanDuel Week 1 game links are unavailable");
-
-  const rows = [];
-  let marketCount = 0;
-  for (const gameUrl of gameUrls) {
-    const eventUrl = `${gameUrl}?tab=passing-props`;
-    const eventTab = await chrome.tabs.create({ url: eventUrl, active: true });
-    try {
-      await waitForTab(eventTab.id);
-      let result = { rows: [], marketCount: 0 };
-      for (let attempt = 0; attempt < 2 && result.rows.length === 0; attempt += 1) {
-        await new Promise((resolve) => setTimeout(resolve, attempt === 0 ? 1800 : 3000));
-        const results = await chrome.scripting.executeScript({ target: { tabId: eventTab.id }, func: scrapeFanDuelWeekOnePassingTouchdowns });
-        result = results[0]?.result || result;
-      }
-      rows.push(...result.rows);
-      marketCount += result.marketCount;
-    } finally {
-      await chrome.tabs.remove(eventTab.id).catch(() => {});
-    }
-  }
-  if (!rows.length) throw new Error("FanDuel Week 1 Passing TD markets are unavailable");
-  return { rows, marketCount, eventCount: gameUrls.length };
 }
 
 async function scrapeBetMgmPage() {
@@ -411,6 +316,98 @@ async function scrapePrizePicksPage() {
   };
 }
 
+async function scrapeUnderdogPage() {
+  const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
+  const text = (element) => element?.textContent?.replace(/\s+/g, " ").trim() || "";
+  const supportedTabs = [
+    { tab: "TD Scorers", statLabel: "Rush + Rec TDs" },
+    { tab: "Passing", statLabel: "Pass TDs" },
+  ];
+  const rowsByKey = new Map();
+  const statLabels = new Set();
+
+  const visibleButtons = () => [...document.querySelectorAll('button, [role="button"]')]
+    .filter((button) => button.getClientRects().length > 0);
+  const findExactButton = (label) => visibleButtons().find((button) => text(button) === label);
+  const modifier = (side) => {
+    const match = text(side).match(/(?:Higher|Lower)\s+(\d+(?:\.\d+)?)x/i);
+    return match ? Number(match[1]) : Number.NaN;
+  };
+  const cardForHigher = (higher, statLabel) => {
+    let card = higher;
+    for (let depth = 0; depth < 9 && card?.parentElement; depth += 1) {
+      card = card.parentElement;
+      const cardText = text(card);
+      const higherCount = (cardText.match(/Higher\s+\d+(?:\.\d+)?x/gi) || []).length;
+      const lowerCount = (cardText.match(/Lower\s+\d+(?:\.\d+)?x/gi) || []).length;
+      if (higherCount === 1 && lowerCount === 1 && cardText.toLowerCase().includes(statLabel.toLowerCase())) return card;
+    }
+    return null;
+  };
+  const readVisibleCards = (statLabel) => {
+    const higherButtons = visibleButtons().filter((button) => /^Higher\s+\d+(?:\.\d+)?x$/i.test(text(button)));
+    for (const higherButton of higherButtons) {
+      const card = cardForHigher(higherButton, statLabel);
+      if (!card) continue;
+      const lowerButton = [...card.querySelectorAll('button, [role="button"]')]
+        .find((button) => /^Lower\s+\d+(?:\.\d+)?x$/i.test(text(button)));
+      if (!lowerButton) continue;
+      const cardText = text(card);
+      const lineMatch = cardText.match(new RegExp(`(\\d+(?:\\.\\d+)?)\\s+${statLabel.replace(/[+]/g, "\\+")}`, "i"));
+      const lines = (card.innerText || "").split("\n").map((line) => line.replace(/\s+/g, " ").trim()).filter(Boolean);
+      const matchupIndex = lines.findIndex((line) => /(?:\s@\s|\svs\s).*(?:\d{1,2}\/\d{1,2}|\d{1,2}:\d{2})/i.test(line));
+      const playerName = matchupIndex > 0 ? lines[matchupIndex - 1] : "";
+      const isNonStandard = /\b(?:boost|boosted|special|discount|demon|goblin|scorcher|rescue|promotion)\b/i.test(cardText);
+      if (!playerName || !lineMatch) continue;
+      const row = {
+        playerName,
+        statLabel,
+        line: Number(lineMatch[1]),
+        higherMultiplier: modifier(higherButton),
+        lowerMultiplier: modifier(lowerButton),
+        marketScope: "week_1",
+        sourceUrl: location.href,
+        isNonStandard,
+      };
+      if (Number.isFinite(row.higherMultiplier) && Number.isFinite(row.lowerMultiplier)) {
+        rowsByKey.set(`${statLabel}:${playerName.toLowerCase()}`, row);
+        statLabels.add(statLabel);
+      }
+    }
+  };
+
+  for (const { tab, statLabel } of supportedTabs) {
+    const button = findExactButton(tab);
+    if (!button) throw new Error(`Underdog ${tab} tab is missing`);
+    button.scrollIntoView({ block: "nearest", inline: "center" });
+    button.click();
+    await sleep(700);
+    window.scrollTo(0, 0);
+    await sleep(250);
+    let stableChecks = 0;
+    let priorSize = -1;
+    let priorHeight = -1;
+    for (let attempt = 0; attempt < 160 && stableChecks < 6; attempt += 1) {
+      readVisibleCards(statLabel);
+      const height = document.documentElement.scrollHeight;
+      const atBottom = window.scrollY + window.innerHeight >= height - 12;
+      stableChecks = atBottom && rowsByKey.size === priorSize && height === priorHeight ? stableChecks + 1 : 0;
+      priorSize = rowsByKey.size;
+      priorHeight = height;
+      window.scrollBy(0, Math.max(window.innerHeight * 0.8, 600));
+      await sleep(100);
+    }
+    readVisibleCards(statLabel);
+  }
+  window.scrollTo(0, 0);
+  return {
+    rows: [...rowsByKey.values()],
+    marketCount: rowsByKey.size,
+    statLabels: [...statLabels],
+    unavailable: /not available in your location|location.*required/i.test(document.body.innerText),
+  };
+}
+
 async function scrapeSleeperAdpPage() {
   const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
   const expected = {
@@ -473,6 +470,7 @@ async function scrapeTab(tabId, scraper) {
     fanduel: scrapeFanDuelPage,
     betmgm: scrapeBetMgmPage,
     prizepicks: scrapePrizePicksPage,
+    underdog: scrapeUnderdogPage,
     sleeper: scrapeSleeperAdpPage,
   };
   let lastResult;
@@ -491,21 +489,11 @@ async function scrapeTab(tabId, scraper) {
 }
 
 async function collectPage(source, spec) {
-  const tab = await chrome.tabs.create({ url: spec.url, active: ["fanduel", "prizepicks", "sleeper"].includes(source.id) });
+  const tab = await chrome.tabs.create({ url: spec.url, active: ["fanduel", "prizepicks", "underdog", "sleeper"].includes(source.id) });
   try {
     await waitForTab(tab.id);
     const result = await scrapeTab(tab.id, source.scraper);
-    if (source.id !== "fanduel") return { ...spec, capturedAt: new Date().toISOString(), ...result };
-    const weeklyPassingTouchdowns = await collectFanDuelWeekOnePassingTouchdowns();
-    return {
-      ...spec,
-      capturedAt: new Date().toISOString(),
-      ...result,
-      rows: [...result.rows, ...weeklyPassingTouchdowns.rows],
-      marketCount: result.marketCount + weeklyPassingTouchdowns.marketCount,
-      weekOneEventCount: weeklyPassingTouchdowns.eventCount,
-      weekOnePassingTouchdownMarketCount: weeklyPassingTouchdowns.marketCount,
-    };
+    return { ...spec, capturedAt: new Date().toISOString(), ...result };
   } finally {
     await chrome.tabs.remove(tab.id).catch(() => {});
   }

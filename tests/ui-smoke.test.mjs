@@ -478,7 +478,7 @@ test("Week 1 has a separate data-ready board and movement history", async () => 
     await page.getByPlaceholder("Search player or team").fill("Sam Darnold");
     const darnoldTdCell = page.locator("tbody tr.data-row").filter({ hasText: "Sam Darnold" }).first().locator("td:nth-child(5)");
     assert.equal(await darnoldTdCell.locator(".passing-td-expectation").count(), 1);
-    assert.match(await darnoldTdCell.innerText(), /1\.45[\s\S]*Expected pass TDs · FanDuel no-vig/i);
+    assert.match(await darnoldTdCell.innerText(), /1\.45[\s\S]*Expected pass TDs · sportsbook no-vig/i);
     assert.match(await darnoldTdCell.innerText(), /FanDuel Pass TDs · O 1\.5 \+106 \/ U 1\.5 -140/i);
     assert.doesNotMatch(await darnoldTdCell.innerText(), /Pass TD · 4 pts/i);
     const darnoldFantasyCell = page.locator("tbody tr.data-row").filter({ hasText: "Sam Darnold" }).first().locator("td:nth-child(6)");

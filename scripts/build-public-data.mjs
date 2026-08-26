@@ -62,6 +62,8 @@ function buildScope(scope, extra = {}) {
         line: observation.line,
         overOdds: observation.overOdds ?? null,
         underOdds: observation.underOdds ?? null,
+        higherMultiplier: observation.higherMultiplier ?? null,
+        lowerMultiplier: observation.lowerMultiplier ?? null,
         status: observation.status,
         changeType: observation.changeType,
       });

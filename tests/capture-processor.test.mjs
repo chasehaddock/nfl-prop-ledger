@@ -8,6 +8,7 @@ import { fileURLToPath } from "node:url";
 import { BETMGM_MARKETS } from "../collector/betmgm-config.mjs";
 import { FANDUEL_MARKETS } from "../collector/fanduel-config.mjs";
 import { PRIZEPICKS_MARKETS } from "../collector/prizepicks-config.mjs";
+import { UNDERDOG_MARKETS } from "../collector/underdog-config.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const capturedAt = "2026-08-19T14:17:00.000Z";
@@ -146,4 +147,22 @@ test("processes a complete PrizePicks projection envelope", async () => {
   assert.equal(capture.providerType, "projection");
   assert.equal(capture.observations.length, 7);
   assert.equal(capture.observations[0].overOdds, undefined);
+});
+
+test("processes normalized Underdog Week 1 touchdown modifiers", async () => {
+  const rows = [
+    { playerName: "Jaxon Smith-Njigba", statLabel: "Rush + Rec TDs", line: 0.5, higherMultiplier: 1.13, lowerMultiplier: 0.83 },
+    { playerName: "Dak Prescott", statLabel: "Pass TDs", line: 1.5, higherMultiplier: 0.89, lowerMultiplier: 1.08 },
+  ];
+  const { result, capture } = await processRaw({
+    source: "underdog",
+    season: 2026,
+    capturedAt,
+    pages: [{ ...UNDERDOG_MARKETS[0], capturedAt, rows }],
+  });
+  assert.equal(result.status, 0, result.stderr);
+  assert.equal(capture.source, "underdog");
+  assert.equal(capture.providerType, "multiplier");
+  assert.equal(capture.observations.length, 2);
+  assert.equal(capture.observations[0].normalizedProbability.toFixed(4), "0.4235");
 });
