@@ -333,27 +333,18 @@ async function scrapeUnderdogPage() {
     const match = text(side).match(/(?:Higher|Lower)\s*(\d+(?:\.\d+)?)x/i);
     return match ? Number(match[1]) : Number.NaN;
   };
-  const cardForHigher = (higher, statLabel) => {
-    let card = higher;
-    for (let depth = 0; depth < 9 && card?.parentElement; depth += 1) {
-      card = card.parentElement;
-      const cardText = text(card);
-      const higherCount = (cardText.match(/Higher\s*\d+(?:\.\d+)?x/gi) || []).length;
-      const lowerCount = (cardText.match(/Lower\s*\d+(?:\.\d+)?x/gi) || []).length;
-      const hasMatchup = /(?:\s@\s|\svs\s).*(?:\d{1,2}\/\d{1,2}|\d{1,2}:\d{2})/i.test(card.innerText || "");
-      if (higherCount === 1 && lowerCount === 1 && hasMatchup && cardText.toLowerCase().includes(statLabel.toLowerCase())) return card;
-    }
-    return null;
-  };
   const readVisibleCards = (statLabel) => {
-    const higherButtons = visibleButtons().filter((button) => /^Higher\s*\d+(?:\.\d+)?x$/i.test(text(button)));
-    for (const higherButton of higherButtons) {
-      const card = cardForHigher(higherButton, statLabel);
-      if (!card) continue;
-      const lowerButton = [...card.querySelectorAll('button, [role="button"]')]
-        .find((button) => /^Lower\s*\d+(?:\.\d+)?x$/i.test(text(button)));
-      if (!lowerButton) continue;
+    const cards = [...document.querySelectorAll('[role="button"]')].filter((card) => card.getClientRects().length > 0);
+    for (const card of cards) {
       const cardText = text(card);
+      if (!cardText.toLowerCase().includes(statLabel.toLowerCase())) continue;
+      const higherButtons = [...card.querySelectorAll('button, [role="button"]')]
+        .filter((button) => /^Higher\s*\d+(?:\.\d+)?x$/i.test(text(button)));
+      const lowerButtons = [...card.querySelectorAll('button, [role="button"]')]
+        .filter((button) => /^Lower\s*\d+(?:\.\d+)?x$/i.test(text(button)));
+      if (higherButtons.length !== 1 || lowerButtons.length !== 1) continue;
+      const higherButton = higherButtons[0];
+      const lowerButton = lowerButtons[0];
       const lineMatch = cardText.match(new RegExp(`(\\d+(?:\\.\\d+)?)\\s*${statLabel.replace(/[+]/g, "\\+")}`, "i"));
       const lines = (card.innerText || "").split("\n").map((line) => line.replace(/\s+/g, " ").trim()).filter(Boolean);
       const matchupIndex = lines.findIndex((line) => /(?:\s@\s|\svs\s).*(?:\d{1,2}\/\d{1,2}|\d{1,2}:\d{2})/i.test(line));

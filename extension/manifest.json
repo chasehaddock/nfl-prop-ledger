@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "NFL Prop Ledger Collector",
-  "version": "0.2.18",
+  "version": "0.2.19",
   "description": "Captures validated NFL prop boards and Sleeper redraft ADP for the local ledger, retrying failed sources.",
   "permissions": ["alarms", "downloads", "scripting", "storage", "tabs"],
   "host_permissions": [
