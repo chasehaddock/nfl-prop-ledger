@@ -250,6 +250,8 @@ td > small { display: block; margin-top: 5px; }
 .touchdown-chance { display: grid; gap: 3px; }
 .touchdown-chance strong { color: var(--lime); font-size: 1.08rem; font-variant-numeric: tabular-nums; }
 .touchdown-chance small:last-child { color: var(--muted); max-width: 220px; }
+.qb-touchdown-breakdown { display: grid; gap: 8px; }
+.qb-touchdown-breakdown .touchdown-chance { padding-top: 8px; border-top: 1px solid var(--line); }
 .touchdown-odds { color: #74c9ff !important; font-weight: 800; max-width: 240px; }
 .touchdown-odds.unavailable { color: var(--muted) !important; font-weight: 700; }
 .passing-td-expectation { display: grid; gap: 3px; padding: 8px 0; border-top: 1px solid var(--line); }

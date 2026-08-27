@@ -639,12 +639,12 @@ function americanOddsLabel(value: number | undefined): string {
   return `${value! > 0 ? "+" : ""}${value}`;
 }
 
-function touchdownOddsLines(line: PlayerLine): string[] {
-  const statTypes: StatType[] = line.position === "QB"
+function touchdownOddsLines(line: PlayerLine, requestedStatTypes?: StatType[]): string[] {
+  const statTypes: StatType[] = requestedStatTypes || (line.position === "QB"
     ? ["passing_touchdowns", "offensive_touchdowns"]
     : (line.sourcesByStat.offensive_touchdowns || []).some((cell) => Number.isFinite(cell.overOdds) || Number.isFinite(cell.higherMultiplier))
       ? ["offensive_touchdowns"]
-      : ["rushing_touchdowns", "receiving_touchdowns"];
+      : ["rushing_touchdowns", "receiving_touchdowns"]);
   return statTypes.flatMap((statType) => (line.sourcesByStat[statType] || [])
     .filter((cell) => cell.status === "open" && (Number.isFinite(cell.overOdds) || Number.isFinite(cell.higherMultiplier)))
     .map((cell) => {
@@ -657,18 +657,22 @@ function touchdownOddsLines(line: PlayerLine): string[] {
 }
 
 function TouchdownChanceCell({ line, onInspect }: { line: PlayerLine; onInspect: (statType: StatType) => void }) {
-  const oddsLines = touchdownOddsLines(line);
-  const oddsDetails = oddsLines.length
-    ? oddsLines.map((odds) => <small className="touchdown-odds" key={odds}>{odds}</small>)
-    : <small className="touchdown-odds unavailable">O/U odds unavailable{line.fantasyTdOddsBooks.length ? ` · ${line.fantasyTdOddsBooks.join(" + ")}` : ""}</small>;
+  const oddsDetails = (statTypes?: StatType[]) => {
+    const oddsLines = touchdownOddsLines(line, statTypes);
+    return oddsLines.length
+      ? oddsLines.map((odds) => <small className="touchdown-odds" key={odds}>{odds}</small>)
+      : <small className="touchdown-odds unavailable">O/U odds unavailable{line.fantasyTdOddsBooks.length ? ` · ${line.fantasyTdOddsBooks.join(" + ")}` : ""}</small>;
+  };
+  const rushRecOdds = oddsDetails(["offensive_touchdowns", "rushing_touchdowns", "receiving_touchdowns"]);
   const chance = line.touchdownProbability === null
     ? <span className="empty">Not offered</span>
-    : <div className="touchdown-chance"><strong>{(line.touchdownProbability * 100).toFixed(1)}%</strong><small>Scores any rush/rec TD</small>{oddsDetails}{line.touchdownProbabilityNote && <small>{line.touchdownProbabilityNote}</small>}</div>;
+    : <button className="prop-trigger touchdown-chance" onClick={() => onInspect("offensive_touchdowns")} aria-label={`Compare ${line.player} rushing or receiving touchdown chance across sources`}><strong>{(line.touchdownProbability * 100).toFixed(1)}%</strong><small>Rush/rec TD chance · 6 pts</small>{rushRecOdds}{line.touchdownProbabilityNote && <small>{line.touchdownProbabilityNote}</small>}</button>;
   if (line.position !== "QB") return chance;
+  const passingOdds = oddsDetails(["passing_touchdowns"]);
   if (line.passingTouchdownExpectation !== null) {
-    return <button className="prop-trigger passing-td-expectation" onClick={() => onInspect("passing_touchdowns")} aria-label={`Compare ${line.player} Passing TDs across sources`}><strong>{line.passingTouchdownExpectation.toFixed(2)}</strong><small>Expected pass TDs · {line.passingTouchdownExpectationLabel}</small>{oddsDetails}</button>;
+    return <div className="qb-touchdown-breakdown"><button className="prop-trigger passing-td-expectation" onClick={() => onInspect("passing_touchdowns")} aria-label={`Compare ${line.player} Passing TDs across sources`}><strong>{line.passingTouchdownExpectation.toFixed(2)}</strong><small>Expected pass TDs · {line.passingTouchdownExpectationLabel}</small>{passingOdds}</button>{chance}</div>;
   }
-  if (line.touchdowns) return <LineCell cell={line.touchdowns} label="Pass TD · 4 pts" preferredSource={line.source} player={line.player} onInspect={onInspect} />;
+  if (line.touchdowns) return <div className="qb-touchdown-breakdown"><LineCell cell={line.touchdowns} label="Pass TD · 4 pts" preferredSource={line.source} player={line.player} onInspect={onInspect} />{chance}</div>;
   return chance;
 }
 

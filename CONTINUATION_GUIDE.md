@@ -46,6 +46,7 @@ The source branch deliberately excludes `node_modules`, `dist`, `.private`, `.en
 - Full PPR is the default.
 - Passing touchdowns are 4 points, with a UI toggle for 6-point passing TDs.
 - Rushing and receiving touchdowns are 6 points.
+- Week 1 QBs keep passing-TD expectation and rushing/receiving TD probability separate. Underdog or standard PrizePicks `Rush + Rec TDs`/any-TD markets may supply the latter, which contributes 6 points and is shown separately in the TD cell.
 - TE premium toggles: 0.0, 0.5, or 1.0 extra point per TE reception.
 - RB/WR/TE touchdown totals never use prior-season touchdown statistics. Only current market projections are used.
 - A positive rushing/receiving TD component may be derived only from a current total-TD market minus another current TD component from the same source.
