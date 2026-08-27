@@ -27,7 +27,7 @@ function selectedLine<T extends SelectableObservation>(statType: FantasyStat, po
   const only = pool.length === 1 ? pool[0] : undefined;
   if (statType === "receptions" && only?.source === "underdog" && Number.isFinite(only.normalizedProbability)) {
     const expectation = lineCenteredExpectation(only.line, only.normalizedProbability!);
-    if (Number.isFinite(expectation)) return Math.round(expectation * 10) / 10;
+    if (Number.isFinite(expectation)) return Math.round(expectation * 100) / 100;
   }
   return pool.length === 1 ? pool[0].line : roundedAverage(pool.map((item) => item.line));
 }

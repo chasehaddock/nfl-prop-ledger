@@ -490,9 +490,9 @@ test("Week 1 has a separate data-ready board and movement history", async () => 
     await page.getByPlaceholder("Search player or team").fill("Josh Allen");
     const allenTdCell = page.locator("tbody tr.data-row").filter({ hasText: "Josh Allen" }).first().locator("td:nth-child(4)");
     assert.match(await allenTdCell.innerText(), /Expected pass TDs[\s\S]*Rush\/rec TD chance · 6 pts[\s\S]*Underdog Any TD/i);
-    await page.getByPlaceholder("Search player or team").fill("Quinshon Judkins");
-    const judkinsReceptions = page.locator("tbody tr.data-row").filter({ hasText: "Quinshon Judkins" }).first().locator("td:nth-child(3)");
-    assert.match(await judkinsReceptions.innerText(), /2\.4[\s\S]*Underdog H 1\.18x \/ L 0\.79x · posted 2\.5/i);
+    await page.getByPlaceholder("Search player or team").fill("Javonte Williams");
+    const javonteReceptions = page.locator("tbody tr.data-row").filter({ hasText: "Javonte Williams" }).first().locator("td:nth-child(3)");
+    assert.match(await javonteReceptions.innerText(), /1\.59[\s\S]*Underdog H 0\.80x \/ L 1\.17x · posted 1\.5/i);
     await page.getByPlaceholder("Search player or team").fill("");
     assert.ok(await page.locator("tbody tr.data-row td:nth-child(6) .number-cell").count() > 0);
     const weeklyTrend = page.locator(".trend-card:not(.new-props-card)");
