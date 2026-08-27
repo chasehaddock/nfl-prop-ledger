@@ -9,12 +9,12 @@ if (!gh || !repository) throw new Error("Usage: node publish-source-branch.mjs G
 
 const root = process.cwd();
 const rootFiles = new Set([
-  ".gitignore", "README.md", "CONTINUATION_GUIDE.md", "BUDDY_CHATGPT_HANDOFF.md",
+  ".gitignore", "AGENTS.md", "README.md", "CONTRIBUTING.md", "CONTINUATION_GUIDE.md", "BUDDY_CHATGPT_HANDOFF.md",
   "START-HERE-LOCAL.md", "SETUP-LINUX.sh",
   "SETUP-MAC.command", "SETUP-WINDOWS.cmd", "eslint.config.mjs", "index.html",
   "package-lock.json", "package.json", "tsconfig.json", "vite.config.ts",
 ]);
-const sourceDirectories = ["app", "collector", "data", "extension", "lib", "public", "scripts", "src", "tests"];
+const sourceDirectories = [".github", "app", "collector", "data", "extension", "lib", "public", "scripts", "src", "tests"];
 const excludedPrefixes = ["data/incoming/", "public/data/.tmp/", ".private/", "raw-captures/", "node_modules/", "dist/"];
 const secretPatterns = [
   /github_pat_[A-Za-z0-9_]{20,}/,
@@ -86,10 +86,12 @@ for (const file of files) {
 }
 
 const mainRef = await api(`repos/${repository}/git/ref/heads/main`);
+const sourceRef = await api(`repos/${repository}/git/ref/heads/source`, "GET", undefined, true);
 let branchRef = await api(`repos/${repository}/git/ref/heads/${branch}`, "GET", undefined, true);
 if (!branchRef) {
-  branchRef = await api(`repos/${repository}/git/refs`, "POST", { ref: `refs/heads/${branch}`, sha: mainRef.object.sha });
-  console.log(`Created ${branch} from main.`);
+  const baseRef = branch === "source" ? mainRef : (sourceRef || mainRef);
+  branchRef = await api(`repos/${repository}/git/refs`, "POST", { ref: `refs/heads/${branch}`, sha: baseRef.object.sha });
+  console.log(`Created ${branch} from ${branch === "source" || !sourceRef ? "main" : "source"}.`);
 }
 const currentCommit = await api(`repos/${repository}/git/commits/${branchRef.object.sha}`);
 const currentTree = await api(`repos/${repository}/git/trees/${currentCommit.tree.sha}?recursive=1`);

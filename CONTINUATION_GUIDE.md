@@ -1,14 +1,16 @@
 # NFL Prop Ledger continuation guide
 
-This repository uses two GitHub branches:
+This repository uses the following GitHub layout:
 
-- `main`: compiled GitHub Pages files for `https://chasehaddock.github.io/nfl-prop-ledger/`.
-- `source`: the editable application, collector, extension, tests, accepted snapshots, and operating documentation.
+- `source`: the default branch and canonical editable application, collector, extension, tests, accepted snapshots, and operating documentation.
+- Short-lived `codex/*` branches: one focused change per branch, merged into `source` through a pull request.
+- GitHub Pages: built, tested, and deployed automatically by `.github/workflows/pages.yml` after a merge to `source`.
+- `main`: legacy compiled output retained for history; do not edit it.
 
 To continue from another GitHub account, first give that account write access to `chasehaddock/nfl-prop-ledger`, then clone the source branch:
 
 ```bash
-git clone --branch source https://github.com/chasehaddock/nfl-prop-ledger.git
+git clone https://github.com/chasehaddock/nfl-prop-ledger.git
 cd nfl-prop-ledger
 npm ci
 npm run typecheck
@@ -21,7 +23,7 @@ Use Node.js 22.13 or newer. Node 24 is the known-good version.
 ## What is included
 
 - React/Vite dashboard in `app/` and `src/`.
-- Four-source Chrome collector in `extension/` and `collector/`.
+- Five-market-source Chrome collector plus Sleeper ADP collection in `extension/` and `collector/`.
 - Accepted season and Week 1 history in `data/` and generated public JSON in `public/data/`.
 - Sleeper redraft ADP history and coverage-adjusted value analysis.
 - Processing, validation, automation, and GitHub publishing scripts in `lib/` and `scripts/`.
@@ -76,23 +78,25 @@ Chrome sessions and sportsbook logins cannot be transferred through GitHub. The 
 
 ## Daily operation
 
-- Automatic browser capture is scheduled for 8:17 AM local time.
-- The collector performs one complete validated pass per source and retries only failed sources. It writes a compatible primary/confirmation pair for the processor, which rebuilds the ledger and publishes.
-- The computer must be awake, logged in, online, and able to open Chrome.
-- Run `npm run operator:health -- --require-today` to diagnose a missed day.
+- Capture is currently started manually from the Chrome extension when the operator is available and connected to an unrestricted network.
+- The collector performs one complete validated pass per source and retries only failed sources. It writes a compatible primary/confirmation pair for the processor.
+- After capture, run `npm run operator:run`, verify with `npm run operator:health -- --require-today`, then commit the accepted `data/` and `public/data/` updates on a branch and merge them to `source`.
+- The computer must be awake, logged in, online, and able to open Chrome during collection.
 
 Raw capture evidence stays local under the configured intake directory and must not be committed.
 
 ## Publishing
 
-Build and publish the public site to `main`:
+Normal publishing is automatic: merge a verified pull request into `source`, and the Pages workflow tests, builds, and deploys the public site. Check the workflow in the repository's **Actions** tab.
+
+The API publisher remains an emergency fallback:
 
 ```bash
 GITHUB_ACTIONS=true npm run build
 node scripts/publish-github-pages.mjs /absolute/path/to/gh dist chasehaddock/nfl-prop-ledger
 ```
 
-Publish the editable, sanitized project to `source`:
+The legacy sanitized-source publisher also remains available for recovery:
 
 ```bash
 node scripts/publish-source-branch.mjs /absolute/path/to/gh chasehaddock/nfl-prop-ledger source
@@ -113,7 +117,7 @@ npm run test:ui
 2. Clone `source` and complete the Chrome/operator setup above.
 3. Perform one supervised capture and verify the local build.
 4. Publish once and confirm GitHub Pages.
-5. Observe two successful automatic morning runs before disabling the original computer.
+5. Observe two successful manual capture/process/publish cycles before retiring the original computer.
 6. Do not let two computers publish the same daily capture during the permanent handoff.
 
 If the repository itself is transferred or renamed, update `vite.config.ts`, every repository argument in the publishing commands, GitHub Pages settings, and the documented public URL.
