@@ -58,6 +58,7 @@ The source branch deliberately excludes `node_modules`, `dist`, `.private`, `.en
 - The intentional season-only historical exceptions are RB receptions/receiving yards and QB rushing yards/rushing TDs. They are labeled with their sample and method.
 - Week 1 never substitutes season history.
 - Week 1 QB passing-TD priority is FanDuel or another complete two-sided sportsbook market with vig removed, then Underdog normalized Higher/Lower modifiers. For one-way anytime-TD markets, the two-sided Underdog estimate remains preferable to a raw one-sided price. Underdog modifiers are normalized against each other but must not be described as true sportsbook no-vig odds.
+- Season QB passing-TD markets also use a line-centered expectation when a complete two-sided sportsbook over/under is available. If no complete two-sided price exists, retain the published projection line without inventing an adjustment. Standard PrizePicks projections remain posted 50/50 lines and are never labeled no-vig.
 
 ### Sleeper redraft
 
