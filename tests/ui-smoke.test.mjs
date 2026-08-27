@@ -74,7 +74,7 @@ test("a prop opens every current source line and explains the consensus", async 
     await page.goto(process.env.TEST_URL || "http://127.0.0.1:4173", { waitUntil: "networkidle" });
     await page.getByPlaceholder("Search player or team").fill("Jared Goff");
     const row = page.locator("tbody tr.data-row").filter({ hasText: "Jared Goff" }).first();
-    assert.match(await row.locator("td:nth-child(2)").innerText(), /4 sources · arithmetic average/i);
+    assert.match(await row.locator("td:nth-child(2)").innerText(), /3 sources · arithmetic average/i);
     await row.getByRole("button", { name: /Compare Jared Goff Pass yards across sources/i }).click();
     const drawer = page.getByRole("dialog", { name: /Jared Goff Pass yards line trend/i });
     await drawer.waitFor();
@@ -82,11 +82,11 @@ test("a prop opens every current source line and explains the consensus", async 
     await comparison.getByRole("heading", { name: /Jared Goff · Pass yards/i }).waitFor();
     assert.equal(await page.locator("tbody tr.history-row").count(), 0);
     assert.equal(await page.evaluate(() => document.body.style.overflow), "hidden");
-    assert.match(await comparison.locator(".consensus-summary").innerText(), /4,068\.75[\s\S]*arithmetic average of all 4 current sources/i);
-    assert.equal(await comparison.locator(".source-comparison article").count(), 4);
+    assert.match(await comparison.locator(".consensus-summary").innerText(), /4,074\.83[\s\S]*arithmetic average of all 3 current sources/i);
+    assert.equal(await comparison.locator(".source-comparison article").count(), 3);
     const text = await comparison.innerText();
-    for (const source of ["BetMGM", "DraftKings", "FanDuel", "PrizePicks"]) assert.match(text, new RegExp(source));
-    for (const source of ["draftkings", "fanduel", "betmgm", "prizepicks"]) assert.ok(await comparison.locator(`.source-${source}`).count() > 0);
+    for (const source of ["DraftKings", "FanDuel", "PrizePicks"]) assert.match(text, new RegExp(source));
+    for (const source of ["draftkings", "fanduel", "prizepicks"]) assert.ok(await comparison.locator(`.source-${source}`).count() > 0);
     await comparison.getByRole("button", { name: /Back to all players/i }).click();
     assert.equal(await page.getByRole("dialog").count(), 0);
     assert.equal(await page.getByPlaceholder("Search player or team").inputValue(), "");
@@ -221,14 +221,14 @@ test("zero inferred rushing yards stay implicit for receivers and tight ends", a
     const page = await browser.newPage();
     await page.goto(process.env.TEST_URL || "http://127.0.0.1:4173", { waitUntil: "networkidle" });
     await page.getByRole("button", { name: "TE", exact: true }).click();
-    const laporta = page.locator("tbody tr.data-row").filter({ hasText: "Sam LaPorta" }).first();
-    assert.doesNotMatch(await laporta.locator("td:nth-child(2)").innerText(), /Rush yds/i);
-    assert.doesNotMatch(await laporta.locator("td:nth-child(5)").innerText(), /Rush yards/i);
-    await laporta.locator(".ledger-link").click();
+    const mcbride = page.locator("tbody tr.data-row").filter({ hasText: "Trey McBride" }).first();
+    assert.doesNotMatch(await mcbride.locator("td:nth-child(2)").innerText(), /Rush yds/i);
+    assert.doesNotMatch(await mcbride.locator("td:nth-child(5)").innerText(), /Rush yards/i);
+    await mcbride.locator(".ledger-link").click();
     const ledger = page.locator(".inline-history");
     await ledger.waitFor();
     assert.equal(await ledger.getByRole("heading", { name: "Rushing yards", exact: true }).count(), 0);
-    await page.getByRole("button", { name: /Collapse Sam LaPorta ledger/ }).click();
+    await page.getByRole("button", { name: /Collapse Trey McBride ledger/ }).click();
     const dulcich = page.locator("tbody tr.data-row").filter({ hasText: "Greg Dulcich" }).first();
     assert.doesNotMatch(await dulcich.locator("td:nth-child(2)").innerText(), /-14|Rush yds/i);
     assert.doesNotMatch(await dulcich.locator("td:nth-child(5)").innerText(), /-14|Rush yards/i);
@@ -253,7 +253,7 @@ test("skill players show total touchdowns with the rushing and receiving split",
     assert.equal(await kyrenRow.locator(".projection-rank.incomplete").innerText(), "NR");
 
     const etienne = page.locator("tbody tr.data-row").filter({ hasText: "Travis Etienne" }).first().locator("td:nth-child(4)");
-    assert.match(await etienne.innerText(), /7\.88[\s\S]*Total TDs[\s\S]*Rush 5\.38 · Rec 2\.5/i);
+    assert.match(await etienne.innerText(), /7\.83[\s\S]*Total TDs[\s\S]*Rush 5\.33 · Rec 2\.5/i);
     assert.doesNotMatch(await etienne.innerText(), /2025 NFL|prior-season|6 rec TD/i);
 
     await page.getByRole("button", { name: "WR", exact: true }).click();

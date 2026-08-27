@@ -75,7 +75,6 @@ h1 span { color: transparent; -webkit-text-stroke: 2px var(--ink); }
 .source-dot { width: 7px; height: 28px; border-radius: 99px; background: var(--green); }
 .source-dot.source-draftkings { background: #39d98a; }
 .source-dot.source-fanduel { background: #2f8cff; }
-.source-dot.source-betmgm { background: #f5a623; }
 .source-dot.source-prizepicks { background: #ad5cff; }
 .source-dot.source-underdog { background: #ffe000; }
 .freshness-panel li > span { min-width: 0; display: grid; gap: 3px; }
@@ -119,7 +118,6 @@ h1 span { color: transparent; -webkit-text-stroke: 2px var(--ink); }
 .new-prop-source { width: 8px; height: 30px; border-radius: 99px; background: var(--lime); }
 .new-prop-source.source-draftkings { background: #39d98a; }
 .new-prop-source.source-fanduel { background: #2f8cff; }
-.new-prop-source.source-betmgm { background: #f5a623; }
 .new-prop-source.source-prizepicks { background: #ad5cff; }
 .new-prop-source.source-underdog { background: #ffe000; color: #111; }
 .new-props-list .trend-value small { color: var(--lime); text-transform: uppercase; letter-spacing: .05em; }
@@ -359,7 +357,6 @@ td > small { display: block; margin-top: 5px; }
 .series-marker { width: 9px; height: 9px; border-radius: 50%; }
 .series-marker.source-draftkings { background: #39d98a; }
 .series-marker.source-fanduel { background: #2f8cff; }
-.series-marker.source-betmgm { background: #f5a623; }
 .series-marker.source-prizepicks { background: #ad5cff; }
 .series-marker.source-underdog { background: #ffe000; }
 .line-chart-scroll { overflow-x: auto; scrollbar-color: var(--line) transparent; }
@@ -373,12 +370,10 @@ td > small { display: block; margin-top: 5px; }
 .chart-segment { stroke-width: 3.5; stroke-linecap: round; }
 .chart-series.source-draftkings .chart-segment { stroke: #39d98a; }
 .chart-series.source-fanduel .chart-segment { stroke: #2f8cff; }
-.chart-series.source-betmgm .chart-segment { stroke: #f5a623; }
 .chart-series.source-prizepicks .chart-segment { stroke: #ad5cff; }
 .chart-series.source-underdog .chart-segment { stroke: #ffe000; }
 .chart-point.source-draftkings { fill: #39d98a; }
 .chart-point.source-fanduel { fill: #2f8cff; }
-.chart-point.source-betmgm { fill: #f5a623; }
 .chart-point.source-prizepicks { fill: #ad5cff; }
 .chart-point.source-underdog { fill: #ffe000; }
 .chart-series:not(.highlighted) { opacity: .76; }

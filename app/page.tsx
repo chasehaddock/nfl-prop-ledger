@@ -37,7 +37,7 @@ type ProjectionColumnKey = "yards" | "secondary" | "touchdowns" | "fantasyPoints
 type SleeperColumnKey = Exclude<SleeperSortKey, "player"> | "coverage";
 type ColumnChoice = { key: string; label: string };
 
-const SOURCE_NAMES: Record<string, string> = { draftkings: "DraftKings", fanduel: "FanDuel", betmgm: "BetMGM", prizepicks: "PrizePicks", underdog: "Underdog" };
+const SOURCE_NAMES: Record<string, string> = { draftkings: "DraftKings", fanduel: "FanDuel", prizepicks: "PrizePicks", underdog: "Underdog" };
 const STAT_LABELS: Record<StatType, string> = {
   passing_yards: "Pass yards",
   rushing_yards: "Rush yards",
@@ -1010,7 +1010,7 @@ function LineHistoryChart({ line, statType, history, movements, highlightedSourc
     <div className="line-chart-heading"><div><p className="eyebrow">Visual history</p><h3 id={`chart-title-${line.id}-${statType}`}>Line trend</h3></div><div className="line-chart-key" aria-label="Chart key">{averagePoints.length > 0 && <span className="average"><i />Sportsbook average · primary trend</span>}</div></div>
     <div className="line-chart-series" aria-label="Sources">{averagePoints.length > 0 && <span className="average"><i className="series-marker" />Average of all sportsbooks · monitored trend</span>}{series.map((item) => <span className={item.cell.source === highlightedSource ? "highlighted" : ""} key={item.cell.key}><i className={`series-marker source-${item.cell.source}`} />{item.cell.sourceName}{item.cell.source === highlightedSource ? " · selected move" : ""}</span>)}</div>
     <div className="line-chart-scroll"><svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label={summary}>
-      <title>{line.player} · {STAT_LABELS[statType]} line history</title><desc>{summary} DraftKings is green, FanDuel is blue, BetMGM is gold, PrizePicks is purple, and Underdog is yellow.</desc>
+      <title>{line.player} · {STAT_LABELS[statType]} line history</title><desc>{summary} DraftKings is green, FanDuel is blue, PrizePicks is purple, and Underdog is yellow.</desc>
       <rect className="chart-frame" x={left} y={top} width={plotWidth} height={plotHeight} />
       {yTicks.map((tick) => <g key={tick}><line className="chart-grid" x1={left} x2={width - right} y1={y(tick)} y2={y(tick)} /><text className="chart-axis-label" x={left - 10} y={y(tick) + 4} textAnchor="end">{formatLine(tick)}</text></g>)}
       {xTickSlots.map((slot) => <g key={`${slot.order}:${slot.label}`}><line className="chart-tick" x1={x(slot.order)} x2={x(slot.order)} y1={height - bottom} y2={height - bottom + 6} /><text className="chart-axis-label" x={x(slot.order)} y={height - bottom + 24} textAnchor="middle">{slot.label}</text></g>)}
@@ -1413,7 +1413,7 @@ export default function Home() {
     {boardSwitch}
     <section className="hero" id="top">
       <div><p className="eyebrow">{boardMode === "season" ? "Daily season-long market monitor" : "Weekly matchup projection board"}</p><h1>{boardMode === "season" ? <>Every move.<br /><span>Kept on record.</span></> : <>Week 1.<br /><span>Every source.</span></>}</h1><p className="lede">{boardMode === "season" ? "One clean ledger for QB, RB, WR, and TE season props—validated before each daily change is accepted." : "A separate full-PPR board for QB, RB, WR, and TE Week 1 props—kept completely separate from season-long projections."}</p></div>
-      <div className="hero-sidebar"><div className="capture-card" aria-label="Latest capture status"><div className="capture-topline"><span>{boardMode === "season" ? "Latest capture" : "Week 1 capture"}</span><span className="status-pill">{waitingForWeekly ? "Waiting for markets" : isDemo ? "Setup required" : "Double-checked"}</span></div><strong>{waitingForWeekly ? "Board ready" : snapshot.date ? new Intl.DateTimeFormat("en-US", { dateStyle: "medium", timeZone: "UTC" }).format(new Date(`${snapshot.date}T12:00:00Z`)) : "No verified run yet"}</strong><div className="capture-stats"><div><b>{acceptedRuns.length}</b><span>sources accepted</span></div><div><b>{isDemo || waitingForWeekly ? 0 : allLines.length}</b><span>player lines</span></div><div><b>{reviewCount}</b><span>review flags</span></div></div><p>{waitingForWeekly ? "Confirmed Week 1 lines from DraftKings, FanDuel, BetMGM, PrizePicks, and Underdog will appear here; season averages are never substituted." : isDemo ? "The sample rows below demonstrate the layout; they are not current betting lines." : "Only complete, roster-matched, repeat-confirmed sportsbook and projection rows are published."}</p></div><SourceFreshnessPanel snapshot={snapshot} includeUnderdog={boardMode === "week1"} /></div>
+      <div className="hero-sidebar"><div className="capture-card" aria-label="Latest capture status"><div className="capture-topline"><span>{boardMode === "season" ? "Latest capture" : "Week 1 capture"}</span><span className="status-pill">{waitingForWeekly ? "Waiting for markets" : isDemo ? "Setup required" : "Double-checked"}</span></div><strong>{waitingForWeekly ? "Board ready" : snapshot.date ? new Intl.DateTimeFormat("en-US", { dateStyle: "medium", timeZone: "UTC" }).format(new Date(`${snapshot.date}T12:00:00Z`)) : "No verified run yet"}</strong><div className="capture-stats"><div><b>{acceptedRuns.length}</b><span>sources accepted</span></div><div><b>{isDemo || waitingForWeekly ? 0 : allLines.length}</b><span>player lines</span></div><div><b>{reviewCount}</b><span>review flags</span></div></div><p>{waitingForWeekly ? "Confirmed Week 1 lines from DraftKings, FanDuel, PrizePicks, and Underdog will appear here; season averages are never substituted." : isDemo ? "The sample rows below demonstrate the layout; they are not current betting lines." : "Only complete, roster-matched, repeat-confirmed sportsbook and projection rows are published."}</p></div><SourceFreshnessPanel snapshot={snapshot} includeUnderdog={boardMode === "week1"} /></div>
     </section>
     <div className="dashboard-layout">
     <aside className="trend-column" aria-label="Market updates"><NewPropsCard props={newProps} range={newPropRange} onRange={setNewPropRange} onSelect={focusNewProp} /><TrendCard moves={trendMoves} isDemo={isDemo} waitingForWeekly={waitingForWeekly} range={trendRange} onRange={setTrendRange} onSelect={focusTrend} /></aside>
@@ -1451,7 +1451,7 @@ export default function Home() {
             </Fragment>;
           })}</tbody>
         </table>
-        {lines.length === 0 && <div className={`empty-state ${waitingForWeekly ? "weekly-waiting" : ""}`}>{waitingForWeekly ? <><strong>Week 1 board is ready.</strong><span>Player projections will appear after the first confirmed Week 1 markets are captured from DraftKings, FanDuel, BetMGM, PrizePicks, or Underdog.</span></> : "No players match these filters."}</div>}
+        {lines.length === 0 && <div className={`empty-state ${waitingForWeekly ? "weekly-waiting" : ""}`}>{waitingForWeekly ? <><strong>Week 1 board is ready.</strong><span>Player projections will appear after the first confirmed Week 1 markets are captured from DraftKings, FanDuel, PrizePicks, or Underdog.</span></> : "No players match these filters."}</div>}
       </div>
     </section>
     </div>

@@ -25,12 +25,6 @@ const SOURCES = [
     pages: [{ id: "player-props", url: "https://sportsbook.fanduel.com/navigation/nfl?tab=player-props" }],
   },
   {
-    id: "betmgm",
-    name: "BetMGM",
-    scraper: "betmgm",
-    pages: [{ id: "regular-season-stats", url: "https://www.az.betmgm.com/en/sports/events/2026-27-nfl-regular-season-stats-19070789" }],
-  },
-  {
     id: "prizepicks",
     name: "PrizePicks",
     scraper: "prizepicks",
@@ -145,53 +139,6 @@ async function scrapeFanDuelPage() {
     statLabels,
     unavailable: /unable to display|not available in your location/i.test(document.body.innerText),
   };
-}
-
-async function scrapeBetMgmPage() {
-  const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
-  const panels = [
-    { panel: "Regular season passing stats", tabs: ["Passing yards O/U", "Passing TDs"] },
-    { panel: "Regular season rushing stats", tabs: ["Rushing yards O/U", "Rushing TDs"] },
-    { panel: "Regular season receiving stats", tabs: ["Receiving yards O/U", "Receiving TDs"] },
-  ];
-  const rows = [];
-
-  for (const spec of panels) {
-    const panel = [...document.querySelectorAll("ms-option-panel")].find((candidate) =>
-      candidate.querySelector(".ds-accordion-header-clickable-area")?.textContent?.trim() === spec.panel);
-    if (!panel) throw new Error(`BetMGM panel is missing: ${spec.panel}`);
-    const header = panel.querySelector(".ds-accordion-header-clickable-area");
-    if (header.getAttribute("aria-expanded") !== "true") {
-      header.click();
-      await sleep(550);
-    }
-
-    for (const statLabel of spec.tabs) {
-      const tab = [...panel.querySelectorAll('[role="tab"]')].find((candidate) => candidate.textContent.trim() === statLabel);
-      if (!tab) throw new Error(`BetMGM stat tab is missing: ${statLabel}`);
-      tab.click();
-      await sleep(550);
-      const showMore = [...panel.querySelectorAll(".show-more-less-button")]
-        .find((candidate) => candidate.textContent.trim() === "Show More");
-      if (showMore) {
-        showMore.click();
-        await sleep(550);
-      }
-
-      const statRows = [...panel.querySelectorAll(".option-group-row.flex-column")].map((row) => ({
-        statLabel,
-        playerName: row.querySelector(".player-props-player-name")?.textContent?.trim() || "",
-        outcomes: [...row.querySelectorAll("ms-option")].map((option) => ({
-          title: option.querySelector(".name")?.textContent?.trim() || "",
-          odds: option.querySelector(".option-value")?.textContent?.trim() || "",
-          optionId: option.querySelector("[data-test-option-id]")?.getAttribute("data-test-option-id") || "",
-        })),
-      }));
-      if (statRows.length === 0) throw new Error(`BetMGM stat has no rows: ${statLabel}`);
-      rows.push(...statRows);
-    }
-  }
-  return { rows, marketCount: rows.length, unavailable: /Where are you playing from\?/i.test(document.body.innerText) };
 }
 
 async function scrapePrizePicksPage() {
@@ -463,7 +410,6 @@ async function scrapeTab(tabId, scraper) {
   const functions = {
     draftkings: scrapeDraftKingsPage,
     fanduel: scrapeFanDuelPage,
-    betmgm: scrapeBetMgmPage,
     prizepicks: scrapePrizePicksPage,
     underdog: scrapeUnderdogPage,
     sleeper: scrapeSleeperAdpPage,
