@@ -5,6 +5,11 @@ import { normalizeName, SUPPORTED_POSITIONS } from "../lib/ledger.mjs";
 
 const ROSTER_URL = (season) => `https://github.com/nflverse/nflverse-data/releases/download/rosters/roster_${season}.csv`;
 
+const SPORTSBOOK_NAME_ALIASES = new Map([
+  ["Marquise Brown", ["Hollywood Brown"]],
+  ["Kenneth Gainwell", ["Kenny Gainwell"]],
+]);
+
 function chooseRosterRows(rows, rosterSeason, fallback = false) {
   const players = new Map();
   for (const row of rows) {
@@ -36,7 +41,11 @@ async function downloadRoster(season) {
 export function buildRosterIndex(players) {
   const rosterByName = new Map();
   for (const player of players) {
-    for (const alias of player.aliases?.length ? player.aliases : [player.name]) {
+    const aliases = [
+      ...(player.aliases?.length ? player.aliases : [player.name]),
+      ...(SPORTSBOOK_NAME_ALIASES.get(player.name) || []),
+    ];
+    for (const alias of aliases) {
       const key = normalizeName(alias);
       if (!rosterByName.has(key)) rosterByName.set(key, player);
     }
