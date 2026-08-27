@@ -10,7 +10,7 @@
     "build": "vite build",
     "typecheck": "tsc --noEmit",
     "start": "vite preview --host 0.0.0.0",
-    "test": "node --test tests/draftkings-adapter.test.mjs tests/fanduel-adapter.test.mjs tests/betmgm-adapter.test.mjs tests/prizepicks-adapter.test.mjs tests/underdog-adapter.test.mjs tests/capture-processor.test.mjs tests/daily-run.test.mjs tests/extension-run-state.test.mjs tests/fantasy.test.mjs tests/ledger-validation.test.mjs tests/ledger-transitions.test.mjs tests/local-site.test.mjs tests/operator-automation.test.mjs tests/player-selection.test.mjs tests/prior-season-player-stats.test.mjs tests/prior-season-qb-rushing.test.mjs tests/prior-season-receptions.test.mjs tests/roster.test.mjs tests/sleeper-adp.test.mjs && npm run build && node --test tests/rendered-html.test.mjs",
+    "test": "node --test tests/draftkings-adapter.test.mjs tests/fanduel-adapter.test.mjs tests/prizepicks-adapter.test.mjs tests/underdog-adapter.test.mjs tests/capture-processor.test.mjs tests/daily-run.test.mjs tests/extension-run-state.test.mjs tests/fantasy.test.mjs tests/ledger-validation.test.mjs tests/ledger-transitions.test.mjs tests/local-site.test.mjs tests/operator-automation.test.mjs tests/player-selection.test.mjs tests/prior-season-player-stats.test.mjs tests/prior-season-qb-rushing.test.mjs tests/prior-season-receptions.test.mjs tests/roster.test.mjs tests/sleeper-adp.test.mjs && npm run build && node --test tests/rendered-html.test.mjs",
     "test:ui": "node --test tests/ui-smoke.test.mjs",
     "lint": "eslint app collector extension lib scripts src tests vite.config.ts",
     "collect:dk": "node collector/run-draftkings.mjs",

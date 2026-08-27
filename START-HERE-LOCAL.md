@@ -56,7 +56,7 @@ The computer must be awake, logged in, online, and allowed to open Chrome while 
 
 ## Included history
 
-At packaging time the accepted ledger includes snapshots for August 19–22, 2026. The August 22 snapshot contains 653 observations: 296 DraftKings, 140 FanDuel, and 207 BetMGM. The `raw-captures/` directory is an audit archive and is not automatically re-ingested; new captures are written to the operator's normal `Downloads/nfl-prop-ledger/YYYY-MM-DD/` directory.
+At packaging time the accepted ledger includes snapshots beginning August 19, 2026. The `raw-captures/` directory is an audit archive and is not automatically re-ingested; new captures are written to the operator's normal `Downloads/nfl-prop-ledger/YYYY-MM-DD/` directory.
 
 ## Making changes with Codex
 

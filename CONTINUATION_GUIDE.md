@@ -35,7 +35,7 @@ The source branch deliberately excludes `node_modules`, `dist`, `.private`, `.en
 
 ### Market collection
 
-- Sources: DraftKings, FanDuel, BetMGM, PrizePicks, and fallback Underdog Week 1 Pass TDs, Receptions, and Rush + Rec TDs markets; Sleeper is collected separately for ADP. Underdog is never used for season markets.
+- Sources: DraftKings, FanDuel, PrizePicks, and fallback Underdog Week 1 Pass TDs, Receptions, and Rush + Rec TDs markets; Sleeper is collected separately for ADP. Underdog is never used for season markets.
 - Season and Week 1 data are stored separately.
 - Every capture requires a matching primary and confirmation pass.
 - PrizePicks Demon and Goblin projections are ignored.

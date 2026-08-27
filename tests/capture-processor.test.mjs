@@ -5,7 +5,6 @@ import path from "node:path";
 import { spawnSync } from "node:child_process";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
-import { BETMGM_MARKETS } from "../collector/betmgm-config.mjs";
 import { FANDUEL_MARKETS } from "../collector/fanduel-config.mjs";
 import { PRIZEPICKS_MARKETS } from "../collector/prizepicks-config.mjs";
 import { UNDERDOG_MARKETS } from "../collector/underdog-config.mjs";
@@ -76,54 +75,6 @@ test("processes FanDuel season props and Week 1 Passing TD odds in one normal ca
   assert.equal(weekly.overOdds, 106);
   assert.equal(weekly.underOdds, -140);
   assert.equal(weekly.sourceUrl, eventUrl);
-});
-
-test("processes all six BetMGM stat tabs and retains Puka Nacua", async () => {
-  const market = (statLabel, playerName, line, overOdds = "-110", underOdds = "-110") => ({
-    statLabel,
-    playerName,
-    outcomes: [{ title: `O ${line}`, odds: overOdds }, { title: `U ${line}`, odds: underOdds }],
-  });
-  const rows = [
-    market("Passing yards O/U", "Jared Goff", "4050.5", "-115", "-105"),
-    market("Passing TDs", "Joe Burrow", "32.5", "-115", "-105"),
-    market("Rushing yards O/U", "Derrick Henry", "1250.5", "-115", "-105"),
-    market("Rushing TDs", "Jahmyr Gibbs", "12.5", "-105", "-125"),
-    market("Receiving yards O/U", "Puka Nacua", "1350.5"),
-    market("Receiving TDs", "Puka Nacua", "8.5", "+105", "-125"),
-  ];
-  const { result, capture } = await processRaw({
-    source: "betmgm",
-    season: 2026,
-    capturedAt,
-    pages: [{ ...BETMGM_MARKETS[0], capturedAt, rows }],
-  });
-  assert.equal(result.status, 0, result.stderr);
-  assert.equal(capture.source, "betmgm");
-  assert.equal(capture.observations.length, 6);
-  assert.deepEqual(
-    capture.observations.filter((item) => item.player.name === "Puka Nacua").map((item) => [item.statType, item.line]),
-    [["receiving_yards", 1350.5], ["receiving_touchdowns", 8.5]],
-  );
-});
-
-test("fails closed when a configured BetMGM stat tab is absent", async () => {
-  const { result } = await processRaw({
-    source: "betmgm",
-    season: 2026,
-    capturedAt,
-    pages: [{
-      ...BETMGM_MARKETS[0],
-      capturedAt,
-      rows: [{
-        statLabel: "Receiving yards O/U",
-        playerName: "Puka Nacua",
-        outcomes: [{ title: "O 1350.5", odds: "-110" }, { title: "U 1350.5", odds: "-110" }],
-      }],
-    }],
-  });
-  assert.notEqual(result.status, 0);
-  assert.match(result.stderr, /Required BetMGM stat is missing/);
 });
 
 test("processes a complete PrizePicks projection envelope", async () => {

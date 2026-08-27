@@ -36,9 +36,9 @@ test("accepts a same-day manual capture before the retired morning schedule", ()
 
 test("rejects a leftover file whose UTC date matches but local date is yesterday", () => {
   const errors = validateDailyRawPair(
-    raw("betmgm", "2026-08-20T01:05:40.726Z"),
-    raw("betmgm", "2026-08-20T01:05:59.804Z"),
-    { source: "betmgm", date: "2026-08-20", now: new Date("2026-08-20T19:00:00Z") },
+    raw("fanduel", "2026-08-20T01:05:40.726Z"),
+    raw("fanduel", "2026-08-20T01:05:59.804Z"),
+    { source: "fanduel", date: "2026-08-20", now: new Date("2026-08-20T19:00:00Z") },
   );
   assert.ok(errors.some((error) => error.includes("local date")));
 });

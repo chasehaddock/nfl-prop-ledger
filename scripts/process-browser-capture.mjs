@@ -1,11 +1,9 @@
 import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
-import { parseBetMgmRows } from "../collector/adapters/betmgm.mjs";
 import { parseDraftKingsRows } from "../collector/adapters/draftkings.mjs";
 import { parseFanDuelRows } from "../collector/adapters/fanduel.mjs";
 import { parsePrizePicksRows } from "../collector/adapters/prizepicks.mjs";
 import { parseUnderdogRows } from "../collector/adapters/underdog.mjs";
-import { BETMGM_MARKETS, BETMGM_REQUIRED_STAT_TYPES, BETMGM_SOURCE } from "../collector/betmgm-config.mjs";
 import { DRAFTKINGS_MARKETS, DRAFTKINGS_SOURCE } from "../collector/draftkings-config.mjs";
 import { FANDUEL_MARKETS, FANDUEL_REQUIRED_STAT_TYPES, FANDUEL_SOURCE } from "../collector/fanduel-config.mjs";
 import { PRIZEPICKS_MARKETS, PRIZEPICKS_REQUIRED_STAT_TYPES, PRIZEPICKS_SOURCE } from "../collector/prizepicks-config.mjs";
@@ -39,17 +37,6 @@ const adapters = new Map([
       capturedAt: page.capturedAt || raw.capturedAt,
       season: raw.season,
       requiredStatTypes: FANDUEL_REQUIRED_STAT_TYPES,
-    }),
-  }],
-  [BETMGM_SOURCE.id, {
-    source: BETMGM_SOURCE,
-    markets: BETMGM_MARKETS,
-    parse: (page, spec, rosterByName) => parseBetMgmRows(page.rows, {
-      rosterByName,
-      sourceUrl: spec.url,
-      capturedAt: page.capturedAt || raw.capturedAt,
-      season: raw.season,
-      requiredStatTypes: BETMGM_REQUIRED_STAT_TYPES,
     }),
   }],
   [PRIZEPICKS_SOURCE.id, {

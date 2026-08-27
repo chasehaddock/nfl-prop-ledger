@@ -10,7 +10,7 @@ const date = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Chicago", yea
 const captureDates = [...new Set([date, new Date().toISOString().slice(0, 10)])];
 const captureRoot = path.resolve(".private", "browser-captures");
 const incomingDir = path.resolve("data/incoming", date);
-const sourceIds = ["draftkings", "fanduel", "betmgm", "prizepicks", "underdog", "sleeper"];
+const sourceIds = ["draftkings", "fanduel", "prizepicks", "underdog", "sleeper"];
 
 async function exists(file) {
   try {
