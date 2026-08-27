@@ -1,5 +1,7 @@
 # Start Here: Private Local NFL Prop Ledger
 
+> This file describes the optional GitHub-free installation. For the active shared GitHub workflow, use `CONTINUATION_GUIDE.md` and `CONTRIBUTING.md` instead.
+
 This folder is the complete GitHub-free handoff. It contains the application, the accepted historical ledger, the current public dashboard data, roster data, and an archive of every available raw browser capture included at packaging time.
 
 The dashboard is private to this laptop. It runs at:

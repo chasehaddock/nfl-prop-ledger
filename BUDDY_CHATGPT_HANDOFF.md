@@ -8,11 +8,11 @@ Current anchors:
 
 - Repository: `https://github.com/chasehaddock/nfl-prop-ledger`
 - Editable branch: `source`
-- Compiled Pages branch: `main`
+- Deployment: GitHub Actions builds Pages from verified `source` commits
 - Public site: `https://chasehaddock.github.io/nfl-prop-ledger/`
-- Sources: DraftKings, FanDuel, BetMGM, and PrizePicks
+- Sources: DraftKings, FanDuel, BetMGM, PrizePicks, Underdog fallback markets, and Sleeper ADP
 - Node: 22.13+; Node 24 recommended
-- Automatic capture: 8:17 AM local time
+- Capture: manually started from the Chrome extension
 - Private local site: `http://127.0.0.1:4173/`
 
 A handoff is complete only after the new computer:
@@ -22,6 +22,6 @@ A handoff is complete only after the new computer:
 3. loads the unpacked Chrome extension locally;
 4. completes one verified two-pass capture;
 5. publishes successfully to GitHub Pages; and
-6. completes two consecutive automatic morning runs.
+6. completes two verified manual capture/process/publish cycles.
 
 GitHub deliberately excludes browser sessions, sportsbook credentials, raw capture evidence, and machine-private files. Those must be authorized or generated on the new computer and must never be uploaded.
