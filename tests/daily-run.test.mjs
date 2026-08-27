@@ -16,7 +16,7 @@ test("accepts a same-day pair from the scheduled capture window", () => {
   assert.deepEqual(errors, []);
 });
 
-test("accepts the 8:17 AM Central automatic extension capture", () => {
+test("accepts an 8:17 AM Central extension capture", () => {
   const errors = validateDailyRawPair(
     raw("draftkings", "2026-08-24T13:17:34.413Z"),
     raw("draftkings", "2026-08-24T13:18:09.509Z"),

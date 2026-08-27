@@ -58,16 +58,8 @@ const SOURCES = [
   },
 ];
 
-function nextCaptureTime() {
-  const next = new Date();
-  next.setHours(8, 17, 0, 0);
-  if (next <= new Date()) next.setDate(next.getDate() + 1);
-  return next.getTime();
-}
-
-async function ensureAlarm() {
-  const alarm = await chrome.alarms.get("daily-capture");
-  if (!alarm) chrome.alarms.create("daily-capture", { when: nextCaptureTime(), periodInMinutes: 24 * 60 });
+async function disableLegacyAutomaticCapture() {
+  await chrome.alarms.clear("daily-capture");
 }
 
 async function waitForTab(tabId) {
@@ -544,7 +536,7 @@ function currentLedgerDate(value = new Date()) {
 }
 
 async function initializeExtension() {
-  await ensureAlarm();
+  await disableLegacyAutomaticCapture();
   const state = await chrome.storage.local.get(["running", "runningSince"]);
   if (!state.running) return;
   await chrome.storage.local.set({
@@ -641,9 +633,8 @@ async function runCapture() {
   }
 }
 
-chrome.runtime.onInstalled.addListener(ensureAlarm);
-chrome.runtime.onStartup.addListener(ensureAlarm);
-chrome.alarms.onAlarm.addListener((alarm) => { if (alarm.name === "daily-capture") runCapture().catch(() => {}); });
+chrome.runtime.onInstalled.addListener(disableLegacyAutomaticCapture);
+chrome.runtime.onStartup.addListener(disableLegacyAutomaticCapture);
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   if (message?.type === "get-status") {
     getStatus().then(sendResponse).catch((error) => sendResponse({ lastStatus: "Status unavailable", lastError: error.message }));
