@@ -1,4 +1,4 @@
-import { requiredFantasyStats, type FantasyPosition, type FantasyStat } from "./fantasy.ts";
+import { lineCenteredExpectation, requiredFantasyStats, type FantasyPosition, type FantasyStat } from "./fantasy.ts";
 
 type SelectableObservation = {
   source: string;
@@ -6,6 +6,7 @@ type SelectableObservation = {
   line: number;
   status: "open" | "stale" | "not_seen" | "removed";
   capturedAt?: string;
+  normalizedProbability?: number;
 };
 
 export type ConsensusMethod = "single" | "mode" | "average";
@@ -20,6 +21,15 @@ export type ConsensusSelection<T> = {
 
 function roundedAverage(values: number[]): number {
   return Math.round((values.reduce((total, value) => total + value, 0) / values.length) * 100) / 100;
+}
+
+function selectedLine<T extends SelectableObservation>(statType: FantasyStat, pool: T[]): number {
+  const only = pool.length === 1 ? pool[0] : undefined;
+  if (statType === "receptions" && only?.source === "underdog" && Number.isFinite(only.normalizedProbability)) {
+    const expectation = lineCenteredExpectation(only.line, only.normalizedProbability!);
+    if (Number.isFinite(expectation)) return Math.round(expectation * 10) / 10;
+  }
+  return pool.length === 1 ? pool[0].line : roundedAverage(pool.map((item) => item.line));
 }
 
 export function selectConsensusStats<T extends SelectableObservation>(
@@ -45,7 +55,7 @@ export function selectConsensusStats<T extends SelectableObservation>(
     pool.forEach((item) => lineGroups.set(item.line, [...(lineGroups.get(item.line) || []), item]));
     const maximumSupport = Math.max(...[...lineGroups.values()].map((group) => group.length));
     return [statType, {
-      line: pool.length === 1 ? pool[0].line : roundedAverage(pool.map((item) => item.line)),
+      line: selectedLine(statType, pool),
       candidates: candidatePool,
       contributors: pool,
       method: (pool.length === 1 ? "single" : "average") as ConsensusMethod,
