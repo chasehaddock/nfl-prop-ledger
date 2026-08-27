@@ -30,7 +30,9 @@ export function selectConsensusStats<T extends SelectableObservation>(
   return Object.fromEntries(statTypes.map((statType) => {
     const candidates = usable.filter((item) => item.statType === statType);
     const current = candidates.filter((item) => item.status === "open");
-    const pool = [...(current.length ? current : candidates)].sort((a, b) =>
+    const freshnessPool = current.length ? current : candidates;
+    const preferred = freshnessPool.filter((item) => item.source !== "underdog");
+    const pool = [...(preferred.length ? preferred : freshnessPool)].sort((a, b) =>
       a.source.localeCompare(b.source)
       || (Date.parse(b.capturedAt || "") || 0) - (Date.parse(a.capturedAt || "") || 0));
     if (!pool.length) return [statType, undefined];

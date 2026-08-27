@@ -96,3 +96,17 @@ test("consensus averages all current lines and excludes stale alternatives", () 
   assert.equal(selected.rushing_yards?.method, "average");
   assert.equal(selected.rushing_yards?.candidates.length, 3);
 });
+
+test("consensus uses Underdog only when no preferred current source carries the stat", () => {
+  const preferred = selectConsensusStats([
+    observation("fanduel", "receptions", 6.5),
+    observation("underdog", "receptions", 5.5),
+  ], ["receptions"]);
+  assert.equal(preferred.receptions?.line, 6.5);
+  assert.deepEqual(preferred.receptions?.candidates.map((item) => item.source), ["fanduel"]);
+
+  const fallback = selectConsensusStats([
+    observation("underdog", "receptions", 5.5),
+  ], ["receptions"]);
+  assert.equal(fallback.receptions?.line, 5.5);
+});

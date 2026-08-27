@@ -210,6 +210,29 @@ function normalizedMultiplierProbability(higherMultiplier: number, lowerMultipli
 }
 
 function weeklyPassingTouchdownExpectation(selection: ConsensusSelection<Observation> | undefined): PassingTouchdownExpectation | null {
+  const allPriced = (selection?.candidates || []).filter((item) => item.status === "open"
+    && item.source !== "prizepicks"
+    && Number.isFinite(item.line)
+    && Number.isFinite(item.overOdds)
+    && Number.isFinite(item.underOdds));
+  const fanDuel = allPriced.filter((item) => item.source === "fanduel");
+  const priced = fanDuel.length ? fanDuel : allPriced;
+  const sportsbookEstimates = priced.map((item) => ({
+    item,
+    fairOver: fairOverProbability(item.overOdds!, item.underOdds!),
+  })).map(({ item, fairOver }) => ({ item, expected: lineCenteredExpectation(item.line, fairOver) }))
+    .filter(({ expected }) => Number.isFinite(expected));
+  if (sportsbookEstimates.length) {
+    const value = Number((sportsbookEstimates.reduce((total, estimate) => total + estimate.expected, 0) / sportsbookEstimates.length).toFixed(2));
+    const books = [...new Set(sportsbookEstimates.map(({ item }) => item.sourceName || SOURCE_NAMES[item.source] || item.source))].sort();
+    const details = sportsbookEstimates.map(({ item, expected }) => {
+      const sourceName = item.sourceName || SOURCE_NAMES[item.source] || item.source;
+      const overOdds = item.overOdds! > 0 ? `+${item.overOdds}` : `${item.overOdds}`;
+      const underOdds = item.underOdds! > 0 ? `+${item.underOdds}` : `${item.underOdds}`;
+      return `${sourceName} O ${item.line} ${overOdds} / U ${item.line} ${underOdds} → ${expected.toFixed(2)}`;
+    }).join(" · ");
+    return { value, books, label: "sportsbook no-vig", note: `${value.toFixed(2)} expected pass TDs · vig removed + line-centered adjustment · ${details}` };
+  }
   const multiplierPriced = (selection?.candidates || []).filter((item) => item.status === "open"
     && item.source === "underdog"
     && Number.isFinite(item.line)
@@ -226,28 +249,7 @@ function weeklyPassingTouchdownExpectation(selection: ConsensusSelection<Observa
     const details = estimates.map(({ item, expected }) => `Underdog H ${item.line} ${item.higherMultiplier!.toFixed(2)}x / L ${item.line} ${item.lowerMultiplier!.toFixed(2)}x → ${expected.toFixed(2)}`).join(" · ");
     return { value, books, label: "Underdog normalized", note: `${value.toFixed(2)} expected pass TDs · normalized Higher/Lower modifiers + line-centered adjustment · ${details}` };
   }
-  const allPriced = (selection?.candidates || []).filter((item) => item.status === "open"
-    && item.source !== "prizepicks"
-    && Number.isFinite(item.line)
-    && Number.isFinite(item.overOdds)
-    && Number.isFinite(item.underOdds));
-  const fanDuel = allPriced.filter((item) => item.source === "fanduel");
-  const priced = fanDuel.length ? fanDuel : allPriced;
-  const estimates = priced.map((item) => ({
-    item,
-    fairOver: fairOverProbability(item.overOdds!, item.underOdds!),
-  })).map(({ item, fairOver }) => ({ item, expected: lineCenteredExpectation(item.line, fairOver) }))
-    .filter(({ expected }) => Number.isFinite(expected));
-  if (!estimates.length) return null;
-  const value = Number((estimates.reduce((total, estimate) => total + estimate.expected, 0) / estimates.length).toFixed(2));
-  const books = [...new Set(estimates.map(({ item }) => item.sourceName || SOURCE_NAMES[item.source] || item.source))].sort();
-  const details = estimates.map(({ item, expected }) => {
-    const sourceName = item.sourceName || SOURCE_NAMES[item.source] || item.source;
-    const overOdds = item.overOdds! > 0 ? `+${item.overOdds}` : `${item.overOdds}`;
-    const underOdds = item.underOdds! > 0 ? `+${item.underOdds}` : `${item.underOdds}`;
-    return `${sourceName} O ${item.line} ${overOdds} / U ${item.line} ${underOdds} → ${expected.toFixed(2)}`;
-  }).join(" · ");
-  return { value, books, label: "sportsbook no-vig", note: `${value.toFixed(2)} expected pass TDs · vig removed + line-centered adjustment · ${details}` };
+  return null;
 }
 
 function weeklyTouchdownProjection(selection: ConsensusSelection<Observation> | undefined): TouchdownProjection | null {
@@ -861,7 +863,7 @@ function PropComparison({ line, statType, history, movements, highlightedSource,
     <div className="comparison-heading"><div><p className="eyebrow">All source lines</p><h2 id={titleId}>{line.player} · {STAT_LABELS[statType]}</h2></div><div className="comparison-actions"><button className="back-all" onClick={onBackAll}>← Back to all players</button><button onClick={onClose} aria-label={`Close ${line.player} ${STAT_LABELS[statType]} comparison`}>Close</button></div></div>
     <div className="consensus-summary"><span>Main line</span><strong>{consensus?.line.toLocaleString() || "—"}</strong><p>{explanation}</p></div>
     <LineHistoryChart line={line} statType={statType} history={history} movements={movements} highlightedSource={highlightedSource} />
-    <div className="source-comparison" role="list" aria-label={`${line.player} ${STAT_LABELS[statType]} source lines`}>{sources.map((source) => <article className={source.source === highlightedSource ? "highlighted" : ""} key={source.key} role="listitem"><div><strong>{source.sourceName}</strong><small>{source.source === "prizepicks" ? "Projection line" : source.source === "underdog" ? "Pick’em modifiers" : "Sportsbook line"}</small></div><b>{source.line.toLocaleString()}</b><div className="source-odds">{source.higherMultiplier !== undefined && source.lowerMultiplier !== undefined ? <><span>H {source.higherMultiplier.toFixed(2)}x</span><span>L {source.lowerMultiplier.toFixed(2)}x</span></> : source.overOdds !== undefined && source.underOdds !== undefined ? <><span>O {source.overOdds > 0 ? "+" : ""}{source.overOdds}</span><span>U {source.underOdds > 0 ? "+" : ""}{source.underOdds}</span></> : <span>No odds posted</span>}</div>{source.sourceUrl && source.sourceUrl !== "#" && <a href={source.sourceUrl} target="_blank" rel="noreferrer">Open source ↗</a>}</article>)}</div>
+    <div className="source-comparison" role="list" aria-label={`${line.player} ${STAT_LABELS[statType]} source lines`}>{sources.map((source) => <article className={source.source === highlightedSource ? "highlighted" : ""} key={source.key} role="listitem"><div><strong>{source.sourceName}</strong><small>{source.source === "prizepicks" ? "Projection line" : source.source === "underdog" ? "Fallback pick’em line" : "Sportsbook line"}</small></div><b>{source.line.toLocaleString()}</b><div className="source-odds">{source.higherMultiplier !== undefined && source.lowerMultiplier !== undefined ? <><span>H {source.higherMultiplier.toFixed(2)}x</span><span>L {source.lowerMultiplier.toFixed(2)}x</span></> : source.overOdds !== undefined && source.underOdds !== undefined ? <><span>O {source.overOdds > 0 ? "+" : ""}{source.overOdds}</span><span>U {source.underOdds > 0 ? "+" : ""}{source.underOdds}</span></> : <span>Standard pick’em line</span>}</div>{source.sourceUrl && source.sourceUrl !== "#" && <a href={source.sourceUrl} target="_blank" rel="noreferrer">Open source ↗</a>}</article>)}</div>
   </section>;
 }
 

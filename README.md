@@ -10,12 +10,12 @@ A local-first NFL player-projection ledger with a public GitHub Pages dashboard.
 ## What it tracks
 
 - Season-long and Week 1 QB, RB, WR, and TE player props.
-- DraftKings, FanDuel, BetMGM, standard PrizePicks projections, and Underdog TD markets.
+- DraftKings, FanDuel, BetMGM, standard PrizePicks projections, and fallback Underdog Week 1 player markets.
 - Verified daily line history with source-colored charts and sportsbook averages.
 - Full-PPR fantasy projections with 4/6-point passing-TD and TE-premium toggles.
 - Sleeper 12-team full-PPR redraft ADP, ADP history, and coverage-adjusted positional value gaps.
 
-The collector requires matching primary and confirmation passes. Failed or incomplete sources cannot overwrite verified data. PrizePicks Demon and Goblin rows are ignored. For Week 1 touchdown scoring, Underdog Higher/Lower modifiers are normalized together and preferred over slower one-sided touchdown markets; they are labeled as normalized pick'em modifiers rather than sportsbook no-vig odds.
+The collector requires matching primary and confirmation passes. Failed or incomplete sources cannot overwrite verified data. PrizePicks Demon and Goblin rows are ignored. FanDuel two-sided Week 1 markets receive de-vig priority when available. Underdog Pass Yards, Pass TDs, Rush Yards, Receiving Yards, Receptions, and Rush + Rec TDs fill missing Week 1 fields. Higher/Lower modifiers are normalized together only when both are posted and are labeled as pick'em estimates rather than sportsbook no-vig odds.
 
 ## Install and verify
 
@@ -58,7 +58,7 @@ The configured morning flow opens Chrome, captures and validates every source on
 
 ## Important projection rules
 
-- Current displayed main lines are arithmetic averages of all current sources.
+- Current displayed main lines are arithmetic averages of available current non-Underdog sources; Underdog is used only when those sources do not carry the stat.
 - Season and Week 1 data never mix.
 - RB/WR/TE touchdown totals use current market data only—never prior-season touchdowns.
 - Missing WR/TE receptions stay blank.

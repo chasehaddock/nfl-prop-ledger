@@ -43,11 +43,11 @@ const SOURCES = [
   },
   {
     id: "underdog",
-    name: "Underdog TDs",
+    name: "Underdog",
     scraper: "underdog",
     season: () => new Date().getFullYear(),
-    requiredStatLabels: ["Rush + Rec TDs", "Pass TDs"],
-    pages: [{ id: "nfl-week-1-touchdowns", url: "https://app.underdogsports.com/pick-em/higher-lower/all/NFL" }],
+    requiredStatLabels: ["Pass Yards", "Pass TDs", "Rush Yards", "Receiving Yards", "Receptions", "Rush + Rec TDs"],
+    pages: [{ id: "nfl-week-1-player-props", url: "https://app.underdogsports.com/pick-em/higher-lower/all/NFL" }],
   },
   {
     id: "sleeper",
@@ -320,8 +320,10 @@ async function scrapeUnderdogPage() {
   const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
   const text = (element) => element?.textContent?.replace(/\s+/g, " ").trim() || "";
   const supportedTabs = [
-    { tab: "TD Scorers", statLabel: "Rush + Rec TDs" },
-    { tab: "Passing", statLabel: "Pass TDs" },
+    { tab: "TD Scorers", statLabels: ["Rush + Rec TDs"] },
+    { tab: "Passing", statLabels: ["Pass Yards", "Pass TDs"] },
+    { tab: "Rushing", statLabels: ["Rush Yards"] },
+    { tab: "Receiving", statLabels: ["Receiving Yards", "Receptions"] },
   ];
   const rowsByKey = new Map();
   const statLabels = new Set();
@@ -333,42 +335,43 @@ async function scrapeUnderdogPage() {
     const match = text(side).match(/(?:Higher|Lower)\s*(\d+(?:\.\d+)?)x/i);
     return match ? Number(match[1]) : Number.NaN;
   };
-  const readVisibleCards = (statLabel) => {
+  const escapePattern = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const readVisibleCards = (supportedStatLabels) => {
     const cards = [...document.querySelectorAll('[role="button"]')].filter((card) => card.getClientRects().length > 0);
     for (const card of cards) {
       const cardText = text(card);
-      if (!cardText.toLowerCase().includes(statLabel.toLowerCase())) continue;
+      const statLabel = supportedStatLabels.find((label) => cardText.toLowerCase().includes(label.toLowerCase()));
+      if (!statLabel) continue;
       const higherButtons = [...card.querySelectorAll('button, [role="button"]')]
-        .filter((button) => /^Higher\s*\d+(?:\.\d+)?x$/i.test(text(button)));
+        .filter((button) => /^Higher(?:\s*\d+(?:\.\d+)?x)?$/i.test(text(button)));
       const lowerButtons = [...card.querySelectorAll('button, [role="button"]')]
-        .filter((button) => /^Lower\s*\d+(?:\.\d+)?x$/i.test(text(button)));
+        .filter((button) => /^Lower(?:\s*\d+(?:\.\d+)?x)?$/i.test(text(button)));
       if (higherButtons.length !== 1 || lowerButtons.length !== 1) continue;
       const higherButton = higherButtons[0];
       const lowerButton = lowerButtons[0];
-      const lineMatch = cardText.match(new RegExp(`(\\d+(?:\\.\\d+)?)\\s*${statLabel.replace(/[+]/g, "\\+")}`, "i"));
+      const lineMatch = cardText.match(new RegExp(`(\\d+(?:\\.\\d+)?)\\s*${escapePattern(statLabel)}`, "i"));
       const lines = (card.innerText || "").split("\n").map((line) => line.replace(/\s+/g, " ").trim()).filter(Boolean);
       const matchupIndex = lines.findIndex((line) => /(?:\s@\s|\svs\s).*(?:\d{1,2}\/\d{1,2}|\d{1,2}:\d{2})/i.test(line));
       const playerName = matchupIndex > 0 ? lines[matchupIndex - 1] : "";
       const isNonStandard = /\b(?:boost|boosted|special|discount|demon|goblin|scorcher|rescue|promotion)\b/i.test(cardText);
       if (!playerName || !lineMatch) continue;
+      const higherMultiplier = modifier(higherButton);
+      const lowerMultiplier = modifier(lowerButton);
       const row = {
         playerName,
         statLabel,
         line: Number(lineMatch[1]),
-        higherMultiplier: modifier(higherButton),
-        lowerMultiplier: modifier(lowerButton),
+        ...(Number.isFinite(higherMultiplier) && Number.isFinite(lowerMultiplier) ? { higherMultiplier, lowerMultiplier } : {}),
         marketScope: "week_1",
         sourceUrl: location.href,
         isNonStandard,
       };
-      if (Number.isFinite(row.higherMultiplier) && Number.isFinite(row.lowerMultiplier)) {
-        rowsByKey.set(`${statLabel}:${playerName.toLowerCase()}`, row);
-        statLabels.add(statLabel);
-      }
+      rowsByKey.set(`${statLabel}:${playerName.toLowerCase()}`, row);
+      statLabels.add(statLabel);
     }
   };
 
-  for (const { tab, statLabel } of supportedTabs) {
+  for (const { tab, statLabels: tabStatLabels } of supportedTabs) {
     const button = findExactButton(tab);
     if (!button) throw new Error(`Underdog ${tab} tab is missing`);
     button.scrollIntoView({ block: "nearest", inline: "center" });
@@ -380,7 +383,7 @@ async function scrapeUnderdogPage() {
     let priorSize = -1;
     let priorHeight = -1;
     for (let attempt = 0; attempt < 160 && stableChecks < 6; attempt += 1) {
-      readVisibleCards(statLabel);
+      readVisibleCards(tabStatLabels);
       const height = document.documentElement.scrollHeight;
       const atBottom = window.scrollY + window.innerHeight >= height - 12;
       stableChecks = atBottom && rowsByKey.size === priorSize && height === priorHeight ? stableChecks + 1 : 0;
@@ -389,7 +392,7 @@ async function scrapeUnderdogPage() {
       window.scrollBy(0, Math.max(window.innerHeight * 0.8, 600));
       await sleep(100);
     }
-    readVisibleCards(statLabel);
+    readVisibleCards(tabStatLabels);
   }
   window.scrollTo(0, 0);
   return {

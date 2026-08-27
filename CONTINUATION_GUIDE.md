@@ -33,12 +33,12 @@ The source branch deliberately excludes `node_modules`, `dist`, `.private`, `.en
 
 ### Market collection
 
-- Sources: DraftKings, FanDuel, BetMGM, PrizePicks, and Underdog TD markets; Sleeper is collected separately for ADP.
+- Sources: DraftKings, FanDuel, BetMGM, PrizePicks, and fallback Underdog Week 1 player markets; Sleeper is collected separately for ADP.
 - Season and Week 1 data are stored separately.
 - Every capture requires a matching primary and confirmation pass.
 - PrizePicks Demon and Goblin projections are ignored.
 - Failed sources carry the previous observation as stale instead of deleting it.
-- Current main lines are arithmetic averages of all available current sources.
+- Current main lines are arithmetic averages of available current non-Underdog sources. Underdog fills a stat only when none of those sources carry it.
 - Line-movement graphs retain each source and emphasize the sportsbook average.
 
 ### Fantasy scoring and inference
@@ -53,7 +53,7 @@ The source branch deliberately excludes `node_modules`, `dist`, `.private`, `.en
 - Missing WR/TE receptions are left blank; prior-season reception guesses are not used.
 - The intentional season-only historical exceptions are RB receptions/receiving yards and QB rushing yards/rushing TDs. They are labeled with their sample and method.
 - Week 1 never substitutes season history.
-- Week 1 TD priority is Underdog normalized Higher/Lower modifiers, then a complete two-sided sportsbook market with vig removed, then PrizePicks. Underdog modifiers are normalized against each other but must not be described as true sportsbook no-vig odds.
+- Week 1 QB passing-TD priority is FanDuel or another complete two-sided sportsbook market with vig removed, then Underdog normalized Higher/Lower modifiers. For one-way anytime-TD markets, the two-sided Underdog estimate remains preferable to a raw one-sided price. Underdog modifiers are normalized against each other but must not be described as true sportsbook no-vig odds.
 
 ### Sleeper redraft
 
