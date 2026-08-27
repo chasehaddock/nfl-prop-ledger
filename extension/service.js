@@ -65,6 +65,49 @@ async function waitForTab(tabId) {
   throw new Error("Sportsbook page did not finish loading");
 }
 
+function isScraperPageReady(scraper) {
+  const bodyText = document.body?.innerText || "";
+  if (/not available in your location|unable to display/i.test(bodyText)) return true;
+  if (scraper === "draftkings") {
+    return Boolean(document.querySelector('[data-testid="market-template"]')) || /No Available Bets/i.test(bodyText);
+  }
+  if (scraper === "fanduel") {
+    return [...document.querySelectorAll('[role="button"][aria-label], h3')]
+      .some((element) => /(?:Regular Season (?:Passing|Rushing|Receiving)| - (?:Passing|Rushing|Receiving|Total Receptions))/i
+        .test(element.getAttribute("aria-label") || element.textContent || ""));
+  }
+  if (scraper === "prizepicks") {
+    return [...document.querySelectorAll('[role="tab"], button')]
+      .some((element) => /^(?:NFLSZN|NFL)$/.test(element.textContent?.trim() || ""))
+      || /Where are you\?/i.test(bodyText);
+  }
+  if (scraper === "underdog") {
+    const labels = new Set([...document.querySelectorAll('button, [role="button"]')]
+      .filter((element) => element.getClientRects().length > 0)
+      .map((element) => element.textContent?.replace(/\s+/g, " ").trim() || ""));
+    return ["TD Scorers", "Passing", "Receiving"].some((label) => labels.has(label));
+  }
+  if (scraper === "sleeper") {
+    return Boolean(document.querySelector('[role="grid"]'))
+      && /Redraft league PPR 4pt passing/i.test(bodyText);
+  }
+  return document.readyState === "complete";
+}
+
+async function waitForScraperPage(tabId, scraper, timeoutMilliseconds = 12_000) {
+  const deadline = Date.now() + timeoutMilliseconds;
+  while (Date.now() < deadline) {
+    const results = await chrome.scripting.executeScript({
+      target: { tabId },
+      func: isScraperPageReady,
+      args: [scraper],
+    });
+    if (results[0]?.result) return;
+    await new Promise((resolve) => setTimeout(resolve, 250));
+  }
+  throw new Error(`${scraper} page did not become ready for capture`);
+}
+
 function scrapeDraftKingsPage() {
   const rows = [...document.querySelectorAll('[data-testid="market-template"]')].map((market) => ({
     label: market.querySelector('[data-testid="market-label"] p')?.textContent?.trim() || "",
@@ -416,7 +459,8 @@ async function scrapeTab(tabId, scraper) {
   };
   let lastResult;
   for (let attempt = 0; attempt < 2; attempt += 1) {
-    await new Promise((resolve) => setTimeout(resolve, attempt === 0 ? 3000 : 5000));
+    if (attempt > 0) await new Promise((resolve) => setTimeout(resolve, 1500));
+    await waitForScraperPage(tabId, scraper);
     const results = await chrome.scripting.executeScript({ target: { tabId }, func: functions[scraper] });
     const result = results[0]?.result;
     lastResult = result;
@@ -530,17 +574,18 @@ async function runCapture() {
     const successes = [];
     const failures = [];
     const rejectedSourceIds = [];
-    for (const [sourceIndex, source] of runSources.entries()) {
+    let completedSourceCount = 0;
+    const captureSource = async (source) => {
       let sourceError;
       for (let attempt = 1; attempt <= 2; attempt += 1) {
         try {
           const retryLabel = attempt === 1 ? "" : " (retry)";
-          const startingPercent = Math.round((sourceIndex / runSources.length) * 100);
+          const startingPercent = Math.round((completedSourceCount / runSources.length) * 100);
           await chrome.storage.local.set({
             lastStatus: `Capturing and validating ${source.name}${retryLabel}…`,
             progressPercent: startingPercent,
             progressSource: `${source.name}${retryLabel}`,
-            progressDetail: `${sourceIndex} of ${runSources.length} sources complete`,
+            progressDetail: `${completedSourceCount} of ${runSources.length} sources complete`,
           });
           const capture = await collectPass(source);
           const verifiedCapture = { ...capture, verificationMode: "validated-single-pass" };
@@ -561,12 +606,23 @@ async function runCapture() {
         failures.push(`${source.name}: ${sourceError.message}`);
         rejectedSourceIds.push(source.id);
       }
+      completedSourceCount += 1;
       await chrome.storage.local.set({
-        progressPercent: Math.round(((sourceIndex + 1) / runSources.length) * 100),
+        progressPercent: Math.round((completedSourceCount / runSources.length) * 100),
         progressSource: sourceError ? `${source.name} skipped` : `${source.name} complete`,
-        progressDetail: `${sourceIndex + 1} of ${runSources.length} sources checked`,
+        progressDetail: `${completedSourceCount} of ${runSources.length} sources checked`,
       });
-    }
+    };
+    const backgroundSources = runSources.filter((source) => source.id === "draftkings");
+    const interactiveSources = runSources.filter((source) => source.id !== "draftkings");
+    await Promise.all([
+      (async () => {
+        for (const source of backgroundSources) await captureSource(source);
+      })(),
+      (async () => {
+        for (const source of interactiveSources) await captureSource(source);
+      })(),
+    ]);
     if (successes.length === 0) throw new Error(failures.join("; "));
     const lastStatus = `Captured and validated ${successes.join(", ")}${failures.length ? `; ${failures.length} source rejected` : ""}`;
     await chrome.storage.local.set({
