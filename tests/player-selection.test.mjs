@@ -118,3 +118,10 @@ test("keeps an even Underdog reception line unchanged after normalization", () =
   ], ["receptions"]);
   assert.equal(selected.receptions?.line, 3.5);
 });
+
+test("keeps two decimal places in an adjusted Underdog reception projection", () => {
+  const selected = selectConsensusStats([
+    { ...observation("underdog", "receptions", 1.5), normalizedProbability: 0.594 },
+  ], ["receptions"]);
+  assert.equal(selected.receptions?.line, 1.59);
+});
