@@ -15,7 +15,7 @@ A local-first NFL player-projection ledger with a public GitHub Pages dashboard.
 - Full-PPR fantasy projections with 4/6-point passing-TD and TE-premium toggles.
 - Sleeper 12-team full-PPR redraft ADP, ADP history, and coverage-adjusted positional value gaps.
 
-The collector requires matching primary and confirmation passes. Failed or incomplete sources cannot overwrite verified data. PrizePicks Demon and Goblin rows are ignored. FanDuel two-sided Week 1 markets receive de-vig priority when available. Underdog Pass Yards, Pass TDs, Rush Yards, Receiving Yards, Receptions, and Rush + Rec TDs fill missing Week 1 fields. Higher/Lower modifiers are normalized together only when both are posted and are labeled as pick'em estimates rather than sportsbook no-vig odds.
+The collector requires matching primary and confirmation passes. Failed or incomplete sources cannot overwrite verified data. PrizePicks Demon and Goblin rows are ignored. FanDuel two-sided Week 1 markets receive de-vig priority when available. Underdog is Week 1 only and fills missing Pass TDs, Receptions, and Rush + Rec TDs fields. Higher/Lower modifiers are normalized together only when both are posted and are labeled as pick'em estimates rather than sportsbook no-vig odds.
 
 ## Install and verify
 

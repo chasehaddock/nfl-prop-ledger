@@ -3,14 +3,8 @@ import { normalizeName } from "../../lib/ledger.mjs";
 import { UNDERDOG_SOURCE } from "../underdog-config.mjs";
 
 const STAT_LABELS = new Map([
-  ["pass yards", "passing_yards"],
-  ["passing yards", "passing_yards"],
   ["pass tds", "passing_touchdowns"],
   ["passing tds", "passing_touchdowns"],
-  ["rush yards", "rushing_yards"],
-  ["rushing yards", "rushing_yards"],
-  ["rec yards", "receiving_yards"],
-  ["receiving yards", "receiving_yards"],
   ["receptions", "receptions"],
   ["rush + rec tds", "offensive_touchdowns"],
   ["rush+rec tds", "offensive_touchdowns"],
@@ -49,12 +43,10 @@ export function parseUnderdogRows(rows, { rosterByName, sourceUrl, capturedAt, s
       const higherMultiplier = row.higherMultiplier === undefined ? undefined : Number(row.higherMultiplier);
       const lowerMultiplier = row.lowerMultiplier === undefined ? undefined : Number(row.lowerMultiplier);
       if (!Number.isFinite(line)) throw new Error(`Invalid Underdog line: ${row.line}`);
-      const hasHigher = higherMultiplier !== undefined;
-      const hasLower = lowerMultiplier !== undefined;
-      if (hasHigher !== hasLower) throw new Error("Higher and Lower multipliers must be supplied together");
-      if (hasHigher && (!validMultiplier(higherMultiplier) || !validMultiplier(lowerMultiplier))) throw new Error("Higher and Lower multipliers must both be valid");
-      const normalizedProbability = hasHigher ? underdogNormalizedProbability(higherMultiplier, lowerMultiplier) : undefined;
-      if (hasHigher && (!Number.isFinite(normalizedProbability) || normalizedProbability <= 0 || normalizedProbability >= 1)) throw new Error("Normalized probability is invalid");
+      if (higherMultiplier === undefined || lowerMultiplier === undefined) throw new Error("Underdog Week 1 rows require both Higher and Lower multipliers");
+      if (!validMultiplier(higherMultiplier) || !validMultiplier(lowerMultiplier)) throw new Error("Higher and Lower multipliers must both be valid");
+      const normalizedProbability = underdogNormalizedProbability(higherMultiplier, lowerMultiplier);
+      if (!Number.isFinite(normalizedProbability) || normalizedProbability <= 0 || normalizedProbability >= 1) throw new Error("Normalized probability is invalid");
       const player = rosterByName.get(normalizeName(row.playerName));
       if (!player) throw new Error(`Player is not in the verified NFL roster index: ${row.playerName}`);
       const key = `${season}:week_1:${statType}:${player.id}`;
@@ -70,7 +62,9 @@ export function parseUnderdogRows(rows, { rosterByName, sourceUrl, capturedAt, s
         marketScope: "week_1",
         statType,
         line,
-        ...(hasHigher ? { higherMultiplier, lowerMultiplier, normalizedProbability } : {}),
+        higherMultiplier,
+        lowerMultiplier,
+        normalizedProbability,
         isMain: true,
         evidenceHash: hash(JSON.stringify(row)),
       });

@@ -153,9 +153,6 @@ test("processes Underdog Week 1 projections and normalized modifiers", async () 
   const rows = [
     { playerName: "Jaxon Smith-Njigba", statLabel: "Rush + Rec TDs", line: 0.5, higherMultiplier: 1.13, lowerMultiplier: 0.83 },
     { playerName: "Dak Prescott", statLabel: "Pass TDs", line: 1.5, higherMultiplier: 0.89, lowerMultiplier: 1.08 },
-    { playerName: "Dak Prescott", statLabel: "Pass Yards", line: 267.5 },
-    { playerName: "Dak Prescott", statLabel: "Rush Yards", line: 8.5 },
-    { playerName: "Jaxon Smith-Njigba", statLabel: "Receiving Yards", line: 84.5 },
     { playerName: "Jaxon Smith-Njigba", statLabel: "Receptions", line: 6.5, higherMultiplier: 0.83, lowerMultiplier: 1.12 },
   ];
   const { result, capture } = await processRaw({
@@ -167,6 +164,6 @@ test("processes Underdog Week 1 projections and normalized modifiers", async () 
   assert.equal(result.status, 0, result.stderr);
   assert.equal(capture.source, "underdog");
   assert.equal(capture.providerType, "multiplier");
-  assert.equal(capture.observations.length, 6);
+  assert.equal(capture.observations.length, 3);
   assert.equal(capture.observations[0].normalizedProbability.toFixed(4), "0.4235");
 });
