@@ -82,7 +82,7 @@ Chrome sessions and sportsbook logins cannot be transferred through GitHub. The 
 
 - Capture is currently started manually from the Chrome extension whenever the operator is available and connected to an unrestricted network; it is not restricted to the former morning schedule.
 - The installer removes legacy Chrome-opener and daily-processor schedules by default. `npm run operator:install -- --automatic` is available only as an explicit processor-scheduling opt-in; it still cannot bypass Chrome logins or start the extension capture.
-- The collector performs one complete validated pass per source and retries only failed sources. It writes a compatible primary/confirmation pair for the processor.
+- The collector performs one complete validated pass per source and retries only failed sources. It writes a compatible primary/confirmation pair for the processor. DraftKings may collect in a separate background lane while the login-sensitive sources remain strictly sequential; page-readiness checks replace fixed startup delays without relaxing any required-market validation.
 - After capture, run `npm run operator:run`, verify with `npm run operator:health -- --require-today`, then commit the accepted `data/` and `public/data/` updates on a branch and merge them to `source`.
 - The computer must be awake, logged in, online, and able to open Chrome during collection.
 

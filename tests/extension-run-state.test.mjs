@@ -26,3 +26,15 @@ test("extension capture is manual-only and clears the retired daily alarm", asyn
   assert.doesNotMatch(service, /chrome\.alarms\.onAlarm/);
   assert.match(popup, /Manual capture only/);
 });
+
+test("extension accelerates collection without overlapping login-sensitive sources", async () => {
+  const service = await readFile(new URL("../extension/service.js", import.meta.url), "utf8");
+  assert.match(service, /waitForScraperPage\(tabId, scraper\)/);
+  assert.doesNotMatch(service, /attempt === 0 \? 3000 : 5000/);
+  assert.match(service, /source\.id === "draftkings"/);
+  assert.match(service, /source\.id !== "draftkings"/);
+  assert.match(service, /await Promise\.all\(/);
+  assert.match(service, /for \(const source of interactiveSources\) await captureSource\(source\)/);
+  assert.match(service, /verificationMode: "validated-single-pass"/);
+  assert.match(service, /Required market categories are missing/);
+});
