@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "date": "2026-08-27",
   "season": 2026,
-  "generatedAt": "2026-08-27T12:13:23.895Z",
+  "generatedAt": "2026-08-27T16:39:54.648Z",
   "sourceRuns": [
     {
       "source": "draftkings",
@@ -30,10 +30,9 @@
     },
     {
       "source": "underdog",
-      "status": "not_run",
-      "issues": [
-        "no capture supplied"
-      ]
+      "status": "accepted",
+      "capturedAt": "2026-08-27T16:37:22.812Z",
+      "observationCount": 211
     }
   ],
   "observations": [
@@ -1705,7 +1704,7 @@
       "player": {
         "id": "00-0037744",
         "name": "Trey McBride",
-        "team": "AZ",
+        "team": "ARI",
         "position": "TE",
         "rosterSeason": 2026,
         "aliases": [
@@ -2204,7 +2203,7 @@
       "player": {
         "id": "00-0039849",
         "name": "Marvin Harrison Jr.",
-        "team": "AZ",
+        "team": "ARI",
         "position": "WR",
         "rosterSeason": 2026,
         "aliases": [
@@ -2636,7 +2635,7 @@
       "player": {
         "id": "00-0041027",
         "name": "Jeremiyah Love",
-        "team": "AZ",
+        "team": "ARI",
         "position": "RB",
         "rosterSeason": 2026,
         "aliases": [
@@ -5057,7 +5056,7 @@
       "player": {
         "id": "00-0037744",
         "name": "Trey McBride",
-        "team": "AZ",
+        "team": "ARI",
         "position": "TE",
         "rosterSeason": 2026,
         "aliases": [
@@ -5987,7 +5986,7 @@
       "player": {
         "id": "00-0039849",
         "name": "Marvin Harrison Jr.",
-        "team": "AZ",
+        "team": "ARI",
         "position": "WR",
         "rosterSeason": 2026,
         "aliases": [
@@ -8640,7 +8639,7 @@
       "player": {
         "id": "00-0037744",
         "name": "Trey McBride",
-        "team": "AZ",
+        "team": "ARI",
         "position": "TE",
         "rosterSeason": 2026,
         "aliases": [
@@ -9440,7 +9439,7 @@
       "player": {
         "id": "00-0039849",
         "name": "Marvin Harrison Jr.",
-        "team": "AZ",
+        "team": "ARI",
         "position": "WR",
         "rosterSeason": 2026,
         "aliases": [
@@ -9906,7 +9905,7 @@
       "player": {
         "id": "00-0041027",
         "name": "Jeremiyah Love",
-        "team": "AZ",
+        "team": "ARI",
         "position": "RB",
         "rosterSeason": 2026,
         "aliases": [
@@ -10040,7 +10039,7 @@
       "player": {
         "id": "00-0038559",
         "name": "Michael Wilson",
-        "team": "AZ",
+        "team": "ARI",
         "position": "WR",
         "rosterSeason": 2026,
         "aliases": [
@@ -11930,7 +11929,7 @@
       "player": {
         "id": "00-0037744",
         "name": "Trey McBride",
-        "team": "AZ",
+        "team": "ARI",
         "position": "TE",
         "rosterSeason": 2026,
         "aliases": [
@@ -15288,7 +15287,7 @@
       "player": {
         "id": "00-0037744",
         "name": "Trey McBride",
-        "team": "AZ",
+        "team": "ARI",
         "position": "TE",
         "rosterSeason": 2026,
         "aliases": [
@@ -15853,7 +15852,7 @@
       "player": {
         "id": "00-0039849",
         "name": "Marvin Harrison Jr.",
-        "team": "AZ",
+        "team": "ARI",
         "position": "WR",
         "rosterSeason": 2026,
         "aliases": [
@@ -16384,7 +16383,7 @@
       "player": {
         "id": "00-0041027",
         "name": "Jeremiyah Love",
-        "team": "AZ",
+        "team": "ARI",
         "position": "RB",
         "rosterSeason": 2026,
         "aliases": [
@@ -18875,7 +18874,7 @@
       "player": {
         "id": "00-0037744",
         "name": "Trey McBride",
-        "team": "AZ",
+        "team": "ARI",
         "position": "TE",
         "rosterSeason": 2026,
         "aliases": [
@@ -19472,7 +19471,7 @@
       "player": {
         "id": "00-0039849",
         "name": "Marvin Harrison Jr.",
-        "team": "AZ",
+        "team": "ARI",
         "position": "WR",
         "rosterSeason": 2026,
         "aliases": [
@@ -19572,7 +19571,7 @@
       "player": {
         "id": "00-0041027",
         "name": "Jeremiyah Love",
-        "team": "AZ",
+        "team": "ARI",
         "position": "RB",
         "rosterSeason": 2026,
         "aliases": [
@@ -21826,7 +21825,7 @@
       "player": {
         "id": "00-0041027",
         "name": "Jeremiyah Love",
-        "team": "AZ",
+        "team": "ARI",
         "position": "RB",
         "rosterSeason": 2026,
         "aliases": [
@@ -23647,7 +23646,7 @@
       "player": {
         "id": "00-0037744",
         "name": "Trey McBride",
-        "team": "AZ",
+        "team": "ARI",
         "position": "TE",
         "rosterSeason": 2026,
         "aliases": [
@@ -24429,7 +24428,7 @@
       "player": {
         "id": "00-0039849",
         "name": "Marvin Harrison Jr.",
-        "team": "AZ",
+        "team": "ARI",
         "position": "WR",
         "rosterSeason": 2026,
         "aliases": [
@@ -24806,7 +24805,7 @@
       "player": {
         "id": "00-0041027",
         "name": "Jeremiyah Love",
-        "team": "AZ",
+        "team": "ARI",
         "position": "RB",
         "rosterSeason": 2026,
         "aliases": [
@@ -25086,7 +25085,7 @@
       "player": {
         "id": "00-0038559",
         "name": "Michael Wilson",
-        "team": "AZ",
+        "team": "ARI",
         "position": "WR",
         "rosterSeason": 2026,
         "aliases": [
@@ -27953,7 +27952,7 @@
       "player": {
         "id": "00-0037744",
         "name": "Trey McBride",
-        "team": "AZ",
+        "team": "ARI",
         "position": "TE",
         "rosterSeason": 2026,
         "aliases": [
@@ -29268,7 +29267,7 @@
       "player": {
         "id": "00-0039849",
         "name": "Marvin Harrison Jr.",
-        "team": "AZ",
+        "team": "ARI",
         "position": "WR",
         "rosterSeason": 2026,
         "aliases": [
@@ -29300,7 +29299,7 @@
       "player": {
         "id": "00-0038559",
         "name": "Michael Wilson",
-        "team": "AZ",
+        "team": "ARI",
         "position": "WR",
         "rosterSeason": 2026,
         "aliases": [
@@ -31949,7 +31948,7 @@
       "player": {
         "id": "00-0041027",
         "name": "Jeremiyah Love",
-        "team": "AZ",
+        "team": "ARI",
         "position": "RB",
         "rosterSeason": 2026,
         "aliases": [
@@ -32637,7 +32636,7 @@
       "player": {
         "id": "00-0037744",
         "name": "Trey McBride",
-        "team": "AZ",
+        "team": "ARI",
         "position": "TE",
         "rosterSeason": 2026,
         "aliases": [
@@ -33541,7 +33540,7 @@
       "player": {
         "id": "00-0041027",
         "name": "Jeremiyah Love",
-        "team": "AZ",
+        "team": "ARI",
         "position": "RB",
         "rosterSeason": 2026,
         "aliases": [
@@ -33729,7 +33728,7 @@
       "player": {
         "id": "00-0039849",
         "name": "Marvin Harrison Jr.",
-        "team": "AZ",
+        "team": "ARI",
         "position": "WR",
         "rosterSeason": 2026,
         "aliases": [
@@ -35260,7 +35259,7 @@
       "player": {
         "id": "00-0038559",
         "name": "Michael Wilson",
-        "team": "AZ",
+        "team": "ARI",
         "position": "WR",
         "rosterSeason": 2026,
         "aliases": [
