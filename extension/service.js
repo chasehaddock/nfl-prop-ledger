@@ -92,12 +92,13 @@ function scrapeDraftKingsPage() {
 
 async function scrapeFanDuelPage() {
   const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
-  const cardPattern = /^.+ Regular Season (Passing Yards|Passing TDs|Rushing Yards|Rushing TDs|Receiving Yards|Receiving TDs|Receptions) 20\d{2}-\d{2}$/i;
-  const outcomePattern = / Regular Season (Passing Yards|Passing TDs|Rushing Yards|Rushing TDs|Receiving Yards|Receiving TDs|Receptions) 20\d{2}-\d{2}, .+ (Over|Under) \d/i;
+  const seasonCardPattern = /^.+ Regular Season (Passing Yards|Passing TDs|Rushing Yards|Rushing TDs|Receiving Yards|Receiving TDs|Receptions) 20\d{2}-\d{2}$/i;
+  const weeklyCardPattern = /^.+ - (Passing Yards|Passing TDs|Rushing Yards|Receiving Yards|Total Receptions|Receptions)$/i;
+  const outcomePattern = /(?: Regular Season (?:Passing Yards|Passing TDs|Rushing Yards|Rushing TDs|Receiving Yards|Receiving TDs|Receptions) 20\d{2}-\d{2}| - (?:Passing Yards|Passing TDs|Rushing Yards|Receiving Yards|Total Receptions|Receptions)), .+ (?:Over|Under)(?:,)? \d/i;
   const discoverMarketLabels = () => new Set(
     [...document.querySelectorAll('[role="button"], h3')]
       .map((element) => element.getAttribute("aria-label")?.split(",")[0]?.trim() || element.textContent.trim())
-      .filter((label) => cardPattern.test(label)),
+      .filter((label) => seasonCardPattern.test(label) || weeklyCardPattern.test(label)),
   );
 
   window.scrollTo(0, 0);
@@ -144,7 +145,7 @@ async function scrapeFanDuelPage() {
   }
 
   const labels = [...outcomesByMarket.values()].flat();
-  const statLabels = [...new Set([...marketLabels].map((label) => label.match(cardPattern)?.[1]).filter(Boolean))];
+  const statLabels = [...new Set([...marketLabels].map((label) => label.match(seasonCardPattern)?.[1]).filter(Boolean))];
   return {
     rows: labels.map((ariaLabel) => ({ ariaLabel })),
     marketCount: outcomesByMarket.size,

@@ -103,7 +103,8 @@ test("consensus uses Underdog only when no preferred current source carries the 
     observation("underdog", "receptions", 5.5),
   ], ["receptions"]);
   assert.equal(preferred.receptions?.line, 6.5);
-  assert.deepEqual(preferred.receptions?.candidates.map((item) => item.source), ["fanduel"]);
+  assert.deepEqual(preferred.receptions?.contributors.map((item) => item.source), ["fanduel"]);
+  assert.deepEqual(preferred.receptions?.candidates.map((item) => item.source), ["fanduel", "underdog"]);
 
   const fallback = selectConsensusStats([
     observation("underdog", "receptions", 5.5),

@@ -127,7 +127,8 @@ function asCell(observation: Observation | undefined): Cell | null {
 
 function consensusCell(playerId: string, statType: StatType, selection: ConsensusSelection<Observation> | undefined): Cell | null {
   if (!selection) return null;
-  const only = selection.candidates.length === 1 ? selection.candidates[0] : null;
+  const contributors = selection.contributors || selection.candidates;
+  const only = contributors.length === 1 ? contributors[0] : null;
   return {
     key: only?.key || `consensus:${playerId}:${statType}`,
     statType,
@@ -138,13 +139,13 @@ function consensusCell(playerId: string, statType: StatType, selection: Consensu
     higherMultiplier: only?.higherMultiplier,
     lowerMultiplier: only?.lowerMultiplier,
     normalizedProbability: only?.normalizedProbability,
-    sourceUrl: only?.sourceUrl || selection.candidates[0].sourceUrl,
+    sourceUrl: only?.sourceUrl || contributors[0].sourceUrl,
     source: only?.source || "consensus",
     sourceName: only ? only.sourceName || SOURCE_NAMES[only.source] || only.source : "Consensus",
-    capturedAt: selection.candidates.map((item) => item.capturedAt).filter(Boolean).sort().at(-1),
-    status: selection.candidates.every((item) => item.status === "open") ? "open" : "stale",
+    capturedAt: contributors.map((item) => item.capturedAt).filter(Boolean).sort().at(-1),
+    status: contributors.every((item) => item.status === "open") ? "open" : "stale",
     consensusMethod: selection.method,
-    sourceCount: selection.candidates.length,
+    sourceCount: contributors.length,
     supportCount: selection.supportCount,
   };
 }

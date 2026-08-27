@@ -13,6 +13,7 @@ export type ConsensusMethod = "single" | "mode" | "average";
 export type ConsensusSelection<T> = {
   line: number;
   candidates: T[];
+  contributors: T[];
   method: ConsensusMethod;
   supportCount: number;
 };
@@ -35,6 +36,9 @@ export function selectConsensusStats<T extends SelectableObservation>(
     const pool = [...(preferred.length ? preferred : freshnessPool)].sort((a, b) =>
       a.source.localeCompare(b.source)
       || (Date.parse(b.capturedAt || "") || 0) - (Date.parse(a.capturedAt || "") || 0));
+    const candidatePool = [...freshnessPool].sort((a, b) =>
+      a.source.localeCompare(b.source)
+      || (Date.parse(b.capturedAt || "") || 0) - (Date.parse(a.capturedAt || "") || 0));
     if (!pool.length) return [statType, undefined];
 
     const lineGroups = new Map<number, T[]>();
@@ -42,7 +46,8 @@ export function selectConsensusStats<T extends SelectableObservation>(
     const maximumSupport = Math.max(...[...lineGroups.values()].map((group) => group.length));
     return [statType, {
       line: pool.length === 1 ? pool[0].line : roundedAverage(pool.map((item) => item.line)),
-      candidates: pool,
+      candidates: candidatePool,
+      contributors: pool,
       method: (pool.length === 1 ? "single" : "average") as ConsensusMethod,
       supportCount: maximumSupport,
     } satisfies ConsensusSelection<T>];

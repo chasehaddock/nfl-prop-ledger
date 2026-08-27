@@ -4,7 +4,7 @@ import { FANDUEL_SOURCE } from "../fanduel-config.mjs";
 import { parseAmericanOdds } from "./american-odds.mjs";
 
 const SEASON_OUTCOME_PATTERN = /^(.+?) Regular Season (Passing Yards|Passing TDs|Rushing Yards|Rushing TDs|Receiving Yards|Receiving TDs|Receptions) (\d{4})-\d{2}, (.+?) (Over|Under) (\d+(?:\.\d+)?), ([+−–—-]?\d+)$/i;
-const WEEKLY_PASS_TD_PATTERN = /^(.+?) - Passing TDs, (.+?) (Over|Under), (\d+(?:\.\d+)?), ([+−–—-]?\d+)$/i;
+const WEEKLY_OUTCOME_PATTERN = /^(.+?) - (Passing Yards|Passing TDs|Rushing Yards|Receiving Yards|Total Receptions|Receptions), (.+?) (Over|Under), (\d+(?:\.\d+)?), ([+−–—-]?\d+)$/i;
 const STAT_LABELS = new Map([
   ["passing yards", "passing_yards"],
   ["passing tds", "passing_touchdowns"],
@@ -13,6 +13,7 @@ const STAT_LABELS = new Map([
   ["receiving yards", "receiving_yards"],
   ["receiving tds", "receiving_touchdowns"],
   ["receptions", "receptions"],
+  ["total receptions", "receptions"],
 ]);
 
 function hash(value) {
@@ -37,20 +38,20 @@ export function parseFanDuelOutcomeLabel(value, { season } = {}) {
     };
   }
 
-  const weeklyMatch = label.match(WEEKLY_PASS_TD_PATTERN);
+  const weeklyMatch = label.match(WEEKLY_OUTCOME_PATTERN);
   if (!weeklyMatch) throw new Error(`Unrecognized FanDuel outcome label: ${value}`);
   if (!Number.isInteger(season)) throw new Error("FanDuel Week 1 outcome is missing its season");
-  if (normalizeName(weeklyMatch[1]) !== normalizeName(weeklyMatch[2])) {
-    throw new Error(`FanDuel player labels do not match: ${weeklyMatch[1]} / ${weeklyMatch[2]}`);
+  if (normalizeName(weeklyMatch[1]) !== normalizeName(weeklyMatch[3])) {
+    throw new Error(`FanDuel player labels do not match: ${weeklyMatch[1]} / ${weeklyMatch[3]}`);
   }
   return {
     playerName: weeklyMatch[1].trim(),
-    statType: "passing_touchdowns",
+    statType: STAT_LABELS.get(weeklyMatch[2].toLowerCase()),
     season,
     marketScope: "week_1",
-    side: weeklyMatch[3].toLowerCase(),
-    line: Number(weeklyMatch[4]),
-    odds: parseAmericanOdds(weeklyMatch[5]),
+    side: weeklyMatch[4].toLowerCase(),
+    line: Number(weeklyMatch[5]),
+    odds: parseAmericanOdds(weeklyMatch[6]),
   };
 }
 

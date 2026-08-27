@@ -66,6 +66,16 @@ test("parses FanDuel Week 1 Passing TD prices as a verified two-sided market", (
   assert.match(result.observations[0].sourceUrl, /tab=passing-props/);
 });
 
+test("parses FanDuel Week 1 Total Receptions as a two-sided market", () => {
+  const over = parseFanDuelOutcomeLabel("Jaxon Smith-Njigba - Total Receptions, Jaxon Smith-Njigba Over, 6.5, -102", { season: 2026 });
+  const under = parseFanDuelOutcomeLabel("Jaxon Smith-Njigba - Total Receptions, Jaxon Smith-Njigba Under, 6.5, -130", { season: 2026 });
+  assert.equal(over.marketScope, "week_1");
+  assert.equal(over.statType, "receptions");
+  assert.equal(over.line, 6.5);
+  assert.equal(over.odds, -102);
+  assert.equal(under.odds, -130);
+});
+
 test("rejects mismatched player labels and incomplete over/under pairs", () => {
   assert.throws(
     () => parseFanDuelOutcomeLabel(labels[0].replace(", Amon-Ra St. Brown Over", ", Puka Nacua Over")),
