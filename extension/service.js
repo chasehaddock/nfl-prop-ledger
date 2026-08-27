@@ -46,7 +46,7 @@ const SOURCES = [
     name: "Underdog",
     scraper: "underdog",
     season: () => new Date().getFullYear(),
-    requiredStatLabels: ["Pass Yards", "Pass TDs", "Rush Yards", "Receiving Yards", "Receptions", "Rush + Rec TDs"],
+    requiredStatLabels: ["Pass TDs", "Receptions", "Rush + Rec TDs"],
     pages: [{ id: "nfl-week-1-player-props", url: "https://app.underdogsports.com/pick-em/higher-lower/all/NFL" }],
   },
   {
@@ -314,9 +314,8 @@ async function scrapeUnderdogPage() {
   const text = (element) => element?.textContent?.replace(/\s+/g, " ").trim() || "";
   const supportedTabs = [
     { tab: "TD Scorers", statLabels: ["Rush + Rec TDs"] },
-    { tab: "Passing", statLabels: ["Pass Yards", "Pass TDs"] },
-    { tab: "Rushing", statLabels: ["Rush Yards"] },
-    { tab: "Receiving", statLabels: ["Receiving Yards", "Receptions"] },
+    { tab: "Passing", statLabels: ["Pass TDs"] },
+    { tab: "Receiving", statLabels: ["Receptions"] },
   ];
   const rowsByKey = new Map();
   const statLabels = new Set();
@@ -325,8 +324,10 @@ async function scrapeUnderdogPage() {
     .filter((button) => button.getClientRects().length > 0);
   const findExactButton = (label) => visibleButtons().find((button) => text(button) === label);
   const modifier = (side) => {
-    const match = text(side).match(/(?:Higher|Lower)\s*(\d+(?:\.\d+)?)x/i);
-    return match ? Number(match[1]) : Number.NaN;
+    const value = text(side);
+    const match = value.match(/(?:Higher|Lower)\s*(\d+(?:\.\d+)?)x/i);
+    if (match) return Number(match[1]);
+    return /^(?:Higher|Lower)$/i.test(value) ? 1 : Number.NaN;
   };
   const escapePattern = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const readVisibleCards = (supportedStatLabels) => {
@@ -344,7 +345,7 @@ async function scrapeUnderdogPage() {
       const lowerButton = lowerButtons[0];
       const lineMatch = cardText.match(new RegExp(`(\\d+(?:\\.\\d+)?)\\s*${escapePattern(statLabel)}`, "i"));
       const lines = (card.innerText || "").split("\n").map((line) => line.replace(/\s+/g, " ").trim()).filter(Boolean);
-      const matchupIndex = lines.findIndex((line) => /(?:\s@\s|\svs\s).*(?:\d{1,2}\/\d{1,2}|\d{1,2}:\d{2})/i.test(line));
+      const matchupIndex = lines.findIndex((line) => /(?:\s@\s|\svs\s).*\b\d{1,2}\/\d{1,2}\b/i.test(line));
       const playerName = matchupIndex > 0 ? lines[matchupIndex - 1] : "";
       const isNonStandard = /\b(?:boost|boosted|special|discount|demon|goblin|scorcher|rescue|promotion)\b/i.test(cardText);
       if (!playerName || !lineMatch) continue;
@@ -364,12 +365,18 @@ async function scrapeUnderdogPage() {
     }
   };
 
+  for (let attempt = 0; attempt < 120 && !supportedTabs.some(({ tab }) => findExactButton(tab)); attempt += 1) {
+    await sleep(150);
+  }
+
   for (const { tab, statLabels: tabStatLabels } of supportedTabs) {
     const button = findExactButton(tab);
     if (!button) throw new Error(`Underdog ${tab} tab is missing`);
     button.scrollIntoView({ block: "nearest", inline: "center" });
     button.click();
-    await sleep(700);
+    for (let attempt = 0; attempt < 100 && !tabStatLabels.some((label) => document.body.innerText.includes(label)); attempt += 1) {
+      await sleep(150);
+    }
     window.scrollTo(0, 0);
     await sleep(250);
     let stableChecks = 0;
@@ -473,7 +480,9 @@ async function scrapeTab(tabId, scraper) {
   if (lastResult?.expectedMarketCount) {
     throw new Error(`Captured ${lastResult.marketCount || 0} of ${lastResult.expectedMarketCount} discovered season markets`);
   }
-  throw new Error(scraper === "sleeper" ? "No Sleeper ADP player rows appeared after a retry" : "No season prop rows appeared after a retry");
+  if (scraper === "sleeper") throw new Error("No Sleeper ADP player rows appeared after a retry");
+  if (scraper === "underdog") throw new Error("No Week 1 TD or reception rows appeared after a retry");
+  throw new Error("No season prop rows appeared after a retry");
 }
 
 async function collectPage(source, spec) {

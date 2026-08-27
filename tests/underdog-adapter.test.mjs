@@ -13,12 +13,12 @@ test("normalizes both Underdog modifiers into a two-sided probability", () => {
 });
 
 test("maps supported Underdog Week 1 labels", () => {
-  assert.equal(underdogStatType("Pass Yards"), "passing_yards");
   assert.equal(underdogStatType("Rush + Rec TDs"), "offensive_touchdowns");
   assert.equal(underdogStatType("Pass TDs"), "passing_touchdowns");
-  assert.equal(underdogStatType("Rush Yards"), "rushing_yards");
-  assert.equal(underdogStatType("Receiving Yards"), "receiving_yards");
   assert.equal(underdogStatType("Receptions"), "receptions");
+  assert.equal(underdogStatType("Pass Yards"), null);
+  assert.equal(underdogStatType("Rush Yards"), null);
+  assert.equal(underdogStatType("Receiving Yards"), null);
 });
 
 test("parses standard Week 1 touchdown pairs and ignores specials", () => {
@@ -39,21 +39,19 @@ test("parses standard Week 1 touchdown pairs and ignores specials", () => {
   assert.equal(result.observations[0].normalizedProbability.toFixed(4), "0.4235");
 });
 
-test("accepts standard Underdog projection lines without modifiers", () => {
+test("rejects Underdog rows without a complete Higher and Lower pair", () => {
   const result = parseUnderdogRows([
-    { playerName: "Dak Prescott", statLabel: "Pass Yards", line: 267.5 },
-    { playerName: "Dak Prescott", statLabel: "Rush Yards", line: 8.5 },
-    { playerName: "Jaxon Smith-Njigba", statLabel: "Receiving Yards", line: 84.5 },
+    { playerName: "Dak Prescott", statLabel: "Pass TDs", line: 1.5 },
     { playerName: "Jaxon Smith-Njigba", statLabel: "Receptions", line: 6.5, higherMultiplier: 0.83, lowerMultiplier: 1.12 },
   ], {
     rosterByName,
     sourceUrl: "https://app.underdogsports.com/pick-em/higher-lower/all/NFL",
     capturedAt: "2026-08-26T14:00:00.000Z",
     season: 2026,
-    requiredStatTypes: ["passing_yards", "rushing_yards", "receiving_yards", "receptions"],
+    requiredStatTypes: ["passing_touchdowns", "receptions"],
   });
-  assert.deepEqual(result.errors, []);
-  assert.equal(result.observations.length, 4);
-  assert.equal(result.observations[0].normalizedProbability, undefined);
-  assert.ok(result.observations[3].normalizedProbability > 0.5);
+  assert.equal(result.observations.length, 1);
+  assert.ok(result.observations[0].normalizedProbability > 0.5);
+  assert.match(result.errors.join("\n"), /require both Higher and Lower multipliers/);
+  assert.match(result.errors.join("\n"), /Required Underdog stat is missing: passing_touchdowns/);
 });
