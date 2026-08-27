@@ -39,4 +39,6 @@ yarn-error.log*
 /outputs/
 /work/
 /.private/
+/raw-captures/
+/LOCAL-PACKAGE-MANIFEST.json
 /data/incoming/
