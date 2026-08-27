@@ -107,7 +107,14 @@ test("consensus uses Underdog only when no preferred current source carries the 
   assert.deepEqual(preferred.receptions?.candidates.map((item) => item.source), ["fanduel", "underdog"]);
 
   const fallback = selectConsensusStats([
-    observation("underdog", "receptions", 5.5),
+    { ...observation("underdog", "receptions", 2.5), normalizedProbability: 0.401 },
   ], ["receptions"]);
-  assert.equal(fallback.receptions?.line, 5.5);
+  assert.equal(fallback.receptions?.line, 2.4);
+});
+
+test("keeps an even Underdog reception line unchanged after normalization", () => {
+  const selected = selectConsensusStats([
+    { ...observation("underdog", "receptions", 3.5), normalizedProbability: 0.5 },
+  ], ["receptions"]);
+  assert.equal(selected.receptions?.line, 3.5);
 });

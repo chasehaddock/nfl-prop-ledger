@@ -41,6 +41,7 @@ The source branch deliberately excludes `node_modules`, `dist`, `.private`, `.en
 - PrizePicks Demon and Goblin projections are ignored.
 - Failed sources carry the previous observation as stale instead of deleting it.
 - Current main lines are arithmetic averages of available current non-Underdog sources. Underdog fills a stat only when none of those sources carry it.
+- When Underdog is the only current Week 1 receptions source, the displayed reception projection is the posted line adjusted by its normalized Higher/Lower probability and rounded to one decimal. The original Underdog line and both modifiers remain visible beneath it.
 - Line-movement graphs retain each source and emphasize the sportsbook average.
 
 ### Fantasy scoring and inference

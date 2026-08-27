@@ -59,6 +59,7 @@ Click **Capture now** at any convenient time when Chrome is open, logged in, and
 ## Important projection rules
 
 - Current displayed main lines are arithmetic averages of available current non-Underdog sources; Underdog is used only when those sources do not carry the stat.
+- Underdog-only Week 1 receptions use a one-decimal, probability-adjusted projection; the posted line and Higher/Lower modifiers remain visible below it.
 - Season and Week 1 data never mix.
 - RB/WR/TE touchdown totals use current market data only—never prior-season touchdowns.
 - Week 1 QB passing TDs and rushing/receiving TD chance are separate inputs: passing TDs use the 4/6-point toggle, while a QB rushing or receiving TD contributes 6 points.

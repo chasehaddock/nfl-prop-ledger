@@ -13,7 +13,7 @@ type Snapshot = { demo: boolean; date?: string; season?: number; week?: number; 
 type HistoryPoint = { date: string; line: number; overOdds: number | null; underOdds: number | null; status: string; changeType: string };
 type History = Record<string, HistoryPoint[]>;
 type ChartPoint = { key: string; label: string; order: number; line: number; reconstructed?: boolean };
-type Cell = { key: string; statType: StatType; line: number; delta: number | null; overOdds?: number; underOdds?: number; higherMultiplier?: number; lowerMultiplier?: number; normalizedProbability?: number; sourceUrl: string; source: string; sourceName: string; capturedAt?: string; status: Observation["status"]; fallbackLabel?: string; consensusMethod?: ConsensusMethod; sourceCount?: number; supportCount?: number };
+type Cell = { key: string; statType: StatType; line: number; postedLine?: number; delta: number | null; overOdds?: number; underOdds?: number; higherMultiplier?: number; lowerMultiplier?: number; normalizedProbability?: number; sourceUrl: string; source: string; sourceName: string; capturedAt?: string; status: Observation["status"]; fallbackLabel?: string; consensusMethod?: ConsensusMethod; sourceCount?: number; supportCount?: number };
 type SourcesByStat = Partial<Record<StatType, Cell[]>>;
 type ConfidenceLevel = "strong" | "partial" | "thin";
 type PlayerLine = { id: string; player: string; team: string; position: Position; source: string; book: string; availableBooks: string[]; sourcesByStat: SourcesByStat; yardLabel: string; yards: Cell | null; receptions: Cell | null; touchdowns: Cell | null; rushingYards: Cell | null; rushingTouchdowns: Cell | null; receivingYards: Cell | null; receivingTouchdowns: Cell | null; offensiveTouchdowns: Cell | null; passingTouchdownExpectation: number | null; passingTouchdownExpectationLabel: string | null; passingTouchdownExpectationNote: string | null; touchdownProbability: number | null; touchdownProbabilityNote: string | null; fantasyPoints: number | null; fantasyUsesInference: boolean; prizePicksFantasyScore: Cell | null; fantasyBooks: string[]; fantasyUsesReceptionFallback: boolean; fantasyUsesReceivingYardsFallback: boolean; fantasyUsesQbRushingYardsFallback: boolean; fantasyUsesQbRushingTouchdownsFallback: boolean; fantasyAdditionalInferences: string[]; fantasyTdOddsBooks: string[]; confidence: ConfidenceLevel; confidenceNote: string; verifiedAt: string; status: "verified" | "review" };
@@ -133,6 +133,7 @@ function consensusCell(playerId: string, statType: StatType, selection: Consensu
     key: only?.key || `consensus:${playerId}:${statType}`,
     statType,
     line: selection.line,
+    postedLine: only?.source === "underdog" && statType === "receptions" ? only.line : undefined,
     delta: only?.lineDelta ?? null,
     overOdds: only?.overOdds,
     underOdds: only?.underOdds,
@@ -488,7 +489,9 @@ function LineCell({ cell, label, preferredSource, player, onInspect }: { cell: C
     const estimateLabel = (label || STAT_LABELS[cell.statType]).toLowerCase();
     return <><span className="empty">Not offered</span><small className="historical-fallback">Estimated {cell.line.toLocaleString()} {estimateLabel} · {cell.fallbackLabel}</small></>;
   }
-  const content = <><div className="number-cell"><strong>{cell.line.toLocaleString()}</strong>{!cell.fallbackLabel && cell.sourceCount === 1 && <Delta value={cell.delta} />}{!cell.fallbackLabel && (cell.sourceCount || 0) > 1 && <span className="consensus-badge">{cell.consensusMethod === "average" ? "AVG" : "MODE"}</span>}</div>{label && <small>{label}</small>}{cell.overOdds && cell.underOdds && <small>O {cell.overOdds > 0 ? "+" : ""}{cell.overOdds} / U {cell.underOdds > 0 ? "+" : ""}{cell.underOdds}</small>}{cell.fallbackLabel ? <small className="historical-fallback">{cell.fallbackLabel}</small> : (cell.sourceCount || 0) > 1 ? <small className="consensus-note">{consensusDescription(cell)} · click to compare</small> : cell.source !== preferredSource && <small className="fallback-source">Filled from {cell.sourceName}</small>}</>;
+  const underdogReception = cell.source === "underdog" && cell.statType === "receptions"
+    && cell.postedLine !== undefined && cell.higherMultiplier !== undefined && cell.lowerMultiplier !== undefined;
+  const content = <><div className="number-cell"><strong>{cell.line.toLocaleString()}</strong>{!cell.fallbackLabel && cell.sourceCount === 1 && <Delta value={cell.delta} />}{!cell.fallbackLabel && (cell.sourceCount || 0) > 1 && <span className="consensus-badge">{cell.consensusMethod === "average" ? "AVG" : "MODE"}</span>}</div>{label && <small>{label}</small>}{cell.overOdds && cell.underOdds && <small>O {cell.overOdds > 0 ? "+" : ""}{cell.overOdds} / U {cell.underOdds > 0 ? "+" : ""}{cell.underOdds}</small>}{underdogReception && <small>Underdog H {cell.higherMultiplier!.toFixed(2)}x / L {cell.lowerMultiplier!.toFixed(2)}x · posted {cell.postedLine}</small>}{cell.fallbackLabel ? <small className="historical-fallback">{cell.fallbackLabel}</small> : (cell.sourceCount || 0) > 1 ? <small className="consensus-note">{consensusDescription(cell)} · click to compare</small> : cell.source !== preferredSource && <small className="fallback-source">Filled from {cell.sourceName}</small>}</>;
   if (!onInspect || cell.fallbackLabel) return content;
   return <button className="prop-trigger" onClick={() => onInspect(cell.statType)} aria-label={`Compare ${player || "player"} ${STAT_LABELS[cell.statType]} across sources`}>{content}</button>;
 }
