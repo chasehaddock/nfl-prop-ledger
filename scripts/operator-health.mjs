@@ -17,6 +17,7 @@ const today = new Intl.DateTimeFormat("en-CA", {
   day: "2-digit",
 }).format(new Date());
 const checks = [];
+const manualCapture = await exists(path.join(repoPath, ".private", "operator", "manual-capture"));
 
 async function exists(target) {
   try {
@@ -49,6 +50,18 @@ async function commandWorks(file, args) {
 }
 
 async function schedulerHealth() {
+  if (manualCapture) {
+    check("capture mode", true, "manual only; no daily capture schedules expected");
+    if (process.platform === "darwin" && localOnly) {
+      const base = `com.${operatorId(os.userInfo().username)}.nfl-prop-ledger`;
+      check("private dashboard schedule", await commandWorks("launchctl", ["print", `gui/${process.getuid()}/${base}.site`]), `${base}.site`);
+    } else if (process.platform === "win32" && localOnly) {
+      check("private dashboard schedule", await commandWorks("schtasks.exe", ["/Query", "/TN", "NFL Prop Ledger - Site"]), "NFL Prop Ledger - Site");
+    } else if (localOnly) {
+      check("private dashboard schedule", await commandWorks("systemctl", ["--user", "is-enabled", "nfl-prop-ledger-site.service"]), "nfl-prop-ledger-site.service");
+    }
+    return;
+  }
   if (process.platform === "darwin") {
     const base = `com.${operatorId(os.userInfo().username)}.nfl-prop-ledger`;
     const uid = process.getuid();

@@ -46,7 +46,7 @@ Then follow [CONTINUATION_GUIDE.md](CONTINUATION_GUIDE.md). A new operator must 
 
 ## Daily collection
 
-The supported installer creates machine-specific schedules:
+The supported installer defaults to manual capture and removes old daily schedules:
 
 ```bash
 npm run operator:install -- --dry-run
@@ -54,7 +54,7 @@ npm run operator:install
 npm run operator:health -- --require-today
 ```
 
-The configured morning flow opens Chrome, captures and validates every source once, retries only failed sources, processes valid evidence, rebuilds the public JSON and site, and publishes. The computer must be awake, logged in, online, and allowed to access the configured pages.
+Click **Capture now** in the extension when Chrome is open, logged in, and connected to an unrestricted network. Then run `npm run operator:run` to process valid evidence and rebuild the site. Automatic processor scheduling is an explicit opt-in via `npm run operator:install -- --automatic`; the extension itself never starts a capture automatically.
 
 ## Important projection rules
 

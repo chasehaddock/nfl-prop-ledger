@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 import {
   captureSetIsReady,
@@ -53,6 +54,14 @@ test("renders a persistent local-only macOS site agent", () => {
   assert.match(plist, /<key>RunAtLoad<\/key><true\/>/);
   assert.match(plist, /<key>KeepAlive<\/key><true\/>/);
   assert.doesNotMatch(plist, /StartCalendarInterval/);
+});
+
+test("operator installation defaults to manual capture with automatic scheduling opt-in", async () => {
+  const installer = await readFile(new URL("../scripts/install-operator.mjs", import.meta.url), "utf8");
+  assert.match(installer, /const automatic = process\.argv\.includes\("--automatic"\)/);
+  assert.match(installer, /manual-capture/);
+  assert.match(installer, /launchctl", \["disable"/);
+  assert.doesNotMatch(installer, /push", \["--dry-run"/);
 });
 
 test("renders Windows and Linux runners with absolute machine paths", () => {

@@ -1,4 +1,4 @@
-import { access, chmod, mkdir, writeFile } from "node:fs/promises";
+import { access, chmod, mkdir, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { execFile, spawn } from "node:child_process";
@@ -20,6 +20,7 @@ const homeDirectory = os.homedir();
 const username = os.userInfo().username;
 const id = operatorId(username);
 const dryRun = process.argv.includes("--dry-run");
+const automatic = process.argv.includes("--automatic");
 const localOnly = process.argv.includes("--local") || !(await fileExists(path.join(repoPath, ".git")));
 const npmCommand = process.platform === "win32" ? "npm.cmd" : "npm";
 
@@ -77,27 +78,34 @@ async function installMac() {
     if (process.env[key]) processorEnvironment[key] = process.env[key];
   }
 
-  await write(processorFile, macLaunchAgent({
-    label: processorLabel,
-    programArguments: [process.execPath, path.join(repoPath, "scripts", "run-automatic.mjs")],
-    workingDirectory: repoPath,
-    stdoutPath: path.join(logDirectory, "nfl-prop-ledger.log"),
-    stderrPath: path.join(logDirectory, "nfl-prop-ledger-error.log"),
-    hour: 8,
-    minute: 32,
-    environment: processorEnvironment,
-  }));
-  await write(chromeFile, macLaunchAgent({
-    label: chromeLabel,
-    programArguments: ["/usr/bin/open", "-a", "Google Chrome"],
-    workingDirectory: homeDirectory,
-    stdoutPath: path.join(logDirectory, "nfl-prop-ledger-chrome.log"),
-    stderrPath: path.join(logDirectory, "nfl-prop-ledger-chrome-error.log"),
-    hour: 8,
-    minute: 10,
-  }));
-
-  const agents = [[processorLabel, processorFile], [chromeLabel, chromeFile]];
+  const agents = [];
+  if (automatic) {
+    await write(processorFile, macLaunchAgent({
+      label: processorLabel,
+      programArguments: [process.execPath, path.join(repoPath, "scripts", "run-automatic.mjs")],
+      workingDirectory: repoPath,
+      stdoutPath: path.join(logDirectory, "nfl-prop-ledger.log"),
+      stderrPath: path.join(logDirectory, "nfl-prop-ledger-error.log"),
+      hour: 8,
+      minute: 32,
+      environment: processorEnvironment,
+    }));
+    await write(chromeFile, macLaunchAgent({
+      label: chromeLabel,
+      programArguments: ["/usr/bin/open", "-a", "Google Chrome"],
+      workingDirectory: homeDirectory,
+      stdoutPath: path.join(logDirectory, "nfl-prop-ledger-chrome.log"),
+      stderrPath: path.join(logDirectory, "nfl-prop-ledger-chrome-error.log"),
+      hour: 8,
+      minute: 10,
+    }));
+    agents.push([processorLabel, processorFile], [chromeLabel, chromeFile]);
+  } else {
+    for (const label of [processorLabel, chromeLabel]) {
+      await command("launchctl", ["bootout", `gui/${uid}/${label}`]).catch(() => {});
+      await command("launchctl", ["disable", `gui/${uid}/${label}`]).catch(() => {});
+    }
+  }
   if (localOnly) {
     await write(siteFile, macLaunchAgent({
       label: siteLabel,
@@ -115,6 +123,7 @@ async function installMac() {
   for (const [label, file] of agents) {
     await command("plutil", ["-lint", file]);
     await command("launchctl", ["bootout", `gui/${uid}/${label}`]).catch(() => {});
+    await command("launchctl", ["enable", `gui/${uid}/${label}`]).catch(() => {});
     await command("launchctl", ["bootstrap", `gui/${uid}`, file]);
   }
   if (!dryRun) {
@@ -127,6 +136,10 @@ async function installMac() {
 async function installWindows() {
   const privateDirectory = path.join(repoPath, ".private", "operator");
   const runner = path.join(privateDirectory, "run-automatic.cmd");
+  if (!automatic) {
+    await command("schtasks.exe", ["/Delete", "/TN", "NFL Prop Ledger - Chrome", "/F"]).catch(() => {});
+    await command("schtasks.exe", ["/Delete", "/TN", "NFL Prop Ledger - Process", "/F"]).catch(() => {});
+  }
   const chromeCandidates = [
     path.join(process.env.PROGRAMFILES || "", "Google", "Chrome", "Application", "chrome.exe"),
     path.join(process.env["PROGRAMFILES(X86)"] || "", "Google", "Chrome", "Application", "chrome.exe"),
@@ -144,10 +157,12 @@ async function installWindows() {
   }
   if (!chromePath) throw new Error("Google Chrome was not found in a standard Windows installation path.");
   const chromeRunner = path.join(privateDirectory, "open-chrome.cmd");
-  await write(runner, windowsRunner({ nodePath: process.execPath, repoPath, localOnly }));
-  await write(chromeRunner, `@echo off\r\nstart "" "${chromePath}"\r\n`);
-  await command("schtasks.exe", ["/Create", "/TN", "NFL Prop Ledger - Chrome", "/SC", "DAILY", "/ST", "08:10", "/TR", `"${chromeRunner}"`, "/F"]);
-  await command("schtasks.exe", ["/Create", "/TN", "NFL Prop Ledger - Process", "/SC", "DAILY", "/ST", "08:32", "/TR", `"${runner}"`, "/F"]);
+  if (automatic) {
+    await write(runner, windowsRunner({ nodePath: process.execPath, repoPath, localOnly }));
+    await write(chromeRunner, `@echo off\r\nstart "" "${chromePath}"\r\n`);
+    await command("schtasks.exe", ["/Create", "/TN", "NFL Prop Ledger - Chrome", "/SC", "DAILY", "/ST", "08:10", "/TR", `"${chromeRunner}"`, "/F"]);
+    await command("schtasks.exe", ["/Create", "/TN", "NFL Prop Ledger - Process", "/SC", "DAILY", "/ST", "08:32", "/TR", `"${runner}"`, "/F"]);
+  }
   let siteLabel = null;
   if (localOnly) {
     const siteRunner = path.join(privateDirectory, "serve-local.cmd");
@@ -179,12 +194,16 @@ async function installLinux() {
   const processorTimer = path.join(unitDirectory, "nfl-prop-ledger.timer");
   const chromeService = path.join(unitDirectory, "nfl-prop-ledger-chrome.service");
   const chromeTimer = path.join(unitDirectory, "nfl-prop-ledger-chrome.timer");
-  await write(processorService, linuxService({ nodePath: process.execPath, repoPath, localOnly }));
-  await write(processorTimer, linuxTimer());
-  await write(chromeService, `[Unit]\nDescription=Open Chrome for NFL Prop Ledger\n\n[Service]\nType=oneshot\nExecStart="${chromePath}" "about:blank"\n`);
-  await write(chromeTimer, `[Unit]\nDescription=Open Chrome before NFL Prop Ledger capture\n\n[Timer]\nOnCalendar=*-*-* 08:10:00\nPersistent=true\nUnit=nfl-prop-ledger-chrome.service\n\n[Install]\nWantedBy=timers.target\n`);
-  await command("systemctl", ["--user", "daemon-reload"]);
-  await command("systemctl", ["--user", "enable", "--now", "nfl-prop-ledger.timer", "nfl-prop-ledger-chrome.timer"]);
+  if (automatic) {
+    await write(processorService, linuxService({ nodePath: process.execPath, repoPath, localOnly }));
+    await write(processorTimer, linuxTimer());
+    await write(chromeService, `[Unit]\nDescription=Open Chrome for NFL Prop Ledger\n\n[Service]\nType=oneshot\nExecStart="${chromePath}" "about:blank"\n`);
+    await write(chromeTimer, `[Unit]\nDescription=Open Chrome before NFL Prop Ledger capture\n\n[Timer]\nOnCalendar=*-*-* 08:10:00\nPersistent=true\nUnit=nfl-prop-ledger-chrome.service\n\n[Install]\nWantedBy=timers.target\n`);
+    await command("systemctl", ["--user", "daemon-reload"]);
+    await command("systemctl", ["--user", "enable", "--now", "nfl-prop-ledger.timer", "nfl-prop-ledger-chrome.timer"]);
+  } else {
+    await command("systemctl", ["--user", "disable", "--now", "nfl-prop-ledger.timer", "nfl-prop-ledger-chrome.timer"]).catch(() => {});
+  }
   let siteLabel = null;
   if (localOnly) {
     siteLabel = "nfl-prop-ledger-site.service";
@@ -210,8 +229,13 @@ await command(npmCommand, ["ci"]);
 await command(npmCommand, ["run", "typecheck"]);
 await command(npmCommand, ["run", "lint"]);
 await command(npmCommand, ["test"]);
-if (!localOnly) await command("git", ["push", "--dry-run", "origin", "HEAD:main"], { env: { ...process.env, GIT_TERMINAL_PROMPT: "0" } });
 if (localOnly) await write(path.join(repoPath, ".private", "operator", "local-mode"), "local-only\n");
+const manualMarker = path.join(repoPath, ".private", "operator", "manual-capture");
+if (automatic) {
+  if (!dryRun) await rm(manualMarker, { force: true });
+} else {
+  await write(manualMarker, "manual-only\n");
+}
 
 const installed = process.platform === "darwin"
   ? await installMac()
@@ -219,11 +243,15 @@ const installed = process.platform === "darwin"
     ? await installWindows()
     : await installLinux();
 
-console.log(`\n${dryRun ? "Automatic-operation preview complete" : "Automatic operation installed"}.`);
-console.log(`Chrome opener: ${installed.chromeLabel} at 8:10 AM local time`);
-console.log(`Daily processor: ${installed.processorLabel} at 8:32 AM local time`);
+console.log(`\n${dryRun ? "Operator preview complete" : "Operator setup installed"}.`);
+if (automatic) {
+  console.log(`Chrome opener: ${installed.chromeLabel} at 8:10 AM local time`);
+  console.log(`Daily processor: ${installed.processorLabel} at 8:32 AM local time`);
+} else {
+  console.log("Capture mode: manual only; no Chrome opener or daily processor schedule");
+}
 if (installed.siteLabel) console.log(`Private dashboard server: ${installed.siteLabel} at http://127.0.0.1:4173/`);
-console.log("Chrome's collector alarm runs at 8:17 AM local time and the processor waits up to 30 minutes for a fresh pair.");
+if (automatic) console.log("The processor waits up to 30 minutes for a manually initiated fresh capture. Use --automatic only on a machine that will be awake and attended.");
 console.log("\nOne security-controlled step remains: in chrome://extensions, enable Developer mode and Load unpacked from:");
 console.log(path.join(repoPath, "extension"));
 console.log("Then open each configured sportsbook once, approve any legitimate browser/location prompt, and click Capture now for the acceptance test.");

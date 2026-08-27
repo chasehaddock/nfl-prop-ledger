@@ -22,7 +22,7 @@ Execute the setup for the detected operating system:
 npm run operator:install -- --local
 ```
 
-The installer discovers the machine's paths, installs exact dependencies, runs typecheck/lint/tests/build, creates the private dashboard service, opens Chrome before each collection, schedules the collector processor, and writes a local-only marker. It must never request GitHub credentials in this mode.
+The installer discovers the machine's paths, installs exact dependencies, runs typecheck/lint/tests/build, creates the private dashboard service, removes legacy daily capture schedules, and writes local-only/manual-capture markers. It must never request GitHub credentials in this mode.
 
 If Node is not installed, install Node 24 from the official Node.js distribution first. Google Chrome and an internet connection are required for sportsbook collection. Git is not required.
 
@@ -41,18 +41,18 @@ npm run operator:run
 npm run operator:health -- --require-today
 ```
 
-The health command must confirm the Chrome opener, daily processor, local dashboard service, today's evidence/snapshot, and local-only storage. Open `http://127.0.0.1:4173/` and verify the player table and inline ledgers.
+The health command must confirm manual-capture mode, the local dashboard service, today's evidence/snapshot, and local-only storage. Open `http://127.0.0.1:4173/` and verify the player table and inline ledgers.
 
 ## Normal daily behavior
 
-- 8:10 AM local: the laptop opens Chrome.
-- 8:17 AM local: the extension captures DraftKings, FanDuel, BetMGM, and PrizePicks twice.
-- 8:32 AM local: the processor waits for complete or settled valid evidence.
+- When the operator is ready, they open Chrome and click **Capture now** once.
+- The extension validates each source and retries only a failed source; it never starts a capture automatically.
+- After the capture completes, run `npm run operator:run`.
 - The processor updates `data/snapshots/`, `public/data/`, and the private `dist/` website.
 - The local dashboard immediately reflects the new build after refresh.
 - Nothing is committed, pushed, uploaded, or published.
 
-The computer must be awake, logged in, online, and allowed to open Chrome. Configuring an automatic wake schedule requires the laptop owner's explicit approval because it changes system power settings.
+The computer must be awake, logged in, online, and allowed to open Chrome while collection runs.
 
 ## Included history
 
