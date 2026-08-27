@@ -9,7 +9,8 @@ import { priorSeasonRbReceiving, projectEighteenGamePace } from "../src/prior-se
 type Position = "QB" | "RB" | "WR" | "TE";
 type StatType = "passing_yards" | "rushing_yards" | "receiving_yards" | "receptions" | "passing_touchdowns" | "rushing_touchdowns" | "receiving_touchdowns" | "offensive_touchdowns" | "fantasy_score";
 type Observation = { key: string; source: string; sourceName?: string; sourceUrl: string; capturedAt?: string; player: { id: string; name: string; team: string; position: Position }; statType: StatType; line: number; lineDelta: number | null; overOdds?: number; underOdds?: number; higherMultiplier?: number; lowerMultiplier?: number; normalizedProbability?: number; status: "open" | "stale" | "not_seen" | "removed"; changeType?: string };
-type Snapshot = { demo: boolean; date?: string; season?: number; week?: number; observations: Observation[]; movements?: TrendMove[]; sourceRuns: Array<{ source: string; status: string; observationCount?: number }>; issues?: string[] };
+type SourceRun = { source: string; status: string; capturedAt?: string; observationCount?: number };
+type Snapshot = { demo: boolean; date?: string; season?: number; week?: number; observations: Observation[]; movements?: TrendMove[]; sourceRuns: SourceRun[]; issues?: string[] };
 type HistoryPoint = { date: string; line: number; overOdds: number | null; underOdds: number | null; status: string; changeType: string };
 type History = Record<string, HistoryPoint[]>;
 type ChartPoint = { key: string; label: string; order: number; line: number; reconstructed?: boolean };
@@ -56,6 +57,53 @@ function matchesPositionFilter(position: Position, filter: PositionFilter) {
   if (filter === "ALL") return true;
   if (filter === "FLEX") return position !== "QB";
   return position === filter;
+}
+
+function watchKey(name: string, position: Position): string {
+  return `${position}:${name}`.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+function csvValue(value: unknown): string {
+  const text = value === null || value === undefined ? "" : String(value);
+  return /[",\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
+}
+
+function downloadCsv(filename: string, rows: unknown[][]): void {
+  const csv = rows.map((row) => row.map(csvValue).join(",")).join("\n");
+  const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+  const anchor = document.createElement("a");
+  anchor.href = url;
+  anchor.download = filename;
+  document.body.append(anchor);
+  anchor.click();
+  anchor.remove();
+  URL.revokeObjectURL(url);
+}
+
+function sourceCaptureLabel(capturedAt: string | undefined, snapshotDate: string | undefined): string {
+  if (!capturedAt) return "Time unavailable";
+  const captureDate = capturedAt.slice(0, 10);
+  const time = new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/Chicago" }).format(new Date(capturedAt));
+  if (captureDate === snapshotDate) return `Today · ${time} CT`;
+  const date = new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", timeZone: "UTC" }).format(new Date(`${captureDate}T12:00:00Z`));
+  return `${date} · ${time} CT`;
+}
+
+function SourceFreshnessPanel({ snapshot, includeUnderdog }: { snapshot: Snapshot; includeUnderdog: boolean }) {
+  const staleBySource = new Map<string, number>();
+  snapshot.observations.forEach((observation) => {
+    if (observation.status === "stale") staleBySource.set(observation.source, (staleBySource.get(observation.source) || 0) + 1);
+  });
+  const runs = snapshot.sourceRuns.filter((run) => includeUnderdog || run.source !== "underdog").sort((left, right) => (SOURCE_NAMES[left.source] || left.source).localeCompare(SOURCE_NAMES[right.source] || right.source));
+  if (!runs.length) return null;
+  return <section className="freshness-panel" aria-labelledby="freshness-title">
+    <div className="freshness-heading"><div><p className="eyebrow">Source health</p><h2 id="freshness-title">Freshness</h2></div><span>{runs.filter((run) => run.status === "accepted").length}/{runs.length} current</span></div>
+    <ul>{runs.map((run) => {
+      const staleCount = staleBySource.get(run.source) || 0;
+      const accepted = run.status === "accepted";
+      return <li key={run.source}><i className={`source-dot source-${run.source}`} aria-hidden="true" /><span><strong>{SOURCE_NAMES[run.source] || run.source}</strong><small>{sourceCaptureLabel(run.capturedAt, snapshot.date)}{run.observationCount !== undefined ? ` · ${run.observationCount} markets` : ""}</small></span><b className={accepted ? staleCount ? "carried" : "fresh" : "review"}>{accepted ? staleCount ? `${staleCount} carried` : "Fresh" : "Review"}</b></li>;
+    })}</ul>
+  </section>;
 }
 
 function ColumnChooser({ choices, isVisible, onToggle, onShowAll }: { choices: ColumnChoice[]; isVisible: (key: string) => boolean; onToggle: (key: string) => void; onShowAll: () => void }) {
@@ -211,7 +259,7 @@ function normalizedMultiplierProbability(higherMultiplier: number, lowerMultipli
   return higherWeight / (higherWeight + lowerWeight);
 }
 
-function weeklyPassingTouchdownExpectation(selection: ConsensusSelection<Observation> | undefined): PassingTouchdownExpectation | null {
+function pricedPassingTouchdownExpectation(selection: ConsensusSelection<Observation> | undefined, allowUnderdog: boolean): PassingTouchdownExpectation | null {
   const allPriced = (selection?.candidates || []).filter((item) => item.status === "open"
     && item.source !== "prizepicks"
     && Number.isFinite(item.line)
@@ -235,11 +283,11 @@ function weeklyPassingTouchdownExpectation(selection: ConsensusSelection<Observa
     }).join(" · ");
     return { value, books, label: "sportsbook no-vig", note: `${value.toFixed(2)} expected pass TDs · vig removed + line-centered adjustment · ${details}` };
   }
-  const multiplierPriced = (selection?.candidates || []).filter((item) => item.status === "open"
+  const multiplierPriced = allowUnderdog ? (selection?.candidates || []).filter((item) => item.status === "open"
     && item.source === "underdog"
     && Number.isFinite(item.line)
     && Number.isFinite(item.higherMultiplier)
-    && Number.isFinite(item.lowerMultiplier));
+    && Number.isFinite(item.lowerMultiplier)) : [];
   if (multiplierPriced.length) {
     const estimates = multiplierPriced.map((item) => ({
       item,
@@ -392,8 +440,8 @@ function aggregate(snapshot: Snapshot, weeklyContext?: Snapshot): PlayerLine[] {
         ? inferredTouchdownCell(playerId, "receiving_touchdowns", byStat.offensive_touchdowns, byStat.rushing_touchdowns)
         : null;
     const marketPassingTouchdowns = currentCell("passing_touchdowns");
-    const passingTouchdownExpectation = first.player.position === "QB" && snapshot.week === 1
-      ? weeklyPassingTouchdownExpectation(byStat.passing_touchdowns)
+    const passingTouchdownExpectation = first.player.position === "QB"
+      ? pricedPassingTouchdownExpectation(byStat.passing_touchdowns, snapshot.week === 1)
       : null;
     const touchdowns = first.player.position === "QB"
       ? marketPassingTouchdowns
@@ -483,15 +531,30 @@ function consensusDescription(cell: Cell): string {
   return `${cell.sourceCount || 1} sources`;
 }
 
+type MethodBadgeDetails = { label: string; tone: "market" | "average" | "adjusted" | "estimate" | "calculated" };
+
+function methodBadgeForCell(cell: Cell): MethodBadgeDetails {
+  if (cell.fallbackLabel) return { label: "Estimate", tone: "estimate" };
+  if (cell.source === "underdog" && cell.statType === "receptions" && cell.postedLine !== undefined) return { label: "UD adjusted", tone: "adjusted" };
+  if ((cell.sourceCount || 0) > 1 && cell.consensusMethod === "average") return { label: "Market avg", tone: "average" };
+  if (cell.source === "underdog") return { label: "UD fallback", tone: "adjusted" };
+  if (cell.source === "prizepicks") return { label: "Projection", tone: "market" };
+  return { label: "Market", tone: "market" };
+}
+
+function MethodBadge({ details }: { details: MethodBadgeDetails }) {
+  return <span className={`method-badge method-${details.tone}`}>{details.label}</span>;
+}
+
 function LineCell({ cell, label, preferredSource, player, onInspect }: { cell: Cell | null; label?: string; preferredSource: string; player?: string; onInspect?: (statType: StatType) => void }) {
   if (!cell) return <span className="empty">Not offered</span>;
   if (cell.fallbackLabel) {
     const estimateLabel = (label || STAT_LABELS[cell.statType]).toLowerCase();
-    return <><span className="empty">Not offered</span><small className="historical-fallback">Estimated {cell.line.toLocaleString()} {estimateLabel} · {cell.fallbackLabel}</small></>;
+    return <><span className="empty">Not offered</span><small className="historical-fallback"><MethodBadge details={methodBadgeForCell(cell)} /> Estimated {cell.line.toLocaleString()} {estimateLabel} · {cell.fallbackLabel}</small></>;
   }
   const underdogReception = cell.source === "underdog" && cell.statType === "receptions"
     && cell.postedLine !== undefined && cell.higherMultiplier !== undefined && cell.lowerMultiplier !== undefined;
-  const content = <><div className="number-cell"><strong>{cell.line.toLocaleString()}</strong>{!cell.fallbackLabel && cell.sourceCount === 1 && <Delta value={cell.delta} />}{!cell.fallbackLabel && (cell.sourceCount || 0) > 1 && <span className="consensus-badge">{cell.consensusMethod === "average" ? "AVG" : "MODE"}</span>}</div>{label && <small>{label}</small>}{cell.overOdds && cell.underOdds && <small>O {cell.overOdds > 0 ? "+" : ""}{cell.overOdds} / U {cell.underOdds > 0 ? "+" : ""}{cell.underOdds}</small>}{underdogReception && <small>Underdog H {cell.higherMultiplier!.toFixed(2)}x / L {cell.lowerMultiplier!.toFixed(2)}x · posted {cell.postedLine}</small>}{cell.fallbackLabel ? <small className="historical-fallback">{cell.fallbackLabel}</small> : (cell.sourceCount || 0) > 1 ? <small className="consensus-note">{consensusDescription(cell)} · click to compare</small> : cell.source !== preferredSource && <small className="fallback-source">Filled from {cell.sourceName}</small>}</>;
+  const content = <><div className="number-cell"><strong>{cell.line.toLocaleString()}</strong>{!cell.fallbackLabel && cell.sourceCount === 1 && <Delta value={cell.delta} />}<MethodBadge details={methodBadgeForCell(cell)} /></div>{label && <small>{label}</small>}{cell.overOdds && cell.underOdds && <small>O {cell.overOdds > 0 ? "+" : ""}{cell.overOdds} / U {cell.underOdds > 0 ? "+" : ""}{cell.underOdds}</small>}{underdogReception && <small>Underdog H {cell.higherMultiplier!.toFixed(2)}x / L {cell.lowerMultiplier!.toFixed(2)}x · posted {cell.postedLine}</small>}{cell.fallbackLabel ? <small className="historical-fallback">{cell.fallbackLabel}</small> : (cell.sourceCount || 0) > 1 ? <small className="consensus-note">{consensusDescription(cell)} · click to compare</small> : cell.source !== preferredSource && <small className="fallback-source">Filled from {cell.sourceName}</small>}</>;
   if (!onInspect || cell.fallbackLabel) return content;
   return <button className="prop-trigger" onClick={() => onInspect(cell.statType)} aria-label={`Compare ${player || "player"} ${STAT_LABELS[cell.statType]} across sources`}>{content}</button>;
 }
@@ -515,7 +578,14 @@ function touchdownBreakdownValue(cell: Cell | null): string {
 
 function SeasonTouchdownCell({ line, onInspect }: { line: PlayerLine; onInspect: (statType: StatType) => void }) {
   if (line.position === "QB") {
-    return <StatStack entries={[{ cell: line.touchdowns, label: "Pass TD" }, { cell: line.rushingTouchdowns, label: "Rush TD" }]} preferredSource={line.source} player={line.player} onInspect={onInspect} />;
+    const pricedPassingTouchdowns = line.passingTouchdownExpectation !== null
+      ? <button className="prop-trigger passing-td-expectation" onClick={() => onInspect("passing_touchdowns")} aria-label={`Compare ${line.player} Passing TDs across sources`}><span className="method-value-row"><strong>{line.passingTouchdownExpectation.toFixed(2)}</strong><MethodBadge details={{ label: "No-vig", tone: "adjusted" }} /></span><small>Expected pass TDs · sportsbook no-vig</small>{touchdownOddsLines(line, ["passing_touchdowns"]).map((odds) => <small className="touchdown-odds" key={odds}>{odds}</small>)}</button>
+      : null;
+    return <div className="stat-stack">{pricedPassingTouchdowns
+      ? <div className="stat-entry">{pricedPassingTouchdowns}</div>
+      : line.touchdowns && <div className="stat-entry"><LineCell cell={line.touchdowns} label="Pass TD" preferredSource={line.source} player={line.player} onInspect={onInspect} /></div>}
+    {line.rushingTouchdowns && <div className="stat-entry"><LineCell cell={line.rushingTouchdowns} label="Rush TD" preferredSource={line.source} player={line.player} onInspect={onInspect} /></div>}
+    {!pricedPassingTouchdowns && !line.touchdowns && !line.rushingTouchdowns && <span className="empty">Not offered</span>}</div>;
   }
 
   const total = skillTouchdownTotal(line);
@@ -526,7 +596,7 @@ function SeasonTouchdownCell({ line, onInspect }: { line: PlayerLine; onInspect:
   return <div className="total-touchdowns">
     {line.offensiveTouchdowns
       ? <LineCell cell={line.offensiveTouchdowns} label="Total TDs" preferredSource={line.source} player={line.player} onInspect={onInspect} />
-      : <><div className="number-cell"><strong>{total.toLocaleString()}</strong></div><small>Total TDs · calculated</small></>}
+      : <><div className="number-cell"><strong>{total.toLocaleString()}</strong><MethodBadge details={{ label: "Calculated", tone: "calculated" }} /></div><small>Total TDs · calculated</small></>}
     <small className="td-breakdown">Rush {touchdownBreakdownValue(line.rushingTouchdowns)} · Rec {touchdownBreakdownValue(line.receivingTouchdowns)}</small>
     {inferredCells.map((cell) => <small className="td-inference" key={cell.key}>Estimated {cell.line.toLocaleString()} {STAT_LABELS[cell.statType]} · {cell.fallbackLabel}</small>)}
   </div>;
@@ -625,16 +695,112 @@ function projectedPositionRanks(lines: PlayerLine[], qbPassTdPoints: 4 | 6, tePr
   return ranks;
 }
 
+function exportProjectionCsv(lines: PlayerLine[], ranks: Map<string, number>, boardMode: "season" | "week1", snapshotDate: string | undefined, qbPassTdPoints: 4 | 6, tePremium: TePremium, pprScoring: PprScoring, watched: Set<string>): void {
+  const headers = ["Watched", "Player", "Position", "Team", "Position rank", "Passing yards", "Rushing yards", "Receiving yards", "Receptions", "Passing TDs", "Rushing TDs", "Receiving TDs", "Total TDs", "Rush/rec TD chance", "Calculated fantasy", "Projection method", "Confidence", "Sources", "Capture date"];
+  const rows = lines.map((line) => {
+    const passingTouchdowns = line.passingTouchdownExpectation ?? (line.position === "QB" ? line.touchdowns?.line : null);
+    return [
+      watched.has(watchKey(line.player, line.position)) ? "Yes" : "No",
+      line.player,
+      line.position,
+      line.team,
+      ranks.has(line.id) ? `${line.position}${ranks.get(line.id)}` : "NR",
+      line.position === "QB" ? line.yards?.line : "",
+      line.rushingYards?.line,
+      line.receivingYards?.line,
+      line.receptions?.line,
+      passingTouchdowns,
+      line.rushingTouchdowns?.line,
+      line.receivingTouchdowns?.line,
+      line.position === "QB" ? "" : skillTouchdownTotal(line),
+      line.touchdownProbability === null ? "" : Number((line.touchdownProbability * 100).toFixed(2)),
+      displayedFantasyPoints(line, qbPassTdPoints, tePremium, pprScoring)?.toFixed(2) ?? "",
+      line.fantasyUsesInference ? "Estimated / excluded from rank" : line.fantasyPoints === null ? "Incomplete" : "Verified calculation",
+      `${line.confidence}: ${line.confidenceNote}`,
+      line.availableBooks.join(" + "),
+      snapshotDate || "",
+    ];
+  });
+  downloadCsv(`nfl-prop-ledger-${boardMode}-${snapshotDate || "latest"}.csv`, [headers, ...rows]);
+}
+
+function exportSleeperCsv(rows: SleeperValueRow[], snapshotDate: string | undefined, watched: Set<string>): void {
+  const headers = ["Watched", "Player", "Position", "Team", "Sleeper ADP", "Sleeper position rank", "Comparable ADP rank", "Our fantasy points", "Our comparable rank", "Value gap", "Missing inputs", "Capture date"];
+  downloadCsv(`nfl-prop-ledger-sleeper-${snapshotDate || "latest"}.csv`, [headers, ...rows.map((row) => [
+    watched.has(watchKey(row.name, row.position)) ? "Yes" : "No",
+    row.name,
+    row.position,
+    row.team,
+    row.adp,
+    row.sleeperPositionRank,
+    row.comparableSleeperPositionRank,
+    row.projectedPoints,
+    row.projectedPositionRank,
+    row.valueGap,
+    row.missingInputs.join(" + "),
+    snapshotDate || "",
+  ])]);
+}
+
 function visibleOptionalRushingYards(line: PlayerLine): Cell | null {
   const cell = line.rushingYards;
   return cell?.line === 0 && cell.fallbackLabel ? null : cell;
 }
 
-function FantasyCell({ line, qbPassTdPoints, tePremium, pprScoring }: { line: PlayerLine; qbPassTdPoints: 4 | 6; tePremium: TePremium; pprScoring: PprScoring }) {
+function FantasyCell({ line, qbPassTdPoints, tePremium, pprScoring, onInspect }: { line: PlayerLine; qbPassTdPoints: 4 | 6; tePremium: TePremium; pprScoring: PprScoring; onInspect: () => void }) {
   const points = displayedFantasyPoints(line, qbPassTdPoints, tePremium, pprScoring);
   if (points === null) return <><span className="empty">Not assigned</span><small>Missing a verified prop</small></>;
-  if (line.fantasyUsesInference) return <><span className="empty">Not enough verified data</span><strong className="fantasy-points inferred">Estimated {points.toFixed(2)} fantasy pts</strong></>;
-  return <><strong className="fantasy-points">{points.toFixed(2)}</strong><small>{line.fantasyBooks.join(" + ")}</small>{line.position === "QB" && <small className="qb-scoring-note">Pass TDs · {qbPassTdPoints} pts</small>}{line.position !== "QB" && <small className="ppr-scoring-note">PPR {pprScoring.toFixed(1)} · {pprScoring.toFixed(1)} pts/reception</small>}{line.position === "TE" && <small className="tep-scoring-note">TEP {tePremium.toFixed(1)} · {(pprScoring + tePremium).toFixed(1)} total pts/reception</small>}</>;
+  const content = line.fantasyUsesInference
+    ? <><span className="empty">Not enough verified data</span><span className="fantasy-score-line"><strong className="fantasy-points inferred">Estimated {points.toFixed(2)} fantasy pts</strong><MethodBadge details={{ label: "Estimate", tone: "estimate" }} /></span></>
+    : <><span className="fantasy-score-line"><strong className="fantasy-points">{points.toFixed(2)}</strong><MethodBadge details={{ label: "Calculated", tone: "calculated" }} /></span><small>{line.fantasyBooks.join(" + ")}</small>{line.position === "QB" && <small className="qb-scoring-note">Pass TDs · {qbPassTdPoints} pts</small>}{line.position !== "QB" && <small className="ppr-scoring-note">PPR {pprScoring.toFixed(1)} · {pprScoring.toFixed(1)} pts/reception</small>}{line.position === "TE" && <small className="tep-scoring-note">TEP {tePremium.toFixed(1)} · {(pprScoring + tePremium).toFixed(1)} total pts/reception</small>}</>;
+  return <button className="fantasy-trigger" onClick={onInspect} aria-label={`Show ${line.player} fantasy score calculation`}>{content}<small className="fantasy-breakdown-link">View calculation →</small></button>;
+}
+
+type FantasyBreakdownRow = { label: string; input: number; scoring: string; points: number; method: MethodBadgeDetails };
+
+function fantasyBreakdownRows(line: PlayerLine, qbPassTdPoints: 4 | 6, tePremium: TePremium, pprScoring: PprScoring): FantasyBreakdownRow[] {
+  const rows: FantasyBreakdownRow[] = [];
+  const add = (label: string, input: number | null | undefined, scoring: string, multiplier: number, method: MethodBadgeDetails) => {
+    if (!Number.isFinite(input) || input === 0) return;
+    rows.push({ label, input: input!, scoring, points: input! * multiplier, method });
+  };
+  const method = (cell: Cell | null) => cell ? methodBadgeForCell(cell) : { label: "Calculated", tone: "calculated" as const };
+  if (line.position === "QB") {
+    add("Passing yards", line.yards?.line, "1 pt / 25 yards", 1 / 25, method(line.yards));
+    const passingTouchdowns = line.passingTouchdownExpectation ?? line.touchdowns?.line;
+    const passTdMethod: MethodBadgeDetails = line.passingTouchdownExpectationLabel?.includes("no-vig")
+      ? { label: "No-vig", tone: "adjusted" }
+      : line.passingTouchdownExpectationLabel?.includes("Underdog")
+        ? { label: "UD adjusted", tone: "adjusted" }
+        : method(line.touchdowns);
+    add("Passing touchdowns", passingTouchdowns, `${qbPassTdPoints} pts each`, qbPassTdPoints, passTdMethod);
+    add("Rushing yards", line.rushingYards?.line, "1 pt / 10 yards", 1 / 10, method(line.rushingYards));
+    const rushRecTd = line.touchdownProbability ?? line.offensiveTouchdowns?.line ?? line.rushingTouchdowns?.line;
+    const rushRecTdMethod: MethodBadgeDetails = line.touchdownProbabilityNote?.includes("normalized")
+      ? { label: "UD adjusted", tone: "adjusted" }
+      : line.touchdownProbabilityNote?.includes("vig removed")
+        ? { label: "No-vig", tone: "adjusted" }
+        : method(line.offensiveTouchdowns || line.rushingTouchdowns);
+    add("Rushing / receiving TD chance", rushRecTd, "6 pts each", 6, rushRecTdMethod);
+    return rows;
+  }
+  if (line.position === "RB") add("Rushing yards", line.rushingYards?.line, "1 pt / 10 yards", 1 / 10, method(line.rushingYards));
+  add("Receiving yards", line.receivingYards?.line, "1 pt / 10 yards", 1 / 10, method(line.receivingYards));
+  if (line.position !== "RB") add("Rushing yards", visibleOptionalRushingYards(line)?.line, "1 pt / 10 yards", 1 / 10, method(visibleOptionalRushingYards(line)));
+  const receptionPoints = pprScoring + (line.position === "TE" ? tePremium : 0);
+  add("Receptions", line.receptions?.line, `${receptionPoints.toFixed(1)} pts each`, receptionPoints, method(line.receptions));
+  const touchdowns = line.touchdownProbability ?? skillTouchdownTotal(line);
+  const touchdownMethod: MethodBadgeDetails = line.touchdownProbabilityNote?.includes("normalized")
+    ? { label: "UD adjusted", tone: "adjusted" }
+    : method(line.offensiveTouchdowns || line.rushingTouchdowns || line.receivingTouchdowns);
+  add("Total touchdowns", touchdowns, "6 pts each", 6, touchdownMethod);
+  return rows;
+}
+
+function FantasyBreakdownDrawer({ line, qbPassTdPoints, tePremium, pprScoring, onClose }: { line: PlayerLine; qbPassTdPoints: 4 | 6; tePremium: TePremium; pprScoring: PprScoring; onClose: () => void }) {
+  const points = displayedFantasyPoints(line, qbPassTdPoints, tePremium, pprScoring);
+  const rows = fantasyBreakdownRows(line, qbPassTdPoints, tePremium, pprScoring);
+  return <div className="graph-drawer-layer"><button className="graph-drawer-scrim" aria-label="Close fantasy calculation" onClick={onClose} /><aside className="graph-drawer fantasy-drawer" role="dialog" aria-modal="true" aria-labelledby={`fantasy-title-${line.id}`}><section className="fantasy-breakdown"><div className="comparison-heading"><div><p className="eyebrow">Fantasy calculation</p><h2 id={`fantasy-title-${line.id}`}>{line.player} · {line.position}</h2></div><button onClick={onClose}>Close</button></div><div className="fantasy-total"><span>Projected score</span><strong>{points === null ? "—" : points.toFixed(2)}</strong><p>{line.position === "QB" ? `${qbPassTdPoints}-point passing TDs` : `${pprScoring.toFixed(1)} PPR`}{line.position === "TE" ? ` · ${tePremium.toFixed(1)} TEP` : ""}</p></div>{line.fantasyUsesInference && <div className="fantasy-warning"><MethodBadge details={{ label: "Estimate", tone: "estimate" }} /><span>This score uses an inferred input, so it stays out of fantasy-score rankings.</span></div>}<div className="fantasy-formula" role="table" aria-label={`${line.player} fantasy point calculation`}><div className="fantasy-formula-head" role="row"><span>Input</span><span>Projection</span><span>Scoring</span><span>Points</span></div>{rows.map((row) => <div className="fantasy-formula-row" role="row" key={row.label}><span><strong>{row.label}</strong><MethodBadge details={row.method} /></span><b>{row.input.toFixed(2)}</b><small>{row.scoring}</small><strong>{row.points.toFixed(2)}</strong></div>)}</div>{points === null && <p className="fantasy-missing">A score will appear after the required market inputs are available.</p>}<div className="fantasy-footnote"><span className={`confidence ${line.confidence}`}><i aria-hidden="true" />{line.confidence}</span><p>{line.confidenceNote} · {line.fantasyBooks.join(" + ")}</p></div></section></aside></div>;
 }
 
 function americanOddsLabel(value: number | undefined): string {
@@ -667,13 +833,19 @@ function TouchdownChanceCell({ line, onInspect }: { line: PlayerLine; onInspect:
       : <small className="touchdown-odds unavailable">O/U odds unavailable{line.fantasyTdOddsBooks.length ? ` · ${line.fantasyTdOddsBooks.join(" + ")}` : ""}</small>;
   };
   const rushRecOdds = oddsDetails(["offensive_touchdowns", "rushing_touchdowns", "receiving_touchdowns"]);
+  const rushRecMethod: MethodBadgeDetails = line.touchdownProbabilityNote?.includes("normalized")
+    ? { label: "UD adjusted", tone: "adjusted" }
+    : line.touchdownProbabilityNote?.includes("vig removed")
+      ? { label: "No-vig", tone: "adjusted" }
+      : { label: "Market odds", tone: "market" };
   const chance = line.touchdownProbability === null
     ? <span className="empty">Not offered</span>
-    : <button className="prop-trigger touchdown-chance" onClick={() => onInspect("offensive_touchdowns")} aria-label={`Compare ${line.player} rushing or receiving touchdown chance across sources`}><strong>{(line.touchdownProbability * 100).toFixed(1)}%</strong><small>Rush/rec TD chance · 6 pts</small>{rushRecOdds}{line.touchdownProbabilityNote && <small>{line.touchdownProbabilityNote}</small>}</button>;
+    : <button className="prop-trigger touchdown-chance" onClick={() => onInspect("offensive_touchdowns")} aria-label={`Compare ${line.player} rushing or receiving touchdown chance across sources`}><span className="method-value-row"><strong>{(line.touchdownProbability * 100).toFixed(1)}%</strong><MethodBadge details={rushRecMethod} /></span><small>Rush/rec TD chance · 6 pts</small>{rushRecOdds}{line.touchdownProbabilityNote && <small>{line.touchdownProbabilityNote}</small>}</button>;
   if (line.position !== "QB") return chance;
   const passingOdds = oddsDetails(["passing_touchdowns"]);
   if (line.passingTouchdownExpectation !== null) {
-    return <div className="qb-touchdown-breakdown"><button className="prop-trigger passing-td-expectation" onClick={() => onInspect("passing_touchdowns")} aria-label={`Compare ${line.player} Passing TDs across sources`}><strong>{line.passingTouchdownExpectation.toFixed(2)}</strong><small>Expected pass TDs · {line.passingTouchdownExpectationLabel}</small>{passingOdds}</button>{chance}</div>;
+    const passMethod: MethodBadgeDetails = line.passingTouchdownExpectationLabel?.includes("no-vig") ? { label: "No-vig", tone: "adjusted" } : { label: "UD adjusted", tone: "adjusted" };
+    return <div className="qb-touchdown-breakdown"><button className="prop-trigger passing-td-expectation" onClick={() => onInspect("passing_touchdowns")} aria-label={`Compare ${line.player} Passing TDs across sources`}><span className="method-value-row"><strong>{line.passingTouchdownExpectation.toFixed(2)}</strong><MethodBadge details={passMethod} /></span><small>Expected pass TDs · {line.passingTouchdownExpectationLabel}</small>{passingOdds}</button>{chance}</div>;
   }
   if (line.touchdowns) return <div className="qb-touchdown-breakdown"><LineCell cell={line.touchdowns} label="Pass TD · 4 pts" preferredSource={line.source} player={line.player} onInspect={onInspect} />{chance}</div>;
   return chance;
@@ -961,19 +1133,21 @@ function SleeperTrendCard({ snapshot, range, onRange, onSelect }: { snapshot: Sl
   return <section className="trend-card" aria-labelledby="sleeper-trend-title"><div className="trend-heading"><div><p className="eyebrow">Draft pulse</p><h2 id="sleeper-trend-title">ADP movement</h2></div><span className="trend-live"><i aria-hidden="true" />Sleeper</span></div><div className="trend-range" role="group" aria-label="ADP movement time range">{(["today", "week", "all"] as TrendRange[]).map((item) => <button key={item} className={range === item ? "active" : ""} aria-pressed={range === item} onClick={() => onRange(item)}>{item === "all" ? "All history" : item[0].toUpperCase() + item.slice(1)}</button>)}</div><div className="trend-counts"><span className="trend-up">↑ {rises} rising</span><span className="trend-down">↓ {falls} falling</span></div>{moves.length ? <ol className="trend-list">{moves.map((move) => { const rising = move.adpDelta < 0; return <li key={`${move.date}:${move.player.id}`}><button onClick={() => onSelect(move.player)}><span className={`trend-arrow ${rising ? "trend-up" : "trend-down"}`}>{rising ? "↑" : "↓"}</span><span className="trend-player"><strong>{move.player.name}</strong><small>{move.player.position} · {range !== "today" ? `${move.date.slice(5)} · ` : ""}{Math.abs(move.adpDelta).toFixed(1)} picks</small></span><span className="trend-value"><strong>{move.adp.toFixed(1)}</strong><small className={rising ? "trend-up" : "trend-down"}>{rising ? "earlier" : "later"}</small></span></button></li>; })}</ol> : <p className="trend-empty">{snapshot.players.length ? "ADP changes will appear after the next verified daily capture." : "The board is ready for its first verified Sleeper capture."}</p>}</section>;
 }
 
-function SleeperRedraftBoardV2({ snapshot, history, seasonLines }: { snapshot: SleeperAdpSnapshot; history: SleeperAdpHistory; seasonLines: PlayerLine[] }) {
+function SleeperRedraftBoardV2({ snapshot, history, seasonLines, watched, onToggleWatch }: { snapshot: SleeperAdpSnapshot; history: SleeperAdpHistory; seasonLines: PlayerLine[]; watched: Set<string>; onToggleWatch: (key: string) => void }) {
   const [position, setPosition] = useState<(typeof positions)[number]>("ALL");
   const [query, setQuery] = useState("");
   const [coverageFilter, setCoverageFilter] = useState<SleeperCoverageFilter>("all");
   const [sort, setSort] = useState<{ key: SleeperSortKey; direction: "asc" | "desc" }>({ key: "valueGap", direction: "desc" });
   const [range, setRange] = useState<TrendRange>("today");
   const [chartPlayer, setChartPlayer] = useState<SleeperAdpPlayer | null>(null);
+  const [watchlistOnly, setWatchlistOnly] = useState(false);
   const [hiddenColumns, setHiddenColumns] = useState<Set<SleeperColumnKey>>(() => new Set());
   const valueRows = useMemo(() => sleeperValueRows(snapshot.players || [], seasonLines), [snapshot.players, seasonLines]);
   const currentAdpDelta = useMemo(() => new Map((snapshot.movements || []).filter((move) => move.date === snapshot.date).map((move) => [move.player.id, move.adpDelta])), [snapshot.movements, snapshot.date]);
   const filtered = useMemo(() => valueRows
     .filter((row) => matchesPositionFilter(row.position, position))
     .filter((row) => coverageFilter === "all" || (coverageFilter === "comparable" ? row.projectedPositionRank !== null : row.projectedPositionRank === null))
+    .filter((row) => !watchlistOnly || watched.has(watchKey(row.name, row.position)))
     .filter((row) => `${row.name} ${row.team}`.toLowerCase().includes(query.toLowerCase()))
     .sort((left, right) => {
       const value = (row: SleeperValueRow) => sort.key === "player" ? row.name : sort.key === "trend" ? currentAdpDelta.get(row.id) ?? null : row[sort.key];
@@ -983,7 +1157,7 @@ function SleeperRedraftBoardV2({ snapshot, history, seasonLines }: { snapshot: S
       if (a !== null && b === null) return -1;
       const compared = typeof a === "number" && typeof b === "number" ? a - b : String(a).localeCompare(String(b));
       return (sort.direction === "asc" ? compared : -compared) || left.adp - right.adp;
-    }), [valueRows, position, coverageFilter, query, sort, currentAdpDelta]);
+    }), [valueRows, position, coverageFilter, watchlistOnly, watched, query, sort, currentAdpDelta]);
   const sortBy = (key: SleeperSortKey) => setSort((current) => current.key === key
     ? { key, direction: current.direction === "asc" ? "desc" : "asc" }
     : { key, direction: ["player", "adp", "sleeperPositionRank", "comparableSleeperPositionRank", "projectedPositionRank"].includes(key) ? "asc" : "desc" });
@@ -993,7 +1167,7 @@ function SleeperRedraftBoardV2({ snapshot, history, seasonLines }: { snapshot: S
     setQuery(player.name);
     setChartPlayer(snapshot.players.find((item) => item.id === player.id) || null);
   };
-  const reset = () => { setPosition("ALL"); setCoverageFilter("all"); setQuery(""); setChartPlayer(null); };
+  const reset = () => { setPosition("ALL"); setCoverageFilter("all"); setWatchlistOnly(false); setQuery(""); setChartPlayer(null); };
   const matched = valueRows.filter((row) => row.projectedPositionRank !== null).length;
   const coverageRows = valueRows.filter((row) => matchesPositionFilter(row.position, position));
   const coverageMatched = coverageRows.filter((row) => row.projectedPositionRank !== null).length;
@@ -1029,7 +1203,7 @@ function SleeperRedraftBoardV2({ snapshot, history, seasonLines }: { snapshot: S
     <div className="dashboard-layout">
       <aside className="trend-column"><SleeperTrendCard snapshot={snapshot} range={range} onRange={setRange} onSelect={focusTrend} /></aside>
       <section className="ledger" aria-labelledby="sleeper-ledger-title">
-        <div className="ledger-heading"><div><p className="eyebrow">Coverage-adjusted value board</p><h2 id="sleeper-ledger-title">Sleeper redraft</h2></div><div className="ledger-tools">{(query || position !== "ALL" || coverageFilter !== "all") && <button className="back-to-all" onClick={reset}>← Back to all players</button>}<label className="search"><span className="sr-only">Search Sleeper players</span><span aria-hidden="true">⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search player or team" /></label></div></div>
+        <div className="ledger-heading"><div><p className="eyebrow">Coverage-adjusted value board</p><h2 id="sleeper-ledger-title">Sleeper redraft</h2></div><div className="ledger-tools">{(query || position !== "ALL" || coverageFilter !== "all" || watchlistOnly) && <button className="back-to-all" onClick={reset}>← Back to all players</button>}<button className={`watchlist-filter ${watchlistOnly ? "active" : ""}`} aria-pressed={watchlistOnly} onClick={() => setWatchlistOnly((current) => !current)}>★ Watchlist <span>{watched.size}</span></button><button className="export-csv" disabled={!filtered.length} onClick={() => exportSleeperCsv(filtered, snapshot.date, watched)}>↓ Export CSV</button><label className="search"><span className="sr-only">Search Sleeper players</span><span aria-hidden="true">⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search player or team" /></label></div></div>
         <div className="filters sleeper-filters"><div className="position-tabs" role="group" aria-label="Position">{positions.map((item) => <button key={item} className={position === item ? "active" : ""} onClick={() => setPosition(item)}>{item}</button>)}</div><div className="sleeper-coverage-controls"><div className="coverage-tabs" role="group" aria-label="Projection coverage">{(["all", "comparable", "needs-data"] as SleeperCoverageFilter[]).map((item) => <button key={item} className={coverageFilter === item ? "active" : ""} aria-pressed={coverageFilter === item} onClick={() => setCoverageFilter(item)}>{item === "all" ? "All players" : item === "comparable" ? "Comparable only" : "Needs data"}</button>)}</div><div className="sleeper-format-chip">12-team · PPR · 4PT pass TD · no K/DST</div><div className="coverage-summary">{coverageLabel}</div></div></div>
         <div className="coverage-explainer"><strong>Fair comparison:</strong> comparable ADP rank and our projection rank use the same complete-player pool within each position.</div>
         <div className="table-wrap"><table className="sleeper-table" style={{ minWidth: `${Math.max(620, 240 + (visibleColumnCount - 1) * 175)}px` }}><thead><tr>
@@ -1046,7 +1220,7 @@ function SleeperRedraftBoardV2({ snapshot, history, seasonLines }: { snapshot: S
           const delta = currentAdpDelta.get(row.id);
           const rising = delta !== undefined && delta < 0;
           return <tr className="data-row" key={row.id}>
-            <td><div className="player-cell"><span className={`position position-${row.position.toLowerCase()}`}>{row.position}</span><div><strong>{row.name}</strong><span>{row.team || "FA"}{row.bye ? ` · Bye ${row.bye}` : ""}</span><button className="ledger-link" onClick={() => setChartPlayer(row)}>View ADP graph</button></div></div></td>
+            <td><div className="player-cell"><button className={`watch-star ${watched.has(watchKey(row.name, row.position)) ? "active" : ""}`} aria-pressed={watched.has(watchKey(row.name, row.position))} aria-label={`${watched.has(watchKey(row.name, row.position)) ? "Remove" : "Add"} ${row.name} ${watched.has(watchKey(row.name, row.position)) ? "from" : "to"} watchlist`} onClick={() => onToggleWatch(watchKey(row.name, row.position))}>★</button><span className={`position position-${row.position.toLowerCase()}`}>{row.position}</span><div><strong>{row.name}</strong><span>{row.team || "FA"}{row.bye ? ` · Bye ${row.bye}` : ""}</span><button className="ledger-link" onClick={() => setChartPlayer(row)}>View ADP graph</button></div></div></td>
             {columnVisible("adp") && <td><strong className="adp-number">{row.adp.toFixed(1)}</strong><small>Overall</small></td>}
             {columnVisible("sleeperPositionRank") && <td><strong>{row.position}{row.sleeperPositionRank}</strong><small>All Sleeper {row.position}s</small></td>}
             {columnVisible("comparableSleeperPositionRank") && <td>{row.comparableSleeperPositionRank === null ? <span className="empty">—</span> : <><strong>{row.position}{row.comparableSleeperPositionRank}</strong><small>Complete pool</small></>}</td>}
@@ -1083,6 +1257,10 @@ export default function Home() {
   const [tePremium, setTePremium] = useState<TePremium>(0);
   const [pprScoring, setPprScoring] = useState<PprScoring>(1);
   const [hiddenColumns, setHiddenColumns] = useState<Set<ProjectionColumnKey>>(() => new Set());
+  const [watched, setWatched] = useState<Set<string>>(() => new Set());
+  const [watchlistLoaded, setWatchlistLoaded] = useState(false);
+  const [watchlistOnly, setWatchlistOnly] = useState(false);
+  const [fantasyPlayerId, setFantasyPlayerId] = useState<string | null>(null);
 
   useEffect(() => {
     const dataRoot = import.meta.env.BASE_URL;
@@ -1106,16 +1284,41 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (!selected?.statType) return;
+    let cancelled = false;
+    queueMicrotask(() => {
+      if (cancelled) return;
+      try {
+        const saved = JSON.parse(localStorage.getItem("prop-ledger-watchlist") || "[]");
+        if (Array.isArray(saved)) setWatched(new Set(saved.filter((item): item is string => typeof item === "string")));
+      } catch {
+        setWatched(new Set());
+      } finally {
+        setWatchlistLoaded(true);
+      }
+    });
+    return () => { cancelled = true; };
+  }, []);
+
+  useEffect(() => {
+    if (!watchlistLoaded) return;
+    try {
+      localStorage.setItem("prop-ledger-watchlist", JSON.stringify([...watched].sort()));
+    } catch {
+      // The dashboard remains usable when browser storage is disabled.
+    }
+  }, [watched, watchlistLoaded]);
+
+  useEffect(() => {
+    if (!selected?.statType && !fantasyPlayerId) return;
     const previousOverflow = document.body.style.overflow;
-    const closeOnEscape = (event: KeyboardEvent) => { if (event.key === "Escape") setSelected(null); };
+    const closeOnEscape = (event: KeyboardEvent) => { if (event.key === "Escape") { setSelected(null); setFantasyPlayerId(null); } };
     document.body.style.overflow = "hidden";
     window.addEventListener("keydown", closeOnEscape);
     return () => {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", closeOnEscape);
     };
-  }, [selected?.statType]);
+  }, [selected?.statType, fantasyPlayerId]);
 
   const snapshot = boardMode === "season" ? seasonSnapshot : weeklySnapshot;
   const history = boardMode === "season" ? seasonHistory : weeklyHistory;
@@ -1123,6 +1326,7 @@ export default function Home() {
   const allLines = useMemo(() => { const live = aggregate(snapshot, boardMode === "season" ? weeklySnapshot : undefined); return live.length ? live : boardMode === "season" ? DEMO_LINES : []; }, [snapshot, boardMode, weeklySnapshot]);
   const sleeperSeasonLines = useMemo(() => aggregate(seasonSnapshot, weeklySnapshot), [seasonSnapshot, weeklySnapshot]);
   const activePropLine = selected?.statType ? allLines.find((line) => line.id === selected.playerId) || null : null;
+  const activeFantasyLine = fantasyPlayerId ? allLines.find((line) => line.id === fantasyPlayerId) || null : null;
   const trendMoves = useMemo(() => {
     const fallback = snapshot.observations
       .filter((item) => item.status === "open" && item.lineDelta !== null && item.lineDelta !== 0)
@@ -1138,7 +1342,7 @@ export default function Home() {
   const newProps = useMemo(() => newPropsInRange(snapshot, history, newPropRange), [snapshot, history, newPropRange]);
   const books = useMemo(() => ["All sources", ...new Set(allLines.flatMap((line) => line.availableBooks))], [allLines]);
   const positionRanks = useMemo(() => projectedPositionRanks(allLines, qbPassTdPoints, tePremium, pprScoring), [allLines, qbPassTdPoints, tePremium, pprScoring]);
-  const lines = useMemo(() => allLines.filter((line) => matchesPositionFilter(line.position, position)).filter((line) => book === "All sources" || line.availableBooks.includes(book)).filter((line) => `${line.player} ${line.team}`.toLowerCase().includes(query.toLowerCase())).sort((a, b) => compareLines(a, b, sort, qbPassTdPoints, tePremium, pprScoring)), [allLines, position, book, query, sort, qbPassTdPoints, tePremium, pprScoring]);
+  const lines = useMemo(() => allLines.filter((line) => matchesPositionFilter(line.position, position)).filter((line) => book === "All sources" || line.availableBooks.includes(book)).filter((line) => !watchlistOnly || watched.has(watchKey(line.player, line.position))).filter((line) => `${line.player} ${line.team}`.toLowerCase().includes(query.toLowerCase())).sort((a, b) => compareLines(a, b, sort, qbPassTdPoints, tePremium, pprScoring)), [allLines, position, book, watchlistOnly, watched, query, sort, qbPassTdPoints, tePremium, pprScoring]);
   const changeSort = (key: SortKey) => setSort((current) => current.key === key
     ? { key, direction: current.direction === "asc" ? "desc" : "asc" }
     : { key, direction: ["yards", "secondary", "touchdowns", "fantasyPoints", "prizePicksFantasyScore"].includes(key) ? "desc" : "asc" });
@@ -1159,15 +1363,18 @@ export default function Home() {
     if (hiding && sort.key === sortKey) setSort({ key: "player", direction: "asc" });
   };
   const visibleColumnCount = 1 + columnChoices.filter((choice) => columnVisible(choice.key)).length;
-  const acceptedRuns = snapshot.sourceRuns.filter((run) => run.status === "accepted");
+  const acceptedRuns = snapshot.sourceRuns.filter((run) => run.status === "accepted" && (boardMode === "week1" || run.source !== "underdog"));
   const reviewCount = snapshot.sourceRuns.filter((run) => run.status !== "accepted").length + (snapshot.issues?.length || 0);
   const isDemo = boardMode === "season" && (snapshot.demo || snapshot.observations.length === 0);
+  const toggleWatch = (key: string) => setWatched((current) => { const next = new Set(current); if (next.has(key)) next.delete(key); else next.add(key); return next; });
   const changeBoard = (nextBoard: BoardMode) => {
     setBoardMode(nextBoard);
     setPosition("ALL");
     setBook("All sources");
     setQuery("");
     setSelected(null);
+    setFantasyPlayerId(null);
+    setWatchlistOnly(false);
     setTrendRange("today");
     setNewPropRange("today");
     setSort({ key: "yards", direction: "desc" });
@@ -1177,6 +1384,8 @@ export default function Home() {
     setBook("All sources");
     setQuery("");
     setSelected(null);
+    setFantasyPlayerId(null);
+    setWatchlistOnly(false);
     window.setTimeout(() => document.getElementById("ledger-title")?.scrollIntoView({ behavior: "smooth", block: "start" }), 20);
   };
   const focusTrend = (move: TrendMove) => {
@@ -1197,19 +1406,19 @@ export default function Home() {
 
   const siteHeader = <header className="site-header"><a className="brand" href="#top" aria-label="Prop Ledger home"><span className="brand-mark" aria-hidden="true"><i /><i /><i /></span><span>PROP LEDGER</span></a><div className="header-meta"><span className="live-dot" aria-hidden="true" /><span>{boardMode === "sleeper" ? "Sleeper · redraft ADP" : `${snapshot.season || 2026} NFL · ${boardMode === "season" ? "regular season" : "Week 1"}`}</span></div></header>;
   const boardSwitch = <nav className="board-switch" aria-label="Projection board"><button className={boardMode === "season" ? "active" : ""} aria-pressed={boardMode === "season"} onClick={() => changeBoard("season")}><span>Season</span><strong>Season totals</strong></button><button className={boardMode === "week1" ? "active" : ""} aria-pressed={boardMode === "week1"} onClick={() => changeBoard("week1")}><span>Weekly</span><strong>Week 1 projections</strong></button><button className={boardMode === "sleeper" ? "active" : ""} aria-pressed={boardMode === "sleeper"} onClick={() => changeBoard("sleeper")}><span>Draft</span><strong>Sleeper redraft</strong></button></nav>;
-  if (boardMode === "sleeper") return <main>{siteHeader}{boardSwitch}<SleeperRedraftBoardV2 snapshot={sleeperSnapshot} history={sleeperHistory} seasonLines={sleeperSeasonLines} /><footer><span>PROP LEDGER / PERSONAL RESEARCH</span><a href="#top">Back to top ↑</a></footer></main>;
+  if (boardMode === "sleeper") return <main>{siteHeader}{boardSwitch}<SleeperRedraftBoardV2 snapshot={sleeperSnapshot} history={sleeperHistory} seasonLines={sleeperSeasonLines} watched={watched} onToggleWatch={toggleWatch} /><footer><span>PROP LEDGER / PERSONAL RESEARCH</span><a href="#top">Back to top ↑</a></footer></main>;
 
   return <main>
     {siteHeader}
     {boardSwitch}
     <section className="hero" id="top">
       <div><p className="eyebrow">{boardMode === "season" ? "Daily season-long market monitor" : "Weekly matchup projection board"}</p><h1>{boardMode === "season" ? <>Every move.<br /><span>Kept on record.</span></> : <>Week 1.<br /><span>Every source.</span></>}</h1><p className="lede">{boardMode === "season" ? "One clean ledger for QB, RB, WR, and TE season props—validated before each daily change is accepted." : "A separate full-PPR board for QB, RB, WR, and TE Week 1 props—kept completely separate from season-long projections."}</p></div>
-      <div className="hero-sidebar"><div className="capture-card" aria-label="Latest capture status"><div className="capture-topline"><span>{boardMode === "season" ? "Latest capture" : "Week 1 capture"}</span><span className="status-pill">{waitingForWeekly ? "Waiting for markets" : isDemo ? "Setup required" : "Double-checked"}</span></div><strong>{waitingForWeekly ? "Board ready" : snapshot.date ? new Intl.DateTimeFormat("en-US", { dateStyle: "medium", timeZone: "UTC" }).format(new Date(`${snapshot.date}T12:00:00Z`)) : "No verified run yet"}</strong><div className="capture-stats"><div><b>{acceptedRuns.length}</b><span>sources accepted</span></div><div><b>{isDemo || waitingForWeekly ? 0 : allLines.length}</b><span>player lines</span></div><div><b>{reviewCount}</b><span>review flags</span></div></div><p>{waitingForWeekly ? "Confirmed Week 1 lines from DraftKings, FanDuel, BetMGM, PrizePicks, and Underdog will appear here; season averages are never substituted." : isDemo ? "The sample rows below demonstrate the layout; they are not current betting lines." : "Only complete, roster-matched, repeat-confirmed sportsbook and projection rows are published."}</p></div></div>
+      <div className="hero-sidebar"><div className="capture-card" aria-label="Latest capture status"><div className="capture-topline"><span>{boardMode === "season" ? "Latest capture" : "Week 1 capture"}</span><span className="status-pill">{waitingForWeekly ? "Waiting for markets" : isDemo ? "Setup required" : "Double-checked"}</span></div><strong>{waitingForWeekly ? "Board ready" : snapshot.date ? new Intl.DateTimeFormat("en-US", { dateStyle: "medium", timeZone: "UTC" }).format(new Date(`${snapshot.date}T12:00:00Z`)) : "No verified run yet"}</strong><div className="capture-stats"><div><b>{acceptedRuns.length}</b><span>sources accepted</span></div><div><b>{isDemo || waitingForWeekly ? 0 : allLines.length}</b><span>player lines</span></div><div><b>{reviewCount}</b><span>review flags</span></div></div><p>{waitingForWeekly ? "Confirmed Week 1 lines from DraftKings, FanDuel, BetMGM, PrizePicks, and Underdog will appear here; season averages are never substituted." : isDemo ? "The sample rows below demonstrate the layout; they are not current betting lines." : "Only complete, roster-matched, repeat-confirmed sportsbook and projection rows are published."}</p></div><SourceFreshnessPanel snapshot={snapshot} includeUnderdog={boardMode === "week1"} /></div>
     </section>
     <div className="dashboard-layout">
     <aside className="trend-column" aria-label="Market updates"><NewPropsCard props={newProps} range={newPropRange} onRange={setNewPropRange} onSelect={focusNewProp} /><TrendCard moves={trendMoves} isDemo={isDemo} waitingForWeekly={waitingForWeekly} range={trendRange} onRange={setTrendRange} onSelect={focusTrend} /></aside>
     <section className="ledger" aria-labelledby="ledger-title">
-      <div className="ledger-heading"><div><p className="eyebrow">{waitingForWeekly ? "Data-ready board" : isDemo ? "Preview board" : "Verified board"}</p><h2 id="ledger-title">{boardMode === "season" ? "Season totals" : "Week 1 projections"}</h2></div><div className="ledger-tools">{(query || position !== "ALL" || book !== "All sources") && <button className="back-to-all" onClick={resetAllPlayers}>← Back to all players</button>}<label className="search"><span className="sr-only">Search players or teams</span><span aria-hidden="true">⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search player or team" /></label></div></div>
+      <div className="ledger-heading"><div><p className="eyebrow">{waitingForWeekly ? "Data-ready board" : isDemo ? "Preview board" : "Verified board"}</p><h2 id="ledger-title">{boardMode === "season" ? "Season totals" : "Week 1 projections"}</h2></div><div className="ledger-tools">{(query || position !== "ALL" || book !== "All sources" || watchlistOnly) && <button className="back-to-all" onClick={resetAllPlayers}>← Back to all players</button>}<button className={`watchlist-filter ${watchlistOnly ? "active" : ""}`} aria-pressed={watchlistOnly} onClick={() => setWatchlistOnly((current) => !current)}>★ Watchlist <span>{watched.size}</span></button><button className="export-csv" disabled={!lines.length} onClick={() => exportProjectionCsv(lines, positionRanks, boardMode, snapshot.date, qbPassTdPoints, tePremium, pprScoring, watched)}>↓ Export CSV</button><label className="search"><span className="sr-only">Search players or teams</span><span aria-hidden="true">⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search player or team" /></label></div></div>
       <div className="filters" aria-label={`Filter ${boardMode === "season" ? "season totals" : "Week 1 projections"}`}><div className="position-tabs" role="group" aria-label="Position">{positions.map((item) => <button key={item} className={position === item ? "active" : ""} onClick={() => setPosition(item)}>{item}</button>)}</div><div className="filter-actions"><button className={`qb-scoring-toggle ${qbPassTdPoints === 6 ? "active" : ""}`} aria-pressed={qbPassTdPoints === 6} onClick={() => setQbPassTdPoints((points) => points === 4 ? 6 : 4)}><span>QB pass TDs</span><strong>{qbPassTdPoints} pts</strong></button><div className="ppr-toggle" role="group" aria-label="Points per reception"><span>PPR</span>{([1, 0.5, 0] as PprScoring[]).map((points) => <button key={points} className={pprScoring === points ? "active" : ""} aria-pressed={pprScoring === points} onClick={() => setPprScoring(points)}>{points.toFixed(1)}</button>)}</div><div className="tep-toggle" role="group" aria-label="Tight end premium"><span>TEP</span>{([0, 0.5, 1] as TePremium[]).map((premium) => <button key={premium} className={tePremium === premium ? "active" : ""} aria-pressed={tePremium === premium} onClick={() => setTePremium(premium)}>{premium.toFixed(1)}</button>)}</div><label className="book-filter"><span>Source</span><select value={book} onChange={(event) => setBook(event.target.value)}>{books.map((item) => <option key={item}>{item}</option>)}</select></label></div></div>
       <div className="table-wrap">
         <table className="projection-table" style={{ minWidth: `${Math.max(620, 240 + (visibleColumnCount - 1) * 190)}px` }}>
@@ -1230,11 +1439,11 @@ export default function Home() {
             const inspect = (statType: StatType) => setSelected({ playerId: line.id, statType });
             return <Fragment key={line.id}>
               <tr className={`data-row ${expanded ? "expanded" : ""}`}>
-                <td><div className="player-cell"><span className={`position position-${line.position.toLowerCase()}`}>{line.position}</span><div><span className="player-name-row"><strong>{line.player}</strong>{hasCompleteProjection && positionRank ? <span className="projection-rank ranked" title={`${line.position}${positionRank} in ${boardMode === "season" ? "season" : "Week 1"} projection order by verified calculated fantasy points`}>{line.position}{positionRank}</span> : <span className="projection-rank incomplete" title="Not ranked; verified fantasy inputs are incomplete">NR</span>}</span><span>{line.team}</span><button className="ledger-link" aria-expanded={expanded && selected?.statType === null} aria-controls={`ledger-${line.id}`} onClick={() => setSelected(expanded && selected?.statType === null ? null : { playerId: line.id, statType: null })}>{expanded && selected?.statType === null ? "Hide ledger" : "View ledger"}</button></div></div></td>
+                <td><div className="player-cell"><button className={`watch-star ${watched.has(watchKey(line.player, line.position)) ? "active" : ""}`} aria-pressed={watched.has(watchKey(line.player, line.position))} aria-label={`${watched.has(watchKey(line.player, line.position)) ? "Remove" : "Add"} ${line.player} ${watched.has(watchKey(line.player, line.position)) ? "from" : "to"} watchlist`} onClick={() => toggleWatch(watchKey(line.player, line.position))}>★</button><span className={`position position-${line.position.toLowerCase()}`}>{line.position}</span><div><span className="player-name-row"><strong>{line.player}</strong>{hasCompleteProjection && positionRank ? <span className="projection-rank ranked" title={`${line.position}${positionRank} in ${boardMode === "season" ? "season" : "Week 1"} projection order by verified calculated fantasy points`}>{line.position}{positionRank}</span> : <span className="projection-rank incomplete" title="Not ranked; verified fantasy inputs are incomplete">NR</span>}</span><span>{line.team}</span><button className="ledger-link" aria-expanded={expanded && selected?.statType === null} aria-controls={`ledger-${line.id}`} onClick={() => setSelected(expanded && selected?.statType === null ? null : { playerId: line.id, statType: null })}>{expanded && selected?.statType === null ? "Hide ledger" : "View ledger"}</button></div></div></td>
                 {columnVisible("yards") && <td><StatStack entries={[{ cell: line.yards, label: line.yardLabel }, ...extraYards]} preferredSource={line.source} player={line.player} onInspect={inspect} /></td>}
                 {columnVisible("secondary") && <td><LineCell cell={line.position === "QB" ? line.rushingYards : line.receptions} label={line.position === "QB" ? "Rush yds" : "Receptions"} preferredSource={line.source} player={line.player} onInspect={inspect} /></td>}
                 {columnVisible("touchdowns") && <td>{boardMode === "week1" ? <TouchdownChanceCell line={line} onInspect={inspect} /> : <SeasonTouchdownCell line={line} onInspect={inspect} />}</td>}
-                {columnVisible("fantasyPoints") && <td><FantasyCell line={line} qbPassTdPoints={qbPassTdPoints} tePremium={tePremium} pprScoring={pprScoring} /></td>}
+                {columnVisible("fantasyPoints") && <td><FantasyCell line={line} qbPassTdPoints={qbPassTdPoints} tePremium={tePremium} pprScoring={pprScoring} onInspect={() => setFantasyPlayerId(line.id)} /></td>}
                 {boardMode === "week1" && columnVisible("prizePicksFantasyScore") && <td><LineCell cell={line.prizePicksFantasyScore} label="PrizePicks" preferredSource="prizepicks" player={line.player} onInspect={inspect} /></td>}
                 {columnVisible("status") && <td><span className={`confidence ${line.confidence}`}><i aria-hidden="true" />{line.confidence[0].toUpperCase() + line.confidence.slice(1)}</span><small>{line.confidenceNote}</small><small className={`verification-note ${line.status}`}>{line.status === "verified" ? "Verified" : "Review"} · {line.verifiedAt}</small></td>}
               </tr>
@@ -1247,6 +1456,7 @@ export default function Home() {
     </section>
     </div>
     {activePropLine && selected?.statType && <div className="graph-drawer-layer"><button className="graph-drawer-scrim" aria-label="Close line trend drawer" onClick={() => setSelected(null)} /><aside className="graph-drawer" role="dialog" aria-modal="true" aria-label={`${activePropLine.player} ${STAT_LABELS[selected.statType]} line trend`}><PropComparison line={activePropLine} statType={selected.statType} history={history} movements={snapshot.movements || []} highlightedSource={selected.source} onBackAll={resetAllPlayers} onClose={() => setSelected(null)} /></aside></div>}
+    {activeFantasyLine && <FantasyBreakdownDrawer line={activeFantasyLine} qbPassTdPoints={qbPassTdPoints} tePremium={tePremium} pprScoring={pprScoring} onClose={() => setFantasyPlayerId(null)} />}
     <ColumnChooser choices={columnChoices} isVisible={columnVisible} onToggle={toggleColumn} onShowAll={() => setHiddenColumns(new Set())} />
     <footer><span>PROP LEDGER / PERSONAL RESEARCH</span><a href="https://github.com/nflverse/nflverse-data/releases/tag/stats_player" target="_blank" rel="noreferrer">Prior-season stats: FTN Data via nflverse ↗</a><span>Lines are observations, not betting advice.</span></footer>
   </main>;
