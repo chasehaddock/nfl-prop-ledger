@@ -78,7 +78,7 @@ Chrome sessions and sportsbook logins cannot be transferred through GitHub. The 
 
 ## Daily operation
 
-- Capture is currently started manually from the Chrome extension when the operator is available and connected to an unrestricted network.
+- Capture is currently started manually from the Chrome extension whenever the operator is available and connected to an unrestricted network; it is not restricted to the former morning schedule.
 - The installer removes legacy Chrome-opener and daily-processor schedules by default. `npm run operator:install -- --automatic` is available only as an explicit processor-scheduling opt-in; it still cannot bypass Chrome logins or start the extension capture.
 - The collector performs one complete validated pass per source and retries only failed sources. It writes a compatible primary/confirmation pair for the processor.
 - After capture, run `npm run operator:run`, verify with `npm run operator:health -- --require-today`, then commit the accepted `data/` and `public/data/` updates on a branch and merge them to `source`.

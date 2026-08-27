@@ -25,6 +25,15 @@ test("accepts an 8:17 AM Central extension capture", () => {
   assert.deepEqual(errors, []);
 });
 
+test("accepts a same-day manual capture before the retired morning schedule", () => {
+  const errors = validateDailyRawPair(
+    raw("draftkings", "2026-08-27T12:05:56.102Z"),
+    raw("draftkings", "2026-08-27T12:05:56.102Z"),
+    { source: "draftkings", date: "2026-08-27", now: new Date("2026-08-27T12:10:00Z") },
+  );
+  assert.deepEqual(errors, []);
+});
+
 test("rejects a leftover file whose UTC date matches but local date is yesterday", () => {
   const errors = validateDailyRawPair(
     raw("betmgm", "2026-08-20T01:05:40.726Z"),
@@ -42,10 +51,10 @@ test("rejects mismatched sources, early captures, and separated confirmation pas
   const errors = validateDailyRawPair(
     raw("draftkings", "2026-08-20T12:00:00.000Z"),
     raw("fanduel", "2026-08-20T14:00:01.000Z"),
-    { source: "draftkings", date: "2026-08-20", now: new Date("2026-08-20T19:00:00Z") },
+    { source: "draftkings", date: "2026-08-20", now: new Date("2026-08-20T19:00:00Z"), earliestMinute: 7 * 60 + 30 },
   );
   assert.ok(errors.some((error) => error.includes("source")));
-  assert.ok(errors.some((error) => error.includes("scheduled")));
+  assert.ok(errors.some((error) => error.includes("configured run window")));
   assert.ok(errors.some((error) => error.includes("allowed capture window")));
 });
 

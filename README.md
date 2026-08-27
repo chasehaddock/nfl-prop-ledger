@@ -54,7 +54,7 @@ npm run operator:install
 npm run operator:health -- --require-today
 ```
 
-Click **Capture now** in the extension when Chrome is open, logged in, and connected to an unrestricted network. Then run `npm run operator:run` to process valid evidence and rebuild the site. Automatic processor scheduling is an explicit opt-in via `npm run operator:install -- --automatic`; the extension itself never starts a capture automatically.
+Click **Capture now** at any convenient time when Chrome is open, logged in, and connected to an unrestricted network. Then run `npm run operator:run` to process valid evidence and rebuild the site. Automatic processor scheduling is an explicit opt-in via `npm run operator:install -- --automatic`; the extension itself never starts a capture automatically.
 
 ## Important projection rules
 
