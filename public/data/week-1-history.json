@@ -486,13 +486,13 @@
     },
     {
       "date": "2026-08-28",
-      "line": 245.5,
+      "line": 249.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0033873:week_1:passing_yards": [
@@ -610,13 +610,13 @@
     },
     {
       "date": "2026-08-28",
-      "line": 235.5,
+      "line": 238.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "line_decreased"
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0036971:week_1:passing_yards": [
@@ -672,13 +672,13 @@
     },
     {
       "date": "2026-08-28",
-      "line": 233.5,
+      "line": 232.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0035710:week_1:passing_yards": [
@@ -1354,13 +1354,13 @@
     },
     {
       "date": "2026-08-28",
-      "line": 216.5,
+      "line": 219.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0034796:week_1:passing_yards": [
@@ -2036,13 +2036,13 @@
     },
     {
       "date": "2026-08-28",
-      "line": 86.5,
+      "line": 84.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "line_increased"
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038542:week_1:rushing_yards": [
@@ -3958,13 +3958,13 @@
     },
     {
       "date": "2026-08-28",
-      "line": 59.5,
+      "line": 58.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0037840:week_1:rushing_yards": [
@@ -4268,13 +4268,13 @@
     },
     {
       "date": "2026-08-28",
-      "line": 48.5,
+      "line": 49.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0040126:week_1:receiving_yards": [
@@ -5818,7 +5818,7 @@
     },
     {
       "date": "2026-08-28",
-      "line": 40.5,
+      "line": 41.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
@@ -6624,13 +6624,13 @@
     },
     {
       "date": "2026-08-28",
-      "line": 28.5,
+      "line": 29.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0034857:week_1:rushing_yards": [
@@ -6996,13 +6996,13 @@
     },
     {
       "date": "2026-08-28",
-      "line": 30.5,
+      "line": 29.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "line_increased"
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039040:week_1:receiving_yards": [
@@ -7368,13 +7368,13 @@
     },
     {
       "date": "2026-08-28",
-      "line": 25.5,
+      "line": 24.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0039851:week_1:rushing_yards": [
@@ -11589,8 +11589,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036900:week_1:offensive_touchdowns": [
@@ -11651,8 +11651,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037248:week_1:offensive_touchdowns": [
@@ -12392,7 +12392,7 @@
     },
     {
       "date": "2026-08-28",
-      "line": 184.5,
+      "line": 182.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
@@ -12600,13 +12600,13 @@
     },
     {
       "date": "2026-08-28",
-      "line": 20.5,
+      "line": 21.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0038134:week_1:receiving_yards": [
@@ -13125,8 +13125,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033280:week_1:rushing_touchdowns": [
@@ -13402,13 +13402,13 @@
     },
     {
       "date": "2026-08-28",
-      "line": 51.5,
+      "line": 49.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "line_increased"
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0038994:week_1:receiving_yards": [
@@ -13530,13 +13530,13 @@
     },
     {
       "date": "2026-08-28",
-      "line": 41.5,
+      "line": 42.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0035229:week_1:receiving_yards": [
@@ -13981,10 +13981,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.1,
-      "lowerMultiplier": 0.87,
+      "higherMultiplier": 2.01,
+      "lowerMultiplier": 1.68,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0034857:week_1:passing_touchdowns": [
@@ -14013,10 +14013,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.29,
-      "lowerMultiplier": 0.76,
+      "higherMultiplier": 2.36,
+      "lowerMultiplier": 1.44,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0034796:week_1:passing_touchdowns": [
@@ -14045,10 +14045,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.1,
-      "lowerMultiplier": 0.87,
+      "higherMultiplier": 2.04,
+      "lowerMultiplier": 1.64,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040691:week_1:passing_touchdowns": [
@@ -14077,10 +14077,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.15,
-      "lowerMultiplier": 0.81,
+      "higherMultiplier": 2.13,
+      "lowerMultiplier": 1.54,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039851:week_1:passing_touchdowns": [
@@ -14109,8 +14109,8 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.14,
-      "lowerMultiplier": 0.81,
+      "higherMultiplier": 2.11,
+      "lowerMultiplier": 1.54,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -14141,8 +14141,8 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.12,
-      "lowerMultiplier": 0.84,
+      "higherMultiplier": 2.08,
+      "lowerMultiplier": 1.59,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -14173,8 +14173,8 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.2,
-      "lowerMultiplier": 0.79,
+      "higherMultiplier": 2.13,
+      "lowerMultiplier": 1.55,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -14205,10 +14205,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.16,
-      "lowerMultiplier": 0.81,
+      "higherMultiplier": 2.14,
+      "lowerMultiplier": 1.54,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0023459:week_1:passing_touchdowns": [
@@ -14237,8 +14237,8 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.18,
-      "lowerMultiplier": 0.79,
+      "higherMultiplier": 2.14,
+      "lowerMultiplier": 1.5,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -14269,10 +14269,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.83,
-      "lowerMultiplier": 1.12,
+      "higherMultiplier": 1.57,
+      "lowerMultiplier": 2.08,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040743:week_1:passing_touchdowns": [
@@ -14301,10 +14301,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.22,
-      "lowerMultiplier": 0.78,
+      "higherMultiplier": 2.25,
+      "lowerMultiplier": 1.48,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036389:week_1:passing_touchdowns": [
@@ -14333,10 +14333,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.16,
-      "lowerMultiplier": 0.82,
+      "higherMultiplier": 2.14,
+      "lowerMultiplier": 1.55,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039910:week_1:passing_touchdowns": [
@@ -14365,10 +14365,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.46,
-      "lowerMultiplier": 0.71,
+      "higherMultiplier": 2.65,
+      "lowerMultiplier": 1.35,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0035710:week_1:passing_touchdowns": [
@@ -14397,10 +14397,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.15,
-      "lowerMultiplier": 0.83,
+      "higherMultiplier": 2.13,
+      "lowerMultiplier": 1.57,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0035228:week_1:passing_touchdowns": [
@@ -14429,8 +14429,8 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.14,
-      "lowerMultiplier": 0.82,
+      "higherMultiplier": 2.11,
+      "lowerMultiplier": 1.55,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -14461,8 +14461,8 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.35,
-      "lowerMultiplier": 0.73,
+      "higherMultiplier": 2.47,
+      "lowerMultiplier": 1.39,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -14493,10 +14493,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.05,
-      "lowerMultiplier": 0.94,
+      "higherMultiplier": 1.96,
+      "lowerMultiplier": 1.76,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036442:week_1:passing_touchdowns": [
@@ -14525,10 +14525,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.75,
-      "lowerMultiplier": 1.29,
+      "higherMultiplier": 1.43,
+      "lowerMultiplier": 2.36,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0034869:week_1:passing_touchdowns": [
@@ -14557,8 +14557,8 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.07,
-      "lowerMultiplier": 0.89,
+      "higherMultiplier": 1.99,
+      "lowerMultiplier": 1.68,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -14589,10 +14589,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.89,
-      "lowerMultiplier": 1.08,
+      "higherMultiplier": 1.68,
+      "lowerMultiplier": 2.01,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0026498:week_1:passing_touchdowns": [
@@ -14621,10 +14621,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.85,
-      "lowerMultiplier": 1.13,
+      "higherMultiplier": 1.61,
+      "lowerMultiplier": 2.09,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0033119:week_1:passing_touchdowns": [
@@ -14653,10 +14653,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.47,
-      "lowerMultiplier": 0.7,
+      "higherMultiplier": 2.67,
+      "lowerMultiplier": 1.33,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040676:week_1:passing_touchdowns": [
@@ -14685,10 +14685,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.33,
-      "lowerMultiplier": 0.73,
+      "higherMultiplier": 2.43,
+      "lowerMultiplier": 1.39,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039139:week_1:offensive_touchdowns": [
@@ -14717,10 +14717,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.7,
-      "lowerMultiplier": 1.46,
+      "higherMultiplier": 1.33,
+      "lowerMultiplier": 2.65,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0033280:week_1:offensive_touchdowns": [
@@ -14749,10 +14749,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.85,
-      "lowerMultiplier": 1.1,
+      "higherMultiplier": 1.61,
+      "lowerMultiplier": 2.04,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038597:week_1:offensive_touchdowns": [
@@ -14781,10 +14781,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.89,
-      "lowerMultiplier": 1.08,
+      "higherMultiplier": 1.68,
+      "lowerMultiplier": 2.01,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038542:week_1:offensive_touchdowns": [
@@ -14845,10 +14845,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.91,
-      "lowerMultiplier": 1.05,
+      "higherMultiplier": 1.71,
+      "lowerMultiplier": 1.96,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036389:week_1:offensive_touchdowns": [
@@ -14877,10 +14877,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.08,
-      "lowerMultiplier": 0.88,
+      "higherMultiplier": 2.01,
+      "lowerMultiplier": 1.66,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039361:week_1:offensive_touchdowns": [
@@ -14909,10 +14909,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.09,
-      "lowerMultiplier": 0.86,
+      "higherMultiplier": 2.02,
+      "lowerMultiplier": 1.66,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038120:week_1:offensive_touchdowns": [
@@ -14941,10 +14941,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.12,
-      "lowerMultiplier": 0.86,
+      "higherMultiplier": 2.08,
+      "lowerMultiplier": 1.62,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040715:week_1:offensive_touchdowns": [
@@ -14973,10 +14973,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.12,
-      "lowerMultiplier": 0.85,
+      "higherMultiplier": 2.04,
+      "lowerMultiplier": 1.64,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036139:week_1:offensive_touchdowns": [
@@ -15005,8 +15005,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.13,
-      "lowerMultiplier": 0.84,
+      "higherMultiplier": 2.09,
+      "lowerMultiplier": 1.59,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -15037,10 +15037,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.13,
-      "lowerMultiplier": 0.83,
+      "higherMultiplier": 2.09,
+      "lowerMultiplier": 1.57,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040719:week_1:offensive_touchdowns": [
@@ -15069,10 +15069,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.17,
-      "lowerMultiplier": 0.82,
+      "higherMultiplier": 2.13,
+      "lowerMultiplier": 1.55,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036322:week_1:offensive_touchdowns": [
@@ -15101,10 +15101,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.19,
-      "lowerMultiplier": 0.79,
+      "higherMultiplier": 2.2,
+      "lowerMultiplier": 1.5,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037247:week_1:offensive_touchdowns": [
@@ -15133,10 +15133,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.22,
-      "lowerMultiplier": 0.78,
+      "higherMultiplier": 2.2,
+      "lowerMultiplier": 1.48,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036410:week_1:offensive_touchdowns": [
@@ -15165,10 +15165,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.25,
-      "lowerMultiplier": 0.78,
+      "higherMultiplier": 2.3,
+      "lowerMultiplier": 1.48,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040784:week_1:offensive_touchdowns": [
@@ -15197,10 +15197,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.23,
-      "lowerMultiplier": 0.77,
+      "higherMultiplier": 2.26,
+      "lowerMultiplier": 1.46,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036554:week_1:offensive_touchdowns": [
@@ -15229,10 +15229,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.29,
-      "lowerMultiplier": 0.75,
+      "higherMultiplier": 2.36,
+      "lowerMultiplier": 1.43,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040242:week_1:offensive_touchdowns": [
@@ -15261,10 +15261,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.3,
-      "lowerMultiplier": 0.75,
+      "higherMultiplier": 2.38,
+      "lowerMultiplier": 1.43,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0041027:week_1:offensive_touchdowns": [
@@ -15293,10 +15293,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.33,
-      "lowerMultiplier": 0.74,
+      "higherMultiplier": 2.43,
+      "lowerMultiplier": 1.41,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037239:week_1:offensive_touchdowns": [
@@ -15325,10 +15325,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.31,
-      "lowerMultiplier": 0.74,
+      "higherMultiplier": 2.4,
+      "lowerMultiplier": 1.41,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039738:week_1:offensive_touchdowns": [
@@ -15357,8 +15357,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.43,
-      "lowerMultiplier": 0.72,
+      "higherMultiplier": 2.6,
+      "lowerMultiplier": 1.37,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -15389,8 +15389,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.4,
-      "lowerMultiplier": 0.73,
+      "higherMultiplier": 2.55,
+      "lowerMultiplier": 1.39,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -15421,8 +15421,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.55,
-      "lowerMultiplier": 0.68,
+      "higherMultiplier": 2.8,
+      "lowerMultiplier": 1.29,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -15453,8 +15453,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.48,
-      "lowerMultiplier": 0.71,
+      "higherMultiplier": 2.68,
+      "lowerMultiplier": 1.35,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -15485,8 +15485,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.39,
-      "lowerMultiplier": 0.72,
+      "higherMultiplier": 2.53,
+      "lowerMultiplier": 1.37,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -15549,8 +15549,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.47,
-      "lowerMultiplier": 0.7,
+      "higherMultiplier": 2.67,
+      "lowerMultiplier": 1.33,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -15581,10 +15581,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.52,
-      "lowerMultiplier": 0.69,
+      "higherMultiplier": 2.75,
+      "lowerMultiplier": 1.31,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040128:week_1:offensive_touchdowns": [
@@ -15613,10 +15613,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.47,
-      "lowerMultiplier": 0.7,
+      "higherMultiplier": 2.67,
+      "lowerMultiplier": 1.33,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0035640:week_1:offensive_touchdowns": [
@@ -15645,10 +15645,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.47,
-      "lowerMultiplier": 0.7,
+      "higherMultiplier": 2.68,
+      "lowerMultiplier": 1.33,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038606:week_1:offensive_touchdowns": [
@@ -15677,8 +15677,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.56,
-      "lowerMultiplier": 0.68,
+      "higherMultiplier": 2.72,
+      "lowerMultiplier": 1.31,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -15709,10 +15709,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.53,
-      "lowerMultiplier": 0.69,
+      "higherMultiplier": 2.77,
+      "lowerMultiplier": 1.31,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037197:week_1:offensive_touchdowns": [
@@ -15741,10 +15741,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.54,
-      "lowerMultiplier": 0.68,
+      "higherMultiplier": 2.78,
+      "lowerMultiplier": 1.29,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038994:week_1:offensive_touchdowns": [
@@ -15773,8 +15773,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.59,
-      "lowerMultiplier": 0.68,
+      "higherMultiplier": 2.87,
+      "lowerMultiplier": 1.29,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -15805,8 +15805,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.77,
-      "lowerMultiplier": 0.65,
+      "higherMultiplier": 3.16,
+      "lowerMultiplier": 1.24,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -15837,10 +15837,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.64,
-      "lowerMultiplier": 0.67,
+      "higherMultiplier": 2.95,
+      "lowerMultiplier": 1.28,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039032:week_1:offensive_touchdowns": [
@@ -15869,10 +15869,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.66,
-      "lowerMultiplier": 0.67,
+      "higherMultiplier": 2.98,
+      "lowerMultiplier": 1.28,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036613:week_1:offensive_touchdowns": [
@@ -15901,8 +15901,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.77,
-      "lowerMultiplier": 0.65,
+      "higherMultiplier": 3.16,
+      "lowerMultiplier": 1.24,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -15933,10 +15933,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.71,
-      "lowerMultiplier": 0.65,
+      "higherMultiplier": 3.06,
+      "lowerMultiplier": 1.24,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038997:week_1:offensive_touchdowns": [
@@ -15965,10 +15965,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.75,
-      "lowerMultiplier": 0.66,
+      "higherMultiplier": 3.13,
+      "lowerMultiplier": 1.26,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037740:week_1:offensive_touchdowns": [
@@ -15997,10 +15997,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.76,
-      "lowerMultiplier": 0.65,
+      "higherMultiplier": 3.15,
+      "lowerMultiplier": 1.24,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039855:week_1:offensive_touchdowns": [
@@ -16029,10 +16029,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.79,
-      "lowerMultiplier": 0.65,
+      "higherMultiplier": 3.03,
+      "lowerMultiplier": 1.26,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0034348:week_1:offensive_touchdowns": [
@@ -16061,8 +16061,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.75,
-      "lowerMultiplier": 0.65,
+      "higherMultiplier": 3.13,
+      "lowerMultiplier": 1.24,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -16093,10 +16093,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.8,
-      "lowerMultiplier": 0.65,
+      "higherMultiplier": 3.13,
+      "lowerMultiplier": 1.24,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0035719:week_1:offensive_touchdowns": [
@@ -16125,10 +16125,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.83,
-      "lowerMultiplier": 0.64,
+      "higherMultiplier": 3.26,
+      "lowerMultiplier": 1.22,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0041438:week_1:offensive_touchdowns": [
@@ -16157,10 +16157,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.85,
-      "lowerMultiplier": 0.64,
+      "higherMultiplier": 3.29,
+      "lowerMultiplier": 1.22,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038559:week_1:offensive_touchdowns": [
@@ -16189,10 +16189,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.86,
-      "lowerMultiplier": 0.64,
+      "higherMultiplier": 3.31,
+      "lowerMultiplier": 1.22,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039893:week_1:offensive_touchdowns": [
@@ -16221,8 +16221,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.93,
-      "lowerMultiplier": 0.64,
+      "higherMultiplier": 3.32,
+      "lowerMultiplier": 1.22,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -16285,10 +16285,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.93,
-      "lowerMultiplier": 0.63,
+      "higherMultiplier": 3.29,
+      "lowerMultiplier": 1.22,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038935:week_1:offensive_touchdowns": [
@@ -16317,10 +16317,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.96,
-      "lowerMultiplier": 0.63,
+      "higherMultiplier": 3.63,
+      "lowerMultiplier": 1.18,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040583:week_1:offensive_touchdowns": [
@@ -16349,10 +16349,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.98,
-      "lowerMultiplier": 0.63,
+      "higherMultiplier": 3.5,
+      "lowerMultiplier": 1.2,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036971:week_1:offensive_touchdowns": [
@@ -16381,8 +16381,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.08,
-      "lowerMultiplier": 0.62,
+      "higherMultiplier": 3.55,
+      "lowerMultiplier": 1.18,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -16413,8 +16413,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.95,
-      "lowerMultiplier": 0.63,
+      "higherMultiplier": 3.45,
+      "lowerMultiplier": 1.2,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -16445,10 +16445,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.07,
-      "lowerMultiplier": 0.62,
+      "higherMultiplier": 3.65,
+      "lowerMultiplier": 1.18,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0033553:week_1:offensive_touchdowns": [
@@ -16477,8 +16477,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.29,
-      "lowerMultiplier": 0.61,
+      "higherMultiplier": 4,
+      "lowerMultiplier": 1.16,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -16509,10 +16509,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.16,
-      "lowerMultiplier": 0.61,
+      "higherMultiplier": 3.79,
+      "lowerMultiplier": 1.16,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0035229:week_1:offensive_touchdowns": [
@@ -16541,8 +16541,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.11,
-      "lowerMultiplier": 0.61,
+      "higherMultiplier": 3.71,
+      "lowerMultiplier": 1.16,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -16573,10 +16573,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.25,
-      "lowerMultiplier": 0.61,
+      "higherMultiplier": 3.94,
+      "lowerMultiplier": 1.16,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038393:week_1:offensive_touchdowns": [
@@ -16605,10 +16605,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.26,
-      "lowerMultiplier": 0.61,
+      "higherMultiplier": 3.95,
+      "lowerMultiplier": 1.16,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036550:week_1:offensive_touchdowns": [
@@ -16637,10 +16637,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.3,
-      "lowerMultiplier": 0.6,
+      "higherMultiplier": 4.01,
+      "lowerMultiplier": 1.15,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040743:week_1:offensive_touchdowns": [
@@ -16669,10 +16669,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.24,
-      "lowerMultiplier": 0.6,
+      "higherMultiplier": 3.92,
+      "lowerMultiplier": 1.15,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0034837:week_1:offensive_touchdowns": [
@@ -16701,10 +16701,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.46,
-      "lowerMultiplier": 0.6,
+      "higherMultiplier": 4.27,
+      "lowerMultiplier": 1.15,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036894:week_1:offensive_touchdowns": [
@@ -16733,8 +16733,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.37,
-      "lowerMultiplier": 0.6,
+      "higherMultiplier": 4.24,
+      "lowerMultiplier": 1.15,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -16765,10 +16765,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.3,
-      "lowerMultiplier": 0.61,
+      "higherMultiplier": 4.09,
+      "lowerMultiplier": 1.16,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0032764:week_1:offensive_touchdowns": [
@@ -16797,10 +16797,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.79,
-      "lowerMultiplier": 1.19,
+      "higherMultiplier": 1.5,
+      "lowerMultiplier": 2.2,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036223:week_1:offensive_touchdowns": [
@@ -16829,10 +16829,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.87,
-      "lowerMultiplier": 1.12,
+      "higherMultiplier": 1.64,
+      "lowerMultiplier": 2.08,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0034844:week_1:offensive_touchdowns": [
@@ -16861,10 +16861,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.9,
-      "lowerMultiplier": 1.06,
+      "higherMultiplier": 1.69,
+      "lowerMultiplier": 1.97,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036997:week_1:offensive_touchdowns": [
@@ -16893,10 +16893,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.9,
-      "lowerMultiplier": 1.06,
+      "higherMultiplier": 1.69,
+      "lowerMultiplier": 1.97,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037840:week_1:offensive_touchdowns": [
@@ -16925,10 +16925,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.95,
-      "lowerMultiplier": 1.04,
+      "higherMultiplier": 1.78,
+      "lowerMultiplier": 1.94,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036973:week_1:offensive_touchdowns": [
@@ -16957,10 +16957,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.08,
-      "lowerMultiplier": 0.9,
+      "higherMultiplier": 2.01,
+      "lowerMultiplier": 1.69,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036963:week_1:offensive_touchdowns": [
@@ -16989,10 +16989,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.1,
-      "lowerMultiplier": 0.87,
+      "higherMultiplier": 2.04,
+      "lowerMultiplier": 1.64,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0034857:week_1:offensive_touchdowns": [
@@ -17021,10 +17021,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.11,
-      "lowerMultiplier": 0.86,
+      "higherMultiplier": 2.06,
+      "lowerMultiplier": 1.62,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036555:week_1:offensive_touchdowns": [
@@ -17053,10 +17053,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.12,
-      "lowerMultiplier": 0.85,
+      "higherMultiplier": 2.06,
+      "lowerMultiplier": 1.62,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037248:week_1:offensive_touchdowns": [
@@ -17085,10 +17085,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.12,
-      "lowerMultiplier": 0.85,
+      "higherMultiplier": 2.08,
+      "lowerMultiplier": 1.61,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0035685:week_1:offensive_touchdowns": [
@@ -17117,10 +17117,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.12,
-      "lowerMultiplier": 0.83,
+      "higherMultiplier": 2.08,
+      "lowerMultiplier": 1.57,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039075:week_1:offensive_touchdowns": [
@@ -17149,8 +17149,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.16,
-      "lowerMultiplier": 0.8,
+      "higherMultiplier": 2.14,
+      "lowerMultiplier": 1.52,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -17181,10 +17181,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.16,
-      "lowerMultiplier": 0.8,
+      "higherMultiplier": 2.14,
+      "lowerMultiplier": 1.52,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0041512:week_1:offensive_touchdowns": [
@@ -17213,8 +17213,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.18,
-      "lowerMultiplier": 0.8,
+      "higherMultiplier": 2.18,
+      "lowerMultiplier": 1.52,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -17245,8 +17245,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.23,
-      "lowerMultiplier": 0.77,
+      "higherMultiplier": 2.26,
+      "lowerMultiplier": 1.46,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -17277,10 +17277,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.26,
-      "lowerMultiplier": 0.76,
+      "higherMultiplier": 2.31,
+      "lowerMultiplier": 1.44,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037228:week_1:offensive_touchdowns": [
@@ -17309,8 +17309,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.31,
-      "lowerMultiplier": 0.75,
+      "higherMultiplier": 2.33,
+      "lowerMultiplier": 1.44,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -17341,10 +17341,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.28,
-      "lowerMultiplier": 0.76,
+      "higherMultiplier": 2.35,
+      "lowerMultiplier": 1.44,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036912:week_1:offensive_touchdowns": [
@@ -17373,10 +17373,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.32,
-      "lowerMultiplier": 0.74,
+      "higherMultiplier": 2.42,
+      "lowerMultiplier": 1.41,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039067:week_1:offensive_touchdowns": [
@@ -17405,10 +17405,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.33,
-      "lowerMultiplier": 0.74,
+      "higherMultiplier": 2.43,
+      "lowerMultiplier": 1.41,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038996:week_1:offensive_touchdowns": [
@@ -17437,8 +17437,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.54,
-      "lowerMultiplier": 0.69,
+      "higherMultiplier": 2.78,
+      "lowerMultiplier": 1.31,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -17469,10 +17469,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.4,
-      "lowerMultiplier": 0.72,
+      "higherMultiplier": 2.55,
+      "lowerMultiplier": 1.37,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039064:week_1:offensive_touchdowns": [
@@ -17501,10 +17501,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.4,
-      "lowerMultiplier": 0.72,
+      "higherMultiplier": 2.55,
+      "lowerMultiplier": 1.37,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037240:week_1:offensive_touchdowns": [
@@ -17533,10 +17533,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.39,
-      "lowerMultiplier": 0.72,
+      "higherMultiplier": 2.53,
+      "lowerMultiplier": 1.37,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038544:week_1:offensive_touchdowns": [
@@ -17565,8 +17565,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.47,
-      "lowerMultiplier": 0.71,
+      "higherMultiplier": 2.67,
+      "lowerMultiplier": 1.35,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -17597,8 +17597,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.5,
-      "lowerMultiplier": 0.7,
+      "higherMultiplier": 2.72,
+      "lowerMultiplier": 1.33,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -17629,10 +17629,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.49,
-      "lowerMultiplier": 0.7,
+      "higherMultiplier": 2.7,
+      "lowerMultiplier": 1.33,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037664:week_1:offensive_touchdowns": [
@@ -17661,10 +17661,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.5,
-      "lowerMultiplier": 0.7,
+      "higherMultiplier": 2.72,
+      "lowerMultiplier": 1.33,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0034753:week_1:offensive_touchdowns": [
@@ -17693,10 +17693,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.47,
-      "lowerMultiplier": 0.7,
+      "higherMultiplier": 2.67,
+      "lowerMultiplier": 1.33,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0034796:week_1:offensive_touchdowns": [
@@ -17725,10 +17725,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.47,
-      "lowerMultiplier": 0.7,
+      "higherMultiplier": 2.67,
+      "lowerMultiplier": 1.33,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040124:week_1:offensive_touchdowns": [
@@ -17757,10 +17757,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.5,
-      "lowerMultiplier": 0.7,
+      "higherMultiplier": 2.6,
+      "lowerMultiplier": 1.35,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040691:week_1:offensive_touchdowns": [
@@ -17789,10 +17789,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.51,
-      "lowerMultiplier": 0.69,
+      "higherMultiplier": 2.73,
+      "lowerMultiplier": 1.31,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038128:week_1:offensive_touchdowns": [
@@ -17821,8 +17821,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.57,
-      "lowerMultiplier": 0.68,
+      "higherMultiplier": 2.72,
+      "lowerMultiplier": 1.31,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -17853,10 +17853,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.57,
-      "lowerMultiplier": 0.68,
+      "higherMultiplier": 2.83,
+      "lowerMultiplier": 1.29,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039299:week_1:offensive_touchdowns": [
@@ -17885,10 +17885,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.61,
-      "lowerMultiplier": 0.67,
+      "higherMultiplier": 2.9,
+      "lowerMultiplier": 1.28,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0033288:week_1:offensive_touchdowns": [
@@ -17917,8 +17917,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.72,
-      "lowerMultiplier": 0.66,
+      "higherMultiplier": 3.08,
+      "lowerMultiplier": 1.26,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -17949,10 +17949,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.65,
-      "lowerMultiplier": 0.67,
+      "higherMultiplier": 2.96,
+      "lowerMultiplier": 1.28,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039491:week_1:offensive_touchdowns": [
@@ -17981,8 +17981,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.74,
-      "lowerMultiplier": 0.65,
+      "higherMultiplier": 3.05,
+      "lowerMultiplier": 1.24,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -18013,10 +18013,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.69,
-      "lowerMultiplier": 0.66,
+      "higherMultiplier": 3.03,
+      "lowerMultiplier": 1.26,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039146:week_1:offensive_touchdowns": [
@@ -18045,8 +18045,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.82,
-      "lowerMultiplier": 0.65,
+      "higherMultiplier": 3.24,
+      "lowerMultiplier": 1.24,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -18077,8 +18077,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.77,
-      "lowerMultiplier": 0.65,
+      "higherMultiplier": 3.16,
+      "lowerMultiplier": 1.24,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -18109,10 +18109,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.75,
-      "lowerMultiplier": 0.66,
+      "higherMultiplier": 3.13,
+      "lowerMultiplier": 1.26,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0033526:week_1:offensive_touchdowns": [
@@ -18141,10 +18141,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.76,
-      "lowerMultiplier": 0.65,
+      "higherMultiplier": 3.28,
+      "lowerMultiplier": 1.24,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0033921:week_1:offensive_touchdowns": [
@@ -18173,10 +18173,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.79,
-      "lowerMultiplier": 0.65,
+      "higherMultiplier": 3.1,
+      "lowerMultiplier": 1.26,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0035228:week_1:offensive_touchdowns": [
@@ -18205,10 +18205,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.86,
-      "lowerMultiplier": 0.64,
+      "higherMultiplier": 3.31,
+      "lowerMultiplier": 1.22,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038129:week_1:offensive_touchdowns": [
@@ -18237,10 +18237,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.82,
-      "lowerMultiplier": 0.64,
+      "higherMultiplier": 3.24,
+      "lowerMultiplier": 1.22,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0034351:week_1:offensive_touchdowns": [
@@ -18269,10 +18269,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.85,
-      "lowerMultiplier": 0.64,
+      "higherMultiplier": 3.29,
+      "lowerMultiplier": 1.22,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037545:week_1:offensive_touchdowns": [
@@ -18301,10 +18301,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.85,
-      "lowerMultiplier": 0.64,
+      "higherMultiplier": 3.29,
+      "lowerMultiplier": 1.22,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037256:week_1:offensive_touchdowns": [
@@ -18333,10 +18333,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.88,
-      "lowerMultiplier": 0.64,
+      "higherMultiplier": 3.34,
+      "lowerMultiplier": 1.22,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040663:week_1:offensive_touchdowns": [
@@ -18365,10 +18365,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.94,
-      "lowerMultiplier": 0.64,
+      "higherMultiplier": 3.57,
+      "lowerMultiplier": 1.2,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0033908:week_1:offensive_touchdowns": [
@@ -18397,10 +18397,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.91,
-      "lowerMultiplier": 0.63,
+      "higherMultiplier": 3.39,
+      "lowerMultiplier": 1.2,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038933:week_1:offensive_touchdowns": [
@@ -18429,10 +18429,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.96,
-      "lowerMultiplier": 0.63,
+      "higherMultiplier": 3.47,
+      "lowerMultiplier": 1.2,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0041035:week_1:offensive_touchdowns": [
@@ -18461,10 +18461,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.98,
-      "lowerMultiplier": 0.63,
+      "higherMultiplier": 3.5,
+      "lowerMultiplier": 1.2,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039391:week_1:offensive_touchdowns": [
@@ -18493,10 +18493,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.99,
-      "lowerMultiplier": 0.63,
-      "status": "removed",
-      "changeType": "removed"
+      "higherMultiplier": 3.52,
+      "lowerMultiplier": 1.2,
+      "status": "open",
+      "changeType": "restored"
     }
   ],
   "2026:underdog:00-0034383:week_1:offensive_touchdowns": [
@@ -18525,10 +18525,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.02,
-      "lowerMultiplier": 0.63,
+      "higherMultiplier": 3.57,
+      "lowerMultiplier": 1.2,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037816:week_1:offensive_touchdowns": [
@@ -18557,10 +18557,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.04,
-      "lowerMultiplier": 0.63,
+      "higherMultiplier": 3.6,
+      "lowerMultiplier": 1.2,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039793:week_1:offensive_touchdowns": [
@@ -18589,8 +18589,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.05,
-      "lowerMultiplier": 0.62,
+      "higherMultiplier": 3.62,
+      "lowerMultiplier": 1.18,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -18621,10 +18621,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.15,
-      "lowerMultiplier": 0.62,
+      "higherMultiplier": 3.78,
+      "lowerMultiplier": 1.18,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036040:week_1:offensive_touchdowns": [
@@ -18653,10 +18653,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.17,
-      "lowerMultiplier": 0.61,
+      "higherMultiplier": 3.81,
+      "lowerMultiplier": 1.16,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038608:week_1:offensive_touchdowns": [
@@ -18685,10 +18685,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.23,
-      "lowerMultiplier": 0.61,
+      "higherMultiplier": 3.9,
+      "lowerMultiplier": 1.16,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040727:week_1:offensive_touchdowns": [
@@ -18717,10 +18717,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.25,
-      "lowerMultiplier": 0.61,
+      "higherMultiplier": 3.94,
+      "lowerMultiplier": 1.16,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039851:week_1:offensive_touchdowns": [
@@ -18749,8 +18749,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.21,
-      "lowerMultiplier": 0.61,
+      "higherMultiplier": 3.87,
+      "lowerMultiplier": 1.16,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -18781,10 +18781,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.31,
-      "lowerMultiplier": 0.6,
+      "higherMultiplier": 4.14,
+      "lowerMultiplier": 1.15,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036259:week_1:offensive_touchdowns": [
@@ -18813,8 +18813,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.34,
-      "lowerMultiplier": 0.6,
+      "higherMultiplier": 4.08,
+      "lowerMultiplier": 1.15,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -18845,10 +18845,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.41,
-      "lowerMultiplier": 0.6,
+      "higherMultiplier": 4.19,
+      "lowerMultiplier": 1.15,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0035662:week_1:offensive_touchdowns": [
@@ -18877,10 +18877,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.46,
-      "lowerMultiplier": 0.6,
+      "higherMultiplier": 4.27,
+      "lowerMultiplier": 1.15,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039890:week_1:offensive_touchdowns": [
@@ -18909,10 +18909,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.46,
-      "lowerMultiplier": 0.6,
+      "higherMultiplier": 4.27,
+      "lowerMultiplier": 1.15,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0030565:week_1:passing_touchdowns": [
@@ -18941,10 +18941,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.73,
-      "lowerMultiplier": 1.38,
+      "higherMultiplier": 1.39,
+      "lowerMultiplier": 2.52,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0033537:week_1:passing_touchdowns": [
@@ -18973,10 +18973,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.82,
-      "lowerMultiplier": 1.15,
+      "higherMultiplier": 1.55,
+      "lowerMultiplier": 2.13,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036945:week_1:passing_touchdowns": [
@@ -19005,8 +19005,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.36,
-      "lowerMultiplier": 0.73,
+      "higherMultiplier": 2.48,
+      "lowerMultiplier": 1.39,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -19037,10 +19037,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.76,
-      "lowerMultiplier": 1.28,
+      "higherMultiplier": 1.44,
+      "lowerMultiplier": 2.35,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:prizepicks:00-0033077:week_1:fantasy_score": [
@@ -19169,10 +19169,10 @@
       "line": 7.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1,
-      "lowerMultiplier": 1,
+      "higherMultiplier": 1.87,
+      "lowerMultiplier": 1.87,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039075:week_1:receptions": [
@@ -19191,10 +19191,10 @@
       "line": 7.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.11,
-      "lowerMultiplier": 0.86,
+      "higherMultiplier": 2.06,
+      "lowerMultiplier": 1.62,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036358:week_1:receptions": [
@@ -19213,10 +19213,10 @@
       "line": 6.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.11,
-      "lowerMultiplier": 0.84,
+      "higherMultiplier": 2.06,
+      "lowerMultiplier": 1.59,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037239:week_1:receptions": [
@@ -19235,10 +19235,10 @@
       "line": 6.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.05,
-      "lowerMultiplier": 0.91,
+      "higherMultiplier": 1.96,
+      "lowerMultiplier": 1.71,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038543:week_1:receptions": [
@@ -19257,10 +19257,10 @@
       "line": 6.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.04,
-      "lowerMultiplier": 0.91,
+      "higherMultiplier": 1.94,
+      "lowerMultiplier": 1.71,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039338:week_1:receptions": [
@@ -19279,10 +19279,10 @@
       "line": 5.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.95,
-      "lowerMultiplier": 1.04,
+      "higherMultiplier": 1.78,
+      "lowerMultiplier": 1.94,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036912:week_1:receptions": [
@@ -19301,10 +19301,10 @@
       "line": 5.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.12,
-      "lowerMultiplier": 0.85,
+      "higherMultiplier": 2.08,
+      "lowerMultiplier": 1.61,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039067:week_1:receptions": [
@@ -19323,10 +19323,10 @@
       "line": 5.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1,
-      "lowerMultiplier": 1,
+      "higherMultiplier": 1.87,
+      "lowerMultiplier": 1.87,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037744:week_1:receptions": [
@@ -19345,8 +19345,8 @@
       "line": 5.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.87,
-      "lowerMultiplier": 1.09,
+      "higherMultiplier": 1.64,
+      "lowerMultiplier": 2.02,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -19367,10 +19367,10 @@
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.91,
-      "lowerMultiplier": 1.04,
+      "higherMultiplier": 1.71,
+      "lowerMultiplier": 1.94,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039337:week_1:receptions": [
@@ -19389,10 +19389,10 @@
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.84,
-      "lowerMultiplier": 1.11,
+      "higherMultiplier": 1.59,
+      "lowerMultiplier": 2.06,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040663:week_1:receptions": [
@@ -19411,8 +19411,8 @@
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.86,
-      "lowerMultiplier": 1.11,
+      "higherMultiplier": 1.62,
+      "lowerMultiplier": 2.06,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -19433,10 +19433,10 @@
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.07,
-      "lowerMultiplier": 0.9,
+      "higherMultiplier": 1.99,
+      "lowerMultiplier": 1.69,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0035659:week_1:receptions": [
@@ -19455,10 +19455,10 @@
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1,
-      "lowerMultiplier": 1,
+      "higherMultiplier": 1.87,
+      "lowerMultiplier": 1.87,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037247:week_1:receptions": [
@@ -19477,10 +19477,10 @@
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.86,
-      "lowerMultiplier": 1.11,
+      "higherMultiplier": 1.62,
+      "lowerMultiplier": 2.06,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0030506:week_1:receptions": [
@@ -19499,8 +19499,8 @@
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.15,
-      "lowerMultiplier": 0.82,
+      "higherMultiplier": 2.13,
+      "lowerMultiplier": 1.55,
       "status": "open",
       "changeType": "line_increased"
     }
@@ -19521,8 +19521,8 @@
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.84,
-      "lowerMultiplier": 1.11,
+      "higherMultiplier": 1.57,
+      "lowerMultiplier": 2.09,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -19543,8 +19543,8 @@
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.12,
-      "lowerMultiplier": 0.86,
+      "higherMultiplier": 2.08,
+      "lowerMultiplier": 1.62,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -19565,10 +19565,10 @@
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.89,
-      "lowerMultiplier": 1.08,
+      "higherMultiplier": 1.68,
+      "lowerMultiplier": 2.01,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0041035:week_1:receptions": [
@@ -19587,10 +19587,10 @@
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.1,
-      "lowerMultiplier": 0.85,
+      "higherMultiplier": 2.04,
+      "lowerMultiplier": 1.61,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038124:week_1:receptions": [
@@ -19609,8 +19609,8 @@
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1,
-      "lowerMultiplier": 1,
+      "higherMultiplier": 1.87,
+      "lowerMultiplier": 1.87,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -19631,8 +19631,8 @@
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.94,
-      "lowerMultiplier": 1.05,
+      "higherMultiplier": 1.76,
+      "lowerMultiplier": 1.96,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -19653,8 +19653,8 @@
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.84,
-      "lowerMultiplier": 1.12,
+      "higherMultiplier": 1.59,
+      "lowerMultiplier": 2.08,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -19675,8 +19675,8 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.8,
-      "lowerMultiplier": 1.16,
+      "higherMultiplier": 1.52,
+      "lowerMultiplier": 2.14,
       "status": "open",
       "changeType": "line_decreased"
     }
@@ -19697,10 +19697,10 @@
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.09,
-      "lowerMultiplier": 0.88,
+      "higherMultiplier": 2.02,
+      "lowerMultiplier": 1.66,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038606:week_1:receptions": [
@@ -19719,10 +19719,10 @@
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.84,
-      "lowerMultiplier": 1.1,
+      "higherMultiplier": 1.64,
+      "lowerMultiplier": 2.04,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0041438:week_1:receptions": [
@@ -19741,10 +19741,10 @@
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.05,
-      "lowerMultiplier": 0.94,
+      "higherMultiplier": 1.96,
+      "lowerMultiplier": 1.76,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038134:week_1:receptions": [
@@ -19763,8 +19763,8 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.12,
-      "lowerMultiplier": 0.86,
+      "higherMultiplier": 2.08,
+      "lowerMultiplier": 1.62,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -19785,8 +19785,8 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.83,
-      "lowerMultiplier": 1.13,
+      "higherMultiplier": 1.57,
+      "lowerMultiplier": 2.09,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -19807,10 +19807,10 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.89,
-      "lowerMultiplier": 1.08,
+      "higherMultiplier": 1.68,
+      "lowerMultiplier": 2.01,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040784:week_1:receptions": [
@@ -19826,13 +19826,13 @@
     },
     {
       "date": "2026-08-28",
-      "line": 1.5,
+      "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.77,
-      "lowerMultiplier": 1.23,
+      "higherMultiplier": 2.25,
+      "lowerMultiplier": 1.48,
       "status": "open",
-      "changeType": "line_decreased"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037816:week_1:receptions": [
@@ -19851,8 +19851,8 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.81,
-      "lowerMultiplier": 1.17,
+      "higherMultiplier": 1.54,
+      "lowerMultiplier": 2.16,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -19873,8 +19873,8 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.84,
-      "lowerMultiplier": 1.12,
+      "higherMultiplier": 1.59,
+      "lowerMultiplier": 2.08,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -19895,10 +19895,10 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.9,
-      "lowerMultiplier": 1.07,
+      "higherMultiplier": 1.69,
+      "lowerMultiplier": 1.99,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0034844:week_1:receptions": [
@@ -19917,10 +19917,10 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.19,
-      "lowerMultiplier": 0.8,
+      "higherMultiplier": 2.2,
+      "lowerMultiplier": 1.52,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038120:week_1:receptions": [
@@ -19939,10 +19939,10 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.07,
-      "lowerMultiplier": 0.89,
+      "higherMultiplier": 1.99,
+      "lowerMultiplier": 1.68,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039893:week_1:receptions": [
@@ -19961,10 +19961,10 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1,
-      "lowerMultiplier": 1,
+      "higherMultiplier": 1.87,
+      "lowerMultiplier": 1.87,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040715:week_1:receptions": [
@@ -19983,10 +19983,10 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.13,
-      "lowerMultiplier": 0.82,
+      "higherMultiplier": 2.14,
+      "lowerMultiplier": 1.55,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037838:week_1:receptions": [
@@ -20005,10 +20005,10 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.83,
-      "lowerMultiplier": 1.15,
+      "higherMultiplier": 1.57,
+      "lowerMultiplier": 2.08,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0033908:week_1:receptions": [
@@ -20027,8 +20027,8 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.81,
-      "lowerMultiplier": 1.16,
+      "higherMultiplier": 1.54,
+      "lowerMultiplier": 2.14,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -20049,10 +20049,10 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1,
-      "lowerMultiplier": 1,
+      "higherMultiplier": 1.87,
+      "lowerMultiplier": 1.87,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039410:week_1:receptions": [
@@ -20071,10 +20071,10 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.08,
-      "lowerMultiplier": 0.89,
+      "higherMultiplier": 2.01,
+      "lowerMultiplier": 1.68,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037834:week_1:passing_touchdowns": [
@@ -20093,8 +20093,8 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.05,
-      "lowerMultiplier": 0.95,
+      "higherMultiplier": 1.96,
+      "lowerMultiplier": 1.78,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -20115,8 +20115,8 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.09,
-      "lowerMultiplier": 0.88,
+      "higherMultiplier": 2.02,
+      "lowerMultiplier": 1.66,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -20137,8 +20137,8 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.06,
-      "lowerMultiplier": 0.9,
+      "higherMultiplier": 1.97,
+      "lowerMultiplier": 1.69,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -20159,10 +20159,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.8,
-      "lowerMultiplier": 1.17,
+      "higherMultiplier": 1.52,
+      "lowerMultiplier": 2.16,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038621:week_1:receptions": [
@@ -20181,8 +20181,8 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.78,
-      "lowerMultiplier": 1.22,
+      "higherMultiplier": 1.48,
+      "lowerMultiplier": 2.25,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -20203,10 +20203,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 0.88,
-      "lowerMultiplier": 1.08,
+      "higherMultiplier": 1.62,
+      "lowerMultiplier": 2.08,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0035261:week_1:receptions": [
@@ -20225,10 +20225,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.04,
-      "lowerMultiplier": 0.91,
+      "higherMultiplier": 1.94,
+      "lowerMultiplier": 1.71,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038104:week_1:receptions": [
@@ -20247,10 +20247,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1,
-      "lowerMultiplier": 1,
+      "higherMultiplier": 1.87,
+      "lowerMultiplier": 1.87,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039040:week_1:offensive_touchdowns": [
@@ -20269,10 +20269,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1,
-      "lowerMultiplier": 1,
+      "higherMultiplier": 1.87,
+      "lowerMultiplier": 1.87,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036900:week_1:offensive_touchdowns": [
@@ -20291,10 +20291,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1,
-      "lowerMultiplier": 1,
+      "higherMultiplier": 1.87,
+      "lowerMultiplier": 1.87,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039880:week_1:offensive_touchdowns": [
@@ -20313,10 +20313,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.46,
-      "lowerMultiplier": 0.6,
+      "higherMultiplier": 4.11,
+      "lowerMultiplier": 1.15,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040878:week_1:offensive_touchdowns": [
@@ -20335,10 +20335,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1,
-      "lowerMultiplier": 1,
+      "higherMultiplier": 1.87,
+      "lowerMultiplier": 1.87,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0035700:week_1:offensive_touchdowns": [
@@ -20357,10 +20357,22 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.05,
-      "lowerMultiplier": 0.94,
+      "higherMultiplier": 1.96,
+      "lowerMultiplier": 1.76,
       "status": "open",
       "changeType": "odds_changed"
+    }
+  ],
+  "2026:prizepicks:00-0037291:week_1:receiving_yards": [
+    {
+      "date": "2026-08-28",
+      "line": 24.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "opened"
     }
   ],
   "2026:prizepicks:00-0031381:week_1:fantasy_score": [
@@ -20519,14 +20531,122 @@
       "changeType": "opened"
     }
   ],
+  "2026:underdog:00-0037740:week_1:receptions": [
+    {
+      "date": "2026-08-28",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.04,
+      "lowerMultiplier": 1.61,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:underdog:00-0036875:week_1:receptions": [
+    {
+      "date": "2026-08-28",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.09,
+      "lowerMultiplier": 1.57,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:underdog:00-0036355:week_1:passing_touchdowns": [
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.64,
+      "lowerMultiplier": 2.02,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:underdog:00-0029604:week_1:passing_touchdowns": [
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.21,
+      "lowerMultiplier": 1.52,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:underdog:00-0036875:week_1:offensive_touchdowns": [
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.26,
+      "lowerMultiplier": 1.46,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:underdog:00-0039915:week_1:offensive_touchdowns": [
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.58,
+      "lowerMultiplier": 1.37,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:underdog:00-0040734:week_1:offensive_touchdowns": [
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.67,
+      "lowerMultiplier": 1.35,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:underdog:00-0038563:week_1:offensive_touchdowns": [
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 3.24,
+      "lowerMultiplier": 1.24,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
   "2026:underdog:00-0038797:week_1:offensive_touchdowns": [
     {
       "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.46,
-      "lowerMultiplier": 0.6,
+      "higherMultiplier": 4.27,
+      "lowerMultiplier": 1.15,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:underdog:00-0040666:week_1:offensive_touchdowns": [
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.62,
+      "lowerMultiplier": 2.04,
       "status": "open",
       "changeType": "opened"
     }
