@@ -149,18 +149,30 @@ async function scrapeFanDuelPage() {
   await sleep(250);
 
   const outcomesByMarket = new Map();
-  const readOutcomes = (marketLabel) => [...document.querySelectorAll('[role="button"][aria-label]')]
-    .map((element) => element.getAttribute("aria-label")?.trim() || "")
-    .filter((label) => label.startsWith(`${marketLabel}, `) && outcomePattern.test(label));
+  const readOutcomeIndex = () => {
+    const index = new Map();
+    for (const element of document.querySelectorAll('[role="button"][aria-label]')) {
+      const label = element.getAttribute("aria-label")?.trim() || "";
+      if (!outcomePattern.test(label)) continue;
+      const separator = label.indexOf(", ");
+      if (separator < 0) continue;
+      const marketLabel = label.slice(0, separator);
+      if (!marketLabels.has(marketLabel)) continue;
+      const outcomes = index.get(marketLabel) || [];
+      outcomes.push(label);
+      index.set(marketLabel, outcomes);
+    }
+    return index;
+  };
   const findCard = (marketLabel) => [...document.querySelectorAll('[role="button"]:not([aria-label])')]
     .find((element) => element.textContent.trim() === marketLabel);
-  const storeOutcomes = (marketLabel) => {
-    const outcomes = readOutcomes(marketLabel);
-    if (outcomes.length !== 2) return false;
+  let outcomeIndex = readOutcomeIndex();
+  const pendingLabels = [...marketLabels].filter((marketLabel) => {
+    const outcomes = outcomeIndex.get(marketLabel) || [];
+    if (outcomes.length !== 2) return true;
     outcomesByMarket.set(marketLabel, outcomes);
-    return true;
-  };
-  const pendingLabels = [...marketLabels].filter((marketLabel) => !storeOutcomes(marketLabel));
+    return false;
+  });
   const batchSize = 12;
   for (let offset = 0; offset < pendingLabels.length; offset += batchSize) {
     const batch = pendingLabels.slice(offset, offset + batchSize);
@@ -169,18 +181,38 @@ async function scrapeFanDuelPage() {
       return { rows: [], marketCount: outcomesByMarket.size, expectedMarketCount: marketLabels.size, unavailable: false };
     }
     for (const card of cards) card.click();
-    for (let attempt = 0; attempt < 30 && !batch.every((marketLabel) => readOutcomes(marketLabel).length === 2); attempt += 1) {
+    outcomeIndex = readOutcomeIndex();
+    for (let attempt = 0; attempt < 30 && !batch.every((marketLabel) => (outcomeIndex.get(marketLabel) || []).length === 2); attempt += 1) {
       await sleep(50);
+      outcomeIndex = readOutcomeIndex();
     }
     for (const marketLabel of batch) {
-      if (storeOutcomes(marketLabel)) continue;
+      let outcomes = outcomeIndex.get(marketLabel) || [];
+      if (outcomes.length === 2) {
+        outcomesByMarket.set(marketLabel, outcomes);
+        continue;
+      }
       const card = findCard(marketLabel);
       card.click();
-      for (let attempt = 0; attempt < 20 && readOutcomes(marketLabel).length !== 2; attempt += 1) await sleep(50);
-      if (!storeOutcomes(marketLabel)) {
+      for (let attempt = 0; attempt < 20 && outcomes.length !== 2; attempt += 1) {
+        await sleep(50);
+        outcomeIndex = readOutcomeIndex();
+        outcomes = outcomeIndex.get(marketLabel) || [];
+      }
+      if (outcomes.length !== 2) {
         return { rows: [], marketCount: outcomesByMarket.size, expectedMarketCount: marketLabels.size, unavailable: false };
       }
+      outcomesByMarket.set(marketLabel, outcomes);
     }
+  }
+
+  outcomeIndex = readOutcomeIndex();
+  for (const marketLabel of marketLabels) {
+    const outcomes = outcomeIndex.get(marketLabel) || [];
+    if (outcomes.length !== 2) {
+      return { rows: [], marketCount: outcomesByMarket.size, expectedMarketCount: marketLabels.size, unavailable: false };
+    }
+    outcomesByMarket.set(marketLabel, outcomes);
   }
 
   const labels = [...outcomesByMarket.values()].flat();
