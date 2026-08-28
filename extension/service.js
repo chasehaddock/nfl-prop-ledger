@@ -129,27 +129,7 @@ async function scrapeFanDuelPage() {
       .map((element) => element.getAttribute("aria-label")?.split(",")[0]?.trim() || element.textContent.trim())
       .filter((label) => seasonCardPattern.test(label) || weeklyCardPattern.test(label)),
   );
-
-  window.scrollTo(0, 0);
-  await sleep(250);
-  let marketLabels = discoverMarketLabels();
-  let stableChecks = 0;
-  let priorHeight = 0;
-  for (let attempt = 0; attempt < 200 && stableChecks < 8; attempt += 1) {
-    window.scrollBy(0, Math.max(window.innerHeight * 0.75, 500));
-    await sleep(100);
-    const discovered = discoverMarketLabels();
-    const height = document.documentElement.scrollHeight;
-    const atBottom = window.scrollY + window.innerHeight >= height - 10;
-    stableChecks = atBottom && discovered.size === marketLabels.size && height === priorHeight ? stableChecks + 1 : 0;
-    marketLabels = discovered;
-    priorHeight = height;
-  }
-  window.scrollTo(0, 0);
-  await sleep(250);
-
-  const outcomesByMarket = new Map();
-  const readOutcomeIndex = () => {
+  const readVisibleOutcomeIndex = () => {
     const index = new Map();
     for (const element of document.querySelectorAll('[role="button"][aria-label]')) {
       const label = element.getAttribute("aria-label")?.trim() || "";
@@ -157,18 +137,48 @@ async function scrapeFanDuelPage() {
       const separator = label.indexOf(", ");
       if (separator < 0) continue;
       const marketLabel = label.slice(0, separator);
-      if (!marketLabels.has(marketLabel)) continue;
-      const outcomes = index.get(marketLabel) || [];
-      outcomes.push(label);
+      const outcomes = index.get(marketLabel) || new Set();
+      outcomes.add(label);
       index.set(marketLabel, outcomes);
     }
     return index;
   };
+  const observedOutcomes = new Map();
+  const mergeVisibleOutcomes = () => {
+    for (const [marketLabel, labels] of readVisibleOutcomeIndex()) {
+      const outcomes = observedOutcomes.get(marketLabel) || new Set();
+      for (const label of labels) outcomes.add(label);
+      observedOutcomes.set(marketLabel, outcomes);
+    }
+  };
+  const outcomesFor = (marketLabel) => [...(observedOutcomes.get(marketLabel) || [])];
+
+  window.scrollTo(0, 0);
+  await sleep(250);
+  let marketLabels = discoverMarketLabels();
+  mergeVisibleOutcomes();
+  let stableChecks = 0;
+  let priorHeight = 0;
+  for (let attempt = 0; attempt < 120 && stableChecks < 6; attempt += 1) {
+    window.scrollBy(0, Math.max(window.innerHeight * 0.75, 500));
+    await sleep(100);
+    const discovered = discoverMarketLabels();
+    marketLabels = new Set([...marketLabels, ...discovered]);
+    mergeVisibleOutcomes();
+    const height = document.documentElement.scrollHeight;
+    const atBottom = window.scrollY + window.innerHeight >= height - 10;
+    stableChecks = atBottom && height === priorHeight ? stableChecks + 1 : 0;
+    priorHeight = height;
+  }
+  window.scrollTo(0, 0);
+  await sleep(250);
+  mergeVisibleOutcomes();
+
+  const outcomesByMarket = new Map();
   const findCard = (marketLabel) => [...document.querySelectorAll('[role="button"]:not([aria-label])')]
     .find((element) => element.textContent.trim() === marketLabel);
-  let outcomeIndex = readOutcomeIndex();
   const pendingLabels = [...marketLabels].filter((marketLabel) => {
-    const outcomes = outcomeIndex.get(marketLabel) || [];
+    const outcomes = outcomesFor(marketLabel);
     if (outcomes.length !== 2) return true;
     outcomesByMarket.set(marketLabel, outcomes);
     return false;
@@ -181,13 +191,13 @@ async function scrapeFanDuelPage() {
       return { rows: [], marketCount: outcomesByMarket.size, expectedMarketCount: marketLabels.size, unavailable: false };
     }
     for (const card of cards) card.click();
-    outcomeIndex = readOutcomeIndex();
-    for (let attempt = 0; attempt < 30 && !batch.every((marketLabel) => (outcomeIndex.get(marketLabel) || []).length === 2); attempt += 1) {
+    mergeVisibleOutcomes();
+    for (let attempt = 0; attempt < 30 && !batch.every((marketLabel) => outcomesFor(marketLabel).length === 2); attempt += 1) {
       await sleep(50);
-      outcomeIndex = readOutcomeIndex();
+      mergeVisibleOutcomes();
     }
     for (const marketLabel of batch) {
-      let outcomes = outcomeIndex.get(marketLabel) || [];
+      let outcomes = outcomesFor(marketLabel);
       if (outcomes.length === 2) {
         outcomesByMarket.set(marketLabel, outcomes);
         continue;
@@ -196,8 +206,8 @@ async function scrapeFanDuelPage() {
       card.click();
       for (let attempt = 0; attempt < 20 && outcomes.length !== 2; attempt += 1) {
         await sleep(50);
-        outcomeIndex = readOutcomeIndex();
-        outcomes = outcomeIndex.get(marketLabel) || [];
+        mergeVisibleOutcomes();
+        outcomes = outcomesFor(marketLabel);
       }
       if (outcomes.length !== 2) {
         return { rows: [], marketCount: outcomesByMarket.size, expectedMarketCount: marketLabels.size, unavailable: false };
@@ -206,9 +216,9 @@ async function scrapeFanDuelPage() {
     }
   }
 
-  outcomeIndex = readOutcomeIndex();
+  mergeVisibleOutcomes();
   for (const marketLabel of marketLabels) {
-    const outcomes = outcomeIndex.get(marketLabel) || [];
+    const outcomes = outcomesFor(marketLabel);
     if (outcomes.length !== 2) {
       return { rows: [], marketCount: outcomesByMarket.size, expectedMarketCount: marketLabels.size, unavailable: false };
     }
