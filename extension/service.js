@@ -152,25 +152,35 @@ async function scrapeFanDuelPage() {
   const readOutcomes = (marketLabel) => [...document.querySelectorAll('[role="button"][aria-label]')]
     .map((element) => element.getAttribute("aria-label")?.trim() || "")
     .filter((label) => label.startsWith(`${marketLabel}, `) && outcomePattern.test(label));
-
-  for (const marketLabel of marketLabels) {
-    let outcomes = readOutcomes(marketLabel);
-    if (outcomes.length !== 2) {
-      const card = [...document.querySelectorAll('[role="button"]:not([aria-label])')]
-        .find((element) => element.textContent.trim() === marketLabel);
-      if (!card) {
-        return { rows: [], marketCount: outcomesByMarket.size, expectedMarketCount: marketLabels.size, unavailable: false };
-      }
-      card.click();
-      for (let attempt = 0; attempt < 20 && outcomes.length !== 2; attempt += 1) {
-        await sleep(50);
-        outcomes = readOutcomes(marketLabel);
-      }
-    }
-    if (outcomes.length !== 2) {
+  const findCard = (marketLabel) => [...document.querySelectorAll('[role="button"]:not([aria-label])')]
+    .find((element) => element.textContent.trim() === marketLabel);
+  const storeOutcomes = (marketLabel) => {
+    const outcomes = readOutcomes(marketLabel);
+    if (outcomes.length !== 2) return false;
+    outcomesByMarket.set(marketLabel, outcomes);
+    return true;
+  };
+  const pendingLabels = [...marketLabels].filter((marketLabel) => !storeOutcomes(marketLabel));
+  const batchSize = 12;
+  for (let offset = 0; offset < pendingLabels.length; offset += batchSize) {
+    const batch = pendingLabels.slice(offset, offset + batchSize);
+    const cards = batch.map((marketLabel) => findCard(marketLabel));
+    if (cards.some((card) => !card)) {
       return { rows: [], marketCount: outcomesByMarket.size, expectedMarketCount: marketLabels.size, unavailable: false };
     }
-    outcomesByMarket.set(marketLabel, outcomes);
+    for (const card of cards) card.click();
+    for (let attempt = 0; attempt < 30 && !batch.every((marketLabel) => readOutcomes(marketLabel).length === 2); attempt += 1) {
+      await sleep(50);
+    }
+    for (const marketLabel of batch) {
+      if (storeOutcomes(marketLabel)) continue;
+      const card = findCard(marketLabel);
+      card.click();
+      for (let attempt = 0; attempt < 20 && readOutcomes(marketLabel).length !== 2; attempt += 1) await sleep(50);
+      if (!storeOutcomes(marketLabel)) {
+        return { rows: [], marketCount: outcomesByMarket.size, expectedMarketCount: marketLabels.size, unavailable: false };
+      }
+    }
   }
 
   const labels = [...outcomesByMarket.values()].flat();

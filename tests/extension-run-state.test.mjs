@@ -38,3 +38,13 @@ test("extension accelerates collection without overlapping login-sensitive sourc
   assert.match(service, /verificationMode: "validated-single-pass"/);
   assert.match(service, /Required market categories are missing/);
 });
+
+test("FanDuel expands markets in bounded batches and retains exact pair validation", async () => {
+  const service = await readFile(new URL("../extension/service.js", import.meta.url), "utf8");
+  assert.match(service, /const batchSize = 12/);
+  assert.match(service, /pendingLabels\.slice\(offset, offset \+ batchSize\)/);
+  assert.match(service, /for \(const card of cards\) card\.click\(\)/);
+  assert.match(service, /outcomes\.length !== 2/);
+  assert.match(service, /if \(!storeOutcomes\(marketLabel\)\)/);
+  assert.match(service, /expectedMarketCount: marketLabels\.size/);
+});
