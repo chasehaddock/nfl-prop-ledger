@@ -1,6 +1,6 @@
 {
   "date": "2026-08-28",
-  "capturedAt": "2026-08-28T15:41:32.841Z",
+  "capturedAt": "2026-08-28T21:45:53.687Z",
   "source": "sleeper",
   "sourceName": "Sleeper",
   "format": {
@@ -498,7 +498,7 @@
       "rank": 48,
       "adp": 47.6,
       "bye": 11,
-      "sleeperPoints": 320.76
+      "sleeperPoints": 320.8
     },
     {
       "id": "rb:david-montgomery",
@@ -528,7 +528,7 @@
       "rank": 51,
       "adp": 51.1,
       "bye": 6,
-      "sleeperPoints": 306.12
+      "sleeperPoints": 306.1
     },
     {
       "id": "wr:luther-burden",
@@ -608,7 +608,7 @@
       "rank": 59,
       "adp": 59.2,
       "bye": 10,
-      "sleeperPoints": 310.54
+      "sleeperPoints": 310.5
     },
     {
       "id": "te:sam-laporta",
@@ -658,7 +658,7 @@
       "rank": 64,
       "adp": 64.3,
       "bye": 7,
-      "sleeperPoints": 308.72
+      "sleeperPoints": 308.7
     },
     {
       "id": "wr:rome-odunze",
@@ -728,7 +728,7 @@
       "rank": 71,
       "adp": 71.2,
       "bye": 10,
-      "sleeperPoints": 299.34
+      "sleeperPoints": 299.3
     },
     {
       "id": "rb:jaylen-warren",
@@ -798,7 +798,7 @@
       "rank": 78,
       "adp": 77.8,
       "bye": 14,
-      "sleeperPoints": 303.88
+      "sleeperPoints": 303.9
     },
     {
       "id": "rb:rj-harvey",
@@ -838,7 +838,7 @@
       "rank": 82,
       "adp": 82.2,
       "bye": 7,
-      "sleeperPoints": 295.48
+      "sleeperPoints": 295.5
     },
     {
       "id": "wr:michael-wilson",
@@ -918,7 +918,7 @@
       "rank": 90,
       "adp": 91.5,
       "bye": 8,
-      "sleeperPoints": 296.54
+      "sleeperPoints": 296.5
     },
     {
       "id": "te:travis-kelce",
@@ -958,7 +958,7 @@
       "rank": 94,
       "adp": 95.8,
       "bye": 11,
-      "sleeperPoints": 280.22
+      "sleeperPoints": 280.2
     },
     {
       "id": "te:jake-ferguson",
@@ -988,7 +988,7 @@
       "rank": 97,
       "adp": 100.2,
       "bye": 7,
-      "sleeperPoints": 303.42
+      "sleeperPoints": 303.4
     },
     {
       "id": "wr:michael-pittman",
@@ -1048,7 +1048,7 @@
       "rank": 103,
       "adp": 107.3,
       "bye": 5,
-      "sleeperPoints": 286.68
+      "sleeperPoints": 286.7
     },
     {
       "id": "wr:josh-downs",
@@ -1158,7 +1158,7 @@
       "rank": 114,
       "adp": 119.4,
       "bye": 10,
-      "sleeperPoints": 295.72
+      "sleeperPoints": 295.7
     },
     {
       "id": "wr:kc-concepcion",
@@ -1258,7 +1258,7 @@
       "rank": 124,
       "adp": 133.1,
       "bye": 6,
-      "sleeperPoints": 283.46
+      "sleeperPoints": 283.5
     },
     {
       "id": "wr:de-zhaun-stribling",
@@ -1318,7 +1318,7 @@
       "rank": 130,
       "adp": 143.3,
       "bye": 10,
-      "sleeperPoints": 274.88
+      "sleeperPoints": 274.9
     },
     {
       "id": "wr:khalil-shakir",
@@ -1378,7 +1378,7 @@
       "rank": 136,
       "adp": 149.5,
       "bye": 11,
-      "sleeperPoints": 278.52
+      "sleeperPoints": 278.5
     },
     {
       "id": "te:brenton-strange",
@@ -1428,7 +1428,7 @@
       "rank": 141,
       "adp": 159,
       "bye": 6,
-      "sleeperPoints": 283.06
+      "sleeperPoints": 283.1
     },
     {
       "id": "rb:woody-marks",
@@ -1548,7 +1548,7 @@
       "rank": 153,
       "adp": 175.6,
       "bye": 11,
-      "sleeperPoints": 262.74
+      "sleeperPoints": 262.7
     },
     {
       "id": "wr:tank-dell",
@@ -1578,7 +1578,7 @@
       "rank": 156,
       "adp": 179.1,
       "bye": 13,
-      "sleeperPoints": 212.16
+      "sleeperPoints": 212.2
     },
     {
       "id": "rb:keaton-mitchell",
@@ -1638,7 +1638,7 @@
       "rank": 162,
       "adp": 185.8,
       "bye": 8,
-      "sleeperPoints": 270.94
+      "sleeperPoints": 270.9
     },
     {
       "id": "te:juwan-johnson",
@@ -1708,7 +1708,7 @@
       "rank": 169,
       "adp": 194.5,
       "bye": 6,
-      "sleeperPoints": 270.12
+      "sleeperPoints": 270.1
     },
     {
       "id": "wr:jayden-higgins",
@@ -1768,7 +1768,7 @@
       "rank": 175,
       "adp": 203.1,
       "bye": 8,
-      "sleeperPoints": 247.82
+      "sleeperPoints": 247.8
     },
     {
       "id": "qb:daniel-jones",
@@ -1778,7 +1778,7 @@
       "rank": 176,
       "adp": 203.2,
       "bye": 13,
-      "sleeperPoints": 223.54
+      "sleeperPoints": 223.5
     },
     {
       "id": "rb:braelon-allen",
@@ -1968,7 +1968,7 @@
       "rank": 195,
       "adp": 224.2,
       "bye": 6,
-      "sleeperPoints": 13.62
+      "sleeperPoints": 13.6
     },
     {
       "id": "te:mason-taylor",
@@ -2038,7 +2038,7 @@
       "rank": 202,
       "adp": 227.3,
       "bye": 5,
-      "sleeperPoints": 235.58
+      "sleeperPoints": 235.6
     },
     {
       "id": "rb:joe-mixon",
@@ -2058,7 +2058,7 @@
       "rank": 204,
       "adp": 227.6,
       "bye": 9,
-      "sleeperPoints": 227.84
+      "sleeperPoints": 227.8
     },
     {
       "id": "qb:michael-penix",
@@ -2068,7 +2068,7 @@
       "rank": 205,
       "adp": 227.9,
       "bye": 11,
-      "sleeperPoints": 143.16
+      "sleeperPoints": 143.2
     },
     {
       "id": "wr:tory-horton",
@@ -2238,7 +2238,7 @@
       "rank": 222,
       "adp": 236.1,
       "bye": 11,
-      "sleeperPoints": 97.12
+      "sleeperPoints": 97.1
     },
     {
       "id": "qb:tua-tagovailoa",
@@ -2248,7 +2248,7 @@
       "rank": 223,
       "adp": 236.5,
       "bye": 11,
-      "sleeperPoints": 92.96
+      "sleeperPoints": 93
     },
     {
       "id": "wr:antonio-williams",
@@ -2387,7 +2387,7 @@
       "position": "RB",
       "rank": 237,
       "adp": 240.6,
-      "bye": 11,
+      "bye": 6,
       "sleeperPoints": 9.6
     },
     {
@@ -2401,11 +2401,21 @@
       "sleeperPoints": 67.2
     },
     {
+      "id": "rb:henry-pearson",
+      "name": "Henry Pearson",
+      "team": "",
+      "position": "RB",
+      "rank": 239,
+      "adp": 241,
+      "bye": null,
+      "sleeperPoints": 0
+    },
+    {
       "id": "te:jake-tonges",
       "name": "Jake Tonges",
       "team": "SF",
       "position": "TE",
-      "rank": 239,
+      "rank": 240,
       "adp": 241.4,
       "bye": 8,
       "sleeperPoints": 70.8
@@ -2415,7 +2425,7 @@
       "name": "Elic Ayomanor",
       "team": "TEN",
       "position": "WR",
-      "rank": 240,
+      "rank": 241,
       "adp": 241.5,
       "bye": 9,
       "sleeperPoints": 56.7
@@ -2425,7 +2435,7 @@
       "name": "Christian Kirk",
       "team": "SF",
       "position": "WR",
-      "rank": 241,
+      "rank": 242,
       "adp": 241.7,
       "bye": 8,
       "sleeperPoints": 46.4
@@ -2435,7 +2445,7 @@
       "name": "Troy Franklin",
       "team": "DEN",
       "position": "WR",
-      "rank": 243,
+      "rank": 244,
       "adp": 241.8,
       "bye": 10,
       "sleeperPoints": 66.1
@@ -2445,17 +2455,17 @@
       "name": "Ty Simpson",
       "team": "LAR",
       "position": "QB",
-      "rank": 242,
+      "rank": 243,
       "adp": 241.8,
       "bye": 11,
-      "sleeperPoints": 13.62
+      "sleeperPoints": 13.6
     },
     {
       "id": "rb:demond-claiborne",
       "name": "Demond Claiborne",
       "team": "MIN",
       "position": "RB",
-      "rank": 245,
+      "rank": 246,
       "adp": 242,
       "bye": 6,
       "sleeperPoints": 24.8
@@ -2465,7 +2475,7 @@
       "name": "Jonathan Adams",
       "team": "",
       "position": "WR",
-      "rank": 244,
+      "rank": 245,
       "adp": 242,
       "bye": null,
       "sleeperPoints": 0
@@ -2475,7 +2485,7 @@
       "name": "Malachi Corley",
       "team": "CLE",
       "position": "WR",
-      "rank": 246,
+      "rank": 247,
       "adp": 242,
       "bye": 11,
       "sleeperPoints": 6.8
@@ -2485,7 +2495,7 @@
       "name": "Jacoby Brissett",
       "team": "ARI",
       "position": "QB",
-      "rank": 248,
+      "rank": 249,
       "adp": 243,
       "bye": 14,
       "sleeperPoints": 160
@@ -2495,7 +2505,7 @@
       "name": "Jelani Woods",
       "team": "NYJ",
       "position": "TE",
-      "rank": 247,
+      "rank": 248,
       "adp": 243,
       "bye": 13,
       "sleeperPoints": 0
@@ -2505,23 +2515,13 @@
       "name": "John Franklin",
       "team": "",
       "position": "WR",
-      "rank": 249,
+      "rank": 250,
       "adp": 243.8,
       "bye": null,
       "sleeperPoints": 0
-    },
-    {
-      "id": "rb:sean-tucker",
-      "name": "Sean Tucker",
-      "team": "TB",
-      "position": "RB",
-      "rank": 250,
-      "adp": 243.9,
-      "bye": null,
-      "sleeperPoints": 52.5
     }
   ],
-  "evidenceHash": "23319a8f50e53f0c4841dce19eabfdc89dc8c20bf7256fe7d169f1f0d53c3106",
+  "evidenceHash": "2164f6e84d6728ce42eced6f9e9f41b027ad06d4381b0d7e185b3ef40ec67722",
   "demo": false,
   "movements": [
     {

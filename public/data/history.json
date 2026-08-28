@@ -8461,8 +8461,8 @@
       "underOdds": -115,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "removed",
-      "changeType": "removed"
+      "status": "open",
+      "changeType": "restored"
     }
   ],
   "2026:draftkings:00-0031588:regular_season:receiving_yards": [
@@ -9782,13 +9782,13 @@
     },
     {
       "date": "2026-08-28",
-      "line": 699.5,
+      "line": 674.5,
       "overOdds": -110,
       "underOdds": -110,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "removed",
-      "changeType": "removed"
+      "status": "open",
+      "changeType": "restored"
     }
   ],
   "2026:draftkings:00-0035719:regular_season:receiving_yards": [
@@ -17539,8 +17539,8 @@
       "underOdds": -110,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "removed",
-      "changeType": "removed"
+      "status": "open",
+      "changeType": "restored"
     }
   ],
   "2026:draftkings:00-0039139:regular_season:receptions": [
@@ -29469,12 +29469,12 @@
     {
       "date": "2026-08-28",
       "line": 4.5,
-      "overOdds": 120,
-      "underOdds": -145,
+      "overOdds": 100,
+      "underOdds": -125,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "removed",
-      "changeType": "removed"
+      "status": "open",
+      "changeType": "restored"
     }
   ],
   "2026:draftkings:00-0031588:regular_season:receiving_touchdowns": [
@@ -66944,13 +66944,13 @@
     },
     {
       "date": "2026-08-28",
-      "line": 5.5,
+      "line": 5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0039849:regular_season:receiving_touchdowns": [
@@ -69858,13 +69858,13 @@
     },
     {
       "date": "2026-08-28",
-      "line": 3.5,
+      "line": 4,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0038559:regular_season:receiving_touchdowns": [
