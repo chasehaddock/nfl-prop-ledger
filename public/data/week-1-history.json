@@ -49,6 +49,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 265.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036442:week_1:passing_yards": [
@@ -94,6 +104,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 269.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 269.5,
       "overOdds": null,
       "underOdds": null,
@@ -153,6 +173,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 265.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033077:week_1:passing_yards": [
@@ -198,6 +228,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 259.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 259.5,
       "overOdds": null,
       "underOdds": null,
@@ -257,6 +297,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 243.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034855:week_1:passing_yards": [
@@ -302,6 +352,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 253.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 253.5,
       "overOdds": null,
       "underOdds": null,
@@ -361,6 +421,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 241.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037834:week_1:passing_yards": [
@@ -406,6 +476,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 245.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 245.5,
       "overOdds": null,
       "underOdds": null,
@@ -465,6 +545,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 239.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0039918:week_1:passing_yards": [
@@ -517,6 +607,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 235.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0036971:week_1:passing_yards": [
@@ -569,6 +669,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_increased"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 233.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035710:week_1:passing_yards": [
@@ -614,6 +724,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 231.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 231.5,
       "overOdds": null,
       "underOdds": null,
@@ -673,6 +793,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_increased"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 232.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0039851:week_1:passing_yards": [
@@ -725,6 +855,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_decreased"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 229.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0034869:week_1:passing_yards": [
@@ -770,6 +910,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 229.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 229.5,
       "overOdds": null,
       "underOdds": null,
@@ -829,6 +979,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 230.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039732:week_1:passing_yards": [
@@ -874,6 +1034,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 222.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 222.5,
       "overOdds": null,
       "underOdds": null,
@@ -933,6 +1103,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_increased"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 222.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034857:week_1:passing_yards": [
@@ -985,6 +1165,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_decreased"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 216.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039910:week_1:passing_yards": [
@@ -1030,6 +1220,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 216.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 216.5,
       "overOdds": null,
       "underOdds": null,
@@ -1089,6 +1289,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 218.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040691:week_1:passing_yards": [
@@ -1134,6 +1344,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 216.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 216.5,
       "overOdds": null,
       "underOdds": null,
@@ -1193,6 +1413,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 221.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0023459:week_1:passing_yards": [
@@ -1238,6 +1468,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 222.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 222.5,
       "overOdds": null,
       "underOdds": null,
@@ -1297,6 +1537,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 219.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039150:week_1:passing_yards": [
@@ -1342,6 +1592,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 208.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 208.5,
       "overOdds": null,
       "underOdds": null,
@@ -1401,6 +1661,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 195.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040676:week_1:passing_yards": [
@@ -1446,6 +1716,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 204.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 204.5,
       "overOdds": null,
       "underOdds": null,
@@ -1505,6 +1785,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 180.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039075:week_1:receiving_yards": [
@@ -1550,6 +1840,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 90.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 90.5,
       "overOdds": null,
       "underOdds": null,
@@ -1609,6 +1909,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 87.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0032764:week_1:rushing_yards": [
@@ -1654,6 +1964,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 87.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 87.5,
       "overOdds": null,
       "underOdds": null,
@@ -1713,6 +2033,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 86.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0038542:week_1:rushing_yards": [
@@ -1758,6 +2088,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 83.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 83.5,
       "overOdds": null,
       "underOdds": null,
@@ -1817,6 +2157,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 77.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034844:week_1:rushing_yards": [
@@ -1862,6 +2212,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 78.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 78.5,
       "overOdds": null,
       "underOdds": null,
@@ -1921,6 +2281,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 76.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039139:week_1:rushing_yards": [
@@ -1966,6 +2336,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 76.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 76.5,
       "overOdds": null,
       "underOdds": null,
@@ -2025,6 +2405,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 75.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039040:week_1:rushing_yards": [
@@ -2070,6 +2460,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 76.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 76.5,
       "overOdds": null,
       "underOdds": null,
@@ -2129,6 +2529,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 72.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036358:week_1:receiving_yards": [
@@ -2174,6 +2584,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 74.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 74.5,
       "overOdds": null,
       "underOdds": null,
@@ -2233,6 +2653,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 74.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037238:week_1:receiving_yards": [
@@ -2278,6 +2708,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 72.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 72.5,
       "overOdds": null,
       "underOdds": null,
@@ -2337,6 +2777,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 70.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039064:week_1:receiving_yards": [
@@ -2382,6 +2832,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 66.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 66.5,
       "overOdds": null,
       "underOdds": null,
@@ -2441,6 +2901,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 67.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036997:week_1:rushing_yards": [
@@ -2493,6 +2963,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 70.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0037740:week_1:receiving_yards": [
@@ -2538,6 +3018,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 62.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 62.5,
       "overOdds": null,
       "underOdds": null,
@@ -2597,6 +3087,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 65.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036912:week_1:receiving_yards": [
@@ -2642,6 +3142,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 66.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 66.5,
       "overOdds": null,
       "underOdds": null,
@@ -2701,6 +3211,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 62.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040666:week_1:rushing_yards": [
@@ -2746,6 +3266,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 65.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 65.5,
       "overOdds": null,
       "underOdds": null,
@@ -2805,6 +3335,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 63.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0038120:week_1:rushing_yards": [
@@ -2850,6 +3390,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 64.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 64.5,
       "overOdds": null,
       "underOdds": null,
@@ -2909,6 +3459,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 68.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037744:week_1:receiving_yards": [
@@ -2954,6 +3514,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 60.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 60.5,
       "overOdds": null,
       "underOdds": null,
@@ -3013,6 +3583,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 63.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040784:week_1:rushing_yards": [
@@ -3058,6 +3638,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 63.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 63.5,
       "overOdds": null,
       "underOdds": null,
@@ -3117,6 +3707,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 57.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040124:week_1:receiving_yards": [
@@ -3162,6 +3762,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 60.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 60.5,
       "overOdds": null,
       "underOdds": null,
@@ -3221,6 +3831,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 59.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035659:week_1:receiving_yards": [
@@ -3266,6 +3886,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 59.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 59.5,
       "overOdds": null,
       "underOdds": null,
@@ -3325,6 +3955,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 59.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037840:week_1:rushing_yards": [
@@ -3370,6 +4010,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 57.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 57.5,
       "overOdds": null,
       "underOdds": null,
@@ -3429,6 +4079,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 58.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035676:week_1:receiving_yards": [
@@ -3474,6 +4134,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 60.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 60.5,
       "overOdds": null,
       "underOdds": null,
@@ -3533,6 +4203,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 57.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040715:week_1:rushing_yards": [
@@ -3578,6 +4258,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 48.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 48.5,
       "overOdds": null,
       "underOdds": null,
@@ -3637,6 +4327,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 56.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037664:week_1:receiving_yards": [
@@ -3682,6 +4382,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 56.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 56.5,
       "overOdds": null,
       "underOdds": null,
@@ -3741,6 +4451,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 56.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040735:week_1:receiving_yards": [
@@ -3786,6 +4506,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 54.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 54.5,
       "overOdds": null,
       "underOdds": null,
@@ -3845,6 +4575,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 54.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035261:week_1:rushing_yards": [
@@ -3890,6 +4630,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 48.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 48.5,
       "overOdds": null,
       "underOdds": null,
@@ -3949,6 +4699,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 54.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036613:week_1:receiving_yards": [
@@ -3994,6 +4754,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 53.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 53.5,
       "overOdds": null,
       "underOdds": null,
@@ -4053,6 +4823,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_decreased"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 48.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036970:week_1:receiving_yards": [
@@ -4098,6 +4878,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 52.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 52.5,
       "overOdds": null,
       "underOdds": null,
@@ -4157,6 +4947,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 53.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038559:week_1:receiving_yards": [
@@ -4202,6 +5002,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 52.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 52.5,
       "overOdds": null,
       "underOdds": null,
@@ -4261,6 +5071,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 52.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0041438:week_1:receiving_yards": [
@@ -4313,6 +5133,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_increased"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 49.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039919:week_1:receiving_yards": [
@@ -4358,6 +5188,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 50.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 50.5,
       "overOdds": null,
       "underOdds": null,
@@ -4417,6 +5257,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 51.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035640:week_1:receiving_yards": [
@@ -4462,6 +5312,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 49.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 49.5,
       "overOdds": null,
       "underOdds": null,
@@ -4521,6 +5381,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 49.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039893:week_1:receiving_yards": [
@@ -4566,6 +5436,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 48.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 48.5,
       "overOdds": null,
       "underOdds": null,
@@ -4625,6 +5505,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 43.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0031408:week_1:receiving_yards": [
@@ -4670,6 +5560,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 47.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 47.5,
       "overOdds": null,
       "underOdds": null,
@@ -4729,6 +5629,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 46.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038117:week_1:receiving_yards": [
@@ -4781,6 +5691,16 @@
       "lowerMultiplier": null,
       "status": "not_seen",
       "changeType": "not_seen"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 47.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0040663:week_1:receiving_yards": [
@@ -4826,6 +5746,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 45.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 45.5,
       "overOdds": null,
       "underOdds": null,
@@ -4885,6 +5815,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 40.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0036252:week_1:receiving_yards": [
@@ -4930,6 +5870,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 45.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-08-28",
       "line": 45.5,
       "overOdds": null,
       "underOdds": null,
@@ -4989,6 +5939,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 42.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038128:week_1:rushing_yards": [
@@ -5034,6 +5994,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 40.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 40.5,
       "overOdds": null,
       "underOdds": null,
@@ -5093,6 +6063,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 39.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0039910:week_1:rushing_yards": [
@@ -5138,6 +6118,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 39.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 39.5,
       "overOdds": null,
       "underOdds": null,
@@ -5197,6 +6187,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 38.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033280:week_1:receiving_yards": [
@@ -5249,6 +6249,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 36.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0040734:week_1:rushing_yards": [
@@ -5301,6 +6311,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 34.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0039738:week_1:rushing_yards": [
@@ -5346,6 +6366,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 36.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 36.5,
       "overOdds": null,
       "underOdds": null,
@@ -5405,6 +6435,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_decreased"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 32.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0041035:week_1:receiving_yards": [
@@ -5450,6 +6490,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 39.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 39.5,
       "overOdds": null,
       "underOdds": null,
@@ -5509,6 +6559,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 32.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038041:week_1:receiving_yards": [
@@ -5554,6 +6614,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 28.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 28.5,
       "overOdds": null,
       "underOdds": null,
@@ -5613,6 +6683,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 31.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0041037:week_1:receiving_yards": [
@@ -5658,6 +6738,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 31.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 31.5,
       "overOdds": null,
       "underOdds": null,
@@ -5717,6 +6807,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 31.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033090:week_1:receiving_yards": [
@@ -5762,6 +6862,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 32.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 32.5,
       "overOdds": null,
       "underOdds": null,
@@ -5821,6 +6931,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 26.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035719:week_1:receiving_yards": [
@@ -5873,6 +6993,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 30.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0039040:week_1:receiving_yards": [
@@ -5918,6 +7048,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 28.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 28.5,
       "overOdds": null,
       "underOdds": null,
@@ -5977,6 +7117,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 29.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036389:week_1:rushing_yards": [
@@ -6022,6 +7172,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 29.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 29.5,
       "overOdds": null,
       "underOdds": null,
@@ -6081,6 +7241,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 31.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033908:week_1:receiving_yards": [
@@ -6133,6 +7303,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_increased"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 30.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0039793:week_1:receiving_yards": [
@@ -6178,6 +7358,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 25.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 25.5,
       "overOdds": null,
       "underOdds": null,
@@ -6237,6 +7427,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 23.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036355:week_1:rushing_yards": [
@@ -6282,6 +7482,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 22.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 22.5,
       "overOdds": null,
       "underOdds": null,
@@ -6341,6 +7551,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_decreased"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 21.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038621:week_1:receiving_yards": [
@@ -6386,6 +7606,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 20.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 20.5,
       "overOdds": null,
       "underOdds": null,
@@ -6445,6 +7675,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 13.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039918:week_1:rushing_yards": [
@@ -6490,6 +7730,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 19.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 19.5,
       "overOdds": null,
       "underOdds": null,
@@ -6549,6 +7799,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 19.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033280:week_1:fantasy_score": [
@@ -6601,6 +7861,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_decreased"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 18,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039075:week_1:fantasy_score": [
@@ -6646,6 +7916,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 18.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 18.5,
       "overOdds": null,
       "underOdds": null,
@@ -6705,6 +7985,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 17.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040743:week_1:rushing_yards": [
@@ -6750,6 +8040,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 17.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 17.5,
       "overOdds": null,
       "underOdds": null,
@@ -6809,6 +8109,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 17.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0026498:week_1:fantasy_score": [
@@ -6854,6 +8164,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 17.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 17.5,
       "overOdds": null,
       "underOdds": null,
@@ -6913,6 +8233,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 17,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034855:week_1:rushing_yards": [
@@ -6958,6 +8288,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 16.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 16.5,
       "overOdds": null,
       "underOdds": null,
@@ -7017,6 +8357,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 16.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037248:week_1:receiving_yards": [
@@ -7062,6 +8412,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 14.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 14.5,
       "overOdds": null,
       "underOdds": null,
@@ -7121,6 +8481,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 14.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039150:week_1:rushing_yards": [
@@ -7166,6 +8536,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 14.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 14.5,
       "overOdds": null,
       "underOdds": null,
@@ -7225,6 +8605,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 14.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036223:week_1:receiving_yards": [
@@ -7270,6 +8660,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 14.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 14.5,
       "overOdds": null,
       "underOdds": null,
@@ -7329,6 +8729,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 12.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036875:week_1:receiving_yards": [
@@ -7381,6 +8791,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 14.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0035676:week_1:fantasy_score": [
@@ -7426,6 +8846,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 13,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 13,
       "overOdds": null,
       "underOdds": null,
@@ -7485,6 +8915,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 10.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036997:week_1:receiving_yards": [
@@ -7530,6 +8970,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 10.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 10.5,
       "overOdds": null,
       "underOdds": null,
@@ -7589,6 +9039,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 10.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040784:week_1:receiving_yards": [
@@ -7634,6 +9094,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 9.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 9.5,
       "overOdds": null,
       "underOdds": null,
@@ -7693,6 +9163,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 8.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040676:week_1:rushing_yards": [
@@ -7738,6 +9218,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 7.5,
       "overOdds": null,
       "underOdds": null,
@@ -7797,6 +9287,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036963:week_1:receptions": [
@@ -7842,6 +9342,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 7.5,
       "overOdds": null,
       "underOdds": null,
@@ -7901,6 +9411,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039075:week_1:receptions": [
@@ -7946,6 +9466,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 7,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 7,
       "overOdds": null,
       "underOdds": null,
@@ -8005,6 +9535,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_increased"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 8.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0030565:week_1:rushing_yards": [
@@ -8050,6 +9590,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 6.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 6.5,
       "overOdds": null,
       "underOdds": null,
@@ -8109,6 +9659,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 6.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038543:week_1:receptions": [
@@ -8154,6 +9714,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 6.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 6.5,
       "overOdds": null,
       "underOdds": null,
@@ -8213,6 +9783,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 6.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036358:week_1:receptions": [
@@ -8258,6 +9838,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 6,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 6,
       "overOdds": null,
       "underOdds": null,
@@ -8317,6 +9907,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036442:week_1:rushing_yards": [
@@ -8362,6 +9962,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 5.5,
       "overOdds": null,
       "underOdds": null,
@@ -8421,6 +10031,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036322:week_1:receptions": [
@@ -8466,6 +10086,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 5.5,
       "overOdds": null,
       "underOdds": null,
@@ -8525,6 +10155,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037247:week_1:receptions": [
@@ -8570,6 +10210,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 5,
       "overOdds": null,
       "underOdds": null,
@@ -8629,6 +10279,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033280:week_1:receptions": [
@@ -8681,6 +10341,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:prizepicks:00-0031381:week_1:receptions": [
@@ -8726,6 +10396,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
@@ -8785,6 +10465,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039064:week_1:receptions": [
@@ -8830,6 +10520,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
@@ -8889,6 +10589,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0030506:week_1:receptions": [
@@ -8941,6 +10651,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 4,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0037545:week_1:receptions": [
@@ -8986,6 +10706,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
@@ -9045,6 +10775,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039918:week_1:passing_touchdowns": [
@@ -9090,6 +10830,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
@@ -9149,6 +10899,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034857:week_1:passing_touchdowns": [
@@ -9194,6 +10954,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-08-28",
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
@@ -9253,6 +11023,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0033077:week_1:passing_touchdowns": [
@@ -9298,6 +11078,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
@@ -9357,6 +11147,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:prizepicks:00-0039738:week_1:receiving_yards": [
@@ -9409,6 +11209,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_increased"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037545:week_1:rushing_yards": [
@@ -9454,6 +11264,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -9513,6 +11333,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040735:week_1:rushing_yards": [
@@ -9558,6 +11388,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -9617,6 +11457,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039064:week_1:rushing_yards": [
@@ -9662,6 +11512,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -9721,6 +11581,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:prizepicks:00-0036900:week_1:offensive_touchdowns": [
@@ -9773,6 +11643,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:prizepicks:00-0037248:week_1:offensive_touchdowns": [
@@ -9818,6 +11698,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -9877,6 +11767,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0039040:week_1:offensive_touchdowns": [
@@ -9922,6 +11822,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -9981,6 +11891,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0034844:week_1:offensive_touchdowns": [
@@ -10026,6 +11946,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -10085,6 +12015,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0038134:week_1:offensive_touchdowns": [
@@ -10137,6 +12077,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:fanduel:00-0039851:week_1:passing_touchdowns": [
@@ -10172,6 +12122,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 1.5,
+      "overOdds": 154,
+      "underOdds": -210,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-08-28",
       "line": 1.5,
       "overOdds": 154,
       "underOdds": -210,
@@ -10221,6 +12181,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": 106,
+      "underOdds": -140,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:fanduel:00-0037834:week_1:passing_touchdowns": [
@@ -10256,6 +12226,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 1.5,
+      "overOdds": -106,
+      "underOdds": -125,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-08-28",
       "line": 1.5,
       "overOdds": -106,
       "underOdds": -125,
@@ -10305,6 +12285,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": -146,
+      "underOdds": 110,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0035228:week_1:passing_yards": [
@@ -10347,6 +12337,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "restored"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 231.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0033537:week_1:passing_yards": [
@@ -10389,6 +12389,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 184.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0039894:week_1:receiving_yards": [
@@ -10431,6 +12441,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 35.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0037838:week_1:receiving_yards": [
@@ -10466,6 +12486,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 33.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 33.5,
       "overOdds": null,
       "underOdds": null,
@@ -10515,6 +12545,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 20.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0041042:week_1:receiving_yards": [
@@ -10550,6 +12590,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 20.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 20.5,
       "overOdds": null,
       "underOdds": null,
@@ -10599,6 +12649,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 13.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0037816:week_1:fantasy_score": [
@@ -10634,6 +12694,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 7.5,
       "overOdds": null,
       "underOdds": null,
@@ -10683,6 +12753,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037545:week_1:fantasy_score": [
@@ -10718,6 +12798,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 7,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 7,
       "overOdds": null,
       "underOdds": null,
@@ -10767,6 +12857,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039793:week_1:fantasy_score": [
@@ -10802,6 +12902,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 6.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 6.5,
       "overOdds": null,
       "underOdds": null,
@@ -10851,6 +12961,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0041042:week_1:receptions": [
@@ -10886,6 +13006,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-08-28",
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
@@ -10935,6 +13065,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038597:week_1:offensive_touchdowns": [
@@ -10977,6 +13117,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:prizepicks:00-0033280:week_1:rushing_touchdowns": [
@@ -11012,6 +13162,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -11061,6 +13221,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040666:week_1:rushing_touchdowns": [
@@ -11096,6 +13266,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -11145,6 +13325,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036875:week_1:receptions": [
@@ -11177,6 +13367,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0038606:week_1:receiving_yards": [
@@ -11193,6 +13393,16 @@
     {
       "date": "2026-08-27",
       "line": 50.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_increased"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 51.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
@@ -11221,6 +13431,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 48.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0034960:week_1:receiving_yards": [
@@ -11236,6 +13456,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 44.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 44.5,
       "overOdds": null,
       "underOdds": null,
@@ -11265,6 +13495,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_increased"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 38.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0038563:week_1:receiving_yards": [
@@ -11280,6 +13520,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 41.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 41.5,
       "overOdds": null,
       "underOdds": null,
@@ -11309,6 +13559,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 27.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039410:week_1:receiving_yards": [
@@ -11324,6 +13584,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 24.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 24.5,
       "overOdds": null,
       "underOdds": null,
@@ -11353,6 +13623,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 21.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037252:week_1:receiving_yards": [
@@ -11375,6 +13655,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_increased"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 22.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033537:week_1:rushing_yards": [
@@ -11390,6 +13680,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 17.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 17.5,
       "overOdds": null,
       "underOdds": null,
@@ -11419,6 +13719,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 9.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035261:week_1:receiving_yards": [
@@ -11434,6 +13744,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 7.5,
       "overOdds": null,
       "underOdds": null,
@@ -11463,6 +13783,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039337:week_1:receptions": [
@@ -11485,6 +13815,16 @@
       "lowerMultiplier": null,
       "status": "not_seen",
       "changeType": "not_seen"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "restored"
     }
   ],
   "2026:prizepicks:00-0041438:week_1:receptions": [
@@ -11500,6 +13840,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
@@ -11529,6 +13879,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036264:week_1:passing_touchdowns": [
@@ -11551,6 +13911,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:prizepicks:00-0035261:week_1:receptions": [
@@ -11566,6 +13936,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
@@ -11595,6 +13975,16 @@
       "lowerMultiplier": 0.87,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.1,
+      "lowerMultiplier": 0.87,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0034857:week_1:passing_touchdowns": [
@@ -11610,6 +14000,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.29,
+      "lowerMultiplier": 0.76,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
@@ -11639,6 +14039,16 @@
       "lowerMultiplier": 0.87,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.1,
+      "lowerMultiplier": 0.87,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0040691:week_1:passing_touchdowns": [
@@ -11654,6 +14064,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.15,
+      "lowerMultiplier": 0.81,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
@@ -11683,6 +14103,16 @@
       "lowerMultiplier": 0.79,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.14,
+      "lowerMultiplier": 0.81,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036971:week_1:passing_touchdowns": [
@@ -11703,6 +14133,16 @@
       "underOdds": null,
       "higherMultiplier": 1.09,
       "lowerMultiplier": 0.85,
+      "status": "open",
+      "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.12,
+      "lowerMultiplier": 0.84,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -11727,6 +14167,16 @@
       "lowerMultiplier": 0.8,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.2,
+      "lowerMultiplier": 0.79,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039163:week_1:passing_touchdowns": [
@@ -11742,6 +14192,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.16,
+      "lowerMultiplier": 0.81,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
@@ -11771,6 +14231,16 @@
       "lowerMultiplier": 0.81,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.18,
+      "lowerMultiplier": 0.79,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0033106:week_1:passing_touchdowns": [
@@ -11793,6 +14263,16 @@
       "lowerMultiplier": 1.12,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.83,
+      "lowerMultiplier": 1.12,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0040743:week_1:passing_touchdowns": [
@@ -11815,6 +14295,16 @@
       "lowerMultiplier": 0.78,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.22,
+      "lowerMultiplier": 0.78,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0036389:week_1:passing_touchdowns": [
@@ -11830,6 +14320,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.16,
+      "lowerMultiplier": 0.82,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
@@ -11859,6 +14359,16 @@
       "lowerMultiplier": 0.71,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.46,
+      "lowerMultiplier": 0.71,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0035710:week_1:passing_touchdowns": [
@@ -11874,6 +14384,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.15,
+      "lowerMultiplier": 0.83,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
@@ -11903,6 +14423,16 @@
       "lowerMultiplier": 0.82,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.14,
+      "lowerMultiplier": 0.82,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039732:week_1:passing_touchdowns": [
@@ -11925,6 +14455,16 @@
       "lowerMultiplier": 0.73,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.35,
+      "lowerMultiplier": 0.73,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0034855:week_1:passing_touchdowns": [
@@ -11940,6 +14480,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.05,
+      "lowerMultiplier": 0.94,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
@@ -11969,6 +14519,16 @@
       "lowerMultiplier": 1.29,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.75,
+      "lowerMultiplier": 1.29,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0034869:week_1:passing_touchdowns": [
@@ -11991,6 +14551,16 @@
       "lowerMultiplier": 0.87,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.07,
+      "lowerMultiplier": 0.89,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0033077:week_1:passing_touchdowns": [
@@ -12006,6 +14576,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.89,
+      "lowerMultiplier": 1.08,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
@@ -12035,6 +14615,16 @@
       "lowerMultiplier": 1.13,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.85,
+      "lowerMultiplier": 1.13,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0033119:week_1:passing_touchdowns": [
@@ -12050,6 +14640,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.47,
+      "lowerMultiplier": 0.7,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
@@ -12079,6 +14679,16 @@
       "lowerMultiplier": 0.73,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.33,
+      "lowerMultiplier": 0.73,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0039139:week_1:offensive_touchdowns": [
@@ -12094,6 +14704,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.7,
+      "lowerMultiplier": 1.46,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -12123,6 +14743,16 @@
       "lowerMultiplier": 1.1,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.85,
+      "lowerMultiplier": 1.1,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0038597:week_1:offensive_touchdowns": [
@@ -12138,6 +14768,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.89,
+      "lowerMultiplier": 1.08,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -12167,6 +14807,16 @@
       "lowerMultiplier": 1.08,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.9,
+      "lowerMultiplier": 1.08,
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:underdog:00-0038134:week_1:offensive_touchdowns": [
@@ -12182,6 +14832,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.91,
+      "lowerMultiplier": 1.05,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -12211,6 +14871,16 @@
       "lowerMultiplier": 0.88,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.08,
+      "lowerMultiplier": 0.88,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0039361:week_1:offensive_touchdowns": [
@@ -12226,6 +14896,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.09,
+      "lowerMultiplier": 0.86,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -12255,6 +14935,16 @@
       "lowerMultiplier": 0.86,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.12,
+      "lowerMultiplier": 0.86,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0040715:week_1:offensive_touchdowns": [
@@ -12270,6 +14960,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.12,
+      "lowerMultiplier": 0.85,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -12299,6 +14999,16 @@
       "lowerMultiplier": 0.84,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.13,
+      "lowerMultiplier": 0.84,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038543:week_1:offensive_touchdowns": [
@@ -12314,6 +15024,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.13,
+      "lowerMultiplier": 0.83,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -12343,6 +15063,16 @@
       "lowerMultiplier": 0.82,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.17,
+      "lowerMultiplier": 0.82,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0036322:week_1:offensive_touchdowns": [
@@ -12365,6 +15095,16 @@
       "lowerMultiplier": 0.79,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.19,
+      "lowerMultiplier": 0.79,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0037247:week_1:offensive_touchdowns": [
@@ -12380,6 +15120,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.22,
+      "lowerMultiplier": 0.78,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -12409,6 +15159,16 @@
       "lowerMultiplier": 0.78,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.25,
+      "lowerMultiplier": 0.78,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0040784:week_1:offensive_touchdowns": [
@@ -12431,6 +15191,16 @@
       "lowerMultiplier": 0.77,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.23,
+      "lowerMultiplier": 0.77,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0036554:week_1:offensive_touchdowns": [
@@ -12446,6 +15216,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.29,
+      "lowerMultiplier": 0.75,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -12475,6 +15255,16 @@
       "lowerMultiplier": 0.75,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.3,
+      "lowerMultiplier": 0.75,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0041027:week_1:offensive_touchdowns": [
@@ -12490,6 +15280,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.33,
+      "lowerMultiplier": 0.74,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -12519,6 +15319,16 @@
       "lowerMultiplier": 0.74,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.31,
+      "lowerMultiplier": 0.74,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0039738:week_1:offensive_touchdowns": [
@@ -12538,6 +15348,16 @@
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": 1.39,
+      "lowerMultiplier": 0.72,
+      "status": "open",
+      "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.43,
       "lowerMultiplier": 0.72,
       "status": "open",
       "changeType": "odds_changed"
@@ -12563,6 +15383,16 @@
       "lowerMultiplier": 0.72,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.4,
+      "lowerMultiplier": 0.73,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037263:week_1:offensive_touchdowns": [
@@ -12585,6 +15415,16 @@
       "lowerMultiplier": 0.72,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.55,
+      "lowerMultiplier": 0.68,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037525:week_1:offensive_touchdowns": [
@@ -12604,6 +15444,16 @@
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": 1.45,
+      "lowerMultiplier": 0.71,
+      "status": "open",
+      "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.48,
       "lowerMultiplier": 0.71,
       "status": "open",
       "changeType": "odds_changed"
@@ -12629,6 +15479,16 @@
       "lowerMultiplier": 0.72,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.39,
+      "lowerMultiplier": 0.72,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037238:week_1:offensive_touchdowns": [
@@ -12651,6 +15511,16 @@
       "lowerMultiplier": 0.7,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.48,
+      "lowerMultiplier": 0.7,
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:underdog:00-0033293:week_1:offensive_touchdowns": [
@@ -12673,6 +15543,16 @@
       "lowerMultiplier": 0.71,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.47,
+      "lowerMultiplier": 0.7,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036919:week_1:offensive_touchdowns": [
@@ -12688,6 +15568,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.52,
+      "lowerMultiplier": 0.69,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -12717,6 +15607,16 @@
       "lowerMultiplier": 0.7,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.47,
+      "lowerMultiplier": 0.7,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0035640:week_1:offensive_touchdowns": [
@@ -12732,6 +15632,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.47,
+      "lowerMultiplier": 0.7,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -12761,6 +15671,16 @@
       "lowerMultiplier": 0.7,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.56,
+      "lowerMultiplier": 0.68,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0030506:week_1:offensive_touchdowns": [
@@ -12776,6 +15696,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.53,
+      "lowerMultiplier": 0.69,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -12805,6 +15735,16 @@
       "lowerMultiplier": 0.68,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.54,
+      "lowerMultiplier": 0.68,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0038994:week_1:offensive_touchdowns": [
@@ -12824,6 +15764,16 @@
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": 1.57,
+      "lowerMultiplier": 0.68,
+      "status": "open",
+      "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.59,
       "lowerMultiplier": 0.68,
       "status": "open",
       "changeType": "odds_changed"
@@ -12849,6 +15799,16 @@
       "lowerMultiplier": 0.68,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.77,
+      "lowerMultiplier": 0.65,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040129:week_1:offensive_touchdowns": [
@@ -12864,6 +15824,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.64,
+      "lowerMultiplier": 0.67,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -12893,6 +15863,16 @@
       "lowerMultiplier": 0.67,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.66,
+      "lowerMultiplier": 0.67,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0036613:week_1:offensive_touchdowns": [
@@ -12915,6 +15895,16 @@
       "lowerMultiplier": 0.66,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.77,
+      "lowerMultiplier": 0.65,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038454:week_1:offensive_touchdowns": [
@@ -12930,6 +15920,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.71,
+      "lowerMultiplier": 0.65,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -12959,6 +15959,16 @@
       "lowerMultiplier": 0.66,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.75,
+      "lowerMultiplier": 0.66,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0037740:week_1:offensive_touchdowns": [
@@ -12974,6 +15984,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.76,
+      "lowerMultiplier": 0.65,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -13003,6 +16023,16 @@
       "lowerMultiplier": 0.65,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.79,
+      "lowerMultiplier": 0.65,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0034348:week_1:offensive_touchdowns": [
@@ -13025,6 +16055,16 @@
       "lowerMultiplier": 0.65,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.75,
+      "lowerMultiplier": 0.65,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038041:week_1:offensive_touchdowns": [
@@ -13040,6 +16080,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.8,
+      "lowerMultiplier": 0.65,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -13069,6 +16119,16 @@
       "lowerMultiplier": 0.64,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.83,
+      "lowerMultiplier": 0.64,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0041438:week_1:offensive_touchdowns": [
@@ -13084,6 +16144,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.85,
+      "lowerMultiplier": 0.64,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -13113,6 +16183,16 @@
       "lowerMultiplier": 0.64,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.86,
+      "lowerMultiplier": 0.64,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0039893:week_1:offensive_touchdowns": [
@@ -13132,6 +16212,16 @@
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": 1.86,
+      "lowerMultiplier": 0.64,
+      "status": "open",
+      "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.93,
       "lowerMultiplier": 0.64,
       "status": "open",
       "changeType": "odds_changed"
@@ -13157,6 +16247,16 @@
       "lowerMultiplier": 0.64,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.9,
+      "lowerMultiplier": 0.64,
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:underdog:00-0036252:week_1:offensive_touchdowns": [
@@ -13172,6 +16272,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.93,
+      "lowerMultiplier": 0.63,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -13201,6 +16311,16 @@
       "lowerMultiplier": 0.63,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.96,
+      "lowerMultiplier": 0.63,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0040583:week_1:offensive_touchdowns": [
@@ -13216,6 +16336,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.98,
+      "lowerMultiplier": 0.63,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -13245,6 +16375,16 @@
       "lowerMultiplier": 0.62,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.08,
+      "lowerMultiplier": 0.62,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040730:week_1:offensive_touchdowns": [
@@ -13267,6 +16407,16 @@
       "lowerMultiplier": 0.62,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.95,
+      "lowerMultiplier": 0.63,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0033090:week_1:offensive_touchdowns": [
@@ -13282,6 +16432,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.07,
+      "lowerMultiplier": 0.62,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -13311,6 +16471,16 @@
       "lowerMultiplier": 0.62,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.29,
+      "lowerMultiplier": 0.61,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039424:week_1:offensive_touchdowns": [
@@ -13333,6 +16503,16 @@
       "lowerMultiplier": 0.61,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.16,
+      "lowerMultiplier": 0.61,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0035229:week_1:offensive_touchdowns": [
@@ -13355,6 +16535,16 @@
       "lowerMultiplier": 0.61,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.11,
+      "lowerMultiplier": 0.61,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0031588:week_1:offensive_touchdowns": [
@@ -13370,6 +16560,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.25,
+      "lowerMultiplier": 0.61,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -13399,6 +16599,16 @@
       "lowerMultiplier": 0.61,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.26,
+      "lowerMultiplier": 0.61,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0036550:week_1:offensive_touchdowns": [
@@ -13414,6 +16624,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.3,
+      "lowerMultiplier": 0.6,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -13443,6 +16663,16 @@
       "lowerMultiplier": 0.6,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.24,
+      "lowerMultiplier": 0.6,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0034837:week_1:offensive_touchdowns": [
@@ -13458,6 +16688,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.46,
+      "lowerMultiplier": 0.6,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -13487,6 +16727,16 @@
       "lowerMultiplier": 0.6,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.37,
+      "lowerMultiplier": 0.6,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0041523:week_1:offensive_touchdowns": [
@@ -13509,6 +16759,16 @@
       "lowerMultiplier": 0.61,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.3,
+      "lowerMultiplier": 0.61,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0032764:week_1:offensive_touchdowns": [
@@ -13524,6 +16784,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.79,
+      "lowerMultiplier": 1.19,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -13553,6 +16823,16 @@
       "lowerMultiplier": 1.12,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.87,
+      "lowerMultiplier": 1.12,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0034844:week_1:offensive_touchdowns": [
@@ -13568,6 +16848,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.9,
+      "lowerMultiplier": 1.06,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -13597,6 +16887,16 @@
       "lowerMultiplier": 1.06,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.9,
+      "lowerMultiplier": 1.06,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0037840:week_1:offensive_touchdowns": [
@@ -13612,6 +16912,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.95,
+      "lowerMultiplier": 1.04,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -13641,6 +16951,16 @@
       "lowerMultiplier": 0.9,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.08,
+      "lowerMultiplier": 0.9,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0036963:week_1:offensive_touchdowns": [
@@ -13663,6 +16983,16 @@
       "lowerMultiplier": 0.87,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.1,
+      "lowerMultiplier": 0.87,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0034857:week_1:offensive_touchdowns": [
@@ -13678,6 +17008,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.11,
+      "lowerMultiplier": 0.86,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -13707,6 +17047,16 @@
       "lowerMultiplier": 0.85,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.12,
+      "lowerMultiplier": 0.85,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0037248:week_1:offensive_touchdowns": [
@@ -13722,6 +17072,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.12,
+      "lowerMultiplier": 0.85,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -13751,6 +17111,16 @@
       "lowerMultiplier": 0.83,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.12,
+      "lowerMultiplier": 0.83,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0039075:week_1:offensive_touchdowns": [
@@ -13773,6 +17143,16 @@
       "lowerMultiplier": 0.82,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.16,
+      "lowerMultiplier": 0.8,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036358:week_1:offensive_touchdowns": [
@@ -13788,6 +17168,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.16,
+      "lowerMultiplier": 0.8,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -13817,6 +17207,16 @@
       "lowerMultiplier": 0.8,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.18,
+      "lowerMultiplier": 0.8,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0031381:week_1:offensive_touchdowns": [
@@ -13839,6 +17239,16 @@
       "lowerMultiplier": 0.78,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.23,
+      "lowerMultiplier": 0.77,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0035261:week_1:offensive_touchdowns": [
@@ -13854,6 +17264,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.26,
+      "lowerMultiplier": 0.76,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -13883,6 +17303,16 @@
       "lowerMultiplier": 0.76,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.31,
+      "lowerMultiplier": 0.75,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039338:week_1:offensive_touchdowns": [
@@ -13905,6 +17335,16 @@
       "lowerMultiplier": 0.76,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.28,
+      "lowerMultiplier": 0.76,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0036912:week_1:offensive_touchdowns": [
@@ -13920,6 +17360,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.32,
+      "lowerMultiplier": 0.74,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -13949,6 +17399,16 @@
       "lowerMultiplier": 0.74,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.33,
+      "lowerMultiplier": 0.74,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0038996:week_1:offensive_touchdowns": [
@@ -13969,6 +17429,16 @@
       "underOdds": null,
       "higherMultiplier": 1.44,
       "lowerMultiplier": 0.71,
+      "status": "open",
+      "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.54,
+      "lowerMultiplier": 0.69,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -13993,6 +17463,16 @@
       "lowerMultiplier": 0.72,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.4,
+      "lowerMultiplier": 0.72,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0039064:week_1:offensive_touchdowns": [
@@ -14008,6 +17488,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.4,
+      "lowerMultiplier": 0.72,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -14037,6 +17527,16 @@
       "lowerMultiplier": 0.72,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.39,
+      "lowerMultiplier": 0.72,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0038544:week_1:offensive_touchdowns": [
@@ -14059,6 +17559,16 @@
       "lowerMultiplier": 0.71,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.47,
+      "lowerMultiplier": 0.71,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038124:week_1:offensive_touchdowns": [
@@ -14081,6 +17591,16 @@
       "lowerMultiplier": 0.72,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.5,
+      "lowerMultiplier": 0.7,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039910:week_1:offensive_touchdowns": [
@@ -14096,6 +17616,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.49,
+      "lowerMultiplier": 0.7,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -14125,6 +17655,16 @@
       "lowerMultiplier": 0.7,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.5,
+      "lowerMultiplier": 0.7,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0034753:week_1:offensive_touchdowns": [
@@ -14140,6 +17680,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.47,
+      "lowerMultiplier": 0.7,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -14169,6 +17719,16 @@
       "lowerMultiplier": 0.7,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.47,
+      "lowerMultiplier": 0.7,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0040124:week_1:offensive_touchdowns": [
@@ -14191,6 +17751,16 @@
       "lowerMultiplier": 0.7,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.5,
+      "lowerMultiplier": 0.7,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0040691:week_1:offensive_touchdowns": [
@@ -14206,6 +17776,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.51,
+      "lowerMultiplier": 0.69,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -14235,6 +17815,16 @@
       "lowerMultiplier": 0.69,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.57,
+      "lowerMultiplier": 0.68,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0035659:week_1:offensive_touchdowns": [
@@ -14250,6 +17840,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.57,
+      "lowerMultiplier": 0.68,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -14279,6 +17879,16 @@
       "lowerMultiplier": 0.67,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.61,
+      "lowerMultiplier": 0.67,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0033288:week_1:offensive_touchdowns": [
@@ -14301,6 +17911,16 @@
       "lowerMultiplier": 0.66,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.72,
+      "lowerMultiplier": 0.66,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037744:week_1:offensive_touchdowns": [
@@ -14316,6 +17936,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.65,
+      "lowerMultiplier": 0.67,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -14345,6 +17975,16 @@
       "lowerMultiplier": 0.66,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.74,
+      "lowerMultiplier": 0.65,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039894:week_1:offensive_touchdowns": [
@@ -14360,6 +18000,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.69,
+      "lowerMultiplier": 0.66,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -14389,6 +18039,16 @@
       "lowerMultiplier": 0.66,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.82,
+      "lowerMultiplier": 0.65,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0034960:week_1:offensive_touchdowns": [
@@ -14411,6 +18071,16 @@
       "lowerMultiplier": 0.65,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.77,
+      "lowerMultiplier": 0.65,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0034827:week_1:offensive_touchdowns": [
@@ -14426,6 +18096,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.75,
+      "lowerMultiplier": 0.66,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -14455,6 +18135,16 @@
       "lowerMultiplier": 0.65,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.76,
+      "lowerMultiplier": 0.65,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0033921:week_1:offensive_touchdowns": [
@@ -14470,6 +18160,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.79,
+      "lowerMultiplier": 0.65,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -14499,6 +18199,16 @@
       "lowerMultiplier": 0.64,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.86,
+      "lowerMultiplier": 0.64,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0038129:week_1:offensive_touchdowns": [
@@ -14514,6 +18224,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.82,
+      "lowerMultiplier": 0.64,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -14543,6 +18263,16 @@
       "lowerMultiplier": 0.64,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.85,
+      "lowerMultiplier": 0.64,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0037545:week_1:offensive_touchdowns": [
@@ -14558,6 +18288,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.85,
+      "lowerMultiplier": 0.64,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -14587,6 +18327,16 @@
       "lowerMultiplier": 0.64,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.88,
+      "lowerMultiplier": 0.64,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0040663:week_1:offensive_touchdowns": [
@@ -14609,6 +18359,16 @@
       "lowerMultiplier": 0.64,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.94,
+      "lowerMultiplier": 0.64,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0033908:week_1:offensive_touchdowns": [
@@ -14624,6 +18384,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.91,
+      "lowerMultiplier": 0.63,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -14653,6 +18423,16 @@
       "lowerMultiplier": 0.63,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.96,
+      "lowerMultiplier": 0.63,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0041035:week_1:offensive_touchdowns": [
@@ -14675,6 +18455,16 @@
       "lowerMultiplier": 0.63,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.98,
+      "lowerMultiplier": 0.63,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0039391:week_1:offensive_touchdowns": [
@@ -14697,6 +18487,16 @@
       "lowerMultiplier": 0.63,
       "status": "not_seen",
       "changeType": "not_seen"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.99,
+      "lowerMultiplier": 0.63,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:underdog:00-0034383:week_1:offensive_touchdowns": [
@@ -14712,6 +18512,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.02,
+      "lowerMultiplier": 0.63,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -14741,6 +18551,16 @@
       "lowerMultiplier": 0.63,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.04,
+      "lowerMultiplier": 0.63,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0039793:week_1:offensive_touchdowns": [
@@ -14763,6 +18583,16 @@
       "lowerMultiplier": 0.62,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.05,
+      "lowerMultiplier": 0.62,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039849:week_1:offensive_touchdowns": [
@@ -14778,6 +18608,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.15,
+      "lowerMultiplier": 0.62,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -14807,6 +18647,16 @@
       "lowerMultiplier": 0.61,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.17,
+      "lowerMultiplier": 0.61,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0038608:week_1:offensive_touchdowns": [
@@ -14822,6 +18672,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.23,
+      "lowerMultiplier": 0.61,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -14851,6 +18711,16 @@
       "lowerMultiplier": 0.61,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.25,
+      "lowerMultiplier": 0.61,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0039851:week_1:offensive_touchdowns": [
@@ -14873,6 +18743,16 @@
       "lowerMultiplier": 0.61,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.21,
+      "lowerMultiplier": 0.61,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037746:week_1:offensive_touchdowns": [
@@ -14888,6 +18768,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.31,
+      "lowerMultiplier": 0.6,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -14917,6 +18807,16 @@
       "lowerMultiplier": 0.6,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.34,
+      "lowerMultiplier": 0.6,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0041069:week_1:offensive_touchdowns": [
@@ -14932,6 +18832,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.41,
+      "lowerMultiplier": 0.6,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -14961,6 +18871,16 @@
       "lowerMultiplier": 0.6,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.46,
+      "lowerMultiplier": 0.6,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0039890:week_1:offensive_touchdowns": [
@@ -14976,6 +18896,16 @@
     },
     {
       "date": "2026-08-27",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.46,
+      "lowerMultiplier": 0.6,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -15005,6 +18935,16 @@
       "lowerMultiplier": 1.38,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.73,
+      "lowerMultiplier": 1.38,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0033537:week_1:passing_touchdowns": [
@@ -15027,6 +18967,16 @@
       "lowerMultiplier": 1.15,
       "status": "open",
       "changeType": "odds_changed"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.82,
+      "lowerMultiplier": 1.15,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0036945:week_1:passing_touchdowns": [
@@ -15049,6 +18999,16 @@
       "lowerMultiplier": 0.75,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.36,
+      "lowerMultiplier": 0.73,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038128:week_1:passing_touchdowns": [
@@ -15071,6 +19031,16 @@
       "lowerMultiplier": 1.28,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.76,
+      "lowerMultiplier": 1.28,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033077:week_1:fantasy_score": [
@@ -15083,6 +19053,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 17.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040691:week_1:fantasy_score": [
@@ -15095,6 +19075,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 17.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036358:week_1:fantasy_score": [
@@ -15107,6 +19097,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 16,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037247:week_1:fantasy_score": [
@@ -15119,6 +19119,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 14,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039337:week_1:fantasy_score": [
@@ -15131,6 +19141,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 13.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0036900:week_1:receptions": [
@@ -15143,6 +19163,16 @@
       "lowerMultiplier": 1,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1,
+      "lowerMultiplier": 1,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0039075:week_1:receptions": [
@@ -15155,6 +19185,16 @@
       "lowerMultiplier": 0.86,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.11,
+      "lowerMultiplier": 0.86,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0036358:week_1:receptions": [
@@ -15167,6 +19207,16 @@
       "lowerMultiplier": 0.84,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 6.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.11,
+      "lowerMultiplier": 0.84,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0037239:week_1:receptions": [
@@ -15179,6 +19229,16 @@
       "lowerMultiplier": 0.91,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 6.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.05,
+      "lowerMultiplier": 0.91,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0038543:week_1:receptions": [
@@ -15191,6 +19251,16 @@
       "lowerMultiplier": 0.91,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 6.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.04,
+      "lowerMultiplier": 0.91,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0039338:week_1:receptions": [
@@ -15203,6 +19273,16 @@
       "lowerMultiplier": 1.04,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.95,
+      "lowerMultiplier": 1.04,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0036912:week_1:receptions": [
@@ -15215,6 +19295,16 @@
       "lowerMultiplier": 0.85,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.12,
+      "lowerMultiplier": 0.85,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0039067:week_1:receptions": [
@@ -15227,6 +19317,16 @@
       "lowerMultiplier": 1,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1,
+      "lowerMultiplier": 1,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0037744:week_1:receptions": [
@@ -15239,6 +19339,16 @@
       "lowerMultiplier": 1.07,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.87,
+      "lowerMultiplier": 1.09,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0035676:week_1:receptions": [
@@ -15251,6 +19361,16 @@
       "lowerMultiplier": 1.04,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.91,
+      "lowerMultiplier": 1.04,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0039337:week_1:receptions": [
@@ -15263,6 +19383,16 @@
       "lowerMultiplier": 1.11,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.84,
+      "lowerMultiplier": 1.11,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0040663:week_1:receptions": [
@@ -15275,6 +19405,16 @@
       "lowerMultiplier": 1.11,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.86,
+      "lowerMultiplier": 1.11,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0033280:week_1:receptions": [
@@ -15287,6 +19427,16 @@
       "lowerMultiplier": 0.9,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.07,
+      "lowerMultiplier": 0.9,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0035659:week_1:receptions": [
@@ -15299,6 +19449,16 @@
       "lowerMultiplier": 1,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1,
+      "lowerMultiplier": 1,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0037247:week_1:receptions": [
@@ -15311,6 +19471,16 @@
       "lowerMultiplier": 1.11,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.86,
+      "lowerMultiplier": 1.11,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0030506:week_1:receptions": [
@@ -15323,6 +19493,16 @@
       "lowerMultiplier": 1.16,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.15,
+      "lowerMultiplier": 0.82,
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:underdog:00-0035640:week_1:receptions": [
@@ -15335,6 +19515,16 @@
       "lowerMultiplier": 1.1,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.84,
+      "lowerMultiplier": 1.11,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0035229:week_1:receptions": [
@@ -15347,6 +19537,16 @@
       "lowerMultiplier": 0.87,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.12,
+      "lowerMultiplier": 0.86,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038559:week_1:receptions": [
@@ -15359,6 +19559,16 @@
       "lowerMultiplier": 1.08,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.89,
+      "lowerMultiplier": 1.08,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0041035:week_1:receptions": [
@@ -15371,6 +19581,16 @@
       "lowerMultiplier": 0.85,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.1,
+      "lowerMultiplier": 0.85,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0038124:week_1:receptions": [
@@ -15383,6 +19603,16 @@
       "lowerMultiplier": 1.09,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1,
+      "lowerMultiplier": 1,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0031408:week_1:receptions": [
@@ -15395,6 +19625,16 @@
       "lowerMultiplier": 1.05,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.94,
+      "lowerMultiplier": 1.05,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0034960:week_1:receptions": [
@@ -15407,6 +19647,16 @@
       "lowerMultiplier": 1.13,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.84,
+      "lowerMultiplier": 1.12,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0040667:week_1:receptions": [
@@ -15419,6 +19669,16 @@
       "lowerMultiplier": 0.88,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.8,
+      "lowerMultiplier": 1.16,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:underdog:00-0038041:week_1:receptions": [
@@ -15431,6 +19691,16 @@
       "lowerMultiplier": 0.88,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.09,
+      "lowerMultiplier": 0.88,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0038606:week_1:receptions": [
@@ -15443,6 +19713,16 @@
       "lowerMultiplier": 1.1,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.84,
+      "lowerMultiplier": 1.1,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0041438:week_1:receptions": [
@@ -15455,6 +19735,16 @@
       "lowerMultiplier": 0.94,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.05,
+      "lowerMultiplier": 0.94,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0038134:week_1:receptions": [
@@ -15467,6 +19757,16 @@
       "lowerMultiplier": 0.88,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.12,
+      "lowerMultiplier": 0.86,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039894:week_1:receptions": [
@@ -15479,6 +19779,16 @@
       "lowerMultiplier": 1.15,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.83,
+      "lowerMultiplier": 1.13,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0035719:week_1:receptions": [
@@ -15491,6 +19801,16 @@
       "lowerMultiplier": 1.08,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.89,
+      "lowerMultiplier": 1.08,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0040784:week_1:receptions": [
@@ -15503,6 +19823,16 @@
       "lowerMultiplier": 0.79,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.77,
+      "lowerMultiplier": 1.23,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:underdog:00-0037816:week_1:receptions": [
@@ -15515,6 +19845,16 @@
       "lowerMultiplier": 1.09,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.81,
+      "lowerMultiplier": 1.17,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0033090:week_1:receptions": [
@@ -15527,6 +19867,16 @@
       "lowerMultiplier": 1.12,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.84,
+      "lowerMultiplier": 1.12,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039793:week_1:receptions": [
@@ -15539,6 +19889,16 @@
       "lowerMultiplier": 1.07,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.9,
+      "lowerMultiplier": 1.07,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0034844:week_1:receptions": [
@@ -15551,6 +19911,16 @@
       "lowerMultiplier": 0.8,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.19,
+      "lowerMultiplier": 0.8,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0038120:week_1:receptions": [
@@ -15563,6 +19933,16 @@
       "lowerMultiplier": 0.89,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.07,
+      "lowerMultiplier": 0.89,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0039893:week_1:receptions": [
@@ -15575,6 +19955,16 @@
       "lowerMultiplier": 1,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1,
+      "lowerMultiplier": 1,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0040715:week_1:receptions": [
@@ -15587,6 +19977,16 @@
       "lowerMultiplier": 0.82,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.13,
+      "lowerMultiplier": 0.82,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0037838:week_1:receptions": [
@@ -15599,6 +19999,16 @@
       "lowerMultiplier": 1.15,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.83,
+      "lowerMultiplier": 1.15,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0033908:week_1:receptions": [
@@ -15611,6 +20021,16 @@
       "lowerMultiplier": 1.13,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.81,
+      "lowerMultiplier": 1.16,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0037545:week_1:receptions": [
@@ -15623,6 +20043,16 @@
       "lowerMultiplier": 1,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1,
+      "lowerMultiplier": 1,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0039410:week_1:receptions": [
@@ -15635,6 +20065,16 @@
       "lowerMultiplier": 0.89,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.08,
+      "lowerMultiplier": 0.89,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0037834:week_1:passing_touchdowns": [
@@ -15647,6 +20087,16 @@
       "lowerMultiplier": 0.95,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.05,
+      "lowerMultiplier": 0.95,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036264:week_1:passing_touchdowns": [
@@ -15659,6 +20109,16 @@
       "lowerMultiplier": 1,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.09,
+      "lowerMultiplier": 0.88,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0033873:week_1:passing_touchdowns": [
@@ -15671,6 +20131,16 @@
       "lowerMultiplier": 1,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.06,
+      "lowerMultiplier": 0.9,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036997:week_1:receptions": [
@@ -15683,6 +20153,16 @@
       "lowerMultiplier": 1.17,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.8,
+      "lowerMultiplier": 1.17,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0038621:week_1:receptions": [
@@ -15695,6 +20175,16 @@
       "lowerMultiplier": 1.21,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.78,
+      "lowerMultiplier": 1.22,
+      "status": "open",
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0041042:week_1:receptions": [
@@ -15707,6 +20197,16 @@
       "lowerMultiplier": 1.08,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 0.88,
+      "lowerMultiplier": 1.08,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0035261:week_1:receptions": [
@@ -15719,6 +20219,16 @@
       "lowerMultiplier": 0.91,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.04,
+      "lowerMultiplier": 0.91,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0038104:week_1:receptions": [
@@ -15731,6 +20241,16 @@
       "lowerMultiplier": 1,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1,
+      "lowerMultiplier": 1,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0039040:week_1:offensive_touchdowns": [
@@ -15743,6 +20263,16 @@
       "lowerMultiplier": 1,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1,
+      "lowerMultiplier": 1,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0036900:week_1:offensive_touchdowns": [
@@ -15755,6 +20285,16 @@
       "lowerMultiplier": 1,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1,
+      "lowerMultiplier": 1,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0039880:week_1:offensive_touchdowns": [
@@ -15767,6 +20307,16 @@
       "lowerMultiplier": 0.6,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.46,
+      "lowerMultiplier": 0.6,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0040878:week_1:offensive_touchdowns": [
@@ -15779,6 +20329,16 @@
       "lowerMultiplier": 1,
       "status": "open",
       "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1,
+      "lowerMultiplier": 1,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0035700:week_1:offensive_touchdowns": [
@@ -15789,6 +20349,184 @@
       "underOdds": null,
       "higherMultiplier": 1,
       "lowerMultiplier": 1,
+      "status": "open",
+      "changeType": "opened"
+    },
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.05,
+      "lowerMultiplier": 0.94,
+      "status": "open",
+      "changeType": "odds_changed"
+    }
+  ],
+  "2026:prizepicks:00-0031381:week_1:fantasy_score": [
+    {
+      "date": "2026-08-28",
+      "line": 12,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0036875:week_1:fantasy_score": [
+    {
+      "date": "2026-08-28",
+      "line": 10.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0030506:week_1:fantasy_score": [
+    {
+      "date": "2026-08-28",
+      "line": 10,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0033090:week_1:fantasy_score": [
+    {
+      "date": "2026-08-28",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0035676:week_1:receptions": [
+    {
+      "date": "2026-08-28",
+      "line": 5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0038621:week_1:fantasy_score": [
+    {
+      "date": "2026-08-28",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0031408:week_1:receptions": [
+    {
+      "date": "2026-08-28",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0038124:week_1:receptions": [
+    {
+      "date": "2026-08-28",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0033908:week_1:receptions": [
+    {
+      "date": "2026-08-28",
+      "line": 3,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0037816:week_1:receptions": [
+    {
+      "date": "2026-08-28",
+      "line": 3,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0033090:week_1:receptions": [
+    {
+      "date": "2026-08-28",
+      "line": 3,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0041035:week_1:receptions": [
+    {
+      "date": "2026-08-28",
+      "line": 3,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:prizepicks:00-0035719:week_1:receptions": [
+    {
+      "date": "2026-08-28",
+      "line": 3,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:underdog:00-0038797:week_1:offensive_touchdowns": [
+    {
+      "date": "2026-08-28",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.46,
+      "lowerMultiplier": 0.6,
       "status": "open",
       "changeType": "opened"
     }
