@@ -44,7 +44,9 @@ test("FanDuel expands markets in bounded batches and retains exact pair validati
   assert.match(service, /const batchSize = 12/);
   assert.match(service, /pendingLabels\.slice\(offset, offset \+ batchSize\)/);
   assert.match(service, /for \(const card of cards\) card\.click\(\)/);
-  assert.match(service, /outcomes\.length !== 2/);
-  assert.match(service, /if \(!storeOutcomes\(marketLabel\)\)/);
+  assert.match(service, /const readOutcomeIndex = \(\) =>/);
+  assert.match(service, /outcomeIndex = readOutcomeIndex\(\)/);
+  assert.match(service, /for \(const marketLabel of marketLabels\)/);
+  assert.match(service, /if \(outcomes\.length !== 2\)/);
   assert.match(service, /expectedMarketCount: marketLabels\.size/);
 });
