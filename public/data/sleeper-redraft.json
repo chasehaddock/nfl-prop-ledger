@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-28",
-  "capturedAt": "2026-08-28T21:45:53.687Z",
+  "date": "2026-08-29",
+  "capturedAt": "2026-08-29T14:12:24.539Z",
   "source": "sleeper",
   "sourceName": "Sleeper",
   "format": {
@@ -26,7 +26,7 @@
       "team": "DET",
       "position": "RB",
       "rank": 1,
-      "adp": 1.1,
+      "adp": 1.9,
       "bye": 6,
       "sleeperPoints": 331.4
     },
@@ -36,7 +36,7 @@
       "team": "ATL",
       "position": "RB",
       "rank": 2,
-      "adp": 2.9,
+      "adp": 2.6,
       "bye": 11,
       "sleeperPoints": 324.9
     },
@@ -46,7 +46,7 @@
       "team": "CIN",
       "position": "WR",
       "rank": 3,
-      "adp": 3.1,
+      "adp": 3.6,
       "bye": 6,
       "sleeperPoints": 311.1
     },
@@ -56,27 +56,17 @@
       "team": "LAR",
       "position": "WR",
       "rank": 4,
-      "adp": 4.4,
+      "adp": 4.8,
       "bye": 11,
       "sleeperPoints": 312.5
-    },
-    {
-      "id": "wr:jaxon-smith-njigba",
-      "name": "Jaxon Smith-Njigba",
-      "team": "SEA",
-      "position": "WR",
-      "rank": 5,
-      "adp": 5.2,
-      "bye": 11,
-      "sleeperPoints": 284.6
     },
     {
       "id": "rb:christian-mccaffrey",
       "name": "Christian McCaffrey",
       "team": "SF",
       "position": "RB",
-      "rank": 6,
-      "adp": 5.4,
+      "rank": 5,
+      "adp": 5.6,
       "bye": 8,
       "sleeperPoints": 291
     },
@@ -85,10 +75,20 @@
       "name": "Jonathan Taylor",
       "team": "IND",
       "position": "RB",
-      "rank": 7,
-      "adp": 7.3,
+      "rank": 6,
+      "adp": 6.8,
       "bye": 13,
       "sleeperPoints": 272.3
+    },
+    {
+      "id": "wr:jaxon-smith-njigba",
+      "name": "Jaxon Smith-Njigba",
+      "team": "SEA",
+      "position": "WR",
+      "rank": 7,
+      "adp": 6.9,
+      "bye": 11,
+      "sleeperPoints": 284.6
     },
     {
       "id": "wr:amon-ra-st-brown",
@@ -96,7 +96,7 @@
       "team": "DET",
       "position": "WR",
       "rank": 8,
-      "adp": 8,
+      "adp": 8.9,
       "bye": 6,
       "sleeperPoints": 280.5
     },
@@ -106,7 +106,7 @@
       "team": "DAL",
       "position": "WR",
       "rank": 9,
-      "adp": 9.5,
+      "adp": 9.1,
       "bye": 14,
       "sleeperPoints": 270.5
     },
@@ -116,7 +116,7 @@
       "team": "BUF",
       "position": "RB",
       "rank": 10,
-      "adp": 10.4,
+      "adp": 10.9,
       "bye": 7,
       "sleeperPoints": 260.8
     },
@@ -126,7 +126,7 @@
       "team": "MIN",
       "position": "WR",
       "rank": 11,
-      "adp": 11.5,
+      "adp": 11.9,
       "bye": 6,
       "sleeperPoints": 250.4
     },
@@ -136,29 +136,29 @@
       "team": "MIA",
       "position": "RB",
       "rank": 12,
-      "adp": 11.8,
+      "adp": 12.4,
       "bye": 6,
       "sleeperPoints": 257.4
-    },
-    {
-      "id": "rb:saquon-barkley",
-      "name": "Saquon Barkley",
-      "team": "PHI",
-      "position": "RB",
-      "rank": 13,
-      "adp": 13.7,
-      "bye": 10,
-      "sleeperPoints": 246.7
     },
     {
       "id": "rb:ashton-jeanty",
       "name": "Ashton Jeanty",
       "team": "LV",
       "position": "RB",
-      "rank": 14,
-      "adp": 14.5,
+      "rank": 13,
+      "adp": 13.3,
       "bye": 13,
       "sleeperPoints": 233.9
+    },
+    {
+      "id": "rb:saquon-barkley",
+      "name": "Saquon Barkley",
+      "team": "PHI",
+      "position": "RB",
+      "rank": 14,
+      "adp": 13.8,
+      "bye": 10,
+      "sleeperPoints": 246.7
     },
     {
       "id": "rb:omarion-hampton",
@@ -166,7 +166,7 @@
       "team": "LAC",
       "position": "RB",
       "rank": 15,
-      "adp": 15.2,
+      "adp": 15.8,
       "bye": 7,
       "sleeperPoints": 242.9
     },
@@ -176,7 +176,7 @@
       "team": "CIN",
       "position": "RB",
       "rank": 16,
-      "adp": 16.7,
+      "adp": 16.1,
       "bye": 6,
       "sleeperPoints": 255.2
     },
@@ -186,7 +186,7 @@
       "team": "ATL",
       "position": "WR",
       "rank": 17,
-      "adp": 17.1,
+      "adp": 17.8,
       "bye": 11,
       "sleeperPoints": 250.2
     },
@@ -196,7 +196,7 @@
       "team": "NE",
       "position": "WR",
       "rank": 18,
-      "adp": 17.9,
+      "adp": 18.5,
       "bye": 11,
       "sleeperPoints": 247.2
     },
@@ -206,7 +206,7 @@
       "team": "KC",
       "position": "RB",
       "rank": 19,
-      "adp": 19.7,
+      "adp": 19,
       "bye": 5,
       "sleeperPoints": 244
     },
@@ -226,7 +226,7 @@
       "team": "BUF",
       "position": "QB",
       "rank": 21,
-      "adp": 21.3,
+      "adp": 21,
       "bye": 7,
       "sleeperPoints": 361.5
     },
@@ -236,29 +236,29 @@
       "team": "ARI",
       "position": "TE",
       "rank": 22,
-      "adp": 22.4,
+      "adp": 22.6,
       "bye": 14,
       "sleeperPoints": 234.9
-    },
-    {
-      "id": "wr:george-pickens",
-      "name": "George Pickens",
-      "team": "DAL",
-      "position": "WR",
-      "rank": 23,
-      "adp": 23.1,
-      "bye": 14,
-      "sleeperPoints": 245.7
     },
     {
       "id": "te:brock-bowers",
       "name": "Brock Bowers",
       "team": "LV",
       "position": "TE",
-      "rank": 24,
-      "adp": 23.3,
+      "rank": 23,
+      "adp": 23.4,
       "bye": 13,
       "sleeperPoints": 253.5
+    },
+    {
+      "id": "wr:george-pickens",
+      "name": "George Pickens",
+      "team": "DAL",
+      "position": "WR",
+      "rank": 24,
+      "adp": 24.7,
+      "bye": 14,
+      "sleeperPoints": 245.7
     },
     {
       "id": "wr:nico-collins",
@@ -266,7 +266,7 @@
       "team": "HOU",
       "position": "WR",
       "rank": 25,
-      "adp": 25.3,
+      "adp": 25.9,
       "bye": 8,
       "sleeperPoints": 262
     },
@@ -276,7 +276,7 @@
       "team": "ARI",
       "position": "RB",
       "rank": 26,
-      "adp": 26.7,
+      "adp": 26.2,
       "bye": 14,
       "sleeperPoints": 211.8
     },
@@ -296,7 +296,7 @@
       "team": "KC",
       "position": "WR",
       "rank": 28,
-      "adp": 28.7,
+      "adp": 27.9,
       "bye": 5,
       "sleeperPoints": 229.3
     },
@@ -306,7 +306,7 @@
       "team": "LAR",
       "position": "RB",
       "rank": 29,
-      "adp": 29.5,
+      "adp": 29.4,
       "bye": 11,
       "sleeperPoints": 208
     },
@@ -316,7 +316,7 @@
       "team": "NO",
       "position": "WR",
       "rank": 30,
-      "adp": 29.9,
+      "adp": 30.9,
       "bye": 8,
       "sleeperPoints": 235.9
     },
@@ -326,7 +326,7 @@
       "team": "GB",
       "position": "RB",
       "rank": 31,
-      "adp": 31.7,
+      "adp": 31.8,
       "bye": 11,
       "sleeperPoints": 202.6
     },
@@ -336,7 +336,7 @@
       "team": "BAL",
       "position": "QB",
       "rank": 32,
-      "adp": 32.5,
+      "adp": 32.8,
       "bye": 13,
       "sleeperPoints": 326
     },
@@ -346,17 +346,27 @@
       "team": "NYJ",
       "position": "RB",
       "rank": 33,
-      "adp": 33.5,
+      "adp": 33.7,
       "bye": 13,
       "sleeperPoints": 211
+    },
+    {
+      "id": "rb:javonte-williams",
+      "name": "Javonte Williams",
+      "team": "DAL",
+      "position": "RB",
+      "rank": 34,
+      "adp": 34.3,
+      "bye": 14,
+      "sleeperPoints": 207.3
     },
     {
       "id": "wr:tee-higgins",
       "name": "Tee Higgins",
       "team": "CIN",
       "position": "WR",
-      "rank": 34,
-      "adp": 34.4,
+      "rank": 35,
+      "adp": 34.5,
       "bye": 6,
       "sleeperPoints": 224.4
     },
@@ -365,20 +375,10 @@
       "name": "DeVonta Smith",
       "team": "PHI",
       "position": "WR",
-      "rank": 35,
-      "adp": 35.2,
+      "rank": 36,
+      "adp": 36.3,
       "bye": 10,
       "sleeperPoints": 229.2
-    },
-    {
-      "id": "rb:javonte-williams",
-      "name": "Javonte Williams",
-      "team": "DAL",
-      "position": "RB",
-      "rank": 36,
-      "adp": 35.8,
-      "bye": 14,
-      "sleeperPoints": 207.3
     },
     {
       "id": "wr:tetairoa-mcmillan",
@@ -386,7 +386,7 @@
       "team": "CAR",
       "position": "WR",
       "rank": 37,
-      "adp": 37,
+      "adp": 37.1,
       "bye": 5,
       "sleeperPoints": 223
     },
@@ -396,7 +396,7 @@
       "team": "LAC",
       "position": "WR",
       "rank": 38,
-      "adp": 38.4,
+      "adp": 38.1,
       "bye": 7,
       "sleeperPoints": 228.2
     },
@@ -406,7 +406,7 @@
       "team": "TB",
       "position": "WR",
       "rank": 39,
-      "adp": 39.8,
+      "adp": 39.3,
       "bye": 10,
       "sleeperPoints": 224
     },
@@ -416,7 +416,7 @@
       "team": "CHI",
       "position": "TE",
       "rank": 40,
-      "adp": 40.8,
+      "adp": 40.2,
       "bye": 10,
       "sleeperPoints": 215.4
     },
@@ -426,7 +426,7 @@
       "team": "BAL",
       "position": "WR",
       "rank": 41,
-      "adp": 41.1,
+      "adp": 41.3,
       "bye": 13,
       "sleeperPoints": 228.2
     },
@@ -446,7 +446,7 @@
       "team": "NYG",
       "position": "RB",
       "rank": 43,
-      "adp": 43.6,
+      "adp": 43.9,
       "bye": 8,
       "sleeperPoints": 201.2
     },
@@ -476,7 +476,7 @@
       "team": "DEN",
       "position": "WR",
       "rank": 46,
-      "adp": 46.6,
+      "adp": 46.1,
       "bye": 10,
       "sleeperPoints": 221
     },
@@ -486,7 +486,7 @@
       "team": "IND",
       "position": "TE",
       "rank": 47,
-      "adp": 47.5,
+      "adp": 47.2,
       "bye": 13,
       "sleeperPoints": 201.1
     },
@@ -496,7 +496,7 @@
       "team": "NE",
       "position": "QB",
       "rank": 48,
-      "adp": 47.6,
+      "adp": 48.9,
       "bye": 11,
       "sleeperPoints": 320.8
     },
@@ -526,7 +526,7 @@
       "team": "CIN",
       "position": "QB",
       "rank": 51,
-      "adp": 51.1,
+      "adp": 51.9,
       "bye": 6,
       "sleeperPoints": 306.1
     },
@@ -546,27 +546,17 @@
       "team": "CLE",
       "position": "RB",
       "rank": 53,
-      "adp": 53,
-      "bye": 11,
-      "sleeperPoints": 196
-    },
-    {
-      "id": "rb:treveyon-henderson",
-      "name": "TreVeyon Henderson",
-      "team": "NE",
-      "position": "RB",
-      "rank": 54,
       "adp": 53.5,
       "bye": 11,
-      "sleeperPoints": 171
+      "sleeperPoints": 196
     },
     {
       "id": "rb:d-andre-swift",
       "name": "D'Andre Swift",
       "team": "CHI",
       "position": "RB",
-      "rank": 55,
-      "adp": 55,
+      "rank": 54,
+      "adp": 54.2,
       "bye": 10,
       "sleeperPoints": 208
     },
@@ -575,10 +565,20 @@
       "name": "Terry McLaurin",
       "team": "WAS",
       "position": "WR",
-      "rank": 56,
-      "adp": 56.1,
+      "rank": 55,
+      "adp": 55.5,
       "bye": 7,
       "sleeperPoints": 213.8
+    },
+    {
+      "id": "rb:treveyon-henderson",
+      "name": "TreVeyon Henderson",
+      "team": "NE",
+      "position": "RB",
+      "rank": 56,
+      "adp": 55.7,
+      "bye": 11,
+      "sleeperPoints": 171
     },
     {
       "id": "wr:dj-moore",
@@ -586,7 +586,7 @@
       "team": "BUF",
       "position": "WR",
       "rank": 57,
-      "adp": 57.9,
+      "adp": 57.1,
       "bye": 7,
       "sleeperPoints": 179
     },
@@ -596,29 +596,29 @@
       "team": "DET",
       "position": "WR",
       "rank": 58,
-      "adp": 58.3,
+      "adp": 58.5,
       "bye": 6,
       "sleeperPoints": 206.2
-    },
-    {
-      "id": "qb:jalen-hurts",
-      "name": "Jalen Hurts",
-      "team": "PHI",
-      "position": "QB",
-      "rank": 59,
-      "adp": 59.2,
-      "bye": 10,
-      "sleeperPoints": 310.5
     },
     {
       "id": "te:sam-laporta",
       "name": "Sam LaPorta",
       "team": "DET",
       "position": "TE",
-      "rank": 60,
-      "adp": 59.6,
+      "rank": 59,
+      "adp": 59.4,
       "bye": 6,
       "sleeperPoints": 196.5
+    },
+    {
+      "id": "qb:jalen-hurts",
+      "name": "Jalen Hurts",
+      "team": "PHI",
+      "position": "QB",
+      "rank": 60,
+      "adp": 60.3,
+      "bye": 10,
+      "sleeperPoints": 310.5
     },
     {
       "id": "wr:mike-evans",
@@ -626,7 +626,7 @@
       "team": "SF",
       "position": "WR",
       "rank": 61,
-      "adp": 61,
+      "adp": 61.9,
       "bye": 8,
       "sleeperPoints": 222.2
     },
@@ -636,7 +636,7 @@
       "team": "JAX",
       "position": "RB",
       "rank": 62,
-      "adp": 62.5,
+      "adp": 62,
       "bye": 7,
       "sleeperPoints": 174.8
     },
@@ -646,7 +646,7 @@
       "team": "GB",
       "position": "TE",
       "rank": 63,
-      "adp": 63.4,
+      "adp": 62.3,
       "bye": 11,
       "sleeperPoints": 174.4
     },
@@ -656,7 +656,7 @@
       "team": "WAS",
       "position": "QB",
       "rank": 64,
-      "adp": 64.3,
+      "adp": 64,
       "bye": 7,
       "sleeperPoints": 308.7
     },
@@ -666,7 +666,7 @@
       "team": "CHI",
       "position": "WR",
       "rank": 65,
-      "adp": 65,
+      "adp": 65.2,
       "bye": 10,
       "sleeperPoints": 207.9
     },
@@ -676,7 +676,7 @@
       "team": "TEN",
       "position": "WR",
       "rank": 66,
-      "adp": 65.9,
+      "adp": 66.5,
       "bye": 9,
       "sleeperPoints": 177.3
     },
@@ -686,7 +686,7 @@
       "team": "SEA",
       "position": "RB",
       "rank": 67,
-      "adp": 67.9,
+      "adp": 67.4,
       "bye": 11,
       "sleeperPoints": 170
     },
@@ -701,24 +701,24 @@
       "sleeperPoints": 180.4
     },
     {
-      "id": "te:kyle-pitts",
-      "name": "Kyle Pitts",
-      "team": "ATL",
-      "position": "TE",
-      "rank": 69,
-      "adp": 69.8,
-      "bye": 11,
-      "sleeperPoints": 171.6
-    },
-    {
       "id": "wr:christian-watson",
       "name": "Christian Watson",
       "team": "GB",
       "position": "WR",
-      "rank": 70,
-      "adp": 70.3,
+      "rank": 69,
+      "adp": 69.2,
       "bye": 11,
       "sleeperPoints": 207.6
+    },
+    {
+      "id": "te:kyle-pitts",
+      "name": "Kyle Pitts",
+      "team": "ATL",
+      "position": "TE",
+      "rank": 70,
+      "adp": 69.6,
+      "bye": 11,
+      "sleeperPoints": 171.6
     },
     {
       "id": "qb:caleb-williams",
@@ -726,7 +726,7 @@
       "team": "CHI",
       "position": "QB",
       "rank": 71,
-      "adp": 71.2,
+      "adp": 71.5,
       "bye": 10,
       "sleeperPoints": 299.3
     },
@@ -736,7 +736,7 @@
       "team": "PIT",
       "position": "RB",
       "rank": 72,
-      "adp": 71.9,
+      "adp": 72,
       "bye": 9,
       "sleeperPoints": 170.6
     },
@@ -746,7 +746,7 @@
       "team": "JAX",
       "position": "WR",
       "rank": 73,
-      "adp": 73.1,
+      "adp": 73.5,
       "bye": 7,
       "sleeperPoints": 195.4
     },
@@ -756,7 +756,7 @@
       "team": "PIT",
       "position": "WR",
       "rank": 74,
-      "adp": 74.7,
+      "adp": 74.5,
       "bye": 9,
       "sleeperPoints": 183.3
     },
@@ -766,7 +766,7 @@
       "team": "ARI",
       "position": "WR",
       "rank": 75,
-      "adp": 75.8,
+      "adp": 75.3,
       "bye": 14,
       "sleeperPoints": 186.2
     },
@@ -776,7 +776,7 @@
       "team": "JAX",
       "position": "WR",
       "rank": 76,
-      "adp": 76,
+      "adp": 76.1,
       "bye": 7,
       "sleeperPoints": 212.4
     },
@@ -786,7 +786,7 @@
       "team": "CAR",
       "position": "RB",
       "rank": 77,
-      "adp": 77,
+      "adp": 76.6,
       "bye": 5,
       "sleeperPoints": 147.9
     },
@@ -796,7 +796,7 @@
       "team": "DAL",
       "position": "QB",
       "rank": 78,
-      "adp": 77.8,
+      "adp": 78.9,
       "bye": 14,
       "sleeperPoints": 303.9
     },
@@ -806,7 +806,7 @@
       "team": "DEN",
       "position": "RB",
       "rank": 79,
-      "adp": 79.5,
+      "adp": 79.6,
       "bye": 10,
       "sleeperPoints": 144.1
     },
@@ -816,7 +816,7 @@
       "team": "DEN",
       "position": "WR",
       "rank": 80,
-      "adp": 80.9,
+      "adp": 80.6,
       "bye": 10,
       "sleeperPoints": 174.3
     },
@@ -826,7 +826,7 @@
       "team": "NE",
       "position": "RB",
       "rank": 81,
-      "adp": 81.6,
+      "adp": 81.7,
       "bye": 11,
       "sleeperPoints": 169
     },
@@ -836,7 +836,7 @@
       "team": "LAC",
       "position": "QB",
       "rank": 82,
-      "adp": 82.2,
+      "adp": 82.4,
       "bye": 7,
       "sleeperPoints": 295.5
     },
@@ -846,7 +846,7 @@
       "team": "ARI",
       "position": "WR",
       "rank": 83,
-      "adp": 83,
+      "adp": 83.4,
       "bye": 14,
       "sleeperPoints": 166
     },
@@ -856,7 +856,7 @@
       "team": "TEN",
       "position": "RB",
       "rank": 84,
-      "adp": 83.7,
+      "adp": 83.8,
       "bye": 9,
       "sleeperPoints": 160.1
     },
@@ -871,24 +871,24 @@
       "sleeperPoints": 161.1
     },
     {
-      "id": "wr:makai-lemon",
-      "name": "Makai Lemon",
-      "team": "PHI",
-      "position": "WR",
-      "rank": 86,
-      "adp": 86.4,
-      "bye": 10,
-      "sleeperPoints": 168.5
-    },
-    {
       "id": "te:dalton-kincaid",
       "name": "Dalton Kincaid",
       "team": "BUF",
       "position": "TE",
-      "rank": 87,
-      "adp": 87.4,
+      "rank": 86,
+      "adp": 86.9,
       "bye": 7,
       "sleeperPoints": 163.6
+    },
+    {
+      "id": "wr:makai-lemon",
+      "name": "Makai Lemon",
+      "team": "PHI",
+      "position": "WR",
+      "rank": 87,
+      "adp": 87.4,
+      "bye": 10,
+      "sleeperPoints": 168.5
     },
     {
       "id": "te:george-kittle",
@@ -896,29 +896,29 @@
       "team": "SF",
       "position": "TE",
       "rank": 88,
-      "adp": 89.4,
+      "adp": 89.5,
       "bye": 8,
       "sleeperPoints": 169.3
-    },
-    {
-      "id": "wr:jordyn-tyson",
-      "name": "Jordyn Tyson",
-      "team": "NO",
-      "position": "WR",
-      "rank": 89,
-      "adp": 89.4,
-      "bye": 8,
-      "sleeperPoints": 111
     },
     {
       "id": "qb:jaxson-dart",
       "name": "Jaxson Dart",
       "team": "NYG",
       "position": "QB",
-      "rank": 90,
-      "adp": 91.5,
+      "rank": 89,
+      "adp": 90.1,
       "bye": 8,
       "sleeperPoints": 296.5
+    },
+    {
+      "id": "wr:jordyn-tyson",
+      "name": "Jordyn Tyson",
+      "team": "NO",
+      "position": "WR",
+      "rank": 90,
+      "adp": 90.7,
+      "bye": 8,
+      "sleeperPoints": 111
     },
     {
       "id": "te:travis-kelce",
@@ -926,7 +926,7 @@
       "team": "KC",
       "position": "TE",
       "rank": 91,
-      "adp": 92.7,
+      "adp": 92,
       "bye": 5,
       "sleeperPoints": 171.4
     },
@@ -936,7 +936,7 @@
       "team": "DEN",
       "position": "RB",
       "rank": 92,
-      "adp": 94.9,
+      "adp": 94.2,
       "bye": 10,
       "sleeperPoints": 160.2
     },
@@ -956,7 +956,7 @@
       "team": "LAR",
       "position": "QB",
       "rank": 94,
-      "adp": 95.8,
+      "adp": 96.8,
       "bye": 11,
       "sleeperPoints": 280.2
     },
@@ -966,7 +966,7 @@
       "team": "DAL",
       "position": "TE",
       "rank": 95,
-      "adp": 98.5,
+      "adp": 97.9,
       "bye": 14,
       "sleeperPoints": 159.8
     },
@@ -976,7 +976,7 @@
       "team": "CHI",
       "position": "RB",
       "rank": 96,
-      "adp": 99.8,
+      "adp": 99.6,
       "bye": 10,
       "sleeperPoints": 154.6
     },
@@ -986,29 +986,29 @@
       "team": "JAX",
       "position": "QB",
       "rank": 97,
-      "adp": 100.2,
+      "adp": 100,
       "bye": 7,
       "sleeperPoints": 303.4
-    },
-    {
-      "id": "wr:michael-pittman",
-      "name": "Michael Pittman",
-      "team": "PIT",
-      "position": "WR",
-      "rank": 98,
-      "adp": 101.3,
-      "bye": 9,
-      "sleeperPoints": 170.9
     },
     {
       "id": "wr:alec-pierce",
       "name": "Alec Pierce",
       "team": "IND",
       "position": "WR",
-      "rank": 99,
-      "adp": 101.7,
+      "rank": 98,
+      "adp": 101.3,
       "bye": 13,
       "sleeperPoints": 177.9
+    },
+    {
+      "id": "wr:michael-pittman",
+      "name": "Michael Pittman",
+      "team": "PIT",
+      "position": "WR",
+      "rank": 99,
+      "adp": 102.6,
+      "bye": 9,
+      "sleeperPoints": 170.9
     },
     {
       "id": "rb:blake-corum",
@@ -1026,7 +1026,7 @@
       "team": "MIN",
       "position": "WR",
       "rank": 101,
-      "adp": 104.7,
+      "adp": 104.6,
       "bye": 6,
       "sleeperPoints": 171.7
     },
@@ -1036,17 +1036,27 @@
       "team": "CAR",
       "position": "RB",
       "rank": 102,
-      "adp": 106.1,
+      "adp": 106.2,
       "bye": 5,
       "sleeperPoints": 154.9
+    },
+    {
+      "id": "te:isaiah-likely",
+      "name": "Isaiah Likely",
+      "team": "NYG",
+      "position": "TE",
+      "rank": 103,
+      "adp": 107.5,
+      "bye": 8,
+      "sleeperPoints": 157.3
     },
     {
       "id": "qb:patrick-mahomes",
       "name": "Patrick Mahomes",
       "team": "KC",
       "position": "QB",
-      "rank": 103,
-      "adp": 107.3,
+      "rank": 104,
+      "adp": 108,
       "bye": 5,
       "sleeperPoints": 286.7
     },
@@ -1055,20 +1065,10 @@
       "name": "Josh Downs",
       "team": "IND",
       "position": "WR",
-      "rank": 104,
-      "adp": 107.6,
+      "rank": 105,
+      "adp": 109.2,
       "bye": 13,
       "sleeperPoints": 172.3
-    },
-    {
-      "id": "te:isaiah-likely",
-      "name": "Isaiah Likely",
-      "team": "NYG",
-      "position": "TE",
-      "rank": 105,
-      "adp": 109.5,
-      "bye": 8,
-      "sleeperPoints": 157.3
     },
     {
       "id": "wr:stefon-diggs",
@@ -1076,59 +1076,59 @@
       "team": "WAS",
       "position": "WR",
       "rank": 106,
-      "adp": 110.8,
+      "adp": 110.4,
       "bye": 7,
       "sleeperPoints": 157.3
-    },
-    {
-      "id": "rb:kenny-gainwell",
-      "name": "Kenny Gainwell",
-      "team": "TB",
-      "position": "RB",
-      "rank": 107,
-      "adp": 111.9,
-      "bye": 10,
-      "sleeperPoints": 152.3
     },
     {
       "id": "wr:jayden-reed",
       "name": "Jayden Reed",
       "team": "GB",
       "position": "WR",
-      "rank": 108,
-      "adp": 112.9,
+      "rank": 107,
+      "adp": 111.5,
       "bye": 11,
       "sleeperPoints": 197.6
     },
     {
-      "id": "rb:jacory-croskey-merritt",
-      "name": "Jacory Croskey-Merritt",
-      "team": "WAS",
+      "id": "rb:kenny-gainwell",
+      "name": "Kenny Gainwell",
+      "team": "TB",
       "position": "RB",
-      "rank": 109,
-      "adp": 113.8,
-      "bye": 7,
-      "sleeperPoints": 127.9
+      "rank": 108,
+      "adp": 111.8,
+      "bye": 10,
+      "sleeperPoints": 152.3
     },
     {
       "id": "wr:quentin-johnston",
       "name": "Quentin Johnston",
       "team": "LAC",
       "position": "WR",
-      "rank": 110,
-      "adp": 113.9,
+      "rank": 109,
+      "adp": 113,
       "bye": 7,
       "sleeperPoints": 163.9
     },
     {
-      "id": "wr:jakobi-meyers",
-      "name": "Jakobi Meyers",
-      "team": "JAX",
-      "position": "WR",
-      "rank": 111,
-      "adp": 115.5,
+      "id": "rb:jacory-croskey-merritt",
+      "name": "Jacory Croskey-Merritt",
+      "team": "WAS",
+      "position": "RB",
+      "rank": 110,
+      "adp": 114.1,
       "bye": 7,
-      "sleeperPoints": 169.3
+      "sleeperPoints": 127.9
+    },
+    {
+      "id": "rb:jordan-mason",
+      "name": "Jordan Mason",
+      "team": "MIN",
+      "position": "RB",
+      "rank": 111,
+      "adp": 115.1,
+      "bye": 6,
+      "sleeperPoints": 153.7
     },
     {
       "id": "wr:wan-dale-robinson",
@@ -1136,19 +1136,19 @@
       "team": "TEN",
       "position": "WR",
       "rank": 112,
-      "adp": 116.3,
+      "adp": 116.8,
       "bye": 9,
       "sleeperPoints": 170.7
     },
     {
-      "id": "rb:jordan-mason",
-      "name": "Jordan Mason",
-      "team": "MIN",
-      "position": "RB",
+      "id": "wr:jakobi-meyers",
+      "name": "Jakobi Meyers",
+      "team": "JAX",
+      "position": "WR",
       "rank": 113,
-      "adp": 117.7,
-      "bye": 6,
-      "sleeperPoints": 153.7
+      "adp": 117.8,
+      "bye": 7,
+      "sleeperPoints": 169.3
     },
     {
       "id": "qb:bo-nix",
@@ -1156,7 +1156,7 @@
       "team": "DEN",
       "position": "QB",
       "rank": 114,
-      "adp": 119.4,
+      "adp": 120,
       "bye": 10,
       "sleeperPoints": 295.7
     },
@@ -1166,7 +1166,7 @@
       "team": "CLE",
       "position": "WR",
       "rank": 115,
-      "adp": 121.3,
+      "adp": 121,
       "bye": 11,
       "sleeperPoints": 156.4
     },
@@ -1176,7 +1176,7 @@
       "team": "SF",
       "position": "QB",
       "rank": 116,
-      "adp": 122.4,
+      "adp": 122,
       "bye": 8,
       "sleeperPoints": 303.2
     },
@@ -1186,7 +1186,7 @@
       "team": "PHI",
       "position": "TE",
       "rank": 117,
-      "adp": 123.1,
+      "adp": 123.8,
       "bye": 10,
       "sleeperPoints": 136
     },
@@ -1196,7 +1196,7 @@
       "team": "MIN",
       "position": "RB",
       "rank": 118,
-      "adp": 124,
+      "adp": 124.4,
       "bye": 6,
       "sleeperPoints": 137.1
     },
@@ -1206,37 +1206,47 @@
       "team": "GB",
       "position": "WR",
       "rank": 119,
-      "adp": 127.9,
+      "adp": 127.3,
       "bye": 11,
       "sleeperPoints": 170.1
-    },
-    {
-      "id": "te:oronde-gadsden",
-      "name": "Oronde Gadsden",
-      "team": "LAC",
-      "position": "TE",
-      "rank": 120,
-      "adp": 128.7,
-      "bye": 7,
-      "sleeperPoints": 141.8
     },
     {
       "id": "te:mark-andrews",
       "name": "Mark Andrews",
       "team": "BAL",
       "position": "TE",
-      "rank": 121,
-      "adp": 129,
+      "rank": 120,
+      "adp": 128.6,
       "bye": 13,
       "sleeperPoints": 162.5
+    },
+    {
+      "id": "te:oronde-gadsden",
+      "name": "Oronde Gadsden",
+      "team": "LAC",
+      "position": "TE",
+      "rank": 121,
+      "adp": 129.7,
+      "bye": 7,
+      "sleeperPoints": 141.8
+    },
+    {
+      "id": "wr:deebo-samuel",
+      "name": "Deebo Samuel",
+      "team": "SF",
+      "position": "WR",
+      "rank": 122,
+      "adp": 130.8,
+      "bye": 8,
+      "sleeperPoints": 155.7
     },
     {
       "id": "rb:rachaad-white",
       "name": "Rachaad White",
       "team": "WAS",
       "position": "RB",
-      "rank": 122,
-      "adp": 131.3,
+      "rank": 123,
+      "adp": 132.1,
       "bye": 7,
       "sleeperPoints": 128.1
     },
@@ -1245,8 +1255,8 @@
       "name": "Romeo Doubs",
       "team": "NE",
       "position": "WR",
-      "rank": 123,
-      "adp": 131.8,
+      "rank": 124,
+      "adp": 132.1,
       "bye": 11,
       "sleeperPoints": 161.2
     },
@@ -1255,8 +1265,8 @@
       "name": "Jared Goff",
       "team": "DET",
       "position": "QB",
-      "rank": 124,
-      "adp": 133.1,
+      "rank": 125,
+      "adp": 134.9,
       "bye": 6,
       "sleeperPoints": 283.5
     },
@@ -1265,30 +1275,20 @@
       "name": "De'Zhaun Stribling",
       "team": "SF",
       "position": "WR",
-      "rank": 125,
-      "adp": 137,
+      "rank": 126,
+      "adp": 138.6,
       "bye": 8,
       "sleeperPoints": 128.4
     },
     {
-      "id": "wr:deebo-samuel",
-      "name": "Deebo Samuel",
-      "team": "SF",
-      "position": "WR",
-      "rank": 126,
-      "adp": 137.4,
-      "bye": 8,
-      "sleeperPoints": 155.7
-    },
-    {
-      "id": "te:hunter-henry",
-      "name": "Hunter Henry",
-      "team": "NE",
-      "position": "TE",
+      "id": "rb:chris-rodriguez",
+      "name": "Chris Rodriguez",
+      "team": "JAX",
+      "position": "RB",
       "rank": 127,
-      "adp": 139.4,
-      "bye": 11,
-      "sleeperPoints": 153.5
+      "adp": 139.5,
+      "bye": 7,
+      "sleeperPoints": 132.5
     },
     {
       "id": "wr:xavier-worthy",
@@ -1296,59 +1296,59 @@
       "team": "KC",
       "position": "WR",
       "rank": 128,
-      "adp": 140.4,
+      "adp": 141.8,
       "bye": 5,
       "sleeperPoints": 161.5
     },
     {
-      "id": "rb:chris-rodriguez",
-      "name": "Chris Rodriguez",
-      "team": "JAX",
-      "position": "RB",
+      "id": "te:hunter-henry",
+      "name": "Hunter Henry",
+      "team": "NE",
+      "position": "TE",
       "rank": 129,
-      "adp": 142.3,
-      "bye": 7,
-      "sleeperPoints": 132.5
-    },
-    {
-      "id": "qb:baker-mayfield",
-      "name": "Baker Mayfield",
-      "team": "TB",
-      "position": "QB",
-      "rank": 130,
-      "adp": 143.3,
-      "bye": 10,
-      "sleeperPoints": 274.9
+      "adp": 142.1,
+      "bye": 11,
+      "sleeperPoints": 153.5
     },
     {
       "id": "wr:khalil-shakir",
       "name": "Khalil Shakir",
       "team": "BUF",
       "position": "WR",
-      "rank": 131,
-      "adp": 143.6,
+      "rank": 130,
+      "adp": 143.1,
       "bye": 7,
       "sleeperPoints": 170.7
     },
     {
-      "id": "wr:jalen-coker",
-      "name": "Jalen Coker",
-      "team": "CAR",
-      "position": "WR",
-      "rank": 132,
-      "adp": 145.8,
-      "bye": 5,
-      "sleeperPoints": 165.9
+      "id": "qb:baker-mayfield",
+      "name": "Baker Mayfield",
+      "team": "TB",
+      "position": "QB",
+      "rank": 131,
+      "adp": 144.8,
+      "bye": 10,
+      "sleeperPoints": 274.9
     },
     {
       "id": "rb:tyler-allgeier",
       "name": "Tyler Allgeier",
       "team": "ARI",
       "position": "RB",
-      "rank": 133,
-      "adp": 146.1,
+      "rank": 132,
+      "adp": 145.4,
       "bye": 14,
       "sleeperPoints": 77.2
+    },
+    {
+      "id": "wr:jalen-coker",
+      "name": "Jalen Coker",
+      "team": "CAR",
+      "position": "WR",
+      "rank": 133,
+      "adp": 146,
+      "bye": 5,
+      "sleeperPoints": 165.9
     },
     {
       "id": "wr:rashid-shaheed",
@@ -1356,7 +1356,7 @@
       "team": "SEA",
       "position": "WR",
       "rank": 134,
-      "adp": 147,
+      "adp": 146.9,
       "bye": 11,
       "sleeperPoints": 138.1
     },
@@ -1366,7 +1366,7 @@
       "team": "SEA",
       "position": "RB",
       "rank": 135,
-      "adp": 148.6,
+      "adp": 148.1,
       "bye": 11,
       "sleeperPoints": 67.2
     },
@@ -1376,7 +1376,7 @@
       "team": "GB",
       "position": "QB",
       "rank": 136,
-      "adp": 149.5,
+      "adp": 149.3,
       "bye": 11,
       "sleeperPoints": 278.5
     },
@@ -1386,7 +1386,7 @@
       "team": "JAX",
       "position": "TE",
       "rank": 137,
-      "adp": 152.1,
+      "adp": 152.4,
       "bye": 7,
       "sleeperPoints": 161
     },
@@ -1396,7 +1396,7 @@
       "team": "NYJ",
       "position": "TE",
       "rank": 138,
-      "adp": 153.4,
+      "adp": 154,
       "bye": 13,
       "sleeperPoints": 100.2
     },
@@ -1406,7 +1406,7 @@
       "team": "ATL",
       "position": "RB",
       "rank": 139,
-      "adp": 155.8,
+      "adp": 155.6,
       "bye": 11,
       "sleeperPoints": 69.9
     },
@@ -1416,7 +1416,7 @@
       "team": "BAL",
       "position": "WR",
       "rank": 140,
-      "adp": 157.3,
+      "adp": 157.6,
       "bye": 13,
       "sleeperPoints": 104.9
     },
@@ -1426,7 +1426,7 @@
       "team": "MIN",
       "position": "QB",
       "rank": 141,
-      "adp": 159,
+      "adp": 159.3,
       "bye": 6,
       "sleeperPoints": 283.1
     },
@@ -1436,29 +1436,29 @@
       "team": "HOU",
       "position": "RB",
       "rank": 142,
-      "adp": 160.8,
+      "adp": 160.2,
       "bye": 8,
       "sleeperPoints": 83.8
+    },
+    {
+      "id": "qb:sam-darnold",
+      "name": "Sam Darnold",
+      "team": "SEA",
+      "position": "QB",
+      "rank": 143,
+      "adp": 160.8,
+      "bye": 11,
+      "sleeperPoints": 262.7
     },
     {
       "id": "rb:alvin-kamara",
       "name": "Alvin Kamara",
       "team": "NO",
       "position": "RB",
-      "rank": 143,
-      "adp": 161.2,
+      "rank": 144,
+      "adp": 163.1,
       "bye": 8,
       "sleeperPoints": 63
-    },
-    {
-      "id": "rb:tyrone-tracy",
-      "name": "Tyrone Tracy",
-      "team": "NYG",
-      "position": "RB",
-      "rank": 144,
-      "adp": 163.8,
-      "bye": 8,
-      "sleeperPoints": 111.3
     },
     {
       "id": "te:t-j-hockenson",
@@ -1466,7 +1466,7 @@
       "team": "MIN",
       "position": "TE",
       "rank": 145,
-      "adp": 164,
+      "adp": 164.5,
       "bye": 6,
       "sleeperPoints": 155
     },
@@ -1476,19 +1476,19 @@
       "team": "TEN",
       "position": "RB",
       "rank": 146,
-      "adp": 165.8,
+      "adp": 165.2,
       "bye": 9,
       "sleeperPoints": 114.6
     },
     {
-      "id": "wr:denzel-boston",
-      "name": "Denzel Boston",
-      "team": "CLE",
-      "position": "WR",
+      "id": "rb:tyrone-tracy",
+      "name": "Tyrone Tracy",
+      "team": "NYG",
+      "position": "RB",
       "rank": 147,
-      "adp": 166,
-      "bye": 11,
-      "sleeperPoints": 134.7
+      "adp": 166.8,
+      "bye": 8,
+      "sleeperPoints": 111.3
     },
     {
       "id": "wr:travis-hunter",
@@ -1496,17 +1496,27 @@
       "team": "JAX",
       "position": "WR",
       "rank": 148,
-      "adp": 167,
+      "adp": 167.2,
       "bye": 7,
       "sleeperPoints": 100.6
+    },
+    {
+      "id": "wr:denzel-boston",
+      "name": "Denzel Boston",
+      "team": "CLE",
+      "position": "WR",
+      "rank": 149,
+      "adp": 167.3,
+      "bye": 11,
+      "sleeperPoints": 134.7
     },
     {
       "id": "rb:jonah-coleman",
       "name": "Jonah Coleman",
       "team": "DEN",
       "position": "RB",
-      "rank": 149,
-      "adp": 169.4,
+      "rank": 150,
+      "adp": 170.6,
       "bye": 10,
       "sleeperPoints": 63.9
     },
@@ -1515,18 +1525,28 @@
       "name": "Mike Washington",
       "team": "LV",
       "position": "RB",
-      "rank": 150,
-      "adp": 171.7,
+      "rank": 151,
+      "adp": 172.9,
       "bye": 13,
       "sleeperPoints": 97.5
+    },
+    {
+      "id": "rb:marshawn-lloyd",
+      "name": "MarShawn Lloyd",
+      "team": "GB",
+      "position": "RB",
+      "rank": 152,
+      "adp": 173.9,
+      "bye": 11,
+      "sleeperPoints": 51.8
     },
     {
       "id": "wr:cyrus-allen",
       "name": "Cyrus Allen",
       "team": "KC",
       "position": "WR",
-      "rank": 151,
-      "adp": 172.2,
+      "rank": 153,
+      "adp": 174.5,
       "bye": 5,
       "sleeperPoints": 94.5
     },
@@ -1535,28 +1555,18 @@
       "name": "Malik Washington",
       "team": "MIA",
       "position": "WR",
-      "rank": 152,
-      "adp": 173.2,
+      "rank": 154,
+      "adp": 174.6,
       "bye": 6,
       "sleeperPoints": 131.3
-    },
-    {
-      "id": "qb:sam-darnold",
-      "name": "Sam Darnold",
-      "team": "SEA",
-      "position": "QB",
-      "rank": 153,
-      "adp": 175.6,
-      "bye": 11,
-      "sleeperPoints": 262.7
     },
     {
       "id": "wr:tank-dell",
       "name": "Tank Dell",
       "team": "HOU",
       "position": "WR",
-      "rank": 154,
-      "adp": 176.8,
+      "rank": 155,
+      "adp": 177.9,
       "bye": 8,
       "sleeperPoints": 51.9
     },
@@ -1565,8 +1575,8 @@
       "name": "Tank Bigsby",
       "team": "PHI",
       "position": "RB",
-      "rank": 155,
-      "adp": 177.7,
+      "rank": 156,
+      "adp": 178.2,
       "bye": 10,
       "sleeperPoints": 65.2
     },
@@ -1575,18 +1585,28 @@
       "name": "Fernando Mendoza",
       "team": "LV",
       "position": "QB",
-      "rank": 156,
-      "adp": 179.1,
+      "rank": 157,
+      "adp": 181.4,
       "bye": 13,
       "sleeperPoints": 212.2
+    },
+    {
+      "id": "te:aj-barner",
+      "name": "AJ Barner",
+      "team": "SEA",
+      "position": "TE",
+      "rank": 158,
+      "adp": 183.9,
+      "bye": 11,
+      "sleeperPoints": 142.4
     },
     {
       "id": "rb:keaton-mitchell",
       "name": "Keaton Mitchell",
       "team": "LAC",
       "position": "RB",
-      "rank": 157,
-      "adp": 181.1,
+      "rank": 159,
+      "adp": 184.3,
       "bye": 7,
       "sleeperPoints": 96.9
     },
@@ -1595,40 +1615,20 @@
       "name": "Jalen Nailor",
       "team": "LV",
       "position": "WR",
-      "rank": 158,
-      "adp": 182.4,
+      "rank": 160,
+      "adp": 185.6,
       "bye": 13,
       "sleeperPoints": 130.6
-    },
-    {
-      "id": "te:aj-barner",
-      "name": "AJ Barner",
-      "team": "SEA",
-      "position": "TE",
-      "rank": 159,
-      "adp": 183.1,
-      "bye": 11,
-      "sleeperPoints": 142.4
     },
     {
       "id": "rb:isiah-pacheco",
       "name": "Isiah Pacheco",
       "team": "DET",
       "position": "RB",
-      "rank": 160,
-      "adp": 184.7,
+      "rank": 161,
+      "adp": 186.2,
       "bye": 6,
       "sleeperPoints": 53.6
-    },
-    {
-      "id": "te:chig-okonkwo",
-      "name": "Chig Okonkwo",
-      "team": "WAS",
-      "position": "TE",
-      "rank": 161,
-      "adp": 185.5,
-      "bye": 7,
-      "sleeperPoints": 144.1
     },
     {
       "id": "qb:tyler-shough",
@@ -1636,7 +1636,7 @@
       "team": "NO",
       "position": "QB",
       "rank": 162,
-      "adp": 185.8,
+      "adp": 187.3,
       "bye": 8,
       "sleeperPoints": 270.9
     },
@@ -1646,17 +1646,27 @@
       "team": "NO",
       "position": "TE",
       "rank": 163,
-      "adp": 187.1,
+      "adp": 188.5,
       "bye": 8,
       "sleeperPoints": 140.9
+    },
+    {
+      "id": "te:chig-okonkwo",
+      "name": "Chig Okonkwo",
+      "team": "WAS",
+      "position": "TE",
+      "rank": 164,
+      "adp": 188.8,
+      "bye": 7,
+      "sleeperPoints": 144.1
     },
     {
       "id": "rb:dylan-sampson",
       "name": "Dylan Sampson",
       "team": "CLE",
       "position": "RB",
-      "rank": 164,
-      "adp": 188.2,
+      "rank": 165,
+      "adp": 190.5,
       "bye": 11,
       "sleeperPoints": 88.7
     },
@@ -1665,20 +1675,10 @@
       "name": "Jerry Jeudy",
       "team": "CLE",
       "position": "WR",
-      "rank": 165,
-      "adp": 189.6,
+      "rank": 166,
+      "adp": 191.4,
       "bye": 11,
       "sleeperPoints": 119.6
-    },
-    {
-      "id": "wr:omar-cooper",
-      "name": "Omar Cooper",
-      "team": "NYJ",
-      "position": "WR",
-      "rank": 166,
-      "adp": 190.1,
-      "bye": 13,
-      "sleeperPoints": 127.1
     },
     {
       "id": "te:dalton-schultz",
@@ -1686,17 +1686,27 @@
       "team": "HOU",
       "position": "TE",
       "rank": 167,
-      "adp": 191,
+      "adp": 192.8,
       "bye": 8,
       "sleeperPoints": 150.9
+    },
+    {
+      "id": "wr:omar-cooper",
+      "name": "Omar Cooper",
+      "team": "NYJ",
+      "position": "WR",
+      "rank": 168,
+      "adp": 193.7,
+      "bye": 13,
+      "sleeperPoints": 127.1
     },
     {
       "id": "wr:zachariah-branch",
       "name": "Zachariah Branch",
       "team": "ATL",
       "position": "WR",
-      "rank": 168,
-      "adp": 191.3,
+      "rank": 169,
+      "adp": 195.6,
       "bye": 11,
       "sleeperPoints": 78.5
     },
@@ -1705,8 +1715,8 @@
       "name": "Malik Willis",
       "team": "MIA",
       "position": "QB",
-      "rank": 169,
-      "adp": 194.5,
+      "rank": 170,
+      "adp": 196,
       "bye": 6,
       "sleeperPoints": 270.1
     },
@@ -1715,8 +1725,8 @@
       "name": "Jayden Higgins",
       "team": "HOU",
       "position": "WR",
-      "rank": 170,
-      "adp": 195.9,
+      "rank": 171,
+      "adp": 197.5,
       "bye": 8,
       "sleeperPoints": 0
     },
@@ -1725,8 +1735,8 @@
       "name": "Jauan Jennings",
       "team": "MIN",
       "position": "WR",
-      "rank": 171,
-      "adp": 196.3,
+      "rank": 172,
+      "adp": 198.4,
       "bye": 6,
       "sleeperPoints": 105.7
     },
@@ -1735,20 +1745,10 @@
       "name": "Keenan Allen",
       "team": "IND",
       "position": "WR",
-      "rank": 172,
-      "adp": 197.4,
+      "rank": 173,
+      "adp": 199.1,
       "bye": 13,
       "sleeperPoints": 106.8
-    },
-    {
-      "id": "rb:marshawn-lloyd",
-      "name": "MarShawn Lloyd",
-      "team": "GB",
-      "position": "RB",
-      "rank": 173,
-      "adp": 197.4,
-      "bye": 11,
-      "sleeperPoints": 51.8
     },
     {
       "id": "wr:tre-tucker",
@@ -1756,27 +1756,17 @@
       "team": "LV",
       "position": "WR",
       "rank": 174,
-      "adp": 202.5,
+      "adp": 202.3,
       "bye": 13,
       "sleeperPoints": 125.9
-    },
-    {
-      "id": "qb:c-j-stroud",
-      "name": "C.J. Stroud",
-      "team": "HOU",
-      "position": "QB",
-      "rank": 175,
-      "adp": 203.1,
-      "bye": 8,
-      "sleeperPoints": 247.8
     },
     {
       "id": "qb:daniel-jones",
       "name": "Daniel Jones",
       "team": "IND",
       "position": "QB",
-      "rank": 176,
-      "adp": 203.2,
+      "rank": 175,
+      "adp": 202.8,
       "bye": 13,
       "sleeperPoints": 223.5
     },
@@ -1785,10 +1775,20 @@
       "name": "Braelon Allen",
       "team": "NYJ",
       "position": "RB",
-      "rank": 177,
-      "adp": 205.8,
+      "rank": 176,
+      "adp": 204.5,
       "bye": 13,
       "sleeperPoints": 52.2
+    },
+    {
+      "id": "qb:c-j-stroud",
+      "name": "C.J. Stroud",
+      "team": "HOU",
+      "position": "QB",
+      "rank": 177,
+      "adp": 205,
+      "bye": 8,
+      "sleeperPoints": 247.8
     },
     {
       "id": "te:terrance-ferguson",
@@ -1796,7 +1796,7 @@
       "team": "LAR",
       "position": "TE",
       "rank": 178,
-      "adp": 206.8,
+      "adp": 206.5,
       "bye": 11,
       "sleeperPoints": 100.3
     },
@@ -1806,7 +1806,7 @@
       "team": "LAC",
       "position": "TE",
       "rank": 179,
-      "adp": 207.6,
+      "adp": 207.7,
       "bye": 7,
       "sleeperPoints": 58
     },
@@ -1816,7 +1816,7 @@
       "team": "KC",
       "position": "RB",
       "rank": 180,
-      "adp": 208.8,
+      "adp": 208.7,
       "bye": 5,
       "sleeperPoints": 65.2
     },
@@ -1826,7 +1826,7 @@
       "team": "TEN",
       "position": "RB",
       "rank": 181,
-      "adp": 209,
+      "adp": 209.3,
       "bye": 9,
       "sleeperPoints": 63.7
     },
@@ -1836,7 +1836,7 @@
       "team": "TB",
       "position": "WR",
       "rank": 182,
-      "adp": 209.2,
+      "adp": 209.4,
       "bye": 10,
       "sleeperPoints": 127.4
     },
@@ -1846,7 +1846,7 @@
       "team": "",
       "position": "WR",
       "rank": 183,
-      "adp": 211.1,
+      "adp": 211,
       "bye": null,
       "sleeperPoints": 93.7
     },
@@ -1866,7 +1866,7 @@
       "team": "MIA",
       "position": "WR",
       "rank": 185,
-      "adp": 213.5,
+      "adp": 213.2,
       "bye": 6,
       "sleeperPoints": 94.8
     },
@@ -1886,29 +1886,29 @@
       "team": "SF",
       "position": "RB",
       "rank": 187,
-      "adp": 215.1,
+      "adp": 214,
       "bye": 8,
       "sleeperPoints": 42.3
-    },
-    {
-      "id": "rb:kaleb-johnson",
-      "name": "Kaleb Johnson",
-      "team": "PIT",
-      "position": "RB",
-      "rank": 188,
-      "adp": 217.5,
-      "bye": 9,
-      "sleeperPoints": 32
     },
     {
       "id": "rb:najee-harris",
       "name": "Najee Harris",
       "team": "NYG",
       "position": "RB",
-      "rank": 189,
-      "adp": 217.8,
+      "rank": 188,
+      "adp": 216.2,
       "bye": 8,
       "sleeperPoints": 26.3
+    },
+    {
+      "id": "rb:kaleb-johnson",
+      "name": "Kaleb Johnson",
+      "team": "PIT",
+      "position": "RB",
+      "rank": 189,
+      "adp": 217.5,
+      "bye": 9,
+      "sleeperPoints": 32
     },
     {
       "id": "wr:marvin-mims",
@@ -1926,7 +1926,7 @@
       "team": "NYG",
       "position": "WR",
       "rank": 191,
-      "adp": 219.8,
+      "adp": 219.7,
       "bye": 8,
       "sleeperPoints": 105.2
     },
@@ -1936,7 +1936,7 @@
       "team": "SEA",
       "position": "WR",
       "rank": 192,
-      "adp": 220.5,
+      "adp": 220.6,
       "bye": 11,
       "sleeperPoints": 86.4
     },
@@ -1951,11 +1951,21 @@
       "sleeperPoints": 31.2
     },
     {
+      "id": "rb:ray-davis",
+      "name": "Ray Davis",
+      "team": "BUF",
+      "position": "RB",
+      "rank": 194,
+      "adp": 223.5,
+      "bye": 7,
+      "sleeperPoints": 65.1
+    },
+    {
       "id": "wr:kayshon-boutte",
       "name": "Kayshon Boutte",
       "team": "HOU",
       "position": "WR",
-      "rank": 194,
+      "rank": 195,
       "adp": 223.7,
       "bye": 8,
       "sleeperPoints": 125.2
@@ -1965,7 +1975,7 @@
       "name": "J.J. McCarthy",
       "team": "MIN",
       "position": "QB",
-      "rank": 195,
+      "rank": 196,
       "adp": 224.2,
       "bye": 6,
       "sleeperPoints": 13.6
@@ -1975,20 +1985,10 @@
       "name": "Mason Taylor",
       "team": "NYJ",
       "position": "TE",
-      "rank": 196,
+      "rank": 197,
       "adp": 224.3,
       "bye": 13,
       "sleeperPoints": 96.4
-    },
-    {
-      "id": "wr:isaac-teslaa",
-      "name": "Isaac TeSlaa",
-      "team": "DET",
-      "position": "WR",
-      "rank": 197,
-      "adp": 224.5,
-      "bye": 6,
-      "sleeperPoints": 87.1
     },
     {
       "id": "rb:kendre-miller",
@@ -2001,14 +2001,14 @@
       "sleeperPoints": 5.6
     },
     {
-      "id": "rb:ray-davis",
-      "name": "Ray Davis",
-      "team": "BUF",
-      "position": "RB",
+      "id": "wr:isaac-teslaa",
+      "name": "Isaac TeSlaa",
+      "team": "DET",
+      "position": "WR",
       "rank": 199,
-      "adp": 225.7,
-      "bye": 7,
-      "sleeperPoints": 65.1
+      "adp": 225.9,
+      "bye": 6,
+      "sleeperPoints": 87.1
     },
     {
       "id": "rb:brashard-smith",
@@ -2031,44 +2031,44 @@
       "sleeperPoints": 96.4
     },
     {
-      "id": "qb:bryce-young",
-      "name": "Bryce Young",
-      "team": "CAR",
-      "position": "QB",
-      "rank": 202,
-      "adp": 227.3,
-      "bye": 5,
-      "sleeperPoints": 235.6
-    },
-    {
       "id": "rb:joe-mixon",
       "name": "Joe Mixon",
       "team": "",
       "position": "RB",
-      "rank": 203,
+      "rank": 202,
       "adp": 227.3,
       "bye": null,
       "sleeperPoints": 0
     },
     {
-      "id": "qb:cam-ward",
-      "name": "Cam Ward",
-      "team": "TEN",
+      "id": "qb:bryce-young",
+      "name": "Bryce Young",
+      "team": "CAR",
       "position": "QB",
-      "rank": 204,
-      "adp": 227.6,
-      "bye": 9,
-      "sleeperPoints": 227.8
+      "rank": 203,
+      "adp": 227.9,
+      "bye": 5,
+      "sleeperPoints": 235.6
     },
     {
       "id": "qb:michael-penix",
       "name": "Michael Penix",
       "team": "ATL",
       "position": "QB",
-      "rank": 205,
+      "rank": 204,
       "adp": 227.9,
       "bye": 11,
       "sleeperPoints": 143.2
+    },
+    {
+      "id": "rb:jaydon-blue",
+      "name": "Jaydon Blue",
+      "team": "DAL",
+      "position": "RB",
+      "rank": 205,
+      "adp": 228,
+      "bye": 14,
+      "sleeperPoints": 56.6
     },
     {
       "id": "wr:tory-horton",
@@ -2091,11 +2091,21 @@
       "sleeperPoints": 177
     },
     {
+      "id": "qb:cam-ward",
+      "name": "Cam Ward",
+      "team": "TEN",
+      "position": "QB",
+      "rank": 208,
+      "adp": 229,
+      "bye": 9,
+      "sleeperPoints": 227.8
+    },
+    {
       "id": "wr:elijah-sarratt",
       "name": "Elijah Sarratt",
       "team": "BAL",
       "position": "WR",
-      "rank": 208,
+      "rank": 209,
       "adp": 229.2,
       "bye": 13,
       "sleeperPoints": 61.4
@@ -2105,7 +2115,7 @@
       "name": "Chimere Dike",
       "team": "TEN",
       "position": "WR",
-      "rank": 209,
+      "rank": 210,
       "adp": 229.4,
       "bye": 9,
       "sleeperPoints": 89.4
@@ -2115,20 +2125,10 @@
       "name": "Greg Dulcich",
       "team": "MIA",
       "position": "TE",
-      "rank": 210,
+      "rank": 211,
       "adp": 229.7,
       "bye": 6,
       "sleeperPoints": 110.9
-    },
-    {
-      "id": "rb:jaydon-blue",
-      "name": "Jaydon Blue",
-      "team": "DAL",
-      "position": "RB",
-      "rank": 211,
-      "adp": 229.7,
-      "bye": 14,
-      "sleeperPoints": 56.6
     },
     {
       "id": "wr:germie-bernard",
@@ -2141,44 +2141,44 @@
       "sleeperPoints": 98.9
     },
     {
-      "id": "wr:ryan-flournoy",
-      "name": "Ryan Flournoy",
-      "team": "DAL",
-      "position": "WR",
-      "rank": 213,
-      "adp": 230.7,
-      "bye": 14,
-      "sleeperPoints": 121.2
-    },
-    {
       "id": "wr:tre-harris",
       "name": "Tre' Harris",
       "team": "LAC",
       "position": "WR",
-      "rank": 214,
-      "adp": 231.4,
+      "rank": 213,
+      "adp": 230,
       "bye": 7,
       "sleeperPoints": 112.9
-    },
-    {
-      "id": "te:theo-johnson",
-      "name": "Theo Johnson",
-      "team": "NYG",
-      "position": "TE",
-      "rank": 215,
-      "adp": 232.2,
-      "bye": 8,
-      "sleeperPoints": 77
     },
     {
       "id": "wr:adonai-mitchell",
       "name": "Adonai Mitchell",
       "team": "NYJ",
       "position": "WR",
-      "rank": 216,
-      "adp": 232.5,
+      "rank": 214,
+      "adp": 230.6,
       "bye": 13,
       "sleeperPoints": 98.3
+    },
+    {
+      "id": "wr:ryan-flournoy",
+      "name": "Ryan Flournoy",
+      "team": "DAL",
+      "position": "WR",
+      "rank": 215,
+      "adp": 230.7,
+      "bye": 14,
+      "sleeperPoints": 121.2
+    },
+    {
+      "id": "te:theo-johnson",
+      "name": "Theo Johnson",
+      "team": "NYG",
+      "position": "TE",
+      "rank": 216,
+      "adp": 232.2,
+      "bye": 8,
+      "sleeperPoints": 77
     },
     {
       "id": "wr:rashod-bateman",
@@ -2191,51 +2191,71 @@
       "sleeperPoints": 102.3
     },
     {
-      "id": "te:gunnar-helm",
-      "name": "Gunnar Helm",
-      "team": "TEN",
-      "position": "TE",
-      "rank": 218,
-      "adp": 233.1,
-      "bye": 9,
-      "sleeperPoints": 130.3
-    },
-    {
       "id": "rb:james-conner",
       "name": "James Conner",
       "team": "ARI",
       "position": "RB",
-      "rank": 219,
-      "adp": 233.2,
+      "rank": 218,
+      "adp": 233,
       "bye": 14,
       "sleeperPoints": 57.2
     },
     {
-      "id": "wr:keon-coleman",
-      "name": "Keon Coleman",
-      "team": "BUF",
-      "position": "WR",
-      "rank": 220,
-      "adp": 234.8,
-      "bye": 7,
-      "sleeperPoints": 85.8
+      "id": "te:gunnar-helm",
+      "name": "Gunnar Helm",
+      "team": "TEN",
+      "position": "TE",
+      "rank": 219,
+      "adp": 233.1,
+      "bye": 9,
+      "sleeperPoints": 130.3
     },
     {
       "id": "te:cade-otton",
       "name": "Cade Otton",
       "team": "TB",
       "position": "TE",
-      "rank": 221,
-      "adp": 235.7,
+      "rank": 220,
+      "adp": 234.1,
       "bye": 10,
       "sleeperPoints": 122.3
+    },
+    {
+      "id": "wr:keon-coleman",
+      "name": "Keon Coleman",
+      "team": "BUF",
+      "position": "WR",
+      "rank": 221,
+      "adp": 234.8,
+      "bye": 7,
+      "sleeperPoints": 85.8
+    },
+    {
+      "id": "wr:antonio-williams",
+      "name": "Antonio Williams",
+      "team": "WAS",
+      "position": "WR",
+      "rank": 222,
+      "adp": 235.4,
+      "bye": 7,
+      "sleeperPoints": 75.2
+    },
+    {
+      "id": "te:ray-hamilton",
+      "name": "Ray Hamilton",
+      "team": "",
+      "position": "TE",
+      "rank": 223,
+      "adp": 236,
+      "bye": null,
+      "sleeperPoints": 0
     },
     {
       "id": "qb:shedeur-sanders",
       "name": "Shedeur Sanders",
       "team": "CLE",
       "position": "QB",
-      "rank": 222,
+      "rank": 224,
       "adp": 236.1,
       "bye": 11,
       "sleeperPoints": 97.1
@@ -2245,27 +2265,17 @@
       "name": "Tua Tagovailoa",
       "team": "ATL",
       "position": "QB",
-      "rank": 223,
+      "rank": 225,
       "adp": 236.5,
       "bye": 11,
       "sleeperPoints": 93
     },
     {
-      "id": "wr:antonio-williams",
-      "name": "Antonio Williams",
-      "team": "WAS",
-      "position": "WR",
-      "rank": 224,
-      "adp": 236.6,
-      "bye": 7,
-      "sleeperPoints": 75.2
-    },
-    {
-      "id": "wr:deangelo-hardy",
-      "name": "DeAngelo Hardy",
+      "id": "wr:anthony-miller",
+      "name": "Anthony Miller",
       "team": "",
       "position": "WR",
-      "rank": 225,
+      "rank": 226,
       "adp": 237,
       "bye": null,
       "sleeperPoints": 0
@@ -2275,7 +2285,7 @@
       "name": "Audric Estime",
       "team": "NO",
       "position": "RB",
-      "rank": 226,
+      "rank": 227,
       "adp": 237.4,
       "bye": 8,
       "sleeperPoints": 22.6
@@ -2285,17 +2295,17 @@
       "name": "Kimani Vidal",
       "team": "LAC",
       "position": "RB",
-      "rank": 227,
+      "rank": 228,
       "adp": 237.8,
       "bye": 7,
       "sleeperPoints": 60
     },
     {
-      "id": "wr:jelani-baker",
-      "name": "Jelani Baker",
+      "id": "rb:quali-conley",
+      "name": "Quali Conley",
       "team": "",
-      "position": "WR",
-      "rank": 228,
+      "position": "RB",
+      "rank": 229,
       "adp": 238,
       "bye": null,
       "sleeperPoints": 0
@@ -2305,7 +2315,7 @@
       "name": "Jack Bech",
       "team": "LV",
       "position": "WR",
-      "rank": 229,
+      "rank": 230,
       "adp": 238.2,
       "bye": 13,
       "sleeperPoints": 77.9
@@ -2315,17 +2325,17 @@
       "name": "Eli Stowers",
       "team": "PHI",
       "position": "TE",
-      "rank": 230,
+      "rank": 231,
       "adp": 238.9,
       "bye": 10,
       "sleeperPoints": 81.4
     },
     {
-      "id": "te:camren-mcdonald",
-      "name": "Camren McDonald",
+      "id": "wr:junior-vandeross",
+      "name": "Junior Vandeross",
       "team": "",
-      "position": "TE",
-      "rank": 231,
+      "position": "WR",
+      "rank": 232,
       "adp": 239,
       "bye": null,
       "sleeperPoints": 0
@@ -2335,7 +2345,7 @@
       "name": "Kaytron Allen",
       "team": "WAS",
       "position": "RB",
-      "rank": 232,
+      "rank": 233,
       "adp": 239.1,
       "bye": 7,
       "sleeperPoints": 45.9
@@ -2345,7 +2355,7 @@
       "name": "Ted Hurst",
       "team": "TB",
       "position": "WR",
-      "rank": 233,
+      "rank": 234,
       "adp": 239.6,
       "bye": 10,
       "sleeperPoints": 97.9
@@ -2355,7 +2365,7 @@
       "name": "Devaughn Vele",
       "team": "NO",
       "position": "WR",
-      "rank": 234,
+      "rank": 235,
       "adp": 239.8,
       "bye": 8,
       "sleeperPoints": 110.6
@@ -2365,17 +2375,17 @@
       "name": "Pat Freiermuth",
       "team": "PIT",
       "position": "TE",
-      "rank": 235,
+      "rank": 236,
       "adp": 239.9,
       "bye": 9,
       "sleeperPoints": 128.4
     },
     {
-      "id": "te:mason-fairchild",
-      "name": "Mason Fairchild",
+      "id": "wr:kasey-closs",
+      "name": "Kasey Closs",
       "team": "",
-      "position": "TE",
-      "rank": 236,
+      "position": "WR",
+      "rank": 237,
       "adp": 240,
       "bye": null,
       "sleeperPoints": 0
@@ -2385,7 +2395,7 @@
       "name": "Jarquez Hunter",
       "team": "MIA",
       "position": "RB",
-      "rank": 237,
+      "rank": 238,
       "adp": 240.6,
       "bye": 6,
       "sleeperPoints": 9.6
@@ -2395,17 +2405,17 @@
       "name": "Chris Bell",
       "team": "MIA",
       "position": "WR",
-      "rank": 238,
+      "rank": 239,
       "adp": 240.9,
       "bye": 6,
       "sleeperPoints": 67.2
     },
     {
-      "id": "rb:henry-pearson",
-      "name": "Henry Pearson",
+      "id": "wr:ezell-ruffin",
+      "name": "Ezell Ruffin",
       "team": "",
-      "position": "RB",
-      "rank": 239,
+      "position": "WR",
+      "rank": 240,
       "adp": 241,
       "bye": null,
       "sleeperPoints": 0
@@ -2415,7 +2425,7 @@
       "name": "Jake Tonges",
       "team": "SF",
       "position": "TE",
-      "rank": 240,
+      "rank": 241,
       "adp": 241.4,
       "bye": 8,
       "sleeperPoints": 70.8
@@ -2425,7 +2435,7 @@
       "name": "Elic Ayomanor",
       "team": "TEN",
       "position": "WR",
-      "rank": 241,
+      "rank": 242,
       "adp": 241.5,
       "bye": 9,
       "sleeperPoints": 56.7
@@ -2435,7 +2445,7 @@
       "name": "Christian Kirk",
       "team": "SF",
       "position": "WR",
-      "rank": 242,
+      "rank": 243,
       "adp": 241.7,
       "bye": 8,
       "sleeperPoints": 46.4
@@ -2445,7 +2455,7 @@
       "name": "Troy Franklin",
       "team": "DEN",
       "position": "WR",
-      "rank": 244,
+      "rank": 245,
       "adp": 241.8,
       "bye": 10,
       "sleeperPoints": 66.1
@@ -2455,73 +2465,63 @@
       "name": "Ty Simpson",
       "team": "LAR",
       "position": "QB",
-      "rank": 243,
+      "rank": 244,
       "adp": 241.8,
       "bye": 11,
       "sleeperPoints": 13.6
+    },
+    {
+      "id": "wr:adam-humphries",
+      "name": "Adam Humphries",
+      "team": "",
+      "position": "WR",
+      "rank": 246,
+      "adp": 242,
+      "bye": null,
+      "sleeperPoints": 0
     },
     {
       "id": "rb:demond-claiborne",
       "name": "Demond Claiborne",
       "team": "MIN",
       "position": "RB",
-      "rank": 246,
+      "rank": 247,
       "adp": 242,
       "bye": 6,
       "sleeperPoints": 24.8
-    },
-    {
-      "id": "wr:jonathan-adams",
-      "name": "Jonathan Adams",
-      "team": "",
-      "position": "WR",
-      "rank": 245,
-      "adp": 242,
-      "bye": null,
-      "sleeperPoints": 0
     },
     {
       "id": "wr:malachi-corley",
       "name": "Malachi Corley",
       "team": "CLE",
       "position": "WR",
-      "rank": 247,
+      "rank": 248,
       "adp": 242,
       "bye": 11,
       "sleeperPoints": 6.8
     },
     {
-      "id": "qb:jacoby-brissett",
-      "name": "Jacoby Brissett",
-      "team": "ARI",
-      "position": "QB",
-      "rank": 249,
+      "id": "wr:dorian-baker",
+      "name": "Dorian Baker",
+      "team": "",
+      "position": "WR",
+      "rank": 250,
       "adp": 243,
-      "bye": 14,
-      "sleeperPoints": 160
+      "bye": null,
+      "sleeperPoints": 0
     },
     {
       "id": "te:jelani-woods",
       "name": "Jelani Woods",
       "team": "NYJ",
       "position": "TE",
-      "rank": 248,
+      "rank": 249,
       "adp": 243,
       "bye": 13,
       "sleeperPoints": 0
-    },
-    {
-      "id": "wr:john-franklin",
-      "name": "John Franklin",
-      "team": "",
-      "position": "WR",
-      "rank": 250,
-      "adp": 243.8,
-      "bye": null,
-      "sleeperPoints": 0
     }
   ],
-  "evidenceHash": "2164f6e84d6728ce42eced6f9e9f41b027ad06d4381b0d7e185b3ef40ec67722",
+  "evidenceHash": "57efe81348481f53e56d12aa39807fff336aaff008a503afcb44af27db3a0f11",
   "demo": false,
   "movements": [
     {
@@ -11582,6 +11582,2238 @@
       },
       "adp": 236.6,
       "adpDelta": -0.1,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:jahmyr-gibbs",
+        "name": "Jahmyr Gibbs",
+        "team": "DET",
+        "position": "RB"
+      },
+      "adp": 1.9,
+      "adpDelta": 0.8,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:bijan-robinson",
+        "name": "Bijan Robinson",
+        "team": "ATL",
+        "position": "RB"
+      },
+      "adp": 2.6,
+      "adpDelta": -0.3,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:ja-marr-chase",
+        "name": "Ja'Marr Chase",
+        "team": "CIN",
+        "position": "WR"
+      },
+      "adp": 3.6,
+      "adpDelta": 0.5,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:puka-nacua",
+        "name": "Puka Nacua",
+        "team": "LAR",
+        "position": "WR"
+      },
+      "adp": 4.8,
+      "adpDelta": 0.4,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:christian-mccaffrey",
+        "name": "Christian McCaffrey",
+        "team": "SF",
+        "position": "RB"
+      },
+      "adp": 5.6,
+      "adpDelta": 0.2,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:jonathan-taylor",
+        "name": "Jonathan Taylor",
+        "team": "IND",
+        "position": "RB"
+      },
+      "adp": 6.8,
+      "adpDelta": -0.5,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:jaxon-smith-njigba",
+        "name": "Jaxon Smith-Njigba",
+        "team": "SEA",
+        "position": "WR"
+      },
+      "adp": 6.9,
+      "adpDelta": 1.7,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:amon-ra-st-brown",
+        "name": "Amon-Ra St. Brown",
+        "team": "DET",
+        "position": "WR"
+      },
+      "adp": 8.9,
+      "adpDelta": 0.9,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:ceedee-lamb",
+        "name": "CeeDee Lamb",
+        "team": "DAL",
+        "position": "WR"
+      },
+      "adp": 9.1,
+      "adpDelta": -0.4,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:james-cook",
+        "name": "James Cook",
+        "team": "BUF",
+        "position": "RB"
+      },
+      "adp": 10.9,
+      "adpDelta": 0.5,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:justin-jefferson",
+        "name": "Justin Jefferson",
+        "team": "MIN",
+        "position": "WR"
+      },
+      "adp": 11.9,
+      "adpDelta": 0.4,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:de-von-achane",
+        "name": "De'Von Achane",
+        "team": "MIA",
+        "position": "RB"
+      },
+      "adp": 12.4,
+      "adpDelta": 0.6,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:ashton-jeanty",
+        "name": "Ashton Jeanty",
+        "team": "LV",
+        "position": "RB"
+      },
+      "adp": 13.3,
+      "adpDelta": -1.2,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:saquon-barkley",
+        "name": "Saquon Barkley",
+        "team": "PHI",
+        "position": "RB"
+      },
+      "adp": 13.8,
+      "adpDelta": 0.1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:omarion-hampton",
+        "name": "Omarion Hampton",
+        "team": "LAC",
+        "position": "RB"
+      },
+      "adp": 15.8,
+      "adpDelta": 0.6,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:chase-brown",
+        "name": "Chase Brown",
+        "team": "CIN",
+        "position": "RB"
+      },
+      "adp": 16.1,
+      "adpDelta": -0.6,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:drake-london",
+        "name": "Drake London",
+        "team": "ATL",
+        "position": "WR"
+      },
+      "adp": 17.8,
+      "adpDelta": 0.7,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:a-j-brown",
+        "name": "A.J. Brown",
+        "team": "NE",
+        "position": "WR"
+      },
+      "adp": 18.5,
+      "adpDelta": 0.6,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:kenneth-walker",
+        "name": "Kenneth Walker",
+        "team": "KC",
+        "position": "RB"
+      },
+      "adp": 19,
+      "adpDelta": -0.7,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:josh-allen",
+        "name": "Josh Allen",
+        "team": "BUF",
+        "position": "QB"
+      },
+      "adp": 21,
+      "adpDelta": -0.3,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:trey-mcbride",
+        "name": "Trey McBride",
+        "team": "ARI",
+        "position": "TE"
+      },
+      "adp": 22.6,
+      "adpDelta": 0.2,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:brock-bowers",
+        "name": "Brock Bowers",
+        "team": "LV",
+        "position": "TE"
+      },
+      "adp": 23.4,
+      "adpDelta": 0.1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:george-pickens",
+        "name": "George Pickens",
+        "team": "DAL",
+        "position": "WR"
+      },
+      "adp": 24.7,
+      "adpDelta": 1.6,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:nico-collins",
+        "name": "Nico Collins",
+        "team": "HOU",
+        "position": "WR"
+      },
+      "adp": 25.9,
+      "adpDelta": 0.6,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:jeremiyah-love",
+        "name": "Jeremiyah Love",
+        "team": "ARI",
+        "position": "RB"
+      },
+      "adp": 26.2,
+      "adpDelta": -0.5,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:rashee-rice",
+        "name": "Rashee Rice",
+        "team": "KC",
+        "position": "WR"
+      },
+      "adp": 27.9,
+      "adpDelta": -0.8,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:kyren-williams",
+        "name": "Kyren Williams",
+        "team": "LAR",
+        "position": "RB"
+      },
+      "adp": 29.4,
+      "adpDelta": -0.1,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:chris-olave",
+        "name": "Chris Olave",
+        "team": "NO",
+        "position": "WR"
+      },
+      "adp": 30.9,
+      "adpDelta": 1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:josh-jacobs",
+        "name": "Josh Jacobs",
+        "team": "GB",
+        "position": "RB"
+      },
+      "adp": 31.8,
+      "adpDelta": 0.1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:lamar-jackson",
+        "name": "Lamar Jackson",
+        "team": "BAL",
+        "position": "QB"
+      },
+      "adp": 32.8,
+      "adpDelta": 0.3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:breece-hall",
+        "name": "Breece Hall",
+        "team": "NYJ",
+        "position": "RB"
+      },
+      "adp": 33.7,
+      "adpDelta": 0.2,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:javonte-williams",
+        "name": "Javonte Williams",
+        "team": "DAL",
+        "position": "RB"
+      },
+      "adp": 34.3,
+      "adpDelta": -1.5,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:tee-higgins",
+        "name": "Tee Higgins",
+        "team": "CIN",
+        "position": "WR"
+      },
+      "adp": 34.5,
+      "adpDelta": 0.1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:devonta-smith",
+        "name": "DeVonta Smith",
+        "team": "PHI",
+        "position": "WR"
+      },
+      "adp": 36.3,
+      "adpDelta": 1.1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:tetairoa-mcmillan",
+        "name": "Tetairoa McMillan",
+        "team": "CAR",
+        "position": "WR"
+      },
+      "adp": 37.1,
+      "adpDelta": 0.1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:ladd-mcconkey",
+        "name": "Ladd McConkey",
+        "team": "LAC",
+        "position": "WR"
+      },
+      "adp": 38.1,
+      "adpDelta": -0.3,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:emeka-egbuka",
+        "name": "Emeka Egbuka",
+        "team": "TB",
+        "position": "WR"
+      },
+      "adp": 39.3,
+      "adpDelta": -0.5,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:colston-loveland",
+        "name": "Colston Loveland",
+        "team": "CHI",
+        "position": "TE"
+      },
+      "adp": 40.2,
+      "adpDelta": -0.6,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:zay-flowers",
+        "name": "Zay Flowers",
+        "team": "BAL",
+        "position": "WR"
+      },
+      "adp": 41.3,
+      "adpDelta": 0.2,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:cam-skattebo",
+        "name": "Cam Skattebo",
+        "team": "NYG",
+        "position": "RB"
+      },
+      "adp": 43.9,
+      "adpDelta": 0.3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:jaylen-waddle",
+        "name": "Jaylen Waddle",
+        "team": "DEN",
+        "position": "WR"
+      },
+      "adp": 46.1,
+      "adpDelta": -0.5,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:tyler-warren",
+        "name": "Tyler Warren",
+        "team": "IND",
+        "position": "TE"
+      },
+      "adp": 47.2,
+      "adpDelta": -0.3,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:drake-maye",
+        "name": "Drake Maye",
+        "team": "NE",
+        "position": "QB"
+      },
+      "adp": 48.9,
+      "adpDelta": 1.3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:joe-burrow",
+        "name": "Joe Burrow",
+        "team": "CIN",
+        "position": "QB"
+      },
+      "adp": 51.9,
+      "adpDelta": 0.8,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:quinshon-judkins",
+        "name": "Quinshon Judkins",
+        "team": "CLE",
+        "position": "RB"
+      },
+      "adp": 53.5,
+      "adpDelta": 0.5,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:d-andre-swift",
+        "name": "D'Andre Swift",
+        "team": "CHI",
+        "position": "RB"
+      },
+      "adp": 54.2,
+      "adpDelta": -0.8,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:terry-mclaurin",
+        "name": "Terry McLaurin",
+        "team": "WAS",
+        "position": "WR"
+      },
+      "adp": 55.5,
+      "adpDelta": -0.6,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:treveyon-henderson",
+        "name": "TreVeyon Henderson",
+        "team": "NE",
+        "position": "RB"
+      },
+      "adp": 55.7,
+      "adpDelta": 2.2,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:dj-moore",
+        "name": "DJ Moore",
+        "team": "BUF",
+        "position": "WR"
+      },
+      "adp": 57.1,
+      "adpDelta": -0.8,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:jameson-williams",
+        "name": "Jameson Williams",
+        "team": "DET",
+        "position": "WR"
+      },
+      "adp": 58.5,
+      "adpDelta": 0.2,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:sam-laporta",
+        "name": "Sam LaPorta",
+        "team": "DET",
+        "position": "TE"
+      },
+      "adp": 59.4,
+      "adpDelta": -0.2,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:jalen-hurts",
+        "name": "Jalen Hurts",
+        "team": "PHI",
+        "position": "QB"
+      },
+      "adp": 60.3,
+      "adpDelta": 1.1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:mike-evans",
+        "name": "Mike Evans",
+        "team": "SF",
+        "position": "WR"
+      },
+      "adp": 61.9,
+      "adpDelta": 0.9,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:bhayshul-tuten",
+        "name": "Bhayshul Tuten",
+        "team": "JAX",
+        "position": "RB"
+      },
+      "adp": 62,
+      "adpDelta": -0.5,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:tucker-kraft",
+        "name": "Tucker Kraft",
+        "team": "GB",
+        "position": "TE"
+      },
+      "adp": 62.3,
+      "adpDelta": -1.1,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:jayden-daniels",
+        "name": "Jayden Daniels",
+        "team": "WAS",
+        "position": "QB"
+      },
+      "adp": 64,
+      "adpDelta": -0.3,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:rome-odunze",
+        "name": "Rome Odunze",
+        "team": "CHI",
+        "position": "WR"
+      },
+      "adp": 65.2,
+      "adpDelta": 0.2,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:carnell-tate",
+        "name": "Carnell Tate",
+        "team": "TEN",
+        "position": "WR"
+      },
+      "adp": 66.5,
+      "adpDelta": 0.6,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:jadarian-price",
+        "name": "Jadarian Price",
+        "team": "SEA",
+        "position": "RB"
+      },
+      "adp": 67.4,
+      "adpDelta": -0.5,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:christian-watson",
+        "name": "Christian Watson",
+        "team": "GB",
+        "position": "WR"
+      },
+      "adp": 69.2,
+      "adpDelta": -1.1,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:kyle-pitts",
+        "name": "Kyle Pitts",
+        "team": "ATL",
+        "position": "TE"
+      },
+      "adp": 69.6,
+      "adpDelta": -0.2,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:caleb-williams",
+        "name": "Caleb Williams",
+        "team": "CHI",
+        "position": "QB"
+      },
+      "adp": 71.5,
+      "adpDelta": 0.3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:jaylen-warren",
+        "name": "Jaylen Warren",
+        "team": "PIT",
+        "position": "RB"
+      },
+      "adp": 72,
+      "adpDelta": 0.1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:brian-thomas",
+        "name": "Brian Thomas",
+        "team": "JAX",
+        "position": "WR"
+      },
+      "adp": 73.5,
+      "adpDelta": 0.4,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:dk-metcalf",
+        "name": "DK Metcalf",
+        "team": "PIT",
+        "position": "WR"
+      },
+      "adp": 74.5,
+      "adpDelta": -0.2,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:marvin-harrison",
+        "name": "Marvin Harrison",
+        "team": "ARI",
+        "position": "WR"
+      },
+      "adp": 75.3,
+      "adpDelta": -0.5,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:parker-washington",
+        "name": "Parker Washington",
+        "team": "JAX",
+        "position": "WR"
+      },
+      "adp": 76.1,
+      "adpDelta": 0.1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:chuba-hubbard",
+        "name": "Chuba Hubbard",
+        "team": "CAR",
+        "position": "RB"
+      },
+      "adp": 76.6,
+      "adpDelta": -0.4,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:dak-prescott",
+        "name": "Dak Prescott",
+        "team": "DAL",
+        "position": "QB"
+      },
+      "adp": 78.9,
+      "adpDelta": 1.1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:rj-harvey",
+        "name": "RJ Harvey",
+        "team": "DEN",
+        "position": "RB"
+      },
+      "adp": 79.6,
+      "adpDelta": 0.1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:courtland-sutton",
+        "name": "Courtland Sutton",
+        "team": "DEN",
+        "position": "WR"
+      },
+      "adp": 80.6,
+      "adpDelta": -0.3,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:rhamondre-stevenson",
+        "name": "Rhamondre Stevenson",
+        "team": "NE",
+        "position": "RB"
+      },
+      "adp": 81.7,
+      "adpDelta": 0.1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:justin-herbert",
+        "name": "Justin Herbert",
+        "team": "LAC",
+        "position": "QB"
+      },
+      "adp": 82.4,
+      "adpDelta": 0.2,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:michael-wilson",
+        "name": "Michael Wilson",
+        "team": "ARI",
+        "position": "WR"
+      },
+      "adp": 83.4,
+      "adpDelta": 0.4,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:tony-pollard",
+        "name": "Tony Pollard",
+        "team": "TEN",
+        "position": "RB"
+      },
+      "adp": 83.8,
+      "adpDelta": 0.1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:dalton-kincaid",
+        "name": "Dalton Kincaid",
+        "team": "BUF",
+        "position": "TE"
+      },
+      "adp": 86.9,
+      "adpDelta": -0.5,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:makai-lemon",
+        "name": "Makai Lemon",
+        "team": "PHI",
+        "position": "WR"
+      },
+      "adp": 87.4,
+      "adpDelta": 1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:george-kittle",
+        "name": "George Kittle",
+        "team": "SF",
+        "position": "TE"
+      },
+      "adp": 89.5,
+      "adpDelta": 0.1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:jaxson-dart",
+        "name": "Jaxson Dart",
+        "team": "NYG",
+        "position": "QB"
+      },
+      "adp": 90.1,
+      "adpDelta": -1.4,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:jordyn-tyson",
+        "name": "Jordyn Tyson",
+        "team": "NO",
+        "position": "WR"
+      },
+      "adp": 90.7,
+      "adpDelta": 1.3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:travis-kelce",
+        "name": "Travis Kelce",
+        "team": "KC",
+        "position": "TE"
+      },
+      "adp": 92,
+      "adpDelta": -0.7,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:j-k-dobbins",
+        "name": "J.K. Dobbins",
+        "team": "DEN",
+        "position": "RB"
+      },
+      "adp": 94.2,
+      "adpDelta": -0.7,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:matthew-stafford",
+        "name": "Matthew Stafford",
+        "team": "LAR",
+        "position": "QB"
+      },
+      "adp": 96.8,
+      "adpDelta": 1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:jake-ferguson",
+        "name": "Jake Ferguson",
+        "team": "DAL",
+        "position": "TE"
+      },
+      "adp": 97.9,
+      "adpDelta": -0.6,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:kyle-monangai",
+        "name": "Kyle Monangai",
+        "team": "CHI",
+        "position": "RB"
+      },
+      "adp": 99.6,
+      "adpDelta": -0.2,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:trevor-lawrence",
+        "name": "Trevor Lawrence",
+        "team": "JAX",
+        "position": "QB"
+      },
+      "adp": 100,
+      "adpDelta": -0.2,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:alec-pierce",
+        "name": "Alec Pierce",
+        "team": "IND",
+        "position": "WR"
+      },
+      "adp": 101.3,
+      "adpDelta": -0.4,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:michael-pittman",
+        "name": "Michael Pittman",
+        "team": "PIT",
+        "position": "WR"
+      },
+      "adp": 102.6,
+      "adpDelta": 1.3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:jordan-addison",
+        "name": "Jordan Addison",
+        "team": "MIN",
+        "position": "WR"
+      },
+      "adp": 104.6,
+      "adpDelta": -0.1,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:jonathon-brooks",
+        "name": "Jonathon Brooks",
+        "team": "CAR",
+        "position": "RB"
+      },
+      "adp": 106.2,
+      "adpDelta": 0.1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:isaiah-likely",
+        "name": "Isaiah Likely",
+        "team": "NYG",
+        "position": "TE"
+      },
+      "adp": 107.5,
+      "adpDelta": -2,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:patrick-mahomes",
+        "name": "Patrick Mahomes",
+        "team": "KC",
+        "position": "QB"
+      },
+      "adp": 108,
+      "adpDelta": 0.7,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:josh-downs",
+        "name": "Josh Downs",
+        "team": "IND",
+        "position": "WR"
+      },
+      "adp": 109.2,
+      "adpDelta": 1.6,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:stefon-diggs",
+        "name": "Stefon Diggs",
+        "team": "WAS",
+        "position": "WR"
+      },
+      "adp": 110.4,
+      "adpDelta": -0.4,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:jayden-reed",
+        "name": "Jayden Reed",
+        "team": "GB",
+        "position": "WR"
+      },
+      "adp": 111.5,
+      "adpDelta": -1.4,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:kenny-gainwell",
+        "name": "Kenny Gainwell",
+        "team": "TB",
+        "position": "RB"
+      },
+      "adp": 111.8,
+      "adpDelta": -0.1,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:quentin-johnston",
+        "name": "Quentin Johnston",
+        "team": "LAC",
+        "position": "WR"
+      },
+      "adp": 113,
+      "adpDelta": -0.9,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:jacory-croskey-merritt",
+        "name": "Jacory Croskey-Merritt",
+        "team": "WAS",
+        "position": "RB"
+      },
+      "adp": 114.1,
+      "adpDelta": 0.3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:jordan-mason",
+        "name": "Jordan Mason",
+        "team": "MIN",
+        "position": "RB"
+      },
+      "adp": 115.1,
+      "adpDelta": -2.6,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:wan-dale-robinson",
+        "name": "Wan'Dale Robinson",
+        "team": "TEN",
+        "position": "WR"
+      },
+      "adp": 116.8,
+      "adpDelta": 0.5,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:jakobi-meyers",
+        "name": "Jakobi Meyers",
+        "team": "JAX",
+        "position": "WR"
+      },
+      "adp": 117.8,
+      "adpDelta": 2.3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:bo-nix",
+        "name": "Bo Nix",
+        "team": "DEN",
+        "position": "QB"
+      },
+      "adp": 120,
+      "adpDelta": 0.6,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:kc-concepcion",
+        "name": "KC Concepcion",
+        "team": "CLE",
+        "position": "WR"
+      },
+      "adp": 121,
+      "adpDelta": -0.3,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:brock-purdy",
+        "name": "Brock Purdy",
+        "team": "SF",
+        "position": "QB"
+      },
+      "adp": 122,
+      "adpDelta": -0.4,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:dallas-goedert",
+        "name": "Dallas Goedert",
+        "team": "PHI",
+        "position": "TE"
+      },
+      "adp": 123.8,
+      "adpDelta": 0.7,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:aaron-jones",
+        "name": "Aaron Jones",
+        "team": "MIN",
+        "position": "RB"
+      },
+      "adp": 124.4,
+      "adpDelta": 0.4,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:matthew-golden",
+        "name": "Matthew Golden",
+        "team": "GB",
+        "position": "WR"
+      },
+      "adp": 127.3,
+      "adpDelta": -0.6,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:mark-andrews",
+        "name": "Mark Andrews",
+        "team": "BAL",
+        "position": "TE"
+      },
+      "adp": 128.6,
+      "adpDelta": -0.4,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:oronde-gadsden",
+        "name": "Oronde Gadsden",
+        "team": "LAC",
+        "position": "TE"
+      },
+      "adp": 129.7,
+      "adpDelta": 1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:deebo-samuel",
+        "name": "Deebo Samuel",
+        "team": "SF",
+        "position": "WR"
+      },
+      "adp": 130.8,
+      "adpDelta": -6.6,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:rachaad-white",
+        "name": "Rachaad White",
+        "team": "WAS",
+        "position": "RB"
+      },
+      "adp": 132.1,
+      "adpDelta": 0.8,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:romeo-doubs",
+        "name": "Romeo Doubs",
+        "team": "NE",
+        "position": "WR"
+      },
+      "adp": 132.1,
+      "adpDelta": 0.3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:jared-goff",
+        "name": "Jared Goff",
+        "team": "DET",
+        "position": "QB"
+      },
+      "adp": 134.9,
+      "adpDelta": 1.8,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:de-zhaun-stribling",
+        "name": "De'Zhaun Stribling",
+        "team": "SF",
+        "position": "WR"
+      },
+      "adp": 138.6,
+      "adpDelta": 1.6,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:chris-rodriguez",
+        "name": "Chris Rodriguez",
+        "team": "JAX",
+        "position": "RB"
+      },
+      "adp": 139.5,
+      "adpDelta": -2.8,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:xavier-worthy",
+        "name": "Xavier Worthy",
+        "team": "KC",
+        "position": "WR"
+      },
+      "adp": 141.8,
+      "adpDelta": 1.4,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:hunter-henry",
+        "name": "Hunter Henry",
+        "team": "NE",
+        "position": "TE"
+      },
+      "adp": 142.1,
+      "adpDelta": 2.7,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:khalil-shakir",
+        "name": "Khalil Shakir",
+        "team": "BUF",
+        "position": "WR"
+      },
+      "adp": 143.1,
+      "adpDelta": -0.5,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:baker-mayfield",
+        "name": "Baker Mayfield",
+        "team": "TB",
+        "position": "QB"
+      },
+      "adp": 144.8,
+      "adpDelta": 1.5,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:tyler-allgeier",
+        "name": "Tyler Allgeier",
+        "team": "ARI",
+        "position": "RB"
+      },
+      "adp": 145.4,
+      "adpDelta": -0.7,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:jalen-coker",
+        "name": "Jalen Coker",
+        "team": "CAR",
+        "position": "WR"
+      },
+      "adp": 146,
+      "adpDelta": 0.2,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:rashid-shaheed",
+        "name": "Rashid Shaheed",
+        "team": "SEA",
+        "position": "WR"
+      },
+      "adp": 146.9,
+      "adpDelta": -0.1,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:zach-charbonnet",
+        "name": "Zach Charbonnet",
+        "team": "SEA",
+        "position": "RB"
+      },
+      "adp": 148.1,
+      "adpDelta": -0.5,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:jordan-love",
+        "name": "Jordan Love",
+        "team": "GB",
+        "position": "QB"
+      },
+      "adp": 149.3,
+      "adpDelta": -0.2,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:brenton-strange",
+        "name": "Brenton Strange",
+        "team": "JAX",
+        "position": "TE"
+      },
+      "adp": 152.4,
+      "adpDelta": 0.3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:kenyon-sadiq",
+        "name": "Kenyon Sadiq",
+        "team": "NYJ",
+        "position": "TE"
+      },
+      "adp": 154,
+      "adpDelta": 0.6,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:brian-robinson",
+        "name": "Brian Robinson",
+        "team": "ATL",
+        "position": "RB"
+      },
+      "adp": 155.6,
+      "adpDelta": -0.2,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:ja-kobi-lane",
+        "name": "Ja'Kobi Lane",
+        "team": "BAL",
+        "position": "WR"
+      },
+      "adp": 157.6,
+      "adpDelta": 0.3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:kyler-murray",
+        "name": "Kyler Murray",
+        "team": "MIN",
+        "position": "QB"
+      },
+      "adp": 159.3,
+      "adpDelta": 0.3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:woody-marks",
+        "name": "Woody Marks",
+        "team": "HOU",
+        "position": "RB"
+      },
+      "adp": 160.2,
+      "adpDelta": -0.6,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:sam-darnold",
+        "name": "Sam Darnold",
+        "team": "SEA",
+        "position": "QB"
+      },
+      "adp": 160.8,
+      "adpDelta": -14.8,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:alvin-kamara",
+        "name": "Alvin Kamara",
+        "team": "NO",
+        "position": "RB"
+      },
+      "adp": 163.1,
+      "adpDelta": 1.9,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:t-j-hockenson",
+        "name": "T.J. Hockenson",
+        "team": "MIN",
+        "position": "TE"
+      },
+      "adp": 164.5,
+      "adpDelta": 0.5,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:tyjae-spears",
+        "name": "Tyjae Spears",
+        "team": "TEN",
+        "position": "RB"
+      },
+      "adp": 165.2,
+      "adpDelta": -0.6,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:tyrone-tracy",
+        "name": "Tyrone Tracy",
+        "team": "NYG",
+        "position": "RB"
+      },
+      "adp": 166.8,
+      "adpDelta": 3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:travis-hunter",
+        "name": "Travis Hunter",
+        "team": "JAX",
+        "position": "WR"
+      },
+      "adp": 167.2,
+      "adpDelta": 0.2,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:denzel-boston",
+        "name": "Denzel Boston",
+        "team": "CLE",
+        "position": "WR"
+      },
+      "adp": 167.3,
+      "adpDelta": 1.3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:jonah-coleman",
+        "name": "Jonah Coleman",
+        "team": "DEN",
+        "position": "RB"
+      },
+      "adp": 170.6,
+      "adpDelta": 1.2,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:mike-washington",
+        "name": "Mike Washington",
+        "team": "LV",
+        "position": "RB"
+      },
+      "adp": 172.9,
+      "adpDelta": 1.2,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:marshawn-lloyd",
+        "name": "MarShawn Lloyd",
+        "team": "GB",
+        "position": "RB"
+      },
+      "adp": 173.9,
+      "adpDelta": -23.5,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:cyrus-allen",
+        "name": "Cyrus Allen",
+        "team": "KC",
+        "position": "WR"
+      },
+      "adp": 174.5,
+      "adpDelta": 2.3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:malik-washington",
+        "name": "Malik Washington",
+        "team": "MIA",
+        "position": "WR"
+      },
+      "adp": 174.6,
+      "adpDelta": 1.4,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:tank-dell",
+        "name": "Tank Dell",
+        "team": "HOU",
+        "position": "WR"
+      },
+      "adp": 177.9,
+      "adpDelta": 1.1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:tank-bigsby",
+        "name": "Tank Bigsby",
+        "team": "PHI",
+        "position": "RB"
+      },
+      "adp": 178.2,
+      "adpDelta": 0.5,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:fernando-mendoza",
+        "name": "Fernando Mendoza",
+        "team": "LV",
+        "position": "QB"
+      },
+      "adp": 181.4,
+      "adpDelta": 2.3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:aj-barner",
+        "name": "AJ Barner",
+        "team": "SEA",
+        "position": "TE"
+      },
+      "adp": 183.9,
+      "adpDelta": 0.8,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:keaton-mitchell",
+        "name": "Keaton Mitchell",
+        "team": "LAC",
+        "position": "RB"
+      },
+      "adp": 184.3,
+      "adpDelta": 3.2,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:jalen-nailor",
+        "name": "Jalen Nailor",
+        "team": "LV",
+        "position": "WR"
+      },
+      "adp": 185.6,
+      "adpDelta": 3.2,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:isiah-pacheco",
+        "name": "Isiah Pacheco",
+        "team": "DET",
+        "position": "RB"
+      },
+      "adp": 186.2,
+      "adpDelta": 1.5,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:tyler-shough",
+        "name": "Tyler Shough",
+        "team": "NO",
+        "position": "QB"
+      },
+      "adp": 187.3,
+      "adpDelta": 1.5,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:juwan-johnson",
+        "name": "Juwan Johnson",
+        "team": "NO",
+        "position": "TE"
+      },
+      "adp": 188.5,
+      "adpDelta": 1.4,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:chig-okonkwo",
+        "name": "Chig Okonkwo",
+        "team": "WAS",
+        "position": "TE"
+      },
+      "adp": 188.8,
+      "adpDelta": 3.3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:dylan-sampson",
+        "name": "Dylan Sampson",
+        "team": "CLE",
+        "position": "RB"
+      },
+      "adp": 190.5,
+      "adpDelta": 2.3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:jerry-jeudy",
+        "name": "Jerry Jeudy",
+        "team": "CLE",
+        "position": "WR"
+      },
+      "adp": 191.4,
+      "adpDelta": 1.8,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:dalton-schultz",
+        "name": "Dalton Schultz",
+        "team": "HOU",
+        "position": "TE"
+      },
+      "adp": 192.8,
+      "adpDelta": 1.8,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:omar-cooper",
+        "name": "Omar Cooper",
+        "team": "NYJ",
+        "position": "WR"
+      },
+      "adp": 193.7,
+      "adpDelta": 3.6,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:zachariah-branch",
+        "name": "Zachariah Branch",
+        "team": "ATL",
+        "position": "WR"
+      },
+      "adp": 195.6,
+      "adpDelta": 4.3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:malik-willis",
+        "name": "Malik Willis",
+        "team": "MIA",
+        "position": "QB"
+      },
+      "adp": 196,
+      "adpDelta": 1.5,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:jayden-higgins",
+        "name": "Jayden Higgins",
+        "team": "HOU",
+        "position": "WR"
+      },
+      "adp": 197.5,
+      "adpDelta": 1.6,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:jauan-jennings",
+        "name": "Jauan Jennings",
+        "team": "MIN",
+        "position": "WR"
+      },
+      "adp": 198.4,
+      "adpDelta": 2.1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:keenan-allen",
+        "name": "Keenan Allen",
+        "team": "IND",
+        "position": "WR"
+      },
+      "adp": 199.1,
+      "adpDelta": 1.7,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:tre-tucker",
+        "name": "Tre Tucker",
+        "team": "LV",
+        "position": "WR"
+      },
+      "adp": 202.3,
+      "adpDelta": -0.2,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:daniel-jones",
+        "name": "Daniel Jones",
+        "team": "IND",
+        "position": "QB"
+      },
+      "adp": 202.8,
+      "adpDelta": -0.4,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:braelon-allen",
+        "name": "Braelon Allen",
+        "team": "NYJ",
+        "position": "RB"
+      },
+      "adp": 204.5,
+      "adpDelta": -1.3,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:c-j-stroud",
+        "name": "C.J. Stroud",
+        "team": "HOU",
+        "position": "QB"
+      },
+      "adp": 205,
+      "adpDelta": 1.9,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:terrance-ferguson",
+        "name": "Terrance Ferguson",
+        "team": "LAR",
+        "position": "TE"
+      },
+      "adp": 206.5,
+      "adpDelta": -0.3,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:david-njoku",
+        "name": "David Njoku",
+        "team": "LAC",
+        "position": "TE"
+      },
+      "adp": 207.7,
+      "adpDelta": 0.1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:emmett-johnson",
+        "name": "Emmett Johnson",
+        "team": "KC",
+        "position": "RB"
+      },
+      "adp": 208.7,
+      "adpDelta": -0.1,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:nicholas-singleton",
+        "name": "Nicholas Singleton",
+        "team": "TEN",
+        "position": "RB"
+      },
+      "adp": 209.3,
+      "adpDelta": 0.3,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:jalen-mcmillan",
+        "name": "Jalen McMillan",
+        "team": "TB",
+        "position": "WR"
+      },
+      "adp": 209.4,
+      "adpDelta": 0.2,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:tyreek-hill",
+        "name": "Tyreek Hill",
+        "team": "",
+        "position": "WR"
+      },
+      "adp": 211,
+      "adpDelta": -0.1,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:caleb-douglas",
+        "name": "Caleb Douglas",
+        "team": "MIA",
+        "position": "WR"
+      },
+      "adp": 213.2,
+      "adpDelta": -0.3,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:kaelon-black",
+        "name": "Kaelon Black",
+        "team": "SF",
+        "position": "RB"
+      },
+      "adp": 214,
+      "adpDelta": -1.1,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:najee-harris",
+        "name": "Najee Harris",
+        "team": "NYG",
+        "position": "RB"
+      },
+      "adp": 216.2,
+      "adpDelta": -1.6,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:malachi-fields",
+        "name": "Malachi Fields",
+        "team": "NYG",
+        "position": "WR"
+      },
+      "adp": 219.7,
+      "adpDelta": -0.1,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:cooper-kupp",
+        "name": "Cooper Kupp",
+        "team": "SEA",
+        "position": "WR"
+      },
+      "adp": 220.6,
+      "adpDelta": 0.1,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:ray-davis",
+        "name": "Ray Davis",
+        "team": "BUF",
+        "position": "RB"
+      },
+      "adp": 223.5,
+      "adpDelta": -2.2,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:isaac-teslaa",
+        "name": "Isaac TeSlaa",
+        "team": "DET",
+        "position": "WR"
+      },
+      "adp": 225.9,
+      "adpDelta": 1.4,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:bryce-young",
+        "name": "Bryce Young",
+        "team": "CAR",
+        "position": "QB"
+      },
+      "adp": 227.9,
+      "adpDelta": 0.6,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:jaydon-blue",
+        "name": "Jaydon Blue",
+        "team": "DAL",
+        "position": "RB"
+      },
+      "adp": 228,
+      "adpDelta": -1.7,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "qb:cam-ward",
+        "name": "Cam Ward",
+        "team": "TEN",
+        "position": "QB"
+      },
+      "adp": 229,
+      "adpDelta": 1.4,
+      "changeType": "adp_fallen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:tre-harris",
+        "name": "Tre' Harris",
+        "team": "LAC",
+        "position": "WR"
+      },
+      "adp": 230,
+      "adpDelta": -1.4,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:adonai-mitchell",
+        "name": "Adonai Mitchell",
+        "team": "NYJ",
+        "position": "WR"
+      },
+      "adp": 230.6,
+      "adpDelta": -1.9,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "rb:james-conner",
+        "name": "James Conner",
+        "team": "ARI",
+        "position": "RB"
+      },
+      "adp": 233,
+      "adpDelta": -0.2,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "te:cade-otton",
+        "name": "Cade Otton",
+        "team": "TB",
+        "position": "TE"
+      },
+      "adp": 234.1,
+      "adpDelta": -1.6,
+      "changeType": "adp_risen"
+    },
+    {
+      "date": "2026-08-29",
+      "player": {
+        "id": "wr:antonio-williams",
+        "name": "Antonio Williams",
+        "team": "WAS",
+        "position": "WR"
+      },
+      "adp": 235.4,
+      "adpDelta": -1.2,
       "changeType": "adp_risen"
     }
   ]
