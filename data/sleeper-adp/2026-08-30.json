@@ -1,6 +1,6 @@
 {
   "date": "2026-08-30",
-  "capturedAt": "2026-08-30T13:39:47.363Z",
+  "capturedAt": "2026-08-30T22:19:23.717Z",
   "source": "sleeper",
   "sourceName": "Sleeper",
   "format": {
@@ -2521,5 +2521,5 @@
       "sleeperPoints": 13.6
     }
   ],
-  "evidenceHash": "e086312b0819e0242e4841bcbcb123c8207f726cd2a06214df03f81fe87e5fed"
+  "evidenceHash": "9f0287a45806c1aa7fb2e42a7bbab527c702d75fed2640496381d2f960ec0df6"
 }
