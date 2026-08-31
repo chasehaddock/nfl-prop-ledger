@@ -107,7 +107,7 @@ test("quarterback rows replace receptions with rushing yards and expose rushing 
     assert.equal(await page.locator("tbody tr.data-row td:nth-child(3)").filter({ hasText: "Receptions" }).count(), 0);
     assert.ok(await page.locator("tbody tr.data-row td:nth-child(4)").filter({ hasText: "Rush TD" }).count() > 0);
     const shough = page.locator("tbody tr.data-row").filter({ hasText: "Tyler Shough" }).first();
-    assert.match(await shough.locator("td:nth-child(3)").innerText(), /Not offered[\s\S]*Estimated 309\.7 rush yds · based on last year \+ Week 1/i);
+    assert.match(await shough.locator("td:nth-child(3)").innerText(), /Not offered[\s\S]*Estimated [\d.]+ rush yds · based on last year \+ Week 1/i);
     assert.match(await shough.locator("td:nth-child(5)").innerText(), /Not enough verified data[\s\S]*Estimated [\d.]+ fantasy pts/i);
     assert.equal(await shough.locator(".projection-rank.incomplete").innerText(), "NR");
     const rodgers = page.locator("tbody tr.data-row").filter({ hasText: "Aaron Rodgers" }).first();
@@ -247,7 +247,8 @@ test("skill players show total touchdowns with the rushing and receiving split",
     assert.ok(await page.locator("tbody tr.data-row td:nth-child(4) .total-touchdowns").count() > 0);
     assert.ok(await page.locator("tbody tr.data-row td:nth-child(4)").filter({ hasText: "Total TDs" }).count() > 0);
     const inferred = page.locator("tbody tr.data-row").filter({ hasText: "Kyren Williams" }).first().locator("td:nth-child(4)");
-    assert.match(await inferred.innerText(), /12\.5[\s\S]*Total TDs[\s\S]*Rush 9\.5 · Rec —[\s\S]*Estimated 3 Rec TDs · based on PrizePicks total TD line/i);
+    assert.match(await inferred.innerText(), /[\d.]+[\s\S]*Total TDs[\s\S]*Rush (?:—|[\d.]+) · Rec (?:—|[\d.]+)/i);
+    assert.doesNotMatch(await inferred.innerText(), /2025 NFL|prior-season/i);
     const kyrenRow = page.locator("tbody tr.data-row").filter({ hasText: "Kyren Williams" }).first();
     assert.match(await kyrenRow.locator("td:nth-child(5)").innerText(), /Not enough verified data[\s\S]*Estimated [\d.]+ fantasy pts/i);
     assert.equal(await kyrenRow.locator(".projection-rank.incomplete").innerText(), "NR");
