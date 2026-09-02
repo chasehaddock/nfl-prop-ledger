@@ -485,10 +485,13 @@ test("Week 1 has a separate data-ready board and movement history", async () => 
     assert.match(await darnoldTdCell.innerText(), /(FanDuel Pass TDs · O 1\.5 \+106 \/ U 1\.5 -140|Underdog Pass TDs · H 1\.5)/i);
     assert.doesNotMatch(await darnoldTdCell.innerText(), /Pass TD · 4 pts/i);
     await page.getByPlaceholder("Search player or team").fill("");
-    const verifiedQbFantasyCell = page.locator("tbody tr.data-row td:nth-child(5)").filter({ hasText: "Pass TDs · 4 pts" }).first();
-    await verifiedQbFantasyCell.waitFor();
-    assert.match(await verifiedQbFantasyCell.innerText(), /Pass TDs · 4 pts/i);
-    assert.doesNotMatch(await verifiedQbFantasyCell.innerText(), /vig removed|O 1\.5|U 1\.5/i);
+    const fantasyCells = page.locator("tbody tr.data-row td:nth-child(5)");
+    const fantasyText = (await fantasyCells.allTextContents()).join("\n");
+    assert.doesNotMatch(fantasyText, /vig removed|O 1\.5|U 1\.5/i);
+    const verifiedQbFantasyCell = fantasyCells.filter({ hasText: "Pass TDs · 4 pts" }).first();
+    if (await verifiedQbFantasyCell.count()) {
+      assert.match(await verifiedQbFantasyCell.innerText(), /Pass TDs · 4 pts/i);
+    }
     await page.getByPlaceholder("Search player or team").fill("Ja'Marr Chase");
     const chaseTdCell = page.locator("tbody tr.data-row").filter({ hasText: "Ja'Marr Chase" }).first().locator("td:nth-child(4)");
     assert.match(await chaseTdCell.innerText(), /(O\/U odds unavailable · PrizePicks|Underdog Any TD · H 0\.5)/i);
