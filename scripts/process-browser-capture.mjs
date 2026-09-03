@@ -1,14 +1,13 @@
 import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
-import { parseDraftKingsRows } from "../collector/adapters/draftkings.mjs";
 import { parseFanDuelRows } from "../collector/adapters/fanduel.mjs";
 import { parsePrizePicksRows } from "../collector/adapters/prizepicks.mjs";
 import { parseUnderdogRows } from "../collector/adapters/underdog.mjs";
-import { DRAFTKINGS_MARKETS, DRAFTKINGS_SOURCE } from "../collector/draftkings-config.mjs";
 import { FANDUEL_MARKETS, FANDUEL_REQUIRED_STAT_TYPES, FANDUEL_SOURCE } from "../collector/fanduel-config.mjs";
 import { PRIZEPICKS_MARKETS, PRIZEPICKS_REQUIRED_STAT_TYPES, PRIZEPICKS_SOURCE } from "../collector/prizepicks-config.mjs";
 import { UNDERDOG_MARKETS, UNDERDOG_REQUIRED_STAT_TYPES, UNDERDOG_SOURCE } from "../collector/underdog-config.mjs";
 import { loadRoster } from "../collector/roster.mjs";
+import { observationAllowedBySourcePolicy } from "../lib/source-policy.mjs";
 
 const [inputFile, outputFile] = process.argv.slice(2);
 if (!inputFile || !outputFile) {
@@ -18,16 +17,6 @@ if (!inputFile || !outputFile) {
 
 const raw = JSON.parse(await readFile(inputFile, "utf8"));
 const adapters = new Map([
-  [DRAFTKINGS_SOURCE.id, {
-    source: DRAFTKINGS_SOURCE,
-    markets: DRAFTKINGS_MARKETS,
-    parse: (page, spec, rosterByName) => parseDraftKingsRows(page.rows, {
-      rosterByName,
-      sourceUrl: spec.url,
-      expectedStatType: spec.statType,
-      capturedAt: page.capturedAt || raw.capturedAt,
-    }),
-  }],
   [FANDUEL_SOURCE.id, {
     source: FANDUEL_SOURCE,
     markets: FANDUEL_MARKETS,
@@ -74,8 +63,9 @@ for (const spec of adapter.markets) {
   if (!page || page.url !== spec.url || !Array.isArray(page.rows) || page.rows.length === 0) throw new Error(`${spec.id}: required page is missing or empty`);
   const result = adapter.parse(page, spec, rosterByName);
   if (result.errors.length) throw new Error(`${spec.id}: ${result.errors.join("; ")}`);
-  observations.push(...result.observations);
+  observations.push(...result.observations.filter(observationAllowedBySourcePolicy));
 }
+if (observations.length === 0) throw new Error(`${raw.source}: capture contained no observations allowed by the active source policy`);
 if (observations.some((observation) => observation.season !== raw.season)) throw new Error("Captured market season does not match the capture envelope");
 
 const capture = {

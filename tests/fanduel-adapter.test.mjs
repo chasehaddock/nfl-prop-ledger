@@ -123,5 +123,5 @@ test("rejects an unknown player and a missing required stat", () => {
     requiredStatTypes: ["receiving_yards", "passing_yards"],
   });
   assert.match(result.errors.join(" "), /not in the verified NFL roster index/);
-  assert.match(result.errors.join(" "), /Required FanDuel stat is missing/);
+  assert.match(result.errors.join(" "), /Required FanDuel Week 1 stat is missing/);
 });

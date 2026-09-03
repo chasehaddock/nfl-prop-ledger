@@ -10,7 +10,7 @@ Current anchors:
 - Editable branch: `source`
 - Deployment: GitHub Actions builds Pages from verified `source` commits
 - Public site: `https://chasehaddock.github.io/nfl-prop-ledger/`
-- Sources: DraftKings, FanDuel, PrizePicks, Underdog fallback markets, and Sleeper ADP
+- Sources: PrizePicks only for season; PrizePicks, FanDuel, and Underdog for Week 1
 - Node: 22.13+; Node 24 recommended
 - Capture: manually started from the Chrome extension
 - Private local site: `http://127.0.0.1:4173/`

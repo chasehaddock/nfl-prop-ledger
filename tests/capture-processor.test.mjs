@@ -32,13 +32,15 @@ async function processRaw(raw) {
   return { result, capture };
 }
 
-test("processes a complete FanDuel browser envelope", async () => {
+test("processes a complete FanDuel Week 1 browser envelope", async () => {
+  const eventUrl = "https://sportsbook.fanduel.com/football/nfl/new-england-patriots-@-seattle-seahawks-35607262?tab=passing-props";
   const rows = [
-    ...pair("Jared Goff", "Passing Yards", "4050.5"),
-    ...pair("Baker Mayfield", "Passing TDs", "25.5", "-102", "-130"),
-    ...pair("Derrick Henry", "Rushing Yards", "1250.5"),
-    ...pair("Jahmyr Gibbs", "Rushing TDs", "12.5", "-105", "-125"),
-    ...pair("Amon-Ra St. Brown", "Receiving Yards", "1225.5", "-114", "-114"),
+    { ariaLabel: "Sam Darnold - Passing Yards, Sam Darnold Over, 235.5, -110", sourceUrl: eventUrl },
+    { ariaLabel: "Sam Darnold - Passing Yards, Sam Darnold Under, 235.5, -110", sourceUrl: eventUrl },
+    { ariaLabel: "Drake Maye - Rushing Yards, Drake Maye Over, 34.5, -105", sourceUrl: eventUrl.replace("passing", "rushing") },
+    { ariaLabel: "Drake Maye - Rushing Yards, Drake Maye Under, 34.5, -115", sourceUrl: eventUrl.replace("passing", "rushing") },
+    { ariaLabel: "Jaxon Smith-Njigba - Receiving Yards, Jaxon Smith-Njigba Over, 84.5, -105", sourceUrl: eventUrl.replace("passing", "receiving") },
+    { ariaLabel: "Jaxon Smith-Njigba - Receiving Yards, Jaxon Smith-Njigba Under, 84.5, -115", sourceUrl: eventUrl.replace("passing", "receiving") },
   ];
   const { result, capture } = await processRaw({
     source: "fanduel",
@@ -48,10 +50,11 @@ test("processes a complete FanDuel browser envelope", async () => {
   });
   assert.equal(result.status, 0, result.stderr);
   assert.equal(capture.source, "fanduel");
-  assert.equal(capture.observations.length, 5);
+  assert.equal(capture.observations.length, 3);
+  assert.ok(capture.observations.every((item) => item.marketScope === "week_1"));
 });
 
-test("processes FanDuel season props and Week 1 odds and yardage in one normal capture", async () => {
+test("drops FanDuel season props while retaining Week 1 odds and yardage", async () => {
   const eventUrl = "https://sportsbook.fanduel.com/football/nfl/new-england-patriots-@-seattle-seahawks-35607262?tab=passing-props";
   const rows = [
     ...pair("Jared Goff", "Passing Yards", "4050.5"),
@@ -65,6 +68,8 @@ test("processes FanDuel season props and Week 1 odds and yardage in one normal c
     { ariaLabel: "Sam Darnold - Passing Yards, Sam Darnold Under, 235.5, -110", marketScope: "week_1", sourceUrl: eventUrl },
     { ariaLabel: "Jaxon Smith-Njigba - Receiving Yards, Jaxon Smith-Njigba Over, 84.5, -105", marketScope: "week_1", sourceUrl: eventUrl.replace("passing", "receiving") },
     { ariaLabel: "Jaxon Smith-Njigba - Receiving Yards, Jaxon Smith-Njigba Under, 84.5, -115", marketScope: "week_1", sourceUrl: eventUrl.replace("passing", "receiving") },
+    { ariaLabel: "Drake Maye - Rushing Yards, Drake Maye Over, 34.5, -105", marketScope: "week_1", sourceUrl: eventUrl.replace("passing", "rushing") },
+    { ariaLabel: "Drake Maye - Rushing Yards, Drake Maye Under, 34.5, -115", marketScope: "week_1", sourceUrl: eventUrl.replace("passing", "rushing") },
   ];
   const { result, capture } = await processRaw({
     source: "fanduel",
@@ -74,8 +79,8 @@ test("processes FanDuel season props and Week 1 odds and yardage in one normal c
   });
   assert.equal(result.status, 0, result.stderr);
   const weekly = capture.observations.filter((item) => item.marketScope === "week_1");
-  assert.equal(capture.observations.length, 8);
-  assert.deepEqual(new Set(weekly.map((item) => item.statType)), new Set(["passing_touchdowns", "passing_yards", "receiving_yards"]));
+  assert.equal(capture.observations.length, 4);
+  assert.deepEqual(new Set(weekly.map((item) => item.statType)), new Set(["passing_touchdowns", "passing_yards", "receiving_yards", "rushing_yards"]));
   const passingTds = weekly.find((item) => item.statType === "passing_touchdowns");
   assert.equal(passingTds.player.name, "Sam Darnold");
   assert.equal(passingTds.overOdds, 106);

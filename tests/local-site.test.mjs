@@ -48,7 +48,7 @@ test("accepts extension captures into private local storage and rejects web orig
   const { port } = server.address();
   const payload = {
     pass: "primary",
-    capture: { source: "draftkings", capturedAt: "2026-08-23T14:17:00.000Z", pages: [{ id: "props", rows: [{}] }] },
+    capture: { source: "prizepicks", capturedAt: "2026-08-23T14:17:00.000Z", pages: [{ id: "props", rows: [{}] }] },
   };
 
   const denied = await fetch(`http://127.0.0.1:${port}/api/capture`, {
@@ -76,8 +76,15 @@ test("accepts extension captures into private local storage and rejects web orig
     body: JSON.stringify(payload),
   });
   assert.equal(accepted.status, 201);
-  const saved = JSON.parse(await readFile(path.join(captures, "2026-08-23", "draftkings-primary-raw.json"), "utf8"));
-  assert.equal(saved.source, "draftkings");
+  const saved = JSON.parse(await readFile(path.join(captures, "2026-08-23", "prizepicks-primary-raw.json"), "utf8"));
+  assert.equal(saved.source, "prizepicks");
+
+  const removedSource = await fetch(`http://127.0.0.1:${port}/api/capture`, {
+    method: "POST",
+    headers: { Origin: "chrome-extension://abcdefghijklmnopabcdefghijklmnop", "X-NFL-Prop-Collector": "1", "Content-Type": "application/json" },
+    body: JSON.stringify({ ...payload, capture: { ...payload.capture, source: "draftkings" } }),
+  });
+  assert.equal(removedSource.status, 400);
 });
 
 test("stores an after-midnight UTC capture under its ledger calendar date", async (context) => {

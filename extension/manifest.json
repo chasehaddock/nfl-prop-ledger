@@ -1,11 +1,10 @@
 {
   "manifest_version": 3,
   "name": "NFL Prop Ledger Collector",
-  "version": "0.2.30",
+  "version": "0.3.0",
   "description": "Captures validated NFL season and weekly prop boards for the local ledger, retrying failed sources.",
   "permissions": ["alarms", "downloads", "scripting", "storage", "tabs"],
   "host_permissions": [
-    "https://sportsbook.draftkings.com/*",
     "https://sportsbook.fanduel.com/*",
     "https://app.prizepicks.com/*",
     "https://app.underdogsports.com/*",

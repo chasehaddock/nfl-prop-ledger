@@ -9,8 +9,8 @@ import {
 
 function observation(overrides = {}) {
   return {
-    source: "draftkings",
-    sourceUrl: "https://sportsbook.draftkings.com/example",
+    source: "fanduel",
+    sourceUrl: "https://sportsbook.fanduel.com/example",
     season: 2026,
     player: { id: "00-1", name: "Test Player", team: "DEN", position: "WR" },
     marketScope: "regular_season",
@@ -25,7 +25,7 @@ function observation(overrides = {}) {
 
 function capture(observations, overrides = {}) {
   return {
-    source: "draftkings",
+    source: "fanduel",
     providerType: "sportsbook",
     season: 2026,
     capturedAt: "2026-08-19T14:17:00.000Z",

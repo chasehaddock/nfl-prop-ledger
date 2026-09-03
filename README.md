@@ -10,7 +10,8 @@ A local-first NFL player-projection ledger with a public GitHub Pages dashboard.
 ## What it tracks
 
 - Season-long and Week 1 QB, RB, WR, and TE player props.
-- DraftKings, FanDuel, standard PrizePicks projections, and fallback Underdog Week 1 player markets.
+- PrizePicks-only season projections.
+- PrizePicks, FanDuel, and Underdog Week 1 player markets.
 - Verified daily line history with source-colored charts and sportsbook averages.
 - Full-PPR fantasy projections with 4/6-point passing-TD and TE-premium toggles.
 
@@ -57,7 +58,7 @@ Click **Capture now** at any convenient time when Chrome is open, logged in, and
 
 ## Important projection rules
 
-- Current displayed main lines are arithmetic averages of available current non-Underdog sources; Underdog is used only when those sources do not carry the stat.
+- Season-long main lines are the standard PrizePicks projection. Week 1 main lines average available current PrizePicks and FanDuel lines; Underdog is used when those sources do not carry the stat.
 - Underdog-only Week 1 receptions use a two-decimal, probability-adjusted projection; the posted line and Higher/Lower modifiers remain visible below it.
 - Season and Week 1 data never mix.
 - RB/WR/TE touchdown totals use current market data only—never prior-season touchdowns.

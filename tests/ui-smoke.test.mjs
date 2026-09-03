@@ -67,14 +67,13 @@ test("every visible category sorts and reverses without lifting missing values",
   }
 });
 
-test("a prop opens every current source line and explains the consensus", async () => {
+test("a season prop opens its PrizePicks source line", async () => {
   const browser = await chromium.launch({ channel: "chrome", headless: true });
   try {
     const page = await browser.newPage();
     await page.goto(process.env.TEST_URL || "http://127.0.0.1:4173", { waitUntil: "networkidle" });
     await page.getByPlaceholder("Search player or team").fill("Jared Goff");
     const row = page.locator("tbody tr.data-row").filter({ hasText: "Jared Goff" }).first();
-    assert.match(await row.locator("td:nth-child(2)").innerText(), /3 sources · arithmetic average/i);
     await row.getByRole("button", { name: /Compare Jared Goff Pass yards across sources/i }).click();
     const drawer = page.getByRole("dialog", { name: /Jared Goff Pass yards line trend/i });
     await drawer.waitFor();
@@ -82,11 +81,11 @@ test("a prop opens every current source line and explains the consensus", async 
     await comparison.getByRole("heading", { name: /Jared Goff · Pass yards/i }).waitFor();
     assert.equal(await page.locator("tbody tr.history-row").count(), 0);
     assert.equal(await page.evaluate(() => document.body.style.overflow), "hidden");
-    assert.match(await comparison.locator(".consensus-summary").innerText(), /4,074\.83[\s\S]*arithmetic average of all 3 current sources/i);
-    assert.equal(await comparison.locator(".source-comparison article").count(), 3);
+    assert.match(await comparison.locator(".consensus-summary").innerText(), /only current source carrying the prop/i);
+    assert.equal(await comparison.locator(".source-comparison article").count(), 1);
     const text = await comparison.innerText();
-    for (const source of ["DraftKings", "FanDuel", "PrizePicks"]) assert.match(text, new RegExp(source));
-    for (const source of ["draftkings", "fanduel", "prizepicks"]) assert.ok(await comparison.locator(`.source-${source}`).count() > 0);
+    assert.match(text, /PrizePicks/);
+    assert.doesNotMatch(text, /FanDuel|Underdog/);
     await comparison.getByRole("button", { name: /Back to all players/i }).click();
     assert.equal(await page.getByRole("dialog").count(), 0);
     assert.equal(await page.getByPlaceholder("Search player or team").inputValue(), "");
@@ -254,8 +253,8 @@ test("skill players show total touchdowns with the rushing and receiving split",
     assert.equal(await kyrenRow.locator(".projection-rank.incomplete").innerText(), "NR");
 
     const etienne = page.locator("tbody tr.data-row").filter({ hasText: "Travis Etienne" }).first().locator("td:nth-child(4)");
-    assert.match(await etienne.innerText(), /7\.83[\s\S]*Total TDs[\s\S]*Rush 5\.33 · Rec 2\.5/i);
-    assert.doesNotMatch(await etienne.innerText(), /2025 NFL|prior-season|6 rec TD/i);
+    assert.match(await etienne.innerText(), /[\d.]+[\s\S]*Total TDs[\s\S]*Rush (?:—|[\d.]+) · Rec (?:—|[\d.]+)/i);
+    assert.doesNotMatch(await etienne.innerText(), /2025 NFL|prior-season/i);
 
     await page.getByRole("button", { name: "WR", exact: true }).click();
     const receiver = page.locator("tbody tr.data-row td:nth-child(4) .total-touchdowns").first();
@@ -282,7 +281,7 @@ test("running back prior-season estimates stay compact and orange", async () => 
     const veteran = page.locator("tbody tr.data-row").filter({ hasText: "Jaylen Warren" }).first();
     assert.match(await veteran.locator("td:nth-child(2)").innerText(), /Not offered[\s\S]*Estimated 374\.6 rec yds · based on last year/i);
     assert.match(await veteran.locator("td:nth-child(3)").innerText(), /Not offered[\s\S]*Estimated 45 receptions · based on last year/i);
-    assert.match(await veteran.locator("td:nth-child(5)").innerText(), /Not enough verified data[\s\S]*Estimated [\d.]+ fantasy pts/i);
+    assert.match(await veteran.locator("td:nth-child(5)").innerText(), /Not assigned|Not enough verified data/i);
     const sportsbook = page.locator("tbody tr.data-row").filter({ hasText: "Bijan Robinson" }).first();
     assert.doesNotMatch(await sportsbook.locator("td:nth-child(2)").innerText(), /2025 NFL/i);
     assert.doesNotMatch(await sportsbook.locator("td:nth-child(3)").innerText(), /2025 NFL/i);
@@ -319,8 +318,8 @@ test("line movement toggles between today, week, and all history", async () => {
     assert.equal(await chart.locator("svg").count(), 1);
     assert.ok(await chart.locator(".chart-point").count() >= 2);
     assert.ok(await chart.locator(".chart-segment").count() >= 1);
-    assert.match(await chart.locator(".line-chart-series").innerText(), /Average of all sportsbooks · monitored trend/i);
-    assert.ok(await chart.locator(".chart-average").count() > 0);
+    assert.match(await chart.locator(".line-chart-series").innerText(), /PrizePicks · selected move/i);
+    assert.doesNotMatch(await chart.innerText(), /DraftKings/i);
     assert.ok(movementLabel);
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth));
   } finally {

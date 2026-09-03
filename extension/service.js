@@ -1,30 +1,7 @@
 import { isRunLeaseActive } from "./run-state.js";
 import { buildFanDuelWeeklyMarketPages, normalizeFanDuelEventUrls } from "./fanduel-weekly.js";
 
-const DRAFTKINGS_BASE = "https://sportsbook.draftkings.com/leagues/football/nfl?category=futures&subcategory=player-stats-o-u";
 const SOURCES = [
-  {
-    id: "draftkings",
-    name: "DraftKings",
-    scraper: "draftkings",
-    pages: [
-      ["pass-yards", "passing_yards"],
-      ["pass-tds", "passing_touchdowns"],
-      ["rec-yards", "receiving_yards"],
-      ["rec-tds", "receiving_touchdowns"],
-      ["receptions", "receptions"],
-      ["rush-yards", "rushing_yards"],
-      ["rush-tds", "rushing_touchdowns"],
-    ].map(([id, statType]) => ({ id, statType, url: `${DRAFTKINGS_BASE}&nav_1=${id}` })),
-  },
-  {
-    id: "fanduel",
-    name: "FanDuel",
-    scraper: "fanduel",
-    requiredStatLabels: ["Passing Yards", "Passing TDs", "Rushing Yards", "Rushing TDs", "Receiving Yards"],
-    requiredWeeklyStatLabels: ["Passing Yards", "Rushing Yards", "Receiving Yards"],
-    pages: [{ id: "player-props", url: "https://sportsbook.fanduel.com/navigation/nfl?tab=player-props" }],
-  },
   {
     id: "prizepicks",
     name: "PrizePicks",
@@ -35,6 +12,14 @@ const SOURCES = [
     },
     requiredStatLabels: ["Pass Yards", "Rush Yards", "Rec Yards"],
     pages: [{ id: "nfl-season", url: "https://app.prizepicks.com/" }],
+  },
+  {
+    id: "fanduel",
+    name: "FanDuel",
+    scraper: "fanduel",
+    season: () => new Date().getFullYear(),
+    requiredWeeklyStatLabels: ["Passing Yards", "Rushing Yards", "Receiving Yards"],
+    pages: [],
   },
   {
     id: "underdog",
@@ -62,11 +47,8 @@ async function waitForTab(tabId) {
 function isScraperPageReady(scraper) {
   const bodyText = document.body?.innerText || "";
   if (/not available in your location|unable to display/i.test(bodyText)) return true;
-  if (scraper === "draftkings") {
-    return Boolean(document.querySelector('[data-testid="market-template"]')) || /No Available Bets/i.test(bodyText);
-  }
   if (scraper === "fanduel") {
-    return [...document.querySelectorAll('[role="button"][aria-label], h3')]
+    return [...document.querySelectorAll('button[aria-label], [role="button"][aria-label], h3')]
       .some((element) => /(?:Regular Season (?:Passing|Rushing|Receiving)| - (?:Passing|Rushing|Receiving|Total Receptions))/i
         .test(element.getAttribute("aria-label") || element.textContent || ""));
   }
@@ -98,30 +80,19 @@ async function waitForScraperPage(tabId, scraper, timeoutMilliseconds = 12_000) 
   throw new Error(`${scraper} page did not become ready for capture`);
 }
 
-function scrapeDraftKingsPage() {
-  const rows = [...document.querySelectorAll('[data-testid="market-template"]')].map((market) => ({
-    label: market.querySelector('[data-testid="market-label"] p')?.textContent?.trim() || "",
-    outcomes: [...market.querySelectorAll("button")].map((button) => ({
-      title: button.querySelector('[data-testid="button-title-market-board"]')?.textContent?.trim() || "",
-      odds: button.querySelector('[data-testid="button-odds-market-board"]')?.textContent?.trim() || "",
-    })),
-  }));
-  return { rows, marketCount: rows.filter((row) => row.label).length, unavailable: /No Available Bets/i.test(document.body.innerText) };
-}
-
 async function scrapeFanDuelPage() {
   const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
   const seasonCardPattern = /^.+ Regular Season (Passing Yards|Passing TDs|Rushing Yards|Rushing TDs|Receiving Yards|Receiving TDs|Receptions) 20\d{2}-\d{2}$/i;
   const weeklyCardPattern = /^.+ - (Passing Yards|Passing TDs|Rushing Yards|Receiving Yards|Total Receptions|Receptions)$/i;
   const outcomePattern = /(?: Regular Season (?:Passing Yards|Passing TDs|Rushing Yards|Rushing TDs|Receiving Yards|Receiving TDs|Receptions) 20\d{2}-\d{2}| - (?:Passing Yards|Passing TDs|Rushing Yards|Receiving Yards|Total Receptions|Receptions)), .+ (?:Over|Under)(?:,)? \d/i;
   const discoverMarketLabels = () => new Set(
-    [...document.querySelectorAll('[role="button"], h3')]
+    [...document.querySelectorAll('button, [role="button"], h3')]
       .map((element) => element.getAttribute("aria-label")?.split(",")[0]?.trim() || element.textContent.trim())
       .filter((label) => seasonCardPattern.test(label) || weeklyCardPattern.test(label)),
   );
   const readVisibleOutcomeIndex = () => {
     const index = new Map();
-    for (const element of document.querySelectorAll('[role="button"][aria-label]')) {
+    for (const element of document.querySelectorAll('button[aria-label], [role="button"][aria-label]')) {
       const label = element.getAttribute("aria-label")?.trim() || "";
       if (!outcomePattern.test(label)) continue;
       const separator = label.indexOf(", ");
@@ -142,7 +113,7 @@ async function scrapeFanDuelPage() {
     }
   };
   const outcomesFor = (marketLabel) => [...(observedOutcomes.get(marketLabel) || [])];
-  const findCard = (marketLabel) => [...document.querySelectorAll('[role="button"]:not([aria-label])')]
+  const findCard = (marketLabel) => [...document.querySelectorAll('button:not([aria-label]), [role="button"]:not([aria-label])')]
     .find((element) => element.textContent.trim() === marketLabel);
   let marketLabels = new Set();
   const discoverMountedMarkets = () => {
@@ -432,7 +403,6 @@ async function scrapeUnderdogPage() {
 
 async function scrapeTab(tabId, scraper) {
   const functions = {
-    draftkings: scrapeDraftKingsPage,
     fanduel: scrapeFanDuelPage,
     prizepicks: scrapePrizePicksPage,
     underdog: scrapeUnderdogPage,
@@ -448,10 +418,10 @@ async function scrapeTab(tabId, scraper) {
     if (result?.rows?.length) return result;
   }
   if (lastResult?.expectedMarketCount) {
-    throw new Error(`Captured ${lastResult.marketCount || 0} of ${lastResult.expectedMarketCount} discovered season markets`);
+    throw new Error(`Captured ${lastResult.marketCount || 0} of ${lastResult.expectedMarketCount} discovered markets`);
   }
   if (scraper === "underdog") throw new Error("No Week 1 TD or reception rows appeared after a retry");
-  throw new Error("No season prop rows appeared after a retry");
+  throw new Error("No supported prop rows appeared after a retry");
 }
 
 async function collectPage(source, spec) {
@@ -534,11 +504,15 @@ async function collectPass(source) {
   for (const market of source.pages) pages.push(await collectPage(source, market));
   if (source.id === "fanduel") {
     const weeklyPages = await collectFanDuelWeeklyPages(source);
-    const primaryPage = pages[0];
-    primaryPage.rows.push(...weeklyPages.flatMap((page) => page.rows));
-    primaryPage.marketCount += weeklyPages.reduce((total, page) => total + page.marketCount, 0);
-    primaryPage.expectedMarketCount = (primaryPage.expectedMarketCount || primaryPage.marketCount) + weeklyPages.reduce((total, page) => total + (page.expectedMarketCount || page.marketCount), 0);
-    primaryPage.weeklyStatLabels = [...new Set(weeklyPages.flatMap((page) => page.weeklyStatLabels || []))];
+    pages.push({
+      id: "week-1-player-props",
+      url: "https://sportsbook.fanduel.com/navigation/nfl",
+      capturedAt: new Date().toISOString(),
+      rows: weeklyPages.flatMap((page) => page.rows),
+      marketCount: weeklyPages.reduce((total, page) => total + page.marketCount, 0),
+      expectedMarketCount: weeklyPages.reduce((total, page) => total + (page.expectedMarketCount || page.marketCount), 0),
+      weeklyStatLabels: [...new Set(weeklyPages.flatMap((page) => page.weeklyStatLabels || []))],
+    });
   }
   const capturedStatLabels = new Set(pages.flatMap((page) => page.statLabels || []));
   const missingStatLabels = (source.requiredStatLabels || []).filter((label) => !capturedStatLabels.has(label));
@@ -656,16 +630,7 @@ async function runCapture() {
         progressDetail: `${completedSourceCount} of ${runSources.length} sources checked`,
       });
     };
-    const backgroundSources = runSources.filter((source) => source.id === "draftkings");
-    const interactiveSources = runSources.filter((source) => source.id !== "draftkings");
-    await Promise.all([
-      (async () => {
-        for (const source of backgroundSources) await captureSource(source);
-      })(),
-      (async () => {
-        for (const source of interactiveSources) await captureSource(source);
-      })(),
-    ]);
+    for (const source of runSources) await captureSource(source);
     if (successes.length === 0) throw new Error(failures.join("; "));
     const lastStatus = `Captured and validated ${successes.join(", ")}${failures.length ? `; ${failures.length} source rejected` : ""}`;
     await chrome.storage.local.set({

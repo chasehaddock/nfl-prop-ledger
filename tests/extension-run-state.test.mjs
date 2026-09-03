@@ -27,16 +27,15 @@ test("extension capture is manual-only and clears the retired daily alarm", asyn
   assert.match(popup, /Manual capture only/);
 });
 
-test("extension accelerates collection without overlapping login-sensitive sources", async () => {
+test("extension captures the three active sources sequentially with strict validation", async () => {
   const service = await readFile(new URL("../extension/service.js", import.meta.url), "utf8");
   assert.match(service, /waitForScraperPage\(tabId, scraper\)/);
   assert.doesNotMatch(service, /attempt === 0 \? 3000 : 5000/);
-  assert.match(service, /source\.id === "draftkings"/);
-  assert.match(service, /source\.id !== "draftkings"/);
-  assert.match(service, /await Promise\.all\(/);
-  assert.match(service, /for \(const source of interactiveSources\) await captureSource\(source\)/);
+  assert.doesNotMatch(service, /draftkings/i);
+  assert.match(service, /for \(const source of runSources\) await captureSource\(source\)/);
   assert.match(service, /verificationMode: "validated-single-pass"/);
   assert.match(service, /Required market categories are missing/);
+  assert.match(service, /Required FanDuel Week 1 yard categories are missing/);
 });
 
 test("FanDuel captures virtualized viewports in both directions and validates exact pairs", async () => {

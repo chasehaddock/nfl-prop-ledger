@@ -73,7 +73,6 @@ h1 span { color: transparent; -webkit-text-stroke: 2px var(--ink); }
 .freshness-panel li { min-height: 54px; padding: 10px 14px; display: grid; grid-template-columns: 8px minmax(0,1fr) auto; align-items: center; gap: 10px; }
 .freshness-panel li + li { border-top: 1px solid var(--line); }
 .source-dot { width: 7px; height: 28px; border-radius: 99px; background: var(--green); }
-.source-dot.source-draftkings { background: #39d98a; }
 .source-dot.source-fanduel { background: #2f8cff; }
 .source-dot.source-prizepicks { background: #ad5cff; }
 .source-dot.source-underdog { background: #ffe000; }
@@ -116,7 +115,6 @@ h1 span { color: transparent; -webkit-text-stroke: 2px var(--ink); }
 .new-props-list button:hover { background: #11241b; }
 .new-props-list button:focus-visible { outline: 3px solid rgba(184,255,61,.28); outline-offset: -3px; }
 .new-prop-source { width: 8px; height: 30px; border-radius: 99px; background: var(--lime); }
-.new-prop-source.source-draftkings { background: #39d98a; }
 .new-prop-source.source-fanduel { background: #2f8cff; }
 .new-prop-source.source-prizepicks { background: #ad5cff; }
 .new-prop-source.source-underdog { background: #ffe000; color: #111; }
@@ -355,7 +353,6 @@ td > small { display: block; margin-top: 5px; }
 .line-chart-series span.highlighted { color: var(--ink); font-weight: 900; }
 .line-chart-series .average .series-marker { background: var(--lime); }
 .series-marker { width: 9px; height: 9px; border-radius: 50%; }
-.series-marker.source-draftkings { background: #39d98a; }
 .series-marker.source-fanduel { background: #2f8cff; }
 .series-marker.source-prizepicks { background: #ad5cff; }
 .series-marker.source-underdog { background: #ffe000; }
@@ -368,11 +365,9 @@ td > small { display: block; margin-top: 5px; }
 .chart-axis-title { fill: var(--ink); font-size: 13px; font-weight: 700; }
 .chart-value { fill: var(--ink); font-weight: 800; paint-order: stroke; stroke: #07110d; stroke-width: 4px; stroke-linejoin: round; }
 .chart-segment { stroke-width: 3.5; stroke-linecap: round; }
-.chart-series.source-draftkings .chart-segment { stroke: #39d98a; }
 .chart-series.source-fanduel .chart-segment { stroke: #2f8cff; }
 .chart-series.source-prizepicks .chart-segment { stroke: #ad5cff; }
 .chart-series.source-underdog .chart-segment { stroke: #ffe000; }
-.chart-point.source-draftkings { fill: #39d98a; }
 .chart-point.source-fanduel { fill: #2f8cff; }
 .chart-point.source-prizepicks { fill: #ad5cff; }
 .chart-point.source-underdog { fill: #ffe000; }

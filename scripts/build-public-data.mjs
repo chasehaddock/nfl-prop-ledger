@@ -1,5 +1,6 @@
 import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { sourceAllowedForScope } from "../lib/source-policy.mjs";
 
 const snapshotsDir = path.resolve("data/snapshots");
 const publicDir = path.resolve("public/data");
@@ -23,7 +24,12 @@ if (snapshots.length === 0) {
 function buildScope(scope, extra = {}) {
   const scopedSnapshots = snapshots.map((snapshot) => ({
     ...snapshot,
-    observations: snapshot.observations.filter((observation) => (observation.marketScope || "regular_season") === scope),
+    observations: snapshot.observations.filter((observation) => (
+      (observation.marketScope || "regular_season") === scope
+      && sourceAllowedForScope(observation.source, scope)
+    )),
+    sourceRuns: (snapshot.sourceRuns || []).filter((run) => sourceAllowedForScope(run.source, scope)),
+    issues: (snapshot.issues || []).filter((issue) => sourceAllowedForScope(String(issue).split(":", 1)[0], scope)),
   }));
   const movements = scopedSnapshots.flatMap((snapshot) => snapshot.observations
     .filter((observation) => ["line_increased", "line_decreased"].includes(observation.changeType))

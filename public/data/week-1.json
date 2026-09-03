@@ -5,12 +5,6 @@
   "generatedAt": "2026-09-02T19:54:16.135Z",
   "sourceRuns": [
     {
-      "source": "draftkings",
-      "status": "accepted",
-      "capturedAt": "2026-09-02T19:46:14.167Z",
-      "observationCount": 292
-    },
-    {
       "source": "fanduel",
       "status": "accepted",
       "capturedAt": "2026-09-02T19:46:39.980Z",

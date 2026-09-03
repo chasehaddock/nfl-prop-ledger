@@ -4,13 +4,14 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { retryTransient, validateDailyRawPair } from "../lib/daily-run.mjs";
 import { localOnlyRequested } from "../lib/operator-automation.mjs";
+import { ACTIVE_CAPTURE_SOURCES } from "../lib/source-policy.mjs";
 
 const exec = promisify(execFile);
 const date = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Chicago", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
 const captureDates = [...new Set([date, new Date().toISOString().slice(0, 10)])];
 const captureRoot = path.resolve(".private", "browser-captures");
 const incomingDir = path.resolve("data/incoming", date);
-const sourceIds = ["draftkings", "fanduel", "prizepicks", "underdog"];
+const sourceIds = ACTIVE_CAPTURE_SOURCES;
 
 async function exists(file) {
   try {

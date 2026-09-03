@@ -100,9 +100,9 @@ export function parseFanDuelRows(rows, { rosterByName, sourceUrl, capturedAt, se
     }
   }
 
-  const foundStats = new Set(observations.filter((observation) => observation.marketScope === "regular_season").map((observation) => observation.statType));
+  const foundStats = new Set(observations.filter((observation) => observation.marketScope === "week_1").map((observation) => observation.statType));
   for (const statType of requiredStatTypes) {
-    if (!foundStats.has(statType)) errors.push(`Required FanDuel stat is missing: ${statType}`);
+    if (!foundStats.has(statType)) errors.push(`Required FanDuel Week 1 stat is missing: ${statType}`);
   }
   return { observations, errors };
 }

@@ -23,7 +23,7 @@ Use Node.js 22.13 or newer. Node 24 is the known-good version.
 ## What is included
 
 - React/Vite dashboard in `app/` and `src/`.
-- Four-source Chrome collector for season and Week 1 markets in `extension/` and `collector/`.
+- Three-source Chrome collector in `extension/` and `collector/`: PrizePicks for season and Week 1, plus FanDuel and Underdog for Week 1 only.
 - Accepted season and Week 1 history in `data/` and generated public JSON in `public/data/`.
 - Processing, validation, automation, and GitHub publishing scripts in `lib/` and `scripts/`.
 - Full automated regression suite in `tests/`.
@@ -34,12 +34,13 @@ The source branch deliberately excludes `node_modules`, `dist`, `.private`, `.en
 
 ### Market collection
 
-- Sources: DraftKings, FanDuel, PrizePicks, and fallback Underdog Week 1 Pass TDs, Receptions, and Rush + Rec TDs markets. Underdog is never used for season markets.
+- Season source: PrizePicks only.
+- Week 1 sources: PrizePicks, FanDuel, and Underdog. FanDuel and Underdog are never used for season markets.
 - Season and Week 1 data are stored separately.
 - Every capture requires a matching primary and confirmation pass.
 - PrizePicks Demon and Goblin projections are ignored.
 - Failed sources carry the previous observation as stale instead of deleting it.
-- Current main lines are arithmetic averages of available current non-Underdog sources. Underdog fills a stat only when none of those sources carry it.
+- Season main lines are standard PrizePicks projections. Week 1 main lines average available current PrizePicks and FanDuel lines. Underdog fills a Week 1 stat only when neither carries it.
 - When Underdog is the only current Week 1 receptions source, the displayed reception projection is the posted line adjusted by its normalized Higher/Lower probability and rounded to two decimals. The original Underdog line and both modifiers remain visible beneath it.
 - Line-movement graphs retain each source and emphasize the sportsbook average.
 
@@ -74,7 +75,7 @@ Chrome sessions and sportsbook logins cannot be transferred through GitHub. The 
 
 - Capture is currently started manually from the Chrome extension whenever the operator is available and connected to an unrestricted network; it is not restricted to the former morning schedule.
 - The installer removes legacy Chrome-opener and daily-processor schedules by default. `npm run operator:install -- --automatic` is available only as an explicit processor-scheduling opt-in; it still cannot bypass Chrome logins or start the extension capture.
-- The collector performs one complete validated pass per source and retries only failed sources. It writes a compatible primary/confirmation pair for the processor. DraftKings may collect in a separate background lane while the login-sensitive sources remain strictly sequential; page-readiness checks replace fixed startup delays without relaxing any required-market validation. FanDuel outcome pairs are retained and missing panels are opened one at a time while each virtualized viewport is mounted, followed by a reverse verification pass. This matches FanDuel's single-open accordion behavior and avoids repeatedly waiting on batches that the page immediately closes. The FanDuel pass also discovers the 16 current Week 1 NFL game pages and collects Passing, Rushing, and Receiving prop tabs in four bounded background workers; at least one complete Passing Yards, Rushing Yards, and Receiving Yards market must be present before the source is accepted. Every discovered market must still yield exactly one complete two-outcome pair and the source fails closed if any panel remains incomplete.
+- The collector runs PrizePicks, FanDuel, and Underdog sequentially, performs one complete validated pass per source, and retries only failed sources. It writes a compatible primary/confirmation pair for the processor. PrizePicks collects both its standard season board and Week 1 board. FanDuel is restricted to the current Week 1 game pages and collects Passing, Rushing, and Receiving prop tabs in bounded workers; at least one complete Passing Yards, Rushing Yards, and Receiving Yards market must be present before FanDuel is accepted. FanDuel outcome pairs are retained and missing panels are opened one at a time while each virtualized viewport is mounted, followed by a reverse verification pass. Underdog is restricted to Week 1 markets. Every discovered market must still yield a complete supported row and each source fails closed when its required coverage is incomplete.
 - After capture, run `npm run operator:run`, verify with `npm run operator:health -- --require-today`, then commit the accepted `data/` and `public/data/` updates on a branch and merge them to `source`.
 - The computer must be awake, logged in, online, and able to open Chrome during collection.
 

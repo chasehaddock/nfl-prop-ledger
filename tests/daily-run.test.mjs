@@ -9,27 +9,27 @@ function raw(source, capturedAt) {
 
 test("accepts a same-day pair from the scheduled capture window", () => {
   const errors = validateDailyRawPair(
-    raw("draftkings", "2026-08-20T14:17:36.928Z"),
-    raw("draftkings", "2026-08-20T14:18:18.111Z"),
-    { source: "draftkings", date: "2026-08-20", now: new Date("2026-08-20T19:00:00Z") },
+    raw("prizepicks", "2026-08-20T14:17:36.928Z"),
+    raw("prizepicks", "2026-08-20T14:18:18.111Z"),
+    { source: "prizepicks", date: "2026-08-20", now: new Date("2026-08-20T19:00:00Z") },
   );
   assert.deepEqual(errors, []);
 });
 
 test("accepts an 8:17 AM Central extension capture", () => {
   const errors = validateDailyRawPair(
-    raw("draftkings", "2026-08-24T13:17:34.413Z"),
-    raw("draftkings", "2026-08-24T13:18:09.509Z"),
-    { source: "draftkings", date: "2026-08-24", now: new Date("2026-08-24T14:00:00Z") },
+    raw("prizepicks", "2026-08-24T13:17:34.413Z"),
+    raw("prizepicks", "2026-08-24T13:18:09.509Z"),
+    { source: "prizepicks", date: "2026-08-24", now: new Date("2026-08-24T14:00:00Z") },
   );
   assert.deepEqual(errors, []);
 });
 
 test("accepts a same-day manual capture before the retired morning schedule", () => {
   const errors = validateDailyRawPair(
-    raw("draftkings", "2026-08-27T12:05:56.102Z"),
-    raw("draftkings", "2026-08-27T12:05:56.102Z"),
-    { source: "draftkings", date: "2026-08-27", now: new Date("2026-08-27T12:10:00Z") },
+    raw("prizepicks", "2026-08-27T12:05:56.102Z"),
+    raw("prizepicks", "2026-08-27T12:05:56.102Z"),
+    { source: "prizepicks", date: "2026-08-27", now: new Date("2026-08-27T12:10:00Z") },
   );
   assert.deepEqual(errors, []);
 });
@@ -49,9 +49,9 @@ test("maps an after-midnight UTC timestamp to the prior ledger calendar date", (
 
 test("rejects mismatched sources, early captures, and separated confirmation passes", () => {
   const errors = validateDailyRawPair(
-    raw("draftkings", "2026-08-20T12:00:00.000Z"),
+    raw("prizepicks", "2026-08-20T12:00:00.000Z"),
     raw("fanduel", "2026-08-20T14:00:01.000Z"),
-    { source: "draftkings", date: "2026-08-20", now: new Date("2026-08-20T19:00:00Z"), earliestMinute: 7 * 60 + 30 },
+    { source: "prizepicks", date: "2026-08-20", now: new Date("2026-08-20T19:00:00Z"), earliestMinute: 7 * 60 + 30 },
   );
   assert.ok(errors.some((error) => error.includes("source")));
   assert.ok(errors.some((error) => error.includes("configured run window")));

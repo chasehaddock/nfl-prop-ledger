@@ -101,17 +101,16 @@ test("builds stable raw capture paths for every source", () => {
 
 test("waits for all sources or a settled partial capture before processing", () => {
   assert.equal(captureSetIsReady({ freshSources: [], unchangedForMs: 60_000 }), false);
-  assert.equal(captureSetIsReady({ freshSources: ["draftkings"], unchangedForMs: 9 * 60_000 }), false);
-  assert.equal(captureSetIsReady({ freshSources: ["draftkings"], unchangedForMs: 10 * 60_000 }), true);
-  assert.equal(captureSetIsReady({ freshSources: ["draftkings", "fanduel", "prizepicks"], unchangedForMs: 0 }), false);
-  assert.equal(captureSetIsReady({ freshSources: ["draftkings", "fanduel", "prizepicks"], unchangedForMs: 0 }), false);
-  assert.equal(captureSetIsReady({ freshSources: ["draftkings", "fanduel", "prizepicks", "underdog"], unchangedForMs: 0 }), true);
+  assert.equal(captureSetIsReady({ freshSources: ["prizepicks"], unchangedForMs: 9 * 60_000 }), false);
+  assert.equal(captureSetIsReady({ freshSources: ["prizepicks"], unchangedForMs: 10 * 60_000 }), true);
+  assert.equal(captureSetIsReady({ freshSources: ["prizepicks", "fanduel"], unchangedForMs: 0 }), false);
+  assert.equal(captureSetIsReady({ freshSources: ["prizepicks", "fanduel", "underdog"], unchangedForMs: 0 }), true);
 });
 
 test("finds valid pairs, ignores missing and partially written evidence, and propagates real I/O failures", async () => {
   const files = new Map([
-    ["draftkings-primary-raw.json", { source: "draftkings" }],
-    ["draftkings-confirmation-raw.json", { source: "draftkings" }],
+    ["prizepicks-primary-raw.json", { source: "prizepicks" }],
+    ["prizepicks-confirmation-raw.json", { source: "prizepicks" }],
   ]);
   const readJson = async (file) => {
     const name = file.split("/").at(-1);
@@ -120,13 +119,13 @@ test("finds valid pairs, ignores missing and partially written evidence, and pro
     return files.get(name);
   };
   const validatePair = (primary, confirmation, options) => primary.source === options.source && confirmation.source === options.source ? [] : ["bad"];
-  assert.deepEqual(await findFreshCaptureSources({ homeDirectory: "/home/friend", date: "2026-08-22", readJson, validatePair }), ["draftkings"]);
+  assert.deepEqual(await findFreshCaptureSources({ homeDirectory: "/home/friend", date: "2026-08-22", readJson, validatePair }), ["prizepicks"]);
 
   const utcFolderRead = async (file) => {
     if (!file.includes("/2026-08-23/")) throw Object.assign(new Error("missing"), { code: "ENOENT" });
     const name = file.split("/").at(-1);
-    if (!name.startsWith("draftkings-")) throw Object.assign(new Error("missing"), { code: "ENOENT" });
-    return { source: "draftkings" };
+    if (!name.startsWith("prizepicks-")) throw Object.assign(new Error("missing"), { code: "ENOENT" });
+    return { source: "prizepicks" };
   };
   assert.deepEqual(await findFreshCaptureSources({
     homeDirectory: "/home/friend",
@@ -134,7 +133,7 @@ test("finds valid pairs, ignores missing and partially written evidence, and pro
     captureDates: ["2026-08-22", "2026-08-23"],
     readJson: utcFolderRead,
     validatePair,
-  }), ["draftkings"]);
+  }), ["prizepicks"]);
 
   const denied = async () => { throw Object.assign(new Error("denied"), { code: "EACCES" }); };
   await assert.rejects(findFreshCaptureSources({ homeDirectory: "/home/friend", date: "2026-08-22", readJson: denied, validatePair }), /denied/);

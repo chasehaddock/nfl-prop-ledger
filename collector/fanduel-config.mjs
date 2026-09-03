@@ -6,14 +6,12 @@ export const FANDUEL_SOURCE = {
 };
 
 export const FANDUEL_MARKETS = [{
-  id: "player-props",
-  url: "https://sportsbook.fanduel.com/navigation/nfl?tab=player-props",
+  id: "week-1-player-props",
+  url: "https://sportsbook.fanduel.com/navigation/nfl",
 }];
 
 export const FANDUEL_REQUIRED_STAT_TYPES = [
   "passing_yards",
-  "passing_touchdowns",
   "rushing_yards",
-  "rushing_touchdowns",
   "receiving_yards",
 ];

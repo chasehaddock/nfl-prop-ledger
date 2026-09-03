@@ -53,8 +53,8 @@ test("prefers current lines and only falls back to stale data when no current li
 
 test("can select optional rushing markets for quarterbacks and receivers", () => {
   const selected = selectPlayerStats([
-    observation("draftkings", "rushing_yards", 525.5),
-    observation("draftkings", "rushing_touchdowns", 4.5),
+    observation("book-a", "rushing_yards", 525.5),
+    observation("book-a", "rushing_touchdowns", 4.5),
     observation("fanduel", "receiving_yards", 1100.5),
   ], "QB", ["rushing_yards", "rushing_touchdowns"]);
   assert.equal(selected.rushing_yards?.line, 525.5);
@@ -66,7 +66,7 @@ test("can select optional receiving markets for running backs", () => {
   const selected = selectPlayerStats([
     observation("fanduel", "receiving_yards", 425.5),
     observation("fanduel", "receiving_touchdowns", 2.5),
-    observation("draftkings", "rushing_yards", 1000.5),
+    observation("book-a", "rushing_yards", 1000.5),
   ], "RB", ["receiving_yards", "receiving_touchdowns"]);
   assert.equal(selected.receiving_yards?.line, 425.5);
   assert.equal(selected.receiving_touchdowns?.line, 2.5);
@@ -75,7 +75,7 @@ test("can select optional receiving markets for running backs", () => {
 
 test("consensus averages every current source even when a line is most common", () => {
   const selected = selectConsensusStats([
-    observation("draftkings", "passing_yards", 4000.5),
+    observation("book-a", "passing_yards", 4000.5),
     observation("fanduel", "passing_yards", 4000.5),
     observation("prizepicks", "passing_yards", 4050.5),
   ], ["passing_yards"]);
@@ -87,7 +87,7 @@ test("consensus averages every current source even when a line is most common", 
 
 test("consensus averages all current lines and excludes stale alternatives", () => {
   const selected = selectConsensusStats([
-    observation("draftkings", "rushing_yards", 900.5),
+    observation("book-a", "rushing_yards", 900.5),
     observation("fanduel", "rushing_yards", 950.5),
     observation("prizepicks", "rushing_yards", 1000.5),
     observation("old", "rushing_yards", 3000.5, "stale"),
