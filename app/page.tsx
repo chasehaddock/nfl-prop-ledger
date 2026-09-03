@@ -23,7 +23,7 @@ type TrendMove = Pick<Observation, "key" | "source" | "sourceUrl" | "player" | "
 type NewProp = Pick<Observation, "key" | "source" | "sourceUrl" | "player" | "statType" | "line"> & { date: string; sourceName: string };
 type SortKey = "player" | "book" | "yards" | "secondary" | "touchdowns" | "fantasyPoints" | "prizePicksFantasyScore" | "status";
 type SortState = { key: SortKey; direction: "asc" | "desc" };
-type BoardMode = "season" | "week1" | "sleeper";
+type BoardMode = "season" | "week1";
 type TePremium = 0 | 0.5 | 1;
 type PprScoring = 0 | 0.5 | 1;
 type SleeperAdpPlayer = { id: string; name: string; team: string; position: Position; rank: number | null; adp: number; bye: number | null; sleeperPoints: number | null };
@@ -1133,6 +1133,8 @@ function SleeperTrendCard({ snapshot, range, onRange, onSelect }: { snapshot: Sl
   return <section className="trend-card" aria-labelledby="sleeper-trend-title"><div className="trend-heading"><div><p className="eyebrow">Draft pulse</p><h2 id="sleeper-trend-title">ADP movement</h2></div><span className="trend-live"><i aria-hidden="true" />Sleeper</span></div><div className="trend-range" role="group" aria-label="ADP movement time range">{(["today", "week", "all"] as TrendRange[]).map((item) => <button key={item} className={range === item ? "active" : ""} aria-pressed={range === item} onClick={() => onRange(item)}>{item === "all" ? "All history" : item[0].toUpperCase() + item.slice(1)}</button>)}</div><div className="trend-counts"><span className="trend-up">↑ {rises} rising</span><span className="trend-down">↓ {falls} falling</span></div>{moves.length ? <ol className="trend-list">{moves.map((move) => { const rising = move.adpDelta < 0; return <li key={`${move.date}:${move.player.id}`}><button onClick={() => onSelect(move.player)}><span className={`trend-arrow ${rising ? "trend-up" : "trend-down"}`}>{rising ? "↑" : "↓"}</span><span className="trend-player"><strong>{move.player.name}</strong><small>{move.player.position} · {range !== "today" ? `${move.date.slice(5)} · ` : ""}{Math.abs(move.adpDelta).toFixed(1)} picks</small></span><span className="trend-value"><strong>{move.adp.toFixed(1)}</strong><small className={rising ? "trend-up" : "trend-down"}>{rising ? "earlier" : "later"}</small></span></button></li>; })}</ol> : <p className="trend-empty">{snapshot.players.length ? "ADP changes will appear after the next verified daily capture." : "The board is ready for its first verified Sleeper capture."}</p>}</section>;
 }
 
+// Kept temporarily to preserve compatibility with historical exports; it is no longer reachable from the site.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function SleeperRedraftBoardV2({ snapshot, history, seasonLines, watched, onToggleWatch }: { snapshot: SleeperAdpSnapshot; history: SleeperAdpHistory; seasonLines: PlayerLine[]; watched: Set<string>; onToggleWatch: (key: string) => void }) {
   const [position, setPosition] = useState<(typeof positions)[number]>("ALL");
   const [query, setQuery] = useState("");
@@ -1243,8 +1245,6 @@ export default function Home() {
   const [weeklySnapshot, setWeeklySnapshot] = useState<Snapshot>({ demo: false, season: 2026, week: 1, observations: [], sourceRuns: [] });
   const [seasonHistory, setSeasonHistory] = useState<History>({});
   const [weeklyHistory, setWeeklyHistory] = useState<History>({});
-  const [sleeperSnapshot, setSleeperSnapshot] = useState<SleeperAdpSnapshot>({ demo: false, source: "sleeper", players: [], movements: [] });
-  const [sleeperHistory, setSleeperHistory] = useState<SleeperAdpHistory>({});
   const [boardMode, setBoardMode] = useState<BoardMode>("season");
   const [position, setPosition] = useState<(typeof positions)[number]>("ALL");
   const [book, setBook] = useState("All sources");
@@ -1269,16 +1269,12 @@ export default function Home() {
       fetch(`${dataRoot}data/history.json`).then((response) => response.json()),
       fetch(`${dataRoot}data/week-1.json`).then((response) => response.json()),
       fetch(`${dataRoot}data/week-1-history.json`).then((response) => response.json()),
-      fetch(`${dataRoot}data/sleeper-redraft.json`).then((response) => response.json()),
-      fetch(`${dataRoot}data/sleeper-redraft-history.json`).then((response) => response.json()),
     ])
-      .then(([nextSeasonSnapshot, nextSeasonHistory, nextWeeklySnapshot, nextWeeklyHistory, nextSleeperSnapshot, nextSleeperHistory]) => {
+      .then(([nextSeasonSnapshot, nextSeasonHistory, nextWeeklySnapshot, nextWeeklyHistory]) => {
         setSeasonSnapshot(nextSeasonSnapshot);
         setSeasonHistory(nextSeasonHistory);
         setWeeklySnapshot(nextWeeklySnapshot);
         setWeeklyHistory(nextWeeklyHistory);
-        setSleeperSnapshot(nextSleeperSnapshot);
-        setSleeperHistory(nextSleeperHistory);
       })
       .catch(() => setSeasonSnapshot({ demo: true, observations: [], sourceRuns: [] }));
   }, []);
@@ -1324,7 +1320,6 @@ export default function Home() {
   const history = boardMode === "season" ? seasonHistory : weeklyHistory;
   const waitingForWeekly = boardMode === "week1" && snapshot.observations.length === 0;
   const allLines = useMemo(() => { const live = aggregate(snapshot, boardMode === "season" ? weeklySnapshot : undefined); return live.length ? live : boardMode === "season" ? DEMO_LINES : []; }, [snapshot, boardMode, weeklySnapshot]);
-  const sleeperSeasonLines = useMemo(() => aggregate(seasonSnapshot, weeklySnapshot), [seasonSnapshot, weeklySnapshot]);
   const activePropLine = selected?.statType ? allLines.find((line) => line.id === selected.playerId) || null : null;
   const activeFantasyLine = fantasyPlayerId ? allLines.find((line) => line.id === fantasyPlayerId) || null : null;
   const trendMoves = useMemo(() => {
@@ -1404,9 +1399,8 @@ export default function Home() {
     window.setTimeout(() => document.getElementById(`ledger-${prop.player.id}`)?.scrollIntoView({ behavior: "smooth", block: "center" }), 50);
   };
 
-  const siteHeader = <header className="site-header"><a className="brand" href="#top" aria-label="Prop Ledger home"><span className="brand-mark" aria-hidden="true"><i /><i /><i /></span><span>PROP LEDGER</span></a><div className="header-meta"><span className="live-dot" aria-hidden="true" /><span>{boardMode === "sleeper" ? "Sleeper · redraft ADP" : `${snapshot.season || 2026} NFL · ${boardMode === "season" ? "regular season" : "Week 1"}`}</span></div></header>;
-  const boardSwitch = <nav className="board-switch" aria-label="Projection board"><button className={boardMode === "season" ? "active" : ""} aria-pressed={boardMode === "season"} onClick={() => changeBoard("season")}><span>Season</span><strong>Season totals</strong></button><button className={boardMode === "week1" ? "active" : ""} aria-pressed={boardMode === "week1"} onClick={() => changeBoard("week1")}><span>Weekly</span><strong>Week 1 projections</strong></button><button className={boardMode === "sleeper" ? "active" : ""} aria-pressed={boardMode === "sleeper"} onClick={() => changeBoard("sleeper")}><span>Draft</span><strong>Sleeper redraft</strong></button></nav>;
-  if (boardMode === "sleeper") return <main>{siteHeader}{boardSwitch}<SleeperRedraftBoardV2 snapshot={sleeperSnapshot} history={sleeperHistory} seasonLines={sleeperSeasonLines} watched={watched} onToggleWatch={toggleWatch} /><footer><span>PROP LEDGER / PERSONAL RESEARCH</span><a href="#top">Back to top ↑</a></footer></main>;
+  const siteHeader = <header className="site-header"><a className="brand" href="#top" aria-label="Prop Ledger home"><span className="brand-mark" aria-hidden="true"><i /><i /><i /></span><span>PROP LEDGER</span></a><div className="header-meta"><span className="live-dot" aria-hidden="true" /><span>{snapshot.season || 2026} NFL · {boardMode === "season" ? "regular season" : "Week 1"}</span></div></header>;
+  const boardSwitch = <nav className="board-switch" aria-label="Projection board"><button className={boardMode === "season" ? "active" : ""} aria-pressed={boardMode === "season"} onClick={() => changeBoard("season")}><span>Season</span><strong>Season totals</strong></button><button className={boardMode === "week1" ? "active" : ""} aria-pressed={boardMode === "week1"} onClick={() => changeBoard("week1")}><span>Weekly</span><strong>Week 1 projections</strong></button></nav>;
 
   return <main>
     {siteHeader}

@@ -51,7 +51,7 @@ test("processes a complete FanDuel browser envelope", async () => {
   assert.equal(capture.observations.length, 5);
 });
 
-test("processes FanDuel season props and Week 1 Passing TD odds in one normal capture", async () => {
+test("processes FanDuel season props and Week 1 odds and yardage in one normal capture", async () => {
   const eventUrl = "https://sportsbook.fanduel.com/football/nfl/new-england-patriots-@-seattle-seahawks-35607262?tab=passing-props";
   const rows = [
     ...pair("Jared Goff", "Passing Yards", "4050.5"),
@@ -61,6 +61,10 @@ test("processes FanDuel season props and Week 1 Passing TD odds in one normal ca
     ...pair("Amon-Ra St. Brown", "Receiving Yards", "1225.5", "-114", "-114"),
     { ariaLabel: "Sam Darnold - Passing TDs, Sam Darnold Over, 1.5, +106", marketScope: "week_1", sourceUrl: eventUrl },
     { ariaLabel: "Sam Darnold - Passing TDs, Sam Darnold Under, 1.5, -140", marketScope: "week_1", sourceUrl: eventUrl },
+    { ariaLabel: "Sam Darnold - Passing Yards, Sam Darnold Over, 235.5, -110", marketScope: "week_1", sourceUrl: eventUrl },
+    { ariaLabel: "Sam Darnold - Passing Yards, Sam Darnold Under, 235.5, -110", marketScope: "week_1", sourceUrl: eventUrl },
+    { ariaLabel: "Jaxon Smith-Njigba - Receiving Yards, Jaxon Smith-Njigba Over, 84.5, -105", marketScope: "week_1", sourceUrl: eventUrl.replace("passing", "receiving") },
+    { ariaLabel: "Jaxon Smith-Njigba - Receiving Yards, Jaxon Smith-Njigba Under, 84.5, -115", marketScope: "week_1", sourceUrl: eventUrl.replace("passing", "receiving") },
   ];
   const { result, capture } = await processRaw({
     source: "fanduel",
@@ -69,12 +73,14 @@ test("processes FanDuel season props and Week 1 Passing TD odds in one normal ca
     pages: [{ ...FANDUEL_MARKETS[0], capturedAt, rows }],
   });
   assert.equal(result.status, 0, result.stderr);
-  const weekly = capture.observations.find((item) => item.marketScope === "week_1");
-  assert.equal(capture.observations.length, 6);
-  assert.equal(weekly.player.name, "Sam Darnold");
-  assert.equal(weekly.overOdds, 106);
-  assert.equal(weekly.underOdds, -140);
-  assert.equal(weekly.sourceUrl, eventUrl);
+  const weekly = capture.observations.filter((item) => item.marketScope === "week_1");
+  assert.equal(capture.observations.length, 8);
+  assert.deepEqual(new Set(weekly.map((item) => item.statType)), new Set(["passing_touchdowns", "passing_yards", "receiving_yards"]));
+  const passingTds = weekly.find((item) => item.statType === "passing_touchdowns");
+  assert.equal(passingTds.player.name, "Sam Darnold");
+  assert.equal(passingTds.overOdds, 106);
+  assert.equal(passingTds.underOdds, -140);
+  assert.equal(passingTds.sourceUrl, eventUrl);
 });
 
 test("processes a complete PrizePicks projection envelope", async () => {

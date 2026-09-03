@@ -13,7 +13,6 @@ A local-first NFL player-projection ledger with a public GitHub Pages dashboard.
 - DraftKings, FanDuel, standard PrizePicks projections, and fallback Underdog Week 1 player markets.
 - Verified daily line history with source-colored charts and sportsbook averages.
 - Full-PPR fantasy projections with 4/6-point passing-TD and TE-premium toggles.
-- Sleeper 12-team full-PPR redraft ADP, ADP history, and coverage-adjusted positional value gaps.
 
 The collector requires matching primary and confirmation passes. Failed or incomplete sources cannot overwrite verified data. PrizePicks Demon and Goblin rows are ignored. FanDuel two-sided Week 1 markets receive de-vig priority when available. Underdog is Week 1 only and fills missing Pass TDs, Receptions, and Rush + Rec TDs fields. Higher/Lower modifiers are normalized together only when both are posted and are labeled as pick'em estimates rather than sportsbook no-vig odds.
 
@@ -66,7 +65,6 @@ Click **Capture now** at any convenient time when Chrome is open, logged in, and
 - Missing WR/TE receptions stay blank.
 - The intentional season-only historical fallbacks are RB receptions/receiving yards and QB rushing yards/rushing TDs; all are labeled.
 - Week 1 uses no season-history substitutions.
-- Sleeper value gaps compare ranks within the exact same projection-complete positional pool.
 
 See the continuation guide for the complete current contract.
 

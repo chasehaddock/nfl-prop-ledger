@@ -1,7 +1,7 @@
 import { isRunLeaseActive } from "./run-state.js";
+import { buildFanDuelWeeklyMarketPages, normalizeFanDuelEventUrls } from "./fanduel-weekly.js";
 
 const DRAFTKINGS_BASE = "https://sportsbook.draftkings.com/leagues/football/nfl?category=futures&subcategory=player-stats-o-u";
-const SLEEPER_DRAFT_URL = "https://sleeper.com/draft/nfl/1397766719740620800?ftue=commish";
 const SOURCES = [
   {
     id: "draftkings",
@@ -22,6 +22,7 @@ const SOURCES = [
     name: "FanDuel",
     scraper: "fanduel",
     requiredStatLabels: ["Passing Yards", "Passing TDs", "Rushing Yards", "Rushing TDs", "Receiving Yards"],
+    requiredWeeklyStatLabels: ["Passing Yards", "Rushing Yards", "Receiving Yards"],
     pages: [{ id: "player-props", url: "https://sportsbook.fanduel.com/navigation/nfl?tab=player-props" }],
   },
   {
@@ -42,13 +43,6 @@ const SOURCES = [
     season: () => new Date().getFullYear(),
     requiredStatLabels: ["Pass TDs", "Receptions", "Rush + Rec TDs"],
     pages: [{ id: "nfl-week-1-player-props", url: "https://app.underdogsports.com/pick-em/higher-lower/all/NFL" }],
-  },
-  {
-    id: "sleeper",
-    name: "Sleeper ADP",
-    scraper: "sleeper",
-    season: () => new Date().getFullYear(),
-    pages: [{ id: "redraft-adp", url: SLEEPER_DRAFT_URL }],
   },
 ];
 
@@ -86,10 +80,6 @@ function isScraperPageReady(scraper) {
       .filter((element) => element.getClientRects().length > 0)
       .map((element) => element.textContent?.replace(/\s+/g, " ").trim() || ""));
     return ["TD Scorers", "Passing", "Receiving"].some((label) => labels.has(label));
-  }
-  if (scraper === "sleeper") {
-    return Boolean(document.querySelector('[role="grid"]'))
-      && /Redraft league PPR 4pt passing/i.test(bodyText);
   }
   return document.readyState === "complete";
 }
@@ -227,11 +217,13 @@ async function scrapeFanDuelPage() {
 
   const labels = [...outcomesByMarket.values()].flat();
   const statLabels = [...new Set([...marketLabels].map((label) => label.match(seasonCardPattern)?.[1]).filter(Boolean))];
+  const weeklyStatLabels = [...new Set([...marketLabels].map((label) => label.match(weeklyCardPattern)?.[1]).filter(Boolean))];
   return {
-    rows: labels.map((ariaLabel) => ({ ariaLabel })),
+    rows: labels.map((ariaLabel) => ({ ariaLabel, sourceUrl: location.href })),
     marketCount: outcomesByMarket.size,
     expectedMarketCount: marketLabels.size,
     statLabels,
+    weeklyStatLabels,
     unavailable: /unable to display|not available in your location/i.test(document.body.innerText),
   };
 }
@@ -445,69 +437,12 @@ async function scrapeUnderdogPage() {
   };
 }
 
-async function scrapeSleeperAdpPage() {
-  const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
-  const expected = {
-    teams: 12,
-    rounds: 13,
-    receptionPpr: 1,
-    passingTdPoints: 4,
-    slots: { QB: 1, RB: 2, WR: 2, TE: 1, FLEX: 2, BENCH: 5, K: 0, DEF: 0 },
-  };
-  const pageText = document.body.innerText.replace(/\s+/g, " ");
-  if (!/Redraft league PPR 4pt passing/i.test(pageText) || !/12 Teams/i.test(pageText) || !/13 Rounds/i.test(pageText)) {
-    throw new Error("Sleeper board must be the 12-team full-PPR, 4-point passing-TD, 13-round board");
-  }
-
-  const grid = document.querySelector('[role="grid"]');
-  if (!grid) throw new Error("Sleeper player ADP grid is missing");
-  const scrollHost = grid.closest(".scrollbar-container") || grid;
-  const rowsByKey = new Map();
-  const readRows = () => [...document.querySelectorAll(".player-rank-item2")].map((row) => {
-    const nameWrapper = row.querySelector(".name-wrapper");
-    const name = [...(nameWrapper?.childNodes || [])]
-      .filter((node) => node.nodeType === Node.TEXT_NODE)
-      .map((node) => node.textContent || "")
-      .join(" ")
-      .replace(/\s+/g, " ")
-      .trim();
-    const position = ["QB", "RB", "WR", "TE"].find((item) => row.classList.contains(item)) || "";
-    const value = (selector) => row.querySelector(selector)?.textContent?.trim() || "";
-    return {
-      rank: Number(value(".rank")),
-      name,
-      team: value(".team"),
-      position,
-      adp: Number(value(".adp .value")),
-      bye: Number(value(".bye .value")),
-      sleeperPoints: Number(value(".proj-pts .value")),
-    };
-  }).filter((row) => row.name && row.position && Number.isFinite(row.adp) && row.adp > 0);
-
-  for (let step = 0; step < 50 && rowsByKey.size < 250; step += 1) {
-    for (const row of readRows()) rowsByKey.set(`${row.position}:${row.name.toLowerCase()}`, row);
-    scrollHost.dispatchEvent(new WheelEvent("wheel", {
-      bubbles: true,
-      cancelable: true,
-      deltaMode: WheelEvent.DOM_DELTA_PIXEL,
-      deltaY: 560,
-      view: window,
-    }));
-    await sleep(120);
-  }
-  for (const row of readRows()) rowsByKey.set(`${row.position}:${row.name.toLowerCase()}`, row);
-  const rows = [...rowsByKey.values()].sort((left, right) => left.adp - right.adp || left.rank - right.rank).slice(0, 250);
-  if (rows.length < 150) throw new Error(`Sleeper ADP captured only ${rows.length} of at least 150 required players`);
-  return { rows, marketCount: rows.length, format: expected, unavailable: false };
-}
-
 async function scrapeTab(tabId, scraper) {
   const functions = {
     draftkings: scrapeDraftKingsPage,
     fanduel: scrapeFanDuelPage,
     prizepicks: scrapePrizePicksPage,
     underdog: scrapeUnderdogPage,
-    sleeper: scrapeSleeperAdpPage,
   };
   let lastResult;
   for (let attempt = 0; attempt < 2; attempt += 1) {
@@ -522,13 +457,15 @@ async function scrapeTab(tabId, scraper) {
   if (lastResult?.expectedMarketCount) {
     throw new Error(`Captured ${lastResult.marketCount || 0} of ${lastResult.expectedMarketCount} discovered season markets`);
   }
-  if (scraper === "sleeper") throw new Error("No Sleeper ADP player rows appeared after a retry");
   if (scraper === "underdog") throw new Error("No Week 1 TD or reception rows appeared after a retry");
   throw new Error("No season prop rows appeared after a retry");
 }
 
 async function collectPage(source, spec) {
-  const tab = await chrome.tabs.create({ url: spec.url, active: ["fanduel", "prizepicks", "underdog", "sleeper"].includes(source.id) });
+  const tab = await chrome.tabs.create({
+    url: spec.url,
+    active: spec.active ?? ["fanduel", "prizepicks", "underdog"].includes(source.id),
+  });
   try {
     await waitForTab(tab.id);
     const result = await scrapeTab(tab.id, source.scraper);
@@ -536,6 +473,60 @@ async function collectPage(source, spec) {
   } finally {
     await chrome.tabs.remove(tab.id).catch(() => {});
   }
+}
+
+function discoverFanDuelEventHrefs() {
+  return [...document.querySelectorAll('a[href*="/football/nfl/"]')]
+    .filter((link) => link.getClientRects().length > 0)
+    .map((link) => link.href);
+}
+
+async function discoverFanDuelWeekOneEventUrls() {
+  const tab = await chrome.tabs.create({ url: "https://sportsbook.fanduel.com/navigation/nfl", active: true });
+  try {
+    await waitForTab(tab.id);
+    const hrefs = new Set();
+    let stableChecks = 0;
+    let previousSize = 0;
+    for (let attempt = 0; attempt < 80 && stableChecks < 6; attempt += 1) {
+      const results = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: discoverFanDuelEventHrefs });
+      for (const href of results[0]?.result || []) hrefs.add(href);
+      stableChecks = hrefs.size > 0 && hrefs.size === previousSize ? stableChecks + 1 : 0;
+      previousSize = hrefs.size;
+      await chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        func: () => window.scrollBy(0, Math.max(window.innerHeight * 0.8, 600)),
+      });
+      await new Promise((resolve) => setTimeout(resolve, 150));
+    }
+    return normalizeFanDuelEventUrls([...hrefs]);
+  } finally {
+    await chrome.tabs.remove(tab.id).catch(() => {});
+  }
+}
+
+async function collectFanDuelWeeklyPages(source) {
+  const eventUrls = await discoverFanDuelWeekOneEventUrls();
+  if (eventUrls.length === 0) throw new Error("No FanDuel Week 1 game links were discovered");
+  const specs = buildFanDuelWeeklyMarketPages(eventUrls);
+  const pages = [];
+  let cursor = 0;
+  const workers = Array.from({ length: Math.min(4, specs.length) }, async () => {
+    while (cursor < specs.length) {
+      const spec = specs[cursor];
+      cursor += 1;
+      try {
+        pages.push(await collectPage(source, spec));
+      } catch (error) {
+        if (!spec.optional) throw error;
+      }
+    }
+  });
+  await Promise.all(workers);
+  const weeklyStatLabels = new Set(pages.flatMap((page) => page.weeklyStatLabels || []));
+  const missing = (source.requiredWeeklyStatLabels || []).filter((label) => !weeklyStatLabels.has(label));
+  if (missing.length) throw new Error(`Required FanDuel Week 1 yard categories are missing: ${missing.join(", ")}`);
+  return pages;
 }
 
 function extractSeason(pages) {
@@ -548,6 +539,14 @@ function extractSeason(pages) {
 async function collectPass(source) {
   const pages = [];
   for (const market of source.pages) pages.push(await collectPage(source, market));
+  if (source.id === "fanduel") {
+    const weeklyPages = await collectFanDuelWeeklyPages(source);
+    const primaryPage = pages[0];
+    primaryPage.rows.push(...weeklyPages.flatMap((page) => page.rows));
+    primaryPage.marketCount += weeklyPages.reduce((total, page) => total + page.marketCount, 0);
+    primaryPage.expectedMarketCount = (primaryPage.expectedMarketCount || primaryPage.marketCount) + weeklyPages.reduce((total, page) => total + (page.expectedMarketCount || page.marketCount), 0);
+    primaryPage.weeklyStatLabels = [...new Set(weeklyPages.flatMap((page) => page.weeklyStatLabels || []))];
+  }
   const capturedStatLabels = new Set(pages.flatMap((page) => page.statLabels || []));
   const missingStatLabels = (source.requiredStatLabels || []).filter((label) => !capturedStatLabels.has(label));
   if (missingStatLabels.length) throw new Error(`Required market categories are missing: ${missingStatLabels.join(", ")}`);
@@ -556,7 +555,6 @@ async function collectPass(source) {
     season: typeof source.season === "function" ? source.season() : extractSeason(pages),
     capturedAt: new Date().toISOString(),
     marketCount: pages.reduce((total, page) => total + page.marketCount, 0),
-    ...(source.id === "sleeper" ? { format: pages[0].format } : {}),
     pages,
   };
 }

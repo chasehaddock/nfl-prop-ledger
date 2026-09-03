@@ -1,15 +1,14 @@
 {
   "manifest_version": 3,
   "name": "NFL Prop Ledger Collector",
-  "version": "0.2.27",
-  "description": "Captures validated NFL prop boards and Sleeper redraft ADP for the local ledger, retrying failed sources.",
+  "version": "0.2.28",
+  "description": "Captures validated NFL season and weekly prop boards for the local ledger, retrying failed sources.",
   "permissions": ["alarms", "downloads", "scripting", "storage", "tabs"],
   "host_permissions": [
     "https://sportsbook.draftkings.com/*",
     "https://sportsbook.fanduel.com/*",
     "https://app.prizepicks.com/*",
     "https://app.underdogsports.com/*",
-    "https://sleeper.com/*",
     "http://127.0.0.1:4173/*"
   ],
   "background": { "service_worker": "service.js", "type": "module" },

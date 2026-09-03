@@ -15,6 +15,4 @@ test("builds a deployable Prop Ledger site with its data files", async () => {
   await access(new URL("../dist/data/history.json", import.meta.url));
   await access(new URL("../dist/data/week-1.json", import.meta.url));
   await access(new URL("../dist/data/week-1-history.json", import.meta.url));
-  await access(new URL("../dist/data/sleeper-redraft.json", import.meta.url));
-  await access(new URL("../dist/data/sleeper-redraft-history.json", import.meta.url));
 });

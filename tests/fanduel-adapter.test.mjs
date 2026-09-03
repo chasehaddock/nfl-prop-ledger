@@ -76,6 +76,20 @@ test("parses FanDuel Week 1 Total Receptions as a two-sided market", () => {
   assert.equal(under.odds, -130);
 });
 
+test("parses FanDuel Week 1 passing, rushing, and receiving yard markets", () => {
+  const cases = [
+    ["Sam Darnold - Passing Yards, Sam Darnold Over, 235.5, -110", "passing_yards", 235.5],
+    ["Josh Allen - Rushing Yards, Josh Allen Over, 38.5, -114", "rushing_yards", 38.5],
+    ["Jaxon Smith-Njigba - Receiving Yards, Jaxon Smith-Njigba Over, 84.5, -105", "receiving_yards", 84.5],
+  ];
+  for (const [label, statType, line] of cases) {
+    const parsed = parseFanDuelOutcomeLabel(label, { season: 2026 });
+    assert.equal(parsed.marketScope, "week_1");
+    assert.equal(parsed.statType, statType);
+    assert.equal(parsed.line, line);
+  }
+});
+
 test("rejects mismatched player labels and incomplete over/under pairs", () => {
   assert.throws(
     () => parseFanDuelOutcomeLabel(labels[0].replace(", Amon-Ra St. Brown Over", ", Puka Nacua Over")),

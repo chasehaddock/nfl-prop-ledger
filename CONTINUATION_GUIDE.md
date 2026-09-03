@@ -23,9 +23,8 @@ Use Node.js 22.13 or newer. Node 24 is the known-good version.
 ## What is included
 
 - React/Vite dashboard in `app/` and `src/`.
-- Five-market-source Chrome collector plus Sleeper ADP collection in `extension/` and `collector/`.
+- Four-source Chrome collector for season and Week 1 markets in `extension/` and `collector/`.
 - Accepted season and Week 1 history in `data/` and generated public JSON in `public/data/`.
-- Sleeper redraft ADP history and coverage-adjusted value analysis.
 - Processing, validation, automation, and GitHub publishing scripts in `lib/` and `scripts/`.
 - Full automated regression suite in `tests/`.
 
@@ -35,7 +34,7 @@ The source branch deliberately excludes `node_modules`, `dist`, `.private`, `.en
 
 ### Market collection
 
-- Sources: DraftKings, FanDuel, PrizePicks, and fallback Underdog Week 1 Pass TDs, Receptions, and Rush + Rec TDs markets; Sleeper is collected separately for ADP. Underdog is never used for season markets.
+- Sources: DraftKings, FanDuel, PrizePicks, and fallback Underdog Week 1 Pass TDs, Receptions, and Rush + Rec TDs markets. Underdog is never used for season markets.
 - Season and Week 1 data are stored separately.
 - Every capture requires a matching primary and confirmation pass.
 - PrizePicks Demon and Goblin projections are ignored.
@@ -60,13 +59,6 @@ The source branch deliberately excludes `node_modules`, `dist`, `.private`, `.en
 - Week 1 QB passing-TD priority is FanDuel or another complete two-sided sportsbook market with vig removed, then Underdog normalized Higher/Lower modifiers. For one-way anytime-TD markets, the two-sided Underdog estimate remains preferable to a raw one-sided price. Underdog modifiers are normalized against each other but must not be described as true sportsbook no-vig odds.
 - Season QB passing-TD markets also use a line-centered expectation when a complete two-sided sportsbook over/under is available. If no complete two-sided price exists, retain the published projection line without inventing an adjustment. Standard PrizePicks projections remain posted 50/50 lines and are never labeled no-vig.
 
-### Sleeper redraft
-
-- Format: 12 teams, full PPR, four-point passing TDs, no K/DST, top 250 maximum.
-- Value gaps are position-specific.
-- Comparable Sleeper rank and model rank use exactly the same projection-complete player pool.
-- Players missing required fantasy inputs receive no value gap and appear under `Needs data` with the missing inputs listed.
-
 ## Chrome collector setup on a new computer
 
 1. Run `npm run operator:install -- --dry-run` and inspect the proposed machine-specific setup.
@@ -82,7 +74,7 @@ Chrome sessions and sportsbook logins cannot be transferred through GitHub. The 
 
 - Capture is currently started manually from the Chrome extension whenever the operator is available and connected to an unrestricted network; it is not restricted to the former morning schedule.
 - The installer removes legacy Chrome-opener and daily-processor schedules by default. `npm run operator:install -- --automatic` is available only as an explicit processor-scheduling opt-in; it still cannot bypass Chrome logins or start the extension capture.
-- The collector performs one complete validated pass per source and retries only failed sources. It writes a compatible primary/confirmation pair for the processor. DraftKings may collect in a separate background lane while the login-sensitive sources remain strictly sequential; page-readiness checks replace fixed startup delays without relaxing any required-market validation. FanDuel outcome pairs are retained while its virtualized page is already being traversed, and only still-missing panels are opened in bounded batches. Every discovered market must still yield exactly one complete two-outcome pair; incomplete batches fall back to individual expansion and fail closed if still incomplete.
+- The collector performs one complete validated pass per source and retries only failed sources. It writes a compatible primary/confirmation pair for the processor. DraftKings may collect in a separate background lane while the login-sensitive sources remain strictly sequential; page-readiness checks replace fixed startup delays without relaxing any required-market validation. FanDuel outcome pairs are retained while its virtualized page is already being traversed, and only still-missing panels are opened in bounded batches. The FanDuel pass also discovers the 16 current Week 1 NFL game pages and collects Passing, Rushing, and Receiving prop tabs in four bounded background workers; at least one complete Passing Yards, Rushing Yards, and Receiving Yards market must be present before the source is accepted. Every discovered market must still yield exactly one complete two-outcome pair; incomplete batches fall back to individual expansion and fail closed if still incomplete.
 - After capture, run `npm run operator:run`, verify with `npm run operator:health -- --require-today`, then commit the accepted `data/` and `public/data/` updates on a branch and merge them to `source`.
 - The computer must be awake, logged in, online, and able to open Chrome during collection.
 

@@ -10,7 +10,7 @@ const date = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Chicago", yea
 const captureDates = [...new Set([date, new Date().toISOString().slice(0, 10)])];
 const captureRoot = path.resolve(".private", "browser-captures");
 const incomingDir = path.resolve("data/incoming", date);
-const sourceIds = ["draftkings", "fanduel", "prizepicks", "underdog", "sleeper"];
+const sourceIds = ["draftkings", "fanduel", "prizepicks", "underdog"];
 
 async function exists(file) {
   try {
@@ -32,7 +32,6 @@ async function run(file, args, options = {}) {
 
 await retryTransient(() => mkdir(incomingDir, { recursive: true }));
 const captureFiles = [];
-let sleeperProcessed = false;
 for (const sourceId of sourceIds) {
   const candidates = [];
   let partialFound = false;
@@ -55,20 +54,13 @@ for (const sourceId of sourceIds) {
   candidates.sort((left, right) => Date.parse(right.confirmationEnvelope.capturedAt) - Date.parse(left.confirmationEnvelope.capturedAt));
   const [{ primaryRaw, confirmationRaw }] = candidates;
 
-  if (sourceId === "sleeper") {
-    const output = path.resolve("data/sleeper-adp", `${date}.json`);
-    await run(process.execPath, ["scripts/process-sleeper-adp-pair.mjs", primaryRaw, confirmationRaw, output], { cwd: process.cwd() });
-    sleeperProcessed = true;
-    continue;
-  }
-
   const primary = path.join(incomingDir, `${sourceId}-primary.json`);
   const confirmation = path.join(incomingDir, `${sourceId}-confirmation.json`);
   await run(process.execPath, ["scripts/process-browser-capture.mjs", primaryRaw, primary], { cwd: process.cwd() });
   await run(process.execPath, ["scripts/process-browser-capture.mjs", confirmationRaw, confirmation], { cwd: process.cwd() });
   captureFiles.push(primary, confirmation);
 }
-if (captureFiles.length === 0 && !sleeperProcessed) throw new Error(`No complete browser captures found in ${captureRoot} for ${captureDates.join(" or ")}`);
+if (captureFiles.length === 0) throw new Error(`No complete browser captures found in ${captureRoot} for ${captureDates.join(" or ")}`);
 
 if (captureFiles.length) await run(process.execPath, ["scripts/ingest-captures.mjs", ...captureFiles], { cwd: process.cwd() });
 await run(process.execPath, ["scripts/build-public-data.mjs"], { cwd: process.cwd() });
@@ -81,8 +73,8 @@ const localOnly = localOnlyRequested({
   markerAvailable: await exists(localMarker),
 });
 if (!localOnly) {
-  await run("git", ["add", "data/snapshots", "data/rosters", "data/sleeper-adp", "public/data"], { cwd: process.cwd() });
-  const { stdout } = await run("git", ["status", "--porcelain", "--", "data/snapshots", "data/rosters", "data/sleeper-adp", "public/data"], { cwd: process.cwd() });
+  await run("git", ["add", "data/snapshots", "data/rosters", "public/data"], { cwd: process.cwd() });
+  const { stdout } = await run("git", ["status", "--porcelain", "--", "data/snapshots", "data/rosters", "public/data"], { cwd: process.cwd() });
   if (stdout.trim()) await run("git", ["commit", "-m", `data: capture ${date}`], { cwd: process.cwd() });
   const { stdout: remotes } = await run("git", ["remote"], { cwd: process.cwd() });
   if (remotes.trim()) await run("git", ["push"], { cwd: process.cwd() });

@@ -104,9 +104,8 @@ test("waits for all sources or a settled partial capture before processing", () 
   assert.equal(captureSetIsReady({ freshSources: ["draftkings"], unchangedForMs: 9 * 60_000 }), false);
   assert.equal(captureSetIsReady({ freshSources: ["draftkings"], unchangedForMs: 10 * 60_000 }), true);
   assert.equal(captureSetIsReady({ freshSources: ["draftkings", "fanduel", "prizepicks"], unchangedForMs: 0 }), false);
-  assert.equal(captureSetIsReady({ freshSources: ["draftkings", "fanduel", "prizepicks", "sleeper"], unchangedForMs: 0 }), false);
-  assert.equal(captureSetIsReady({ freshSources: ["draftkings", "fanduel", "prizepicks", "underdog"], unchangedForMs: 0 }), false);
-  assert.equal(captureSetIsReady({ freshSources: ["draftkings", "fanduel", "prizepicks", "underdog", "sleeper"], unchangedForMs: 0 }), true);
+  assert.equal(captureSetIsReady({ freshSources: ["draftkings", "fanduel", "prizepicks"], unchangedForMs: 0 }), false);
+  assert.equal(captureSetIsReady({ freshSources: ["draftkings", "fanduel", "prizepicks", "underdog"], unchangedForMs: 0 }), true);
 });
 
 test("finds valid pairs, ignores missing and partially written evidence, and propagates real I/O failures", async () => {

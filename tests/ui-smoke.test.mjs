@@ -449,13 +449,6 @@ test("the floating column chooser hides columns, shrinks the table, and works on
     assert.equal(await page.getByRole("dialog", { name: "Choose visible columns" }).getByRole("switch", { name: "PrizePicks fantasy score", exact: true }).count(), 1);
     await page.getByRole("dialog", { name: "Choose visible columns" }).getByRole("button", { name: "Close column chooser" }).click();
 
-    await page.getByRole("button", { name: /Sleeper redraft/i }).click();
-    const sleeperTrigger = page.getByRole("button", { name: /^Columns/i });
-    await sleeperTrigger.click();
-    const sleeperChooser = page.getByRole("dialog", { name: "Choose visible columns" });
-    await sleeperChooser.getByRole("switch", { name: "Value gap", exact: true }).click();
-    assert.equal(await page.getByRole("columnheader", { name: /Value gap/i }).count(), 0);
-
     const mobile = await browser.newPage({ viewport: { width: 390, height: 844 } });
     await mobile.goto(process.env.TEST_URL || "http://127.0.0.1:4173", { waitUntil: "networkidle" });
     const buttonBox = await mobile.getByRole("button", { name: /^Columns/i }).boundingBox();
@@ -471,6 +464,7 @@ test("Week 1 has a separate data-ready board and movement history", async () => 
   try {
     const page = await browser.newPage();
     await page.goto(process.env.TEST_URL || "http://127.0.0.1:4173", { waitUntil: "networkidle" });
+    assert.equal(await page.getByRole("button", { name: /Sleeper redraft/i }).count(), 0);
     await page.getByRole("button", { name: /Weekly Week 1 projections/i }).click();
     await page.getByRole("heading", { name: "Week 1 projections" }).waitFor();
     assert.ok(await page.locator("tbody tr.data-row").count() > 0);
@@ -514,37 +508,6 @@ test("Week 1 has a separate data-ready board and movement history", async () => 
     await page.getByRole("button", { name: /Season Season totals/i }).click();
     assert.ok(await page.locator("tbody tr.data-row").count() > 0);
     assert.equal(await page.getByRole("columnheader", { name: /PrizePicks fantasy score/i }).count(), 0);
-  } finally {
-    await browser.close();
-  }
-});
-
-test("Sleeper redraft is a separate 12-team positional value board", async () => {
-  const browser = await chromium.launch({ channel: "chrome", headless: true });
-  try {
-    const page = await browser.newPage();
-    await page.goto(process.env.TEST_URL || "http://127.0.0.1:4173", { waitUntil: "networkidle" });
-    await page.getByRole("button", { name: /Sleeper redraft/i }).click();
-    await page.getByRole("heading", { name: "Sleeper redraft" }).waitFor();
-    assert.match(await page.locator("main").innerText(), /12-team[\s\S]*full-PPR[\s\S]*4-point passing TDs/i);
-    assert.match(await page.locator(".sleeper-format-chip").innerText(), /no K\/DST/i);
-    assert.equal(await page.getByRole("columnheader", { name: /Sleeper pos rank/i }).count(), 1);
-    assert.equal(await page.getByRole("columnheader", { name: /^Comparable ADP rank/i }).count(), 1);
-    assert.equal(await page.getByRole("columnheader", { name: /^Our comparable rank/i }).count(), 1);
-    assert.equal(await page.getByRole("columnheader", { name: /Value gap/i }).count(), 1);
-    assert.match(await page.locator(".coverage-explainer").innerText(), /same complete-player pool/i);
-    assert.equal(await page.getByRole("button", { name: "Needs data", exact: true }).count(), 1);
-    await page.getByRole("button", { name: "Needs data", exact: true }).click();
-    assert.ok(await page.locator("tbody tr.data-row").count() > 0);
-    assert.equal(await page.locator("tbody tr.data-row .needs-data-badge").count(), await page.locator("tbody tr.data-row").count());
-    assert.match(await page.locator("tbody tr.data-row").first().innerText(), /receptions|yards|TDs|inferred inputs|No ledger match/i);
-    assert.ok(await page.locator("tbody tr.data-row .fantasy-points.inferred").count() > 0);
-    await page.getByRole("button", { name: "Comparable only", exact: true }).click();
-    const comparable = page.locator("tbody tr.data-row").first();
-    assert.match(await comparable.locator("td:nth-child(4)").innerText(), /(QB|RB|WR|TE)\d+/i);
-    assert.match(await comparable.locator("td:nth-child(6)").innerText(), /(QB|RB|WR|TE)\d+/i);
-    assert.doesNotMatch(await comparable.locator("td:nth-child(7)").innerText(), /Needs data/i);
-    assert.match(await page.locator(".trend-card").innerText(), /ADP movement/i);
   } finally {
     await browser.close();
   }
