@@ -39,14 +39,15 @@ test("extension accelerates collection without overlapping login-sensitive sourc
   assert.match(service, /Required market categories are missing/);
 });
 
-test("FanDuel retains virtualized outcomes, expands missing markets in bounded batches, and validates exact pairs", async () => {
+test("FanDuel captures virtualized viewports in both directions and validates exact pairs", async () => {
   const service = await readFile(new URL("../extension/service.js", import.meta.url), "utf8");
   assert.match(service, /const observedOutcomes = new Map\(\)/);
   assert.match(service, /mergeVisibleOutcomes\(\)/);
   assert.match(service, /marketLabels = new Set\(\[\.\.\.marketLabels, \.\.\.discovered\]\)/);
-  assert.match(service, /const batchSize = 12/);
-  assert.match(service, /pendingLabels\.slice\(offset, offset \+ batchSize\)/);
-  assert.match(service, /for \(const card of cards\) card\.click\(\)/);
+  assert.match(service, /const captureMountedMarkets = async \(\) =>/);
+  assert.match(service, /\.slice\(0, 8\)/);
+  assert.match(service, /await traverseMarkets\(1\)/);
+  assert.match(service, /await traverseMarkets\(-1\)/);
   assert.match(service, /for \(const marketLabel of marketLabels\)/);
   assert.match(service, /if \(outcomes\.length !== 2\)/);
   assert.match(service, /expectedMarketCount: marketLabels\.size/);

@@ -142,71 +142,62 @@ async function scrapeFanDuelPage() {
     }
   };
   const outcomesFor = (marketLabel) => [...(observedOutcomes.get(marketLabel) || [])];
-
-  window.scrollTo(0, 0);
-  await sleep(250);
-  let marketLabels = discoverMarketLabels();
-  mergeVisibleOutcomes();
-  let stableChecks = 0;
-  let priorHeight = 0;
-  for (let attempt = 0; attempt < 120 && stableChecks < 6; attempt += 1) {
-    window.scrollBy(0, Math.max(window.innerHeight * 0.75, 500));
-    await sleep(100);
-    const discovered = discoverMarketLabels();
-    marketLabels = new Set([...marketLabels, ...discovered]);
-    mergeVisibleOutcomes();
-    const height = document.documentElement.scrollHeight;
-    const atBottom = window.scrollY + window.innerHeight >= height - 10;
-    stableChecks = atBottom && height === priorHeight ? stableChecks + 1 : 0;
-    priorHeight = height;
-  }
-  window.scrollTo(0, 0);
-  await sleep(250);
-  mergeVisibleOutcomes();
-
-  const outcomesByMarket = new Map();
   const findCard = (marketLabel) => [...document.querySelectorAll('[role="button"]:not([aria-label])')]
     .find((element) => element.textContent.trim() === marketLabel);
-  const pendingLabels = [...marketLabels].filter((marketLabel) => {
-    const outcomes = outcomesFor(marketLabel);
-    if (outcomes.length !== 2) return true;
-    outcomesByMarket.set(marketLabel, outcomes);
-    return false;
-  });
-  const batchSize = 12;
-  for (let offset = 0; offset < pendingLabels.length; offset += batchSize) {
-    const batch = pendingLabels.slice(offset, offset + batchSize);
-    const cards = batch.map((marketLabel) => findCard(marketLabel));
-    if (cards.some((card) => !card)) {
-      return { rows: [], marketCount: outcomesByMarket.size, expectedMarketCount: marketLabels.size, unavailable: false };
-    }
-    for (const card of cards) card.click();
+  let marketLabels = new Set();
+  const discoverMountedMarkets = () => {
+    const discovered = discoverMarketLabels();
+    marketLabels = new Set([...marketLabels, ...discovered]);
+    return discovered;
+  };
+  const captureMountedMarkets = async () => {
+    const mountedLabels = discoverMountedMarkets();
     mergeVisibleOutcomes();
-    for (let attempt = 0; attempt < 30 && !batch.every((marketLabel) => outcomesFor(marketLabel).length === 2); attempt += 1) {
-      await sleep(50);
-      mergeVisibleOutcomes();
-    }
-    for (const marketLabel of batch) {
-      let outcomes = outcomesFor(marketLabel);
-      if (outcomes.length === 2) {
-        outcomesByMarket.set(marketLabel, outcomes);
-        continue;
+    for (let round = 0; round < 6; round += 1) {
+      const pending = [...mountedLabels]
+        .filter((marketLabel) => outcomesFor(marketLabel).length !== 2 && findCard(marketLabel))
+        .slice(0, 8);
+      if (!pending.length) break;
+      for (const marketLabel of pending) {
+        const card = findCard(marketLabel);
+        if (card?.isConnected) card.click();
       }
-      const card = findCard(marketLabel);
-      card.click();
-      for (let attempt = 0; attempt < 20 && outcomes.length !== 2; attempt += 1) {
+      for (let attempt = 0; attempt < 20 && !pending.every((marketLabel) => outcomesFor(marketLabel).length === 2); attempt += 1) {
         await sleep(50);
         mergeVisibleOutcomes();
-        outcomes = outcomesFor(marketLabel);
       }
-      if (outcomes.length !== 2) {
-        return { rows: [], marketCount: outcomesByMarket.size, expectedMarketCount: marketLabels.size, unavailable: false };
-      }
-      outcomesByMarket.set(marketLabel, outcomes);
     }
-  }
+    mergeVisibleOutcomes();
+  };
+  const traverseMarkets = async (direction) => {
+    window.scrollTo(0, direction > 0 ? 0 : document.documentElement.scrollHeight);
+    await sleep(250);
+    let boundaryChecks = 0;
+    let priorPosition = -1;
+    let priorHeight = -1;
+    for (let attempt = 0; attempt < 180 && boundaryChecks < 5; attempt += 1) {
+      await captureMountedMarkets();
+      const height = document.documentElement.scrollHeight;
+      const step = Math.max(window.innerHeight * 0.65, 420) * direction;
+      window.scrollBy(0, step);
+      await sleep(80);
+      const atBoundary = direction > 0
+        ? window.scrollY + window.innerHeight >= height - 10
+        : window.scrollY <= 10;
+      const unchanged = Math.abs(window.scrollY - priorPosition) < 2 && height === priorHeight;
+      boundaryChecks = atBoundary && unchanged ? boundaryChecks + 1 : 0;
+      priorPosition = window.scrollY;
+      priorHeight = height;
+    }
+    await captureMountedMarkets();
+  };
 
-  mergeVisibleOutcomes();
+  // FanDuel virtualizes long market boards. Capture panels while each viewport is
+  // mounted, then traverse in reverse to pick up panels displaced by expansion.
+  await traverseMarkets(1);
+  await traverseMarkets(-1);
+
+  const outcomesByMarket = new Map();
   for (const marketLabel of marketLabels) {
     const outcomes = outcomesFor(marketLabel);
     if (outcomes.length !== 2) {
