@@ -27,29 +27,13 @@ test("extension capture is manual-only and clears the retired daily alarm", asyn
   assert.match(popup, /Manual capture only/);
 });
 
-test("extension captures the three active sources sequentially with strict validation", async () => {
+test("extension captures PrizePicks and Underdog sequentially with strict validation", async () => {
   const service = await readFile(new URL("../extension/service.js", import.meta.url), "utf8");
   assert.match(service, /waitForScraperPage\(tabId, scraper\)/);
   assert.doesNotMatch(service, /attempt === 0 \? 3000 : 5000/);
-  assert.doesNotMatch(service, /draftkings/i);
+  assert.doesNotMatch(service, /id: "draftkings"/);
+  assert.doesNotMatch(service, /id: "fanduel"/);
   assert.match(service, /for \(const source of runSources\) await captureSource\(source\)/);
   assert.match(service, /verificationMode: "validated-single-pass"/);
   assert.match(service, /Required market categories are missing/);
-  assert.match(service, /Required FanDuel Week 1 yard categories are missing/);
-});
-
-test("FanDuel captures virtualized viewports in both directions and validates exact pairs", async () => {
-  const service = await readFile(new URL("../extension/service.js", import.meta.url), "utf8");
-  assert.match(service, /const observedOutcomes = new Map\(\)/);
-  assert.match(service, /mergeVisibleOutcomes\(\)/);
-  assert.match(service, /marketLabels = new Set\(\[\.\.\.marketLabels, \.\.\.discovered\]\)/);
-  assert.match(service, /const captureMountedMarkets = async \(\) =>/);
-  assert.match(service, /const stalled = new Set\(\)/);
-  assert.match(service, /mountedLabels\.find/);
-  assert.match(service, /await traverseMarkets\(1\)/);
-  assert.match(service, /await traverseMarkets\(-1\)/);
-  assert.match(service, /for \(const marketLabel of marketLabels\)/);
-  assert.match(service, /if \(outcomes\.length !== 2\)/);
-  assert.match(service, /if \(outcomes\.length !== 2\) continue/);
-  assert.match(service, /expectedMarketCount: marketLabels\.size/);
 });

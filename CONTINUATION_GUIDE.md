@@ -23,7 +23,7 @@ Use Node.js 22.13 or newer. Node 24 is the known-good version.
 ## What is included
 
 - React/Vite dashboard in `app/` and `src/`.
-- Three-source Chrome collector in `extension/` and `collector/`: PrizePicks for season and Week 1, plus FanDuel and Underdog for Week 1 only.
+- Two-source Chrome collector in `extension/` and `collector/`: PrizePicks for season and Week 1, plus Underdog for Week 1 only.
 - Accepted season and Week 1 history in `data/` and generated public JSON in `public/data/`.
 - Processing, validation, automation, and GitHub publishing scripts in `lib/` and `scripts/`.
 - Full automated regression suite in `tests/`.
@@ -35,13 +35,12 @@ The source branch deliberately excludes `node_modules`, `dist`, `.private`, `.en
 ### Market collection
 
 - Season source: PrizePicks only.
-- Week 1 sources: PrizePicks, FanDuel, and Underdog. FanDuel and Underdog are never used for season markets.
-- FanDuel Week 1 collection starts from its Week 1 matchup list, opens each game, and keeps only the standard two-sided **Passing Yards/Passing Yds**, **Passing TDs**, **Rushing Yards/Rushing Yds**, **Receiving Yards/Receiving Yds**, and **Total Receptions** markets. It ignores “Most,” alternate, milestone, drive, and FanDuel TD-scorer markets.
+- Week 1 sources: PrizePicks and Underdog. Underdog is never used for season markets.
 - Season and Week 1 data are stored separately.
 - Every capture requires a matching primary and confirmation pass.
 - PrizePicks Demon and Goblin projections are ignored.
 - Failed sources carry the previous observation as stale instead of deleting it.
-- Season main lines are standard PrizePicks projections. Week 1 main lines average available current PrizePicks and FanDuel lines. Underdog fills a Week 1 stat only when neither carries it.
+- Season main lines are standard PrizePicks projections. Week 1 uses PrizePicks as the primary line and Underdog when PrizePicks does not carry the stat.
 - When Underdog is the only current Week 1 receptions source, the displayed reception projection is the posted line adjusted by its normalized Higher/Lower probability and rounded to two decimals. The original Underdog line and both modifiers remain visible beneath it.
 - Line-movement graphs retain each source and emphasize the sportsbook average.
 
@@ -58,7 +57,7 @@ The source branch deliberately excludes `node_modules`, `dist`, `.private`, `.en
 - Missing WR/TE receptions are left blank; prior-season reception guesses are not used.
 - The intentional season-only historical exceptions are RB receptions/receiving yards and QB rushing yards/rushing TDs. They are labeled with their sample and method.
 - Week 1 never substitutes season history.
-- Week 1 QB passing-TD priority is FanDuel or another complete two-sided sportsbook market with vig removed, then Underdog normalized Higher/Lower modifiers. For one-way anytime-TD markets, the two-sided Underdog estimate remains preferable to a raw one-sided price. Underdog modifiers are normalized against each other but must not be described as true sportsbook no-vig odds.
+- Week 1 QB passing-TD estimates use Underdog normalized Higher/Lower modifiers when available. Underdog modifiers are normalized against each other but must not be described as true sportsbook no-vig odds.
 - Season QB passing-TD markets also use a line-centered expectation when a complete two-sided sportsbook over/under is available. If no complete two-sided price exists, retain the published projection line without inventing an adjustment. Standard PrizePicks projections remain posted 50/50 lines and are never labeled no-vig.
 
 ## Chrome collector setup on a new computer
@@ -76,7 +75,7 @@ Chrome sessions and sportsbook logins cannot be transferred through GitHub. The 
 
 - Capture is currently started manually from the Chrome extension whenever the operator is available and connected to an unrestricted network; it is not restricted to the former morning schedule.
 - The installer removes legacy Chrome-opener and daily-processor schedules by default. `npm run operator:install -- --automatic` is available only as an explicit processor-scheduling opt-in; it still cannot bypass Chrome logins or start the extension capture.
-- The collector runs PrizePicks, FanDuel, and Underdog sequentially, performs one complete validated pass per source, and retries only failed sources. It writes a compatible primary/confirmation pair for the processor. PrizePicks collects both its standard season board and Week 1 board. FanDuel is restricted to the current Week 1 game pages and collects Passing, Rushing, and Receiving prop tabs in bounded workers; at least one complete Passing Yards, Rushing Yards, and Receiving Yards market must be present before FanDuel is accepted. FanDuel outcome pairs are retained and missing panels are opened one at a time while each virtualized viewport is mounted, followed by a reverse verification pass. Underdog is restricted to Week 1 markets. Every discovered market must still yield a complete supported row and each source fails closed when its required coverage is incomplete.
+- The collector runs PrizePicks and Underdog sequentially, performs one complete validated pass per source, and retries only failed sources. It writes a compatible primary/confirmation pair for the processor. PrizePicks collects both its standard season board and Week 1 board. Underdog is restricted to Week 1 markets. Every discovered supported market must still yield a complete row and each source fails closed when its required coverage is incomplete.
 - After capture, run `npm run operator:run`, verify with `npm run operator:health -- --require-today`, then commit the accepted `data/` and `public/data/` updates on a branch and merge them to `source`.
 - The computer must be awake, logged in, online, and able to open Chrome during collection.
 

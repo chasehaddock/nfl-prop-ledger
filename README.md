@@ -11,11 +11,11 @@ A local-first NFL player-projection ledger with a public GitHub Pages dashboard.
 
 - Season-long and Week 1 QB, RB, WR, and TE player props.
 - PrizePicks-only season projections.
-- PrizePicks, FanDuel, and Underdog Week 1 player markets.
+- PrizePicks and Underdog Week 1 player markets.
 - Verified daily line history with source-colored charts and sportsbook averages.
 - Full-PPR fantasy projections with 4/6-point passing-TD and TE-premium toggles.
 
-The collector requires matching primary and confirmation passes. Failed or incomplete sources cannot overwrite verified data. PrizePicks Demon and Goblin rows are ignored. FanDuel two-sided Week 1 markets receive de-vig priority when available. Underdog is Week 1 only and fills missing Pass TDs, Receptions, and Rush + Rec TDs fields. Higher/Lower modifiers are normalized together only when both are posted and are labeled as pick'em estimates rather than sportsbook no-vig odds.
+The collector requires matching primary and confirmation passes. Failed or incomplete sources cannot overwrite verified data. PrizePicks Demon and Goblin rows are ignored. Underdog is Week 1 only and fills missing Pass TDs, Receptions, and Rush + Rec TDs fields. Higher/Lower modifiers are normalized together only when both are posted and are labeled as pick'em estimates rather than sportsbook no-vig odds.
 
 ## Install and verify
 
@@ -58,7 +58,7 @@ Click **Capture now** at any convenient time when Chrome is open, logged in, and
 
 ## Important projection rules
 
-- Season-long main lines are the standard PrizePicks projection. Week 1 main lines average available current PrizePicks and FanDuel lines; Underdog is used when those sources do not carry the stat.
+- Season-long main lines are the standard PrizePicks projection. Week 1 uses PrizePicks as the primary line and Underdog when PrizePicks does not carry the stat.
 - Underdog-only Week 1 receptions use a two-decimal, probability-adjusted projection; the posted line and Higher/Lower modifiers remain visible below it.
 - Season and Week 1 data never mix.
 - RB/WR/TE touchdown totals use current market data only—never prior-season touchdowns.

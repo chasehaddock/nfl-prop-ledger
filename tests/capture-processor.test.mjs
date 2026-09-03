@@ -5,19 +5,11 @@ import path from "node:path";
 import { spawnSync } from "node:child_process";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
-import { FANDUEL_MARKETS } from "../collector/fanduel-config.mjs";
 import { PRIZEPICKS_MARKETS } from "../collector/prizepicks-config.mjs";
 import { UNDERDOG_MARKETS } from "../collector/underdog-config.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const capturedAt = "2026-08-19T14:17:00.000Z";
-
-function pair(player, statLabel, line, overOdds = "-110", underOdds = "-110") {
-  return [
-    { ariaLabel: `${player} Regular Season ${statLabel} 2026-27, ${player} Over ${line}, ${overOdds}` },
-    { ariaLabel: `${player} Regular Season ${statLabel} 2026-27, ${player} Under ${line}, ${underOdds}` },
-  ];
-}
 
 async function processRaw(raw) {
   const directory = await mkdtemp(path.join(os.tmpdir(), "prop-ledger-test-"));
@@ -31,62 +23,6 @@ async function processRaw(raw) {
   const capture = result.status === 0 ? JSON.parse(await readFile(output, "utf8")) : null;
   return { result, capture };
 }
-
-test("processes a complete FanDuel Week 1 browser envelope", async () => {
-  const eventUrl = "https://sportsbook.fanduel.com/football/nfl/new-england-patriots-@-seattle-seahawks-35607262?tab=passing-props";
-  const rows = [
-    { ariaLabel: "Sam Darnold - Passing Yards, Sam Darnold Over, 235.5, -110", sourceUrl: eventUrl },
-    { ariaLabel: "Sam Darnold - Passing Yards, Sam Darnold Under, 235.5, -110", sourceUrl: eventUrl },
-    { ariaLabel: "Drake Maye - Rushing Yards, Drake Maye Over, 34.5, -105", sourceUrl: eventUrl.replace("passing", "rushing") },
-    { ariaLabel: "Drake Maye - Rushing Yards, Drake Maye Under, 34.5, -115", sourceUrl: eventUrl.replace("passing", "rushing") },
-    { ariaLabel: "Jaxon Smith-Njigba - Receiving Yards, Jaxon Smith-Njigba Over, 84.5, -105", sourceUrl: eventUrl.replace("passing", "receiving") },
-    { ariaLabel: "Jaxon Smith-Njigba - Receiving Yards, Jaxon Smith-Njigba Under, 84.5, -115", sourceUrl: eventUrl.replace("passing", "receiving") },
-  ];
-  const { result, capture } = await processRaw({
-    source: "fanduel",
-    season: 2026,
-    capturedAt,
-    pages: [{ ...FANDUEL_MARKETS[0], capturedAt, rows }],
-  });
-  assert.equal(result.status, 0, result.stderr);
-  assert.equal(capture.source, "fanduel");
-  assert.equal(capture.observations.length, 3);
-  assert.ok(capture.observations.every((item) => item.marketScope === "week_1"));
-});
-
-test("drops FanDuel season props while retaining Week 1 odds and yardage", async () => {
-  const eventUrl = "https://sportsbook.fanduel.com/football/nfl/new-england-patriots-@-seattle-seahawks-35607262?tab=passing-props";
-  const rows = [
-    ...pair("Jared Goff", "Passing Yards", "4050.5"),
-    ...pair("Baker Mayfield", "Passing TDs", "25.5", "-102", "-130"),
-    ...pair("Derrick Henry", "Rushing Yards", "1250.5"),
-    ...pair("Jahmyr Gibbs", "Rushing TDs", "12.5", "-105", "-125"),
-    ...pair("Amon-Ra St. Brown", "Receiving Yards", "1225.5", "-114", "-114"),
-    { ariaLabel: "Sam Darnold - Passing TDs, Sam Darnold Over, 1.5, +106", marketScope: "week_1", sourceUrl: eventUrl },
-    { ariaLabel: "Sam Darnold - Passing TDs, Sam Darnold Under, 1.5, -140", marketScope: "week_1", sourceUrl: eventUrl },
-    { ariaLabel: "Sam Darnold - Passing Yards, Sam Darnold Over, 235.5, -110", marketScope: "week_1", sourceUrl: eventUrl },
-    { ariaLabel: "Sam Darnold - Passing Yards, Sam Darnold Under, 235.5, -110", marketScope: "week_1", sourceUrl: eventUrl },
-    { ariaLabel: "Jaxon Smith-Njigba - Receiving Yards, Jaxon Smith-Njigba Over, 84.5, -105", marketScope: "week_1", sourceUrl: eventUrl.replace("passing", "receiving") },
-    { ariaLabel: "Jaxon Smith-Njigba - Receiving Yards, Jaxon Smith-Njigba Under, 84.5, -115", marketScope: "week_1", sourceUrl: eventUrl.replace("passing", "receiving") },
-    { ariaLabel: "Drake Maye - Rushing Yards, Drake Maye Over, 34.5, -105", marketScope: "week_1", sourceUrl: eventUrl.replace("passing", "rushing") },
-    { ariaLabel: "Drake Maye - Rushing Yards, Drake Maye Under, 34.5, -115", marketScope: "week_1", sourceUrl: eventUrl.replace("passing", "rushing") },
-  ];
-  const { result, capture } = await processRaw({
-    source: "fanduel",
-    season: 2026,
-    capturedAt,
-    pages: [{ ...FANDUEL_MARKETS[0], capturedAt, rows }],
-  });
-  assert.equal(result.status, 0, result.stderr);
-  const weekly = capture.observations.filter((item) => item.marketScope === "week_1");
-  assert.equal(capture.observations.length, 4);
-  assert.deepEqual(new Set(weekly.map((item) => item.statType)), new Set(["passing_touchdowns", "passing_yards", "receiving_yards", "rushing_yards"]));
-  const passingTds = weekly.find((item) => item.statType === "passing_touchdowns");
-  assert.equal(passingTds.player.name, "Sam Darnold");
-  assert.equal(passingTds.overOdds, 106);
-  assert.equal(passingTds.underOdds, -140);
-  assert.equal(passingTds.sourceUrl, eventUrl);
-});
 
 test("processes a complete PrizePicks projection envelope", async () => {
   const rows = [

@@ -89,13 +89,13 @@ test("selects local-only storage when requested, marked, or no Git checkout exis
 });
 
 test("builds stable raw capture paths for every source", () => {
-  assert.deepEqual(capturePaths("/home/friend", "2026-08-22", "fanduel"), {
-    primary: "/home/friend/Downloads/nfl-prop-ledger/2026-08-22/fanduel-primary-raw.json",
-    confirmation: "/home/friend/Downloads/nfl-prop-ledger/2026-08-22/fanduel-confirmation-raw.json",
+  assert.deepEqual(capturePaths("/home/friend", "2026-08-22", "draftkings"), {
+    primary: "/home/friend/Downloads/nfl-prop-ledger/2026-08-22/draftkings-primary-raw.json",
+    confirmation: "/home/friend/Downloads/nfl-prop-ledger/2026-08-22/draftkings-confirmation-raw.json",
   });
-  assert.deepEqual(capturePaths("/home/friend", "2026-08-22", "fanduel", "/repo/.private/browser-captures"), {
-    primary: "/repo/.private/browser-captures/2026-08-22/fanduel-primary-raw.json",
-    confirmation: "/repo/.private/browser-captures/2026-08-22/fanduel-confirmation-raw.json",
+  assert.deepEqual(capturePaths("/home/friend", "2026-08-22", "draftkings", "/repo/.private/browser-captures"), {
+    primary: "/repo/.private/browser-captures/2026-08-22/draftkings-primary-raw.json",
+    confirmation: "/repo/.private/browser-captures/2026-08-22/draftkings-confirmation-raw.json",
   });
 });
 
@@ -103,8 +103,8 @@ test("waits for all sources or a settled partial capture before processing", () 
   assert.equal(captureSetIsReady({ freshSources: [], unchangedForMs: 60_000 }), false);
   assert.equal(captureSetIsReady({ freshSources: ["prizepicks"], unchangedForMs: 9 * 60_000 }), false);
   assert.equal(captureSetIsReady({ freshSources: ["prizepicks"], unchangedForMs: 10 * 60_000 }), true);
-  assert.equal(captureSetIsReady({ freshSources: ["prizepicks", "fanduel"], unchangedForMs: 0 }), false);
-  assert.equal(captureSetIsReady({ freshSources: ["prizepicks", "fanduel", "underdog"], unchangedForMs: 0 }), true);
+  assert.equal(captureSetIsReady({ freshSources: ["prizepicks", "draftkings"], unchangedForMs: 0 }), false);
+  assert.equal(captureSetIsReady({ freshSources: ["prizepicks", "underdog"], unchangedForMs: 0 }), true);
 });
 
 test("finds valid pairs, ignores missing and partially written evidence, and propagates real I/O failures", async () => {
@@ -114,7 +114,7 @@ test("finds valid pairs, ignores missing and partially written evidence, and pro
   ]);
   const readJson = async (file) => {
     const name = file.split("/").at(-1);
-    if (name === "fanduel-primary-raw.json") throw new SyntaxError("partial JSON");
+    if (name === "draftkings-primary-raw.json") throw new SyntaxError("partial JSON");
     if (!files.has(name)) throw Object.assign(new Error("missing"), { code: "ENOENT" });
     return files.get(name);
   };

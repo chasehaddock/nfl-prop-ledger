@@ -82,7 +82,7 @@ test("accepts extension captures into private local storage and rejects web orig
   const removedSource = await fetch(`http://127.0.0.1:${port}/api/capture`, {
     method: "POST",
     headers: { Origin: "chrome-extension://abcdefghijklmnopabcdefghijklmnop", "X-NFL-Prop-Collector": "1", "Content-Type": "application/json" },
-    body: JSON.stringify({ ...payload, capture: { ...payload.capture, source: "draftkings" } }),
+    body: JSON.stringify({ ...payload, capture: { ...payload.capture, source: "fanduel" } }),
   });
   assert.equal(removedSource.status, 400);
 });

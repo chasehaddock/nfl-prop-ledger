@@ -1,9 +1,7 @@
 import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
-import { parseFanDuelRows } from "../collector/adapters/fanduel.mjs";
 import { parsePrizePicksRows } from "../collector/adapters/prizepicks.mjs";
 import { parseUnderdogRows } from "../collector/adapters/underdog.mjs";
-import { FANDUEL_MARKETS, FANDUEL_REQUIRED_STAT_TYPES, FANDUEL_SOURCE } from "../collector/fanduel-config.mjs";
 import { PRIZEPICKS_MARKETS, PRIZEPICKS_REQUIRED_STAT_TYPES, PRIZEPICKS_SOURCE } from "../collector/prizepicks-config.mjs";
 import { UNDERDOG_MARKETS, UNDERDOG_REQUIRED_STAT_TYPES, UNDERDOG_SOURCE } from "../collector/underdog-config.mjs";
 import { loadRoster } from "../collector/roster.mjs";
@@ -17,17 +15,6 @@ if (!inputFile || !outputFile) {
 
 const raw = JSON.parse(await readFile(inputFile, "utf8"));
 const adapters = new Map([
-  [FANDUEL_SOURCE.id, {
-    source: FANDUEL_SOURCE,
-    markets: FANDUEL_MARKETS,
-    parse: (page, spec, rosterByName) => parseFanDuelRows(page.rows, {
-      rosterByName,
-      sourceUrl: spec.url,
-      capturedAt: page.capturedAt || raw.capturedAt,
-      season: raw.season,
-      requiredStatTypes: FANDUEL_REQUIRED_STAT_TYPES,
-    }),
-  }],
   [PRIZEPICKS_SOURCE.id, {
     source: PRIZEPICKS_SOURCE,
     markets: PRIZEPICKS_MARKETS,
