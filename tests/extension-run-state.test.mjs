@@ -45,7 +45,8 @@ test("FanDuel captures virtualized viewports in both directions and validates ex
   assert.match(service, /mergeVisibleOutcomes\(\)/);
   assert.match(service, /marketLabels = new Set\(\[\.\.\.marketLabels, \.\.\.discovered\]\)/);
   assert.match(service, /const captureMountedMarkets = async \(\) =>/);
-  assert.match(service, /\.slice\(0, 8\)/);
+  assert.match(service, /const stalled = new Set\(\)/);
+  assert.match(service, /mountedLabels\.find/);
   assert.match(service, /await traverseMarkets\(1\)/);
   assert.match(service, /await traverseMarkets\(-1\)/);
   assert.match(service, /for \(const marketLabel of marketLabels\)/);

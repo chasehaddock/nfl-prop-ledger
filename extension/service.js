@@ -151,21 +151,23 @@ async function scrapeFanDuelPage() {
     return discovered;
   };
   const captureMountedMarkets = async () => {
-    const mountedLabels = discoverMountedMarkets();
-    mergeVisibleOutcomes();
-    for (let round = 0; round < 6; round += 1) {
-      const pending = [...mountedLabels]
-        .filter((marketLabel) => outcomesFor(marketLabel).length !== 2 && findCard(marketLabel))
-        .slice(0, 8);
-      if (!pending.length) break;
-      for (const marketLabel of pending) {
-        const card = findCard(marketLabel);
-        if (card?.isConnected) card.click();
-      }
-      for (let attempt = 0; attempt < 20 && !pending.every((marketLabel) => outcomesFor(marketLabel).length === 2); attempt += 1) {
-        await sleep(50);
+    const stalled = new Set();
+    for (let round = 0; round < 48; round += 1) {
+      const mountedLabels = discoverMountedMarkets();
+      mergeVisibleOutcomes();
+      const marketLabel = mountedLabels.find((label) => (
+        outcomesFor(label).length !== 2
+        && !stalled.has(label)
+        && findCard(label)
+      ));
+      if (!marketLabel) break;
+      const card = findCard(marketLabel);
+      if (card?.isConnected) card.click();
+      for (let attempt = 0; attempt < 10 && outcomesFor(marketLabel).length !== 2; attempt += 1) {
+        await sleep(40);
         mergeVisibleOutcomes();
       }
+      if (outcomesFor(marketLabel).length !== 2) stalled.add(marketLabel);
     }
     mergeVisibleOutcomes();
   };
