@@ -36,6 +36,7 @@ The source branch deliberately excludes `node_modules`, `dist`, `.private`, `.en
 
 - Season source: PrizePicks only.
 - Week 1 sources: PrizePicks, FanDuel, and Underdog. FanDuel and Underdog are never used for season markets.
+- FanDuel Week 1 collection starts from its Week 1 matchup list, opens each game, and keeps only the standard two-sided **Passing Yards/Passing Yds**, **Passing TDs**, **Rushing Yards/Rushing Yds**, **Receiving Yards/Receiving Yds**, and **Total Receptions** markets. It ignores “Most,” alternate, milestone, drive, and FanDuel TD-scorer markets.
 - Season and Week 1 data are stored separately.
 - Every capture requires a matching primary and confirmation pass.
 - PrizePicks Demon and Goblin projections are ignored.
