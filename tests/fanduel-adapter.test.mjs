@@ -78,15 +78,25 @@ test("parses FanDuel Week 1 Total Receptions as a two-sided market", () => {
 
 test("parses FanDuel Week 1 passing, rushing, and receiving yard markets", () => {
   const cases = [
-    ["Sam Darnold - Passing Yards, Sam Darnold Over, 235.5, -110", "passing_yards", 235.5],
-    ["Josh Allen - Rushing Yards, Josh Allen Over, 38.5, -114", "rushing_yards", 38.5],
-    ["Jaxon Smith-Njigba - Receiving Yards, Jaxon Smith-Njigba Over, 84.5, -105", "receiving_yards", 84.5],
+    ["Sam Darnold - Passing Yds, Sam Darnold Over, 235.5, -110", "passing_yards", 235.5],
+    ["Josh Allen - Rushing Yds, Josh Allen Over, 38.5, -114", "rushing_yards", 38.5],
+    ["Jaxon Smith-Njigba - Receiving Yds, Jaxon Smith-Njigba Over, 84.5, -105", "receiving_yards", 84.5],
   ];
   for (const [label, statType, line] of cases) {
     const parsed = parseFanDuelOutcomeLabel(label, { season: 2026 });
     assert.equal(parsed.marketScope, "week_1");
     assert.equal(parsed.statType, statType);
     assert.equal(parsed.line, line);
+  }
+});
+
+test("rejects FanDuel alternate and leaderboard markets", () => {
+  for (const label of [
+    "Sam Darnold - Alt Passing Yds, Sam Darnold Over, 249.5, +120",
+    "Most Passing Yards, Sam Darnold Over, 1.5, -104",
+    "Hunter Henry - Alt Receptions, Hunter Henry Over, 4.5, +125",
+  ]) {
+    assert.throws(() => parseFanDuelOutcomeLabel(label, { season: 2026 }), /Unrecognized FanDuel outcome label/);
   }
 });
 

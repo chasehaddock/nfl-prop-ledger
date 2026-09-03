@@ -27,3 +27,11 @@ test("builds all three Week 1 yard-market pages per FanDuel event", () => {
   assert.deepEqual(pages.map((page) => page.url), FANDUEL_WEEKLY_MARKET_TABS.map((tab) => `${event}?tab=${tab}`));
   assert.ok(pages.every((page) => page.active === false && page.optional === true));
 });
+
+test("does not treat FanDuel navigation or non-event links as Week 1 games", () => {
+  assert.deepEqual(normalizeFanDuelEventUrls([
+    "https://sportsbook.fanduel.com/navigation/nfl?tab=week-1",
+    "https://sportsbook.fanduel.com/football/nfl",
+    "https://sportsbook.fanduel.com/football/nfl/player-props",
+  ]), []);
+});

@@ -49,7 +49,7 @@ function isScraperPageReady(scraper) {
   if (/not available in your location|unable to display/i.test(bodyText)) return true;
   if (scraper === "fanduel") {
     return [...document.querySelectorAll('button[aria-label], [role="button"][aria-label], h3')]
-      .some((element) => /(?:Regular Season (?:Passing|Rushing|Receiving)| - (?:Passing|Rushing|Receiving|Total Receptions))/i
+      .some((element) => /(?:Regular Season (?:Passing|Rushing|Receiving)| - (?:Passing (?:Yards|Yds)|Passing TDs|Rushing (?:Yards|Yds)|Receiving (?:Yards|Yds)|Total Receptions|Receptions))/i
         .test(element.getAttribute("aria-label") || element.textContent || ""));
   }
   if (scraper === "prizepicks") {
@@ -83,8 +83,11 @@ async function waitForScraperPage(tabId, scraper, timeoutMilliseconds = 12_000) 
 async function scrapeFanDuelPage() {
   const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
   const seasonCardPattern = /^.+ Regular Season (Passing Yards|Passing TDs|Rushing Yards|Rushing TDs|Receiving Yards|Receiving TDs|Receptions) 20\d{2}-\d{2}$/i;
-  const weeklyCardPattern = /^.+ - (Passing Yards|Passing TDs|Rushing Yards|Receiving Yards|Total Receptions|Receptions)$/i;
-  const outcomePattern = /(?: Regular Season (?:Passing Yards|Passing TDs|Rushing Yards|Rushing TDs|Receiving Yards|Receiving TDs|Receptions) 20\d{2}-\d{2}| - (?:Passing Yards|Passing TDs|Rushing Yards|Receiving Yards|Total Receptions|Receptions)), .+ (?:Over|Under)(?:,)? \d/i;
+  // FanDuel's Week 1 accordions use the abbreviated "Yds" label. Match only
+  // the standard player markets Chase demonstrated; "Most", "Alt", drive,
+  // milestone, and TD-scorer panels intentionally do not match these patterns.
+  const weeklyCardPattern = /^.+ - (Passing (?:Yards|Yds)|Passing TDs|Rushing (?:Yards|Yds)|Receiving (?:Yards|Yds)|Total Receptions|Receptions)$/i;
+  const outcomePattern = /(?: Regular Season (?:Passing Yards|Passing TDs|Rushing Yards|Rushing TDs|Receiving Yards|Receiving TDs|Receptions) 20\d{2}-\d{2}| - (?:Passing (?:Yards|Yds)|Passing TDs|Rushing (?:Yards|Yds)|Receiving (?:Yards|Yds)|Total Receptions|Receptions)), .+ (?:Over|Under)(?:,)? \d/i;
   const discoverMarketLabels = () => new Set(
     [...document.querySelectorAll('button, [role="button"], h3')]
       .map((element) => element.getAttribute("aria-label")?.split(",")[0]?.trim() || element.textContent.trim())
@@ -181,7 +184,10 @@ async function scrapeFanDuelPage() {
 
   const labels = [...outcomesByMarket.values()].flat();
   const statLabels = [...new Set([...marketLabels].map((label) => label.match(seasonCardPattern)?.[1]).filter(Boolean))];
-  const weeklyStatLabels = [...new Set([...marketLabels].map((label) => label.match(weeklyCardPattern)?.[1]).filter(Boolean))];
+  const weeklyStatLabels = [...new Set([...marketLabels]
+    .map((label) => label.match(weeklyCardPattern)?.[1])
+    .filter(Boolean)
+    .map((label) => label.replace(/\bYds\b/i, "Yards")))];
   return {
     rows: labels.map((ariaLabel) => ({ ariaLabel, sourceUrl: location.href })),
     marketCount: outcomesByMarket.size,
@@ -445,7 +451,7 @@ function discoverFanDuelEventHrefs() {
 }
 
 async function discoverFanDuelWeekOneEventUrls() {
-  const tab = await chrome.tabs.create({ url: "https://sportsbook.fanduel.com/navigation/nfl", active: true });
+  const tab = await chrome.tabs.create({ url: "https://sportsbook.fanduel.com/navigation/nfl?tab=week-1", active: true });
   try {
     await waitForTab(tab.id);
     const hrefs = new Set();
@@ -506,7 +512,7 @@ async function collectPass(source) {
     const weeklyPages = await collectFanDuelWeeklyPages(source);
     pages.push({
       id: "week-1-player-props",
-      url: "https://sportsbook.fanduel.com/navigation/nfl",
+      url: "https://sportsbook.fanduel.com/navigation/nfl?tab=week-1",
       capturedAt: new Date().toISOString(),
       rows: weeklyPages.flatMap((page) => page.rows),
       marketCount: weeklyPages.reduce((total, page) => total + page.marketCount, 0),

@@ -4,13 +4,16 @@ import { FANDUEL_SOURCE } from "../fanduel-config.mjs";
 import { parseAmericanOdds } from "./american-odds.mjs";
 
 const SEASON_OUTCOME_PATTERN = /^(.+?) Regular Season (Passing Yards|Passing TDs|Rushing Yards|Rushing TDs|Receiving Yards|Receiving TDs|Receptions) (\d{4})-\d{2}, (.+?) (Over|Under) (\d+(?:\.\d+)?), ([+−–—-]?\d+)$/i;
-const WEEKLY_OUTCOME_PATTERN = /^(.+?) - (Passing Yards|Passing TDs|Rushing Yards|Receiving Yards|Total Receptions|Receptions), (.+?) (Over|Under), (\d+(?:\.\d+)?), ([+−–—-]?\d+)$/i;
+const WEEKLY_OUTCOME_PATTERN = /^(.+?) - (Passing (?:Yards|Yds)|Passing TDs|Rushing (?:Yards|Yds)|Receiving (?:Yards|Yds)|Total Receptions|Receptions), (.+?) (Over|Under), (\d+(?:\.\d+)?), ([+−–—-]?\d+)$/i;
 const STAT_LABELS = new Map([
   ["passing yards", "passing_yards"],
+  ["passing yds", "passing_yards"],
   ["passing tds", "passing_touchdowns"],
   ["rushing yards", "rushing_yards"],
+  ["rushing yds", "rushing_yards"],
   ["rushing tds", "rushing_touchdowns"],
   ["receiving yards", "receiving_yards"],
+  ["receiving yds", "receiving_yards"],
   ["receiving tds", "receiving_touchdowns"],
   ["receptions", "receptions"],
   ["total receptions", "receptions"],
