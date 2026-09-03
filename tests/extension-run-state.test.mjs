@@ -50,5 +50,6 @@ test("FanDuel captures virtualized viewports in both directions and validates ex
   assert.match(service, /await traverseMarkets\(-1\)/);
   assert.match(service, /for \(const marketLabel of marketLabels\)/);
   assert.match(service, /if \(outcomes\.length !== 2\)/);
+  assert.match(service, /if \(outcomes\.length !== 2\) continue/);
   assert.match(service, /expectedMarketCount: marketLabels\.size/);
 });
