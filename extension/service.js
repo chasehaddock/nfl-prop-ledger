@@ -176,9 +176,11 @@ async function scrapeFanDuelPage() {
   const outcomesByMarket = new Map();
   for (const marketLabel of marketLabels) {
     const outcomes = outcomesFor(marketLabel);
-    if (outcomes.length !== 2) {
-      return { rows: [], marketCount: outcomesByMarket.size, expectedMarketCount: marketLabels.size, unavailable: false };
-    }
+    // FanDuel can leave an otherwise valid standard market temporarily
+    // suspended with only one visible side. Keep strict two-sided validation
+    // for every accepted market, but do not discard the other complete
+    // standard markets on the same game page because one panel is incomplete.
+    if (outcomes.length !== 2) continue;
     outcomesByMarket.set(marketLabel, outcomes);
   }
 
