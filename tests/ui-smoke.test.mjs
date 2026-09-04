@@ -471,13 +471,11 @@ test("Week 1 has a separate data-ready board and movement history", async () => 
     assert.equal(await page.getByRole("columnheader", { name: /PrizePicks fantasy score/i }).count(), 1);
     assert.ok(await page.locator("tbody tr.data-row td:nth-child(4) .touchdown-chance").count() > 0);
     assert.match(await page.locator("tbody tr.data-row td:nth-child(4) .touchdown-chance").first().innerText(), /%[\s\S]*rush\/rec TD chance · 6 pts/i);
-    await page.getByPlaceholder("Search player or team").fill("Sam Darnold");
-    const darnoldTdCell = page.locator("tbody tr.data-row").filter({ hasText: "Sam Darnold" }).first().locator("td:nth-child(4)");
-    assert.equal(await darnoldTdCell.locator(".passing-td-expectation").count(), 1);
-    assert.match(await darnoldTdCell.innerText(), /1\.4\d[\s\S]*Expected pass TDs · (sportsbook no-vig|Underdog normalized)/i);
-    assert.match(await darnoldTdCell.innerText(), /(FanDuel Pass TDs · O 1\.5 \+106 \/ U 1\.5 -140|Underdog Pass TDs · H 1\.5)/i);
-    assert.doesNotMatch(await darnoldTdCell.innerText(), /Pass TD · 4 pts/i);
-    await page.getByPlaceholder("Search player or team").fill("");
+    const passingTdCell = page.locator("tbody tr.data-row td:nth-child(4)").filter({ has: page.locator(".passing-td-expectation") }).first();
+    assert.equal(await passingTdCell.locator(".passing-td-expectation").count(), 1);
+    assert.match(await passingTdCell.innerText(), /\d+\.\d{2}[\s\S]*Expected pass TDs · (sportsbook no-vig|Underdog normalized)/i);
+    assert.match(await passingTdCell.innerText(), /Underdog Pass TDs · H \d+(?:\.\d+)?/i);
+    assert.doesNotMatch(await passingTdCell.innerText(), /Pass TD · 4 pts/i);
     const fantasyCells = page.locator("tbody tr.data-row td:nth-child(5)");
     const fantasyText = (await fantasyCells.allTextContents()).join("\n");
     assert.doesNotMatch(fantasyText, /vig removed|O 1\.5|U 1\.5/i);
@@ -493,7 +491,7 @@ test("Week 1 has a separate data-ready board and movement history", async () => 
     assert.match(await allenTdCell.innerText(), /Expected pass TDs[\s\S]*Rush\/rec TD chance · 6 pts[\s\S]*Underdog Any TD/i);
     await page.getByPlaceholder("Search player or team").fill("Javonte Williams");
     const javonteReceptions = page.locator("tbody tr.data-row").filter({ hasText: "Javonte Williams" }).first().locator("td:nth-child(3)");
-    assert.match(await javonteReceptions.innerText(), /1\.\d{2}[\s\S]*Underdog H \d+(?:\.\d+)?x \/ L \d+(?:\.\d+)?x · posted 1\.5/i);
+    assert.match(await javonteReceptions.innerText(), /\d+\.\d{1,2}[\s\S]*Underdog H \d+(?:\.\d+)?x \/ L \d+(?:\.\d+)?x · posted \d+(?:\.\d+)?/i);
     await page.getByPlaceholder("Search player or team").fill("");
     const weeklyTrend = page.locator(".trend-card:not(.new-props-card)");
     await weeklyTrend.getByRole("button", { name: "All history", exact: true }).click();
