@@ -5,3 +5,9 @@ export function isRunLeaseActive(state, now = Date.now()) {
   const age = now - state.runningSince;
   return age >= 0 && age < RUN_LEASE_MS;
 }
+
+export function filterActiveFailedSourceIds(failedSourceIds, activeSourceIds) {
+  if (!Array.isArray(failedSourceIds) || !Array.isArray(activeSourceIds)) return [];
+  const activeIds = new Set(activeSourceIds);
+  return [...new Set(failedSourceIds.filter((sourceId) => activeIds.has(sourceId)))];
+}
