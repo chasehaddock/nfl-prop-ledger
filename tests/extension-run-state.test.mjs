@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-import { RUN_LEASE_MS, isRunLeaseActive } from "../extension/run-state.js";
+import { RUN_LEASE_MS, filterActiveFailedSourceIds, isRunLeaseActive } from "../extension/run-state.js";
 
 test("recognizes a current timestamped capture lease", () => {
   assert.equal(isRunLeaseActive({ running: true, runningSince: 10_000 }, 10_001), true);
@@ -16,6 +16,14 @@ test("rejects expired, future, and completed capture leases", () => {
   assert.equal(isRunLeaseActive({ running: true, runningSince: 10_000 }, 10_000 + RUN_LEASE_MS), false);
   assert.equal(isRunLeaseActive({ running: true, runningSince: 10_001 }, 10_000), false);
   assert.equal(isRunLeaseActive({ running: false, runningSince: 10_000 }, 10_001), false);
+});
+
+test("drops retired sportsbook ids from the same-day retry list", () => {
+  assert.deepEqual(
+    filterActiveFailedSourceIds(["fanduel", "prizepicks", "draftkings", "prizepicks"], ["prizepicks", "underdog"]),
+    ["prizepicks"],
+  );
+  assert.deepEqual(filterActiveFailedSourceIds(["fanduel"], ["prizepicks", "underdog"]), []);
 });
 
 test("extension capture is manual-only and clears the retired daily alarm", async () => {

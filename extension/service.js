@@ -1,4 +1,4 @@
-import { isRunLeaseActive } from "./run-state.js";
+import { filterActiveFailedSourceIds, isRunLeaseActive } from "./run-state.js";
 
 const SOURCES = [
   {
@@ -388,8 +388,10 @@ async function runCapture() {
   activeRun = true;
   const retryState = await chrome.storage.local.get(["lastFailedSourceIds", "lastRunLedgerDate", "lastError", "lastSuccess"]);
   const storedFailedSourceIds = Array.isArray(retryState.lastFailedSourceIds) ? retryState.lastFailedSourceIds : [];
+  const activeSourceIds = SOURCES.map((source) => source.id);
+  const activeStoredFailedSourceIds = filterActiveFailedSourceIds(storedFailedSourceIds, activeSourceIds);
   const inferredFailedSourceIds = SOURCES.filter((source) => String(retryState.lastError || "").includes(`${source.name}:`)).map((source) => source.id);
-  const failedSourceIds = storedFailedSourceIds.length ? storedFailedSourceIds : inferredFailedSourceIds;
+  const failedSourceIds = activeStoredFailedSourceIds.length ? activeStoredFailedSourceIds : inferredFailedSourceIds;
   const previousRunDate = retryState.lastRunLedgerDate || (retryState.lastSuccess ? currentLedgerDate(new Date(retryState.lastSuccess)) : "");
   const retryingToday = previousRunDate === currentLedgerDate() && failedSourceIds.length > 0;
   const runSources = retryingToday ? SOURCES.filter((source) => failedSourceIds.includes(source.id)) : SOURCES;
@@ -438,7 +440,7 @@ async function runCapture() {
       });
     };
     for (const source of runSources) await captureSource(source);
-    if (successes.length === 0) throw new Error(failures.join("; "));
+    if (successes.length === 0) throw new Error(failures.join("; ") || "No active capture sources completed");
     const lastStatus = `Captured and validated ${successes.join(", ")}${failures.length ? `; ${failures.length} source rejected` : ""}`;
     await chrome.storage.local.set({
       lastStatus,
@@ -451,7 +453,8 @@ async function runCapture() {
       progressDetail: `${runSources.length} of ${runSources.length} sources checked`,
     });
   } catch (error) {
-    await chrome.storage.local.set({ lastStatus: "Capture rejected", lastError: error.message });
+    const errorMessage = String(error?.message || "Capture stopped before any source completed").trim();
+    await chrome.storage.local.set({ lastStatus: "Capture rejected", lastError: errorMessage });
     throw error;
   } finally {
     activeRun = false;
