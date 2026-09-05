@@ -76,12 +76,18 @@ async function scrapePrizePicksPage() {
     ["receiving yards", "Rec Yards"], ["rec yards", "Rec Yards"],
     ["receiving touchdowns", "Rec TDs"], ["receiving tds", "Rec TDs"], ["rec tds", "Rec TDs"],
     ["receptions", "Receptions"], ["recs", "Receptions"], ["rec", "Receptions"],
-    ["fantasy score", "Fantasy Score"],
+    ["fantasy", "Fantasy Score"], ["fantasy score", "Fantasy Score"],
+    ["fantasy points", "Fantasy Score"], ["fantasy pts", "Fantasy Score"],
     ["rush+rec tds", "Rush+Rec TDs"], ["rush + rec tds", "Rush+Rec TDs"],
     ["rushing + receiving touchdowns", "Rush+Rec TDs"], ["player touchdowns", "Rush+Rec TDs"],
   ]);
   const text = (element) => element?.textContent?.replace(/\s+/g, " ").trim() || "";
-  const normalizedLabel = (value) => value.replace(/^SZN\s+/i, "").replace(/\s+/g, " ").trim().toLowerCase();
+  const normalizedLabel = (value) => value
+    .replace(/^(?:SZN|W(?:EEK|K)?\s*1)\s+/i, "")
+    .replace(/\s*\([^)]*PPR[^)]*\)\s*$/i, "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
   const canonicalLabel = (value) => supportedLabels.get(normalizedLabel(value));
   const locationBlocked = () => /Where are you\?[\s\S]*allow ['’]Location['’]/i.test(document.body.innerText);
   const waitForLocation = async () => {
@@ -101,20 +107,54 @@ async function scrapePrizePicksPage() {
   const projectionRows = () => [...document.querySelectorAll(
     '#test-projection-li, [aria-label="Projections List"] > li, [data-testid="projection-card"], [data-testid="projection-list"] > li',
   )];
-  const readRows = (statLabel, marketScope) => projectionRows().map((row) => ({
-    playerName: text(row.querySelector('#test-player-name, [data-testid="player-name"], [class*="player-name"]')),
-    teamPosition: text(row.querySelector('#test-team-position, [data-testid="team-position"], [class*="team-position"]')),
-    line: text(row.querySelector('.heading-md, [data-testid="projection-line"], [class*="projection-line"]')),
-    displayedStatLabel: canonicalLabel(text(row.querySelector('.max-w-28, [data-testid="stat-type"], [class*="stat-type"]'))),
-    statLabel,
-    marketScope,
-    isNonStandard: Boolean(row.querySelector('img[alt="Demon" i], img[alt="Goblin" i], [aria-label*="Demon" i], [aria-label*="Goblin" i]'))
-      || /\b(?:Demon|Goblin)\b/i.test(text(row)),
-  })).filter((row) => row.playerName
-    && row.displayedStatLabel === statLabel
+  const readVisibleRows = (marketScope) => projectionRows().map((row) => {
+    const rowText = text(row);
+    return {
+      playerName: text(row.querySelector('#test-player-name, [data-testid="player-name"], [class*="player-name"]')),
+      teamPosition: text(row.querySelector('#test-team-position, [data-testid="team-position"], [class*="team-position"]')),
+      line: text(row.querySelector('.heading-md, [data-testid="projection-line"], [class*="projection-line"]')),
+      displayedStatLabel: canonicalLabel(text(row.querySelector('.max-w-28, [data-testid="stat-type"], [class*="stat-type"]'))),
+      marketScope: /(?:regular season|\bSZN\b)/i.test(rowText) ? "regular_season" : marketScope,
+      isNonStandard: Boolean(row.querySelector('img[alt="Demon" i], img[alt="Goblin" i], [aria-label*="Demon" i], [aria-label*="Goblin" i]'))
+        || /\b(?:Demon|Goblin)\b/i.test(rowText),
+    };
+  }).filter((row) => row.playerName
+    && row.displayedStatLabel
     && /^\d+(?:\.\d+)?$/.test(row.line)
     && /(?:^| - )(QB|RB|WR|TE)$/.test(row.teamPosition)
-    && !row.isNonStandard);
+    && !row.isNonStandard)
+    .map(({ displayedStatLabel, ...row }) => ({ ...row, statLabel: displayedStatLabel }));
+
+  const recordVisibleRows = (marketScope) => {
+    const rows = readVisibleRows(marketScope);
+    for (const row of rows) rowsByKey.set(`${marketScope}:${row.playerName}:${row.statLabel}`, row);
+    if (marketScope === "regular_season") {
+      for (const row of rows) seasonStatLabels.add(row.statLabel);
+    }
+    return rows.filter((row) => row.marketScope === marketScope);
+  };
+
+  const scanCurrentBoard = async (marketScope, targetLabel = null) => {
+    window.scrollTo(0, 0);
+    await sleep(200);
+    let stableChecks = 0;
+    let priorCount = -1;
+    let priorHeight = -1;
+    for (let attempt = 0; attempt < 160 && stableChecks < 6; attempt += 1) {
+      recordVisibleRows(marketScope);
+      const count = [...rowsByKey.values()].filter((row) => row.marketScope === marketScope
+        && (!targetLabel || row.statLabel === targetLabel)).length;
+      const height = document.documentElement.scrollHeight;
+      const atBottom = window.scrollY + window.innerHeight >= height - 12;
+      stableChecks = atBottom && count === priorCount && height === priorHeight ? stableChecks + 1 : 0;
+      priorCount = count;
+      priorHeight = height;
+      window.scrollBy(0, Math.max(window.innerHeight * 0.75, 600));
+      await sleep(100);
+    }
+    recordVisibleRows(marketScope);
+    window.scrollTo(0, 0);
+  };
 
   const captureBoard = async (leagueLabel, marketScope, required) => {
     const findLeagueTab = () => [...document.querySelectorAll('[role="tab"], button')]
@@ -133,8 +173,9 @@ async function scrapePrizePicksPage() {
     leagueTab = findLeagueTab();
     if (!leagueTab) throw new Error(`PrizePicks ${leagueLabel} tab disappeared`);
 
-    const navigation = document.querySelector('[aria-label="Stats Navigation"]') || [...document.querySelectorAll("nav")]
+    const findNavigation = () => document.querySelector('[aria-label="Stats Navigation"]') || [...document.querySelectorAll("nav")]
       .find((nav) => [...nav.querySelectorAll("button")].some((button) => canonicalLabel(text(button))));
+    const navigation = findNavigation();
     if (!navigation) {
       if (required) throw new Error("PrizePicks statistic navigation is missing");
       return;
@@ -146,8 +187,7 @@ async function scrapePrizePicksPage() {
     if (required && statButtons.length === 0) throw new Error("PrizePicks statistic buttons are missing");
 
     for (const { rawLabel, label } of statButtons) {
-      const currentNavigation = document.querySelector('[aria-label="Stats Navigation"]')
-        || [...document.querySelectorAll("nav")].find((nav) => [...nav.querySelectorAll("button")].some((candidate) => canonicalLabel(text(candidate))));
+      const currentNavigation = findNavigation();
       const button = [...(currentNavigation?.querySelectorAll("button") || [])]
         .find((candidate) => canonicalLabel(text(candidate)) === label && text(candidate) === rawLabel);
       if (!button) {
@@ -156,18 +196,12 @@ async function scrapePrizePicksPage() {
       }
       button.scrollIntoView({ block: "nearest", inline: "center" });
       button.click();
-      let capturedRows = [];
       for (let attempt = 0; attempt < 45; attempt += 1) {
-        capturedRows = readRows(label, marketScope);
-        if (capturedRows.length) break;
+        const capturedRows = readVisibleRows(marketScope);
+        if (capturedRows.some((row) => row.statLabel === label)) break;
         await sleep(120);
       }
-      window.scrollTo(0, document.documentElement.scrollHeight);
-      await sleep(350);
-      capturedRows = readRows(label, marketScope);
-      for (const row of capturedRows) rowsByKey.set(`${marketScope}:${row.playerName}:${label}`, row);
-      if (marketScope === "regular_season" && capturedRows.length) seasonStatLabels.add(label);
-      window.scrollTo(0, 0);
+      await scanCurrentBoard(marketScope, label);
     }
   };
 

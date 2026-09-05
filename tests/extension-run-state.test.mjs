@@ -44,4 +44,8 @@ test("extension captures PrizePicks and Underdog sequentially with strict valida
   assert.match(service, /for \(const source of runSources\) await captureSource\(source\)/);
   assert.match(service, /verificationMode: "validated-single-pass"/);
   assert.match(service, /Required market categories are missing/);
+  assert.match(service, /scanCurrentBoard/);
+  assert.doesNotMatch(service, /popularButton/);
+  assert.match(service, /\["fantasy", "Fantasy Score"\]/);
+  assert.match(service, /fantasy points/);
 });

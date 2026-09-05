@@ -14,7 +14,10 @@ test("normalizes PrizePicks season statistic labels", () => {
   assert.equal(prizePicksStatType("Pass Yards"), "passing_yards");
   assert.equal(prizePicksStatType("Receiving TDs"), "receiving_touchdowns");
   assert.equal(prizePicksStatType("Receptions"), "receptions");
+  assert.equal(prizePicksStatType("Fantasy"), "fantasy_score");
   assert.equal(prizePicksStatType("Fantasy Score"), "fantasy_score");
+  assert.equal(prizePicksStatType("Fantasy Points"), "fantasy_score");
+  assert.equal(prizePicksStatType("Fantasy Pts"), "fantasy_score");
   assert.equal(prizePicksStatType("Rush+Rec TDs", "RB"), "offensive_touchdowns");
   assert.equal(prizePicksStatType("Rush+Rec TDs", "WR"), "offensive_touchdowns");
   assert.equal(prizePicksStatType("Rush+Rec TDs", "QB"), "offensive_touchdowns");
