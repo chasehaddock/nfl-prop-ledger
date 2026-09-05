@@ -127,8 +127,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036442:week_1:passing_yards": [
@@ -259,8 +259,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0026498:week_1:passing_yards": [
@@ -391,8 +391,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033077:week_1:passing_yards": [
@@ -523,8 +523,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040743:week_1:passing_yards": [
@@ -650,13 +650,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 243.5,
+      "line": 246.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0034855:week_1:passing_yards": [
@@ -782,13 +782,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 239.5,
+      "line": 235.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0036355:week_1:passing_yards": [
@@ -919,8 +919,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037834:week_1:passing_yards": [
@@ -1051,8 +1051,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033873:week_1:passing_yards": [
@@ -1183,8 +1183,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039918:week_1:passing_yards": [
@@ -1447,8 +1447,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035710:week_1:passing_yards": [
@@ -1579,8 +1579,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036264:week_1:passing_yards": [
@@ -1706,13 +1706,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 237.5,
+      "line": 238.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0039851:week_1:passing_yards": [
@@ -1975,8 +1975,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039163:week_1:passing_yards": [
@@ -2107,8 +2107,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039732:week_1:passing_yards": [
@@ -2239,8 +2239,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0029604:week_1:passing_yards": [
@@ -2371,8 +2371,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034857:week_1:passing_yards": [
@@ -2503,8 +2503,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039910:week_1:passing_yards": [
@@ -2635,8 +2635,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033119:week_1:passing_yards": [
@@ -2767,8 +2767,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040691:week_1:passing_yards": [
@@ -2899,8 +2899,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034796:week_1:passing_yards": [
@@ -3026,13 +3026,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 217.5,
+      "line": 219.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0023459:week_1:passing_yards": [
@@ -3163,8 +3163,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036389:week_1:passing_yards": [
@@ -3290,13 +3290,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 214.5,
+      "line": 212.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0039150:week_1:passing_yards": [
@@ -3422,13 +3422,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 214.5,
+      "line": 213.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0030565:week_1:passing_yards": [
@@ -3559,8 +3559,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040676:week_1:passing_yards": [
@@ -3818,13 +3818,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 170.5,
+      "line": 179.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0039075:week_1:receiving_yards": [
@@ -7514,13 +7514,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 56.5,
+      "line": 57.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0039338:week_1:receiving_yards": [
@@ -14114,13 +14114,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 28.5,
+      "line": 27.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "line_increased"
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034857:week_1:rushing_yards": [
@@ -14774,13 +14774,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 31.5,
+      "line": 28.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "line_increased"
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035719:week_1:receiving_yards": [
@@ -16759,8 +16759,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039075:week_1:fantasy_score": [
@@ -17282,13 +17282,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 17.5,
+      "line": 17,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0026498:week_1:fantasy_score": [
@@ -17546,13 +17546,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 17,
+      "line": 17.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0034855:week_1:rushing_yards": [
@@ -17810,13 +17810,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 17,
+      "line": 17.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0037248:week_1:receiving_yards": [
@@ -18338,13 +18338,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 14.5,
+      "line": 15.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0036223:week_1:receiving_yards": [
@@ -18871,8 +18871,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037840:week_1:receiving_yards": [
@@ -19267,8 +19267,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "removed",
-      "changeType": "removed"
+      "status": "open",
+      "changeType": "restored"
     }
   ],
   "2026:prizepicks:00-0040784:week_1:receiving_yards": [
@@ -19658,13 +19658,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 8.5,
+      "line": 9.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0039163:week_1:rushing_yards": [
@@ -20318,13 +20318,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 9,
+      "line": 8.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0030565:week_1:rushing_yards": [
@@ -25852,13 +25852,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 222.5,
+      "line": 221.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0033537:week_1:passing_yards": [
@@ -25979,8 +25979,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039894:week_1:receiving_yards": [
@@ -26711,8 +26711,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033908:week_1:fantasy_score": [
@@ -26828,13 +26828,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 8,
+      "line": 7.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0037545:week_1:fantasy_score": [
@@ -26955,8 +26955,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036637:week_1:receiving_yards": [
@@ -27199,8 +27199,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039067:week_1:receptions": [
@@ -28282,13 +28282,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 2.5,
+      "line": 3,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "removed",
-      "changeType": "removed"
+      "status": "open",
+      "changeType": "restored"
     }
   ],
   "2026:prizepicks:00-0038606:week_1:receiving_yards": [
@@ -31447,10 +31447,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.35,
-      "lowerMultiplier": 2.65,
+      "higherMultiplier": 1.37,
+      "lowerMultiplier": 2.55,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0035710:week_1:passing_touchdowns": [
@@ -32161,10 +32161,10 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.69,
-      "lowerMultiplier": 1.99,
+      "higherMultiplier": 1.68,
+      "lowerMultiplier": 2.01,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0026498:week_1:passing_touchdowns": [
@@ -33283,8 +33283,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.01,
-      "lowerMultiplier": 1.68,
+      "higherMultiplier": 1.97,
+      "lowerMultiplier": 1.69,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -33385,8 +33385,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.94,
-      "lowerMultiplier": 1.76,
+      "higherMultiplier": 2.08,
+      "lowerMultiplier": 1.61,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -36241,10 +36241,10 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.87,
-      "lowerMultiplier": 1.29,
+      "higherMultiplier": 2.92,
+      "lowerMultiplier": 1.28,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0036613:week_1:offensive_touchdowns": [
@@ -36445,7 +36445,7 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 3.44,
+      "higherMultiplier": 3.36,
       "lowerMultiplier": 1.2,
       "status": "open",
       "changeType": "odds_changed"
@@ -36649,8 +36649,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.85,
-      "lowerMultiplier": 1.29,
+      "higherMultiplier": 2.83,
+      "lowerMultiplier": 1.31,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -38893,7 +38893,7 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 4.3,
+      "higherMultiplier": 4.17,
       "lowerMultiplier": 1.15,
       "status": "open",
       "changeType": "odds_changed"
@@ -40729,8 +40729,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.2,
-      "lowerMultiplier": 1.5,
+      "higherMultiplier": 2.25,
+      "lowerMultiplier": 1.48,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -45931,7 +45931,7 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 4.28,
+      "higherMultiplier": 4.22,
       "lowerMultiplier": 1.15,
       "status": "open",
       "changeType": "odds_changed"
@@ -46433,8 +46433,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040691:week_1:fantasy_score": [
@@ -46525,8 +46525,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036358:week_1:fantasy_score": [
@@ -46612,13 +46612,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 16,
+      "line": 16.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0037247:week_1:fantasy_score": [
@@ -46709,8 +46709,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039337:week_1:fantasy_score": [
@@ -46801,8 +46801,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:underdog:00-0036900:week_1:receptions": [
@@ -50295,8 +50295,8 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.06,
-      "lowerMultiplier": 1.59,
+      "higherMultiplier": 2.23,
+      "lowerMultiplier": 1.48,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -51031,8 +51031,8 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.26,
-      "lowerMultiplier": 1.48,
+      "higherMultiplier": 2.16,
+      "lowerMultiplier": 1.52,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -52102,13 +52102,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 11,
+      "line": 12,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0030506:week_1:fantasy_score": [
@@ -52189,8 +52189,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033090:week_1:fantasy_score": [
@@ -52271,8 +52271,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035676:week_1:receptions": [
@@ -52435,8 +52435,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0031408:week_1:receptions": [
@@ -54544,13 +54544,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 16.5,
+      "line": 15.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "line_increased"
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033873:week_1:rushing_yards": [
@@ -55483,8 +55483,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 3.45,
-      "lowerMultiplier": 1.2,
+      "higherMultiplier": 3.32,
+      "lowerMultiplier": 1.22,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -55555,8 +55555,8 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 3.71,
-      "lowerMultiplier": 1.16,
+      "higherMultiplier": 3.74,
+      "lowerMultiplier": 1.18,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -55627,7 +55627,7 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 5.11,
+      "higherMultiplier": 4.88,
       "lowerMultiplier": 1.15,
       "status": "open",
       "changeType": "odds_changed"
@@ -55758,13 +55758,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 209.5,
+      "line": 207.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0040719:week_1:rushing_yards": [
@@ -55944,13 +55944,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 43.5,
+      "line": 42.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "line_increased"
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037525:week_1:rushing_yards": [
@@ -56564,7 +56564,7 @@
     },
     {
       "date": "2026-09-05",
-      "line": 24.5,
+      "line": 25.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
@@ -56626,13 +56626,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 24.5,
+      "line": 23.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "line_increased"
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037228:week_1:receiving_yards": [
@@ -56817,8 +56817,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034857:week_1:fantasy_score": [
@@ -56879,8 +56879,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039910:week_1:fantasy_score": [
@@ -56941,8 +56941,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035228:week_1:fantasy_score": [
@@ -57003,8 +57003,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036264:week_1:fantasy_score": [
@@ -57065,8 +57065,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033873:week_1:fantasy_score": [
@@ -57127,8 +57127,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036322:week_1:fantasy_score": [
@@ -57184,13 +57184,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 15,
+      "line": 15.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0034844:week_1:fantasy_score": [
@@ -57251,8 +57251,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039732:week_1:fantasy_score": [
@@ -57313,8 +57313,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039163:week_1:fantasy_score": [
@@ -57375,8 +57375,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039067:week_1:fantasy_score": [
@@ -57437,8 +57437,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036912:week_1:fantasy_score": [
@@ -57499,8 +57499,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036554:week_1:fantasy_score": [
@@ -57556,13 +57556,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 14,
+      "line": 14.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0036139:week_1:receiving_yards": [
@@ -57685,8 +57685,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035659:week_1:fantasy_score": [
@@ -57747,8 +57747,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038124:week_1:fantasy_score": [
@@ -57804,13 +57804,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 11,
+      "line": 11.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0038996:week_1:fantasy_score": [
@@ -57871,8 +57871,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034348:week_1:fantasy_score": [
@@ -57933,8 +57933,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034827:week_1:fantasy_score": [
@@ -57995,8 +57995,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038994:week_1:fantasy_score": [
@@ -58057,8 +58057,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0031588:week_1:fantasy_score": [
@@ -58119,8 +58119,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037261:week_1:fantasy_score": [
@@ -58181,8 +58181,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040667:week_1:fantasy_score": [
@@ -58243,8 +58243,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038933:week_1:fantasy_score": [
@@ -58305,8 +58305,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034351:week_1:fantasy_score": [
@@ -58367,8 +58367,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039894:week_1:fantasy_score": [
@@ -58429,8 +58429,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039146:week_1:fantasy_score": [
@@ -58491,8 +58491,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035229:week_1:fantasy_score": [
@@ -58553,8 +58553,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036259:week_1:fantasy_score": [
@@ -58615,8 +58615,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037261:week_1:receptions": [
@@ -60234,13 +60234,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 27.5,
+      "line": 28.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "line_decreased"
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036407:week_1:receiving_yards": [
@@ -61279,8 +61279,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "open",
-      "changeType": "unchanged"
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:prizepicks:00-0036973:week_1:receptions": [
@@ -61435,8 +61435,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "open",
-      "changeType": "restored"
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:underdog:00-0036963:week_1:receptions": [
@@ -64293,7 +64293,7 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 4.14,
+      "higherMultiplier": 4.16,
       "lowerMultiplier": 1.15,
       "status": "open",
       "changeType": "odds_changed"
@@ -64478,13 +64478,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 31.5,
+      "line": 32.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0038611:week_1:rushing_yards": [
@@ -64646,13 +64646,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 24.5,
+      "line": 22.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "line_increased"
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0040727:week_1:receiving_yards": [
@@ -64814,7 +64814,7 @@
     },
     {
       "date": "2026-09-05",
-      "line": 24.5,
+      "line": 23.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
@@ -64940,13 +64940,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 19.5,
+      "line": 18.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "line_increased"
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033307:week_1:receiving_yards": [
@@ -66037,8 +66037,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "open",
-      "changeType": "unchanged"
+      "status": "not_seen",
+      "changeType": "not_seen"
     }
   ],
   "2026:prizepicks:00-0041523:week_1:receptions": [
@@ -66582,9 +66582,9 @@
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": 1.55,
-      "lowerMultiplier": 2.11,
+      "lowerMultiplier": 2.14,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0038935:week_1:receptions": [
@@ -66707,8 +66707,8 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.76,
-      "lowerMultiplier": 1.96,
+      "higherMultiplier": 1.87,
+      "lowerMultiplier": 1.87,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -66833,10 +66833,10 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.18,
-      "lowerMultiplier": 1.5,
+      "higherMultiplier": 2.16,
+      "lowerMultiplier": 1.52,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "odds_changed"
     }
   ],
   "2026:underdog:00-0039890:week_1:receptions": [
@@ -66875,8 +66875,8 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 1.62,
-      "lowerMultiplier": 2.04,
+      "higherMultiplier": 1.66,
+      "lowerMultiplier": 2.02,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -67001,8 +67001,8 @@
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.11,
-      "lowerMultiplier": 1.55,
+      "higherMultiplier": 2.13,
+      "lowerMultiplier": 1.54,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -67211,7 +67211,7 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 3.71,
+      "higherMultiplier": 3.62,
       "lowerMultiplier": 1.18,
       "status": "open",
       "changeType": "odds_changed"
@@ -67253,7 +67253,7 @@
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 4.67,
+      "higherMultiplier": 4.83,
       "lowerMultiplier": 1.15,
       "status": "open",
       "changeType": "odds_changed"
@@ -68468,7 +68468,7 @@
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": 1.64,
-      "lowerMultiplier": 2.04,
+      "lowerMultiplier": 2.02,
       "status": "open",
       "changeType": "odds_changed"
     }
@@ -68943,8 +68943,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039342:week_1:receiving_yards": [
@@ -69053,8 +69053,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036900:week_1:fantasy_score": [
@@ -69075,8 +69075,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034796:week_1:fantasy_score": [
@@ -69097,8 +69097,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036442:week_1:fantasy_score": [
@@ -69119,8 +69119,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036355:week_1:fantasy_score": [
@@ -69141,8 +69141,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038618:week_1:receiving_yards": [
@@ -69185,8 +69185,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039918:week_1:fantasy_score": [
@@ -69207,8 +69207,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036971:week_1:fantasy_score": [
@@ -69229,8 +69229,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038558:week_1:receiving_yards": [
@@ -69290,13 +69290,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 17.5,
+      "line": 17,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0034855:week_1:fantasy_score": [
@@ -69317,8 +69317,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036963:week_1:fantasy_score": [
@@ -69339,8 +69339,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040870:week_1:receiving_yards": [
@@ -69405,8 +69405,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037239:week_1:fantasy_score": [
@@ -69427,8 +69427,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033885:week_1:receiving_yards": [
@@ -69471,8 +69471,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038597:week_1:fantasy_score": [
@@ -69488,13 +69488,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 15.5,
+      "line": 15,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0036290:week_1:receiving_yards": [
@@ -69559,8 +69559,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040666:week_1:fantasy_score": [
@@ -69581,8 +69581,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039338:week_1:fantasy_score": [
@@ -69603,8 +69603,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034829:week_1:receiving_yards": [
@@ -69713,8 +69713,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0032764:week_1:fantasy_score": [
@@ -69735,8 +69735,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037740:week_1:fantasy_score": [
@@ -69757,8 +69757,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036410:week_1:fantasy_score": [
@@ -69779,8 +69779,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037744:week_1:fantasy_score": [
@@ -69801,8 +69801,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038134:week_1:fantasy_score": [
@@ -69823,8 +69823,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0023459:week_1:fantasy_score": [
@@ -69862,13 +69862,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 13,
+      "line": 13.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0038120:week_1:fantasy_score": [
@@ -69884,13 +69884,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 13,
+      "line": 14,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0036973:week_1:fantasy_score": [
@@ -69906,13 +69906,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 13,
+      "line": 13.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0040124:week_1:fantasy_score": [
@@ -69933,8 +69933,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037840:week_1:fantasy_score": [
@@ -69977,8 +69977,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040784:week_1:fantasy_score": [
@@ -69999,8 +69999,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039915:week_1:fantasy_score": [
@@ -70021,8 +70021,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040715:week_1:fantasy_score": [
@@ -70043,8 +70043,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033110:week_1:receiving_yards": [
@@ -70104,13 +70104,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 11.5,
+      "line": 12.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0040126:week_1:fantasy_score": [
@@ -70131,8 +70131,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037240:week_1:fantasy_score": [
@@ -70153,8 +70153,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040129:week_1:fantasy_score": [
@@ -70175,8 +70175,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039811:week_1:fantasy_score": [
@@ -70197,8 +70197,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036139:week_1:fantasy_score": [
@@ -70285,8 +70285,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033921:week_1:fantasy_score": [
@@ -70307,8 +70307,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039361:week_1:fantasy_score": [
@@ -70324,13 +70324,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 11,
+      "line": 11.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0040719:week_1:receiving_yards": [
@@ -70395,8 +70395,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038117:week_1:fantasy_score": [
@@ -70439,8 +70439,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038544:week_1:fantasy_score": [
@@ -70461,8 +70461,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039849:week_1:fantasy_score": [
@@ -70478,13 +70478,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 10,
+      "line": 10.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0033526:week_1:receiving_yards": [
@@ -70544,13 +70544,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 9.5,
+      "line": 10,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0036970:week_1:fantasy_score": [
@@ -70571,8 +70571,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035261:week_1:fantasy_score": [
@@ -70610,13 +70610,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 9.5,
+      "line": 10,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0041438:week_1:fantasy_score": [
@@ -70659,8 +70659,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040663:week_1:fantasy_score": [
@@ -70681,8 +70681,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039855:week_1:fantasy_score": [
@@ -70703,8 +70703,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038559:week_1:fantasy_score": [
@@ -70725,8 +70725,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033293:week_1:fantasy_score": [
@@ -70747,8 +70747,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038563:week_1:fantasy_score": [
@@ -70769,8 +70769,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039814:week_1:receiving_yards": [
@@ -70813,8 +70813,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038935:week_1:fantasy_score": [
@@ -70835,8 +70835,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034383:week_1:fantasy_score": [
@@ -70857,8 +70857,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037838:week_1:fantasy_score": [
@@ -70879,8 +70879,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039893:week_1:fantasy_score": [
@@ -70901,8 +70901,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036158:week_1:fantasy_score": [
@@ -70923,8 +70923,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0041069:week_1:receiving_yards": [
@@ -71033,8 +71033,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039424:week_1:fantasy_score": [
@@ -71050,13 +71050,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 7.5,
+      "line": 8.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0038129:week_1:fantasy_score": [
@@ -71077,8 +71077,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038041:week_1:fantasy_score": [
@@ -71099,8 +71099,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040734:week_1:fantasy_score": [
@@ -71116,13 +71116,13 @@
     },
     {
       "date": "2026-09-05",
-      "line": 7,
+      "line": 6.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0039738:week_1:fantasy_score": [
@@ -71165,8 +71165,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035631:week_1:receiving_yards": [
@@ -71253,8 +71253,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040584:week_1:fantasy_score": [
@@ -71297,8 +71297,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038393:week_1:fantasy_score": [
@@ -71319,8 +71319,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0041042:week_1:fantasy_score": [
@@ -71341,8 +71341,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0041037:week_1:fantasy_score": [
@@ -71363,8 +71363,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039410:week_1:fantasy_score": [
@@ -71385,8 +71385,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040737:week_1:fantasy_score": [
@@ -71451,8 +71451,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035535:week_1:fantasy_score": [
@@ -71473,8 +71473,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038104:week_1:fantasy_score": [
@@ -71495,8 +71495,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038933:week_1:receptions": [
@@ -71561,8 +71561,8 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
-      "status": "not_seen",
-      "changeType": "not_seen"
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037228:week_1:receptions": [
@@ -71867,7 +71867,7 @@
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
-      "higherMultiplier": 2.11,
+      "higherMultiplier": 2.13,
       "lowerMultiplier": 1.54,
       "status": "open",
       "changeType": "odds_changed"
@@ -72127,6 +72127,18 @@
       "changeType": "opened"
     }
   ],
+  "2026:prizepicks:00-0039451:week_1:receiving_yards": [
+    {
+      "date": "2026-09-05",
+      "line": 8.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
   "2026:prizepicks:00-0031235:week_1:receiving_yards": [
     {
       "date": "2026-09-05",
@@ -72171,6 +72183,42 @@
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:underdog:00-0041032:week_1:receptions": [
+    {
+      "date": "2026-09-05",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 1.96,
+      "lowerMultiplier": 1.71,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:underdog:00-0039451:week_1:receptions": [
+    {
+      "date": "2026-09-05",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.08,
+      "lowerMultiplier": 1.57,
+      "status": "open",
+      "changeType": "opened"
+    }
+  ],
+  "2026:underdog:00-0041511:week_1:receptions": [
+    {
+      "date": "2026-09-05",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": 2.2,
+      "lowerMultiplier": 1.52,
       "status": "open",
       "changeType": "opened"
     }
