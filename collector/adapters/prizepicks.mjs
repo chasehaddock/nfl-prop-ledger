@@ -21,7 +21,10 @@ const STAT_LABELS = new Map([
   ["receptions", "receptions"],
   ["recs", "receptions"],
   ["rec", "receptions"],
+  ["fantasy", "fantasy_score"],
   ["fantasy score", "fantasy_score"],
+  ["fantasy points", "fantasy_score"],
+  ["fantasy pts", "fantasy_score"],
 ]);
 
 const COMBINED_TOUCHDOWN_LABELS = new Set([
