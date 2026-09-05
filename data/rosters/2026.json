@@ -21,6 +21,17 @@
     ]
   },
   {
+    "id": "00-0026300",
+    "name": "Josh Johnson",
+    "team": "CIN",
+    "position": "QB",
+    "rosterSeason": 2026,
+    "aliases": [
+      "Josh Johnson",
+      "Joshua Johnson"
+    ]
+  },
+  {
     "id": "00-0026498",
     "name": "Matthew Stafford",
     "team": "LA",
@@ -244,6 +255,17 @@
     "rosterSeason": 2026,
     "aliases": [
       "Austin Hooper"
+    ]
+  },
+  {
+    "id": "00-0032394",
+    "name": "Nick Vannett",
+    "team": "BAL",
+    "position": "TE",
+    "rosterSeason": 2026,
+    "aliases": [
+      "Nick Vannett",
+      "Nicholas Vannett"
     ]
   },
   {
@@ -662,6 +684,16 @@
     "rosterSeason": 2026,
     "aliases": [
       "Jeremy McNichols"
+    ]
+  },
+  {
+    "id": "00-0034270",
+    "name": "Tyler Conklin",
+    "team": "DET",
+    "position": "TE",
+    "rosterSeason": 2026,
+    "aliases": [
+      "Tyler Conklin"
     ]
   },
   {
@@ -1110,6 +1142,16 @@
     ]
   },
   {
+    "id": "00-0035500",
+    "name": "Greg Dortch",
+    "team": "BUF",
+    "position": "WR",
+    "rosterSeason": 2026,
+    "aliases": [
+      "Greg Dortch"
+    ]
+  },
+  {
     "id": "00-0035535",
     "name": "Darius Slayton",
     "team": "NYG",
@@ -1323,6 +1365,16 @@
     "aliases": [
       "Deebo Samuel Sr.",
       "Tyshun Samuel"
+    ]
+  },
+  {
+    "id": "00-0035891",
+    "name": "Cody White",
+    "team": "LV",
+    "position": "WR",
+    "rosterSeason": 2026,
+    "aliases": [
+      "Cody White"
     ]
   },
   {
@@ -1622,6 +1674,17 @@
     ]
   },
   {
+    "id": "00-0036425",
+    "name": "DeeJay Dallas",
+    "team": "MIN",
+    "position": "RB",
+    "rosterSeason": 2026,
+    "aliases": [
+      "DeeJay Dallas",
+      "Demetrius Dallas"
+    ]
+  },
+  {
     "id": "00-0036429",
     "name": "Charlie Woerner",
     "team": "ATL",
@@ -1672,6 +1735,16 @@
     ]
   },
   {
+    "id": "00-0036534",
+    "name": "Shane Zylstra",
+    "team": "NE",
+    "position": "TE",
+    "rosterSeason": 2026,
+    "aliases": [
+      "Shane Zylstra"
+    ]
+  },
+  {
     "id": "00-0036550",
     "name": "Rashod Bateman",
     "team": "BAL",
@@ -1699,6 +1772,16 @@
     "rosterSeason": 2026,
     "aliases": [
       "Chuba Hubbard"
+    ]
+  },
+  {
+    "id": "00-0036556",
+    "name": "Brevin Jordan",
+    "team": "HOU",
+    "position": "TE",
+    "rosterSeason": 2026,
+    "aliases": [
+      "Brevin Jordan"
     ]
   },
   {
@@ -2542,7 +2625,7 @@
   {
     "id": "00-0037340",
     "name": "Zaire Mitchell-Paden",
-    "team": "NO",
+    "team": "HOU",
     "position": "TE",
     "rosterSeason": 2026,
     "aliases": [
@@ -2557,6 +2640,16 @@
     "rosterSeason": 2026,
     "aliases": [
       "Kaden Davis"
+    ]
+  },
+  {
+    "id": "00-0037382",
+    "name": "Brandon Johnson",
+    "team": "PIT",
+    "position": "WR",
+    "rosterSeason": 2026,
+    "aliases": [
+      "Brandon Johnson"
     ]
   },
   {
@@ -2577,6 +2670,16 @@
     "rosterSeason": 2026,
     "aliases": [
       "Kendric Pryor"
+    ]
+  },
+  {
+    "id": "00-0037475",
+    "name": "Stone Smartt",
+    "team": "NO",
+    "position": "TE",
+    "rosterSeason": 2026,
+    "aliases": [
+      "Stone Smartt"
     ]
   },
   {
@@ -2845,6 +2948,16 @@
     ]
   },
   {
+    "id": "00-0037828",
+    "name": "Danny Gray",
+    "team": "PHI",
+    "position": "WR",
+    "rosterSeason": 2026,
+    "aliases": [
+      "Danny Gray"
+    ]
+  },
+  {
     "id": "00-0037834",
     "name": "Brock Purdy",
     "team": "SF",
@@ -2963,6 +3076,16 @@
     "rosterSeason": 2026,
     "aliases": [
       "Tyquan Thornton"
+    ]
+  },
+  {
+    "id": "00-0038108",
+    "name": "Bailey Zappe",
+    "team": "NYJ",
+    "position": "QB",
+    "rosterSeason": 2026,
+    "aliases": [
+      "Bailey Zappe"
     ]
   },
   {
@@ -3162,7 +3285,7 @@
   {
     "id": "00-0038440",
     "name": "Zavier Scott",
-    "team": "MIN",
+    "team": "CHI",
     "position": "RB",
     "rosterSeason": 2026,
     "aliases": [
@@ -3212,7 +3335,7 @@
   {
     "id": "00-0038489",
     "name": "Ben VanSumeren",
-    "team": "BUF",
+    "team": "KC",
     "position": "RB",
     "rosterSeason": 2026,
     "aliases": [
@@ -3384,7 +3507,7 @@
   {
     "id": "00-0038576",
     "name": "Charlie Jones",
-    "team": "CIN",
+    "team": "NYG",
     "position": "WR",
     "rosterSeason": 2026,
     "aliases": [
@@ -3689,7 +3812,7 @@
   {
     "id": "00-0038794",
     "name": "Jaleel McLaughlin",
-    "team": "DEN",
+    "team": "CLE",
     "position": "RB",
     "rosterSeason": 2026,
     "aliases": [
@@ -3729,7 +3852,7 @@
   {
     "id": "00-0038839",
     "name": "Mitchell Tinsley",
-    "team": "CIN",
+    "team": "HOU",
     "position": "WR",
     "rosterSeason": 2026,
     "aliases": [
@@ -3876,6 +3999,16 @@
     "aliases": [
       "Tank Dell",
       "Nathaniel Dell"
+    ]
+  },
+  {
+    "id": "00-0038979",
+    "name": "Cedric Tillman",
+    "team": "NO",
+    "position": "WR",
+    "rosterSeason": 2026,
+    "aliases": [
+      "Cedric Tillman"
     ]
   },
   {
@@ -4205,7 +4338,7 @@
   {
     "id": "00-0039275",
     "name": "Messiah Swinson",
-    "team": "GB",
+    "team": "CLE",
     "position": "TE",
     "rosterSeason": 2026,
     "aliases": [
@@ -4225,7 +4358,7 @@
   {
     "id": "00-0039305",
     "name": "Jack Westover",
-    "team": "NE",
+    "team": "WAS",
     "position": "TE",
     "rosterSeason": 2026,
     "aliases": [
@@ -4582,7 +4715,7 @@
   {
     "id": "00-0039489",
     "name": "Hayden Rucci",
-    "team": "SF",
+    "team": "JAX",
     "position": "TE",
     "rosterSeason": 2026,
     "aliases": [
@@ -4652,7 +4785,7 @@
   {
     "id": "00-0039577",
     "name": "Kedon Slovis",
-    "team": "ARI",
+    "team": "GB",
     "position": "QB",
     "rosterSeason": 2026,
     "aliases": [
@@ -4702,7 +4835,7 @@
   {
     "id": "00-0039631",
     "name": "Cam Grandy",
-    "team": "CIN",
+    "team": "MIN",
     "position": "TE",
     "rosterSeason": 2026,
     "aliases": [
@@ -4722,7 +4855,7 @@
   {
     "id": "00-0039650",
     "name": "Bryce Oliver",
-    "team": "TEN",
+    "team": "CLE",
     "position": "WR",
     "rosterSeason": 2026,
     "aliases": [
@@ -5371,7 +5504,7 @@
   {
     "id": "00-0040094",
     "name": "Tre Watson",
-    "team": "KC",
+    "team": "MIA",
     "position": "TE",
     "rosterSeason": 2026,
     "aliases": [
@@ -5904,7 +6037,7 @@
   {
     "id": "00-0040311",
     "name": "Theo Wease Jr.",
-    "team": "MIA",
+    "team": "LAC",
     "position": "WR",
     "rosterSeason": 2026,
     "aliases": [
@@ -5945,7 +6078,7 @@
   {
     "id": "00-0040331",
     "name": "Patrick Herbert",
-    "team": "JAX",
+    "team": "LAC",
     "position": "TE",
     "rosterSeason": 2026,
     "aliases": [
@@ -6334,7 +6467,7 @@
   {
     "id": "00-0040547",
     "name": "Nate Carter",
-    "team": "ATL",
+    "team": "KC",
     "position": "RB",
     "rosterSeason": 2026,
     "aliases": [
@@ -6354,7 +6487,7 @@
   {
     "id": "00-0040552",
     "name": "Joshua Simon",
-    "team": "ATL",
+    "team": "WAS",
     "position": "TE",
     "rosterSeason": 2026,
     "aliases": [
@@ -6406,7 +6539,7 @@
   {
     "id": "00-0040566",
     "name": "CJ Dippre",
-    "team": "NE",
+    "team": "TB",
     "position": "TE",
     "rosterSeason": 2026,
     "aliases": [
@@ -6489,7 +6622,7 @@
   {
     "id": "00-0040586",
     "name": "Jaydon Blue",
-    "team": "DAL",
+    "team": "PHI",
     "position": "RB",
     "rosterSeason": 2026,
     "aliases": [
@@ -6580,7 +6713,7 @@
     "id": "00-0040618",
     "name": "Max Hurleman",
     "team": "PIT",
-    "position": "RB",
+    "position": "WR",
     "rosterSeason": 2026,
     "aliases": [
       "Max Hurleman"
@@ -6969,7 +7102,7 @@
   {
     "id": "00-0040753",
     "name": "Will Sheppard",
-    "team": "GB",
+    "team": "MIA",
     "position": "WR",
     "rosterSeason": 2026,
     "aliases": [
@@ -8343,7 +8476,7 @@
   {
     "id": "00-0041277",
     "name": "Davon Booth",
-    "team": "CLE",
+    "team": "IND",
     "position": "RB",
     "rosterSeason": 2026,
     "aliases": [
@@ -9234,17 +9367,6 @@
     ]
   },
   {
-    "id": "00-0026300",
-    "name": "Josh Johnson",
-    "team": "—",
-    "position": "QB",
-    "rosterSeason": 2025,
-    "aliases": [
-      "Josh Johnson",
-      "Joshua Johnson"
-    ]
-  },
-  {
     "id": "00-0029263",
     "name": "Russell Wilson",
     "team": "—",
@@ -9395,17 +9517,6 @@
     "rosterSeason": 2025,
     "aliases": [
       "Sterling Shepard"
-    ]
-  },
-  {
-    "id": "00-0032394",
-    "name": "Nick Vannett",
-    "team": "—",
-    "position": "TE",
-    "rosterSeason": 2025,
-    "aliases": [
-      "Nick Vannett",
-      "Nicholas Vannett"
     ]
   },
   {
@@ -9645,16 +9756,6 @@
     "aliases": [
       "Mike Boone",
       "Michael Boone"
-    ]
-  },
-  {
-    "id": "00-0034270",
-    "name": "Tyler Conklin",
-    "team": "—",
-    "position": "TE",
-    "rosterSeason": 2025,
-    "aliases": [
-      "Tyler Conklin"
     ]
   },
   {
@@ -10014,16 +10115,6 @@
     ]
   },
   {
-    "id": "00-0035500",
-    "name": "Greg Dortch",
-    "team": "—",
-    "position": "WR",
-    "rosterSeason": 2025,
-    "aliases": [
-      "Greg Dortch"
-    ]
-  },
-  {
     "id": "00-0035593",
     "name": "Juwann Winfree",
     "team": "—",
@@ -10092,16 +10183,6 @@
     "rosterSeason": 2025,
     "aliases": [
       "Andre Baccellia"
-    ]
-  },
-  {
-    "id": "00-0035891",
-    "name": "Cody White",
-    "team": "—",
-    "position": "WR",
-    "rosterSeason": 2025,
-    "aliases": [
-      "Cody White"
     ]
   },
   {
@@ -10402,17 +10483,6 @@
     ]
   },
   {
-    "id": "00-0036425",
-    "name": "DeeJay Dallas",
-    "team": "—",
-    "position": "RB",
-    "rosterSeason": 2025,
-    "aliases": [
-      "DeeJay Dallas",
-      "Demetrius Dallas"
-    ]
-  },
-  {
     "id": "00-0036427",
     "name": "Tyler Johnson",
     "team": "—",
@@ -10471,26 +10541,6 @@
     "aliases": [
       "DJ Turner",
       "Darryl Turner"
-    ]
-  },
-  {
-    "id": "00-0036534",
-    "name": "Shane Zylstra",
-    "team": "—",
-    "position": "TE",
-    "rosterSeason": 2025,
-    "aliases": [
-      "Shane Zylstra"
-    ]
-  },
-  {
-    "id": "00-0036556",
-    "name": "Brevin Jordan",
-    "team": "—",
-    "position": "TE",
-    "rosterSeason": 2025,
-    "aliases": [
-      "Brevin Jordan"
     ]
   },
   {
@@ -10757,16 +10807,6 @@
     ]
   },
   {
-    "id": "00-0037382",
-    "name": "Brandon Johnson",
-    "team": "—",
-    "position": "WR",
-    "rosterSeason": 2025,
-    "aliases": [
-      "Brandon Johnson"
-    ]
-  },
-  {
     "id": "00-0037387",
     "name": "Jalen Virgil",
     "team": "—",
@@ -10794,16 +10834,6 @@
     "rosterSeason": 2025,
     "aliases": [
       "Seth Green"
-    ]
-  },
-  {
-    "id": "00-0037475",
-    "name": "Stone Smartt",
-    "team": "—",
-    "position": "TE",
-    "rosterSeason": 2025,
-    "aliases": [
-      "Stone Smartt"
     ]
   },
   {
@@ -10844,26 +10874,6 @@
     "rosterSeason": 2025,
     "aliases": [
       "Tyrion Davis-Price"
-    ]
-  },
-  {
-    "id": "00-0037828",
-    "name": "Danny Gray",
-    "team": "—",
-    "position": "WR",
-    "rosterSeason": 2025,
-    "aliases": [
-      "Danny Gray"
-    ]
-  },
-  {
-    "id": "00-0038108",
-    "name": "Bailey Zappe",
-    "team": "—",
-    "position": "QB",
-    "rosterSeason": 2025,
-    "aliases": [
-      "Bailey Zappe"
     ]
   },
   {
@@ -11139,16 +11149,6 @@
     "rosterSeason": 2025,
     "aliases": [
       "Johnny Lumpkin"
-    ]
-  },
-  {
-    "id": "00-0038979",
-    "name": "Cedric Tillman",
-    "team": "—",
-    "position": "WR",
-    "rosterSeason": 2025,
-    "aliases": [
-      "Cedric Tillman"
     ]
   },
   {
