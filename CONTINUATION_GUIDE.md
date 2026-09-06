@@ -40,7 +40,7 @@ The source branch deliberately excludes `node_modules`, `dist`, `.private`, `.en
 - Every capture requires a matching primary and confirmation pass.
 - PrizePicks Demon and Goblin projections are ignored.
 - Failed sources carry the previous observation as stale instead of deleting it.
-- Season main lines are standard PrizePicks projections. Week 1 uses PrizePicks as the primary line and Underdog when PrizePicks does not carry the stat.
+- Season main lines are standard PrizePicks projections. Week 1 captures passing, rushing, receiving, reception, passing-TD, and total offensive-TD markets from Underdog, while keeping PrizePicks as the primary line whenever PrizePicks carries the stat.
 - When Underdog is the only current Week 1 receptions source, the displayed reception projection is the posted line adjusted by its normalized Higher/Lower probability and rounded to two decimals. The original Underdog line and both modifiers remain visible beneath it.
 - Line-movement graphs retain each source and emphasize the sportsbook average.
 
@@ -75,7 +75,7 @@ Chrome sessions and sportsbook logins cannot be transferred through GitHub. The 
 
 - Capture is currently started manually from the Chrome extension whenever the operator is available and connected to an unrestricted network; it is not restricted to the former morning schedule.
 - The installer removes legacy Chrome-opener and daily-processor schedules by default. `npm run operator:install -- --automatic` is available only as an explicit processor-scheduling opt-in; it still cannot bypass Chrome logins or start the extension capture.
-- The collector runs PrizePicks and Underdog sequentially, performs one complete validated pass per source, and retries only failed sources. It writes a compatible primary/confirmation pair for the processor. PrizePicks collects both its standard season board and Week 1 board. Underdog is restricted to Week 1 markets. Every discovered supported market must still yield a complete row and each source fails closed when its required coverage is incomplete.
+- The collector runs PrizePicks and Underdog sequentially, scans every supported statistic board twice within one complete validated source pass, and retries only failed sources. It writes a compatible primary/confirmation pair for the processor. PrizePicks collects both its standard season board and Week 1 board. Underdog is restricted to Week 1 markets. Every discovered supported market must still yield a complete row and each source fails closed when its required coverage is incomplete.
 - After capture, run `npm run operator:run`, verify with `npm run operator:health -- --require-today`, then commit the accepted `data/` and `public/data/` updates on a branch and merge them to `source`.
 - The computer must be awake, logged in, online, and able to open Chrome during collection.
 

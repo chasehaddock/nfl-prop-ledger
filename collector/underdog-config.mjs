@@ -11,7 +11,10 @@ export const UNDERDOG_MARKETS = [{
 }];
 
 export const UNDERDOG_REQUIRED_STAT_TYPES = [
+  "passing_yards",
   "passing_touchdowns",
+  "rushing_yards",
+  "receiving_yards",
   "receptions",
   "offensive_touchdowns",
 ];

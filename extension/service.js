@@ -17,7 +17,7 @@ const SOURCES = [
     name: "Underdog",
     scraper: "underdog",
     season: () => new Date().getFullYear(),
-    requiredStatLabels: ["Pass TDs", "Receptions", "Rush + Rec TDs"],
+    requiredStatLabels: ["Pass TDs", "Pass Yards", "Rush Yards", "Rec Yards", "Receptions", "Rush + Rec TDs"],
     pages: [{ id: "nfl-week-1-player-props", url: "https://app.underdogsports.com/pick-em/higher-lower/all/NFL" }],
   },
 ];
@@ -186,22 +186,24 @@ async function scrapePrizePicksPage() {
       .map((item) => [item.label, item])).values()];
     if (required && statButtons.length === 0) throw new Error("PrizePicks statistic buttons are missing");
 
-    for (const { rawLabel, label } of statButtons) {
-      const currentNavigation = findNavigation();
-      const button = [...(currentNavigation?.querySelectorAll("button") || [])]
-        .find((candidate) => canonicalLabel(text(candidate)) === label && text(candidate) === rawLabel);
-      if (!button) {
-        if (required) throw new Error(`PrizePicks statistic button disappeared: ${rawLabel}`);
-        continue;
+    for (let scanPass = 0; scanPass < 2; scanPass += 1) {
+      for (const { rawLabel, label } of statButtons) {
+        const currentNavigation = findNavigation();
+        const button = [...(currentNavigation?.querySelectorAll("button") || [])]
+          .find((candidate) => canonicalLabel(text(candidate)) === label && text(candidate) === rawLabel);
+        if (!button) {
+          if (required) throw new Error(`PrizePicks statistic button disappeared: ${rawLabel}`);
+          continue;
+        }
+        button.scrollIntoView({ block: "nearest", inline: "center" });
+        button.click();
+        for (let attempt = 0; attempt < 45; attempt += 1) {
+          const capturedRows = readVisibleRows(marketScope);
+          if (capturedRows.some((row) => row.statLabel === label)) break;
+          await sleep(120);
+        }
+        await scanCurrentBoard(marketScope, label);
       }
-      button.scrollIntoView({ block: "nearest", inline: "center" });
-      button.click();
-      for (let attempt = 0; attempt < 45; attempt += 1) {
-        const capturedRows = readVisibleRows(marketScope);
-        if (capturedRows.some((row) => row.statLabel === label)) break;
-        await sleep(120);
-      }
-      await scanCurrentBoard(marketScope, label);
     }
   };
 
@@ -220,8 +222,9 @@ async function scrapeUnderdogPage() {
   const text = (element) => element?.textContent?.replace(/\s+/g, " ").trim() || "";
   const supportedTabs = [
     { tab: "TD Scorers", statLabels: ["Rush + Rec TDs"] },
-    { tab: "Passing", statLabels: ["Pass TDs"] },
-    { tab: "Receiving", statLabels: ["Receptions"] },
+    { tab: "Passing", statLabels: ["Pass Yards", "Pass TDs"] },
+    { tab: "Rushing", statLabels: ["Rush Yards"] },
+    { tab: "Receiving", statLabels: ["Receptions", "Receiving Yards", "Rec Yards"] },
   ];
   const rowsByKey = new Map();
   const statLabels = new Set();
@@ -240,8 +243,9 @@ async function scrapeUnderdogPage() {
     const cards = [...document.querySelectorAll('[role="button"]')].filter((card) => card.getClientRects().length > 0);
     for (const card of cards) {
       const cardText = text(card);
-      const statLabel = supportedStatLabels.find((label) => cardText.toLowerCase().includes(label.toLowerCase()));
-      if (!statLabel) continue;
+      const displayedStatLabel = supportedStatLabels.find((label) => cardText.toLowerCase().includes(label.toLowerCase()));
+      if (!displayedStatLabel) continue;
+      const statLabel = displayedStatLabel === "Receiving Yards" ? "Rec Yards" : displayedStatLabel;
       const higherButtons = [...card.querySelectorAll('button, [role="button"]')]
         .filter((button) => /^Higher(?:\s*\d+(?:\.\d+)?x)?$/i.test(text(button)));
       const lowerButtons = [...card.querySelectorAll('button, [role="button"]')]
@@ -249,9 +253,9 @@ async function scrapeUnderdogPage() {
       if (higherButtons.length !== 1 || lowerButtons.length !== 1) continue;
       const higherButton = higherButtons[0];
       const lowerButton = lowerButtons[0];
-      const lineMatch = cardText.match(new RegExp(`(\\d+(?:\\.\\d+)?)\\s*${escapePattern(statLabel)}`, "i"));
+      const lineMatch = cardText.match(new RegExp(`(\\d+(?:\\.\\d+)?)\\s*${escapePattern(displayedStatLabel)}`, "i"));
       const lines = (card.innerText || "").split("\n").map((line) => line.replace(/\s+/g, " ").trim()).filter(Boolean);
-      const matchupIndex = lines.findIndex((line) => /(?:\s@\s|\svs\s).*\b\d{1,2}\/\d{1,2}\b/i.test(line));
+      const matchupIndex = lines.findIndex((line) => /(?:\s@\s|\svs\s)/i.test(line));
       const playerName = matchupIndex > 0 ? lines[matchupIndex - 1] : "";
       const isNonStandard = /\b(?:boost|boosted|special|discount|demon|goblin|scorcher|rescue|promotion)\b/i.test(cardText);
       if (!playerName || !lineMatch) continue;
@@ -275,31 +279,34 @@ async function scrapeUnderdogPage() {
     await sleep(150);
   }
 
-  for (const { tab, statLabels: tabStatLabels } of supportedTabs) {
-    const button = findExactButton(tab);
-    if (!button) throw new Error(`Underdog ${tab} tab is missing`);
-    button.scrollIntoView({ block: "nearest", inline: "center" });
-    button.click();
-    for (let attempt = 0; attempt < 100 && !tabStatLabels.some((label) => document.body.innerText.includes(label)); attempt += 1) {
-      await sleep(150);
-    }
-    window.scrollTo(0, 0);
-    await sleep(250);
-    let stableChecks = 0;
-    let priorSize = -1;
-    let priorHeight = -1;
-    for (let attempt = 0; attempt < 160 && stableChecks < 6; attempt += 1) {
+  for (let scanPass = 0; scanPass < 2; scanPass += 1) {
+    for (const { tab, statLabels: tabStatLabels } of supportedTabs) {
+      const button = findExactButton(tab);
+      if (!button) throw new Error(`Underdog ${tab} tab is missing`);
+      button.scrollIntoView({ block: "nearest", inline: "center" });
+      button.click();
+      for (let attempt = 0; attempt < 100 && !tabStatLabels.some((label) => document.body.innerText.includes(label)); attempt += 1) {
+        await sleep(150);
+      }
+      window.scrollTo(0, 0);
+      await sleep(250);
+      let stableChecks = 0;
+      let priorSize = -1;
+      let priorHeight = -1;
+      for (let attempt = 0; attempt < 160 && stableChecks < 6; attempt += 1) {
+        readVisibleCards(tabStatLabels);
+        const height = document.documentElement.scrollHeight;
+        const atBottom = window.scrollY + window.innerHeight >= height - 12;
+        stableChecks = atBottom && rowsByKey.size === priorSize && height === priorHeight ? stableChecks + 1 : 0;
+        priorSize = rowsByKey.size;
+        priorHeight = height;
+        window.scrollBy(0, Math.max(window.innerHeight * 0.8, 600));
+        await sleep(100);
+      }
       readVisibleCards(tabStatLabels);
-      const height = document.documentElement.scrollHeight;
-      const atBottom = window.scrollY + window.innerHeight >= height - 12;
-      stableChecks = atBottom && rowsByKey.size === priorSize && height === priorHeight ? stableChecks + 1 : 0;
-      priorSize = rowsByKey.size;
-      priorHeight = height;
-      window.scrollBy(0, Math.max(window.innerHeight * 0.8, 600));
-      await sleep(100);
     }
-    readVisibleCards(tabStatLabels);
   }
+
   window.scrollTo(0, 0);
   return {
     rows: [...rowsByKey.values()],

@@ -16,9 +16,9 @@ test("maps supported Underdog Week 1 labels", () => {
   assert.equal(underdogStatType("Rush + Rec TDs"), "offensive_touchdowns");
   assert.equal(underdogStatType("Pass TDs"), "passing_touchdowns");
   assert.equal(underdogStatType("Receptions"), "receptions");
-  assert.equal(underdogStatType("Pass Yards"), null);
-  assert.equal(underdogStatType("Rush Yards"), null);
-  assert.equal(underdogStatType("Receiving Yards"), null);
+  assert.equal(underdogStatType("Pass Yards"), "passing_yards");
+  assert.equal(underdogStatType("Rush Yards"), "rushing_yards");
+  assert.equal(underdogStatType("Receiving Yards"), "receiving_yards");
 });
 
 test("parses standard Week 1 touchdown pairs and ignores specials", () => {

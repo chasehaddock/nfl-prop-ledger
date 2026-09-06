@@ -3,8 +3,14 @@ import { normalizeName } from "../../lib/ledger.mjs";
 import { UNDERDOG_SOURCE } from "../underdog-config.mjs";
 
 const STAT_LABELS = new Map([
+  ["pass yards", "passing_yards"],
+  ["passing yards", "passing_yards"],
   ["pass tds", "passing_touchdowns"],
   ["passing tds", "passing_touchdowns"],
+  ["rush yards", "rushing_yards"],
+  ["rushing yards", "rushing_yards"],
+  ["rec yards", "receiving_yards"],
+  ["receiving yards", "receiving_yards"],
   ["receptions", "receptions"],
   ["rush + rec tds", "offensive_touchdowns"],
   ["rush+rec tds", "offensive_touchdowns"],
