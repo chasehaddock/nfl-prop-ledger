@@ -2543,6 +2543,16 @@
     ]
   },
   {
+    "id": "00-0037282",
+    "name": "James Mitchell",
+    "team": "DAL",
+    "position": "TE",
+    "rosterSeason": 2026,
+    "aliases": [
+      "James Mitchell"
+    ]
+  },
+  {
     "id": "00-0037291",
     "name": "Jalen Nailor",
     "team": "LV",
@@ -3161,6 +3171,16 @@
     ]
   },
   {
+    "id": "00-0038145",
+    "name": "Thomas Odukoya",
+    "team": "KC",
+    "position": "TE",
+    "rosterSeason": 2026,
+    "aliases": [
+      "Thomas Odukoya"
+    ]
+  },
+  {
     "id": "00-0038181",
     "name": "Lucky Jackson",
     "team": "DET",
@@ -3661,7 +3681,7 @@
   {
     "id": "00-0038647",
     "name": "Ronnie Bell",
-    "team": "NO",
+    "team": "LV",
     "position": "WR",
     "rosterSeason": 2026,
     "aliases": [
@@ -5975,7 +5995,7 @@
   {
     "id": "00-0040260",
     "name": "Ahmani Marshall",
-    "team": "CLE",
+    "team": "CAR",
     "position": "RB",
     "rosterSeason": 2026,
     "aliases": [
@@ -10736,16 +10756,6 @@
     ]
   },
   {
-    "id": "00-0037282",
-    "name": "James Mitchell",
-    "team": "—",
-    "position": "TE",
-    "rosterSeason": 2025,
-    "aliases": [
-      "James Mitchell"
-    ]
-  },
-  {
     "id": "00-0037286",
     "name": "Kevin Harris",
     "team": "—",
@@ -10884,16 +10894,6 @@
     "rosterSeason": 2025,
     "aliases": [
       "Desmond Ridder"
-    ]
-  },
-  {
-    "id": "00-0038145",
-    "name": "Thomas Odukoya",
-    "team": "—",
-    "position": "TE",
-    "rosterSeason": 2025,
-    "aliases": [
-      "Thomas Odukoya"
     ]
   },
   {
