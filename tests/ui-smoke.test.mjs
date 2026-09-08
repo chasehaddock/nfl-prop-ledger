@@ -483,13 +483,19 @@ test("Week 1 has a separate data-ready board and movement history", async () => 
     if (await verifiedQbFantasyCell.count()) {
       assert.match(await verifiedQbFantasyCell.innerText(), /Pass TDs · 4 pts/i);
     }
-    await page.getByPlaceholder("Search player or team").fill("Ja'Marr Chase");
-    const chaseTdCell = page.locator("tbody tr.data-row").filter({ hasText: "Ja'Marr Chase" }).first().locator("td:nth-child(4)");
-    assert.match(await chaseTdCell.innerText(), /(O\/U odds unavailable · PrizePicks|Underdog Any TD · H 0\.5)/i);
-    await page.getByPlaceholder("Search player or team").fill("Josh Allen");
-    const allenTdCell = page.locator("tbody tr.data-row").filter({ hasText: "Josh Allen" }).first().locator("td:nth-child(4)");
-    assert.match(await allenTdCell.innerText(), /Expected pass TDs[\s\S]*Rush\/rec TD chance · 6 pts[\s\S]*Underdog Any TD/i);
     await page.getByPlaceholder("Search player or team").fill("");
+    const sourcedTdCell = page.locator("tbody tr.data-row td:nth-child(4)")
+      .filter({ hasText: /(O\/U odds unavailable · PrizePicks|Underdog Any TD · H 0\.5)/i })
+      .first();
+    assert.equal(await sourcedTdCell.count(), 1);
+    assert.match(await sourcedTdCell.innerText(), /(O\/U odds unavailable · PrizePicks|Underdog Any TD · H 0\.5)/i);
+    await page.getByPlaceholder("Search player or team").fill("");
+    const completeQbTdCell = page.locator("tbody tr.data-row td:nth-child(4)")
+      .filter({ hasText: "Expected pass TDs" })
+      .filter({ hasText: "Underdog Any TD" })
+      .first();
+    assert.equal(await completeQbTdCell.count(), 1);
+    assert.match(await completeQbTdCell.innerText(), /Expected pass TDs[\s\S]*Rush\/rec TD chance · 6 pts[\s\S]*Underdog Any TD/i);
     const underdogReceptions = page.locator("tbody tr.data-row td:nth-child(3)").filter({ hasText: "Underdog H" }).first();
     assert.equal(await underdogReceptions.count(), 1);
     assert.match(await underdogReceptions.innerText(), /\d+\.\d{1,2}[\s\S]*Underdog H \d+(?:\.\d+)?x \/ L \d+(?:\.\d+)?x · posted \d+(?:\.\d+)?/i);
