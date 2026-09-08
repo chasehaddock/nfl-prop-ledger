@@ -10,6 +10,7 @@ const SOURCES = [
       return now.getMonth() < 2 ? now.getFullYear() - 1 : now.getFullYear();
     },
     requiredStatLabels: ["Pass Yards", "Rush Yards", "Rec Yards"],
+    requiredWeeklyStatLabels: ["Fantasy Score"],
     pages: [{ id: "nfl-season", url: "https://app.prizepicks.com/" }],
   },
   {
@@ -104,6 +105,7 @@ async function scrapePrizePicksPage() {
   if (!await waitForLocation()) return { rows: [], marketCount: 0, statLabels: [], unavailable: true, unavailableReason: "PrizePicks needs Chrome location permission" };
   const rowsByKey = new Map();
   const seasonStatLabels = new Set();
+  const week1StatLabels = new Set();
   const projectionRows = () => [...document.querySelectorAll(
     '#test-projection-li, [aria-label="Projections List"] > li, [data-testid="projection-card"], [data-testid="projection-list"] > li',
   )];
@@ -128,8 +130,9 @@ async function scrapePrizePicksPage() {
   const recordVisibleRows = (marketScope) => {
     const rows = readVisibleRows(marketScope);
     for (const row of rows) rowsByKey.set(`${marketScope}:${row.playerName}:${row.statLabel}`, row);
-    if (marketScope === "regular_season") {
-      for (const row of rows) seasonStatLabels.add(row.statLabel);
+    for (const row of rows) {
+      if (row.marketScope === "regular_season") seasonStatLabels.add(row.statLabel);
+      if (row.marketScope === "week_1") week1StatLabels.add(row.statLabel);
     }
     return rows.filter((row) => row.marketScope === marketScope);
   };
@@ -156,7 +159,7 @@ async function scrapePrizePicksPage() {
     window.scrollTo(0, 0);
   };
 
-  const captureBoard = async (leagueLabel, marketScope, required) => {
+  const captureBoard = async (leagueLabel, marketScope, required, requiredLabels = []) => {
     const findLeagueTab = () => [...document.querySelectorAll('[role="tab"], button')]
       .find((tab) => text(tab) === leagueLabel && tab.getClientRects().length > 0);
     let leagueTab = findLeagueTab();
@@ -175,19 +178,37 @@ async function scrapePrizePicksPage() {
 
     const findNavigation = () => document.querySelector('[aria-label="Stats Navigation"]') || [...document.querySelectorAll("nav")]
       .find((nav) => [...nav.querySelectorAll("button")].some((button) => canonicalLabel(text(button))));
-    const navigation = findNavigation();
+    let navigation = findNavigation();
     if (!navigation) {
       if (required) throw new Error("PrizePicks statistic navigation is missing");
       return;
     }
+    for (let attempt = 0; attempt < 50; attempt += 1) {
+      const visibleLabels = new Set([...navigation.querySelectorAll("button")]
+        .map((button) => canonicalLabel(text(button)))
+        .filter(Boolean));
+      if (requiredLabels.every((label) => visibleLabels.has(label))) break;
+      await sleep(120);
+      navigation = findNavigation();
+      if (!navigation) break;
+    }
+    if (!navigation) throw new Error("PrizePicks statistic navigation disappeared");
     const statButtons = [...new Map([...navigation.querySelectorAll("button")]
       .map((button) => ({ rawLabel: text(button), label: canonicalLabel(text(button)) }))
       .filter((item) => item.label)
       .map((item) => [item.label, item])).values()];
     if (required && statButtons.length === 0) throw new Error("PrizePicks statistic buttons are missing");
+    const discoveredLabels = new Set(statButtons.map(({ label }) => label));
+    const missingRequiredLabels = requiredLabels.filter((label) => !discoveredLabels.has(label));
+    if (missingRequiredLabels.length) throw new Error(`PrizePicks ${leagueLabel} categories are missing: ${missingRequiredLabels.join(", ")}`);
+
+    const orderedButtons = [
+      ...statButtons.filter(({ label }) => requiredLabels.includes(label)),
+      ...statButtons.filter(({ label }) => !requiredLabels.includes(label)),
+    ];
 
     for (let scanPass = 0; scanPass < 2; scanPass += 1) {
-      for (const { rawLabel, label } of statButtons) {
+      for (const { rawLabel, label } of orderedButtons) {
         const currentNavigation = findNavigation();
         const button = [...(currentNavigation?.querySelectorAll("button") || [])]
           .find((candidate) => canonicalLabel(text(candidate)) === label && text(candidate) === rawLabel);
@@ -207,12 +228,13 @@ async function scrapePrizePicksPage() {
     }
   };
 
-  await captureBoard("NFLSZN", "regular_season", true);
-  await captureBoard("NFL", "week_1", false);
+  await captureBoard("NFLSZN", "regular_season", true, ["Pass Yards", "Rush Yards", "Rec Yards"]);
+  await captureBoard("NFL", "week_1", true, ["Fantasy Score"]);
   return {
     rows: [...rowsByKey.values()],
     marketCount: rowsByKey.size,
     statLabels: [...seasonStatLabels],
+    week1StatLabels: [...week1StatLabels],
     unavailable: false,
   };
 }
@@ -365,6 +387,9 @@ async function collectPass(source) {
   const capturedStatLabels = new Set(pages.flatMap((page) => page.statLabels || []));
   const missingStatLabels = (source.requiredStatLabels || []).filter((label) => !capturedStatLabels.has(label));
   if (missingStatLabels.length) throw new Error(`Required market categories are missing: ${missingStatLabels.join(", ")}`);
+  const capturedWeeklyStatLabels = new Set(pages.flatMap((page) => page.week1StatLabels || []));
+  const missingWeeklyStatLabels = (source.requiredWeeklyStatLabels || []).filter((label) => !capturedWeeklyStatLabels.has(label));
+  if (missingWeeklyStatLabels.length) throw new Error(`Required Week 1 market categories are missing: ${missingWeeklyStatLabels.join(", ")}`);
   return {
     source: source.id,
     season: typeof source.season === "function" ? source.season() : extractSeason(pages),

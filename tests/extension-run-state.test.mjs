@@ -48,6 +48,9 @@ test("extension captures PrizePicks and Underdog sequentially with strict valida
   assert.doesNotMatch(service, /popularButton/);
   assert.match(service, /\["fantasy", "Fantasy Score"\]/);
   assert.match(service, /fantasy points/);
+  assert.match(service, /requiredWeeklyStatLabels: \["Fantasy Score"\]/);
+  assert.match(service, /Required Week 1 market categories are missing/);
+  assert.match(service, /captureBoard\("NFL", "week_1", true, \["Fantasy Score"\]\)/);
   assert.match(service, /for \(let scanPass = 0; scanPass < 2; scanPass \+= 1\)/);
   assert.doesNotMatch(service, /findSearchInput|expectedUnderdogPassingPlayers/);
 });
