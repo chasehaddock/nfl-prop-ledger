@@ -4850,13 +4850,13 @@
     },
     {
       "date": "2026-09-08",
-      "line": 1950.5,
+      "line": 1750.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0039075:regular_season:receiving_yards": [
@@ -47618,13 +47618,13 @@
     },
     {
       "date": "2026-09-08",
-      "line": 11.5,
+      "line": 9.5,
       "overOdds": null,
       "underOdds": null,
       "higherMultiplier": null,
       "lowerMultiplier": null,
       "status": "open",
-      "changeType": "unchanged"
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0032764:regular_season:rushing_touchdowns": [
