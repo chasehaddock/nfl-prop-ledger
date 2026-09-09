@@ -159,6 +159,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 4074.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033077:regular_season:passing_yards": [
@@ -314,6 +324,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3999.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3999.5,
       "overOdds": null,
       "underOdds": null,
@@ -483,6 +503,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3924.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0026498:regular_season:passing_yards": [
@@ -638,6 +668,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3874.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3874.5,
       "overOdds": null,
       "underOdds": null,
@@ -807,6 +847,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3724.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0039851:regular_season:passing_yards": [
@@ -962,6 +1012,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3774.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3774.5,
       "overOdds": null,
       "underOdds": null,
@@ -1131,6 +1191,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3749.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033873:regular_season:passing_yards": [
@@ -1286,6 +1356,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3649.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3649.5,
       "overOdds": null,
       "underOdds": null,
@@ -1455,6 +1535,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3649.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039918:regular_season:passing_yards": [
@@ -1610,6 +1700,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3649.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3649.5,
       "overOdds": null,
       "underOdds": null,
@@ -1779,6 +1879,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3599.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034857:regular_season:passing_yards": [
@@ -1934,6 +2044,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3599.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3599.5,
       "overOdds": null,
       "underOdds": null,
@@ -2103,6 +2223,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3524.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0036264:regular_season:passing_yards": [
@@ -2265,6 +2395,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3549.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_increased"
     }
   ],
   "2026:prizepicks:00-0034855:regular_season:passing_yards": [
@@ -2420,6 +2560,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3499.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3499.5,
       "overOdds": null,
       "underOdds": null,
@@ -2589,6 +2739,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3474.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040743:regular_season:passing_yards": [
@@ -2744,6 +2904,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3449.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3449.5,
       "overOdds": null,
       "underOdds": null,
@@ -2913,6 +3083,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3200.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0035710:regular_season:passing_yards": [
@@ -3068,6 +3248,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3299.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3299.5,
       "overOdds": null,
       "underOdds": null,
@@ -3237,6 +3427,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3199.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034796:regular_season:passing_yards": [
@@ -3392,6 +3592,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3225.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3225.5,
       "overOdds": null,
       "underOdds": null,
@@ -3561,6 +3771,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3199.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040691:regular_season:passing_yards": [
@@ -3716,6 +3936,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3124.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3124.5,
       "overOdds": null,
       "underOdds": null,
@@ -3885,6 +4115,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3074.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035228:regular_season:passing_yards": [
@@ -4040,6 +4280,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3049.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3049.5,
       "overOdds": null,
       "underOdds": null,
@@ -4209,6 +4459,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 2949.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039150:regular_season:passing_yards": [
@@ -4364,6 +4624,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 2899.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 2899.5,
       "overOdds": null,
       "underOdds": null,
@@ -4533,6 +4803,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 2699.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0030565:regular_season:passing_yards": [
@@ -4688,6 +4968,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 2899.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 2899.5,
       "overOdds": null,
       "underOdds": null,
@@ -4857,6 +5147,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_decreased"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 1750.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039075:regular_season:receiving_yards": [
@@ -5012,6 +5312,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 1349.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 1349.5,
       "overOdds": null,
       "underOdds": null,
@@ -5181,6 +5491,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 1324.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038543:regular_season:receiving_yards": [
@@ -5336,6 +5656,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 1324.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 1324.5,
       "overOdds": null,
       "underOdds": null,
@@ -5505,6 +5835,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 1249.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036223:regular_season:rushing_yards": [
@@ -5660,6 +6000,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 1249.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 1249.5,
       "overOdds": null,
       "underOdds": null,
@@ -5829,6 +6179,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 1225.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039139:regular_season:rushing_yards": [
@@ -5984,6 +6344,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 1200.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 1200.5,
       "overOdds": null,
       "underOdds": null,
@@ -6153,6 +6523,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 1199.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037248:regular_season:rushing_yards": [
@@ -6308,6 +6688,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 1199.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 1199.5,
       "overOdds": null,
       "underOdds": null,
@@ -6477,6 +6867,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 1150.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036322:regular_season:receiving_yards": [
@@ -6632,6 +7032,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 1149.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 1149.5,
       "overOdds": null,
       "underOdds": null,
@@ -6801,6 +7211,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 1100.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035676:regular_season:receiving_yards": [
@@ -6956,6 +7376,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 1125.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 1125.5,
       "overOdds": null,
       "underOdds": null,
@@ -7125,6 +7555,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 1149.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034844:regular_season:rushing_yards": [
@@ -7280,6 +7720,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 1074.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 1074.5,
       "overOdds": null,
       "underOdds": null,
@@ -7449,6 +7899,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 1074.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036912:regular_season:receiving_yards": [
@@ -7604,6 +8064,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 1099.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 1099.5,
       "overOdds": null,
       "underOdds": null,
@@ -7773,6 +8243,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 999.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039067:regular_season:receiving_yards": [
@@ -7928,6 +8408,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 949.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 949.5,
       "overOdds": null,
       "underOdds": null,
@@ -8097,6 +8587,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 1049.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037740:regular_season:receiving_yards": [
@@ -8252,6 +8752,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 999.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 999.5,
       "overOdds": null,
       "underOdds": null,
@@ -8421,6 +8931,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 975.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039040:regular_season:rushing_yards": [
@@ -8576,6 +9096,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 974.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 974.5,
       "overOdds": null,
       "underOdds": null,
@@ -8745,6 +9275,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 950.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040124:regular_season:receiving_yards": [
@@ -8900,6 +9440,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 949.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 949.5,
       "overOdds": null,
       "underOdds": null,
@@ -9069,6 +9619,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 949.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039338:regular_season:receiving_yards": [
@@ -9224,6 +9784,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 925.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 925.5,
       "overOdds": null,
       "underOdds": null,
@@ -9393,6 +9963,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 949.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040129:regular_season:receiving_yards": [
@@ -9548,6 +10128,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 924.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
       "line": 924.5,
       "overOdds": null,
       "underOdds": null,
@@ -9717,6 +10307,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 924.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033280:regular_season:rushing_yards": [
@@ -9872,6 +10472,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 924.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 924.5,
       "overOdds": null,
       "underOdds": null,
@@ -10041,6 +10651,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 949.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037240:regular_season:receiving_yards": [
@@ -10196,6 +10816,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 900.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 900.5,
       "overOdds": null,
       "underOdds": null,
@@ -10365,6 +10995,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 924.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036613:regular_season:receiving_yards": [
@@ -10520,6 +11160,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 924.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 924.5,
       "overOdds": null,
       "underOdds": null,
@@ -10689,6 +11339,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 899.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040784:regular_season:rushing_yards": [
@@ -10844,6 +11504,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 874.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 874.5,
       "overOdds": null,
       "underOdds": null,
@@ -11013,6 +11683,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 874.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040735:regular_season:receiving_yards": [
@@ -11168,6 +11848,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 850.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 850.5,
       "overOdds": null,
       "underOdds": null,
@@ -11337,6 +12027,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 849.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034827:regular_season:receiving_yards": [
@@ -11492,6 +12192,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 849.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 849.5,
       "overOdds": null,
       "underOdds": null,
@@ -11661,6 +12371,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 825.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0031408:regular_season:receiving_yards": [
@@ -11816,6 +12536,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 799.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 799.5,
       "overOdds": null,
       "underOdds": null,
@@ -11985,6 +12715,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 824.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035640:regular_season:receiving_yards": [
@@ -12140,6 +12880,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 824.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 824.5,
       "overOdds": null,
       "underOdds": null,
@@ -12309,6 +13059,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 849.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038597:regular_season:rushing_yards": [
@@ -12464,6 +13224,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 849.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 849.5,
       "overOdds": null,
       "underOdds": null,
@@ -12633,6 +13403,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 824.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040126:regular_season:receiving_yards": [
@@ -12788,6 +13568,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 824.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 824.5,
       "overOdds": null,
       "underOdds": null,
@@ -12957,6 +13747,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 799.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0031588:regular_season:receiving_yards": [
@@ -13112,6 +13912,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 749.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 749.5,
       "overOdds": null,
       "underOdds": null,
@@ -13281,6 +14091,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 799.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040715:regular_season:rushing_yards": [
@@ -13436,6 +14256,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 799.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 799.5,
       "overOdds": null,
       "underOdds": null,
@@ -13605,6 +14435,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_decreased"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 799.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035261:regular_season:rushing_yards": [
@@ -13760,6 +14600,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 799.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 799.5,
       "overOdds": null,
       "underOdds": null,
@@ -13929,6 +14779,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 775.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0031381:regular_season:receiving_yards": [
@@ -14084,6 +14944,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 774.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 774.5,
       "overOdds": null,
       "underOdds": null,
@@ -14253,6 +15123,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 799.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0041027:regular_season:rushing_yards": [
@@ -14408,6 +15288,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 774.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 774.5,
       "overOdds": null,
       "underOdds": null,
@@ -14577,6 +15467,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 749.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040128:regular_season:receiving_yards": [
@@ -14732,6 +15632,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 749.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 749.5,
       "overOdds": null,
       "underOdds": null,
@@ -14901,6 +15811,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 749.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039893:regular_season:receiving_yards": [
@@ -15056,6 +15976,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 724.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 724.5,
       "overOdds": null,
       "underOdds": null,
@@ -15225,6 +16155,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 725.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034348:regular_season:receiving_yards": [
@@ -15380,6 +16320,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 724.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 724.5,
       "overOdds": null,
       "underOdds": null,
@@ -15549,6 +16499,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 724.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038559:regular_season:receiving_yards": [
@@ -15704,6 +16664,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 699.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 699.5,
       "overOdds": null,
       "underOdds": null,
@@ -15873,6 +16843,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 699.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035719:regular_season:receiving_yards": [
@@ -16035,6 +17015,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 624.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0038996:regular_season:receiving_yards": [
@@ -16190,6 +17180,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 699.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 699.5,
       "overOdds": null,
       "underOdds": null,
@@ -16359,6 +17359,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 699.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036555:regular_season:rushing_yards": [
@@ -16514,6 +17524,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 699.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 699.5,
       "overOdds": null,
       "underOdds": null,
@@ -16683,6 +17703,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 699.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040734:regular_season:rushing_yards": [
@@ -16845,6 +17875,16 @@
       "lowerMultiplier": null,
       "status": "not_seen",
       "changeType": "not_seen"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 675.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0036139:regular_season:rushing_yards": [
@@ -17000,6 +18040,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 699.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 699.5,
       "overOdds": null,
       "underOdds": null,
@@ -17169,6 +18219,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 675.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039146:regular_season:receiving_yards": [
@@ -17324,6 +18384,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 675.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 675.5,
       "overOdds": null,
       "underOdds": null,
@@ -17493,6 +18563,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 674.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040663:regular_season:receiving_yards": [
@@ -17648,6 +18728,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 699.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 699.5,
       "overOdds": null,
       "underOdds": null,
@@ -17817,6 +18907,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 674.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039738:regular_season:rushing_yards": [
@@ -17972,6 +19072,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 699.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 699.5,
       "overOdds": null,
       "underOdds": null,
@@ -18141,6 +19251,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 650.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034960:regular_season:receiving_yards": [
@@ -18296,6 +19416,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 649.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 649.5,
       "overOdds": null,
       "underOdds": null,
@@ -18465,6 +19595,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 649.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040667:regular_season:receiving_yards": [
@@ -18620,6 +19760,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 649.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 649.5,
       "overOdds": null,
       "underOdds": null,
@@ -18789,6 +19939,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 674.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037816:regular_season:receiving_yards": [
@@ -18944,6 +20104,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 649.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 649.5,
       "overOdds": null,
       "underOdds": null,
@@ -19113,6 +20283,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 649.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0037525:regular_season:rushing_yards": [
@@ -19268,6 +20448,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 649.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 649.5,
       "overOdds": null,
       "underOdds": null,
@@ -19437,6 +20627,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 625.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037838:regular_season:receiving_yards": [
@@ -19592,6 +20792,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 625.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 625.5,
       "overOdds": null,
       "underOdds": null,
@@ -19761,6 +20971,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_increased"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 649.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037228:regular_season:rushing_yards": [
@@ -19916,6 +21136,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 624.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 624.5,
       "overOdds": null,
       "underOdds": null,
@@ -20085,6 +21315,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 600.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036040:regular_season:receiving_yards": [
@@ -20240,6 +21480,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 599.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 599.5,
       "overOdds": null,
       "underOdds": null,
@@ -20409,6 +21659,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 599.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040867:regular_season:receiving_yards": [
@@ -20564,6 +21824,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 575.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 575.5,
       "overOdds": null,
       "underOdds": null,
@@ -20733,6 +22003,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 575.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034837:regular_season:receiving_yards": [
@@ -20888,6 +22168,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 550.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
       "line": 550.5,
       "overOdds": null,
       "underOdds": null,
@@ -21057,6 +22347,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 575.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0041035:regular_season:receiving_yards": [
@@ -21212,6 +22512,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 649.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 649.5,
       "overOdds": null,
       "underOdds": null,
@@ -21381,6 +22691,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 574.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033280:regular_season:receiving_yards": [
@@ -21536,6 +22856,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 549.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 549.5,
       "overOdds": null,
       "underOdds": null,
@@ -21705,6 +23035,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 549.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039910:regular_season:rushing_yards": [
@@ -21860,6 +23200,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 549.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 549.5,
       "overOdds": null,
       "underOdds": null,
@@ -22029,6 +23379,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 574.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038128:regular_season:rushing_yards": [
@@ -22184,6 +23544,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 549.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 549.5,
       "overOdds": null,
       "underOdds": null,
@@ -22353,6 +23723,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 574.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037545:regular_season:receiving_yards": [
@@ -22515,6 +23895,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_increased"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 550.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038041:regular_season:receiving_yards": [
@@ -22670,6 +24060,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 524.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 524.5,
       "overOdds": null,
       "underOdds": null,
@@ -22839,6 +24239,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 499.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033090:regular_season:receiving_yards": [
@@ -22994,6 +24404,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 524.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 524.5,
       "overOdds": null,
       "underOdds": null,
@@ -23163,6 +24583,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 499.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034753:regular_season:receiving_yards": [
@@ -23318,6 +24748,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 499.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 499.5,
       "overOdds": null,
       "underOdds": null,
@@ -23487,6 +24927,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 499.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037809:regular_season:receiving_yards": [
@@ -23642,6 +25092,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 475.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 475.5,
       "overOdds": null,
       "underOdds": null,
@@ -23811,6 +25271,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 449.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034857:regular_season:rushing_yards": [
@@ -23966,6 +25436,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 499.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 499.5,
       "overOdds": null,
       "underOdds": null,
@@ -24135,6 +25615,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_decreased"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 474.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037197:regular_season:rushing_yards": [
@@ -24290,6 +25780,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 425.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
       "line": 425.5,
       "overOdds": null,
       "underOdds": null,
@@ -24459,6 +25959,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 475.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038935:regular_season:receiving_yards": [
@@ -24614,6 +26124,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 499.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 499.5,
       "overOdds": null,
       "underOdds": null,
@@ -24783,6 +26303,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 474.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0041511:regular_season:receiving_yards": [
@@ -24938,6 +26468,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 449.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 449.5,
       "overOdds": null,
       "underOdds": null,
@@ -25107,6 +26647,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 449.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036550:regular_season:receiving_yards": [
@@ -25262,6 +26812,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 449.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
       "line": 449.5,
       "overOdds": null,
       "underOdds": null,
@@ -25431,6 +26991,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 449.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036894:regular_season:receiving_yards": [
@@ -25586,6 +27156,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 449.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 449.5,
       "overOdds": null,
       "underOdds": null,
@@ -25755,6 +27335,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 424.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038129:regular_season:receiving_yards": [
@@ -25910,6 +27500,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 424.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 424.5,
       "overOdds": null,
       "underOdds": null,
@@ -26079,6 +27679,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 424.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039040:regular_season:receiving_yards": [
@@ -26234,6 +27844,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 399.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 399.5,
       "overOdds": null,
       "underOdds": null,
@@ -26403,6 +28023,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 399.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036389:regular_season:rushing_yards": [
@@ -26558,6 +28188,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 424.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 424.5,
       "overOdds": null,
       "underOdds": null,
@@ -26727,6 +28367,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 374.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039918:regular_season:rushing_yards": [
@@ -26882,6 +28532,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 374.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 374.5,
       "overOdds": null,
       "underOdds": null,
@@ -27051,6 +28711,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 374.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038597:regular_season:receiving_yards": [
@@ -27206,6 +28876,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 349.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 349.5,
       "overOdds": null,
       "underOdds": null,
@@ -27375,6 +29055,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 324.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034855:regular_season:rushing_yards": [
@@ -27530,6 +29220,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 309.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 309.5,
       "overOdds": null,
       "underOdds": null,
@@ -27699,6 +29399,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 299.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036355:regular_season:rushing_yards": [
@@ -27854,6 +29564,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 299.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 299.5,
       "overOdds": null,
       "underOdds": null,
@@ -28023,6 +29743,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 299.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037248:regular_season:receiving_yards": [
@@ -28178,6 +29908,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 275.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 275.5,
       "overOdds": null,
       "underOdds": null,
@@ -28347,6 +30087,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 274.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034844:regular_season:receiving_yards": [
@@ -28502,6 +30252,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 299.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 299.5,
       "overOdds": null,
       "underOdds": null,
@@ -28671,6 +30431,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 224.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039150:regular_season:rushing_yards": [
@@ -28826,6 +30596,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 224.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 224.5,
       "overOdds": null,
       "underOdds": null,
@@ -28995,6 +30775,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 199.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036264:regular_season:rushing_yards": [
@@ -29150,6 +30940,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 174.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 174.5,
       "overOdds": null,
       "underOdds": null,
@@ -29319,6 +31119,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 159.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036900:regular_season:receptions": [
@@ -29474,6 +31284,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 108.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 108.5,
       "overOdds": null,
       "underOdds": null,
@@ -29643,6 +31463,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 106.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036963:regular_season:receptions": [
@@ -29798,6 +31628,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 103.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 103.5,
       "overOdds": null,
       "underOdds": null,
@@ -29967,6 +31807,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 99.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037744:regular_season:receptions": [
@@ -30122,6 +31972,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 98.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 98.5,
       "overOdds": null,
       "underOdds": null,
@@ -30291,6 +32151,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 91.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036358:regular_season:receptions": [
@@ -30446,6 +32316,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 91.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 91.5,
       "overOdds": null,
       "underOdds": null,
@@ -30615,6 +32495,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 88.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037740:regular_season:receptions": [
@@ -30770,6 +32660,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 84.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 84.5,
       "overOdds": null,
       "underOdds": null,
@@ -30939,6 +32839,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 86.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037239:regular_season:receptions": [
@@ -31094,6 +33004,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 85.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 85.5,
       "overOdds": null,
       "underOdds": null,
@@ -31263,6 +33183,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 79.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035676:regular_season:receptions": [
@@ -31418,6 +33348,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 78.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 78.5,
       "overOdds": null,
       "underOdds": null,
@@ -31587,6 +33527,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 74.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039064:regular_season:receptions": [
@@ -31742,6 +33692,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 75.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 75.5,
       "overOdds": null,
       "underOdds": null,
@@ -31911,6 +33871,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 74.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037247:regular_season:receptions": [
@@ -32066,6 +34036,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 76.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 76.5,
       "overOdds": null,
       "underOdds": null,
@@ -32235,6 +34215,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 73.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035659:regular_season:receptions": [
@@ -32390,6 +34380,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 71.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 71.5,
       "overOdds": null,
       "underOdds": null,
@@ -32559,6 +34559,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 77.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039915:regular_season:receptions": [
@@ -32714,6 +34724,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 72.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 72.5,
       "overOdds": null,
       "underOdds": null,
@@ -32883,6 +34903,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 70.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0036252:regular_season:receptions": [
@@ -33038,6 +35068,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 70.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 70.5,
       "overOdds": null,
       "underOdds": null,
@@ -33207,6 +35247,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 71.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040126:regular_season:receptions": [
@@ -33362,6 +35412,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 69.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 69.5,
       "overOdds": null,
       "underOdds": null,
@@ -33531,6 +35591,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 69.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0036970:regular_season:receptions": [
@@ -33686,6 +35756,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 68.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 68.5,
       "overOdds": null,
       "underOdds": null,
@@ -33855,6 +35935,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 68.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0030506:regular_season:receptions": [
@@ -34010,6 +36100,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 65.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 65.5,
       "overOdds": null,
       "underOdds": null,
@@ -34179,6 +36279,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 65.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040735:regular_season:receptions": [
@@ -34334,6 +36444,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 65.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 65.5,
       "overOdds": null,
       "underOdds": null,
@@ -34503,6 +36623,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 65.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033280:regular_season:receptions": [
@@ -34658,6 +36788,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 60.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 60.5,
       "overOdds": null,
       "underOdds": null,
@@ -34827,6 +36967,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 65.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037261:regular_season:receptions": [
@@ -34982,6 +37132,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 58.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 58.5,
       "overOdds": null,
       "underOdds": null,
@@ -35151,6 +37311,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 62.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0031408:regular_season:receptions": [
@@ -35306,6 +37476,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 59.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 59.5,
       "overOdds": null,
       "underOdds": null,
@@ -35475,6 +37655,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 60.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0031381:regular_season:receptions": [
@@ -35630,6 +37820,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 60.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 60.5,
       "overOdds": null,
       "underOdds": null,
@@ -35799,6 +37999,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 60.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0041438:regular_season:receptions": [
@@ -35954,6 +38164,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 61.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 61.5,
       "overOdds": null,
       "underOdds": null,
@@ -36123,6 +38343,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 63.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035640:regular_season:receptions": [
@@ -36278,6 +38508,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 58.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 58.5,
       "overOdds": null,
       "underOdds": null,
@@ -36447,6 +38687,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 58.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034960:regular_season:receptions": [
@@ -36602,6 +38852,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 58.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 58.5,
       "overOdds": null,
       "underOdds": null,
@@ -36771,6 +39031,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 57.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037240:regular_season:receptions": [
@@ -36926,6 +39196,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 56.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 56.5,
       "overOdds": null,
       "underOdds": null,
@@ -37095,6 +39375,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 55.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "line_decreased"
     }
   ],
   "2026:prizepicks:00-0034351:regular_season:receptions": [
@@ -37250,6 +39540,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 56.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 56.5,
       "overOdds": null,
       "underOdds": null,
@@ -37419,6 +39719,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 53.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039064:regular_season:rushing_yards": [
@@ -37574,6 +39884,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 54.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 54.5,
       "overOdds": null,
       "underOdds": null,
@@ -37743,6 +40063,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 57.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038996:regular_season:receptions": [
@@ -37898,6 +40228,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 52.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 52.5,
       "overOdds": null,
       "underOdds": null,
@@ -38067,6 +40407,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 52.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036040:regular_season:receptions": [
@@ -38222,6 +40572,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 52.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 52.5,
       "overOdds": null,
       "underOdds": null,
@@ -38391,6 +40751,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 52.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037816:regular_season:receptions": [
@@ -38546,6 +40916,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 53.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 53.5,
       "overOdds": null,
       "underOdds": null,
@@ -38715,6 +41095,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 49.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038994:regular_season:receptions": [
@@ -38870,6 +41260,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 50.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 50.5,
       "overOdds": null,
       "underOdds": null,
@@ -39039,6 +41439,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 50.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038544:regular_season:receptions": [
@@ -39194,6 +41604,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 50.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 50.5,
       "overOdds": null,
       "underOdds": null,
@@ -39363,6 +41783,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 51.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038933:regular_season:receptions": [
@@ -39518,6 +41948,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 49.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 49.5,
       "overOdds": null,
       "underOdds": null,
@@ -39687,6 +42127,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 47.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033090:regular_season:receptions": [
@@ -39842,6 +42292,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 45.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 45.5,
       "overOdds": null,
       "underOdds": null,
@@ -40011,6 +42471,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 45.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034753:regular_season:receptions": [
@@ -40166,6 +42636,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 44.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 44.5,
       "overOdds": null,
       "underOdds": null,
@@ -40335,6 +42815,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 43.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036407:regular_season:receptions": [
@@ -40490,6 +42980,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 43.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 43.5,
       "overOdds": null,
       "underOdds": null,
@@ -40659,6 +43159,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 41.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038120:regular_season:receptions": [
@@ -40814,6 +43324,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 38.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 38.5,
       "overOdds": null,
       "underOdds": null,
@@ -40983,6 +43503,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 38.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034837:regular_season:receptions": [
@@ -41138,6 +43668,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 36.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
       "line": 36.5,
       "overOdds": null,
       "underOdds": null,
@@ -41307,6 +43847,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 34.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034844:regular_season:receptions": [
@@ -41462,6 +44012,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 35.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 35.5,
       "overOdds": null,
       "underOdds": null,
@@ -41631,6 +44191,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 32.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037248:regular_season:receptions": [
@@ -41786,6 +44356,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 32.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 32.5,
       "overOdds": null,
       "underOdds": null,
@@ -41955,6 +44535,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 30.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033106:regular_season:passing_touchdowns": [
@@ -42110,6 +44700,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 29.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 29.5,
       "overOdds": null,
       "underOdds": null,
@@ -42279,6 +44879,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 27.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037834:regular_season:passing_touchdowns": [
@@ -42434,6 +45044,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 27.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 27.5,
       "overOdds": null,
       "underOdds": null,
@@ -42603,6 +45223,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 26.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034855:regular_season:passing_touchdowns": [
@@ -42758,6 +45388,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 25.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 25.5,
       "overOdds": null,
       "underOdds": null,
@@ -42927,6 +45567,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 25.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036971:regular_season:passing_touchdowns": [
@@ -43082,6 +45732,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 25.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 25.5,
       "overOdds": null,
       "underOdds": null,
@@ -43251,6 +45911,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 25.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039918:regular_season:passing_touchdowns": [
@@ -43406,6 +46076,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 24.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 24.5,
       "overOdds": null,
       "underOdds": null,
@@ -43575,6 +46255,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 24.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036264:regular_season:passing_touchdowns": [
@@ -43730,6 +46420,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 25.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 25.5,
       "overOdds": null,
       "underOdds": null,
@@ -43899,6 +46599,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 24.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039732:regular_season:passing_touchdowns": [
@@ -44054,6 +46764,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 24.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 24.5,
       "overOdds": null,
       "underOdds": null,
@@ -44223,6 +46943,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 23.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039163:regular_season:passing_touchdowns": [
@@ -44378,6 +47108,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 22.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 22.5,
       "overOdds": null,
       "underOdds": null,
@@ -44547,6 +47287,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 21.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0023459:regular_season:passing_touchdowns": [
@@ -44702,6 +47452,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 21.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 21.5,
       "overOdds": null,
       "underOdds": null,
@@ -44871,6 +47631,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 21.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040743:regular_season:passing_touchdowns": [
@@ -45026,6 +47796,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 20.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 20.5,
       "overOdds": null,
       "underOdds": null,
@@ -45195,6 +47975,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 19.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039150:regular_season:passing_touchdowns": [
@@ -45350,6 +48140,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 20.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 20.5,
       "overOdds": null,
       "underOdds": null,
@@ -45519,6 +48319,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 19.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035228:regular_season:passing_touchdowns": [
@@ -45674,6 +48484,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 19.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 19.5,
       "overOdds": null,
       "underOdds": null,
@@ -45843,6 +48663,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 18.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0032764:regular_season:receptions": [
@@ -45998,6 +48828,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 17.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 17.5,
       "overOdds": null,
       "underOdds": null,
@@ -46167,6 +49007,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 15.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0030565:regular_season:passing_touchdowns": [
@@ -46322,6 +49172,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 17.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 17.5,
       "overOdds": null,
       "underOdds": null,
@@ -46491,6 +49351,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 14.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0032764:regular_season:offensive_touchdowns": [
@@ -46646,6 +49516,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 13.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
       "line": 13.5,
       "overOdds": null,
       "underOdds": null,
@@ -46815,6 +49695,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 13.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0036963:regular_season:rushing_yards": [
@@ -46970,6 +49860,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 12.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 12.5,
       "overOdds": null,
       "underOdds": null,
@@ -47139,6 +50039,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 12.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0037248:regular_season:offensive_touchdowns": [
@@ -47294,6 +50204,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 12.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
       "line": 12.5,
       "overOdds": null,
       "underOdds": null,
@@ -47463,6 +50383,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 12.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0041562:regular_season:passing_touchdowns": [
@@ -47625,6 +50555,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "line_decreased"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 9.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0032764:regular_season:rushing_touchdowns": [
@@ -47780,6 +50720,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 12.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 12.5,
       "overOdds": null,
       "underOdds": null,
@@ -47949,6 +50899,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 12,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036900:regular_season:rushing_yards": [
@@ -48104,6 +51064,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 11.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 11.5,
       "overOdds": null,
       "underOdds": null,
@@ -48273,6 +51243,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 11.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0036223:regular_season:rushing_touchdowns": [
@@ -48428,6 +51408,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 11.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 11.5,
       "overOdds": null,
       "underOdds": null,
@@ -48597,6 +51587,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 10.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0034844:regular_season:offensive_touchdowns": [
@@ -48752,6 +51752,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 10.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
       "line": 10.5,
       "overOdds": null,
       "underOdds": null,
@@ -48921,6 +51931,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 10.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037248:regular_season:rushing_touchdowns": [
@@ -49076,6 +52096,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 10.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 10.5,
       "overOdds": null,
       "underOdds": null,
@@ -49245,6 +52275,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 10,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0036900:regular_season:receiving_touchdowns": [
@@ -49400,6 +52440,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 10,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 10,
       "overOdds": null,
       "underOdds": null,
@@ -49569,6 +52619,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 9.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0038134:regular_season:offensive_touchdowns": [
@@ -49724,6 +52784,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 9.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
       "line": 9.5,
       "overOdds": null,
       "underOdds": null,
@@ -49893,6 +52963,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 9.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037840:regular_season:rushing_touchdowns": [
@@ -50048,6 +53128,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 9.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 9.5,
       "overOdds": null,
       "underOdds": null,
@@ -50217,6 +53307,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 9.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0031381:regular_season:receiving_touchdowns": [
@@ -50372,6 +53472,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 9,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 9,
       "overOdds": null,
       "underOdds": null,
@@ -50541,6 +53651,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 8.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0040715:regular_season:offensive_touchdowns": [
@@ -50696,6 +53816,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 8.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
       "line": 8.5,
       "overOdds": null,
       "underOdds": null,
@@ -50865,6 +53995,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 8.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038542:regular_season:rushing_touchdowns": [
@@ -51020,6 +54160,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 9,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 9,
       "overOdds": null,
       "underOdds": null,
@@ -51189,6 +54339,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 8.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039075:regular_season:receiving_touchdowns": [
@@ -51344,6 +54504,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 8,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 8,
       "overOdds": null,
       "underOdds": null,
@@ -51513,6 +54683,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 8,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038120:regular_season:offensive_touchdowns": [
@@ -51668,6 +54848,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
       "line": 7.5,
       "overOdds": null,
       "underOdds": null,
@@ -51837,6 +55027,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0036875:regular_season:offensive_touchdowns": [
@@ -51992,6 +55192,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
       "line": 7.5,
       "overOdds": null,
       "underOdds": null,
@@ -52161,6 +55371,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039067:regular_season:receiving_touchdowns": [
@@ -52316,6 +55536,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 7.5,
       "overOdds": null,
       "underOdds": null,
@@ -52485,6 +55715,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038134:regular_season:rushing_touchdowns": [
@@ -52640,6 +55880,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 7.5,
       "overOdds": null,
       "underOdds": null,
@@ -52809,6 +56059,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 8,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034844:regular_season:rushing_touchdowns": [
@@ -52964,6 +56224,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 7.5,
       "overOdds": null,
       "underOdds": null,
@@ -53133,6 +56403,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036322:regular_season:receiving_touchdowns": [
@@ -53288,6 +56568,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 7,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 7,
       "overOdds": null,
       "underOdds": null,
@@ -53457,6 +56747,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 7,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035676:regular_season:receiving_touchdowns": [
@@ -53612,6 +56912,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 7,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 7,
       "overOdds": null,
       "underOdds": null,
@@ -53781,6 +57091,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 7,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037247:regular_season:receiving_touchdowns": [
@@ -53936,6 +57256,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 7,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 7,
       "overOdds": null,
       "underOdds": null,
@@ -54105,6 +57435,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 6.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037744:regular_season:receiving_touchdowns": [
@@ -54260,6 +57600,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 6.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 6.5,
       "overOdds": null,
       "underOdds": null,
@@ -54429,6 +57779,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 6.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040124:regular_season:receiving_touchdowns": [
@@ -54584,6 +57944,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 6.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 6.5,
       "overOdds": null,
       "underOdds": null,
@@ -54753,6 +58123,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 6.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039919:regular_season:receiving_touchdowns": [
@@ -54908,6 +58288,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 6,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 6,
       "overOdds": null,
       "underOdds": null,
@@ -55077,6 +58467,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 6,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040129:regular_season:receiving_touchdowns": [
@@ -55232,6 +58632,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 6.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
       "line": 6.5,
       "overOdds": null,
       "underOdds": null,
@@ -55401,6 +58811,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 6.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040784:regular_season:rushing_touchdowns": [
@@ -55556,6 +58976,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 6.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 6.5,
       "overOdds": null,
       "underOdds": null,
@@ -55725,6 +59155,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 6,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040715:regular_season:rushing_touchdowns": [
@@ -55880,6 +59320,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 6,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 6,
       "overOdds": null,
       "underOdds": null,
@@ -56049,6 +59499,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 6,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040691:regular_season:rushing_touchdowns": [
@@ -56204,6 +59664,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 6,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 6,
       "overOdds": null,
       "underOdds": null,
@@ -56373,6 +59843,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 6,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037239:regular_season:receiving_touchdowns": [
@@ -56528,6 +60008,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 6,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 6,
       "overOdds": null,
       "underOdds": null,
@@ -56697,6 +60187,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039064:regular_season:receiving_touchdowns": [
@@ -56852,6 +60352,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 5.5,
       "overOdds": null,
       "underOdds": null,
@@ -57021,6 +60531,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 6,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039915:regular_season:receiving_touchdowns": [
@@ -57176,6 +60696,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 5.5,
       "overOdds": null,
       "underOdds": null,
@@ -57345,6 +60875,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036613:regular_season:receiving_touchdowns": [
@@ -57500,6 +61040,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 5.5,
       "overOdds": null,
       "underOdds": null,
@@ -57669,6 +61219,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 6,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039337:regular_season:receiving_touchdowns": [
@@ -57824,6 +61384,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 5.5,
       "overOdds": null,
       "underOdds": null,
@@ -57993,6 +61563,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0035640:regular_season:receiving_touchdowns": [
@@ -58148,6 +61728,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 5.5,
       "overOdds": null,
       "underOdds": null,
@@ -58317,6 +61907,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034753:regular_season:receiving_touchdowns": [
@@ -58472,6 +62072,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 5.5,
       "overOdds": null,
       "underOdds": null,
@@ -58641,6 +62251,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038996:regular_season:receiving_touchdowns": [
@@ -58796,6 +62416,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 5.5,
       "overOdds": null,
       "underOdds": null,
@@ -58965,6 +62595,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039738:regular_season:rushing_touchdowns": [
@@ -59120,6 +62760,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 5.5,
       "overOdds": null,
       "underOdds": null,
@@ -59289,6 +62939,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040719:regular_season:rushing_touchdowns": [
@@ -59444,6 +63104,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 5.5,
       "overOdds": null,
       "underOdds": null,
@@ -59613,6 +63283,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040734:regular_season:rushing_touchdowns": [
@@ -59775,6 +63455,16 @@
       "lowerMultiplier": null,
       "status": "not_seen",
       "changeType": "not_seen"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0039040:regular_season:rushing_touchdowns": [
@@ -59930,6 +63620,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 5,
       "overOdds": null,
       "underOdds": null,
@@ -60099,6 +63799,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040128:regular_season:receiving_touchdowns": [
@@ -60254,6 +63964,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 5,
       "overOdds": null,
       "underOdds": null,
@@ -60423,6 +64143,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036973:regular_season:rushing_touchdowns": [
@@ -60578,6 +64308,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 5,
       "overOdds": null,
       "underOdds": null,
@@ -60747,6 +64487,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0030506:regular_season:receiving_touchdowns": [
@@ -60902,6 +64652,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
@@ -61071,6 +64831,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036970:regular_season:receiving_touchdowns": [
@@ -61226,6 +64996,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
@@ -61395,6 +65175,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039893:regular_season:receiving_touchdowns": [
@@ -61550,6 +65340,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
@@ -61719,6 +65519,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 5.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0031588:regular_season:receiving_touchdowns": [
@@ -61874,6 +65684,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
@@ -62043,6 +65863,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038041:regular_season:receiving_touchdowns": [
@@ -62198,6 +66028,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
@@ -62367,6 +66207,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038994:regular_season:receiving_touchdowns": [
@@ -62522,6 +66372,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
@@ -62691,6 +66551,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034351:regular_season:receiving_touchdowns": [
@@ -62846,6 +66716,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 5,
       "overOdds": null,
       "underOdds": null,
@@ -63015,6 +66895,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037816:regular_season:receiving_touchdowns": [
@@ -63170,6 +67060,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
@@ -63339,6 +67239,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 4,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039910:regular_season:rushing_touchdowns": [
@@ -63494,6 +67404,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
@@ -63663,6 +67583,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036139:regular_season:rushing_touchdowns": [
@@ -63818,6 +67748,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 5,
       "overOdds": null,
       "underOdds": null,
@@ -63987,6 +67927,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040236:regular_season:rushing_touchdowns": [
@@ -64142,6 +68092,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
@@ -64311,6 +68271,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0037525:regular_season:rushing_touchdowns": [
@@ -64466,6 +68436,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
@@ -64635,6 +68615,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040867:regular_season:receiving_touchdowns": [
@@ -64790,6 +68780,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
@@ -64959,6 +68959,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 4,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0038997:regular_season:receiving_touchdowns": [
@@ -65114,6 +69124,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 4,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
       "line": 4,
       "overOdds": null,
       "underOdds": null,
@@ -65283,6 +69303,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 4,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039894:regular_season:receiving_touchdowns": [
@@ -65438,6 +69468,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 4,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 4,
       "overOdds": null,
       "underOdds": null,
@@ -65607,6 +69647,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 4,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033090:regular_season:receiving_touchdowns": [
@@ -65762,6 +69812,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 4,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 4,
       "overOdds": null,
       "underOdds": null,
@@ -65931,6 +69991,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 4,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038128:regular_season:rushing_touchdowns": [
@@ -66086,6 +70156,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 4,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 4,
       "overOdds": null,
       "underOdds": null,
@@ -66255,6 +70335,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0041547:regular_season:receiving_touchdowns": [
@@ -66410,6 +70500,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
@@ -66579,6 +70679,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0041037:regular_season:receiving_touchdowns": [
@@ -66734,6 +70844,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
@@ -66903,6 +71023,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0041032:regular_season:receiving_touchdowns": [
@@ -67058,6 +71188,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
@@ -67227,6 +71367,16 @@
       "lowerMultiplier": null,
       "status": "removed",
       "changeType": "removed"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "removed",
+      "changeType": "removed"
     }
   ],
   "2026:prizepicks:00-0036407:regular_season:receiving_touchdowns": [
@@ -67382,6 +71532,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
@@ -67551,6 +71711,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 4,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038559:regular_season:receiving_touchdowns": [
@@ -67706,6 +71876,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 4,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 4,
       "overOdds": null,
       "underOdds": null,
@@ -67875,6 +72055,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037838:regular_season:receiving_touchdowns": [
@@ -68030,6 +72220,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 4,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 4,
       "overOdds": null,
       "underOdds": null,
@@ -68199,6 +72399,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039491:regular_season:receiving_touchdowns": [
@@ -68354,6 +72564,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
@@ -68523,6 +72743,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034383:regular_season:receiving_touchdowns": [
@@ -68678,6 +72908,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
@@ -68847,6 +73087,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038129:regular_season:receiving_touchdowns": [
@@ -69002,6 +73252,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
@@ -69171,6 +73431,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034796:regular_season:rushing_touchdowns": [
@@ -69326,6 +73596,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
@@ -69495,6 +73775,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038935:regular_season:receiving_touchdowns": [
@@ -69650,6 +73940,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3,
       "overOdds": null,
       "underOdds": null,
@@ -69819,6 +74119,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 3,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040584:regular_season:receiving_touchdowns": [
@@ -69974,6 +74284,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
@@ -70143,6 +74463,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0041489:regular_season:receiving_touchdowns": [
@@ -70298,6 +74628,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 2.5,
       "overOdds": null,
       "underOdds": null,
@@ -70467,6 +74807,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037834:regular_season:rushing_touchdowns": [
@@ -70622,6 +74972,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3,
       "overOdds": null,
       "underOdds": null,
@@ -70791,6 +75151,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0038120:regular_season:receiving_touchdowns": [
@@ -70946,6 +75316,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 2,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 2,
       "overOdds": null,
       "underOdds": null,
@@ -71115,6 +75495,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036223:regular_season:receiving_touchdowns": [
@@ -71270,6 +75660,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
@@ -71439,6 +75839,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0034855:regular_season:rushing_touchdowns": [
@@ -71594,6 +76004,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
@@ -71763,6 +76183,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036264:regular_season:rushing_touchdowns": [
@@ -71918,6 +76348,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
@@ -72087,6 +76527,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 2,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033077:regular_season:rushing_touchdowns": [
@@ -72242,6 +76692,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 1.5,
       "overOdds": null,
       "underOdds": null,
@@ -72411,6 +76871,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 1.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0030506:regular_season:rushing_yards": [
@@ -72566,6 +77036,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -72735,6 +77215,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036997:regular_season:receiving_touchdowns": [
@@ -72890,6 +77380,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -73059,6 +77559,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0033106:regular_season:rushing_touchdowns": [
@@ -73214,6 +77724,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -73383,6 +77903,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037240:regular_season:rushing_touchdowns": [
@@ -73538,6 +78068,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 0.5,
       "overOdds": null,
       "underOdds": null,
@@ -73707,6 +78247,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 0.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039337:regular_season:receiving_yards": [
@@ -73849,6 +78399,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 974.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039344:regular_season:rushing_yards": [
@@ -73974,6 +78534,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 575.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 575.5,
       "overOdds": null,
       "underOdds": null,
@@ -74113,6 +78683,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 599.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0036973:regular_season:receiving_yards": [
@@ -74238,6 +78818,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 325.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 325.5,
       "overOdds": null,
       "underOdds": null,
@@ -74377,6 +78967,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 67.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0041438:regular_season:receiving_touchdowns": [
@@ -74502,6 +79102,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 4.5,
       "overOdds": null,
       "underOdds": null,
@@ -74641,6 +79251,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040122:regular_season:rushing_yards": [
@@ -74656,6 +79276,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 974.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 974.5,
       "overOdds": null,
       "underOdds": null,
@@ -74685,6 +79315,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 650.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040122:regular_season:receiving_yards": [
@@ -74700,6 +79340,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 349.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 349.5,
       "overOdds": null,
       "underOdds": null,
@@ -74729,6 +79379,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 59.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0040122:regular_season:receptions": [
@@ -74744,6 +79404,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 51.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 51.5,
       "overOdds": null,
       "underOdds": null,
@@ -74773,6 +79443,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 7.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0037228:regular_season:rushing_touchdowns": [
@@ -74788,6 +79468,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 5,
       "overOdds": null,
       "underOdds": null,
@@ -74817,6 +79507,16 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 4.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
     }
   ],
   "2026:prizepicks:00-0039732:regular_season:rushing_touchdowns": [
@@ -74832,6 +79532,16 @@
     },
     {
       "date": "2026-09-08",
+      "line": 3.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
       "line": 3.5,
       "overOdds": null,
       "underOdds": null,
@@ -74861,6 +79571,28 @@
       "lowerMultiplier": null,
       "status": "open",
       "changeType": "unchanged"
+    },
+    {
+      "date": "2026-09-09",
+      "line": 2.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "unchanged"
+    }
+  ],
+  "2026:prizepicks:00-0038608:regular_season:receiving_yards": [
+    {
+      "date": "2026-09-09",
+      "line": 499.5,
+      "overOdds": null,
+      "underOdds": null,
+      "higherMultiplier": null,
+      "lowerMultiplier": null,
+      "status": "open",
+      "changeType": "opened"
     }
   ]
 }
