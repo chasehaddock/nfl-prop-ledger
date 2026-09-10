@@ -1654,6 +1654,17 @@
     ]
   },
   {
+    "id": "00-0036415",
+    "name": "Van Jefferson",
+    "team": "WAS",
+    "position": "WR",
+    "rosterSeason": 2026,
+    "aliases": [
+      "Van Jefferson",
+      "Vanchii Jefferson"
+    ]
+  },
+  {
     "id": "00-0036422",
     "name": "Adam Trautman",
     "team": "DEN",
@@ -4561,7 +4572,7 @@
   {
     "id": "00-0039386",
     "name": "Bub Means",
-    "team": "NO",
+    "team": "CLE",
     "position": "WR",
     "rosterSeason": 2026,
     "aliases": [
@@ -6773,7 +6784,7 @@
   {
     "id": "00-0040633",
     "name": "Kyrese Rowan",
-    "team": "DEN",
+    "team": "NO",
     "position": "WR",
     "rosterSeason": 2026,
     "aliases": [
@@ -8047,7 +8058,7 @@
   {
     "id": "00-0041139",
     "name": "Damon Bankston",
-    "team": "NYG",
+    "team": "GB",
     "position": "RB",
     "rosterSeason": 2026,
     "aliases": [
@@ -8077,7 +8088,7 @@
   {
     "id": "00-0041156",
     "name": "Mark Gronowski",
-    "team": "MIA",
+    "team": "HOU",
     "position": "QB",
     "rosterSeason": 2026,
     "aliases": [
@@ -8413,7 +8424,7 @@
   {
     "id": "00-0041252",
     "name": "Kenny Fletcher Jr.",
-    "team": "TB",
+    "team": "IND",
     "position": "TE",
     "rosterSeason": 2026,
     "aliases": [
@@ -10489,17 +10500,6 @@
     "rosterSeason": 2025,
     "aliases": [
       "Cam Akers"
-    ]
-  },
-  {
-    "id": "00-0036415",
-    "name": "Van Jefferson",
-    "team": "—",
-    "position": "WR",
-    "rosterSeason": 2025,
-    "aliases": [
-      "Van Jefferson",
-      "Vanchii Jefferson"
     ]
   },
   {
