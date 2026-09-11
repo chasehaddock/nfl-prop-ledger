@@ -2,6 +2,13 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { buildRosterIndex } from "../collector/roster.mjs";
 
+test("maps Joshua Palmer to Josh Palmer's verified identity", () => {
+  const player = { id: "00-0036988", name: "Josh Palmer", team: "BUF", position: "WR", aliases: ["Josh Palmer"] };
+  const index = buildRosterIndex([player]);
+  assert.equal(index.get("joshua palmer"), player);
+  assert.equal(index.get("josh palmer"), player);
+});
+
 test("indexes official full-name aliases without changing player identity", () => {
   const player = {
     id: "00-0040676",

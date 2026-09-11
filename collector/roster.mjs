@@ -6,6 +6,7 @@ import { normalizeName, SUPPORTED_POSITIONS } from "../lib/ledger.mjs";
 const ROSTER_URL = (season) => `https://github.com/nflverse/nflverse-data/releases/download/rosters/roster_${season}.csv`;
 
 const SPORTSBOOK_NAME_ALIASES = new Map([
+  ["Josh Palmer", ["Joshua Palmer"]],
   ["Marquise Brown", ["Hollywood Brown"]],
   ["Kenneth Gainwell", ["Kenny Gainwell"]],
 ]);
