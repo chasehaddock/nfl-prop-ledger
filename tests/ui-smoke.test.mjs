@@ -245,10 +245,10 @@ test("skill players show total touchdowns with the rushing and receiving split",
     assert.ok(await page.locator("tbody tr.data-row td:nth-child(2)").filter({ hasText: "Rec yds" }).count() > 0);
     assert.ok(await page.locator("tbody tr.data-row td:nth-child(4) .total-touchdowns").count() > 0);
     assert.ok(await page.locator("tbody tr.data-row td:nth-child(4)").filter({ hasText: "Total TDs" }).count() > 0);
-    const inferred = page.locator("tbody tr.data-row").filter({ hasText: "Kyren Williams" }).first().locator("td:nth-child(4)");
+    const kyrenRow = page.locator("tbody tr.data-row").filter({ has: page.locator(".total-touchdowns") }).filter({ hasText: /Estimated [\d.]+ fantasy pts/i }).first();
+    const inferred = kyrenRow.locator("td:nth-child(4)");
     assert.match(await inferred.innerText(), /[\d.]+[\s\S]*Total TDs[\s\S]*Rush (?:—|[\d.]+) · Rec (?:—|[\d.]+)/i);
     assert.doesNotMatch(await inferred.innerText(), /2025 NFL|prior-season/i);
-    const kyrenRow = page.locator("tbody tr.data-row").filter({ hasText: "Kyren Williams" }).first();
     assert.match(await kyrenRow.locator("td:nth-child(5)").innerText(), /Not enough verified data[\s\S]*Estimated [\d.]+ fantasy pts/i);
     assert.equal(await kyrenRow.locator(".projection-rank.incomplete").innerText(), "NR");
 
